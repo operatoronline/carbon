@@ -4,6 +4,7 @@
 - **Version:** v0.1
 - **Last Updated:** 2026-02-02
 - **Host:** carbon.operator.onl
+- **Repo:** https://github.com/operatoronline/carbon
 
 ## Current Focus
 **Component Completeness Overhaul** — Early components are stubs; later ones are comprehensive. See `VERIFICATION.md` for full audit.
