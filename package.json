@@ -1,0 +1,24 @@
+{
+  "name": "carbon-design-system",
+  "version": "0.1.0",
+  "description": "Framework-agnostic design system.",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/build.mjs --watch",
+    "test": "npx playwright test",
+    "test:update": "npx playwright test --update-snapshots",
+    "test:report": "npx playwright show-report"
+  },
+  "dependencies": {
+    "dompurify": "^3.0.9",
+    "fs-extra": "^11.2.0",
+    "glob": "^10.3.10",
+    "js-yaml": "^4.1.0",
+    "jsdom": "^24.0.0",
+    "markdown-it": "^14.1.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.1"
+  }
+}

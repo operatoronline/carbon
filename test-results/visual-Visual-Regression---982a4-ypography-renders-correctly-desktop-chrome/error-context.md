@@ -1,0 +1,542 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - text: 
+      - link " Carbon" [ref=e4] [cursor=pointer]:
+        - /url: ../index.html
+        - generic [ref=e5]: 
+        - generic [ref=e6]: Carbon
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - generic [ref=e9]: 
+        - textbox "Search" [ref=e10]:
+          - /placeholder: Search...
+      - button "Toggle theme" [ref=e11] [cursor=pointer]:
+        - generic [ref=e12]: 
+  - generic [ref=e13]:
+    - complementary [ref=e14]:
+      - navigation [ref=e15]:
+        - list [ref=e16]:
+          - listitem [ref=e17]:
+            - link "Introduction" [ref=e18] [cursor=pointer]:
+              - /url: ../index.html
+          - listitem [ref=e19]:
+            - generic [ref=e20]: Components
+            - list [ref=e21]:
+              - listitem [ref=e22]:
+                - link "Accordions" [ref=e23] [cursor=pointer]:
+                  - /url: ../components/accordions.html
+              - listitem [ref=e24]:
+                - link "Alerts" [ref=e25] [cursor=pointer]:
+                  - /url: ../components/alerts.html
+              - listitem [ref=e26]:
+                - link "Avatars" [ref=e27] [cursor=pointer]:
+                  - /url: ../components/avatars.html
+              - listitem [ref=e28]:
+                - link "Badges" [ref=e29] [cursor=pointer]:
+                  - /url: ../components/badges.html
+              - listitem [ref=e30]:
+                - link "Breadcrumbs" [ref=e31] [cursor=pointer]:
+                  - /url: ../components/breadcrumbs.html
+              - listitem [ref=e32]:
+                - link "Buttons" [ref=e33] [cursor=pointer]:
+                  - /url: ../components/buttons.html
+              - listitem [ref=e34]:
+                - link "Cards" [ref=e35] [cursor=pointer]:
+                  - /url: ../components/cards.html
+              - listitem [ref=e36]:
+                - link "Chips" [ref=e37] [cursor=pointer]:
+                  - /url: ../components/chips.html
+              - listitem [ref=e38]:
+                - link "Dividers" [ref=e39] [cursor=pointer]:
+                  - /url: ../components/dividers.html
+              - listitem [ref=e40]:
+                - link "Drawer" [ref=e41] [cursor=pointer]:
+                  - /url: ../components/drawer.html
+              - listitem [ref=e42]:
+                - link "Dropdowns" [ref=e43] [cursor=pointer]:
+                  - /url: ../components/dropdowns.html
+              - listitem [ref=e44]:
+                - link "Forms" [ref=e45] [cursor=pointer]:
+                  - /url: ../components/forms.html
+              - listitem [ref=e46]:
+                - link "Icons" [ref=e47] [cursor=pointer]:
+                  - /url: ../components/icons.html
+              - listitem [ref=e48]:
+                - link "Links" [ref=e49] [cursor=pointer]:
+                  - /url: ../components/links.html
+              - listitem [ref=e50]:
+                - link "Lists" [ref=e51] [cursor=pointer]:
+                  - /url: ../components/lists.html
+              - listitem [ref=e52]:
+                - link "Menus" [ref=e53] [cursor=pointer]:
+                  - /url: ../components/menus.html
+              - listitem [ref=e54]:
+                - link "Modals" [ref=e55] [cursor=pointer]:
+                  - /url: ../components/modals.html
+              - listitem [ref=e56]:
+                - link "Pagination" [ref=e57] [cursor=pointer]:
+                  - /url: ../components/pagination.html
+              - listitem [ref=e58]:
+                - link "Progress" [ref=e59] [cursor=pointer]:
+                  - /url: ../components/progress.html
+              - listitem [ref=e60]:
+                - link "Rating" [ref=e61] [cursor=pointer]:
+                  - /url: ../components/rating.html
+              - listitem [ref=e62]:
+                - link "Skeletons" [ref=e63] [cursor=pointer]:
+                  - /url: ../components/skeletons.html
+              - listitem [ref=e64]:
+                - link "Sliders" [ref=e65] [cursor=pointer]:
+                  - /url: ../components/sliders.html
+              - listitem [ref=e66]:
+                - link "Steppers" [ref=e67] [cursor=pointer]:
+                  - /url: ../components/steppers.html
+              - listitem [ref=e68]:
+                - link "Switches" [ref=e69] [cursor=pointer]:
+                  - /url: ../components/switches.html
+              - listitem [ref=e70]:
+                - link "Tables" [ref=e71] [cursor=pointer]:
+                  - /url: ../components/tables.html
+              - listitem [ref=e72]:
+                - link "Tabs" [ref=e73] [cursor=pointer]:
+                  - /url: ../components/tabs.html
+              - listitem [ref=e74]:
+                - link "Textarea" [ref=e75] [cursor=pointer]:
+                  - /url: ../components/textarea.html
+              - listitem [ref=e76]:
+                - link "Timeline" [ref=e77] [cursor=pointer]:
+                  - /url: ../components/timeline.html
+              - listitem [ref=e78]:
+                - link "Toasts" [ref=e79] [cursor=pointer]:
+                  - /url: ../components/toasts.html
+              - listitem [ref=e80]:
+                - link "Toolbar" [ref=e81] [cursor=pointer]:
+                  - /url: ../components/toolbar.html
+              - listitem [ref=e82]:
+                - link "Tooltips" [ref=e83] [cursor=pointer]:
+                  - /url: ../components/tooltips.html
+          - listitem [ref=e84]:
+            - generic [ref=e85]: Patterns
+            - list [ref=e86]:
+              - listitem [ref=e87]:
+                - link "Empty states" [ref=e88] [cursor=pointer]:
+                  - /url: ../patterns/empty-states.html
+              - listitem [ref=e89]:
+                - link "Layouts" [ref=e90] [cursor=pointer]:
+                  - /url: ../patterns/layouts.html
+          - listitem [ref=e91]:
+            - generic [ref=e92]: Tokens
+            - list [ref=e93]:
+              - listitem [ref=e94]:
+                - link "Colors" [ref=e95] [cursor=pointer]:
+                  - /url: ../tokens/colors.html
+              - listitem [ref=e96]:
+                - link "Spacing" [ref=e97] [cursor=pointer]:
+                  - /url: ../tokens/spacing.html
+              - listitem [ref=e98]:
+                - link "Typography" [ref=e99] [cursor=pointer]:
+                  - /url: ../tokens/typography.html
+    - main [ref=e100]:
+      - generic [ref=e101]:
+        - navigation "Breadcrumb" [ref=e102]:
+          - link "Carbon" [ref=e103] [cursor=pointer]:
+            - /url: ../index.html
+          - generic [ref=e104]: /
+          - generic [ref=e105]: Tokens
+          - generic [ref=e106]: /
+          - generic [ref=e107]: Typography
+        - heading "Typography" [level=1] [ref=e108]
+      - article [ref=e109]:
+        - heading "Typography" [level=1] [ref=e110]
+        - paragraph [ref=e111]:
+          - text: Carbon uses
+          - strong [ref=e112]: DM Sans
+          - text: — a geometric sans-serif designed for clarity at all sizes. The type system is built on a modular scale for consistent visual hierarchy.
+        - heading "Font Stack" [level=2] [ref=e113]
+        - generic [ref=e114]:
+          - code [ref=e116]: "--font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; --font-mono: 'SF Mono', 'Fira Code', 'Consolas', monospace;"
+          - button "Copy code" [ref=e117] [cursor=pointer]:
+            - generic [ref=e118]: 
+        - generic [ref=e121]:
+          - generic [ref=e122]:
+            - generic [ref=e123]: Sans (Primary)
+            - generic [ref=e124]: The quick brown fox jumps over the lazy dog.
+          - generic [ref=e125]:
+            - generic [ref=e126]: Monospace (Code)
+            - generic [ref=e127]: const greeting = "Hello, World!";
+        - separator [ref=e128]
+        - heading "Type Scale" [level=2] [ref=e129]
+        - paragraph [ref=e130]:
+          - text: Based on a
+          - strong [ref=e131]: 1.25 ratio
+          - text: (Major Third), creating harmonious size progression.
+        - table [ref=e132]:
+          - rowgroup [ref=e133]:
+            - row "Level Size Rem Pixels Usage" [ref=e134]:
+              - columnheader "Level" [ref=e135]
+              - columnheader "Size" [ref=e136]
+              - columnheader "Rem" [ref=e137]
+              - columnheader "Pixels" [ref=e138]
+              - columnheader "Usage" [ref=e139]
+          - rowgroup [ref=e140]:
+            - row "Display 3rem 3 48px Hero headlines" [ref=e141]:
+              - cell "Display" [ref=e142]
+              - cell "3rem" [ref=e143]
+              - cell "3" [ref=e144]
+              - cell "48px" [ref=e145]
+              - cell "Hero headlines" [ref=e146]
+            - row "H1 2.5rem 2.5 40px Page titles" [ref=e147]:
+              - cell "H1" [ref=e148]
+              - cell "2.5rem" [ref=e149]
+              - cell "2.5" [ref=e150]
+              - cell "40px" [ref=e151]
+              - cell "Page titles" [ref=e152]
+            - row "H2 2rem 2 32px Section headers" [ref=e153]:
+              - cell "H2" [ref=e154]
+              - cell "2rem" [ref=e155]
+              - cell "2" [ref=e156]
+              - cell "32px" [ref=e157]
+              - cell "Section headers" [ref=e158]
+            - row "H3 1.5rem 1.5 24px Subsections" [ref=e159]:
+              - cell "H3" [ref=e160]
+              - cell "1.5rem" [ref=e161]
+              - cell "1.5" [ref=e162]
+              - cell "24px" [ref=e163]
+              - cell "Subsections" [ref=e164]
+            - row "H4 1.25rem 1.25 20px Card titles" [ref=e165]:
+              - cell "H4" [ref=e166]
+              - cell "1.25rem" [ref=e167]
+              - cell "1.25" [ref=e168]
+              - cell "20px" [ref=e169]
+              - cell "Card titles" [ref=e170]
+            - row "Body 1rem 1 16px Paragraphs" [ref=e171]:
+              - cell "Body" [ref=e172]
+              - cell "1rem" [ref=e173]
+              - cell "1" [ref=e174]
+              - cell "16px" [ref=e175]
+              - cell "Paragraphs" [ref=e176]
+            - row "Small 0.875rem 0.875 14px Captions, labels" [ref=e177]:
+              - cell "Small" [ref=e178]
+              - cell "0.875rem" [ref=e179]
+              - cell "0.875" [ref=e180]
+              - cell "14px" [ref=e181]
+              - cell "Captions, labels" [ref=e182]
+            - row "XSmall 0.75rem 0.75 12px Fine print" [ref=e183]:
+              - cell "XSmall" [ref=e184]
+              - cell "0.75rem" [ref=e185]
+              - cell "0.75" [ref=e186]
+              - cell "12px" [ref=e187]
+              - cell "Fine print" [ref=e188]
+        - generic [ref=e191]:
+          - generic [ref=e192]: Display
+          - generic [ref=e193]: Heading 1
+          - generic [ref=e194]: Heading 2
+          - generic [ref=e195]: Heading 3
+          - generic [ref=e196]: Heading 4
+          - generic [ref=e197]: Body text — the quick brown fox jumps over the lazy dog.
+          - generic [ref=e198]: Small text for captions and supporting content.
+          - generic [ref=e199]: Extra small for fine print and legal text.
+        - separator [ref=e200]
+        - heading "Font Weights" [level=2] [ref=e201]
+        - paragraph [ref=e202]: DM Sans provides five weights. Use them intentionally to create hierarchy.
+        - table [ref=e203]:
+          - rowgroup [ref=e204]:
+            - row "Weight Value Usage" [ref=e205]:
+              - columnheader "Weight" [ref=e206]
+              - columnheader "Value" [ref=e207]
+              - columnheader "Usage" [ref=e208]
+          - rowgroup [ref=e209]:
+            - row "Regular 400 Body text, descriptions" [ref=e210]:
+              - cell "Regular" [ref=e211]
+              - cell "400" [ref=e212]
+              - cell "Body text, descriptions" [ref=e213]
+            - row "Medium 500 UI labels, buttons" [ref=e214]:
+              - cell "Medium" [ref=e215]
+              - cell "500" [ref=e216]
+              - cell "UI labels, buttons" [ref=e217]
+            - row "Semi-Bold 600 Subheadings, emphasis" [ref=e218]:
+              - cell "Semi-Bold" [ref=e219]
+              - cell "600" [ref=e220]
+              - cell "Subheadings, emphasis" [ref=e221]
+            - row "Bold 700 Headings, strong emphasis" [ref=e222]:
+              - cell "Bold" [ref=e223]
+              - cell "700" [ref=e224]
+              - cell "Headings, strong emphasis" [ref=e225]
+        - generic [ref=e228]:
+          - generic [ref=e229]: Regular (400) — Default body weight
+          - generic [ref=e230]: Medium (500) — Buttons and labels
+          - generic [ref=e231]: Semi-Bold (600) — Subheadings
+          - generic [ref=e232]: Bold (700) — Headlines and emphasis
+        - generic [ref=e233]:
+          - code [ref=e235]: "/* Weight usage */ body { font-weight: 400; } .Button { font-weight: 500; } h3, h4 { font-weight: 600; } h1, h2 { font-weight: 700; }"
+          - button "Copy code" [ref=e236] [cursor=pointer]:
+            - generic [ref=e237]: 
+        - separator [ref=e238]
+        - heading "Line Height" [level=2] [ref=e239]
+        - paragraph [ref=e240]: Proper leading improves readability. Tighter for headings, looser for body text.
+        - table [ref=e241]:
+          - rowgroup [ref=e242]:
+            - row "Context Line Height Ratio" [ref=e243]:
+              - columnheader "Context" [ref=e244]
+              - columnheader "Line Height" [ref=e245]
+              - columnheader "Ratio" [ref=e246]
+          - rowgroup [ref=e247]:
+            - row "Display/H1 1.1 – 1.2 Tight" [ref=e248]:
+              - cell "Display/H1" [ref=e249]
+              - cell "1.1 – 1.2" [ref=e250]
+              - cell "Tight" [ref=e251]
+            - row "H2/H3 1.25 – 1.3 Snug" [ref=e252]:
+              - cell "H2/H3" [ref=e253]
+              - cell "1.25 – 1.3" [ref=e254]
+              - cell "Snug" [ref=e255]
+            - row "H4/UI 1.4 Normal" [ref=e256]:
+              - cell "H4/UI" [ref=e257]
+              - cell "1.4" [ref=e258]
+              - cell "Normal" [ref=e259]
+            - row "Body 1.5 – 1.6 Relaxed" [ref=e260]:
+              - cell "Body" [ref=e261]
+              - cell "1.5 – 1.6" [ref=e262]
+              - cell "Relaxed" [ref=e263]
+            - row "Long-form 1.7 – 1.8 Loose" [ref=e264]:
+              - cell "Long-form" [ref=e265]
+              - cell "1.7 – 1.8" [ref=e266]
+              - cell "Loose" [ref=e267]
+        - generic [ref=e270]:
+          - generic [ref=e271]:
+            - generic [ref=e272]: "line-height: 1.2 (Headings)"
+            - generic [ref=e273]: Tight leading for headlines keeps them compact and impactful
+          - generic [ref=e274]:
+            - generic [ref=e275]: "line-height: 1.6 (Body)"
+            - generic [ref=e276]: Relaxed leading for body text improves readability over multiple lines of content
+        - generic [ref=e277]:
+          - code [ref=e279]: "/* Line heights */ h1, .display { line-height: 1.1; } h2 { line-height: 1.25; } h3 { line-height: 1.3; } h4 { line-height: 1.4; } body, p { line-height: 1.5; } .prose { line-height: 1.7; }"
+          - button "Copy code" [ref=e280] [cursor=pointer]:
+            - generic [ref=e281]: 
+        - separator [ref=e282]
+        - heading "Letter Spacing" [level=2] [ref=e283]
+        - paragraph [ref=e284]: Subtle tracking adjustments improve legibility at extreme sizes.
+        - table [ref=e285]:
+          - rowgroup [ref=e286]:
+            - row "Context Letter Spacing When" [ref=e287]:
+              - columnheader "Context" [ref=e288]
+              - columnheader "Letter Spacing" [ref=e289]
+              - columnheader "When" [ref=e290]
+          - rowgroup [ref=e291]:
+            - row "Tight -0.02em Large display text" [ref=e292]:
+              - cell "Tight" [ref=e293]
+              - cell "-0.02em" [ref=e294]
+              - cell "Large display text" [ref=e295]
+            - row "Normal 0 Body text" [ref=e296]:
+              - cell "Normal" [ref=e297]
+              - cell "0" [ref=e298]
+              - cell "Body text" [ref=e299]
+            - row "Wide 0.02em Small caps, labels" [ref=e300]:
+              - cell "Wide" [ref=e301]
+              - cell "0.02em" [ref=e302]
+              - cell "Small caps, labels" [ref=e303]
+            - row "Extra Wide 0.05em Uppercase headings" [ref=e304]:
+              - cell "Extra Wide" [ref=e305]
+              - cell "0.05em" [ref=e306]
+              - cell "Uppercase headings" [ref=e307]
+        - generic [ref=e310]:
+          - generic [ref=e311]:
+            - text: "-0.02em (Display)"
+            - generic [ref=e312]: Tight Tracking
+          - generic [ref=e313]:
+            - text: 0 (Default)
+            - generic [ref=e314]: Normal body text with default letter spacing.
+          - generic [ref=e315]:
+            - text: 0.05em (Labels)
+            - generic [ref=e316]: Section Label
+        - generic [ref=e317]:
+          - code [ref=e319]: "/* Letter spacing */ .display { letter-spacing: -0.02em; } .label { letter-spacing: 0.05em; text-transform: uppercase; } .nav-group { letter-spacing: 0.05em; }"
+          - button "Copy code" [ref=e320] [cursor=pointer]:
+            - generic [ref=e321]: 
+        - separator [ref=e322]
+        - heading "Text Colors" [level=2] [ref=e323]
+        - paragraph [ref=e324]: Use semantic color tokens for consistent hierarchy.
+        - generic [ref=e327]:
+          - generic [ref=e328]: Primary — Headlines & Body
+          - generic [ref=e329]: Secondary — Descriptions, captions, and supporting text
+          - generic [ref=e330]: Accent — Links and interactive elements
+          - generic [ref=e331]: Success — Positive messages
+          - generic [ref=e332]: Error — Error messages
+        - generic [ref=e333]:
+          - code [ref=e335]: "/* Text colors */ .text-primary { color: var(--text-primary); } .text-secondary { color: var(--text-secondary); } .text-accent { color: var(--accent-primary); } .text-success { color: oklch(55% 0.15 150); } .text-error { color: oklch(55% 0.2 25); }"
+          - button "Copy code" [ref=e336] [cursor=pointer]:
+            - generic [ref=e337]: 
+        - separator [ref=e338]
+        - heading "Heading Styles" [level=2] [ref=e339]
+        - paragraph [ref=e340]: Complete heading definitions with all properties.
+        - generic [ref=e343]:
+          - generic [ref=e344]:
+            - heading "Heading 1" [level=1] [ref=e345]
+            - code [ref=e346]: 2.5rem / 700 / 1.2 / -0.01em
+          - generic [ref=e347]:
+            - heading "Heading 2" [level=2] [ref=e348]
+            - code [ref=e349]: 2rem / 600 / 1.25 / 0
+          - generic [ref=e350]:
+            - heading "Heading 3" [level=3] [ref=e351]
+            - code [ref=e352]: 1.5rem / 600 / 1.3 / 0
+        - generic [ref=e353]:
+          - code [ref=e355]: "h1 { font-size: 2.5rem; font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; } h2 { font-size: 2rem; font-weight: 600; line-height: 1.25; } h3 { font-size: 1.5rem; font-weight: 600; line-height: 1.3; } h4 { font-size: 1.25rem; font-weight: 600; line-height: 1.4; }"
+          - button "Copy code" [ref=e356] [cursor=pointer]:
+            - generic [ref=e357]: 
+        - separator [ref=e358]
+        - heading "Prose Styles" [level=2] [ref=e359]
+        - paragraph [ref=e360]: Optimized typography for long-form reading.
+        - generic [ref=e363]:
+          - paragraph [ref=e364]: Good typography is invisible. When type is well-set, the reader doesn't notice the mechanics — they simply absorb the content. This is the goal of Carbon's typography system.
+          - paragraph [ref=e365]:
+            - text: The
+            - strong [ref=e366]: measure
+            - text: (line length) is kept between 45-75 characters for optimal readability. Combined with generous
+            - emphasis [ref=e367]: line-height
+            - text: and proper spacing between paragraphs, long-form content becomes effortless to read.
+          - paragraph [ref=e368]: Notice how your eye flows naturally from line to line without strain.
+        - generic [ref=e369]:
+          - code [ref=e371]: ".prose { max-width: 65ch; /* Optimal line length */ line-height: 1.7; } .prose p + p { margin-top: var(--space-4); } .prose strong { font-weight: 600; } .prose a { color: var(--accent-primary); text-decoration: underline; text-underline-offset: 2px; }"
+          - button "Copy code" [ref=e372] [cursor=pointer]:
+            - generic [ref=e373]: 
+        - separator [ref=e374]
+        - heading "Responsive Typography" [level=2] [ref=e375]
+        - paragraph [ref=e376]: Scale type sizes at different breakpoints for optimal reading.
+        - generic [ref=e377]:
+          - code [ref=e379]:
+            - text: "/* Base (Mobile) */ html { font-size: 16px; } h1 { font-size: 2rem; } h2 { font-size: 1.5rem; } /* Tablet (768px+) */"
+            - generic [ref=e380]: "@media (min-width: 768px)"
+            - text: "{ h1 { font-size: 2.25rem; } h2 { font-size: 1.75rem; } } /* Desktop (1024px+) */"
+            - generic [ref=e381]: "@media (min-width: 1024px)"
+            - text: "{ h1 { font-size: 2.5rem; } h2 { font-size: 2rem; } }"
+          - button "Copy code" [ref=e382] [cursor=pointer]:
+            - generic [ref=e383]: 
+        - heading "Fluid Typography (Optional)" [level=3] [ref=e384]
+        - paragraph [ref=e385]: "For smoother scaling, use clamp():"
+        - generic [ref=e386]:
+          - code [ref=e388]: "h1 { /* Min: 2rem, Preferred: 5vw, Max: 3rem */ font-size: clamp(2rem, 5vw, 3rem); } h2 { font-size: clamp(1.5rem, 4vw, 2rem); }"
+          - button "Copy code" [ref=e389] [cursor=pointer]:
+            - generic [ref=e390]: 
+        - separator [ref=e391]
+        - heading "Code Typography" [level=2] [ref=e392]
+        - paragraph [ref=e393]: Monospace styles for code blocks and inline code.
+        - generic [ref=e396]:
+          - generic [ref=e397]:
+            - generic [ref=e398]: Inline Code
+            - paragraph [ref=e399]:
+              - text: Use the
+              - code [ref=e400]: var(--space-4)
+              - text: token for standard spacing.
+          - generic [ref=e401]:
+            - generic [ref=e402]: Code Block
+            - code [ref=e404]: "function greet(name) { return `Hello, ${name}!`; }"
+        - generic [ref=e405]:
+          - code [ref=e407]: "code { font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace; font-size: 0.9em; background: var(--bg-secondary); padding: 2px var(--space-1); border-radius: 3px; } pre code { font-size: 0.875rem; line-height: 1.6; background: none; padding: 0; }"
+          - button "Copy code" [ref=e408] [cursor=pointer]:
+            - generic [ref=e409]: 
+        - separator [ref=e410]
+        - heading "Best Practices" [level=2] [ref=e411]
+        - heading "Do" [level=3] [ref=e412]
+        - list [ref=e413]:
+          - listitem [ref=e414]:
+            - text: ✓
+            - strong [ref=e415]: Establish clear hierarchy
+            - text: — Size + weight should guide the eye
+          - listitem [ref=e416]:
+            - text: ✓
+            - strong [ref=e417]: Limit font variations
+            - text: — 2-3 weights max per page
+          - listitem [ref=e418]:
+            - text: ✓
+            - strong [ref=e419]: Use appropriate measure
+            - text: — 45-75 characters per line
+          - listitem [ref=e420]:
+            - text: ✓
+            - strong [ref=e421]: Add breathing room
+            - text: — Generous line-height for body text
+          - listitem [ref=e422]:
+            - text: ✓
+            - strong [ref=e423]: Test at real sizes
+            - text: — Check actual rendered output
+        - heading "Don’t" [level=3] [ref=e424]
+        - list [ref=e425]:
+          - listitem [ref=e426]:
+            - text: ✗
+            - strong [ref=e427]: Mix too many sizes
+            - text: — Stick to the scale
+          - listitem [ref=e428]:
+            - text: ✗
+            - strong [ref=e429]: Use pure black text
+            - text: — Use --text-primary (oklch(20% 0 0))
+          - listitem [ref=e430]:
+            - text: ✗
+            - strong [ref=e431]: Justify body text
+            - text: — Left-align for better readability
+          - listitem [ref=e432]:
+            - text: ✗
+            - strong [ref=e433]: Use light weights for body
+            - text: — 400 minimum for readability
+          - listitem [ref=e434]:
+            - text: ✗
+            - strong [ref=e435]: Forget mobile
+            - text: — Test typography at small viewports
+        - separator [ref=e436]
+        - heading "Quick Reference" [level=2] [ref=e437]
+        - generic [ref=e438]:
+          - code [ref=e440]: "/* Font Families */ font-family: var(--font-sans); /* DM Sans - UI & body */ font-family: var(--font-mono); /* SF Mono - code */ /* Sizes */ font-size: 3rem; /* Display */ font-size: 2.5rem; /* H1 */ font-size: 2rem; /* H2 */ font-size: 1.5rem; /* H3 */ font-size: 1.25rem; /* H4 */ font-size: 1rem; /* Body */ font-size: 0.875rem; /* Small */ font-size: 0.75rem; /* XSmall */ /* Weights */ font-weight: 400; /* Regular */ font-weight: 500; /* Medium */ font-weight: 600; /* Semi-Bold */ font-weight: 700; /* Bold */ /* Line Heights */ line-height: 1.1; /* Display */ line-height: 1.25; /* Headings */ line-height: 1.5; /* Body */ line-height: 1.7; /* Prose */"
+          - button "Copy code" [ref=e441] [cursor=pointer]:
+            - generic [ref=e442]: 
+      - paragraph [ref=e444]: "Carbon v0.1 • Last built: 2/2/2026, 10:47:08 PM"
+    - complementary [ref=e445]:
+      - navigation [ref=e446]:
+        - heading "On this page" [level=3] [ref=e447]
+        - list [ref=e448]:
+          - listitem [ref=e449]:
+            - link "Font Stack" [ref=e450] [cursor=pointer]:
+              - /url: "#font-stack"
+          - listitem [ref=e451]:
+            - link "Type Scale" [ref=e452] [cursor=pointer]:
+              - /url: "#type-scale"
+          - listitem [ref=e453]:
+            - link "Font Weights" [ref=e454] [cursor=pointer]:
+              - /url: "#font-weights"
+          - listitem [ref=e455]:
+            - link "Line Height" [ref=e456] [cursor=pointer]:
+              - /url: "#line-height"
+          - listitem [ref=e457]:
+            - link "Letter Spacing" [ref=e458] [cursor=pointer]:
+              - /url: "#letter-spacing"
+          - listitem [ref=e459]:
+            - link "Text Colors" [ref=e460] [cursor=pointer]:
+              - /url: "#text-colors"
+          - listitem [ref=e461]:
+            - link "Heading Styles" [ref=e462] [cursor=pointer]:
+              - /url: "#heading-styles"
+          - listitem [ref=e463]:
+            - link "Prose Styles" [ref=e464] [cursor=pointer]:
+              - /url: "#prose-styles"
+          - listitem [ref=e465]:
+            - link "Responsive Typography" [ref=e466] [cursor=pointer]:
+              - /url: "#responsive-typography"
+          - listitem [ref=e467]:
+            - link "Fluid Typography (Optional)" [ref=e468] [cursor=pointer]:
+              - /url: "#fluid-typography-optional-"
+          - listitem [ref=e469]:
+            - link "Code Typography" [ref=e470] [cursor=pointer]:
+              - /url: "#code-typography"
+          - listitem [ref=e471]:
+            - link "Best Practices" [ref=e472] [cursor=pointer]:
+              - /url: "#best-practices"
+          - listitem [ref=e473]:
+            - link "Do" [ref=e474] [cursor=pointer]:
+              - /url: "#do"
+          - listitem [ref=e475]:
+            - link "Don't" [ref=e476] [cursor=pointer]:
+              - /url: "#don-t"
+          - listitem [ref=e477]:
+            - link "Quick Reference" [ref=e478] [cursor=pointer]:
+              - /url: "#quick-reference"
+```

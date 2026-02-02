@@ -1,0 +1,190 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - text: 
+      - link " Carbon" [ref=e4] [cursor=pointer]:
+        - /url: ./index.html
+        - generic [ref=e5]: 
+        - generic [ref=e6]: Carbon
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - generic [ref=e9]: 
+        - textbox "Search" [ref=e10]:
+          - /placeholder: Search...
+      - button "Toggle theme" [ref=e11] [cursor=pointer]:
+        - generic [ref=e12]: 
+  - generic [ref=e13]:
+    - complementary [ref=e14]:
+      - navigation [ref=e15]:
+        - list [ref=e16]:
+          - listitem [ref=e17]:
+            - link "Introduction" [ref=e18] [cursor=pointer]:
+              - /url: ./index.html
+          - listitem [ref=e19]:
+            - generic [ref=e20]: Components
+            - list [ref=e21]:
+              - listitem [ref=e22]:
+                - link "Accordions" [ref=e23] [cursor=pointer]:
+                  - /url: ./components/accordions.html
+              - listitem [ref=e24]:
+                - link "Alerts" [ref=e25] [cursor=pointer]:
+                  - /url: ./components/alerts.html
+              - listitem [ref=e26]:
+                - link "Avatars" [ref=e27] [cursor=pointer]:
+                  - /url: ./components/avatars.html
+              - listitem [ref=e28]:
+                - link "Badges" [ref=e29] [cursor=pointer]:
+                  - /url: ./components/badges.html
+              - listitem [ref=e30]:
+                - link "Breadcrumbs" [ref=e31] [cursor=pointer]:
+                  - /url: ./components/breadcrumbs.html
+              - listitem [ref=e32]:
+                - link "Buttons" [ref=e33] [cursor=pointer]:
+                  - /url: ./components/buttons.html
+              - listitem [ref=e34]:
+                - link "Cards" [ref=e35] [cursor=pointer]:
+                  - /url: ./components/cards.html
+              - listitem [ref=e36]:
+                - link "Chips" [ref=e37] [cursor=pointer]:
+                  - /url: ./components/chips.html
+              - listitem [ref=e38]:
+                - link "Dividers" [ref=e39] [cursor=pointer]:
+                  - /url: ./components/dividers.html
+              - listitem [ref=e40]:
+                - link "Drawer" [ref=e41] [cursor=pointer]:
+                  - /url: ./components/drawer.html
+              - listitem [ref=e42]:
+                - link "Dropdowns" [ref=e43] [cursor=pointer]:
+                  - /url: ./components/dropdowns.html
+              - listitem [ref=e44]:
+                - link "Forms" [ref=e45] [cursor=pointer]:
+                  - /url: ./components/forms.html
+              - listitem [ref=e46]:
+                - link "Icons" [ref=e47] [cursor=pointer]:
+                  - /url: ./components/icons.html
+              - listitem [ref=e48]:
+                - link "Links" [ref=e49] [cursor=pointer]:
+                  - /url: ./components/links.html
+              - listitem [ref=e50]:
+                - link "Lists" [ref=e51] [cursor=pointer]:
+                  - /url: ./components/lists.html
+              - listitem [ref=e52]:
+                - link "Menus" [ref=e53] [cursor=pointer]:
+                  - /url: ./components/menus.html
+              - listitem [ref=e54]:
+                - link "Modals" [ref=e55] [cursor=pointer]:
+                  - /url: ./components/modals.html
+              - listitem [ref=e56]:
+                - link "Pagination" [ref=e57] [cursor=pointer]:
+                  - /url: ./components/pagination.html
+              - listitem [ref=e58]:
+                - link "Progress" [ref=e59] [cursor=pointer]:
+                  - /url: ./components/progress.html
+              - listitem [ref=e60]:
+                - link "Rating" [ref=e61] [cursor=pointer]:
+                  - /url: ./components/rating.html
+              - listitem [ref=e62]:
+                - link "Skeletons" [ref=e63] [cursor=pointer]:
+                  - /url: ./components/skeletons.html
+              - listitem [ref=e64]:
+                - link "Sliders" [ref=e65] [cursor=pointer]:
+                  - /url: ./components/sliders.html
+              - listitem [ref=e66]:
+                - link "Steppers" [ref=e67] [cursor=pointer]:
+                  - /url: ./components/steppers.html
+              - listitem [ref=e68]:
+                - link "Switches" [ref=e69] [cursor=pointer]:
+                  - /url: ./components/switches.html
+              - listitem [ref=e70]:
+                - link "Tables" [ref=e71] [cursor=pointer]:
+                  - /url: ./components/tables.html
+              - listitem [ref=e72]:
+                - link "Tabs" [ref=e73] [cursor=pointer]:
+                  - /url: ./components/tabs.html
+              - listitem [ref=e74]:
+                - link "Textarea" [ref=e75] [cursor=pointer]:
+                  - /url: ./components/textarea.html
+              - listitem [ref=e76]:
+                - link "Timeline" [ref=e77] [cursor=pointer]:
+                  - /url: ./components/timeline.html
+              - listitem [ref=e78]:
+                - link "Toasts" [ref=e79] [cursor=pointer]:
+                  - /url: ./components/toasts.html
+              - listitem [ref=e80]:
+                - link "Toolbar" [ref=e81] [cursor=pointer]:
+                  - /url: ./components/toolbar.html
+              - listitem [ref=e82]:
+                - link "Tooltips" [ref=e83] [cursor=pointer]:
+                  - /url: ./components/tooltips.html
+          - listitem [ref=e84]:
+            - generic [ref=e85]: Patterns
+            - list [ref=e86]:
+              - listitem [ref=e87]:
+                - link "Empty states" [ref=e88] [cursor=pointer]:
+                  - /url: ./patterns/empty-states.html
+              - listitem [ref=e89]:
+                - link "Layouts" [ref=e90] [cursor=pointer]:
+                  - /url: ./patterns/layouts.html
+          - listitem [ref=e91]:
+            - generic [ref=e92]: Tokens
+            - list [ref=e93]:
+              - listitem [ref=e94]:
+                - link "Colors" [ref=e95] [cursor=pointer]:
+                  - /url: ./tokens/colors.html
+              - listitem [ref=e96]:
+                - link "Spacing" [ref=e97] [cursor=pointer]:
+                  - /url: ./tokens/spacing.html
+              - listitem [ref=e98]:
+                - link "Typography" [ref=e99] [cursor=pointer]:
+                  - /url: ./tokens/typography.html
+    - main [ref=e100]:
+      - generic [ref=e101]:
+        - navigation "Breadcrumb" [ref=e102]:
+          - link "Carbon" [ref=e103] [cursor=pointer]:
+            - /url: ./index.html
+        - heading "Introduction" [level=1] [ref=e104]
+      - article [ref=e105]:
+        - heading "Carbon Design System" [level=1] [ref=e106]
+        - paragraph [ref=e107]: A framework-agnostic design system built with OKLCH colors and a 4px spacing scale.
+        - heading "Getting Started" [level=2] [ref=e108]
+        - paragraph [ref=e109]: Carbon is designed to be simple, accessible, and fast. It outputs static HTML files that can be hosted anywhere.
+        - heading "Principles" [level=3] [ref=e110]
+        - list [ref=e111]:
+          - listitem [ref=e112]:
+            - strong [ref=e113]: Monochrome First
+            - text: ": Design in grayscale to ensure hierarchy and contrast."
+          - listitem [ref=e114]:
+            - strong [ref=e115]: OKLCH Colors
+            - text: ": Perceptually uniform colors for consistent visual harmony."
+          - listitem [ref=e116]:
+            - strong [ref=e117]: Vanilla Foundation
+            - text: ": No frameworks. Just HTML, CSS, and minimal JS."
+        - heading "Navigation" [level=3] [ref=e118]
+        - list [ref=e119]:
+          - listitem [ref=e120]:
+            - link "Tokens" [ref=e121] [cursor=pointer]:
+              - /url: ./tokens/colors.html
+          - listitem [ref=e122]:
+            - link "Components" [ref=e123] [cursor=pointer]:
+              - /url: ./components/buttons.html
+          - listitem [ref=e124]:
+            - link "Patterns" [ref=e125] [cursor=pointer]:
+              - /url: ./patterns/layouts.html
+      - paragraph [ref=e127]: "Carbon v0.1 • Last built: 2/2/2026, 10:47:08 PM"
+    - complementary [ref=e128]:
+      - navigation [ref=e129]:
+        - heading "On this page" [level=3] [ref=e130]
+        - list [ref=e131]:
+          - listitem [ref=e132]:
+            - link "Getting Started" [ref=e133] [cursor=pointer]:
+              - /url: "#getting-started"
+          - listitem [ref=e134]:
+            - link "Principles" [ref=e135] [cursor=pointer]:
+              - /url: "#principles"
+          - listitem [ref=e136]:
+            - link "Navigation" [ref=e137] [cursor=pointer]:
+              - /url: "#navigation"
+```

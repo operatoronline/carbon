@@ -1,0 +1,1129 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - text: 
+      - link " Carbon" [ref=e4] [cursor=pointer]:
+        - /url: ../index.html
+        - generic [ref=e5]: 
+        - generic [ref=e6]: Carbon
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - generic [ref=e9]: 
+        - textbox "Search" [ref=e10]:
+          - /placeholder: Search...
+      - button "Toggle theme" [ref=e11] [cursor=pointer]:
+        - generic [ref=e12]: 
+  - generic [ref=e13]:
+    - complementary [ref=e14]:
+      - navigation [ref=e15]:
+        - list [ref=e16]:
+          - listitem [ref=e17]:
+            - link "Introduction" [ref=e18] [cursor=pointer]:
+              - /url: ../index.html
+          - listitem [ref=e19]:
+            - generic [ref=e20]: Components
+            - list [ref=e21]:
+              - listitem [ref=e22]:
+                - link "Accordions" [ref=e23] [cursor=pointer]:
+                  - /url: ../components/accordions.html
+              - listitem [ref=e24]:
+                - link "Alerts" [ref=e25] [cursor=pointer]:
+                  - /url: ../components/alerts.html
+              - listitem [ref=e26]:
+                - link "Avatars" [ref=e27] [cursor=pointer]:
+                  - /url: ../components/avatars.html
+              - listitem [ref=e28]:
+                - link "Badges" [ref=e29] [cursor=pointer]:
+                  - /url: ../components/badges.html
+              - listitem [ref=e30]:
+                - link "Breadcrumbs" [ref=e31] [cursor=pointer]:
+                  - /url: ../components/breadcrumbs.html
+              - listitem [ref=e32]:
+                - link "Buttons" [ref=e33] [cursor=pointer]:
+                  - /url: ../components/buttons.html
+              - listitem [ref=e34]:
+                - link "Cards" [ref=e35] [cursor=pointer]:
+                  - /url: ../components/cards.html
+              - listitem [ref=e36]:
+                - link "Chips" [ref=e37] [cursor=pointer]:
+                  - /url: ../components/chips.html
+              - listitem [ref=e38]:
+                - link "Dividers" [ref=e39] [cursor=pointer]:
+                  - /url: ../components/dividers.html
+              - listitem [ref=e40]:
+                - link "Drawer" [ref=e41] [cursor=pointer]:
+                  - /url: ../components/drawer.html
+              - listitem [ref=e42]:
+                - link "Dropdowns" [ref=e43] [cursor=pointer]:
+                  - /url: ../components/dropdowns.html
+              - listitem [ref=e44]:
+                - link "Forms" [ref=e45] [cursor=pointer]:
+                  - /url: ../components/forms.html
+              - listitem [ref=e46]:
+                - link "Icons" [ref=e47] [cursor=pointer]:
+                  - /url: ../components/icons.html
+              - listitem [ref=e48]:
+                - link "Links" [ref=e49] [cursor=pointer]:
+                  - /url: ../components/links.html
+              - listitem [ref=e50]:
+                - link "Lists" [ref=e51] [cursor=pointer]:
+                  - /url: ../components/lists.html
+              - listitem [ref=e52]:
+                - link "Menus" [ref=e53] [cursor=pointer]:
+                  - /url: ../components/menus.html
+              - listitem [ref=e54]:
+                - link "Modals" [ref=e55] [cursor=pointer]:
+                  - /url: ../components/modals.html
+              - listitem [ref=e56]:
+                - link "Pagination" [ref=e57] [cursor=pointer]:
+                  - /url: ../components/pagination.html
+              - listitem [ref=e58]:
+                - link "Progress" [ref=e59] [cursor=pointer]:
+                  - /url: ../components/progress.html
+              - listitem [ref=e60]:
+                - link "Rating" [ref=e61] [cursor=pointer]:
+                  - /url: ../components/rating.html
+              - listitem [ref=e62]:
+                - link "Skeletons" [ref=e63] [cursor=pointer]:
+                  - /url: ../components/skeletons.html
+              - listitem [ref=e64]:
+                - link "Sliders" [ref=e65] [cursor=pointer]:
+                  - /url: ../components/sliders.html
+              - listitem [ref=e66]:
+                - link "Steppers" [ref=e67] [cursor=pointer]:
+                  - /url: ../components/steppers.html
+              - listitem [ref=e68]:
+                - link "Switches" [ref=e69] [cursor=pointer]:
+                  - /url: ../components/switches.html
+              - listitem [ref=e70]:
+                - link "Tables" [ref=e71] [cursor=pointer]:
+                  - /url: ../components/tables.html
+              - listitem [ref=e72]:
+                - link "Tabs" [ref=e73] [cursor=pointer]:
+                  - /url: ../components/tabs.html
+              - listitem [ref=e74]:
+                - link "Textarea" [ref=e75] [cursor=pointer]:
+                  - /url: ../components/textarea.html
+              - listitem [ref=e76]:
+                - link "Timeline" [ref=e77] [cursor=pointer]:
+                  - /url: ../components/timeline.html
+              - listitem [ref=e78]:
+                - link "Toasts" [ref=e79] [cursor=pointer]:
+                  - /url: ../components/toasts.html
+              - listitem [ref=e80]:
+                - link "Toolbar" [ref=e81] [cursor=pointer]:
+                  - /url: ../components/toolbar.html
+              - listitem [ref=e82]:
+                - link "Tooltips" [ref=e83] [cursor=pointer]:
+                  - /url: ../components/tooltips.html
+          - listitem [ref=e84]:
+            - generic [ref=e85]: Patterns
+            - list [ref=e86]:
+              - listitem [ref=e87]:
+                - link "Empty states" [ref=e88] [cursor=pointer]:
+                  - /url: ../patterns/empty-states.html
+              - listitem [ref=e89]:
+                - link "Layouts" [ref=e90] [cursor=pointer]:
+                  - /url: ../patterns/layouts.html
+          - listitem [ref=e91]:
+            - generic [ref=e92]: Tokens
+            - list [ref=e93]:
+              - listitem [ref=e94]:
+                - link "Colors" [ref=e95] [cursor=pointer]:
+                  - /url: ../tokens/colors.html
+              - listitem [ref=e96]:
+                - link "Spacing" [ref=e97] [cursor=pointer]:
+                  - /url: ../tokens/spacing.html
+              - listitem [ref=e98]:
+                - link "Typography" [ref=e99] [cursor=pointer]:
+                  - /url: ../tokens/typography.html
+    - main [ref=e100]:
+      - generic [ref=e101]:
+        - navigation "Breadcrumb" [ref=e102]:
+          - link "Carbon" [ref=e103] [cursor=pointer]:
+            - /url: ../index.html
+          - generic [ref=e104]: /
+          - generic [ref=e105]: Components
+          - generic [ref=e106]: /
+          - generic [ref=e107]: Tables
+        - heading "Tables" [level=1] [ref=e108]
+      - article [ref=e109]:
+        - heading "Tables" [level=1] [ref=e110]
+        - paragraph [ref=e111]: Tables organize and display data in rows and columns, making it easy to scan, compare, and analyze information.
+        - separator [ref=e112]
+        - heading "Basic Table" [level=2] [ref=e113]
+        - paragraph [ref=e114]: A standard table with header and body rows.
+        - table [ref=e117]:
+          - rowgroup [ref=e118]:
+            - row "Name Role Status" [ref=e119]:
+              - columnheader "Name" [ref=e120]
+              - columnheader "Role" [ref=e121]
+              - columnheader "Status" [ref=e122]
+          - rowgroup [ref=e123]:
+            - row "Aiden Design Engineer Active" [ref=e124]:
+              - cell "Aiden" [ref=e125]
+              - cell "Design Engineer" [ref=e126]
+              - cell "Active" [ref=e127]:
+                - generic [ref=e128]: Active
+            - row "Sarah Product Manager Active" [ref=e129]:
+              - cell "Sarah" [ref=e130]
+              - cell "Product Manager" [ref=e131]
+              - cell "Active" [ref=e132]:
+                - generic [ref=e133]: Active
+            - row "Marcus Developer Inactive" [ref=e134]:
+              - cell "Marcus" [ref=e135]
+              - cell "Developer" [ref=e136]
+              - cell "Inactive" [ref=e137]:
+                - generic [ref=e138]: Inactive
+        - generic [ref=e139]:
+          - code [ref=e141]:
+            - generic [ref=e142]:
+              - generic [ref=e143]: <table
+              - text: class
+              - generic [ref=e144]: ="Table"
+              - text: ">"
+            - generic [ref=e145]:
+              - generic [ref=e146]: <thead
+              - text: ">"
+            - generic [ref=e147]:
+              - generic [ref=e148]: <tr
+              - text: ">"
+            - generic [ref=e149]:
+              - generic [ref=e150]: <th
+              - text: ">"
+            - text: Name
+            - generic [ref=e151]:
+              - generic [ref=e152]: </th
+              - text: ">"
+            - generic [ref=e153]:
+              - generic [ref=e154]: <th
+              - text: ">"
+            - text: Role
+            - generic [ref=e155]:
+              - generic [ref=e156]: </th
+              - text: ">"
+            - generic [ref=e157]:
+              - generic [ref=e158]: <th
+              - text: ">"
+            - text: Status
+            - generic [ref=e159]:
+              - generic [ref=e160]: </th
+              - text: ">"
+            - generic [ref=e161]:
+              - generic [ref=e162]: </tr
+              - text: ">"
+            - generic [ref=e163]:
+              - generic [ref=e164]: </thead
+              - text: ">"
+            - generic [ref=e165]:
+              - generic [ref=e166]: <tbody
+              - text: ">"
+            - generic [ref=e167]:
+              - generic [ref=e168]: <tr
+              - text: ">"
+            - generic [ref=e169]:
+              - generic [ref=e170]: <td
+              - text: ">"
+            - text: Aiden
+            - generic [ref=e171]:
+              - generic [ref=e172]: </td
+              - text: ">"
+            - generic [ref=e173]:
+              - generic [ref=e174]: <td
+              - text: ">"
+            - text: Design Engineer
+            - generic [ref=e175]:
+              - generic [ref=e176]: </td
+              - text: ">"
+            - generic [ref=e177]:
+              - generic [ref=e178]: <td
+              - text: ">"
+            - generic [ref=e179]:
+              - generic [ref=e180]: <span
+              - text: class
+              - generic [ref=e181]: ="Badge Badge--success"
+              - text: ">"
+            - text: Active
+            - generic [ref=e182]:
+              - generic [ref=e183]: </span
+              - text: ">"
+            - generic [ref=e184]:
+              - generic [ref=e185]: </td
+              - text: ">"
+            - generic [ref=e186]:
+              - generic [ref=e187]: </tr
+              - text: ">"
+            - generic [ref=e188]:
+              - generic [ref=e189]: </tbody
+              - text: ">"
+            - generic [ref=e190]:
+              - generic [ref=e191]: </table
+              - text: ">"
+          - button "Copy code" [ref=e192] [cursor=pointer]:
+            - generic [ref=e193]: 
+        - separator [ref=e194]
+        - heading "Bordered Table" [level=2] [ref=e195]
+        - paragraph [ref=e196]: Add borders between all cells.
+        - table [ref=e199]:
+          - rowgroup [ref=e200]:
+            - row "Property Value Description" [ref=e201]:
+              - columnheader "Property" [ref=e202]
+              - columnheader "Value" [ref=e203]
+              - columnheader "Description" [ref=e204]
+          - rowgroup [ref=e205]:
+            - row "--space-4 16px Base spacing unit" [ref=e206]:
+              - cell "--space-4" [ref=e207]:
+                - code [ref=e208]: "--space-4"
+              - cell "16px" [ref=e209]
+              - cell "Base spacing unit" [ref=e210]
+            - row "--accent-primary oklch(60% 0.15 250) Primary brand color" [ref=e211]:
+              - cell "--accent-primary" [ref=e212]:
+                - code [ref=e213]: "--accent-primary"
+              - cell "oklch(60% 0.15 250)" [ref=e214]
+              - cell "Primary brand color" [ref=e215]
+            - row "--font-sans DM Sans Primary typeface" [ref=e216]:
+              - cell "--font-sans" [ref=e217]:
+                - code [ref=e218]: "--font-sans"
+              - cell "DM Sans" [ref=e219]
+              - cell "Primary typeface" [ref=e220]
+        - generic [ref=e221]:
+          - code [ref=e223]:
+            - generic [ref=e224]:
+              - generic [ref=e225]: <table
+              - text: class
+              - generic [ref=e226]: ="Table Table--bordered"
+              - text: ">"
+            - text: ...
+            - generic [ref=e227]:
+              - generic [ref=e228]: </table
+              - text: ">"
+          - button "Copy code" [ref=e229] [cursor=pointer]:
+            - generic [ref=e230]: 
+        - separator [ref=e231]
+        - heading "Striped Rows" [level=2] [ref=e232]
+        - paragraph [ref=e233]: Alternate row backgrounds for easier scanning.
+        - table [ref=e236]:
+          - rowgroup [ref=e237]:
+            - row "Date Event Location" [ref=e238]:
+              - columnheader "Date" [ref=e239]
+              - columnheader "Event" [ref=e240]
+              - columnheader "Location" [ref=e241]
+          - rowgroup [ref=e242]:
+            - row "Feb 15 Design Review Room A" [ref=e243]:
+              - cell "Feb 15" [ref=e244]
+              - cell "Design Review" [ref=e245]
+              - cell "Room A" [ref=e246]
+            - row "Feb 18 Sprint Planning Room B" [ref=e247]:
+              - cell "Feb 18" [ref=e248]
+              - cell "Sprint Planning" [ref=e249]
+              - cell "Room B" [ref=e250]
+            - row "Feb 20 Team Standup Virtual" [ref=e251]:
+              - cell "Feb 20" [ref=e252]
+              - cell "Team Standup" [ref=e253]
+              - cell "Virtual" [ref=e254]
+            - row "Feb 22 Retrospective Room A" [ref=e255]:
+              - cell "Feb 22" [ref=e256]
+              - cell "Retrospective" [ref=e257]
+              - cell "Room A" [ref=e258]
+            - row "Feb 25 Demo Day Auditorium" [ref=e259]:
+              - cell "Feb 25" [ref=e260]
+              - cell "Demo Day" [ref=e261]
+              - cell "Auditorium" [ref=e262]
+        - generic [ref=e263]:
+          - code [ref=e265]:
+            - generic [ref=e266]:
+              - generic [ref=e267]: <table
+              - text: class
+              - generic [ref=e268]: ="Table Table--striped"
+              - text: ">"
+            - text: ...
+            - generic [ref=e269]:
+              - generic [ref=e270]: </table
+              - text: ">"
+          - button "Copy code" [ref=e271] [cursor=pointer]:
+            - generic [ref=e272]: 
+        - separator [ref=e273]
+        - heading "Hoverable Rows" [level=2] [ref=e274]
+        - paragraph [ref=e275]: Highlight rows on hover for better tracking.
+        - table [ref=e278]:
+          - rowgroup [ref=e279]:
+            - row "Product SKU Price Stock" [ref=e280]:
+              - columnheader "Product" [ref=e281]
+              - columnheader "SKU" [ref=e282]
+              - columnheader "Price" [ref=e283]
+              - columnheader "Stock" [ref=e284]
+          - rowgroup [ref=e285]:
+            - row "Widget Pro WP-001 $29.99 142" [ref=e286]:
+              - cell "Widget Pro" [ref=e287]
+              - cell "WP-001" [ref=e288]
+              - cell "$29.99" [ref=e289]
+              - cell "142" [ref=e290]
+            - row "Gadget Plus GP-002 $49.99 89" [ref=e291]:
+              - cell "Gadget Plus" [ref=e292]
+              - cell "GP-002" [ref=e293]
+              - cell "$49.99" [ref=e294]
+              - cell "89" [ref=e295]
+            - row "Tool Basic TB-003 $19.99 256" [ref=e296]:
+              - cell "Tool Basic" [ref=e297]
+              - cell "TB-003" [ref=e298]
+              - cell "$19.99" [ref=e299]
+              - cell "256" [ref=e300]
+        - generic [ref=e301]:
+          - code [ref=e303]:
+            - generic [ref=e304]:
+              - generic [ref=e305]: <table
+              - text: class
+              - generic [ref=e306]: ="Table Table--hoverable"
+              - text: ">"
+            - text: ...
+            - generic [ref=e307]:
+              - generic [ref=e308]: </table
+              - text: ">"
+          - button "Copy code" [ref=e309] [cursor=pointer]:
+            - generic [ref=e310]: 
+        - separator [ref=e311]
+        - heading "Compact Table" [level=2] [ref=e312]
+        - paragraph [ref=e313]: Reduced padding for dense data displays.
+        - table [ref=e316]:
+          - rowgroup [ref=e317]:
+            - row "ID Name Value Change" [ref=e318]:
+              - columnheader "ID" [ref=e319]
+              - columnheader "Name" [ref=e320]
+              - columnheader "Value" [ref=e321]
+              - columnheader "Change" [ref=e322]
+          - rowgroup [ref=e323]:
+            - row "001 Alpha 1,234 +5.2%" [ref=e324]:
+              - cell "001" [ref=e325]
+              - cell "Alpha" [ref=e326]
+              - cell "1,234" [ref=e327]
+              - cell "+5.2%" [ref=e328]
+            - row "002 Beta 987 -2.1%" [ref=e329]:
+              - cell "002" [ref=e330]
+              - cell "Beta" [ref=e331]
+              - cell "987" [ref=e332]
+              - cell "-2.1%" [ref=e333]
+            - row "003 Gamma 2,456 +12.8%" [ref=e334]:
+              - cell "003" [ref=e335]
+              - cell "Gamma" [ref=e336]
+              - cell "2,456" [ref=e337]
+              - cell "+12.8%" [ref=e338]
+            - row "004 Delta 543 0.0%" [ref=e339]:
+              - cell "004" [ref=e340]
+              - cell "Delta" [ref=e341]
+              - cell "543" [ref=e342]
+              - cell "0.0%" [ref=e343]
+        - generic [ref=e344]:
+          - code [ref=e346]:
+            - generic [ref=e347]:
+              - generic [ref=e348]: <table
+              - text: class
+              - generic [ref=e349]: ="Table Table--compact"
+              - text: ">"
+            - text: ...
+            - generic [ref=e350]:
+              - generic [ref=e351]: </table
+              - text: ">"
+          - button "Copy code" [ref=e352] [cursor=pointer]:
+            - generic [ref=e353]: 
+        - separator [ref=e354]
+        - heading "Sortable Columns" [level=2] [ref=e355]
+        - paragraph [ref=e356]: Indicate sortable columns with icons.
+        - table [ref=e359]:
+          - rowgroup [ref=e360]:
+            - row "Name  Email  Joined " [ref=e361]:
+              - columnheader "Name " [ref=e362] [cursor=pointer]:
+                - text: Name
+                - generic [ref=e363]: 
+              - columnheader "Email " [ref=e364] [cursor=pointer]:
+                - text: Email
+                - generic [ref=e365]: 
+              - columnheader "Joined " [ref=e366] [cursor=pointer]:
+                - text: Joined
+                - generic [ref=e367]: 
+          - rowgroup [ref=e368]:
+            - row "Alice Chen alice@example.com Jan 15, 2026" [ref=e369]:
+              - cell "Alice Chen" [ref=e370]
+              - cell "alice@example.com" [ref=e371]
+              - cell "Jan 15, 2026" [ref=e372]
+            - row "Bob Martinez bob@example.com Feb 2, 2026" [ref=e373]:
+              - cell "Bob Martinez" [ref=e374]
+              - cell "bob@example.com" [ref=e375]
+              - cell "Feb 2, 2026" [ref=e376]
+            - row "Carol Kim carol@example.com Dec 8, 2025" [ref=e377]:
+              - cell "Carol Kim" [ref=e378]
+              - cell "carol@example.com" [ref=e379]
+              - cell "Dec 8, 2025" [ref=e380]
+        - generic [ref=e381]:
+          - code [ref=e383]:
+            - generic [ref=e384]:
+              - generic [ref=e385]: <th
+              - text: class
+              - generic [ref=e386]: ="Table-sortable Table-sortable--asc"
+              - text: ">"
+            - text: Name
+            - generic [ref=e387]:
+              - generic [ref=e388]: <i
+              - text: class
+              - generic [ref=e389]: ="ph ph-caret-up"
+              - text: ">"
+            - generic [ref=e390]:
+              - generic [ref=e391]: </i
+              - text: ">"
+            - generic [ref=e392]:
+              - generic [ref=e393]: </th
+              - text: ">"
+            - generic [ref=e394]:
+              - generic [ref=e395]: <th
+              - text: class
+              - generic [ref=e396]: ="Table-sortable"
+              - text: ">"
+            - text: Email
+            - generic [ref=e397]:
+              - generic [ref=e398]: <i
+              - text: class
+              - generic [ref=e399]: ="ph ph-caret-up-down"
+              - text: ">"
+            - generic [ref=e400]:
+              - generic [ref=e401]: </i
+              - text: ">"
+            - generic [ref=e402]:
+              - generic [ref=e403]: </th
+              - text: ">"
+          - button "Copy code" [ref=e404] [cursor=pointer]:
+            - generic [ref=e405]: 
+        - separator [ref=e406]
+        - heading "Selectable Rows" [level=2] [ref=e407]
+        - paragraph [ref=e408]: Add checkboxes for row selection.
+        - table [ref=e411]:
+          - rowgroup [ref=e412]:
+            - row "Name Email Role" [ref=e413]:
+              - columnheader [ref=e414]:
+                - generic [ref=e415] [cursor=pointer]:
+                  - checkbox
+              - columnheader "Name" [ref=e417]
+              - columnheader "Email" [ref=e418]
+              - columnheader "Role" [ref=e419]
+          - rowgroup [ref=e420]:
+            - row "Alice Chen alice@example.com Admin" [ref=e421]:
+              - cell [ref=e422]:
+                - generic [ref=e423] [cursor=pointer]:
+                  - checkbox [checked]
+              - cell "Alice Chen" [ref=e425]
+              - cell "alice@example.com" [ref=e426]
+              - cell "Admin" [ref=e427]
+            - row "Bob Martinez bob@example.com Editor" [ref=e428]:
+              - cell [ref=e429]:
+                - generic [ref=e430] [cursor=pointer]:
+                  - checkbox
+              - cell "Bob Martinez" [ref=e432]
+              - cell "bob@example.com" [ref=e433]
+              - cell "Editor" [ref=e434]
+            - row "Carol Kim carol@example.com Viewer" [ref=e435]:
+              - cell [ref=e436]:
+                - generic [ref=e437] [cursor=pointer]:
+                  - checkbox [checked]
+              - cell "Carol Kim" [ref=e439]
+              - cell "carol@example.com" [ref=e440]
+              - cell "Viewer" [ref=e441]
+        - generic [ref=e442]:
+          - code [ref=e444]:
+            - generic [ref=e445]:
+              - generic [ref=e446]: <tr
+              - text: class
+              - generic [ref=e447]: ="Table-row--selected"
+              - text: ">"
+            - generic [ref=e448]:
+              - generic [ref=e449]: <td
+              - text: ">"
+            - generic [ref=e450]:
+              - generic [ref=e451]: <label
+              - text: class
+              - generic [ref=e452]: ="Checkbox"
+              - text: ">"
+            - generic [ref=e453]:
+              - generic [ref=e454]: <input
+              - text: type
+              - generic [ref=e455]: ="checkbox"
+              - text: class
+              - generic [ref=e456]: ="Checkbox-input"
+              - text: checked>
+            - generic [ref=e457]:
+              - generic [ref=e458]: <span
+              - text: class
+              - generic [ref=e459]: ="Checkbox-box"
+              - text: ">"
+            - generic [ref=e460]:
+              - generic [ref=e461]: </span
+              - text: ">"
+            - generic [ref=e462]:
+              - generic [ref=e463]: </label
+              - text: ">"
+            - generic [ref=e464]:
+              - generic [ref=e465]: </td
+              - text: ">"
+            - generic [ref=e466]:
+              - generic [ref=e467]: <td
+              - text: ">"
+            - text: Alice Chen
+            - generic [ref=e468]:
+              - generic [ref=e469]: </td
+              - text: ">"
+            - text: ...
+            - generic [ref=e470]:
+              - generic [ref=e471]: </tr
+              - text: ">"
+          - button "Copy code" [ref=e472] [cursor=pointer]:
+            - generic [ref=e473]: 
+        - separator [ref=e474]
+        - heading "Table with Actions" [level=2] [ref=e475]
+        - paragraph [ref=e476]: Add action buttons to each row.
+        - table [ref=e479]:
+          - rowgroup [ref=e480]:
+            - row "Project Owner Status" [ref=e481]:
+              - columnheader "Project" [ref=e482]
+              - columnheader "Owner" [ref=e483]
+              - columnheader "Status" [ref=e484]
+              - columnheader [ref=e485]
+          - rowgroup [ref=e486]:
+            - row "Carbon Design Design system Aiden Active Edit Delete" [ref=e487]:
+              - cell "Carbon Design Design system" [ref=e488]:
+                - generic [ref=e489]: Carbon Design
+                - generic [ref=e490]: Design system
+              - cell "Aiden" [ref=e491]
+              - cell "Active" [ref=e492]:
+                - generic [ref=e493]: Active
+              - cell "Edit Delete" [ref=e494]:
+                - generic [ref=e495]:
+                  - button "Edit" [ref=e496] [cursor=pointer]:
+                    - generic [ref=e497]: 
+                  - button "Delete" [ref=e498] [cursor=pointer]:
+                    - generic [ref=e499]: 
+            - row "Marketing Site Website Sarah Review Edit Delete" [ref=e500]:
+              - cell "Marketing Site Website" [ref=e501]:
+                - generic [ref=e502]: Marketing Site
+                - generic [ref=e503]: Website
+              - cell "Sarah" [ref=e504]
+              - cell "Review" [ref=e505]:
+                - generic [ref=e506]: Review
+              - cell "Edit Delete" [ref=e507]:
+                - generic [ref=e508]:
+                  - button "Edit" [ref=e509] [cursor=pointer]:
+                    - generic [ref=e510]: 
+                  - button "Delete" [ref=e511] [cursor=pointer]:
+                    - generic [ref=e512]: 
+        - separator [ref=e513]
+        - heading "Responsive Table" [level=2] [ref=e514]
+        - paragraph [ref=e515]: Horizontal scroll for tables on small screens.
+        - table [ref=e519]:
+          - rowgroup [ref=e520]:
+            - row "ID Product Name Category Price Stock Last Updated Status" [ref=e521]:
+              - columnheader "ID" [ref=e522]
+              - columnheader "Product Name" [ref=e523]
+              - columnheader "Category" [ref=e524]
+              - columnheader "Price" [ref=e525]
+              - columnheader "Stock" [ref=e526]
+              - columnheader "Last Updated" [ref=e527]
+              - columnheader "Status" [ref=e528]
+          - rowgroup [ref=e529]:
+            - row "P001 Wireless Headphones Pro Electronics $149.99 234 Feb 2, 2026 In Stock" [ref=e530]:
+              - cell "P001" [ref=e531]
+              - cell "Wireless Headphones Pro" [ref=e532]
+              - cell "Electronics" [ref=e533]
+              - cell "$149.99" [ref=e534]
+              - cell "234" [ref=e535]
+              - cell "Feb 2, 2026" [ref=e536]
+              - cell "In Stock" [ref=e537]:
+                - generic [ref=e538]: In Stock
+            - row "P002 Mechanical Keyboard RGB Electronics $89.99 56 Feb 1, 2026 Low Stock" [ref=e539]:
+              - cell "P002" [ref=e540]
+              - cell "Mechanical Keyboard RGB" [ref=e541]
+              - cell "Electronics" [ref=e542]
+              - cell "$89.99" [ref=e543]
+              - cell "56" [ref=e544]
+              - cell "Feb 1, 2026" [ref=e545]
+              - cell "Low Stock" [ref=e546]:
+                - generic [ref=e547]: Low Stock
+        - generic [ref=e548]:
+          - code [ref=e550]:
+            - generic [ref=e551]:
+              - generic [ref=e552]: <div
+              - text: class
+              - generic [ref=e553]: ="Table-responsive"
+              - text: ">"
+            - generic [ref=e554]:
+              - generic [ref=e555]: <table
+              - text: class
+              - generic [ref=e556]: ="Table"
+              - text: ">"
+            - text: ...
+            - generic [ref=e557]:
+              - generic [ref=e558]: </table
+              - text: ">"
+            - generic [ref=e559]:
+              - generic [ref=e560]: </div
+              - text: ">"
+          - button "Copy code" [ref=e561] [cursor=pointer]:
+            - generic [ref=e562]: 
+        - separator [ref=e563]
+        - heading "Sticky Header" [level=2] [ref=e564]
+        - paragraph [ref=e565]: Keep header visible while scrolling.
+        - table [ref=e569]:
+          - rowgroup [ref=e570]:
+            - row "Name Department Location" [ref=e571]:
+              - columnheader "Name" [ref=e572]
+              - columnheader "Department" [ref=e573]
+              - columnheader "Location" [ref=e574]
+          - rowgroup [ref=e575]:
+            - row "Alice Chen Engineering SF" [ref=e576]:
+              - cell "Alice Chen" [ref=e577]
+              - cell "Engineering" [ref=e578]
+              - cell "SF" [ref=e579]
+            - row "Bob Martinez Design NYC" [ref=e580]:
+              - cell "Bob Martinez" [ref=e581]
+              - cell "Design" [ref=e582]
+              - cell "NYC" [ref=e583]
+            - row "Carol Kim Product LA" [ref=e584]:
+              - cell "Carol Kim" [ref=e585]
+              - cell "Product" [ref=e586]
+              - cell "LA" [ref=e587]
+            - row "David Lee Engineering SF" [ref=e588]:
+              - cell "David Lee" [ref=e589]
+              - cell "Engineering" [ref=e590]
+              - cell "SF" [ref=e591]
+            - row "Emma Wilson Marketing NYC" [ref=e592]:
+              - cell "Emma Wilson" [ref=e593]
+              - cell "Marketing" [ref=e594]
+              - cell "NYC" [ref=e595]
+            - row "Frank Brown Sales Chicago" [ref=e596]:
+              - cell "Frank Brown" [ref=e597]
+              - cell "Sales" [ref=e598]
+              - cell "Chicago" [ref=e599]
+            - row "Grace Taylor Engineering Remote" [ref=e600]:
+              - cell "Grace Taylor" [ref=e601]
+              - cell "Engineering" [ref=e602]
+              - cell "Remote" [ref=e603]
+            - row "Henry Davis Design SF" [ref=e604]:
+              - cell "Henry Davis" [ref=e605]
+              - cell "Design" [ref=e606]
+              - cell "SF" [ref=e607]
+        - generic [ref=e608]:
+          - code [ref=e610]:
+            - generic [ref=e611]:
+              - generic [ref=e612]: <div
+              - text: class
+              - generic [ref=e613]: ="Table-container"
+              - generic [ref=e614]:
+                - text: style
+                - generic [ref=e615]:
+                  - text: ="
+                  - generic [ref=e616]: "max-height: 200px; overflow-y: auto;"
+                  - text: "\""
+              - text: ">"
+            - generic [ref=e617]:
+              - generic [ref=e618]: <table
+              - text: class
+              - generic [ref=e619]: ="Table Table--stickyHeader"
+              - text: ">"
+            - text: ...
+            - generic [ref=e620]:
+              - generic [ref=e621]: </table
+              - text: ">"
+            - generic [ref=e622]:
+              - generic [ref=e623]: </div
+              - text: ">"
+          - button "Copy code" [ref=e624] [cursor=pointer]:
+            - generic [ref=e625]: 
+        - separator [ref=e626]
+        - heading "Empty State" [level=2] [ref=e627]
+        - paragraph [ref=e628]: Show a message when no data is available.
+        - table [ref=e631]:
+          - rowgroup [ref=e632]:
+            - row "Name Email Status" [ref=e633]:
+              - columnheader "Name" [ref=e634]
+              - columnheader "Email" [ref=e635]
+              - columnheader "Status" [ref=e636]
+          - rowgroup [ref=e637]:
+            - row " No data available Add First Entry" [ref=e638]:
+              - cell " No data available Add First Entry" [ref=e639]:
+                - generic [ref=e640]:
+                  - generic [ref=e641]: 
+                  - paragraph [ref=e642]: No data available
+                  - button "Add First Entry" [ref=e643] [cursor=pointer]
+        - separator [ref=e644]
+        - heading "Loading State" [level=2] [ref=e645]
+        - paragraph [ref=e646]: Skeleton rows while data loads.
+        - table [ref=e649]:
+          - rowgroup [ref=e650]:
+            - row "Name Email Role" [ref=e651]:
+              - columnheader "Name" [ref=e652]
+              - columnheader "Email" [ref=e653]
+              - columnheader "Role" [ref=e654]
+          - rowgroup [ref=e655]:
+            - row [ref=e656]:
+              - cell [ref=e657]
+              - cell [ref=e658]
+              - cell [ref=e659]
+            - row [ref=e660]:
+              - cell [ref=e661]
+              - cell [ref=e662]
+              - cell [ref=e663]
+            - row [ref=e664]:
+              - cell [ref=e665]
+              - cell [ref=e666]
+              - cell [ref=e667]
+        - separator [ref=e668]
+        - heading "Column Alignment" [level=2] [ref=e669]
+        - paragraph [ref=e670]: Align content by type.
+        - table [ref=e673]:
+          - rowgroup [ref=e674]:
+            - row "Item Quantity Price Total" [ref=e675]:
+              - columnheader "Item" [ref=e676]
+              - columnheader "Quantity" [ref=e677]
+              - columnheader "Price" [ref=e678]
+              - columnheader "Total" [ref=e679]
+          - rowgroup [ref=e680]:
+            - row "Widget A 5 $10.00 $50.00" [ref=e681]:
+              - cell "Widget A" [ref=e682]
+              - cell "5" [ref=e683]
+              - cell "$10.00" [ref=e684]
+              - cell "$50.00" [ref=e685]
+            - row "Widget B 3 $25.00 $75.00" [ref=e686]:
+              - cell "Widget B" [ref=e687]
+              - cell "3" [ref=e688]
+              - cell "$25.00" [ref=e689]
+              - cell "$75.00" [ref=e690]
+            - row "Widget C 10 $5.00 $50.00" [ref=e691]:
+              - cell "Widget C" [ref=e692]
+              - cell "10" [ref=e693]
+              - cell "$5.00" [ref=e694]
+              - cell "$50.00" [ref=e695]
+          - rowgroup [ref=e696]:
+            - row "Subtotal $175.00" [ref=e697]:
+              - cell "Subtotal" [ref=e698]
+              - cell "$175.00" [ref=e699]
+        - generic [ref=e700]:
+          - code [ref=e702]:
+            - generic [ref=e703]:
+              - generic [ref=e704]: <th
+              - text: class
+              - generic [ref=e705]: ="Table-cell--right"
+              - text: ">"
+            - text: Price
+            - generic [ref=e706]:
+              - generic [ref=e707]: </th
+              - text: ">"
+            - generic [ref=e708]:
+              - generic [ref=e709]: <td
+              - text: class
+              - generic [ref=e710]: ="Table-cell--right"
+              - text: ">"
+            - text: $10.00
+            - generic [ref=e711]:
+              - generic [ref=e712]: </td
+              - text: ">"
+          - button "Copy code" [ref=e713] [cursor=pointer]:
+            - generic [ref=e714]: 
+        - separator [ref=e715]
+        - heading "Accessibility" [level=2] [ref=e716]
+        - paragraph [ref=e717]: Tables require proper structure for screen readers.
+        - heading "Headers" [level=3] [ref=e718]
+        - generic [ref=e719]:
+          - code [ref=e721]:
+            - text: <!-- Always use th for headers -->
+            - generic [ref=e722]:
+              - generic [ref=e723]: <thead
+              - text: ">"
+            - generic [ref=e724]:
+              - generic [ref=e725]: <tr
+              - text: ">"
+            - generic [ref=e726]:
+              - generic [ref=e727]: <th
+              - text: scope
+              - generic [ref=e728]: ="col"
+              - text: ">"
+            - text: Name
+            - generic [ref=e729]:
+              - generic [ref=e730]: </th
+              - text: ">"
+            - generic [ref=e731]:
+              - generic [ref=e732]: <th
+              - text: scope
+              - generic [ref=e733]: ="col"
+              - text: ">"
+            - text: Email
+            - generic [ref=e734]:
+              - generic [ref=e735]: </th
+              - text: ">"
+            - generic [ref=e736]:
+              - generic [ref=e737]: </tr
+              - text: ">"
+            - generic [ref=e738]:
+              - generic [ref=e739]: </thead
+              - text: ">"
+            - text: <!-- For row headers -->
+            - generic [ref=e740]:
+              - generic [ref=e741]: <tbody
+              - text: ">"
+            - generic [ref=e742]:
+              - generic [ref=e743]: <tr
+              - text: ">"
+            - generic [ref=e744]:
+              - generic [ref=e745]: <th
+              - text: scope
+              - generic [ref=e746]: ="row"
+              - text: ">"
+            - text: Total
+            - generic [ref=e747]:
+              - generic [ref=e748]: </th
+              - text: ">"
+            - generic [ref=e749]:
+              - generic [ref=e750]: <td
+              - text: ">"
+            - text: $175.00
+            - generic [ref=e751]:
+              - generic [ref=e752]: </td
+              - text: ">"
+            - generic [ref=e753]:
+              - generic [ref=e754]: </tr
+              - text: ">"
+            - generic [ref=e755]:
+              - generic [ref=e756]: </tbody
+              - text: ">"
+          - button "Copy code" [ref=e757] [cursor=pointer]:
+            - generic [ref=e758]: 
+        - heading "Caption" [level=3] [ref=e759]
+        - generic [ref=e760]:
+          - code [ref=e762]:
+            - text: <!-- Describe the table -->
+            - generic [ref=e763]:
+              - generic [ref=e764]: <table
+              - text: class
+              - generic [ref=e765]: ="Table"
+              - text: ">"
+            - generic [ref=e766]:
+              - generic [ref=e767]: <caption
+              - text: ">"
+            - text: Q1 2026 Sales Report
+            - generic [ref=e768]:
+              - generic [ref=e769]: </caption
+              - text: ">"
+            - text: ...
+            - generic [ref=e770]:
+              - generic [ref=e771]: </table
+              - text: ">"
+          - button "Copy code" [ref=e772] [cursor=pointer]:
+            - generic [ref=e773]: 
+        - heading "Sortable Columns" [level=3] [ref=e774]
+        - generic [ref=e775]:
+          - code [ref=e777]:
+            - generic [ref=e778]:
+              - generic [ref=e779]: <th
+              - text: scope
+              - generic [ref=e780]: ="col"
+              - text: aria-sort
+              - generic [ref=e781]: ="ascending"
+              - text: ">"
+            - text: Name
+            - generic [ref=e782]:
+              - generic [ref=e783]: <i
+              - text: class
+              - generic [ref=e784]: ="ph ph-caret-up"
+              - text: aria-hidden
+              - generic [ref=e785]: ="true"
+              - text: ">"
+            - generic [ref=e786]:
+              - generic [ref=e787]: </i
+              - text: ">"
+            - generic [ref=e788]:
+              - generic [ref=e789]: </th
+              - text: ">"
+            - generic [ref=e790]:
+              - generic [ref=e791]: <th
+              - text: scope
+              - generic [ref=e792]: ="col"
+              - text: aria-sort
+              - generic [ref=e793]: ="none"
+              - text: ">"
+            - text: Email
+            - generic [ref=e794]:
+              - generic [ref=e795]: <i
+              - text: class
+              - generic [ref=e796]: ="ph ph-caret-up-down"
+              - text: aria-hidden
+              - generic [ref=e797]: ="true"
+              - text: ">"
+            - generic [ref=e798]:
+              - generic [ref=e799]: </i
+              - text: ">"
+            - generic [ref=e800]:
+              - generic [ref=e801]: </th
+              - text: ">"
+          - button "Copy code" [ref=e802] [cursor=pointer]:
+            - generic [ref=e803]: 
+        - heading "Selectable Rows" [level=3] [ref=e804]
+        - generic [ref=e805]:
+          - code [ref=e807]:
+            - generic [ref=e808]:
+              - generic [ref=e809]: <tr
+              - text: aria-selected
+              - generic [ref=e810]: ="true"
+              - text: ">"
+            - generic [ref=e811]:
+              - generic [ref=e812]: <td
+              - text: ">"
+            - generic [ref=e813]:
+              - generic [ref=e814]: <input
+              - text: type
+              - generic [ref=e815]: ="checkbox"
+              - text: aria-label
+              - generic [ref=e816]: ="Select Alice Chen"
+              - text: checked>
+            - generic [ref=e817]:
+              - generic [ref=e818]: </td
+              - text: ">"
+            - generic [ref=e819]:
+              - generic [ref=e820]: <td
+              - text: ">"
+            - text: Alice Chen
+            - generic [ref=e821]:
+              - generic [ref=e822]: </td
+              - text: ">"
+            - generic [ref=e823]:
+              - generic [ref=e824]: </tr
+              - text: ">"
+          - button "Copy code" [ref=e825] [cursor=pointer]:
+            - generic [ref=e826]: 
+        - separator [ref=e827]
+        - heading "CSS Reference" [level=2] [ref=e828]
+        - generic [ref=e829]:
+          - code [ref=e831]: "/* Base Table */ .Table { width: 100%; border-collapse: collapse; font-size: 0.9rem; } .Table th, .Table td { padding: var(--space-3) var(--space-4); text-align: left; border-bottom: 1px solid var(--border-subtle); } .Table th { font-weight: 600; color: var(--text-primary); background-color: var(--bg-secondary); } .Table td { color: var(--text-primary); } /* Bordered */ .Table--bordered th, .Table--bordered td { border: 1px solid var(--border-subtle); } /* Striped */ .Table--striped tbody tr:nth-child(even) { background-color: var(--bg-secondary); } /* Hoverable */ .Table--hoverable tbody tr { transition: background-color 0.15s; } .Table--hoverable tbody tr:hover { background-color: oklch(60% 0.15 250 / 0.05); } /* Compact */ .Table--compact th, .Table--compact td { padding: var(--space-2) var(--space-3); font-size: 0.85rem; } /* Sortable */ .Table-sortable { cursor: pointer; user-select: none; } .Table-sortable i { margin-left: var(--space-1); opacity: 0.5; } .Table-sortable:hover i { opacity: 1; } .Table-sortable--asc i, .Table-sortable--desc i { opacity: 1; color: var(--accent-primary); } /* Selectable */ .Table-row--selected { background-color: oklch(60% 0.15 250 / 0.08) !important; } /* Alignment */ .Table-cell--right { text-align: right; } .Table-cell--center { text-align: center; } /* Responsive */ .Table-responsive { overflow-x: auto; -webkit-overflow-scrolling: touch; } /* Sticky Header */ .Table--stickyHeader thead th { position: sticky; top: 0; background-color: var(--bg-secondary); z-index: 1; } /* Container */ .Table-container { overflow: auto; border: 1px solid var(--border-subtle); border-radius: var(--space-2); } .Table-container .Table { margin: 0; } .Table-container .Table th:first-child, .Table-container .Table td:first-child { border-left: none; } .Table-container .Table th:last-child, .Table-container .Table td:last-child { border-right: none; } /* Empty */ .Table-empty { background-color: var(--bg-primary) !important; } /* Footer */ .Table tfoot td { border-top: 2px solid var(--border-strong); background-color: var(--bg-secondary); }"
+          - button "Copy code" [ref=e832] [cursor=pointer]:
+            - generic [ref=e833]: 
+        - separator [ref=e834]
+        - heading "Best Practices" [level=2] [ref=e835]
+        - heading "Do" [level=3] [ref=e836]
+        - list [ref=e837]:
+          - listitem [ref=e838]:
+            - text: ✓
+            - strong [ref=e839]: Use semantic markup
+            - text: —
+            - code [ref=e840]: <thead>
+            - text: ","
+            - code [ref=e841]: <tbody>
+            - text: ","
+            - code [ref=e842]: <tfoot>
+            - text: ","
+            - code [ref=e843]: <th>
+          - listitem [ref=e844]:
+            - text: ✓
+            - strong [ref=e845]: Align numbers right
+            - text: — Easier to compare values
+          - listitem [ref=e846]:
+            - text: ✓
+            - strong [ref=e847]: Keep rows scannable
+            - text: — Limit columns, use truncation
+          - listitem [ref=e848]:
+            - text: ✓
+            - strong [ref=e849]: Add empty states
+            - text: — Don’t show blank tables
+          - listitem [ref=e850]:
+            - text: ✓
+            - strong [ref=e851]: Consider mobile
+            - text: — Use responsive wrapper or alternative layouts
+        - heading "Don’t" [level=3] [ref=e852]
+        - list [ref=e853]:
+          - listitem [ref=e854]:
+            - text: ✗
+            - strong [ref=e855]: Overcrowd cells
+            - text: — Too much data hurts readability
+          - listitem [ref=e856]:
+            - text: ✗
+            - strong [ref=e857]: Skip headers
+            - text: — Always label columns
+          - listitem [ref=e858]:
+            - text: ✗
+            - strong [ref=e859]: Use tables for layout
+            - text: — Tables are for data only
+          - listitem [ref=e860]:
+            - text: ✗
+            - strong [ref=e861]: Hide horizontal scroll
+            - text: — Indicate scrollable content
+          - listitem [ref=e862]:
+            - text: ✗
+            - strong [ref=e863]: Forget keyboard navigation
+            - text: — Sortable/selectable tables need focus states
+      - paragraph [ref=e865]: "Carbon v0.1 • Last built: 2/2/2026, 10:47:08 PM"
+    - complementary [ref=e866]:
+      - navigation [ref=e867]:
+        - heading "On this page" [level=3] [ref=e868]
+        - list [ref=e869]:
+          - listitem [ref=e870]:
+            - link "Basic Table" [ref=e871] [cursor=pointer]:
+              - /url: "#basic-table"
+          - listitem [ref=e872]:
+            - link "Bordered Table" [ref=e873] [cursor=pointer]:
+              - /url: "#bordered-table"
+          - listitem [ref=e874]:
+            - link "Striped Rows" [ref=e875] [cursor=pointer]:
+              - /url: "#striped-rows"
+          - listitem [ref=e876]:
+            - link "Hoverable Rows" [ref=e877] [cursor=pointer]:
+              - /url: "#hoverable-rows"
+          - listitem [ref=e878]:
+            - link "Compact Table" [ref=e879] [cursor=pointer]:
+              - /url: "#compact-table"
+          - listitem [ref=e880]:
+            - link "Sortable Columns" [ref=e881] [cursor=pointer]:
+              - /url: "#sortable-columns"
+          - listitem [ref=e882]:
+            - link "Selectable Rows" [ref=e883] [cursor=pointer]:
+              - /url: "#selectable-rows"
+          - listitem [ref=e884]:
+            - link "Table with Actions" [ref=e885] [cursor=pointer]:
+              - /url: "#table-with-actions"
+          - listitem [ref=e886]:
+            - link "Responsive Table" [ref=e887] [cursor=pointer]:
+              - /url: "#responsive-table"
+          - listitem [ref=e888]:
+            - link "Sticky Header" [ref=e889] [cursor=pointer]:
+              - /url: "#sticky-header"
+          - listitem [ref=e890]:
+            - link "Empty State" [ref=e891] [cursor=pointer]:
+              - /url: "#empty-state"
+          - listitem [ref=e892]:
+            - link "Loading State" [ref=e893] [cursor=pointer]:
+              - /url: "#loading-state"
+          - listitem [ref=e894]:
+            - link "Column Alignment" [ref=e895] [cursor=pointer]:
+              - /url: "#column-alignment"
+          - listitem [ref=e896]:
+            - link "Accessibility" [ref=e897] [cursor=pointer]:
+              - /url: "#accessibility"
+          - listitem [ref=e898]:
+            - link "Headers" [ref=e899] [cursor=pointer]:
+              - /url: "#headers"
+          - listitem [ref=e900]:
+            - link "Caption" [ref=e901] [cursor=pointer]:
+              - /url: "#caption"
+          - listitem [ref=e902]:
+            - link "Sortable Columns" [ref=e903] [cursor=pointer]:
+              - /url: "#sortable-columns"
+          - listitem [ref=e904]:
+            - link "Selectable Rows" [ref=e905] [cursor=pointer]:
+              - /url: "#selectable-rows"
+          - listitem [ref=e906]:
+            - link "CSS Reference" [ref=e907] [cursor=pointer]:
+              - /url: "#css-reference"
+          - listitem [ref=e908]:
+            - link "Best Practices" [ref=e909] [cursor=pointer]:
+              - /url: "#best-practices"
+          - listitem [ref=e910]:
+            - link "Do" [ref=e911] [cursor=pointer]:
+              - /url: "#do"
+          - listitem [ref=e912]:
+            - link "Don't" [ref=e913] [cursor=pointer]:
+              - /url: "#don-t"
+```

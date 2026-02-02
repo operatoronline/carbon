@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITLE}} | Carbon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="{{REL_ROOT}}styles/docs.css">
+</head>
+<body>
+    <header class="top-bar">
+        <div class="top-bar-left">
+            <button id="menu-toggle" class="icon-btn" aria-label="Toggle menu">
+                <i class="ph ph-list"></i>
+            </button>
+            <a href="{{REL_ROOT}}index.html" class="logo">
+                <i class="ph ph-intersect"></i>
+                <span>Carbon</span>
+            </a>
+        </div>
+        <div class="top-bar-right">
+            <div class="search-container" id="search-container">
+                <i class="ph ph-magnifying-glass"></i>
+                <input type="text" id="search-input" placeholder="Search..." aria-label="Search" autocomplete="off">
+                <div class="search-results" id="search-results"></div>
+            </div>
+            <button id="theme-btn" class="icon-btn" aria-label="Toggle theme">
+                <i class="ph ph-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar" id="sidebar">
+            <nav class="nav-tree">
+                {{NAV_HTML}}
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <nav class="breadcrumbs" aria-label="Breadcrumb">
+                    {{BREADCRUMBS_HTML}}
+                </nav>
+                <h1>{{TITLE}}</h1>
+            </header>
+            
+            <article class="prose">
+                {{CONTENT_HTML}}
+            </article>
+
+            <footer class="page-footer">
+                <p>Carbon {{VERSION}} • Last built: {{LAST_BUILT}}</p>
+            </footer>
+        </main>
+
+        <aside class="right-rail">
+            <nav class="toc">
+                <h3>On this page</h3>
+                {{TOC_HTML}}
+            </nav>
+        </aside>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="{{REL_ROOT}}scripts/docs.js"></script>
+</body>
+</html>

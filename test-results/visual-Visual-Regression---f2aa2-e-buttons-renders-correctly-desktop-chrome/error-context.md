@@ -1,0 +1,829 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - text: 
+      - link " Carbon" [ref=e4] [cursor=pointer]:
+        - /url: ../index.html
+        - generic [ref=e5]: 
+        - generic [ref=e6]: Carbon
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - generic [ref=e9]: 
+        - textbox "Search" [ref=e10]:
+          - /placeholder: Search...
+      - button "Toggle theme" [ref=e11] [cursor=pointer]:
+        - generic [ref=e12]: 
+  - generic [ref=e13]:
+    - complementary [ref=e14]:
+      - navigation [ref=e15]:
+        - list [ref=e16]:
+          - listitem [ref=e17]:
+            - link "Introduction" [ref=e18] [cursor=pointer]:
+              - /url: ../index.html
+          - listitem [ref=e19]:
+            - generic [ref=e20]: Components
+            - list [ref=e21]:
+              - listitem [ref=e22]:
+                - link "Accordions" [ref=e23] [cursor=pointer]:
+                  - /url: ../components/accordions.html
+              - listitem [ref=e24]:
+                - link "Alerts" [ref=e25] [cursor=pointer]:
+                  - /url: ../components/alerts.html
+              - listitem [ref=e26]:
+                - link "Avatars" [ref=e27] [cursor=pointer]:
+                  - /url: ../components/avatars.html
+              - listitem [ref=e28]:
+                - link "Badges" [ref=e29] [cursor=pointer]:
+                  - /url: ../components/badges.html
+              - listitem [ref=e30]:
+                - link "Breadcrumbs" [ref=e31] [cursor=pointer]:
+                  - /url: ../components/breadcrumbs.html
+              - listitem [ref=e32]:
+                - link "Buttons" [ref=e33] [cursor=pointer]:
+                  - /url: ../components/buttons.html
+              - listitem [ref=e34]:
+                - link "Cards" [ref=e35] [cursor=pointer]:
+                  - /url: ../components/cards.html
+              - listitem [ref=e36]:
+                - link "Chips" [ref=e37] [cursor=pointer]:
+                  - /url: ../components/chips.html
+              - listitem [ref=e38]:
+                - link "Dividers" [ref=e39] [cursor=pointer]:
+                  - /url: ../components/dividers.html
+              - listitem [ref=e40]:
+                - link "Drawer" [ref=e41] [cursor=pointer]:
+                  - /url: ../components/drawer.html
+              - listitem [ref=e42]:
+                - link "Dropdowns" [ref=e43] [cursor=pointer]:
+                  - /url: ../components/dropdowns.html
+              - listitem [ref=e44]:
+                - link "Forms" [ref=e45] [cursor=pointer]:
+                  - /url: ../components/forms.html
+              - listitem [ref=e46]:
+                - link "Icons" [ref=e47] [cursor=pointer]:
+                  - /url: ../components/icons.html
+              - listitem [ref=e48]:
+                - link "Links" [ref=e49] [cursor=pointer]:
+                  - /url: ../components/links.html
+              - listitem [ref=e50]:
+                - link "Lists" [ref=e51] [cursor=pointer]:
+                  - /url: ../components/lists.html
+              - listitem [ref=e52]:
+                - link "Menus" [ref=e53] [cursor=pointer]:
+                  - /url: ../components/menus.html
+              - listitem [ref=e54]:
+                - link "Modals" [ref=e55] [cursor=pointer]:
+                  - /url: ../components/modals.html
+              - listitem [ref=e56]:
+                - link "Pagination" [ref=e57] [cursor=pointer]:
+                  - /url: ../components/pagination.html
+              - listitem [ref=e58]:
+                - link "Progress" [ref=e59] [cursor=pointer]:
+                  - /url: ../components/progress.html
+              - listitem [ref=e60]:
+                - link "Rating" [ref=e61] [cursor=pointer]:
+                  - /url: ../components/rating.html
+              - listitem [ref=e62]:
+                - link "Skeletons" [ref=e63] [cursor=pointer]:
+                  - /url: ../components/skeletons.html
+              - listitem [ref=e64]:
+                - link "Sliders" [ref=e65] [cursor=pointer]:
+                  - /url: ../components/sliders.html
+              - listitem [ref=e66]:
+                - link "Steppers" [ref=e67] [cursor=pointer]:
+                  - /url: ../components/steppers.html
+              - listitem [ref=e68]:
+                - link "Switches" [ref=e69] [cursor=pointer]:
+                  - /url: ../components/switches.html
+              - listitem [ref=e70]:
+                - link "Tables" [ref=e71] [cursor=pointer]:
+                  - /url: ../components/tables.html
+              - listitem [ref=e72]:
+                - link "Tabs" [ref=e73] [cursor=pointer]:
+                  - /url: ../components/tabs.html
+              - listitem [ref=e74]:
+                - link "Textarea" [ref=e75] [cursor=pointer]:
+                  - /url: ../components/textarea.html
+              - listitem [ref=e76]:
+                - link "Timeline" [ref=e77] [cursor=pointer]:
+                  - /url: ../components/timeline.html
+              - listitem [ref=e78]:
+                - link "Toasts" [ref=e79] [cursor=pointer]:
+                  - /url: ../components/toasts.html
+              - listitem [ref=e80]:
+                - link "Toolbar" [ref=e81] [cursor=pointer]:
+                  - /url: ../components/toolbar.html
+              - listitem [ref=e82]:
+                - link "Tooltips" [ref=e83] [cursor=pointer]:
+                  - /url: ../components/tooltips.html
+          - listitem [ref=e84]:
+            - generic [ref=e85]: Patterns
+            - list [ref=e86]:
+              - listitem [ref=e87]:
+                - link "Empty states" [ref=e88] [cursor=pointer]:
+                  - /url: ../patterns/empty-states.html
+              - listitem [ref=e89]:
+                - link "Layouts" [ref=e90] [cursor=pointer]:
+                  - /url: ../patterns/layouts.html
+          - listitem [ref=e91]:
+            - generic [ref=e92]: Tokens
+            - list [ref=e93]:
+              - listitem [ref=e94]:
+                - link "Colors" [ref=e95] [cursor=pointer]:
+                  - /url: ../tokens/colors.html
+              - listitem [ref=e96]:
+                - link "Spacing" [ref=e97] [cursor=pointer]:
+                  - /url: ../tokens/spacing.html
+              - listitem [ref=e98]:
+                - link "Typography" [ref=e99] [cursor=pointer]:
+                  - /url: ../tokens/typography.html
+    - main [ref=e100]:
+      - generic [ref=e101]:
+        - navigation "Breadcrumb" [ref=e102]:
+          - link "Carbon" [ref=e103] [cursor=pointer]:
+            - /url: ../index.html
+          - generic [ref=e104]: /
+          - generic [ref=e105]: Components
+          - generic [ref=e106]: /
+          - generic [ref=e107]: Buttons
+        - heading "Buttons" [level=1] [ref=e108]
+      - article [ref=e109]:
+        - heading "Buttons" [level=1] [ref=e110]
+        - paragraph [ref=e111]: Buttons allow users to take actions and make choices with a single tap. They communicate actions that users can take and are typically placed throughout your UI.
+        - separator [ref=e112]
+        - heading "Primary Button" [level=2] [ref=e113]
+        - paragraph [ref=e114]: The primary button is for the main action on a page. Use sparingly — one primary action per section.
+        - button "Get Started" [ref=e117] [cursor=pointer]
+        - generic [ref=e118]:
+          - code [ref=e120]:
+            - generic [ref=e121]:
+              - generic [ref=e122]: <button
+              - text: class
+              - generic [ref=e123]: ="Button Button--primary"
+              - text: ">"
+            - text: Get Started
+            - generic [ref=e124]:
+              - generic [ref=e125]: </button
+              - text: ">"
+          - button "Copy code" [ref=e126] [cursor=pointer]:
+            - generic [ref=e127]: 
+        - separator [ref=e128]
+        - heading "Secondary Button" [level=2] [ref=e129]
+        - paragraph [ref=e130]: Secondary buttons are for alternative actions. They pair well with primary buttons.
+        - button "Learn More" [ref=e133] [cursor=pointer]
+        - generic [ref=e134]:
+          - code [ref=e136]:
+            - generic [ref=e137]:
+              - generic [ref=e138]: <button
+              - text: class
+              - generic [ref=e139]: ="Button Button--secondary"
+              - text: ">"
+            - text: Learn More
+            - generic [ref=e140]:
+              - generic [ref=e141]: </button
+              - text: ">"
+          - button "Copy code" [ref=e142] [cursor=pointer]:
+            - generic [ref=e143]: 
+        - separator [ref=e144]
+        - heading "Tertiary Button" [level=2] [ref=e145]
+        - paragraph [ref=e146]: Tertiary buttons are for less prominent actions. Use for actions like “Cancel” or “Back”.
+        - button "Cancel" [ref=e149] [cursor=pointer]
+        - generic [ref=e150]:
+          - code [ref=e152]:
+            - generic [ref=e153]:
+              - generic [ref=e154]: <button
+              - text: class
+              - generic [ref=e155]: ="Button Button--tertiary"
+              - text: ">"
+            - text: Cancel
+            - generic [ref=e156]:
+              - generic [ref=e157]: </button
+              - text: ">"
+          - button "Copy code" [ref=e158] [cursor=pointer]:
+            - generic [ref=e159]: 
+        - separator [ref=e160]
+        - heading "Ghost Button" [level=2] [ref=e161]
+        - paragraph [ref=e162]: Ghost buttons are minimal, blending into the background until hovered.
+        - button "View All" [ref=e165] [cursor=pointer]
+        - generic [ref=e166]:
+          - code [ref=e168]:
+            - generic [ref=e169]:
+              - generic [ref=e170]: <button
+              - text: class
+              - generic [ref=e171]: ="Button Button--ghost"
+              - text: ">"
+            - text: View All
+            - generic [ref=e172]:
+              - generic [ref=e173]: </button
+              - text: ">"
+          - button "Copy code" [ref=e174] [cursor=pointer]:
+            - generic [ref=e175]: 
+        - separator [ref=e176]
+        - heading "Outline Button" [level=2] [ref=e177]
+        - paragraph [ref=e178]: Outline buttons have a border but no fill. Good for secondary actions with more visual weight than ghost.
+        - button "Download" [ref=e181] [cursor=pointer]
+        - generic [ref=e182]:
+          - code [ref=e184]:
+            - generic [ref=e185]:
+              - generic [ref=e186]: <button
+              - text: class
+              - generic [ref=e187]: ="Button Button--outline"
+              - text: ">"
+            - text: Download
+            - generic [ref=e188]:
+              - generic [ref=e189]: </button
+              - text: ">"
+          - button "Copy code" [ref=e190] [cursor=pointer]:
+            - generic [ref=e191]: 
+        - separator [ref=e192]
+        - heading "Danger Button" [level=2] [ref=e193]
+        - paragraph [ref=e194]: Danger buttons indicate destructive actions like delete or remove.
+        - button "Delete Account" [ref=e197] [cursor=pointer]
+        - generic [ref=e198]:
+          - code [ref=e200]:
+            - generic [ref=e201]:
+              - generic [ref=e202]: <button
+              - text: class
+              - generic [ref=e203]: ="Button Button--danger"
+              - text: ">"
+            - text: Delete Account
+            - generic [ref=e204]:
+              - generic [ref=e205]: </button
+              - text: ">"
+          - button "Copy code" [ref=e206] [cursor=pointer]:
+            - generic [ref=e207]: 
+        - separator [ref=e208]
+        - heading "Sizes" [level=2] [ref=e209]
+        - paragraph [ref=e210]: "Buttons come in three sizes: small, medium (default), and large."
+        - generic [ref=e212]:
+          - button "Small" [ref=e213] [cursor=pointer]
+          - button "Medium" [ref=e214] [cursor=pointer]
+          - button "Large" [ref=e215] [cursor=pointer]
+        - generic [ref=e216]:
+          - code [ref=e218]:
+            - generic [ref=e219]:
+              - generic [ref=e220]: <button
+              - text: class
+              - generic [ref=e221]: ="Button Button--primary Button--small"
+              - text: ">"
+            - text: Small
+            - generic [ref=e222]:
+              - generic [ref=e223]: </button
+              - text: ">"
+            - generic [ref=e224]:
+              - generic [ref=e225]: <button
+              - text: class
+              - generic [ref=e226]: ="Button Button--primary"
+              - text: ">"
+            - text: Medium
+            - generic [ref=e227]:
+              - generic [ref=e228]: </button
+              - text: ">"
+            - generic [ref=e229]:
+              - generic [ref=e230]: <button
+              - text: class
+              - generic [ref=e231]: ="Button Button--primary Button--large"
+              - text: ">"
+            - text: Large
+            - generic [ref=e232]:
+              - generic [ref=e233]: </button
+              - text: ">"
+          - button "Copy code" [ref=e234] [cursor=pointer]:
+            - generic [ref=e235]: 
+        - separator [ref=e236]
+        - heading "With Icons" [level=2] [ref=e237]
+        - paragraph [ref=e238]: Buttons can include icons for visual reinforcement. Icons can be leading or trailing.
+        - generic [ref=e240]:
+          - button " Add Item" [ref=e241] [cursor=pointer]:
+            - generic [ref=e242]: 
+            - text: Add Item
+          - button " Download" [ref=e243] [cursor=pointer]:
+            - generic [ref=e244]: 
+            - text: Download
+        - generic [ref=e245]:
+          - code [ref=e247]:
+            - generic [ref=e248]:
+              - generic [ref=e249]: <button
+              - text: class
+              - generic [ref=e250]: ="Button Button--primary"
+              - text: ">"
+            - generic [ref=e251]:
+              - generic [ref=e252]: <i
+              - text: class
+              - generic [ref=e253]: ="ph ph-plus Button-icon"
+              - text: ">"
+            - generic [ref=e254]:
+              - generic [ref=e255]: </i
+              - text: ">"
+            - text: Add Item
+            - generic [ref=e256]:
+              - generic [ref=e257]: </button
+              - text: ">"
+          - button "Copy code" [ref=e258] [cursor=pointer]:
+            - generic [ref=e259]: 
+        - generic [ref=e261]:
+          - button "Continue " [ref=e262] [cursor=pointer]:
+            - text: Continue
+            - generic [ref=e263]: 
+          - button "Open Link " [ref=e264] [cursor=pointer]:
+            - text: Open Link
+            - generic [ref=e265]: 
+        - generic [ref=e266]:
+          - code [ref=e268]:
+            - generic [ref=e269]:
+              - generic [ref=e270]: <button
+              - text: class
+              - generic [ref=e271]: ="Button Button--primary"
+              - text: ">"
+            - text: Continue
+            - generic [ref=e272]:
+              - generic [ref=e273]: <i
+              - text: class
+              - generic [ref=e274]: ="ph ph-arrow-right Button-icon Button-icon--trailing"
+              - text: ">"
+            - generic [ref=e275]:
+              - generic [ref=e276]: </i
+              - text: ">"
+            - generic [ref=e277]:
+              - generic [ref=e278]: </button
+              - text: ">"
+          - button "Copy code" [ref=e279] [cursor=pointer]:
+            - generic [ref=e280]: 
+        - separator [ref=e281]
+        - heading "Icon-Only Buttons" [level=2] [ref=e282]
+        - paragraph [ref=e283]:
+          - text: For actions where the icon is self-explanatory. Always include an
+          - code [ref=e284]: aria-label
+          - text: .
+        - generic [ref=e286]:
+          - button "Search" [ref=e287] [cursor=pointer]:
+            - generic [ref=e288]: 
+          - button "Settings" [ref=e289] [cursor=pointer]:
+            - generic [ref=e290]: 
+          - button "Close" [ref=e291] [cursor=pointer]:
+            - generic [ref=e292]: 
+          - button "Add" [ref=e293] [cursor=pointer]:
+            - generic [ref=e294]: 
+        - generic [ref=e295]:
+          - code [ref=e297]:
+            - generic [ref=e298]:
+              - generic [ref=e299]: <button
+              - text: class
+              - generic [ref=e300]: ="Button Button--icon"
+              - text: aria-label
+              - generic [ref=e301]: ="Search"
+              - text: ">"
+            - generic [ref=e302]:
+              - generic [ref=e303]: <i
+              - text: class
+              - generic [ref=e304]: ="ph ph-magnifying-glass"
+              - text: ">"
+            - generic [ref=e305]:
+              - generic [ref=e306]: </i
+              - text: ">"
+            - generic [ref=e307]:
+              - generic [ref=e308]: </button
+              - text: ">"
+          - button "Copy code" [ref=e309] [cursor=pointer]:
+            - generic [ref=e310]: 
+        - separator [ref=e311]
+        - heading "Loading State" [level=2] [ref=e312]
+        - paragraph [ref=e313]: Show a loading state when an action is in progress. Disable interaction during loading.
+        - generic [ref=e315]:
+          - button "Loading..." [disabled] [ref=e316]: Loading...
+          - button "Saving..." [disabled] [ref=e318]: Saving...
+        - generic [ref=e320]:
+          - code [ref=e322]:
+            - generic [ref=e323]:
+              - generic [ref=e324]: <button
+              - text: class
+              - generic [ref=e325]: ="Button Button--primary Button--loading"
+              - text: disabled>
+            - generic [ref=e326]:
+              - generic [ref=e327]: <span
+              - text: class
+              - generic [ref=e328]: ="Button-spinner"
+              - text: ">"
+            - generic [ref=e329]:
+              - generic [ref=e330]: </span
+              - text: ">"
+            - text: Loading...
+            - generic [ref=e331]:
+              - generic [ref=e332]: </button
+              - text: ">"
+          - button "Copy code" [ref=e333] [cursor=pointer]:
+            - generic [ref=e334]: 
+        - separator [ref=e335]
+        - heading "Disabled State" [level=2] [ref=e336]
+        - paragraph [ref=e337]: Disabled buttons indicate an action is unavailable.
+        - generic [ref=e339]:
+          - button "Primary" [disabled] [ref=e340]
+          - button "Secondary" [disabled] [ref=e341]
+          - button "Outline" [disabled] [ref=e342]
+          - button "Danger" [disabled] [ref=e343]
+        - generic [ref=e344]:
+          - code [ref=e346]:
+            - generic [ref=e347]:
+              - generic [ref=e348]: <button
+              - text: class
+              - generic [ref=e349]: ="Button Button--primary"
+              - text: disabled>
+            - text: Primary
+            - generic [ref=e350]:
+              - generic [ref=e351]: </button
+              - text: ">"
+          - button "Copy code" [ref=e352] [cursor=pointer]:
+            - generic [ref=e353]: 
+        - separator [ref=e354]
+        - heading "Button Groups" [level=2] [ref=e355]
+        - paragraph [ref=e356]: Group related buttons together.
+        - generic [ref=e359]:
+          - button "Day" [ref=e360] [cursor=pointer]
+          - button "Week" [ref=e361] [cursor=pointer]
+          - button "Month" [ref=e362] [cursor=pointer]
+        - generic [ref=e363]:
+          - code [ref=e365]:
+            - generic [ref=e366]:
+              - generic [ref=e367]: <div
+              - text: class
+              - generic [ref=e368]: ="ButtonGroup"
+              - text: ">"
+            - generic [ref=e369]:
+              - generic [ref=e370]: <button
+              - text: class
+              - generic [ref=e371]: ="Button Button--secondary"
+              - text: ">"
+            - text: Day
+            - generic [ref=e372]:
+              - generic [ref=e373]: </button
+              - text: ">"
+            - generic [ref=e374]:
+              - generic [ref=e375]: <button
+              - text: class
+              - generic [ref=e376]: ="Button Button--secondary ButtonGroup-item--active"
+              - text: ">"
+            - text: Week
+            - generic [ref=e377]:
+              - generic [ref=e378]: </button
+              - text: ">"
+            - generic [ref=e379]:
+              - generic [ref=e380]: <button
+              - text: class
+              - generic [ref=e381]: ="Button Button--secondary"
+              - text: ">"
+            - text: Month
+            - generic [ref=e382]:
+              - generic [ref=e383]: </button
+              - text: ">"
+            - generic [ref=e384]:
+              - generic [ref=e385]: </div
+              - text: ">"
+          - button "Copy code" [ref=e386] [cursor=pointer]:
+            - generic [ref=e387]: 
+        - generic [ref=e390]:
+          - button "List view" [ref=e391] [cursor=pointer]:
+            - generic [ref=e392]: 
+          - button "Grid view" [ref=e393] [cursor=pointer]:
+            - generic [ref=e394]: 
+          - button "Column view" [ref=e395] [cursor=pointer]:
+            - generic [ref=e396]: 
+        - generic [ref=e397]:
+          - code [ref=e399]:
+            - generic [ref=e400]:
+              - generic [ref=e401]: <div
+              - text: class
+              - generic [ref=e402]: ="ButtonGroup"
+              - text: ">"
+            - generic [ref=e403]:
+              - generic [ref=e404]: <button
+              - text: class
+              - generic [ref=e405]: ="Button Button--icon Button--secondary"
+              - text: aria-label
+              - generic [ref=e406]: ="List view"
+              - text: ">"
+            - generic [ref=e407]:
+              - generic [ref=e408]: <i
+              - text: class
+              - generic [ref=e409]: ="ph ph-list"
+              - text: ">"
+            - generic [ref=e410]:
+              - generic [ref=e411]: </i
+              - text: ">"
+            - generic [ref=e412]:
+              - generic [ref=e413]: </button
+              - text: ">"
+            - text: ...
+            - generic [ref=e414]:
+              - generic [ref=e415]: </div
+              - text: ">"
+          - button "Copy code" [ref=e416] [cursor=pointer]:
+            - generic [ref=e417]: 
+        - separator [ref=e418]
+        - heading "Full Width" [level=2] [ref=e419]
+        - paragraph [ref=e420]: Buttons can expand to fill their container.
+        - button "Create Account" [ref=e424] [cursor=pointer]
+        - generic [ref=e425]:
+          - code [ref=e427]:
+            - generic [ref=e428]:
+              - generic [ref=e429]: <button
+              - text: class
+              - generic [ref=e430]: ="Button Button--primary Button--block"
+              - text: ">"
+            - text: Create Account
+            - generic [ref=e431]:
+              - generic [ref=e432]: </button
+              - text: ">"
+          - button "Copy code" [ref=e433] [cursor=pointer]:
+            - generic [ref=e434]: 
+        - separator [ref=e435]
+        - heading "Button Pairs" [level=2] [ref=e436]
+        - paragraph [ref=e437]: Common button pairing patterns.
+        - generic [ref=e440]:
+          - button "Cancel" [ref=e441] [cursor=pointer]
+          - button "Save Changes" [ref=e442] [cursor=pointer]
+        - generic [ref=e445]:
+          - button "Keep" [ref=e446] [cursor=pointer]
+          - button "Delete" [ref=e447] [cursor=pointer]
+        - separator [ref=e448]
+        - heading "Real-World Examples" [level=2] [ref=e449]
+        - heading "Form Submit" [level=3] [ref=e450]
+        - generic [ref=e453]:
+          - generic [ref=e454]:
+            - generic [ref=e455]: Email
+            - textbox "you@example.com" [ref=e456]
+          - button "Subscribe" [ref=e457] [cursor=pointer]
+        - heading "Card Actions" [level=3] [ref=e458]
+        - generic [ref=e461]:
+          - generic [ref=e462]:
+            - heading "Project Update" [level=4] [ref=e463]
+            - paragraph [ref=e464]: Review the latest changes to the design system documentation.
+          - generic [ref=e465]:
+            - button "Dismiss" [ref=e466] [cursor=pointer]
+            - button "View Changes" [ref=e467] [cursor=pointer]
+        - heading "Toolbar" [level=3] [ref=e468]
+        - generic [ref=e471]:
+          - button " New" [ref=e472] [cursor=pointer]:
+            - generic [ref=e473]: 
+            - text: New
+          - generic [ref=e474]:
+            - button "Undo" [ref=e475] [cursor=pointer]:
+              - generic [ref=e476]: 
+            - button "Redo" [ref=e477] [cursor=pointer]:
+              - generic [ref=e478]: 
+          - button "More options" [ref=e479] [cursor=pointer]:
+            - generic [ref=e480]: 
+        - separator [ref=e481]
+        - heading "Accessibility" [level=2] [ref=e482]
+        - paragraph [ref=e483]: "Buttons have strong native accessibility. Enhance with these patterns:"
+        - heading "Keyboard Support" [level=3] [ref=e484]
+        - list [ref=e485]:
+          - listitem [ref=e486]:
+            - strong [ref=e487]: Enter/Space
+            - text: — Activates the button
+          - listitem [ref=e488]:
+            - strong [ref=e489]: Tab
+            - text: — Moves focus to/from button
+          - listitem [ref=e490]: Focus indicators are visible by default
+        - heading "Screen Readers" [level=3] [ref=e491]
+        - generic [ref=e492]:
+          - code [ref=e494]:
+            - text: <!-- Standard button — text is read automatically -->
+            - generic [ref=e495]:
+              - generic [ref=e496]: <button
+              - text: class
+              - generic [ref=e497]: ="Button Button--primary"
+              - text: ">"
+            - text: Submit Form
+            - generic [ref=e498]:
+              - generic [ref=e499]: </button
+              - text: ">"
+            - text: <!-- Icon-only — requires aria-label -->
+            - generic [ref=e500]:
+              - generic [ref=e501]: <button
+              - text: class
+              - generic [ref=e502]: ="Button Button--icon"
+              - text: aria-label
+              - generic [ref=e503]: ="Close dialog"
+              - text: ">"
+            - generic [ref=e504]:
+              - generic [ref=e505]: <i
+              - text: class
+              - generic [ref=e506]: ="ph ph-x"
+              - text: ">"
+            - generic [ref=e507]:
+              - generic [ref=e508]: </i
+              - text: ">"
+            - generic [ref=e509]:
+              - generic [ref=e510]: </button
+              - text: ">"
+            - text: <!-- Loading state — announce status -->
+            - generic [ref=e511]:
+              - generic [ref=e512]: <button
+              - text: class
+              - generic [ref=e513]: ="Button Button--primary"
+              - text: aria-busy
+              - generic [ref=e514]: ="true"
+              - text: disabled>
+            - generic [ref=e515]:
+              - generic [ref=e516]: <span
+              - text: class
+              - generic [ref=e517]: ="Button-spinner"
+              - text: ">"
+            - generic [ref=e518]:
+              - generic [ref=e519]: </span
+              - text: ">"
+            - text: Saving...
+            - generic [ref=e520]:
+              - generic [ref=e521]: </button
+              - text: ">"
+            - text: <!-- Toggle button -->
+            - generic [ref=e522]:
+              - generic [ref=e523]: <button
+              - text: class
+              - generic [ref=e524]: ="Button Button--secondary"
+              - text: aria-pressed
+              - generic [ref=e525]: ="true"
+              - text: ">"
+            - generic [ref=e526]:
+              - generic [ref=e527]: <i
+              - text: class
+              - generic [ref=e528]: ="ph ph-star-fill"
+              - text: ">"
+            - generic [ref=e529]:
+              - generic [ref=e530]: </i
+              - text: ">"
+            - text: Starred
+            - generic [ref=e531]:
+              - generic [ref=e532]: </button
+              - text: ">"
+          - button "Copy code" [ref=e533] [cursor=pointer]:
+            - generic [ref=e534]: 
+        - heading "Disabled vs aria-disabled" [level=3] [ref=e535]
+        - generic [ref=e536]:
+          - code [ref=e538]:
+            - text: <!-- Native disabled — removes from tab order -->
+            - generic [ref=e539]:
+              - generic [ref=e540]: <button
+              - text: class
+              - generic [ref=e541]: ="Button Button--primary"
+              - text: disabled>
+            - text: Cannot Click
+            - generic [ref=e542]:
+              - generic [ref=e543]: </button
+              - text: ">"
+            - text: <!-- aria-disabled — keeps in tab order (for tooltips) -->
+            - generic [ref=e544]:
+              - generic [ref=e545]: <button
+              - text: class
+              - generic [ref=e546]: ="Button Button--primary"
+              - text: aria-disabled
+              - generic [ref=e547]: ="true"
+              - text: ">"
+            - text: Upgrade Required
+            - generic [ref=e548]:
+              - generic [ref=e549]: </button
+              - text: ">"
+          - button "Copy code" [ref=e550] [cursor=pointer]:
+            - generic [ref=e551]: 
+        - separator [ref=e552]
+        - heading "CSS Reference" [level=2] [ref=e553]
+        - generic [ref=e554]:
+          - code [ref=e556]:
+            - text: "/* Base Button */ .Button { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2); padding: var(--space-2) var(--space-4); border-radius: var(--space-1); font-family: var(--font-sans); font-size: 0.9rem; font-weight: 500; line-height: 1.4; cursor: pointer; transition: all 0.15s ease; border: 1px solid transparent; text-decoration: none; } /* Primary */ .Button--primary { background-color: var(--accent-primary); color: white; } .Button--primary:hover { background-color: oklch(55% 0.15 250); } .Button--primary:active { background-color: oklch(50% 0.15 250); } /* Secondary */ .Button--secondary { background-color: var(--bg-secondary); color: var(--text-primary); border-color: var(--border-subtle); } .Button--secondary:hover { background-color: var(--border-subtle); border-color: var(--border-strong); } /* Tertiary */ .Button--tertiary { background-color: transparent; color: var(--text-secondary); } .Button--tertiary:hover { background-color: var(--bg-secondary); color: var(--text-primary); } /* Ghost */ .Button--ghost { background-color: transparent; color: var(--text-primary); } .Button--ghost:hover { background-color: var(--bg-secondary); } /* Outline */ .Button--outline { background-color: transparent; color: var(--accent-primary); border-color: var(--accent-primary); } .Button--outline:hover { background-color: var(--accent-primary); color: white; } /* Danger */ .Button--danger { background-color: oklch(55% 0.2 25); color: white; } .Button--danger:hover { background-color: oklch(50% 0.2 25); } /* Sizes */ .Button--small { padding: var(--space-1) var(--space-3); font-size: 0.8rem; } .Button--large { padding: var(--space-3) var(--space-6); font-size: 1rem; } /* Icon-only */ .Button--icon { padding: var(--space-2); aspect-ratio: 1; } .Button--icon.Button--small { padding: var(--space-1); } .Button--icon.Button--large { padding: var(--space-3); } /* Full width */ .Button--block { width: 100%; } /* Icon within button */ .Button-icon { font-size: 1.1em; } .Button-icon--trailing { order: 1; } /* Loading */ .Button--loading { position: relative; color: transparent; } .Button-spinner { width: 1em; height: 1em; border: 2px solid currentColor; border-top-color: transparent; border-radius: 50%; animation: spin 0.6s linear infinite; }"
+            - generic [ref=e557]: "@keyframes spin"
+            - text: "{ to { transform: rotate(360deg); } } /* Disabled */ .Button:disabled, .Button[aria-disabled=\"true\"] { opacity: 0.5; cursor: not-allowed; } /* Focus */ .Button:focus-visible { outline: 2px solid var(--accent-primary); outline-offset: 2px; } /* Button Group */ .ButtonGroup { display: inline-flex; } .ButtonGroup .Button { border-radius: 0; } .ButtonGroup .Button:first-child { border-radius: var(--space-1) 0 0 var(--space-1); } .ButtonGroup .Button:last-child { border-radius: 0 var(--space-1) var(--space-1) 0; } .ButtonGroup .Button + .Button { margin-left: -1px; } .ButtonGroup .Button:hover { z-index: 1; } .ButtonGroup-item--active { background-color: var(--accent-primary) !important; color: white !important; border-color: var(--accent-primary) !important; }"
+          - button "Copy code" [ref=e558] [cursor=pointer]:
+            - generic [ref=e559]: 
+        - separator [ref=e560]
+        - heading "Best Practices" [level=2] [ref=e561]
+        - heading "Do" [level=3] [ref=e562]
+        - list [ref=e563]:
+          - listitem [ref=e564]:
+            - text: ✓
+            - strong [ref=e565]: Use clear, action-oriented labels
+            - text: — “Save Changes” not “Submit”
+          - listitem [ref=e566]:
+            - text: ✓
+            - strong [ref=e567]: Lead with a verb
+            - text: — “Create Project”, “Delete File”
+          - listitem [ref=e568]:
+            - text: ✓
+            - strong [ref=e569]: Limit primary buttons
+            - text: — One per section/view
+          - listitem [ref=e570]:
+            - text: ✓
+            - strong [ref=e571]: Show loading states
+            - text: — Feedback during async actions
+          - listitem [ref=e572]:
+            - text: ✓
+            - strong [ref=e573]: Size touch targets
+            - text: — Minimum 44px for mobile
+        - heading "Don’t" [level=3] [ref=e574]
+        - list [ref=e575]:
+          - listitem [ref=e576]:
+            - text: ✗
+            - strong [ref=e577]: Use vague labels
+            - text: — “Click Here”, “OK”, “Yes”
+          - listitem [ref=e578]:
+            - text: ✗
+            - strong [ref=e579]: Disable without explanation
+            - text: — Provide tooltip or helper text
+          - listitem [ref=e580]:
+            - text: ✗
+            - strong [ref=e581]: Use too many styles
+            - text: — Stick to 2-3 variants per view
+          - listitem [ref=e582]:
+            - text: ✗
+            - strong [ref=e583]: Hide important actions
+            - text: — Primary actions should be visible
+          - listitem [ref=e584]:
+            - text: ✗
+            - strong [ref=e585]: Forget hover/focus states
+            - text: — Essential for accessibility
+      - paragraph [ref=e587]: "Carbon v0.1 • Last built: 2/2/2026, 10:47:08 PM"
+    - complementary [ref=e588]:
+      - navigation [ref=e589]:
+        - heading "On this page" [level=3] [ref=e590]
+        - list [ref=e591]:
+          - listitem [ref=e592]:
+            - link "Primary Button" [ref=e593] [cursor=pointer]:
+              - /url: "#primary-button"
+          - listitem [ref=e594]:
+            - link "Secondary Button" [ref=e595] [cursor=pointer]:
+              - /url: "#secondary-button"
+          - listitem [ref=e596]:
+            - link "Tertiary Button" [ref=e597] [cursor=pointer]:
+              - /url: "#tertiary-button"
+          - listitem [ref=e598]:
+            - link "Ghost Button" [ref=e599] [cursor=pointer]:
+              - /url: "#ghost-button"
+          - listitem [ref=e600]:
+            - link "Outline Button" [ref=e601] [cursor=pointer]:
+              - /url: "#outline-button"
+          - listitem [ref=e602]:
+            - link "Danger Button" [ref=e603] [cursor=pointer]:
+              - /url: "#danger-button"
+          - listitem [ref=e604]:
+            - link "Sizes" [ref=e605] [cursor=pointer]:
+              - /url: "#sizes"
+          - listitem [ref=e606]:
+            - link "With Icons" [ref=e607] [cursor=pointer]:
+              - /url: "#with-icons"
+          - listitem [ref=e608]:
+            - link "Icon-Only Buttons" [ref=e609] [cursor=pointer]:
+              - /url: "#icon-only-buttons"
+          - listitem [ref=e610]:
+            - link "Loading State" [ref=e611] [cursor=pointer]:
+              - /url: "#loading-state"
+          - listitem [ref=e612]:
+            - link "Disabled State" [ref=e613] [cursor=pointer]:
+              - /url: "#disabled-state"
+          - listitem [ref=e614]:
+            - link "Button Groups" [ref=e615] [cursor=pointer]:
+              - /url: "#button-groups"
+          - listitem [ref=e616]:
+            - link "Full Width" [ref=e617] [cursor=pointer]:
+              - /url: "#full-width"
+          - listitem [ref=e618]:
+            - link "Button Pairs" [ref=e619] [cursor=pointer]:
+              - /url: "#button-pairs"
+          - listitem [ref=e620]:
+            - link "Real-World Examples" [ref=e621] [cursor=pointer]:
+              - /url: "#real-world-examples"
+          - listitem [ref=e622]:
+            - link "Form Submit" [ref=e623] [cursor=pointer]:
+              - /url: "#form-submit"
+          - listitem [ref=e624]:
+            - link "Card Actions" [ref=e625] [cursor=pointer]:
+              - /url: "#card-actions"
+          - listitem [ref=e626]:
+            - link "Toolbar" [ref=e627] [cursor=pointer]:
+              - /url: "#toolbar"
+          - listitem [ref=e628]:
+            - link "Accessibility" [ref=e629] [cursor=pointer]:
+              - /url: "#accessibility"
+          - listitem [ref=e630]:
+            - link "Keyboard Support" [ref=e631] [cursor=pointer]:
+              - /url: "#keyboard-support"
+          - listitem [ref=e632]:
+            - link "Screen Readers" [ref=e633] [cursor=pointer]:
+              - /url: "#screen-readers"
+          - listitem [ref=e634]:
+            - link "Disabled vs aria-disabled" [ref=e635] [cursor=pointer]:
+              - /url: "#disabled-vs-aria-disabled"
+          - listitem [ref=e636]:
+            - link "CSS Reference" [ref=e637] [cursor=pointer]:
+              - /url: "#css-reference"
+          - listitem [ref=e638]:
+            - link "Best Practices" [ref=e639] [cursor=pointer]:
+              - /url: "#best-practices"
+          - listitem [ref=e640]:
+            - link "Do" [ref=e641] [cursor=pointer]:
+              - /url: "#do"
+          - listitem [ref=e642]:
+            - link "Don't" [ref=e643] [cursor=pointer]:
+              - /url: "#don-t"
+```

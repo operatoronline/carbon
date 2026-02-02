@@ -1,0 +1,533 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - text: 
+      - link " Carbon" [ref=e4] [cursor=pointer]:
+        - /url: ../index.html
+        - generic [ref=e5]: 
+        - generic [ref=e6]: Carbon
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - generic [ref=e9]: 
+        - textbox "Search" [ref=e10]:
+          - /placeholder: Search...
+      - button "Toggle theme" [ref=e11] [cursor=pointer]:
+        - generic [ref=e12]: 
+  - generic [ref=e13]:
+    - complementary [ref=e14]:
+      - navigation [ref=e15]:
+        - list [ref=e16]:
+          - listitem [ref=e17]:
+            - link "Introduction" [ref=e18] [cursor=pointer]:
+              - /url: ../index.html
+          - listitem [ref=e19]:
+            - generic [ref=e20]: Components
+            - list [ref=e21]:
+              - listitem [ref=e22]:
+                - link "Accordions" [ref=e23] [cursor=pointer]:
+                  - /url: ../components/accordions.html
+              - listitem [ref=e24]:
+                - link "Alerts" [ref=e25] [cursor=pointer]:
+                  - /url: ../components/alerts.html
+              - listitem [ref=e26]:
+                - link "Avatars" [ref=e27] [cursor=pointer]:
+                  - /url: ../components/avatars.html
+              - listitem [ref=e28]:
+                - link "Badges" [ref=e29] [cursor=pointer]:
+                  - /url: ../components/badges.html
+              - listitem [ref=e30]:
+                - link "Breadcrumbs" [ref=e31] [cursor=pointer]:
+                  - /url: ../components/breadcrumbs.html
+              - listitem [ref=e32]:
+                - link "Buttons" [ref=e33] [cursor=pointer]:
+                  - /url: ../components/buttons.html
+              - listitem [ref=e34]:
+                - link "Cards" [ref=e35] [cursor=pointer]:
+                  - /url: ../components/cards.html
+              - listitem [ref=e36]:
+                - link "Chips" [ref=e37] [cursor=pointer]:
+                  - /url: ../components/chips.html
+              - listitem [ref=e38]:
+                - link "Dividers" [ref=e39] [cursor=pointer]:
+                  - /url: ../components/dividers.html
+              - listitem [ref=e40]:
+                - link "Drawer" [ref=e41] [cursor=pointer]:
+                  - /url: ../components/drawer.html
+              - listitem [ref=e42]:
+                - link "Dropdowns" [ref=e43] [cursor=pointer]:
+                  - /url: ../components/dropdowns.html
+              - listitem [ref=e44]:
+                - link "Forms" [ref=e45] [cursor=pointer]:
+                  - /url: ../components/forms.html
+              - listitem [ref=e46]:
+                - link "Icons" [ref=e47] [cursor=pointer]:
+                  - /url: ../components/icons.html
+              - listitem [ref=e48]:
+                - link "Links" [ref=e49] [cursor=pointer]:
+                  - /url: ../components/links.html
+              - listitem [ref=e50]:
+                - link "Lists" [ref=e51] [cursor=pointer]:
+                  - /url: ../components/lists.html
+              - listitem [ref=e52]:
+                - link "Menus" [ref=e53] [cursor=pointer]:
+                  - /url: ../components/menus.html
+              - listitem [ref=e54]:
+                - link "Modals" [ref=e55] [cursor=pointer]:
+                  - /url: ../components/modals.html
+              - listitem [ref=e56]:
+                - link "Pagination" [ref=e57] [cursor=pointer]:
+                  - /url: ../components/pagination.html
+              - listitem [ref=e58]:
+                - link "Progress" [ref=e59] [cursor=pointer]:
+                  - /url: ../components/progress.html
+              - listitem [ref=e60]:
+                - link "Rating" [ref=e61] [cursor=pointer]:
+                  - /url: ../components/rating.html
+              - listitem [ref=e62]:
+                - link "Skeletons" [ref=e63] [cursor=pointer]:
+                  - /url: ../components/skeletons.html
+              - listitem [ref=e64]:
+                - link "Sliders" [ref=e65] [cursor=pointer]:
+                  - /url: ../components/sliders.html
+              - listitem [ref=e66]:
+                - link "Steppers" [ref=e67] [cursor=pointer]:
+                  - /url: ../components/steppers.html
+              - listitem [ref=e68]:
+                - link "Switches" [ref=e69] [cursor=pointer]:
+                  - /url: ../components/switches.html
+              - listitem [ref=e70]:
+                - link "Tables" [ref=e71] [cursor=pointer]:
+                  - /url: ../components/tables.html
+              - listitem [ref=e72]:
+                - link "Tabs" [ref=e73] [cursor=pointer]:
+                  - /url: ../components/tabs.html
+              - listitem [ref=e74]:
+                - link "Textarea" [ref=e75] [cursor=pointer]:
+                  - /url: ../components/textarea.html
+              - listitem [ref=e76]:
+                - link "Timeline" [ref=e77] [cursor=pointer]:
+                  - /url: ../components/timeline.html
+              - listitem [ref=e78]:
+                - link "Toasts" [ref=e79] [cursor=pointer]:
+                  - /url: ../components/toasts.html
+              - listitem [ref=e80]:
+                - link "Toolbar" [ref=e81] [cursor=pointer]:
+                  - /url: ../components/toolbar.html
+              - listitem [ref=e82]:
+                - link "Tooltips" [ref=e83] [cursor=pointer]:
+                  - /url: ../components/tooltips.html
+          - listitem [ref=e84]:
+            - generic [ref=e85]: Patterns
+            - list [ref=e86]:
+              - listitem [ref=e87]:
+                - link "Empty states" [ref=e88] [cursor=pointer]:
+                  - /url: ../patterns/empty-states.html
+              - listitem [ref=e89]:
+                - link "Layouts" [ref=e90] [cursor=pointer]:
+                  - /url: ../patterns/layouts.html
+          - listitem [ref=e91]:
+            - generic [ref=e92]: Tokens
+            - list [ref=e93]:
+              - listitem [ref=e94]:
+                - link "Colors" [ref=e95] [cursor=pointer]:
+                  - /url: ../tokens/colors.html
+              - listitem [ref=e96]:
+                - link "Spacing" [ref=e97] [cursor=pointer]:
+                  - /url: ../tokens/spacing.html
+              - listitem [ref=e98]:
+                - link "Typography" [ref=e99] [cursor=pointer]:
+                  - /url: ../tokens/typography.html
+    - main [ref=e100]:
+      - generic [ref=e101]:
+        - navigation "Breadcrumb" [ref=e102]:
+          - link "Carbon" [ref=e103] [cursor=pointer]:
+            - /url: ../index.html
+          - generic [ref=e104]: /
+          - generic [ref=e105]: Components
+          - generic [ref=e106]: /
+          - generic [ref=e107]: Alerts
+        - heading "Alerts" [level=1] [ref=e108]
+      - article [ref=e109]:
+        - heading "Alerts" [level=1] [ref=e110]
+        - paragraph [ref=e111]: Alerts display important messages that require user attention.
+        - heading "Basic Alert" [level=2] [ref=e112]
+        - paragraph [ref=e116]: This is a basic alert message.
+        - generic [ref=e117]:
+          - code [ref=e119]:
+            - generic [ref=e120]:
+              - generic [ref=e121]: <div
+              - text: class
+              - generic [ref=e122]: ="Alert"
+              - text: ">"
+            - generic [ref=e123]:
+              - generic [ref=e124]: <p
+              - text: ">"
+            - text: This is a basic alert message.
+            - generic [ref=e125]:
+              - generic [ref=e126]: </p
+              - text: ">"
+            - generic [ref=e127]:
+              - generic [ref=e128]: </div
+              - text: ">"
+          - button "Copy code" [ref=e129] [cursor=pointer]:
+            - generic [ref=e130]: 
+        - heading "With Icon" [level=2] [ref=e131]
+        - generic [ref=e134]:
+          - generic [ref=e135]: 
+          - paragraph [ref=e137]: A new version is available. Please refresh to update.
+        - generic [ref=e138]:
+          - code [ref=e140]:
+            - generic [ref=e141]:
+              - generic [ref=e142]: <div
+              - text: class
+              - generic [ref=e143]: ="Alert Alert--info"
+              - text: ">"
+            - generic [ref=e144]:
+              - generic [ref=e145]: <i
+              - text: class
+              - generic [ref=e146]: ="ph ph-info Alert-icon"
+              - text: ">"
+            - generic [ref=e147]:
+              - generic [ref=e148]: </i
+              - text: ">"
+            - generic [ref=e149]:
+              - generic [ref=e150]: <div
+              - text: class
+              - generic [ref=e151]: ="Alert-content"
+              - text: ">"
+            - generic [ref=e152]:
+              - generic [ref=e153]: <p
+              - text: ">"
+            - text: Your message here.
+            - generic [ref=e154]:
+              - generic [ref=e155]: </p
+              - text: ">"
+            - generic [ref=e156]:
+              - generic [ref=e157]: </div
+              - text: ">"
+            - generic [ref=e158]:
+              - generic [ref=e159]: </div
+              - text: ">"
+          - button "Copy code" [ref=e160] [cursor=pointer]:
+            - generic [ref=e161]: 
+        - heading "Variants" [level=2] [ref=e162]
+        - generic [ref=e165]:
+          - generic [ref=e166]:
+            - generic [ref=e167]: 
+            - generic [ref=e168]:
+              - strong [ref=e169]: "Info:"
+              - text: This is an informational message.
+          - generic [ref=e170]:
+            - generic [ref=e171]: 
+            - generic [ref=e172]:
+              - strong [ref=e173]: "Success:"
+              - text: Your changes have been saved.
+          - generic [ref=e174]:
+            - generic [ref=e175]: 
+            - generic [ref=e176]:
+              - strong [ref=e177]: "Warning:"
+              - text: Your session will expire in 5 minutes.
+          - generic [ref=e178]:
+            - generic [ref=e179]: 
+            - generic [ref=e180]:
+              - strong [ref=e181]: "Error:"
+              - text: Something went wrong. Please try again.
+        - generic [ref=e182]:
+          - code [ref=e184]:
+            - generic [ref=e185]:
+              - generic [ref=e186]: <div
+              - text: class
+              - generic [ref=e187]: ="Alert Alert--info"
+              - text: ">"
+            - text: ...
+            - generic [ref=e188]:
+              - generic [ref=e189]: </div
+              - text: ">"
+            - generic [ref=e190]:
+              - generic [ref=e191]: <div
+              - text: class
+              - generic [ref=e192]: ="Alert Alert--success"
+              - text: ">"
+            - text: ...
+            - generic [ref=e193]:
+              - generic [ref=e194]: </div
+              - text: ">"
+            - generic [ref=e195]:
+              - generic [ref=e196]: <div
+              - text: class
+              - generic [ref=e197]: ="Alert Alert--warning"
+              - text: ">"
+            - text: ...
+            - generic [ref=e198]:
+              - generic [ref=e199]: </div
+              - text: ">"
+            - generic [ref=e200]:
+              - generic [ref=e201]: <div
+              - text: class
+              - generic [ref=e202]: ="Alert Alert--error"
+              - text: ">"
+            - text: ...
+            - generic [ref=e203]:
+              - generic [ref=e204]: </div
+              - text: ">"
+          - button "Copy code" [ref=e205] [cursor=pointer]:
+            - generic [ref=e206]: 
+        - heading "With Title" [level=2] [ref=e207]
+        - generic [ref=e210]:
+          - generic [ref=e211]: 
+          - generic [ref=e212]:
+            - paragraph [ref=e213]: Scheduled Maintenance
+            - paragraph [ref=e214]: The system will be unavailable on Sunday, Feb 5th from 2-4 AM UTC for scheduled maintenance.
+        - generic [ref=e215]:
+          - code [ref=e217]:
+            - generic [ref=e218]:
+              - generic [ref=e219]: <div
+              - text: class
+              - generic [ref=e220]: ="Alert Alert--warning"
+              - text: ">"
+            - generic [ref=e221]:
+              - generic [ref=e222]: <i
+              - text: class
+              - generic [ref=e223]: ="ph ph-warning Alert-icon"
+              - text: ">"
+            - generic [ref=e224]:
+              - generic [ref=e225]: </i
+              - text: ">"
+            - generic [ref=e226]:
+              - generic [ref=e227]: <div
+              - text: class
+              - generic [ref=e228]: ="Alert-content"
+              - text: ">"
+            - generic [ref=e229]:
+              - generic [ref=e230]: <p
+              - text: class
+              - generic [ref=e231]: ="Alert-title"
+              - text: ">"
+            - text: Scheduled Maintenance
+            - generic [ref=e232]:
+              - generic [ref=e233]: </p
+              - text: ">"
+            - generic [ref=e234]:
+              - generic [ref=e235]: <p
+              - text: ">"
+            - text: Description text...
+            - generic [ref=e236]:
+              - generic [ref=e237]: </p
+              - text: ">"
+            - generic [ref=e238]:
+              - generic [ref=e239]: </div
+              - text: ">"
+            - generic [ref=e240]:
+              - generic [ref=e241]: </div
+              - text: ">"
+          - button "Copy code" [ref=e242] [cursor=pointer]:
+            - generic [ref=e243]: 
+        - heading "Dismissible" [level=2] [ref=e244]
+        - generic [ref=e247]:
+          - generic [ref=e248]: 
+          - paragraph [ref=e250]: This alert can be dismissed.
+          - button "Dismiss" [ref=e251] [cursor=pointer]:
+            - generic [ref=e252]: 
+        - generic [ref=e253]:
+          - code [ref=e255]:
+            - generic [ref=e256]:
+              - generic [ref=e257]: <div
+              - text: class
+              - generic [ref=e258]: ="Alert Alert--info"
+              - text: ">"
+            - generic [ref=e259]:
+              - generic [ref=e260]: <i
+              - text: class
+              - generic [ref=e261]: ="ph ph-info Alert-icon"
+              - text: ">"
+            - generic [ref=e262]:
+              - generic [ref=e263]: </i
+              - text: ">"
+            - generic [ref=e264]:
+              - generic [ref=e265]: <div
+              - text: class
+              - generic [ref=e266]: ="Alert-content"
+              - text: ">"
+            - generic [ref=e267]:
+              - generic [ref=e268]: <p
+              - text: ">"
+            - text: This alert can be dismissed.
+            - generic [ref=e269]:
+              - generic [ref=e270]: </p
+              - text: ">"
+            - generic [ref=e271]:
+              - generic [ref=e272]: </div
+              - text: ">"
+            - generic [ref=e273]:
+              - generic [ref=e274]: <button
+              - text: class
+              - generic [ref=e275]: ="Alert-close"
+              - text: aria-label
+              - generic [ref=e276]: ="Dismiss"
+              - text: ">"
+            - generic [ref=e277]:
+              - generic [ref=e278]: <i
+              - text: class
+              - generic [ref=e279]: ="ph ph-x"
+              - text: ">"
+            - generic [ref=e280]:
+              - generic [ref=e281]: </i
+              - text: ">"
+            - generic [ref=e282]:
+              - generic [ref=e283]: </button
+              - text: ">"
+            - generic [ref=e284]:
+              - generic [ref=e285]: </div
+              - text: ">"
+          - button "Copy code" [ref=e286] [cursor=pointer]:
+            - generic [ref=e287]: 
+        - heading "With Actions" [level=2] [ref=e288]
+        - generic [ref=e291]:
+          - generic [ref=e292]: 
+          - generic [ref=e293]:
+            - paragraph [ref=e294]: Update Available
+            - paragraph [ref=e295]: A new version (v2.1.0) is ready to install.
+            - generic [ref=e296]:
+              - button "Update Now" [ref=e297] [cursor=pointer]
+              - button "Later" [ref=e298] [cursor=pointer]
+        - generic [ref=e299]:
+          - code [ref=e301]:
+            - generic [ref=e302]:
+              - generic [ref=e303]: <div
+              - text: class
+              - generic [ref=e304]: ="Alert Alert--info"
+              - text: ">"
+            - generic [ref=e305]:
+              - generic [ref=e306]: <div
+              - text: class
+              - generic [ref=e307]: ="Alert-content"
+              - text: ">"
+            - generic [ref=e308]:
+              - generic [ref=e309]: <p
+              - text: class
+              - generic [ref=e310]: ="Alert-title"
+              - text: ">"
+            - text: Update Available
+            - generic [ref=e311]:
+              - generic [ref=e312]: </p
+              - text: ">"
+            - generic [ref=e313]:
+              - generic [ref=e314]: <p
+              - text: ">"
+            - text: Description...
+            - generic [ref=e315]:
+              - generic [ref=e316]: </p
+              - text: ">"
+            - generic [ref=e317]:
+              - generic [ref=e318]: <div
+              - text: class
+              - generic [ref=e319]: ="Alert-actions"
+              - text: ">"
+            - generic [ref=e320]:
+              - generic [ref=e321]: <button
+              - text: class
+              - generic [ref=e322]: ="Button Button--primary"
+              - text: ">"
+            - text: Update Now
+            - generic [ref=e323]:
+              - generic [ref=e324]: </button
+              - text: ">"
+            - generic [ref=e325]:
+              - generic [ref=e326]: <button
+              - text: class
+              - generic [ref=e327]: ="Button"
+              - text: ">"
+            - text: Later
+            - generic [ref=e328]:
+              - generic [ref=e329]: </button
+              - text: ">"
+            - generic [ref=e330]:
+              - generic [ref=e331]: </div
+              - text: ">"
+            - generic [ref=e332]:
+              - generic [ref=e333]: </div
+              - text: ">"
+            - generic [ref=e334]:
+              - generic [ref=e335]: </div
+              - text: ">"
+          - button "Copy code" [ref=e336] [cursor=pointer]:
+            - generic [ref=e337]: 
+        - heading "Callout (Bordered)" [level=2] [ref=e338]
+        - paragraph [ref=e339]: A softer variant for documentation callouts.
+        - generic [ref=e342]:
+          - generic [ref=e343]:
+            - generic [ref=e344]: 
+            - generic [ref=e345]:
+              - strong [ref=e346]: "Tip:"
+              - text: You can use keyboard shortcuts to navigate faster.
+          - generic [ref=e347]:
+            - generic [ref=e348]: 
+            - generic [ref=e349]:
+              - strong [ref=e350]: "Caution:"
+              - text: This action cannot be undone.
+        - generic [ref=e351]:
+          - code [ref=e353]:
+            - generic [ref=e354]:
+              - generic [ref=e355]: <div
+              - text: class
+              - generic [ref=e356]: ="Callout Callout--info"
+              - text: ">"
+            - generic [ref=e357]:
+              - generic [ref=e358]: <i
+              - text: class
+              - generic [ref=e359]: ="ph ph-lightbulb Callout-icon"
+              - text: ">"
+            - generic [ref=e360]:
+              - generic [ref=e361]: </i
+              - text: ">"
+            - generic [ref=e362]:
+              - generic [ref=e363]: <div
+              - text: class
+              - generic [ref=e364]: ="Callout-content"
+              - text: ">"
+            - generic [ref=e365]:
+              - generic [ref=e366]: <strong
+              - text: ">"
+            - text: "Tip:"
+            - generic [ref=e367]:
+              - generic [ref=e368]: </strong
+              - text: ">"
+            - text: Your content here.
+            - generic [ref=e369]:
+              - generic [ref=e370]: </div
+              - text: ">"
+            - generic [ref=e371]:
+              - generic [ref=e372]: </div
+              - text: ">"
+          - button "Copy code" [ref=e373] [cursor=pointer]:
+            - generic [ref=e374]: 
+      - paragraph [ref=e376]: "Carbon v0.1 • Last built: 2/2/2026, 10:47:08 PM"
+    - complementary [ref=e377]:
+      - navigation [ref=e378]:
+        - heading "On this page" [level=3] [ref=e379]
+        - list [ref=e380]:
+          - listitem [ref=e381]:
+            - link "Basic Alert" [ref=e382] [cursor=pointer]:
+              - /url: "#basic-alert"
+          - listitem [ref=e383]:
+            - link "With Icon" [ref=e384] [cursor=pointer]:
+              - /url: "#with-icon"
+          - listitem [ref=e385]:
+            - link "Variants" [ref=e386] [cursor=pointer]:
+              - /url: "#variants"
+          - listitem [ref=e387]:
+            - link "With Title" [ref=e388] [cursor=pointer]:
+              - /url: "#with-title"
+          - listitem [ref=e389]:
+            - link "Dismissible" [ref=e390] [cursor=pointer]:
+              - /url: "#dismissible"
+          - listitem [ref=e391]:
+            - link "With Actions" [ref=e392] [cursor=pointer]:
+              - /url: "#with-actions"
+          - listitem [ref=e393]:
+            - link "Callout (Bordered)" [ref=e394] [cursor=pointer]:
+              - /url: "#callout-bordered-"
+```
