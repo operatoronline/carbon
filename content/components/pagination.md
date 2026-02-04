@@ -131,9 +131,78 @@ For tight spaces, use the compact variant.
     </div>
 </Preview>
 
+---
+
+## API Reference
+
+### Classes
+
+| Class | Description |
+|-------|-------------|
+| `.Pagination` | Container for pagination controls |
+| `.Pagination--compact` | Minimal prev/next with page info |
+| `.Pagination-item` | Individual page link |
+| `.Pagination-item--prev` | Previous page button |
+| `.Pagination-item--next` | Next page button |
+| `.Pagination-item.active` | Current page indicator |
+| `.Pagination-item.disabled` | Non-interactive state |
+| `.Pagination-ellipsis` | Skipped pages indicator |
+| `.Pagination-info` | Page count text (compact mode) |
+
+### Structure
+
+```html
+<nav class="Pagination" aria-label="Pagination">
+    <a class="Pagination-item Pagination-item--prev">...</a>
+    <a class="Pagination-item">1</a>
+    <a class="Pagination-item active" aria-current="page">2</a>
+    <span class="Pagination-ellipsis">...</span>
+    <a class="Pagination-item">10</a>
+    <a class="Pagination-item Pagination-item--next">...</a>
+</nav>
+```
+
+### CSS Custom Properties
+
+| Property | Default | Description |
+|----------|---------|-------------|
+| `--bg-secondary` | — | Item background |
+| `--text-primary` | — | Item text color |
+| `--accent-primary` | — | Active item color |
+| `--border-subtle` | — | Item border |
+| `--space-2` | `0.5rem` | Item padding |
+
+### Attributes
+
+| Attribute | Description |
+|-----------|-------------|
+| `aria-label` | On `<nav>` to describe pagination |
+| `aria-current="page"` | On current page item |
+| `aria-disabled="true"` | On disabled items |
+| `aria-label="Previous/Next"` | On prev/next buttons |
+
+---
+
 ## Accessibility
 
 - Use `<nav>` element with appropriate `aria-label`
 - Mark current page with `aria-current="page"`
 - Disabled items should have `aria-disabled="true"`
 - Previous/Next buttons should have descriptive `aria-label`
+
+---
+
+## Best Practices
+
+### Do
+
+- ✓ **Show context** — Always indicate current position
+- ✓ **Limit visible pages** — Use ellipsis for large counts
+- ✓ **Disable appropriately** — Gray out prev on page 1
+- ✓ **Provide compact option** — For mobile or tight spaces
+
+### Don't
+
+- ✗ **Show all pages** — Creates overwhelming UI
+- ✗ **Hide page numbers** — Users need to know position
+- ✗ **Make touch targets too small** — Min 44px on mobile

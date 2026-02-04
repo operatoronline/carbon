@@ -423,6 +423,49 @@ Style for downloadable resources.
 
 ---
 
+## API Reference
+
+### Classes
+
+| Class | Description |
+|-------|-------------|
+| `.Link` | Base link styling |
+| `.Link--subtle` | Inherits text color, accent on hover |
+| `.Link--muted` | Secondary text color |
+| `.Link--underline` | Always shows underline |
+| `.Link--standalone` | Standalone navigation link (bolder) |
+| `.Link--external` | External link (with icon styling) |
+| `.Link--small` | Smaller font size |
+| `.Link--large` | Larger font size |
+| `.Link--disabled` | Disabled/unavailable state |
+| `.Link--nav` | Navigation link (for menus) |
+| `.Link--active` | Active/current navigation state |
+| `.Link--skip` | Skip-to-content accessibility link |
+| `.Link--visited` | Explicit visited styling (CSS handles this automatically) |
+| `.Link-icon` | Icon inside link |
+
+### Attributes
+
+| Attribute | Description |
+|-----------|-------------|
+| `href` | Required. The link destination |
+| `target="_blank"` | Open in new tab (use with rel="noopener") |
+| `rel="noopener noreferrer"` | Security attributes for external links |
+| `download` | Trigger file download |
+| `aria-label` | Accessible name when text isn't descriptive |
+| `aria-disabled="true"` | For disabled links (use with span) |
+
+### CSS Custom Properties
+
+| Property | Default | Description |
+|----------|---------|-------------|
+| `--accent-primary` | — | Default link color |
+| `--text-primary` | — | Subtle variant color |
+| `--text-secondary` | — | Muted variant color |
+| `--space-1` | `0.25rem` | Icon gap |
+
+---
+
 ## Accessibility
 
 Links require careful attention to accessibility:

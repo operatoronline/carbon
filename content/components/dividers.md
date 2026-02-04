@@ -226,11 +226,72 @@ Control the margin around dividers.
 
 ---
 
+## API Reference
+
+### Classes
+
+| Class | Description |
+|-------|-------------|
+| `.Divider` | Base horizontal divider |
+| `.Divider--tight` | Reduced margin (8px) |
+| `.Divider--loose` | Increased margin (32px) |
+| `.Divider--dashed` | Dashed line style |
+| `.Divider--dotted` | Dotted line style |
+| `.Divider--vertical` | Vertical separator (inline) |
+| `.Divider--label` | Divider with centered text |
+| `.Divider--label-left` | Label aligned left |
+| `.Divider--label-right` | Label aligned right |
+
+### Elements
+
+| Element | Description |
+|---------|-------------|
+| `<hr>` | Semantic horizontal divider |
+| `<div>` | Use for labeled dividers (contains `<span>`) |
+| `<span>` | Vertical dividers and label text |
+
+### CSS Custom Properties
+
+| Property | Default | Description |
+|----------|---------|-------------|
+| `--border-subtle` | — | Divider line color |
+| `--text-secondary` | — | Label text color |
+| `--space-2` | `0.5rem` | Tight margin |
+| `--space-4` | `1rem` | Default margin |
+| `--space-8` | `2rem` | Loose margin |
+
+### Attributes
+
+| Attribute | Description |
+|-----------|-------------|
+| `role="presentation"` | For decorative dividers |
+| `role="separator"` | For semantic labeled dividers |
+| `aria-hidden="true"` | Alternative for decorative dividers |
+
+---
+
 ## Accessibility
 
 - Use `<hr>` for semantic dividers — screen readers announce it as a separator
 - Decorative dividers should use `role="presentation"` or `aria-hidden="true"`
 - Labeled dividers provide additional context for all users
+
+---
+
+## Best Practices
+
+### Do
+
+- ✓ **Use sparingly** — Dividers add visual weight
+- ✓ **Group related content** — Dividers separate distinct sections
+- ✓ **Match spacing to hierarchy** — More space for major sections
+- ✓ **Use labels for clarity** — "Or" in login forms, section names
+
+### Don't
+
+- ✗ **Overuse dividers** — Whitespace often suffices
+- ✗ **Use between every element** — Creates visual noise
+- ✗ **Mix styles randomly** — Be consistent with solid/dashed/dotted
 
 ```html
 <!-- Semantic divider -->

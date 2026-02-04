@@ -333,6 +333,50 @@ Common pattern for tag inputs in forms.
 
 ---
 
+## API Reference
+
+### Classes
+
+| Class | Description |
+|-------|-------------|
+| `.Chip` | Base chip styling |
+| `.Chip--primary` | Primary color variant |
+| `.Chip--success` | Success color variant |
+| `.Chip--warning` | Warning color variant |
+| `.Chip--error` | Error color variant |
+| `.Chip--outlined` | Transparent background with border |
+| `.Chip--small` | Smaller chip size |
+| `.Chip--large` | Larger chip size |
+| `.Chip--removable` | Chip with dismiss button |
+| `.Chip--selectable` | Interactive toggle chip |
+| `.Chip--selected` | Active selected state |
+| `.Chip--avatar` | Chip with leading avatar |
+| `.Chip-remove` | Dismiss button element |
+| `.Chip-avatar` | Avatar element inside chip |
+
+### CSS Custom Properties
+
+| Property | Default | Description |
+|----------|---------|-------------|
+| `--space-1` | `0.25rem` | Gap between elements |
+| `--space-2` | `0.5rem` | Horizontal padding |
+| `--space-4` | `1rem` | Border radius |
+| `--bg-secondary` | — | Default background |
+| `--border-subtle` | — | Default border color |
+| `--text-primary` | — | Text color |
+| `--text-secondary` | — | Icon color |
+| `--accent-primary` | — | Selected state background |
+
+### Attributes
+
+| Attribute | Description |
+|-----------|-------------|
+| `aria-label` | Required on `.Chip-remove` to describe what is removed |
+| `role="listitem"` | Use when chips are in a list context |
+| `aria-pressed` | Use on selectable chips to indicate state |
+
+---
+
 ## Accessibility
 
 - **Use `<button>` for interactive chips** — Ensures keyboard accessibility

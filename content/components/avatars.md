@@ -423,6 +423,61 @@ Avatars that respond to user interaction.
 
 ---
 
+## API Reference
+
+### Classes
+
+| Class | Description |
+|-------|-------------|
+| `.Avatar` | Base avatar styling (40px circle) |
+| `.Avatar--xs` | Extra small (24px) |
+| `.Avatar--small` | Small size (32px) |
+| `.Avatar--large` | Large size (56px) |
+| `.Avatar--xl` | Extra large (80px) |
+| `.Avatar--rounded` | Rounded square shape |
+| `.Avatar--initials` | Text initials variant |
+| `.Avatar--icon` | Icon placeholder variant |
+| `.Avatar--primary` | Primary color initials |
+| `.Avatar--success` | Success color initials |
+| `.Avatar--warning` | Warning color initials |
+| `.Avatar-status` | Status indicator dot |
+| `.Avatar-status--online` | Online status (green) |
+| `.Avatar-status--away` | Away status (yellow) |
+| `.Avatar-status--busy` | Busy status (red) |
+| `.Avatar-status--offline` | Offline status (gray) |
+| `.Avatar-status--small` | Smaller status dot |
+| `.Avatar-status--large` | Larger status dot |
+| `.AvatarGroup` | Stacked avatar container |
+| `.AvatarGroup--small` | Small group spacing |
+| `.AvatarGroup--large` | Large group spacing |
+| `.AvatarGroup-overflow` | Overflow count indicator |
+| `.AvatarStack` | Vertical list container |
+| `.AvatarStack-item` | Single item in stack |
+| `.AvatarStack-name` | Name label in stack |
+| `.Avatar-button` | Clickable avatar wrapper |
+| `.Avatar-editable` | Container for edit overlay |
+| `.Avatar-edit` | Edit button overlay |
+
+### CSS Custom Properties
+
+| Property | Default | Description |
+|----------|---------|-------------|
+| `--space-2` | `0.5rem` | Border radius for rounded variant |
+| `--bg-secondary` | — | Background for initials/icons |
+| `--bg-primary` | — | Border color for groups |
+| `--text-primary` | — | Text color for initials |
+| `--accent-primary` | — | Focus outline color |
+
+### Attributes
+
+| Attribute | Description |
+|-----------|-------------|
+| `alt` | Required for image avatars; describe the person |
+| `aria-label` | Required for status indicators and interactive avatars |
+| `role="group"` | Use on AvatarGroup with aria-label for count |
+
+---
+
 ## Accessibility
 
 Avatars require attention to ensure they're accessible:

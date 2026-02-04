@@ -459,6 +459,71 @@ Items that cannot be interacted with.
 </ul>
 ```
 
+---
+
+## API Reference
+
+### Classes
+
+| Class | Description |
+|-------|-------------|
+| `.List` | Container for list items |
+| `.List--bordered` | Visible borders between items |
+| `.List--compact` | Reduced padding for dense layouts |
+| `.List--selectable` | List with checkbox/radio selection |
+| `.List-header` | Section header/title |
+| `.List-item` | Individual list item |
+| `.List-item--active` | Highlighted/selected state |
+| `.List-item--disabled` | Non-interactive item |
+| `.List-item-icon` | Leading icon |
+| `.List-item-text` | Primary text content |
+| `.List-item-text--danger` | Destructive action text (red) |
+| `.List-item-description` | Secondary/helper text |
+| `.List-item-content` | Wrapper for text + description |
+| `.List-item-trailing` | Right-aligned content |
+| `.List-item-meta` | Secondary trailing text |
+| `.List-item-checkbox` | Checkbox input in selectable lists |
+| `.List-item-radio` | Radio input in selectable lists |
+
+### Structure
+
+```html
+<ul class="List">
+    <li class="List-item">
+        <i class="List-item-icon ph ph-user"></i>
+        <div class="List-item-content">
+            <span class="List-item-text">Title</span>
+            <span class="List-item-description">Description</span>
+        </div>
+        <span class="List-item-trailing">
+            <i class="ph ph-caret-right"></i>
+        </span>
+    </li>
+</ul>
+```
+
+### CSS Custom Properties
+
+| Property | Default | Description |
+|----------|---------|-------------|
+| `--bg-primary` | — | List background |
+| `--bg-secondary` | — | Hover/active background |
+| `--text-primary` | — | Primary text color |
+| `--text-secondary` | — | Description/meta text |
+| `--border-subtle` | — | Border color |
+| `--space-3` | `0.75rem` | Item padding |
+
+### Attributes
+
+| Attribute | Description |
+|-----------|-------------|
+| `role="listbox"` | For interactive/selectable lists |
+| `role="option"` | For items in listbox |
+| `aria-selected` | Selection state for options |
+| `aria-disabled="true"` | Disabled item state |
+
+---
+
 ## Accessibility
 
 - Use semantic `<ul>` and `<li>` elements
@@ -467,3 +532,20 @@ Items that cannot be interacted with.
 - Provide visible focus states for keyboard navigation
 - Use `aria-selected` for selectable items
 - Use `aria-disabled="true"` for disabled items
+
+---
+
+## Best Practices
+
+### Do
+
+- ✓ **Use consistent item structure** — Same elements across items
+- ✓ **Group related items** — Use headers for sections
+- ✓ **Show interactive states** — Hover, focus, active
+- ✓ **Provide visual hierarchy** — Icons, text, descriptions
+
+### Don't
+
+- ✗ **Overcrowd items** — Keep content scannable
+- ✗ **Mix navigation and actions** — Separate menus from settings
+- ✗ **Hide important info** — Key data should be visible

@@ -141,9 +141,70 @@ Switches toggle a single option on or off.
     </div>
 </Preview>
 
+---
+
+## API Reference
+
+### Classes
+
+| Class | Description |
+|-------|-------------|
+| `.Switch` | Base switch wrapper (label element) |
+| `.Switch--small` | Smaller switch size |
+| `.Switch--large` | Larger switch size |
+| `.Switch-slider` | Visual slider/track element |
+| `.Switch-label` | Container for switch with text label |
+| `.Switch-label-text` | Text wrapper (supports title + description) |
+
+### Structure
+
+```html
+<label class="Switch">
+    <input type="checkbox">
+    <span class="Switch-slider"></span>
+</label>
+```
+
+### States
+
+| State | Attribute | Description |
+|-------|-----------|-------------|
+| Off | (default) | Unchecked state |
+| On | `checked` | Checked/active state |
+| Disabled | `disabled` | Non-interactive state |
+
+### CSS Custom Properties
+
+| Property | Default | Description |
+|----------|---------|-------------|
+| `--bg-secondary` | — | Track background (off) |
+| `--accent-primary` | — | Track background (on) |
+| `--bg-primary` | — | Thumb color |
+| `--border-subtle` | — | Track border |
+
+---
+
 ## Accessibility
 
 - Switches use native `<input type="checkbox">` for full accessibility
 - Labels are clickable to toggle the switch
 - Keyboard accessible (Space to toggle when focused)
 - Screen readers announce the checked state
+- Use `aria-describedby` to associate helper text with the switch
+
+---
+
+## Best Practices
+
+### Do
+
+- ✓ **Use for binary settings** — On/off, enabled/disabled
+- ✓ **Show immediate effect** — Changes apply instantly, no submit button
+- ✓ **Provide clear labels** — Describe what the switch controls
+- ✓ **Keep labels positive** — "Enable notifications" not "Disable notifications"
+
+### Don't
+
+- ✗ **Use for forms requiring submission** — Use checkboxes instead
+- ✗ **Hide the current state** — Always make it clear what on/off means
+- ✗ **Use for multiple selections** — Switches are single binary choices

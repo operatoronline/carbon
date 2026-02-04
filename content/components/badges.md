@@ -387,6 +387,52 @@ Badges that can be clicked or dismissed.
 
 ---
 
+## API Reference
+
+### Classes
+
+| Class | Description |
+|-------|-------------|
+| `.Badge` | Base badge styling |
+| `.Badge--primary` | Primary color variant |
+| `.Badge--secondary` | Secondary/neutral color variant |
+| `.Badge--success` | Success/positive state |
+| `.Badge--warning` | Warning/caution state |
+| `.Badge--error` | Error/danger state |
+| `.Badge--info` | Informational state |
+| `.Badge--small` | Smaller badge size |
+| `.Badge--large` | Larger badge size |
+| `.Badge--pill` | Fully rounded pill shape |
+| `.Badge--outline` | Transparent background with border |
+| `.Badge--dot` | Minimal dot indicator (no text) |
+| `.Badge--count` | Circular count badge |
+| `.Badge--positioned` | Absolute positioning for overlays |
+| `.Badge--avatar` | Positioning for avatar overlays |
+| `.Badge--dismissible` | Badge with remove button |
+| `.Badge--clickable` | Interactive link/button badge |
+| `.Badge-icon` | Leading icon styling |
+| `.Badge-icon--trailing` | Trailing icon positioning |
+| `.Badge-dismiss` | Dismiss button inside badge |
+
+### CSS Custom Properties
+
+| Property | Default | Description |
+|----------|---------|-------------|
+| `--space-1` | `0.25rem` | Internal padding unit |
+| `--space-2` | `0.5rem` | Padding and gaps |
+| `--bg-secondary` | — | Default background |
+| `--text-primary` | — | Default text color |
+| `--accent-primary` | — | Primary accent color |
+
+### Attributes
+
+| Attribute | Description |
+|-----------|-------------|
+| `aria-label` | Required for dot indicators without visible text |
+| `aria-hidden` | Use on count badges when count is announced via parent |
+
+---
+
 ## Accessibility
 
 Badges require attention to ensure they're accessible:

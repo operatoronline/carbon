@@ -132,6 +132,43 @@ Disable animation for reduced motion preferences.
 <div class="Skeleton Skeleton--static">...</div>
 ```
 
+---
+
+## API Reference
+
+### Classes
+
+| Class | Description |
+|-------|-------------|
+| `.Skeleton` | Base skeleton with shimmer animation |
+| `.Skeleton--circle` | Circular skeleton (avatars) |
+| `.Skeleton--static` | No animation (reduced motion) |
+
+### Sizing
+
+Skeletons use inline `style` attributes for dimensions:
+
+| Property | Example | Description |
+|----------|---------|-------------|
+| `height` | `16px` | Match text line height |
+| `width` | `80%` | Percentage or fixed width |
+
+### CSS Custom Properties
+
+| Property | Default | Description |
+|----------|---------|-------------|
+| `--bg-secondary` | — | Base skeleton color |
+| `--border-subtle` | — | Shimmer highlight color |
+
+### Attributes
+
+| Attribute | Element | Description |
+|-----------|---------|-------------|
+| `aria-busy="true"` | Container | Indicates loading state |
+| `aria-label` | Container | Describes what's loading |
+
+---
+
 ## Accessibility
 
 - Use `aria-busy="true"` on the container while loading
@@ -143,3 +180,20 @@ Disable animation for reduced motion preferences.
     <div class="Skeleton">...</div>
 </div>
 ```
+
+---
+
+## Best Practices
+
+### Do
+
+- ✓ **Match content layout** — Skeleton should resemble final content
+- ✓ **Vary line widths** — Creates natural text appearance
+- ✓ **Respect reduced motion** — Use `.Skeleton--static` for accessibility
+- ✓ **Group related skeletons** — Wrap in container with `aria-busy`
+
+### Don't
+
+- ✗ **Use for fast loads** — Under 300ms doesn't need skeleton
+- ✗ **Animate everything** — Static skeletons are less distracting
+- ✗ **Mismatch dimensions** — Skeleton should match actual content size

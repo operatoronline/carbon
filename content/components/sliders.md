@@ -242,6 +242,52 @@ Common slider use cases in forms.
 
 ---
 
+## API Reference
+
+### Classes
+
+| Class | Description |
+|-------|-------------|
+| `.Slider` | Base range input styling |
+| `.Slider--small` | Smaller track and thumb |
+| `.Slider--large` | Larger track and thumb |
+| `.Slider--success` | Green thumb color |
+| `.Slider--warning` | Yellow thumb color |
+| `.Slider--error` | Red thumb color |
+| `.Slider-container` | Wrapper for slider + labels |
+| `.Slider-labels` | Min/max label container |
+| `.Slider-ticks` | Discrete step labels |
+| `.Slider-value` | Current value display |
+
+### HTML Attributes
+
+| Attribute | Description |
+|-----------|-------------|
+| `min` | Minimum value |
+| `max` | Maximum value |
+| `value` | Current value |
+| `step` | Increment amount (for discrete steps) |
+| `disabled` | Non-interactive state |
+
+### ARIA Attributes
+
+| Attribute | Description |
+|-----------|-------------|
+| `aria-valuemin` | Minimum value (auto from `min`) |
+| `aria-valuemax` | Maximum value (auto from `max`) |
+| `aria-valuenow` | Current value (auto from `value`) |
+| `aria-valuetext` | Human-readable value (e.g., "50 percent") |
+
+### CSS Custom Properties
+
+| Property | Default | Description |
+|----------|---------|-------------|
+| `--border-subtle` | — | Track background color |
+| `--accent-primary` | — | Thumb color |
+| `--space-2` | `0.5rem` | Label spacing |
+
+---
+
 ## Accessibility
 
 Native range inputs are accessible by default:

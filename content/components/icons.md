@@ -624,6 +624,58 @@ Icons with loading or state animations.
 
 ---
 
+## API Reference
+
+### Classes
+
+| Class | Description |
+|-------|-------------|
+| `.Icon` | Base icon styling |
+| `.Icon--xs` | Extra small (12px) |
+| `.Icon--small` | Small (16px) |
+| `.Icon--large` | Large (24px) |
+| `.Icon--xl` | Extra large (32px) |
+| `.Icon--success` | Success/green color |
+| `.Icon--warning` | Warning/yellow color |
+| `.Icon--error` | Error/red color |
+| `.Icon--info` | Info/primary color |
+| `.Icon--spin` | Spinning animation |
+| `.Icon--pulse` | Pulsing animation |
+| `.IconBg` | Icon with circular background |
+| `.IconBg--small` | Small background (28px) |
+| `.IconBg--large` | Large background (56px) |
+| `.IconBg--primary` | Primary color background |
+| `.IconBg--success` | Success color background |
+| `.IconBg--warning` | Warning color background |
+| `.IconBg--error` | Error color background |
+
+### Phosphor Icon Styles
+
+| Class Prefix | Description |
+|--------------|-------------|
+| `ph` | Regular weight |
+| `ph-bold` | Bold weight |
+| `ph-fill` | Filled style |
+| `ph-duotone` | Two-tone style |
+
+### Attributes
+
+| Attribute | Description |
+|-----------|-------------|
+| `aria-hidden="true"` | For decorative icons (text provides meaning) |
+| `aria-label` | For meaningful icons without visible text |
+| `role="img"` | When icon conveys meaning |
+
+### CSS Custom Properties
+
+| Property | Default | Description |
+|----------|---------|-------------|
+| `--text-secondary` | — | Default icon color |
+| `--bg-secondary` | — | IconBg background |
+| `--accent-primary` | — | Info color |
+
+---
+
 ## Accessibility
 
 Icons require attention to ensure they're accessible:
