@@ -593,3 +593,52 @@ document.querySelectorAll('.Rating--interactive').forEach(rating => {
   }
 });
 ```
+
+## API Reference
+
+<div class="ApiTable">
+
+| Class | Description |
+|-------|-------------|
+| `.Rating` | Base rating container |
+| `.Rating--sm` | Small size variant |
+| `.Rating--lg` | Large size variant |
+| `.Rating--interactive` | Enables click/hover interactions |
+| `.Rating--readonly` | Display-only (no pointer events) |
+| `.Rating--disabled` | Dimmed, non-interactive state |
+| `.Rating--hearts` | Heart icon variant (red) |
+| `.Rating--thumbs` | Thumbs up/down variant |
+| `.Rating--emoji` | Emoji-based rating variant |
+| `.Rating-star` | Individual star element |
+| `.Rating-star--filled` | Filled/active star |
+| `.Rating-star--half` | Half-filled star |
+| `.Rating-display` | Container for rating + value + count |
+| `.Rating-value` | Numeric rating value |
+| `.Rating-value--sm` | Small value text |
+| `.Rating-count` | Review count text |
+| `.Rating-thumb` | Thumbs button container |
+| `.Rating-thumb--up` | Thumbs up button |
+| `.Rating-thumb--down` | Thumbs down button |
+| `.Rating-emoji` | Emoji button |
+| `.Rating-emoji--selected` | Selected emoji |
+| `.Rating-breakdown` | Rating distribution container |
+| `.Rating-breakdownRow` | Single breakdown row |
+| `.Rating-breakdownBar` | Progress bar track |
+| `.Rating-breakdownFill` | Progress bar fill |
+| `.Rating-label` | Label for rating input |
+| `.Rating-required` | Required field indicator |
+| `.Rating-helper` | Helper text below rating |
+
+</div>
+
+## Accessibility
+
+- Use `role="radiogroup"` on interactive rating containers
+- Add `role="radio"` and `aria-checked` to each star button
+- Include `aria-label` with star count (e.g., "3 stars")
+- Use `aria-label` on the container (e.g., "Rating")
+- Support keyboard navigation (arrow keys to change, Enter/Space to select)
+- Ensure visible focus indicators on interactive elements
+- Announce rating changes to screen readers
+- For read-only displays, use `aria-label` to convey the rating value
+- Provide sufficient color contrast for filled vs empty states

@@ -530,3 +530,44 @@ Include actions within timeline items.
   transform: translateX(-50%);
 }
 ```
+
+## API Reference
+
+<div class="ApiTable">
+
+| Class | Description |
+|-------|-------------|
+| `.Timeline` | Base timeline container |
+| `.Timeline--compact` | Dense layout for activity feeds |
+| `.Timeline--horizontal` | Horizontal layout variant |
+| `.Timeline--alternating` | Alternating left/right layout |
+| `.Timeline-item` | Individual timeline entry |
+| `.Timeline-marker` | Dot/icon marker on the timeline |
+| `.Timeline-marker--icon` | Marker with icon inside |
+| `.Timeline-marker--success` | Green success marker |
+| `.Timeline-marker--warning` | Yellow warning marker |
+| `.Timeline-marker--error` | Red error marker |
+| `.Timeline-marker--info` | Blue info marker |
+| `.Timeline-marker--active` | Active/current marker with glow |
+| `.Timeline-content` | Content container for an item |
+| `.Timeline-header` | Header with title and time |
+| `.Timeline-title` | Event title |
+| `.Timeline-description` | Event description |
+| `.Timeline-time` | Timestamp |
+| `.Timeline-body` | Extended content area |
+| `.Timeline-actions` | Action buttons for an item |
+| `.Timeline-actor` | Person/entity name (compact) |
+| `.Timeline-link` | Linked reference (compact) |
+
+</div>
+
+## Accessibility
+
+- Use semantic list markup (`<ol>` or `<ul>`) for timeline structure
+- Include `role="list"` and `role="listitem"` when using divs
+- Ensure timestamps are machine-readable with `<time datetime="...">`
+- Provide sufficient color contrast for status indicators
+- Don't rely solely on color—use icons or text for status meaning
+- For interactive timelines, ensure focusable elements are keyboard-accessible
+- Use `aria-label` to describe timeline purpose (e.g., "Order history")
+- Announce new items with `aria-live` for dynamically updating timelines

@@ -449,6 +449,36 @@ A minimal dot-based progress indicator.
 </div>
 ```
 
+## API Reference
+
+<div class="ApiTable">
+
+| Class | Description |
+|-------|-------------|
+| `.Stepper` | Base stepper container |
+| `.Stepper--vertical` | Vertical layout variant |
+| `.Stepper--compact` | Minimal variant (indicators only) |
+| `.Stepper--clickable` | Enables navigation to completed steps |
+| `.Stepper--dots` | Dot-based progress indicator |
+| `.Stepper-step` | Individual step container |
+| `.Stepper-step--completed` | Completed step state |
+| `.Stepper-step--active` | Current active step |
+| `.Stepper-step--error` | Error state for a step |
+| `.Stepper-step--clickable` | Clickable step (for navigation) |
+| `.Stepper-indicator` | Step number or icon container |
+| `.Stepper-indicator--icon` | Icon-only indicator variant |
+| `.Stepper-content` | Step title and description container |
+| `.Stepper-title` | Step title text |
+| `.Stepper-description` | Step description text |
+| `.Stepper-description--error` | Error description styling |
+| `.Stepper-connector` | Line connecting steps |
+| `.Stepper-connector--completed` | Completed connector (filled) |
+| `.Stepper-dot` | Dot indicator (for dot variant) |
+| `.Stepper-dot--completed` | Completed dot |
+| `.Stepper-dot--active` | Active dot |
+
+</div>
+
 ## Accessibility
 
 - Use `aria-current="step"` on the active step
@@ -457,3 +487,5 @@ A minimal dot-based progress indicator.
 - Ensure sufficient color contrast for all states
 - Announce step changes to screen readers with `aria-live`
 - Use `aria-disabled="true"` for non-clickable future steps
+- Provide descriptive labels that indicate step position (e.g., "Step 2 of 4")
+- For error states, use `aria-invalid="true"` and describe the error

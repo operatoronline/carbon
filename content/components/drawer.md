@@ -568,3 +568,49 @@ document.addEventListener('keydown', (e) => {
   }
 });
 ```
+
+## API Reference
+
+<div class="ApiTable">
+
+| Class | Description |
+|-------|-------------|
+| `.Drawer` | Base drawer container |
+| `.Drawer--left` | Slides in from the left edge |
+| `.Drawer--right` | Slides in from the right edge (default) |
+| `.Drawer--top` | Slides in from the top edge |
+| `.Drawer--bottom` | Slides in from the bottom edge |
+| `.Drawer--open` | Shows the drawer (applies transform) |
+| `.Drawer--xs` | Extra small width (240px) |
+| `.Drawer--sm` | Small width (320px) |
+| `.Drawer--lg` | Large width (560px) |
+| `.Drawer--xl` | Extra large width (720px) |
+| `.Drawer--full` | Full width (100%) |
+| `.Drawer--persistent` | In-page sidebar (no overlay) |
+| `.Drawer--mini` | Collapsed sidebar, expands on hover |
+| `.Drawer-backdrop` | Overlay behind the drawer |
+| `.Drawer-backdrop--visible` | Shows the backdrop |
+| `.Drawer-header` | Header with title and close button |
+| `.Drawer-title` | Title text in header |
+| `.Drawer-body` | Scrollable content area |
+| `.Drawer-footer` | Footer with actions |
+| `.Drawer-nav` | Navigation container |
+| `.Drawer-navItem` | Navigation link item |
+| `.Drawer-navItem--active` | Active navigation item |
+| `.Drawer-navDivider` | Divider between nav groups |
+| `.Drawer-section` | Content section (e.g., filters) |
+| `.Drawer-sectionTitle` | Section heading |
+
+</div>
+
+## Accessibility
+
+- Use `role="dialog"` and `aria-modal="true"` for modal drawers
+- Add `aria-labelledby` pointing to the drawer title
+- Trap focus within the drawer when open
+- Return focus to the trigger element when closed
+- Support Escape key to close the drawer
+- Ensure backdrop click closes the drawer
+- Use `aria-hidden="true"` on main content when drawer is open
+- Provide a visible close button with `aria-label="Close"`
+- For navigation drawers, use `nav` element with `aria-label`

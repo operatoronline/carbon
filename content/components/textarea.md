@@ -308,6 +308,35 @@ Mark textarea as required with visual indicator.
 </div>
 ```
 
+## API Reference
+
+<div class="ApiTable">
+
+| Class | Description |
+|-------|-------------|
+| `.Textarea` | Base textarea styling |
+| `.Textarea--sm` | Small size variant |
+| `.Textarea--lg` | Large size variant |
+| `.Textarea--focus` | Forced focus state (for demos) |
+| `.Textarea--error` | Error state styling |
+| `.Textarea--success` | Success/valid state styling |
+| `.Textarea--autoresize` | Auto-growing textarea |
+| `.Textarea--no-resize` | Disables user resizing |
+| `.Textarea--resize-horizontal` | Horizontal resize only |
+| `.Textarea--no-top-radius` | Removes top border radius (for toolbar) |
+| `.Textarea--no-bottom-radius` | Removes bottom border radius (for action bar) |
+| `.Textarea-wrapper` | Container for textarea + toolbar/actions |
+| `.Textarea-toolbar` | Formatting toolbar above textarea |
+| `.Textarea-toolbar-btn` | Toolbar button |
+| `.Textarea-toolbar-divider` | Divider between toolbar groups |
+| `.Textarea-actions` | Action bar below textarea |
+| `.Textarea-actions-left` | Left-aligned actions |
+| `.Textarea-action-btn` | Action bar button |
+| `.Textarea-footer` | Footer with counter/hint |
+| `.Textarea-counter` | Character counter |
+
+</div>
+
 ## Accessibility
 
 - Always associate textareas with labels using `for` and `id`
@@ -317,3 +346,5 @@ Mark textarea as required with visual indicator.
 - Support keyboard navigation (Tab to focus, standard text editing)
 - Use `aria-invalid="true"` for error states
 - Include `maxlength` attribute when character limits apply
+- Announce character count updates to screen readers with `aria-live="polite"`
+- Ensure toolbar buttons have descriptive `title` or `aria-label` attributes

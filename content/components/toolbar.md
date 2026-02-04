@@ -377,3 +377,38 @@ A floating toolbar for contextual actions (like text editors).
   background: var(--bg-secondary);
 }
 ```
+
+## API Reference
+
+<div class="ApiTable">
+
+| Class | Description |
+|-------|-------------|
+| `.Toolbar` | Base toolbar container |
+| `.Toolbar--bordered` | Adds border and background |
+| `.Toolbar--sm` | Small size variant |
+| `.Toolbar--lg` | Large size variant |
+| `.Toolbar--vertical` | Vertical layout (sidebar) |
+| `.Toolbar--floating` | Elevated floating style |
+| `.Toolbar--contextual` | Selection context bar (colored) |
+| `.Toolbar-divider` | Vertical divider between groups |
+| `.Toolbar-spacer` | Flexible spacer (flex: 1) |
+| `.Toolbar-text` | Text content in toolbar |
+| `.Toolbar-label` | Label text (bolder) |
+| `.Toolbar-search` | Search input container |
+| `.Toolbar-searchInput` | Search text input |
+| `.ButtonGroup` | Groups related buttons together |
+
+</div>
+
+## Accessibility
+
+- Use `role="toolbar"` on the container element
+- Add `aria-label` to describe the toolbar's purpose
+- Support arrow key navigation between toolbar items
+- Use `aria-pressed` for toggle buttons in button groups
+- Ensure all buttons have accessible names (`aria-label` for icon-only)
+- For search inputs, use `role="searchbox"` or `type="search"`
+- In contextual toolbars, announce selection count to screen readers
+- Provide visible focus indicators for keyboard navigation
+- Use `aria-orientation` to indicate vertical toolbars
