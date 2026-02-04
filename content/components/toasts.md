@@ -150,3 +150,81 @@ function showToast(message, variant = 'default', duration = 4000) {
     }, duration);
 }
 ```
+
+---
+
+## API Reference
+
+<div class="ApiTable">
+
+| Class | Description |
+|-------|-------------|
+| `.Toast` | Base toast container |
+| `.Toast--success` | Green success variant |
+| `.Toast--error` | Red error variant |
+| `.Toast--warning` | Yellow warning variant |
+| `.Toast--info` | Blue informational variant |
+| `.Toast-icon` | Leading icon |
+| `.Toast-message` | Message text content |
+| `.Toast-action` | Optional action button |
+| `.Toast-close` | Dismiss button |
+| `.Toast-container` | Fixed positioning wrapper |
+| `.Toast.active` | Visible/animated state |
+
+</div>
+
+---
+
+## Accessibility
+
+- Use `role="status"` for non-critical toasts (informational, success)
+- Use `role="alert"` for urgent toasts (errors, warnings)
+- Include `aria-live="polite"` for standard notifications
+- Include `aria-live="assertive"` for critical notifications
+- Ensure auto-dismiss timing is sufficient (4-7 seconds minimum)
+- Provide dismiss button for toasts with longer content
+- Icons should have `aria-hidden="true"` when message is clear
+
+### Example with ARIA
+
+```html
+<div class="Toast Toast--success" role="status" aria-live="polite">
+    <i class="ph ph-check-circle Toast-icon" aria-hidden="true"></i>
+    <span class="Toast-message">File uploaded successfully.</span>
+</div>
+```
+
+### Keyboard Support
+
+| Key | Action |
+|-----|--------|
+| `Tab` | Move focus to action/close button |
+| `Enter` / `Space` | Activate focused button |
+| `Escape` | Dismiss toast (when focused) |
+
+---
+
+## Best Practices
+
+<div class="DoDont">
+  <div class="Do">
+    <h4>✓ Do</h4>
+    <ul>
+      <li>Keep messages brief and scannable</li>
+      <li>Use appropriate variants for message types</li>
+      <li>Provide undo actions for destructive operations</li>
+      <li>Stack multiple toasts vertically</li>
+      <li>Allow enough time to read before auto-dismiss</li>
+    </ul>
+  </div>
+  <div class="Dont">
+    <h4>✗ Don't</h4>
+    <ul>
+      <li>Show more than 3 toasts at once</li>
+      <li>Use toasts for critical errors requiring action</li>
+      <li>Auto-dismiss error messages too quickly</li>
+      <li>Include lengthy text or multiple paragraphs</li>
+      <li>Use toasts for confirmations requiring decisions</li>
+    </ul>
+  </div>
+</div>

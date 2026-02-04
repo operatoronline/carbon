@@ -180,3 +180,74 @@ A softer variant for documentation callouts.
     </div>
 </div>
 ```
+
+---
+
+## API Reference
+
+<div class="ApiTable">
+
+| Class | Description |
+|-------|-------------|
+| `.Alert` | Base alert container |
+| `.Alert--info` | Informational variant (blue) |
+| `.Alert--success` | Success variant (green) |
+| `.Alert--warning` | Warning variant (yellow) |
+| `.Alert--error` | Error variant (red) |
+| `.Alert-icon` | Icon container |
+| `.Alert-content` | Content wrapper |
+| `.Alert-title` | Bold heading text |
+| `.Alert-actions` | Button group container |
+| `.Alert-close` | Dismiss button |
+| `.Callout` | Bordered callout variant |
+| `.Callout--info` | Info callout |
+| `.Callout--warning` | Warning callout |
+| `.Callout-icon` | Callout icon |
+| `.Callout-content` | Callout content |
+
+</div>
+
+---
+
+## Accessibility
+
+- Use `role="alert"` for time-sensitive alerts that require immediate attention
+- Use `role="status"` for informational alerts that don't require immediate action
+- Include `aria-label="Dismiss"` on close buttons
+- Icons should be decorative (`aria-hidden="true"`) when text conveys the same meaning
+- Ensure sufficient color contrast (don't rely on color alone)
+- For auto-dismissing alerts, ensure users have enough time to read the content
+
+### Keyboard Support
+
+| Key | Action |
+|-----|--------|
+| `Tab` | Move focus to dismiss button |
+| `Enter` / `Space` | Activate dismiss button |
+
+---
+
+## Best Practices
+
+<div class="DoDont">
+  <div class="Do">
+    <h4>✓ Do</h4>
+    <ul>
+      <li>Keep alert messages clear and concise</li>
+      <li>Use appropriate variant for the message type</li>
+      <li>Include an icon to reinforce the message</li>
+      <li>Position alerts where they're noticeable</li>
+      <li>Provide actions when users can resolve the issue</li>
+    </ul>
+  </div>
+  <div class="Dont">
+    <h4>✗ Don't</h4>
+    <ul>
+      <li>Stack too many alerts at once</li>
+      <li>Use alerts for non-essential information</li>
+      <li>Auto-dismiss error alerts before users read them</li>
+      <li>Use warning/error colors for informational content</li>
+      <li>Hide critical information behind dismissible alerts</li>
+    </ul>
+  </div>
+</div>

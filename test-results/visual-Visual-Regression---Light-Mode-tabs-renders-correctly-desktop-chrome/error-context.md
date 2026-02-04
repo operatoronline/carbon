@@ -1,0 +1,1294 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - text: 
+      - link " Carbon" [ref=e4] [cursor=pointer]:
+        - /url: ../index.html
+        - generic [ref=e5]: 
+        - generic [ref=e6]: Carbon
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - generic [ref=e9]: 
+        - textbox "Search" [ref=e10]:
+          - /placeholder: Search...
+      - button "Toggle theme" [ref=e11] [cursor=pointer]:
+        - generic [ref=e12]: 
+  - generic [ref=e13]:
+    - complementary [ref=e14]:
+      - navigation [ref=e15]:
+        - list [ref=e16]:
+          - listitem [ref=e17]:
+            - link "Introduction" [ref=e18] [cursor=pointer]:
+              - /url: ../index.html
+          - listitem [ref=e19]:
+            - generic [ref=e20]: Components
+            - list [ref=e21]:
+              - listitem [ref=e22]:
+                - link "Accordions" [ref=e23] [cursor=pointer]:
+                  - /url: ../components/accordions.html
+              - listitem [ref=e24]:
+                - link "Alerts" [ref=e25] [cursor=pointer]:
+                  - /url: ../components/alerts.html
+              - listitem [ref=e26]:
+                - link "Avatars" [ref=e27] [cursor=pointer]:
+                  - /url: ../components/avatars.html
+              - listitem [ref=e28]:
+                - link "Badges" [ref=e29] [cursor=pointer]:
+                  - /url: ../components/badges.html
+              - listitem [ref=e30]:
+                - link "Breadcrumbs" [ref=e31] [cursor=pointer]:
+                  - /url: ../components/breadcrumbs.html
+              - listitem [ref=e32]:
+                - link "Buttons" [ref=e33] [cursor=pointer]:
+                  - /url: ../components/buttons.html
+              - listitem [ref=e34]:
+                - link "Cards" [ref=e35] [cursor=pointer]:
+                  - /url: ../components/cards.html
+              - listitem [ref=e36]:
+                - link "Chips" [ref=e37] [cursor=pointer]:
+                  - /url: ../components/chips.html
+              - listitem [ref=e38]:
+                - link "Dividers" [ref=e39] [cursor=pointer]:
+                  - /url: ../components/dividers.html
+              - listitem [ref=e40]:
+                - link "Drawer" [ref=e41] [cursor=pointer]:
+                  - /url: ../components/drawer.html
+              - listitem [ref=e42]:
+                - link "Dropdowns" [ref=e43] [cursor=pointer]:
+                  - /url: ../components/dropdowns.html
+              - listitem [ref=e44]:
+                - link "File upload" [ref=e45] [cursor=pointer]:
+                  - /url: ../components/file-upload.html
+              - listitem [ref=e46]:
+                - link "Forms" [ref=e47] [cursor=pointer]:
+                  - /url: ../components/forms.html
+              - listitem [ref=e48]:
+                - link "Icons" [ref=e49] [cursor=pointer]:
+                  - /url: ../components/icons.html
+              - listitem [ref=e50]:
+                - link "Links" [ref=e51] [cursor=pointer]:
+                  - /url: ../components/links.html
+              - listitem [ref=e52]:
+                - link "Lists" [ref=e53] [cursor=pointer]:
+                  - /url: ../components/lists.html
+              - listitem [ref=e54]:
+                - link "Menus" [ref=e55] [cursor=pointer]:
+                  - /url: ../components/menus.html
+              - listitem [ref=e56]:
+                - link "Modals" [ref=e57] [cursor=pointer]:
+                  - /url: ../components/modals.html
+              - listitem [ref=e58]:
+                - link "Pagination" [ref=e59] [cursor=pointer]:
+                  - /url: ../components/pagination.html
+              - listitem [ref=e60]:
+                - link "Progress" [ref=e61] [cursor=pointer]:
+                  - /url: ../components/progress.html
+              - listitem [ref=e62]:
+                - link "Rating" [ref=e63] [cursor=pointer]:
+                  - /url: ../components/rating.html
+              - listitem [ref=e64]:
+                - link "Skeletons" [ref=e65] [cursor=pointer]:
+                  - /url: ../components/skeletons.html
+              - listitem [ref=e66]:
+                - link "Sliders" [ref=e67] [cursor=pointer]:
+                  - /url: ../components/sliders.html
+              - listitem [ref=e68]:
+                - link "Steppers" [ref=e69] [cursor=pointer]:
+                  - /url: ../components/steppers.html
+              - listitem [ref=e70]:
+                - link "Switches" [ref=e71] [cursor=pointer]:
+                  - /url: ../components/switches.html
+              - listitem [ref=e72]:
+                - link "Tables" [ref=e73] [cursor=pointer]:
+                  - /url: ../components/tables.html
+              - listitem [ref=e74]:
+                - link "Tabs" [ref=e75] [cursor=pointer]:
+                  - /url: ../components/tabs.html
+              - listitem [ref=e76]:
+                - link "Textarea" [ref=e77] [cursor=pointer]:
+                  - /url: ../components/textarea.html
+              - listitem [ref=e78]:
+                - link "Timeline" [ref=e79] [cursor=pointer]:
+                  - /url: ../components/timeline.html
+              - listitem [ref=e80]:
+                - link "Toasts" [ref=e81] [cursor=pointer]:
+                  - /url: ../components/toasts.html
+              - listitem [ref=e82]:
+                - link "Toolbar" [ref=e83] [cursor=pointer]:
+                  - /url: ../components/toolbar.html
+              - listitem [ref=e84]:
+                - link "Tooltips" [ref=e85] [cursor=pointer]:
+                  - /url: ../components/tooltips.html
+          - listitem [ref=e86]:
+            - generic [ref=e87]: Patterns
+            - list [ref=e88]:
+              - listitem [ref=e89]:
+                - link "Empty states" [ref=e90] [cursor=pointer]:
+                  - /url: ../patterns/empty-states.html
+              - listitem [ref=e91]:
+                - link "Layouts" [ref=e92] [cursor=pointer]:
+                  - /url: ../patterns/layouts.html
+          - listitem [ref=e93]:
+            - generic [ref=e94]: Tokens
+            - list [ref=e95]:
+              - listitem [ref=e96]:
+                - link "Colors" [ref=e97] [cursor=pointer]:
+                  - /url: ../tokens/colors.html
+              - listitem [ref=e98]:
+                - link "Spacing" [ref=e99] [cursor=pointer]:
+                  - /url: ../tokens/spacing.html
+              - listitem [ref=e100]:
+                - link "Typography" [ref=e101] [cursor=pointer]:
+                  - /url: ../tokens/typography.html
+    - main [ref=e102]:
+      - generic [ref=e103]:
+        - navigation "Breadcrumb" [ref=e104]:
+          - link "Carbon" [ref=e105] [cursor=pointer]:
+            - /url: ../index.html
+          - generic [ref=e106]: /
+          - generic [ref=e107]: Components
+          - generic [ref=e108]: /
+          - generic [ref=e109]: Tabs
+        - heading "Tabs" [level=1] [ref=e110]
+      - article [ref=e111]:
+        - heading "Tabs" [level=1] [ref=e112]
+        - paragraph [ref=e113]: Tabs organize content into separate views, allowing users to switch between related sections without leaving the page. They help reduce clutter and make complex interfaces more manageable.
+        - separator [ref=e114]
+        - heading "Installation" [level=2] [ref=e115]
+        - paragraph [ref=e116]:
+          - text: Copy the tabs CSS from
+          - code [ref=e117]: styles/docs.css
+          - text: "or include the Carbon stylesheet:"
+        - generic [ref=e118]:
+          - code [ref=e120]:
+            - generic [ref=e121]:
+              - generic [ref=e122]: <link
+              - text: rel
+              - generic [ref=e123]: ="stylesheet"
+              - text: href
+              - generic [ref=e124]: ="carbon.min.css"
+              - text: ">"
+          - button "Copy code" [ref=e125] [cursor=pointer]:
+            - generic [ref=e126]: 
+        - paragraph [ref=e127]: "Then use tabs classes in your HTML:"
+        - generic [ref=e128]:
+          - code [ref=e130]:
+            - generic [ref=e131]:
+              - generic [ref=e132]: <div
+              - text: class
+              - generic [ref=e133]: ="Tabs"
+              - text: ">"
+            - generic [ref=e134]:
+              - generic [ref=e135]: <div
+              - text: class
+              - generic [ref=e136]: ="Tabs-list"
+              - text: role
+              - generic [ref=e137]: ="tablist"
+              - text: ">"
+            - generic [ref=e138]:
+              - generic [ref=e139]: <button
+              - text: class
+              - generic [ref=e140]: ="Tabs-tab active"
+              - text: role
+              - generic [ref=e141]: ="tab"
+              - text: aria-selected
+              - generic [ref=e142]: ="true"
+              - text: ">"
+            - text: Tab One
+            - generic [ref=e143]:
+              - generic [ref=e144]: </button
+              - text: ">"
+            - generic [ref=e145]:
+              - generic [ref=e146]: <button
+              - text: class
+              - generic [ref=e147]: ="Tabs-tab"
+              - text: role
+              - generic [ref=e148]: ="tab"
+              - text: aria-selected
+              - generic [ref=e149]: ="false"
+              - text: ">"
+            - text: Tab Two
+            - generic [ref=e150]:
+              - generic [ref=e151]: </button
+              - text: ">"
+            - generic [ref=e152]:
+              - generic [ref=e153]: </div
+              - text: ">"
+            - generic [ref=e154]:
+              - generic [ref=e155]: <div
+              - text: class
+              - generic [ref=e156]: ="Tabs-panel active"
+              - text: role
+              - generic [ref=e157]: ="tabpanel"
+              - text: ">"
+            - text: Content here...
+            - generic [ref=e158]:
+              - generic [ref=e159]: </div
+              - text: ">"
+            - generic [ref=e160]:
+              - generic [ref=e161]: </div
+              - text: ">"
+          - button "Copy code" [ref=e162] [cursor=pointer]:
+            - generic [ref=e163]: 
+        - separator [ref=e164]
+        - heading "Usage" [level=2] [ref=e165]
+        - paragraph [ref=e166]:
+          - text: The base
+          - code [ref=e167]: .Tabs
+          - text: class provides the container. The
+          - code [ref=e168]: .Tabs-list
+          - text: holds tab buttons, and
+          - code [ref=e169]: .Tabs-panel
+          - text: contains the content for each tab.
+        - generic [ref=e170]:
+          - generic [ref=e171]:
+            - generic [ref=e172]:
+              - button " Preview" [ref=e173] [cursor=pointer]:
+                - generic [ref=e174]: 
+                - text: Preview
+              - button " HTML" [ref=e175] [cursor=pointer]:
+                - generic [ref=e176]: 
+                - text: HTML
+            - generic [ref=e177]:
+              - generic [ref=e178]:
+                - button "" [ref=e179] [cursor=pointer]:
+                  - generic [ref=e180]: 
+                - button "" [ref=e181] [cursor=pointer]:
+                  - generic [ref=e182]: 
+                - button "" [ref=e183] [cursor=pointer]:
+                  - generic [ref=e184]: 
+              - button "" [ref=e185] [cursor=pointer]:
+                - generic [ref=e186]: 
+              - button "" [ref=e187] [cursor=pointer]:
+                - generic [ref=e188]: 
+              - button "" [ref=e189] [cursor=pointer]:
+                - generic [ref=e190]: 
+          - generic [ref=e193]:
+            - tablist [ref=e194]:
+              - tab "Overview" [selected] [ref=e195] [cursor=pointer]
+              - tab "Features" [ref=e196] [cursor=pointer]
+              - tab "Pricing" [ref=e197] [cursor=pointer]
+            - tabpanel [ref=e198]:
+              - paragraph [ref=e199]: Overview content goes here. This is the first panel with introductory information.
+          - text: 
+        - separator [ref=e200]
+        - heading "Variants" [level=2] [ref=e201]
+        - heading "All Variants" [level=3] [ref=e202]
+        - generic [ref=e203]:
+          - generic [ref=e204]:
+            - generic [ref=e205]:
+              - button " Preview" [ref=e206] [cursor=pointer]:
+                - generic [ref=e207]: 
+                - text: Preview
+              - button " HTML" [ref=e208] [cursor=pointer]:
+                - generic [ref=e209]: 
+                - text: HTML
+            - generic [ref=e210]:
+              - generic [ref=e211]:
+                - button "" [ref=e212] [cursor=pointer]:
+                  - generic [ref=e213]: 
+                - button "" [ref=e214] [cursor=pointer]:
+                  - generic [ref=e215]: 
+                - button "" [ref=e216] [cursor=pointer]:
+                  - generic [ref=e217]: 
+              - button "" [ref=e218] [cursor=pointer]:
+                - generic [ref=e219]: 
+              - button "" [ref=e220] [cursor=pointer]:
+                - generic [ref=e221]: 
+              - button "" [ref=e222] [cursor=pointer]:
+                - generic [ref=e223]: 
+          - generic [ref=e226]:
+            - generic [ref=e227]:
+              - generic [ref=e228]: Default
+              - tablist [ref=e230]:
+                - tab "Tab" [selected] [ref=e231] [cursor=pointer]
+                - tab "Tab" [ref=e232] [cursor=pointer]
+                - tab "Tab" [ref=e233] [cursor=pointer]
+            - generic [ref=e234]:
+              - generic [ref=e235]: Contained
+              - tablist [ref=e237]:
+                - tab "Tab" [selected] [ref=e238] [cursor=pointer]
+                - tab "Tab" [ref=e239] [cursor=pointer]
+                - tab "Tab" [ref=e240] [cursor=pointer]
+            - generic [ref=e241]:
+              - generic [ref=e242]: Pills
+              - tablist [ref=e244]:
+                - tab "Tab" [selected] [ref=e245] [cursor=pointer]
+                - tab "Tab" [ref=e246] [cursor=pointer]
+                - tab "Tab" [ref=e247] [cursor=pointer]
+          - text: 
+        - heading "Default" [level=3] [ref=e248]
+        - paragraph [ref=e249]: The default tabs style features an underline indicator on the active tab. Best for primary navigation within a page.
+        - generic [ref=e250]:
+          - generic [ref=e251]:
+            - generic [ref=e252]:
+              - button " Preview" [ref=e253] [cursor=pointer]:
+                - generic [ref=e254]: 
+                - text: Preview
+              - button " HTML" [ref=e255] [cursor=pointer]:
+                - generic [ref=e256]: 
+                - text: HTML
+            - generic [ref=e257]:
+              - generic [ref=e258]:
+                - button "" [ref=e259] [cursor=pointer]:
+                  - generic [ref=e260]: 
+                - button "" [ref=e261] [cursor=pointer]:
+                  - generic [ref=e262]: 
+                - button "" [ref=e263] [cursor=pointer]:
+                  - generic [ref=e264]: 
+              - button "" [ref=e265] [cursor=pointer]:
+                - generic [ref=e266]: 
+              - button "" [ref=e267] [cursor=pointer]:
+                - generic [ref=e268]: 
+              - button "" [ref=e269] [cursor=pointer]:
+                - generic [ref=e270]: 
+          - generic [ref=e273]:
+            - tablist [ref=e274]:
+              - tab "Overview" [selected] [ref=e275] [cursor=pointer]
+              - tab "Features" [ref=e276] [cursor=pointer]
+              - tab "Pricing" [ref=e277] [cursor=pointer]
+            - tabpanel [ref=e278]:
+              - paragraph [ref=e279]: Overview content goes here. This is the first panel.
+          - text: 
+        - heading "Contained" [level=3] [ref=e280]
+        - paragraph [ref=e281]: Contained tabs have a visible container boundary, making them ideal for code blocks, embedded content, or when tabs need visual separation from surrounding content.
+        - generic [ref=e282]:
+          - generic [ref=e283]:
+            - generic [ref=e284]:
+              - button " Preview" [ref=e285] [cursor=pointer]:
+                - generic [ref=e286]: 
+                - text: Preview
+              - button " HTML" [ref=e287] [cursor=pointer]:
+                - generic [ref=e288]: 
+                - text: HTML
+            - generic [ref=e289]:
+              - generic [ref=e290]:
+                - button "" [ref=e291] [cursor=pointer]:
+                  - generic [ref=e292]: 
+                - button "" [ref=e293] [cursor=pointer]:
+                  - generic [ref=e294]: 
+                - button "" [ref=e295] [cursor=pointer]:
+                  - generic [ref=e296]: 
+              - button "" [ref=e297] [cursor=pointer]:
+                - generic [ref=e298]: 
+              - button "" [ref=e299] [cursor=pointer]:
+                - generic [ref=e300]: 
+              - button "" [ref=e301] [cursor=pointer]:
+                - generic [ref=e302]: 
+          - generic [ref=e305]:
+            - tablist [ref=e306]:
+              - tab "HTML" [selected] [ref=e307] [cursor=pointer]
+              - tab "CSS" [ref=e308] [cursor=pointer]
+              - tab "JavaScript" [ref=e309] [cursor=pointer]
+            - tabpanel [ref=e310]:
+              - code [ref=e312]: <button class="Button">Click me</button>
+          - text: 
+        - heading "Pills" [level=3] [ref=e313]
+        - paragraph [ref=e314]: Pills-style tabs are more compact and work well for filters, categories, or segmented controls.
+        - generic [ref=e315]:
+          - generic [ref=e316]:
+            - generic [ref=e317]:
+              - button " Preview" [ref=e318] [cursor=pointer]:
+                - generic [ref=e319]: 
+                - text: Preview
+              - button " HTML" [ref=e320] [cursor=pointer]:
+                - generic [ref=e321]: 
+                - text: HTML
+            - generic [ref=e322]:
+              - generic [ref=e323]:
+                - button "" [ref=e324] [cursor=pointer]:
+                  - generic [ref=e325]: 
+                - button "" [ref=e326] [cursor=pointer]:
+                  - generic [ref=e327]: 
+                - button "" [ref=e328] [cursor=pointer]:
+                  - generic [ref=e329]: 
+              - button "" [ref=e330] [cursor=pointer]:
+                - generic [ref=e331]: 
+              - button "" [ref=e332] [cursor=pointer]:
+                - generic [ref=e333]: 
+              - button "" [ref=e334] [cursor=pointer]:
+                - generic [ref=e335]: 
+          - tablist [ref=e339]:
+            - tab "All" [selected] [ref=e340] [cursor=pointer]
+            - tab "Active" [ref=e341] [cursor=pointer]
+            - tab "Completed" [ref=e342] [cursor=pointer]
+            - tab "Archived" [ref=e343] [cursor=pointer]
+          - text: 
+        - separator [ref=e344]
+        - heading "With Icons" [level=2] [ref=e345]
+        - paragraph [ref=e346]: Tabs can include icons for visual reinforcement. Icons can appear alone or alongside text.
+        - heading "Icon with Text" [level=3] [ref=e347]
+        - generic [ref=e348]:
+          - generic [ref=e349]:
+            - generic [ref=e350]:
+              - button " Preview" [ref=e351] [cursor=pointer]:
+                - generic [ref=e352]: 
+                - text: Preview
+              - button " HTML" [ref=e353] [cursor=pointer]:
+                - generic [ref=e354]: 
+                - text: HTML
+            - generic [ref=e355]:
+              - generic [ref=e356]:
+                - button "" [ref=e357] [cursor=pointer]:
+                  - generic [ref=e358]: 
+                - button "" [ref=e359] [cursor=pointer]:
+                  - generic [ref=e360]: 
+                - button "" [ref=e361] [cursor=pointer]:
+                  - generic [ref=e362]: 
+              - button "" [ref=e363] [cursor=pointer]:
+                - generic [ref=e364]: 
+              - button "" [ref=e365] [cursor=pointer]:
+                - generic [ref=e366]: 
+              - button "" [ref=e367] [cursor=pointer]:
+                - generic [ref=e368]: 
+          - tablist [ref=e372]:
+            - tab " Home" [selected] [ref=e373] [cursor=pointer]:
+              - generic [ref=e374]: 
+              - generic [ref=e375]: Home
+            - tab " Settings" [ref=e376] [cursor=pointer]:
+              - generic [ref=e377]: 
+              - generic [ref=e378]: Settings
+            - tab " Profile" [ref=e379] [cursor=pointer]:
+              - generic [ref=e380]: 
+              - generic [ref=e381]: Profile
+          - text: 
+        - heading "Icon Only" [level=3] [ref=e382]
+        - paragraph [ref=e383]:
+          - text: For compact interfaces where icons are self-explanatory. Always include
+          - code [ref=e384]: aria-label
+          - text: for accessibility.
+        - generic [ref=e385]:
+          - generic [ref=e386]:
+            - generic [ref=e387]:
+              - button " Preview" [ref=e388] [cursor=pointer]:
+                - generic [ref=e389]: 
+                - text: Preview
+              - button " HTML" [ref=e390] [cursor=pointer]:
+                - generic [ref=e391]: 
+                - text: HTML
+            - generic [ref=e392]:
+              - generic [ref=e393]:
+                - button "" [ref=e394] [cursor=pointer]:
+                  - generic [ref=e395]: 
+                - button "" [ref=e396] [cursor=pointer]:
+                  - generic [ref=e397]: 
+                - button "" [ref=e398] [cursor=pointer]:
+                  - generic [ref=e399]: 
+              - button "" [ref=e400] [cursor=pointer]:
+                - generic [ref=e401]: 
+              - button "" [ref=e402] [cursor=pointer]:
+                - generic [ref=e403]: 
+              - button "" [ref=e404] [cursor=pointer]:
+                - generic [ref=e405]: 
+          - tablist [ref=e409]:
+            - tab "List view" [selected] [ref=e410] [cursor=pointer]:
+              - generic [ref=e411]: 
+            - tab "Grid view" [ref=e412] [cursor=pointer]:
+              - generic [ref=e413]: 
+            - tab "Column view" [ref=e414] [cursor=pointer]:
+              - generic [ref=e415]: 
+          - text: 
+        - separator [ref=e416]
+        - heading "States" [level=2] [ref=e417]
+        - heading "Disabled" [level=3] [ref=e418]
+        - paragraph [ref=e419]: Disabled tabs indicate a section is unavailable. Use sparingly and provide context for why.
+        - generic [ref=e420]:
+          - generic [ref=e421]:
+            - generic [ref=e422]:
+              - button " Preview" [ref=e423] [cursor=pointer]:
+                - generic [ref=e424]: 
+                - text: Preview
+              - button " HTML" [ref=e425] [cursor=pointer]:
+                - generic [ref=e426]: 
+                - text: HTML
+            - generic [ref=e427]:
+              - generic [ref=e428]:
+                - button "" [ref=e429] [cursor=pointer]:
+                  - generic [ref=e430]: 
+                - button "" [ref=e431] [cursor=pointer]:
+                  - generic [ref=e432]: 
+                - button "" [ref=e433] [cursor=pointer]:
+                  - generic [ref=e434]: 
+              - button "" [ref=e435] [cursor=pointer]:
+                - generic [ref=e436]: 
+              - button "" [ref=e437] [cursor=pointer]:
+                - generic [ref=e438]: 
+              - button "" [ref=e439] [cursor=pointer]:
+                - generic [ref=e440]: 
+          - tablist [ref=e444]:
+            - tab "Active" [selected] [ref=e445] [cursor=pointer]
+            - tab "Available" [ref=e446] [cursor=pointer]
+            - tab "Premium Only" [disabled] [ref=e447]
+          - text: 
+        - heading "With Badge" [level=3] [ref=e448]
+        - paragraph [ref=e449]: Show counts or status indicators with badges inside tabs.
+        - generic [ref=e450]:
+          - generic [ref=e451]:
+            - generic [ref=e452]:
+              - button " Preview" [ref=e453] [cursor=pointer]:
+                - generic [ref=e454]: 
+                - text: Preview
+              - button " HTML" [ref=e455] [cursor=pointer]:
+                - generic [ref=e456]: 
+                - text: HTML
+            - generic [ref=e457]:
+              - generic [ref=e458]:
+                - button "" [ref=e459] [cursor=pointer]:
+                  - generic [ref=e460]: 
+                - button "" [ref=e461] [cursor=pointer]:
+                  - generic [ref=e462]: 
+                - button "" [ref=e463] [cursor=pointer]:
+                  - generic [ref=e464]: 
+              - button "" [ref=e465] [cursor=pointer]:
+                - generic [ref=e466]: 
+              - button "" [ref=e467] [cursor=pointer]:
+                - generic [ref=e468]: 
+              - button "" [ref=e469] [cursor=pointer]:
+                - generic [ref=e470]: 
+          - tablist [ref=e474]:
+            - tab "Inbox 12" [selected] [ref=e475] [cursor=pointer]:
+              - text: Inbox
+              - generic [ref=e476]: "12"
+            - tab "Sent" [ref=e477] [cursor=pointer]
+            - tab "Drafts 3" [ref=e478] [cursor=pointer]:
+              - text: Drafts
+              - generic [ref=e479]: "3"
+          - text: 
+        - separator [ref=e480]
+        - heading "Sizes" [level=2] [ref=e481]
+        - paragraph [ref=e482]: Tabs come in three sizes to fit different contexts.
+        - generic [ref=e483]:
+          - generic [ref=e484]:
+            - generic [ref=e485]:
+              - button " Preview" [ref=e486] [cursor=pointer]:
+                - generic [ref=e487]: 
+                - text: Preview
+              - button " HTML" [ref=e488] [cursor=pointer]:
+                - generic [ref=e489]: 
+                - text: HTML
+            - generic [ref=e490]:
+              - generic [ref=e491]:
+                - button "" [ref=e492] [cursor=pointer]:
+                  - generic [ref=e493]: 
+                - button "" [ref=e494] [cursor=pointer]:
+                  - generic [ref=e495]: 
+                - button "" [ref=e496] [cursor=pointer]:
+                  - generic [ref=e497]: 
+              - button "" [ref=e498] [cursor=pointer]:
+                - generic [ref=e499]: 
+              - button "" [ref=e500] [cursor=pointer]:
+                - generic [ref=e501]: 
+              - button "" [ref=e502] [cursor=pointer]:
+                - generic [ref=e503]: 
+          - generic [ref=e506]:
+            - generic [ref=e507]:
+              - generic [ref=e508]: Small
+              - tablist [ref=e510]:
+                - tab "Details" [selected] [ref=e511] [cursor=pointer]
+                - tab "Activity" [ref=e512] [cursor=pointer]
+                - tab "Comments" [ref=e513] [cursor=pointer]
+            - generic [ref=e514]:
+              - generic [ref=e515]: Default
+              - tablist [ref=e517]:
+                - tab "Details" [selected] [ref=e518] [cursor=pointer]
+                - tab "Activity" [ref=e519] [cursor=pointer]
+                - tab "Comments" [ref=e520] [cursor=pointer]
+            - generic [ref=e521]:
+              - generic [ref=e522]: Large
+              - tablist [ref=e524]:
+                - tab "Details" [selected] [ref=e525] [cursor=pointer]
+                - tab "Activity" [ref=e526] [cursor=pointer]
+                - tab "Comments" [ref=e527] [cursor=pointer]
+          - text: 
+        - separator [ref=e528]
+        - heading "Full Width" [level=2] [ref=e529]
+        - paragraph [ref=e530]: Tabs can stretch to fill their container width. Useful for mobile layouts.
+        - generic [ref=e531]:
+          - generic [ref=e532]:
+            - generic [ref=e533]:
+              - button " Preview" [ref=e534] [cursor=pointer]:
+                - generic [ref=e535]: 
+                - text: Preview
+              - button " HTML" [ref=e536] [cursor=pointer]:
+                - generic [ref=e537]: 
+                - text: HTML
+            - generic [ref=e538]:
+              - generic [ref=e539]:
+                - button "" [ref=e540] [cursor=pointer]:
+                  - generic [ref=e541]: 
+                - button "" [ref=e542] [cursor=pointer]:
+                  - generic [ref=e543]: 
+                - button "" [ref=e544] [cursor=pointer]:
+                  - generic [ref=e545]: 
+              - button "" [ref=e546] [cursor=pointer]:
+                - generic [ref=e547]: 
+              - button "" [ref=e548] [cursor=pointer]:
+                - generic [ref=e549]: 
+              - button "" [ref=e550] [cursor=pointer]:
+                - generic [ref=e551]: 
+          - tablist [ref=e555]:
+            - tab "For You" [selected] [ref=e556] [cursor=pointer]
+            - tab "Following" [ref=e557] [cursor=pointer]
+            - tab "Trending" [ref=e558] [cursor=pointer]
+          - text: 
+        - separator [ref=e559]
+        - heading "Common Patterns" [level=2] [ref=e560]
+        - heading "Settings Page" [level=3] [ref=e561]
+        - generic [ref=e562]:
+          - generic [ref=e563]:
+            - generic [ref=e564]:
+              - button " Preview" [ref=e565] [cursor=pointer]:
+                - generic [ref=e566]: 
+                - text: Preview
+              - button " HTML" [ref=e567] [cursor=pointer]:
+                - generic [ref=e568]: 
+                - text: HTML
+            - generic [ref=e569]:
+              - generic [ref=e570]:
+                - button "" [ref=e571] [cursor=pointer]:
+                  - generic [ref=e572]: 
+                - button "" [ref=e573] [cursor=pointer]:
+                  - generic [ref=e574]: 
+                - button "" [ref=e575] [cursor=pointer]:
+                  - generic [ref=e576]: 
+              - button "" [ref=e577] [cursor=pointer]:
+                - generic [ref=e578]: 
+              - button "" [ref=e579] [cursor=pointer]:
+                - generic [ref=e580]: 
+              - button "" [ref=e581] [cursor=pointer]:
+                - generic [ref=e582]: 
+          - generic [ref=e586]:
+            - tablist [ref=e587]:
+              - tab " Account" [selected] [ref=e588] [cursor=pointer]:
+                - generic [ref=e589]: 
+                - generic [ref=e590]: Account
+              - tab " Notifications" [ref=e591] [cursor=pointer]:
+                - generic [ref=e592]: 
+                - generic [ref=e593]: Notifications
+              - tab " Privacy" [ref=e594] [cursor=pointer]:
+                - generic [ref=e595]: 
+                - generic [ref=e596]: Privacy
+              - tab " Appearance" [ref=e597] [cursor=pointer]:
+                - generic [ref=e598]: 
+                - generic [ref=e599]: Appearance
+            - tabpanel [ref=e600]:
+              - generic [ref=e601]:
+                - heading "Account Settings" [level=3] [ref=e602]
+                - paragraph [ref=e603]: Manage your account information and preferences.
+          - text: 
+        - heading "Code Viewer" [level=3] [ref=e604]
+        - generic [ref=e605]:
+          - generic [ref=e606]:
+            - generic [ref=e607]:
+              - button " Preview" [ref=e608] [cursor=pointer]:
+                - generic [ref=e609]: 
+                - text: Preview
+              - button " HTML" [ref=e610] [cursor=pointer]:
+                - generic [ref=e611]: 
+                - text: HTML
+            - generic [ref=e612]:
+              - generic [ref=e613]:
+                - button "" [ref=e614] [cursor=pointer]:
+                  - generic [ref=e615]: 
+                - button "" [ref=e616] [cursor=pointer]:
+                  - generic [ref=e617]: 
+                - button "" [ref=e618] [cursor=pointer]:
+                  - generic [ref=e619]: 
+              - button "" [ref=e620] [cursor=pointer]:
+                - generic [ref=e621]: 
+              - button "" [ref=e622] [cursor=pointer]:
+                - generic [ref=e623]: 
+              - button "" [ref=e624] [cursor=pointer]:
+                - generic [ref=e625]: 
+          - generic [ref=e628]:
+            - tablist [ref=e629]:
+              - tab "index.html" [selected] [ref=e630] [cursor=pointer]
+              - tab "styles.css" [ref=e631] [cursor=pointer]
+              - tab "app.js" [ref=e632] [cursor=pointer]
+            - tabpanel [ref=e633]:
+              - code [ref=e635]: <!DOCTYPE html> <html lang="en"> <head> <title>My App</title> </head> </html>
+          - text: 
+        - heading "Filter Bar" [level=3] [ref=e636]
+        - generic [ref=e637]:
+          - generic [ref=e638]:
+            - generic [ref=e639]:
+              - button " Preview" [ref=e640] [cursor=pointer]:
+                - generic [ref=e641]: 
+                - text: Preview
+              - button " HTML" [ref=e642] [cursor=pointer]:
+                - generic [ref=e643]: 
+                - text: HTML
+            - generic [ref=e644]:
+              - generic [ref=e645]:
+                - button "" [ref=e646] [cursor=pointer]:
+                  - generic [ref=e647]: 
+                - button "" [ref=e648] [cursor=pointer]:
+                  - generic [ref=e649]: 
+                - button "" [ref=e650] [cursor=pointer]:
+                  - generic [ref=e651]: 
+              - button "" [ref=e652] [cursor=pointer]:
+                - generic [ref=e653]: 
+              - button "" [ref=e654] [cursor=pointer]:
+                - generic [ref=e655]: 
+              - button "" [ref=e656] [cursor=pointer]:
+                - generic [ref=e657]: 
+          - generic [ref=e660]:
+            - tablist [ref=e662]:
+              - tab "All" [selected] [ref=e663] [cursor=pointer]
+              - tab "Open" [ref=e664] [cursor=pointer]
+              - tab "Closed" [ref=e665] [cursor=pointer]
+            - searchbox "Search..." [ref=e666]
+          - text: 
+        - heading "Vertical Tabs" [level=3] [ref=e667]
+        - generic [ref=e668]:
+          - generic [ref=e669]:
+            - generic [ref=e670]:
+              - button " Preview" [ref=e671] [cursor=pointer]:
+                - generic [ref=e672]: 
+                - text: Preview
+              - button " HTML" [ref=e673] [cursor=pointer]:
+                - generic [ref=e674]: 
+                - text: HTML
+            - generic [ref=e675]:
+              - generic [ref=e676]:
+                - button "" [ref=e677] [cursor=pointer]:
+                  - generic [ref=e678]: 
+                - button "" [ref=e679] [cursor=pointer]:
+                  - generic [ref=e680]: 
+                - button "" [ref=e681] [cursor=pointer]:
+                  - generic [ref=e682]: 
+              - button "" [ref=e683] [cursor=pointer]:
+                - generic [ref=e684]: 
+              - button "" [ref=e685] [cursor=pointer]:
+                - generic [ref=e686]: 
+              - button "" [ref=e687] [cursor=pointer]:
+                - generic [ref=e688]: 
+          - generic [ref=e691]:
+            - tablist [ref=e692]:
+              - tab "General" [selected] [ref=e693] [cursor=pointer]
+              - tab "Security" [ref=e694] [cursor=pointer]
+              - tab "Billing" [ref=e695] [cursor=pointer]
+              - tab "Team" [ref=e696] [cursor=pointer]
+            - tabpanel [ref=e697]:
+              - heading "General Settings" [level=4] [ref=e698]
+              - paragraph [ref=e699]: Configure your general preferences and options.
+          - text: 
+        - separator [ref=e700]
+        - heading "JavaScript" [level=2] [ref=e701]
+        - paragraph [ref=e702]: "Tabs require minimal JavaScript for interactivity:"
+        - generic [ref=e703]:
+          - code [ref=e705]:
+            - text: "document.querySelectorAll('.Tabs').forEach(tabs => { const tabList = tabs.querySelector('.Tabs-list'); const tabButtons = tabs.querySelectorAll('.Tabs-tab'); const panels = tabs.querySelectorAll('.Tabs-panel'); tabList.addEventListener('click', (e) => { const tab = e.target.closest('.Tabs-tab'); if (!tab || tab.disabled) return; // Update tab states tabButtons.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); }); tab.classList.add('active'); tab.setAttribute('aria-selected', 'true'); // Update panel visibility const index = Array.from(tabButtons).indexOf(tab); panels.forEach(("
+            - generic [ref=e706]: panel, i
+            - text: ") => { panel.classList.toggle('active', i === index); }); }); // Keyboard navigation tabList.addEventListener('keydown', (e) => { const tabs = Array.from(tabButtons).filter(t => !t.disabled); const current = tabs.findIndex(t => t.classList.contains('active')); let next; switch(e.key) { case 'ArrowRight': case 'ArrowDown': next = (current + 1) % tabs.length; break; case 'ArrowLeft': case 'ArrowUp': next = (current - 1 + tabs.length) % tabs.length; break; case 'Home': next = 0; break; case 'End': next = tabs.length - 1; break; default: return; } e.preventDefault(); tabs[next].click(); tabs[next].focus(); }); });"
+          - button "Copy code" [ref=e707] [cursor=pointer]:
+            - generic [ref=e708]: 
+        - separator [ref=e709]
+        - heading "Customization" [level=2] [ref=e710]
+        - paragraph [ref=e711]: "Override tab styles using CSS custom properties:"
+        - generic [ref=e712]:
+          - code [ref=e714]: "/* Custom accent color */ .Tabs-tab.active { --tab-active-color: oklch(55% 0.2 150); color: var(--tab-active-color); border-color: var(--tab-active-color); } /* Custom pill styling */ .Tabs--pills .Tabs-tab.active { --tab-pill-bg: oklch(55% 0.2 150); background-color: var(--tab-pill-bg); color: white; } /* Custom spacing */ .Tabs--compact .Tabs-tab { padding: var(--space-1) var(--space-2); font-size: 0.75rem; } /* Custom underline thickness */ .Tabs-tab.active { border-bottom-width: 3px; }"
+          - button "Copy code" [ref=e715] [cursor=pointer]:
+            - generic [ref=e716]: 
+        - heading "Creating Custom Variants" [level=3] [ref=e717]
+        - generic [ref=e718]:
+          - code [ref=e720]: "/* Bordered variant */ .Tabs--bordered .Tabs-list { border: 1px solid var(--border-default); border-radius: var(--radius-md); padding: var(--space-1); background: var(--bg-secondary); } .Tabs--bordered .Tabs-tab.active { background: var(--bg-primary); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); } /* Minimal variant */ .Tabs--minimal .Tabs-list { border-bottom: none; gap: var(--space-6); } .Tabs--minimal .Tabs-tab { padding: var(--space-2) 0; border-bottom: none; opacity: 0.6; } .Tabs--minimal .Tabs-tab.active { opacity: 1; font-weight: 600; }"
+          - button "Copy code" [ref=e721] [cursor=pointer]:
+            - generic [ref=e722]: 
+        - separator [ref=e723]
+        - heading "API Reference" [level=2] [ref=e724]
+        - heading "Base Classes" [level=3] [ref=e725]
+        - table [ref=e726]:
+          - rowgroup [ref=e727]:
+            - row "Class Description" [ref=e728]:
+              - columnheader "Class" [ref=e729]
+              - columnheader "Description" [ref=e730]
+          - rowgroup [ref=e731]:
+            - row ".Tabs Container for the tabs component (required)" [ref=e732]:
+              - cell ".Tabs" [ref=e733]:
+                - code [ref=e734]: .Tabs
+              - cell "Container for the tabs component (required)" [ref=e735]
+            - row ".Tabs-list Container for tab buttons" [ref=e736]:
+              - cell ".Tabs-list" [ref=e737]:
+                - code [ref=e738]: .Tabs-list
+              - cell "Container for tab buttons" [ref=e739]
+            - row ".Tabs-tab Individual tab button" [ref=e740]:
+              - cell ".Tabs-tab" [ref=e741]:
+                - code [ref=e742]: .Tabs-tab
+              - cell "Individual tab button" [ref=e743]
+            - row ".Tabs-panel Content panel for each tab" [ref=e744]:
+              - cell ".Tabs-panel" [ref=e745]:
+                - code [ref=e746]: .Tabs-panel
+              - cell "Content panel for each tab" [ref=e747]
+        - heading "Variant Classes" [level=3] [ref=e748]
+        - table [ref=e749]:
+          - rowgroup [ref=e750]:
+            - row "Class Description" [ref=e751]:
+              - columnheader "Class" [ref=e752]
+              - columnheader "Description" [ref=e753]
+          - rowgroup [ref=e754]:
+            - row ".Tabs--contained Tabs with visible container boundary" [ref=e755]:
+              - cell ".Tabs--contained" [ref=e756]:
+                - code [ref=e757]: .Tabs--contained
+              - cell "Tabs with visible container boundary" [ref=e758]
+            - row ".Tabs--pills Pill-style tab buttons" [ref=e759]:
+              - cell ".Tabs--pills" [ref=e760]:
+                - code [ref=e761]: .Tabs--pills
+              - cell "Pill-style tab buttons" [ref=e762]
+            - row ".Tabs--vertical Vertical tab layout" [ref=e763]:
+              - cell ".Tabs--vertical" [ref=e764]:
+                - code [ref=e765]: .Tabs--vertical
+              - cell "Vertical tab layout" [ref=e766]
+        - heading "Size Classes" [level=3] [ref=e767]
+        - table [ref=e768]:
+          - rowgroup [ref=e769]:
+            - row "Class Description" [ref=e770]:
+              - columnheader "Class" [ref=e771]
+              - columnheader "Description" [ref=e772]
+          - rowgroup [ref=e773]:
+            - row ".Tabs--small Compact tabs for tight spaces" [ref=e774]:
+              - cell ".Tabs--small" [ref=e775]:
+                - code [ref=e776]: .Tabs--small
+              - cell "Compact tabs for tight spaces" [ref=e777]
+            - row ".Tabs--large Larger tabs for primary navigation" [ref=e778]:
+              - cell ".Tabs--large" [ref=e779]:
+                - code [ref=e780]: .Tabs--large
+              - cell "Larger tabs for primary navigation" [ref=e781]
+        - heading "Modifier Classes" [level=3] [ref=e782]
+        - table [ref=e783]:
+          - rowgroup [ref=e784]:
+            - row "Class Description" [ref=e785]:
+              - columnheader "Class" [ref=e786]
+              - columnheader "Description" [ref=e787]
+          - rowgroup [ref=e788]:
+            - row ".Tabs--fullWidth Tabs stretch to fill container width" [ref=e789]:
+              - cell ".Tabs--fullWidth" [ref=e790]:
+                - code [ref=e791]: .Tabs--fullWidth
+              - cell "Tabs stretch to fill container width" [ref=e792]
+            - row ".active Active state for tab and panel" [ref=e793]:
+              - cell ".active" [ref=e794]:
+                - code [ref=e795]: .active
+              - cell "Active state for tab and panel" [ref=e796]
+        - heading "ARIA Attributes" [level=3] [ref=e797]
+        - table [ref=e798]:
+          - rowgroup [ref=e799]:
+            - row "Attribute Element Description" [ref=e800]:
+              - columnheader "Attribute" [ref=e801]
+              - columnheader "Element" [ref=e802]
+              - columnheader "Description" [ref=e803]
+          - rowgroup [ref=e804]:
+            - row "role=\"tablist\" .Tabs-list Identifies the tab list container" [ref=e805]:
+              - cell "role=\"tablist\"" [ref=e806]:
+                - code [ref=e807]: role="tablist"
+              - cell ".Tabs-list" [ref=e808]
+              - cell "Identifies the tab list container" [ref=e809]
+            - row "role=\"tab\" .Tabs-tab Identifies each tab button" [ref=e810]:
+              - cell "role=\"tab\"" [ref=e811]:
+                - code [ref=e812]: role="tab"
+              - cell ".Tabs-tab" [ref=e813]
+              - cell "Identifies each tab button" [ref=e814]
+            - row "role=\"tabpanel\" .Tabs-panel Identifies the content panel" [ref=e815]:
+              - cell "role=\"tabpanel\"" [ref=e816]:
+                - code [ref=e817]: role="tabpanel"
+              - cell ".Tabs-panel" [ref=e818]
+              - cell "Identifies the content panel" [ref=e819]
+            - row "aria-selected .Tabs-tab \"true\" for active tab, \"false\" for others" [ref=e820]:
+              - cell "aria-selected" [ref=e821]:
+                - code [ref=e822]: aria-selected
+              - cell ".Tabs-tab" [ref=e823]
+              - cell "\"true\" for active tab, \"false\" for others" [ref=e824]
+        - separator [ref=e825]
+        - heading "Accessibility" [level=2] [ref=e826]
+        - heading "Keyboard Support" [level=3] [ref=e827]
+        - table [ref=e828]:
+          - rowgroup [ref=e829]:
+            - row "Key Action" [ref=e830]:
+              - columnheader "Key" [ref=e831]
+              - columnheader "Action" [ref=e832]
+          - rowgroup [ref=e833]:
+            - row "Tab Moves focus into/out of the tab list" [ref=e834]:
+              - cell "Tab" [ref=e835]
+              - cell "Moves focus into/out of the tab list" [ref=e836]
+            - row "Arrow Left/Up Moves to the previous tab" [ref=e837]:
+              - cell "Arrow Left/Up" [ref=e838]
+              - cell "Moves to the previous tab" [ref=e839]
+            - row "Arrow Right/Down Moves to the next tab" [ref=e840]:
+              - cell "Arrow Right/Down" [ref=e841]
+              - cell "Moves to the next tab" [ref=e842]
+            - row "Home Moves to the first tab" [ref=e843]:
+              - cell "Home" [ref=e844]
+              - cell "Moves to the first tab" [ref=e845]
+            - row "End Moves to the last tab" [ref=e846]:
+              - cell "End" [ref=e847]
+              - cell "Moves to the last tab" [ref=e848]
+            - row "Enter/Space Activates the focused tab" [ref=e849]:
+              - cell "Enter/Space" [ref=e850]
+              - cell "Activates the focused tab" [ref=e851]
+        - heading "Screen Readers" [level=3] [ref=e852]
+        - generic [ref=e853]:
+          - code [ref=e855]:
+            - text: <!-- Basic accessible tabs -->
+            - generic [ref=e856]:
+              - generic [ref=e857]: <div
+              - text: class
+              - generic [ref=e858]: ="Tabs"
+              - text: ">"
+            - generic [ref=e859]:
+              - generic [ref=e860]: <div
+              - text: class
+              - generic [ref=e861]: ="Tabs-list"
+              - text: role
+              - generic [ref=e862]: ="tablist"
+              - text: aria-label
+              - generic [ref=e863]: ="Account settings"
+              - text: ">"
+            - generic [ref=e864]:
+              - generic [ref=e865]: <button
+              - text: class
+              - generic [ref=e866]: ="Tabs-tab active"
+              - text: role
+              - generic [ref=e867]: ="tab"
+              - text: id
+              - generic [ref=e868]: ="tab-1"
+              - text: aria-selected
+              - generic [ref=e869]: ="true"
+              - text: aria-controls
+              - generic [ref=e870]: ="panel-1"
+              - text: ">"
+            - text: Profile
+            - generic [ref=e871]:
+              - generic [ref=e872]: </button
+              - text: ">"
+            - generic [ref=e873]:
+              - generic [ref=e874]: <button
+              - text: class
+              - generic [ref=e875]: ="Tabs-tab"
+              - text: role
+              - generic [ref=e876]: ="tab"
+              - text: id
+              - generic [ref=e877]: ="tab-2"
+              - text: aria-selected
+              - generic [ref=e878]: ="false"
+              - text: aria-controls
+              - generic [ref=e879]: ="panel-2"
+              - text: tabindex
+              - generic [ref=e880]: ="-1"
+              - text: ">"
+            - text: Security
+            - generic [ref=e881]:
+              - generic [ref=e882]: </button
+              - text: ">"
+            - generic [ref=e883]:
+              - generic [ref=e884]: </div
+              - text: ">"
+            - generic [ref=e885]:
+              - generic [ref=e886]: <div
+              - text: class
+              - generic [ref=e887]: ="Tabs-panel active"
+              - text: role
+              - generic [ref=e888]: ="tabpanel"
+              - text: id
+              - generic [ref=e889]: ="panel-1"
+              - text: aria-labelledby
+              - generic [ref=e890]: ="tab-1"
+              - text: ">"
+            - text: Profile content...
+            - generic [ref=e891]:
+              - generic [ref=e892]: </div
+              - text: ">"
+            - generic [ref=e893]:
+              - generic [ref=e894]: <div
+              - text: class
+              - generic [ref=e895]: ="Tabs-panel"
+              - text: role
+              - generic [ref=e896]: ="tabpanel"
+              - text: id
+              - generic [ref=e897]: ="panel-2"
+              - text: aria-labelledby
+              - generic [ref=e898]: ="tab-2"
+              - text: hidden>
+            - text: Security content...
+            - generic [ref=e899]:
+              - generic [ref=e900]: </div
+              - text: ">"
+            - generic [ref=e901]:
+              - generic [ref=e902]: </div
+              - text: ">"
+            - text: <!-- Icon-only tabs need aria-label -->
+            - generic [ref=e903]:
+              - generic [ref=e904]: <button
+              - text: class
+              - generic [ref=e905]: ="Tabs-tab"
+              - text: role
+              - generic [ref=e906]: ="tab"
+              - text: aria-label
+              - generic [ref=e907]: ="Grid view"
+              - text: ">"
+            - generic [ref=e908]:
+              - generic [ref=e909]: <i
+              - text: class
+              - generic [ref=e910]: ="ph ph-squares-four"
+              - text: ">"
+            - generic [ref=e911]:
+              - generic [ref=e912]: </i
+              - text: ">"
+            - generic [ref=e913]:
+              - generic [ref=e914]: </button
+              - text: ">"
+            - text: <!-- Tabs with counts -->
+            - generic [ref=e915]:
+              - generic [ref=e916]: <button
+              - text: class
+              - generic [ref=e917]: ="Tabs-tab"
+              - text: role
+              - generic [ref=e918]: ="tab"
+              - text: ">"
+            - text: Notifications
+            - generic [ref=e919]:
+              - generic [ref=e920]: <span
+              - text: class
+              - generic [ref=e921]: ="Badge"
+              - text: aria-label
+              - generic [ref=e922]: ="5 unread"
+              - text: ">"
+            - text: "5"
+            - generic [ref=e923]:
+              - generic [ref=e924]: </span
+              - text: ">"
+            - generic [ref=e925]:
+              - generic [ref=e926]: </button
+              - text: ">"
+          - button "Copy code" [ref=e927] [cursor=pointer]:
+            - generic [ref=e928]: 
+        - heading "Focus Management" [level=3] [ref=e929]
+        - generic [ref=e930]:
+          - code [ref=e932]:
+            - text: <!-- Only the active tab should be in the tab order -->
+            - generic [ref=e933]:
+              - generic [ref=e934]: <div
+              - text: class
+              - generic [ref=e935]: ="Tabs-list"
+              - text: role
+              - generic [ref=e936]: ="tablist"
+              - text: ">"
+            - generic [ref=e937]:
+              - generic [ref=e938]: <button
+              - text: class
+              - generic [ref=e939]: ="Tabs-tab active"
+              - text: role
+              - generic [ref=e940]: ="tab"
+              - text: aria-selected
+              - generic [ref=e941]: ="true"
+              - text: tabindex
+              - generic [ref=e942]: ="0"
+              - text: ">"
+            - text: Active
+            - generic [ref=e943]:
+              - generic [ref=e944]: </button
+              - text: ">"
+            - generic [ref=e945]:
+              - generic [ref=e946]: <button
+              - text: class
+              - generic [ref=e947]: ="Tabs-tab"
+              - text: role
+              - generic [ref=e948]: ="tab"
+              - text: aria-selected
+              - generic [ref=e949]: ="false"
+              - text: tabindex
+              - generic [ref=e950]: ="-1"
+              - text: ">"
+            - text: Inactive
+            - generic [ref=e951]:
+              - generic [ref=e952]: </button
+              - text: ">"
+            - generic [ref=e953]:
+              - generic [ref=e954]: <button
+              - text: class
+              - generic [ref=e955]: ="Tabs-tab"
+              - text: role
+              - generic [ref=e956]: ="tab"
+              - text: aria-selected
+              - generic [ref=e957]: ="false"
+              - text: tabindex
+              - generic [ref=e958]: ="-1"
+              - text: ">"
+            - text: Inactive
+            - generic [ref=e959]:
+              - generic [ref=e960]: </button
+              - text: ">"
+            - generic [ref=e961]:
+              - generic [ref=e962]: </div
+              - text: ">"
+          - button "Copy code" [ref=e963] [cursor=pointer]:
+            - generic [ref=e964]: 
+        - separator [ref=e965]
+        - heading "Best Practices" [level=2] [ref=e966]
+        - heading "Do" [level=3] [ref=e967]
+        - list [ref=e968]:
+          - listitem [ref=e969]:
+            - text: ✓
+            - strong [ref=e970]: Use clear, concise labels
+            - text: — “Settings” not “Configuration Options”
+          - listitem [ref=e971]:
+            - text: ✓
+            - strong [ref=e972]: Order tabs logically
+            - text: — Most important or commonly used first
+          - listitem [ref=e973]:
+            - text: ✓
+            - strong [ref=e974]: Limit tab count
+            - text: — 2-7 tabs; more indicates need for different navigation
+          - listitem [ref=e975]:
+            - text: ✓
+            - strong [ref=e976]: Keep labels short
+            - text: — One or two words per tab
+          - listitem [ref=e977]:
+            - text: ✓
+            - strong [ref=e978]: Persist tab state
+            - text: — Remember selection on page refresh when appropriate
+          - listitem [ref=e979]:
+            - text: ✓
+            - strong [ref=e980]: Provide feedback
+            - text: — Clear visual indicator for active tab
+        - heading "Don’t" [level=3] [ref=e981]
+        - list [ref=e982]:
+          - listitem [ref=e983]:
+            - text: ✗
+            - strong [ref=e984]: Nest tabs within tabs
+            - text: — Creates confusing navigation hierarchy
+          - listitem [ref=e985]:
+            - text: ✗
+            - strong [ref=e986]: Use tabs for sequential steps
+            - text: — Use a stepper or wizard instead
+          - listitem [ref=e987]:
+            - text: ✗
+            - strong [ref=e988]: Hide critical content
+            - text: — Essential info should be visible by default
+          - listitem [ref=e989]:
+            - text: ✗
+            - strong [ref=e990]: Mix tab styles
+            - text: — Be consistent within a page or section
+          - listitem [ref=e991]:
+            - text: ✗
+            - strong [ref=e992]: Use tabs for unrelated content
+            - text: — Tabs should group related views
+          - listitem [ref=e993]:
+            - text: ✗
+            - strong [ref=e994]: Forget mobile
+            - text: — Consider if tabs make sense on smaller screens
+      - paragraph [ref=e996]: "Carbon v0.2 • Last built: 2/4/2026, 5:00:12 AM"
+    - complementary [ref=e997]:
+      - navigation [ref=e998]:
+        - heading "On this page" [level=3] [ref=e999]
+        - list [ref=e1000]:
+          - listitem [ref=e1001]:
+            - link "Installation" [ref=e1002] [cursor=pointer]:
+              - /url: "#installation"
+          - listitem [ref=e1003]:
+            - link "Usage" [ref=e1004] [cursor=pointer]:
+              - /url: "#usage"
+          - listitem [ref=e1005]:
+            - link "Variants" [ref=e1006] [cursor=pointer]:
+              - /url: "#variants"
+          - listitem [ref=e1007]:
+            - link "All Variants" [ref=e1008] [cursor=pointer]:
+              - /url: "#all-variants"
+          - listitem [ref=e1009]:
+            - link "Default" [ref=e1010] [cursor=pointer]:
+              - /url: "#default"
+          - listitem [ref=e1011]:
+            - link "Contained" [ref=e1012] [cursor=pointer]:
+              - /url: "#contained"
+          - listitem [ref=e1013]:
+            - link "Pills" [ref=e1014] [cursor=pointer]:
+              - /url: "#pills"
+          - listitem [ref=e1015]:
+            - link "With Icons" [ref=e1016] [cursor=pointer]:
+              - /url: "#with-icons"
+          - listitem [ref=e1017]:
+            - link "Icon with Text" [ref=e1018] [cursor=pointer]:
+              - /url: "#icon-with-text"
+          - listitem [ref=e1019]:
+            - link "Icon Only" [ref=e1020] [cursor=pointer]:
+              - /url: "#icon-only"
+          - listitem [ref=e1021]:
+            - link "States" [ref=e1022] [cursor=pointer]:
+              - /url: "#states"
+          - listitem [ref=e1023]:
+            - link "Disabled" [ref=e1024] [cursor=pointer]:
+              - /url: "#disabled"
+          - listitem [ref=e1025]:
+            - link "With Badge" [ref=e1026] [cursor=pointer]:
+              - /url: "#with-badge"
+          - listitem [ref=e1027]:
+            - link "Sizes" [ref=e1028] [cursor=pointer]:
+              - /url: "#sizes"
+          - listitem [ref=e1029]:
+            - link "Full Width" [ref=e1030] [cursor=pointer]:
+              - /url: "#full-width"
+          - listitem [ref=e1031]:
+            - link "Common Patterns" [ref=e1032] [cursor=pointer]:
+              - /url: "#common-patterns"
+          - listitem [ref=e1033]:
+            - link "Settings Page" [ref=e1034] [cursor=pointer]:
+              - /url: "#settings-page"
+          - listitem [ref=e1035]:
+            - link "Code Viewer" [ref=e1036] [cursor=pointer]:
+              - /url: "#code-viewer"
+          - listitem [ref=e1037]:
+            - link "Filter Bar" [ref=e1038] [cursor=pointer]:
+              - /url: "#filter-bar"
+          - listitem [ref=e1039]:
+            - link "Vertical Tabs" [ref=e1040] [cursor=pointer]:
+              - /url: "#vertical-tabs"
+          - listitem [ref=e1041]:
+            - link "JavaScript" [ref=e1042] [cursor=pointer]:
+              - /url: "#javascript"
+          - listitem [ref=e1043]:
+            - link "Customization" [ref=e1044] [cursor=pointer]:
+              - /url: "#customization"
+          - listitem [ref=e1045]:
+            - link "Creating Custom Variants" [ref=e1046] [cursor=pointer]:
+              - /url: "#creating-custom-variants"
+          - listitem [ref=e1047]:
+            - link "API Reference" [ref=e1048] [cursor=pointer]:
+              - /url: "#api-reference"
+          - listitem [ref=e1049]:
+            - link "Base Classes" [ref=e1050] [cursor=pointer]:
+              - /url: "#base-classes"
+          - listitem [ref=e1051]:
+            - link "Variant Classes" [ref=e1052] [cursor=pointer]:
+              - /url: "#variant-classes"
+          - listitem [ref=e1053]:
+            - link "Size Classes" [ref=e1054] [cursor=pointer]:
+              - /url: "#size-classes"
+          - listitem [ref=e1055]:
+            - link "Modifier Classes" [ref=e1056] [cursor=pointer]:
+              - /url: "#modifier-classes"
+          - listitem [ref=e1057]:
+            - link "ARIA Attributes" [ref=e1058] [cursor=pointer]:
+              - /url: "#aria-attributes"
+          - listitem [ref=e1059]:
+            - link "Accessibility" [ref=e1060] [cursor=pointer]:
+              - /url: "#accessibility"
+          - listitem [ref=e1061]:
+            - link "Keyboard Support" [ref=e1062] [cursor=pointer]:
+              - /url: "#keyboard-support"
+          - listitem [ref=e1063]:
+            - link "Screen Readers" [ref=e1064] [cursor=pointer]:
+              - /url: "#screen-readers"
+          - listitem [ref=e1065]:
+            - link "Focus Management" [ref=e1066] [cursor=pointer]:
+              - /url: "#focus-management"
+          - listitem [ref=e1067]:
+            - link "Best Practices" [ref=e1068] [cursor=pointer]:
+              - /url: "#best-practices"
+          - listitem [ref=e1069]:
+            - link "Do" [ref=e1070] [cursor=pointer]:
+              - /url: "#do"
+          - listitem [ref=e1071]:
+            - link "Don't" [ref=e1072] [cursor=pointer]:
+              - /url: "#don-t"
+```

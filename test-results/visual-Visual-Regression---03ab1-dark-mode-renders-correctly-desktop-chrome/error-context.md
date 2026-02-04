@@ -1,0 +1,679 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - text: 
+      - link " Carbon" [ref=e4] [cursor=pointer]:
+        - /url: ../index.html
+        - generic [ref=e5]: 
+        - generic [ref=e6]: Carbon
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - generic [ref=e9]: 
+        - textbox "Search" [ref=e10]:
+          - /placeholder: Search...
+      - button "Toggle theme" [ref=e11] [cursor=pointer]:
+        - generic [ref=e12]: 
+  - generic [ref=e13]:
+    - complementary [ref=e14]:
+      - navigation [ref=e15]:
+        - list [ref=e16]:
+          - listitem [ref=e17]:
+            - link "Introduction" [ref=e18] [cursor=pointer]:
+              - /url: ../index.html
+          - listitem [ref=e19]:
+            - generic [ref=e20]: Components
+            - list [ref=e21]:
+              - listitem [ref=e22]:
+                - link "Accordions" [ref=e23] [cursor=pointer]:
+                  - /url: ../components/accordions.html
+              - listitem [ref=e24]:
+                - link "Alerts" [ref=e25] [cursor=pointer]:
+                  - /url: ../components/alerts.html
+              - listitem [ref=e26]:
+                - link "Avatars" [ref=e27] [cursor=pointer]:
+                  - /url: ../components/avatars.html
+              - listitem [ref=e28]:
+                - link "Badges" [ref=e29] [cursor=pointer]:
+                  - /url: ../components/badges.html
+              - listitem [ref=e30]:
+                - link "Breadcrumbs" [ref=e31] [cursor=pointer]:
+                  - /url: ../components/breadcrumbs.html
+              - listitem [ref=e32]:
+                - link "Buttons" [ref=e33] [cursor=pointer]:
+                  - /url: ../components/buttons.html
+              - listitem [ref=e34]:
+                - link "Cards" [ref=e35] [cursor=pointer]:
+                  - /url: ../components/cards.html
+              - listitem [ref=e36]:
+                - link "Chips" [ref=e37] [cursor=pointer]:
+                  - /url: ../components/chips.html
+              - listitem [ref=e38]:
+                - link "Dividers" [ref=e39] [cursor=pointer]:
+                  - /url: ../components/dividers.html
+              - listitem [ref=e40]:
+                - link "Drawer" [ref=e41] [cursor=pointer]:
+                  - /url: ../components/drawer.html
+              - listitem [ref=e42]:
+                - link "Dropdowns" [ref=e43] [cursor=pointer]:
+                  - /url: ../components/dropdowns.html
+              - listitem [ref=e44]:
+                - link "File upload" [ref=e45] [cursor=pointer]:
+                  - /url: ../components/file-upload.html
+              - listitem [ref=e46]:
+                - link "Forms" [ref=e47] [cursor=pointer]:
+                  - /url: ../components/forms.html
+              - listitem [ref=e48]:
+                - link "Icons" [ref=e49] [cursor=pointer]:
+                  - /url: ../components/icons.html
+              - listitem [ref=e50]:
+                - link "Links" [ref=e51] [cursor=pointer]:
+                  - /url: ../components/links.html
+              - listitem [ref=e52]:
+                - link "Lists" [ref=e53] [cursor=pointer]:
+                  - /url: ../components/lists.html
+              - listitem [ref=e54]:
+                - link "Menus" [ref=e55] [cursor=pointer]:
+                  - /url: ../components/menus.html
+              - listitem [ref=e56]:
+                - link "Modals" [ref=e57] [cursor=pointer]:
+                  - /url: ../components/modals.html
+              - listitem [ref=e58]:
+                - link "Pagination" [ref=e59] [cursor=pointer]:
+                  - /url: ../components/pagination.html
+              - listitem [ref=e60]:
+                - link "Progress" [ref=e61] [cursor=pointer]:
+                  - /url: ../components/progress.html
+              - listitem [ref=e62]:
+                - link "Rating" [ref=e63] [cursor=pointer]:
+                  - /url: ../components/rating.html
+              - listitem [ref=e64]:
+                - link "Skeletons" [ref=e65] [cursor=pointer]:
+                  - /url: ../components/skeletons.html
+              - listitem [ref=e66]:
+                - link "Sliders" [ref=e67] [cursor=pointer]:
+                  - /url: ../components/sliders.html
+              - listitem [ref=e68]:
+                - link "Steppers" [ref=e69] [cursor=pointer]:
+                  - /url: ../components/steppers.html
+              - listitem [ref=e70]:
+                - link "Switches" [ref=e71] [cursor=pointer]:
+                  - /url: ../components/switches.html
+              - listitem [ref=e72]:
+                - link "Tables" [ref=e73] [cursor=pointer]:
+                  - /url: ../components/tables.html
+              - listitem [ref=e74]:
+                - link "Tabs" [ref=e75] [cursor=pointer]:
+                  - /url: ../components/tabs.html
+              - listitem [ref=e76]:
+                - link "Textarea" [ref=e77] [cursor=pointer]:
+                  - /url: ../components/textarea.html
+              - listitem [ref=e78]:
+                - link "Timeline" [ref=e79] [cursor=pointer]:
+                  - /url: ../components/timeline.html
+              - listitem [ref=e80]:
+                - link "Toasts" [ref=e81] [cursor=pointer]:
+                  - /url: ../components/toasts.html
+              - listitem [ref=e82]:
+                - link "Toolbar" [ref=e83] [cursor=pointer]:
+                  - /url: ../components/toolbar.html
+              - listitem [ref=e84]:
+                - link "Tooltips" [ref=e85] [cursor=pointer]:
+                  - /url: ../components/tooltips.html
+          - listitem [ref=e86]:
+            - generic [ref=e87]: Patterns
+            - list [ref=e88]:
+              - listitem [ref=e89]:
+                - link "Empty states" [ref=e90] [cursor=pointer]:
+                  - /url: ../patterns/empty-states.html
+              - listitem [ref=e91]:
+                - link "Layouts" [ref=e92] [cursor=pointer]:
+                  - /url: ../patterns/layouts.html
+          - listitem [ref=e93]:
+            - generic [ref=e94]: Tokens
+            - list [ref=e95]:
+              - listitem [ref=e96]:
+                - link "Colors" [ref=e97] [cursor=pointer]:
+                  - /url: ../tokens/colors.html
+              - listitem [ref=e98]:
+                - link "Spacing" [ref=e99] [cursor=pointer]:
+                  - /url: ../tokens/spacing.html
+              - listitem [ref=e100]:
+                - link "Typography" [ref=e101] [cursor=pointer]:
+                  - /url: ../tokens/typography.html
+    - main [ref=e102]:
+      - generic [ref=e103]:
+        - navigation "Breadcrumb" [ref=e104]:
+          - link "Carbon" [ref=e105] [cursor=pointer]:
+            - /url: ../index.html
+          - generic [ref=e106]: /
+          - generic [ref=e107]: Tokens
+          - generic [ref=e108]: /
+          - generic [ref=e109]: Colors
+        - heading "Colors" [level=1] [ref=e110]
+      - article [ref=e111]:
+        - heading "Colors" [level=1] [ref=e112]
+        - paragraph [ref=e113]:
+          - text: Carbon uses
+          - strong [ref=e114]: OKLCH
+          - text: — a perceptually uniform color space that produces consistent, harmonious colors across your entire palette.
+        - heading "Why OKLCH?" [level=2] [ref=e115]
+        - paragraph [ref=e116]: "Traditional color models (HSL, RGB) have a fundamental problem: two colors with the same “lightness” value can appear drastically different in brightness. OKLCH solves this."
+        - generic [ref=e117]:
+          - generic [ref=e118]:
+            - generic [ref=e119]:
+              - button " Preview" [ref=e120] [cursor=pointer]:
+                - generic [ref=e121]: 
+                - text: Preview
+              - button " HTML" [ref=e122] [cursor=pointer]:
+                - generic [ref=e123]: 
+                - text: HTML
+            - generic [ref=e124]:
+              - generic [ref=e125]:
+                - button "" [ref=e126] [cursor=pointer]:
+                  - generic [ref=e127]: 
+                - button "" [ref=e128] [cursor=pointer]:
+                  - generic [ref=e129]: 
+                - button "" [ref=e130] [cursor=pointer]:
+                  - generic [ref=e131]: 
+              - button "" [ref=e132] [cursor=pointer]:
+                - generic [ref=e133]: 
+              - button "" [ref=e134] [cursor=pointer]:
+                - generic [ref=e135]: 
+              - button "" [ref=e136] [cursor=pointer]:
+                - generic [ref=e137]: 
+          - generic [ref=e140]:
+            - generic [ref=e141]:
+              - generic [ref=e142]: "HSL: Same L (50%), different perceived brightness"
+              - generic [ref=e143]:
+                - generic [ref=e144]: Yellow
+                - generic [ref=e145]: Blue
+            - generic [ref=e146]:
+              - generic [ref=e147]: "OKLCH: Same L (70%), consistent perceived brightness"
+              - generic [ref=e148]:
+                - generic [ref=e149]: Yellow
+                - generic [ref=e150]: Blue
+          - text: 
+        - heading "OKLCH Values" [level=3] [ref=e151]
+        - generic [ref=e152]:
+          - code [ref=e154]: oklch(L C H) /* L = Lightness (0-100%) — perceptual brightness */ /* C = Chroma (0-0.4) — color intensity/saturation */ /* H = Hue (0-360) — color angle on the wheel */
+          - button "Copy code" [ref=e155] [cursor=pointer]:
+            - generic [ref=e156]: 
+        - table [ref=e157]:
+          - rowgroup [ref=e158]:
+            - row "Component Range Description" [ref=e159]:
+              - columnheader "Component" [ref=e160]
+              - columnheader "Range" [ref=e161]
+              - columnheader "Description" [ref=e162]
+          - rowgroup [ref=e163]:
+            - row "L (Lightness) 0% – 100% 0% = black, 100% = white" [ref=e164]:
+              - cell "L (Lightness)" [ref=e165]:
+                - strong [ref=e166]: L
+                - text: (Lightness)
+              - cell "0% – 100%" [ref=e167]
+              - cell "0% = black, 100% = white" [ref=e168]
+            - row "C (Chroma) 0 – ~0.4 0 = gray, higher = more vivid" [ref=e169]:
+              - cell "C (Chroma)" [ref=e170]:
+                - strong [ref=e171]: C
+                - text: (Chroma)
+              - cell "0 – ~0.4" [ref=e172]
+              - cell "0 = gray, higher = more vivid" [ref=e173]
+            - row "H (Hue) 0 – 360 Color wheel angle" [ref=e174]:
+              - cell "H (Hue)" [ref=e175]:
+                - strong [ref=e176]: H
+                - text: (Hue)
+              - cell "0 – 360" [ref=e177]
+              - cell "Color wheel angle" [ref=e178]
+        - separator [ref=e179]
+        - heading "Core Palette" [level=2] [ref=e180]
+        - heading "Backgrounds" [level=3] [ref=e181]
+        - paragraph [ref=e182]: Surface colors for pages and components.
+        - generic [ref=e183]:
+          - generic [ref=e184]:
+            - generic [ref=e185]:
+              - button " Preview" [ref=e186] [cursor=pointer]:
+                - generic [ref=e187]: 
+                - text: Preview
+              - button " HTML" [ref=e188] [cursor=pointer]:
+                - generic [ref=e189]: 
+                - text: HTML
+            - generic [ref=e190]:
+              - generic [ref=e191]:
+                - button "" [ref=e192] [cursor=pointer]:
+                  - generic [ref=e193]: 
+                - button "" [ref=e194] [cursor=pointer]:
+                  - generic [ref=e195]: 
+                - button "" [ref=e196] [cursor=pointer]:
+                  - generic [ref=e197]: 
+              - button "" [ref=e198] [cursor=pointer]:
+                - generic [ref=e199]: 
+              - button "" [ref=e200] [cursor=pointer]:
+                - generic [ref=e201]: 
+              - button "" [ref=e202] [cursor=pointer]:
+                - generic [ref=e203]: 
+          - generic [ref=e207]:
+            - generic [ref=e208]:
+              - strong [ref=e209]: Primary
+              - code [ref=e210]: "--bg-primary"
+            - generic [ref=e211]:
+              - strong [ref=e212]: Secondary
+              - code [ref=e213]: "--bg-secondary"
+          - text: 
+        - generic [ref=e214]:
+          - code [ref=e216]: ":root { --bg-primary: oklch(100% 0 0); /* Pure white */ --bg-secondary: oklch(98% 0 0); /* Subtle off-white */ } [data-theme=\"dark\"] { --bg-primary: oklch(15% 0 0); /* Near black */ --bg-secondary: oklch(18% 0 0); /* Slightly lighter */ }"
+          - button "Copy code" [ref=e217] [cursor=pointer]:
+            - generic [ref=e218]: 
+        - heading "Text" [level=3] [ref=e219]
+        - paragraph [ref=e220]: Typography colors with clear hierarchy.
+        - generic [ref=e221]:
+          - generic [ref=e222]:
+            - generic [ref=e223]:
+              - button " Preview" [ref=e224] [cursor=pointer]:
+                - generic [ref=e225]: 
+                - text: Preview
+              - button " HTML" [ref=e226] [cursor=pointer]:
+                - generic [ref=e227]: 
+                - text: HTML
+            - generic [ref=e228]:
+              - generic [ref=e229]:
+                - button "" [ref=e230] [cursor=pointer]:
+                  - generic [ref=e231]: 
+                - button "" [ref=e232] [cursor=pointer]:
+                  - generic [ref=e233]: 
+                - button "" [ref=e234] [cursor=pointer]:
+                  - generic [ref=e235]: 
+              - button "" [ref=e236] [cursor=pointer]:
+                - generic [ref=e237]: 
+              - button "" [ref=e238] [cursor=pointer]:
+                - generic [ref=e239]: 
+              - button "" [ref=e240] [cursor=pointer]:
+                - generic [ref=e241]: 
+          - generic [ref=e244]:
+            - generic [ref=e245]:
+              - text: Primary Text
+              - code [ref=e246]: "--text-primary"
+            - generic [ref=e247]:
+              - text: Secondary Text — used for descriptions and supporting content
+              - code [ref=e248]: "--text-secondary"
+          - text: 
+        - generic [ref=e249]:
+          - code [ref=e251]: ":root { --text-primary: oklch(20% 0 0); /* Near black */ --text-secondary: oklch(45% 0 0); /* Medium gray */ } [data-theme=\"dark\"] { --text-primary: oklch(95% 0 0); /* Near white */ --text-secondary: oklch(75% 0 0); /* Light gray */ }"
+          - button "Copy code" [ref=e252] [cursor=pointer]:
+            - generic [ref=e253]: 
+        - heading "Borders" [level=3] [ref=e254]
+        - paragraph [ref=e255]: Subtle and strong borders for structure and emphasis.
+        - generic [ref=e256]:
+          - generic [ref=e257]:
+            - generic [ref=e258]:
+              - button " Preview" [ref=e259] [cursor=pointer]:
+                - generic [ref=e260]: 
+                - text: Preview
+              - button " HTML" [ref=e261] [cursor=pointer]:
+                - generic [ref=e262]: 
+                - text: HTML
+            - generic [ref=e263]:
+              - generic [ref=e264]:
+                - button "" [ref=e265] [cursor=pointer]:
+                  - generic [ref=e266]: 
+                - button "" [ref=e267] [cursor=pointer]:
+                  - generic [ref=e268]: 
+                - button "" [ref=e269] [cursor=pointer]:
+                  - generic [ref=e270]: 
+              - button "" [ref=e271] [cursor=pointer]:
+                - generic [ref=e272]: 
+              - button "" [ref=e273] [cursor=pointer]:
+                - generic [ref=e274]: 
+              - button "" [ref=e275] [cursor=pointer]:
+                - generic [ref=e276]: 
+          - generic [ref=e279]:
+            - generic [ref=e280]:
+              - strong [ref=e281]: Subtle
+              - code [ref=e282]: "--border-subtle"
+            - generic [ref=e283]:
+              - strong [ref=e284]: Strong
+              - code [ref=e285]: "--border-strong"
+          - text: 
+        - generic [ref=e286]:
+          - code [ref=e288]: ":root { --border-subtle: oklch(92% 0 0); /* Light dividers */ --border-strong: oklch(85% 0 0); /* Input borders, emphasis */ } [data-theme=\"dark\"] { --border-subtle: oklch(25% 0 0); --border-strong: oklch(35% 0 0); }"
+          - button "Copy code" [ref=e289] [cursor=pointer]:
+            - generic [ref=e290]: 
+        - heading "Accent" [level=3] [ref=e291]
+        - paragraph [ref=e292]: The primary brand color — used sparingly for actions, links, and focus states.
+        - generic [ref=e293]:
+          - generic [ref=e294]:
+            - generic [ref=e295]:
+              - button " Preview" [ref=e296] [cursor=pointer]:
+                - generic [ref=e297]: 
+                - text: Preview
+              - button " HTML" [ref=e298] [cursor=pointer]:
+                - generic [ref=e299]: 
+                - text: HTML
+            - generic [ref=e300]:
+              - generic [ref=e301]:
+                - button "" [ref=e302] [cursor=pointer]:
+                  - generic [ref=e303]: 
+                - button "" [ref=e304] [cursor=pointer]:
+                  - generic [ref=e305]: 
+                - button "" [ref=e306] [cursor=pointer]:
+                  - generic [ref=e307]: 
+              - button "" [ref=e308] [cursor=pointer]:
+                - generic [ref=e309]: 
+              - button "" [ref=e310] [cursor=pointer]:
+                - generic [ref=e311]: 
+              - button "" [ref=e312] [cursor=pointer]:
+                - generic [ref=e313]: 
+          - generic [ref=e316]:
+            - generic [ref=e317]: Accent Primary
+            - link "Accent as link" [ref=e318] [cursor=pointer]:
+              - /url: "#"
+          - text: 
+        - generic [ref=e319]:
+          - code [ref=e321]: ":root { --accent-primary: oklch(60% 0.15 250); /* Refined blue */ } [data-theme=\"dark\"] { --accent-primary: oklch(70% 0.15 250); /* Brighter for dark bg */ }"
+          - button "Copy code" [ref=e322] [cursor=pointer]:
+            - generic [ref=e323]: 
+        - separator [ref=e324]
+        - heading "Semantic Colors" [level=2] [ref=e325]
+        - paragraph [ref=e326]: Feedback colors communicate status and meaning. These follow OKLCH principles for consistent brightness.
+        - generic [ref=e327]:
+          - generic [ref=e328]:
+            - generic [ref=e329]:
+              - button " Preview" [ref=e330] [cursor=pointer]:
+                - generic [ref=e331]: 
+                - text: Preview
+              - button " HTML" [ref=e332] [cursor=pointer]:
+                - generic [ref=e333]: 
+                - text: HTML
+            - generic [ref=e334]:
+              - generic [ref=e335]:
+                - button "" [ref=e336] [cursor=pointer]:
+                  - generic [ref=e337]: 
+                - button "" [ref=e338] [cursor=pointer]:
+                  - generic [ref=e339]: 
+                - button "" [ref=e340] [cursor=pointer]:
+                  - generic [ref=e341]: 
+              - button "" [ref=e342] [cursor=pointer]:
+                - generic [ref=e343]: 
+              - button "" [ref=e344] [cursor=pointer]:
+                - generic [ref=e345]: 
+              - button "" [ref=e346] [cursor=pointer]:
+                - generic [ref=e347]: 
+          - generic [ref=e350]:
+            - generic [ref=e351]:
+              - strong [ref=e352]: Success
+              - generic [ref=e353]: oklch(55% 0.15 150)
+            - generic [ref=e354]:
+              - strong [ref=e355]: Warning
+              - generic [ref=e356]: oklch(70% 0.15 80)
+            - generic [ref=e357]:
+              - strong [ref=e358]: Error
+              - generic [ref=e359]: oklch(55% 0.2 25)
+            - generic [ref=e360]:
+              - strong [ref=e361]: Info
+              - generic [ref=e362]: oklch(60% 0.15 250)
+          - text: 
+        - heading "Usage in Components" [level=3] [ref=e363]
+        - paragraph [ref=e364]: "Semantic colors are used in Alerts, Badges, Toasts, and Progress indicators:"
+        - generic [ref=e365]:
+          - code [ref=e367]: "/* Solid backgrounds */ .Badge--success { background: oklch(55% 0.15 150); } .Badge--warning { background: oklch(70% 0.15 80); } .Badge--error { background: oklch(55% 0.2 25); } /* Subtle backgrounds (10% opacity) */ .Alert--success { background: oklch(55% 0.15 150 / 0.1); } .Alert--warning { background: oklch(70% 0.15 80 / 0.1); } .Alert--error { background: oklch(55% 0.2 25 / 0.1); } /* Text colors (same hue, adjusted lightness) */ .text-success { color: oklch(45% 0.15 150); } .text-warning { color: oklch(55% 0.15 80); } .text-error { color: oklch(50% 0.2 25); }"
+          - button "Copy code" [ref=e368] [cursor=pointer]:
+            - generic [ref=e369]: 
+        - separator [ref=e370]
+        - heading "Dark Mode" [level=2] [ref=e371]
+        - paragraph [ref=e372]:
+          - text: Carbon supports automatic dark mode via the
+          - code [ref=e373]: data-theme="dark"
+          - text: attribute on the root element.
+        - generic [ref=e374]:
+          - generic [ref=e375]:
+            - generic [ref=e376]:
+              - button " Preview" [ref=e377] [cursor=pointer]:
+                - generic [ref=e378]: 
+                - text: Preview
+              - button " HTML" [ref=e379] [cursor=pointer]:
+                - generic [ref=e380]: 
+                - text: HTML
+            - generic [ref=e381]:
+              - generic [ref=e382]:
+                - button "" [ref=e383] [cursor=pointer]:
+                  - generic [ref=e384]: 
+                - button "" [ref=e385] [cursor=pointer]:
+                  - generic [ref=e386]: 
+                - button "" [ref=e387] [cursor=pointer]:
+                  - generic [ref=e388]: 
+              - button "" [ref=e389] [cursor=pointer]:
+                - generic [ref=e390]: 
+              - button "" [ref=e391] [cursor=pointer]:
+                - generic [ref=e392]: 
+              - button "" [ref=e393] [cursor=pointer]:
+                - generic [ref=e394]: 
+          - generic [ref=e397]:
+            - button " Light" [ref=e398] [cursor=pointer]:
+              - generic [ref=e399]: 
+              - text: Light
+            - button " Dark" [ref=e400] [cursor=pointer]:
+              - generic [ref=e401]: 
+              - text: Dark
+          - text: 
+        - heading "Implementation" [level=3] [ref=e402]
+        - generic [ref=e403]:
+          - code [ref=e405]:
+            - text: <!-- Set theme on document root -->
+            - generic [ref=e406]:
+              - generic [ref=e407]: <html
+              - text: data-theme
+              - generic [ref=e408]: ="dark"
+              - text: ">"
+          - button "Copy code" [ref=e409] [cursor=pointer]:
+            - generic [ref=e410]: 
+        - generic [ref=e411]:
+          - code [ref=e413]: "// Toggle theme function toggleTheme() { const current = document.documentElement.getAttribute('data-theme'); const next = current === 'dark' ? 'light' : 'dark'; document.documentElement.setAttribute('data-theme', next); localStorage.setItem('theme', next); } // Respect system preference const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches; const saved = localStorage.getItem('theme'); document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));"
+          - button "Copy code" [ref=e414] [cursor=pointer]:
+            - generic [ref=e415]: 
+        - heading "All Tokens by Theme" [level=3] [ref=e416]
+        - table [ref=e417]:
+          - rowgroup [ref=e418]:
+            - row "Token Light Dark" [ref=e419]:
+              - columnheader "Token" [ref=e420]
+              - columnheader "Light" [ref=e421]
+              - columnheader "Dark" [ref=e422]
+          - rowgroup [ref=e423]:
+            - row "--bg-primary oklch(100% 0 0) oklch(15% 0 0)" [ref=e424]:
+              - cell "--bg-primary" [ref=e425]:
+                - code [ref=e426]: "--bg-primary"
+              - cell "oklch(100% 0 0)" [ref=e427]
+              - cell "oklch(15% 0 0)" [ref=e428]
+            - row "--bg-secondary oklch(98% 0 0) oklch(18% 0 0)" [ref=e429]:
+              - cell "--bg-secondary" [ref=e430]:
+                - code [ref=e431]: "--bg-secondary"
+              - cell "oklch(98% 0 0)" [ref=e432]
+              - cell "oklch(18% 0 0)" [ref=e433]
+            - row "--text-primary oklch(20% 0 0) oklch(95% 0 0)" [ref=e434]:
+              - cell "--text-primary" [ref=e435]:
+                - code [ref=e436]: "--text-primary"
+              - cell "oklch(20% 0 0)" [ref=e437]
+              - cell "oklch(95% 0 0)" [ref=e438]
+            - row "--text-secondary oklch(45% 0 0) oklch(75% 0 0)" [ref=e439]:
+              - cell "--text-secondary" [ref=e440]:
+                - code [ref=e441]: "--text-secondary"
+              - cell "oklch(45% 0 0)" [ref=e442]
+              - cell "oklch(75% 0 0)" [ref=e443]
+            - row "--border-subtle oklch(92% 0 0) oklch(25% 0 0)" [ref=e444]:
+              - cell "--border-subtle" [ref=e445]:
+                - code [ref=e446]: "--border-subtle"
+              - cell "oklch(92% 0 0)" [ref=e447]
+              - cell "oklch(25% 0 0)" [ref=e448]
+            - row "--border-strong oklch(85% 0 0) oklch(35% 0 0)" [ref=e449]:
+              - cell "--border-strong" [ref=e450]:
+                - code [ref=e451]: "--border-strong"
+              - cell "oklch(85% 0 0)" [ref=e452]
+              - cell "oklch(35% 0 0)" [ref=e453]
+            - row "--accent-primary oklch(60% 0.15 250) oklch(70% 0.15 250)" [ref=e454]:
+              - cell "--accent-primary" [ref=e455]:
+                - code [ref=e456]: "--accent-primary"
+              - cell "oklch(60% 0.15 250)" [ref=e457]
+              - cell "oklch(70% 0.15 250)" [ref=e458]
+        - separator [ref=e459]
+        - heading "Accessibility" [level=2] [ref=e460]
+        - heading "Contrast Requirements" [level=3] [ref=e461]
+        - paragraph [ref=e462]: "WCAG 2.1 requires minimum contrast ratios:"
+        - list [ref=e463]:
+          - listitem [ref=e464]:
+            - strong [ref=e465]: 4.5:1
+            - text: for normal text (AA)
+          - listitem [ref=e466]:
+            - strong [ref=e467]: 3:1
+            - text: for large text and UI components (AA)
+          - listitem [ref=e468]:
+            - strong [ref=e469]: 7:1
+            - text: for normal text (AAA)
+        - generic [ref=e470]:
+          - generic [ref=e471]:
+            - generic [ref=e472]:
+              - button " Preview" [ref=e473] [cursor=pointer]:
+                - generic [ref=e474]: 
+                - text: Preview
+              - button " HTML" [ref=e475] [cursor=pointer]:
+                - generic [ref=e476]: 
+                - text: HTML
+            - generic [ref=e477]:
+              - generic [ref=e478]:
+                - button "" [ref=e479] [cursor=pointer]:
+                  - generic [ref=e480]: 
+                - button "" [ref=e481] [cursor=pointer]:
+                  - generic [ref=e482]: 
+                - button "" [ref=e483] [cursor=pointer]:
+                  - generic [ref=e484]: 
+              - button "" [ref=e485] [cursor=pointer]:
+                - generic [ref=e486]: 
+              - button "" [ref=e487] [cursor=pointer]:
+                - generic [ref=e488]: 
+              - button "" [ref=e489] [cursor=pointer]:
+                - generic [ref=e490]: 
+          - generic [ref=e493]:
+            - generic [ref=e494]:
+              - generic [ref=e495]: Primary on Primary BG
+              - generic [ref=e496]: ✓ 15.8:1
+            - generic [ref=e497]:
+              - generic [ref=e498]: Secondary on Primary BG
+              - generic [ref=e499]: ✓ 5.9:1
+            - generic [ref=e500]:
+              - generic [ref=e501]: White on Accent
+              - generic [ref=e502]: ✓ 4.6:1
+          - text: 
+        - heading "Tips for Accessible Color Usage" [level=3] [ref=e503]
+        - list [ref=e504]:
+          - listitem [ref=e505]:
+            - strong [ref=e506]: Never rely on color alone
+            - text: — Use icons, patterns, or text labels alongside color
+          - listitem [ref=e507]:
+            - strong [ref=e508]: Test with grayscale
+            - text: — Your hierarchy should work without color
+          - listitem [ref=e509]:
+            - strong [ref=e510]: Check both themes
+            - text: — Verify contrast in light AND dark modes
+          - listitem [ref=e511]:
+            - strong [ref=e512]: Use semantic colors consistently
+            - text: — Red = error, green = success, etc.
+        - separator [ref=e513]
+        - heading "Extending the Palette" [level=2] [ref=e514]
+        - paragraph [ref=e515]: "To add custom colors while maintaining OKLCH harmony:"
+        - generic [ref=e516]:
+          - code [ref=e518]: ":root { /* Start with your desired hue */ --brand-hue: 280; /* Purple */ /* Build a consistent scale */ --brand-50: oklch(97% 0.02 var(--brand-hue)); --brand-100: oklch(94% 0.04 var(--brand-hue)); --brand-200: oklch(88% 0.08 var(--brand-hue)); --brand-300: oklch(80% 0.12 var(--brand-hue)); --brand-400: oklch(70% 0.14 var(--brand-hue)); --brand-500: oklch(60% 0.15 var(--brand-hue)); /* Base */ --brand-600: oklch(50% 0.14 var(--brand-hue)); --brand-700: oklch(40% 0.12 var(--brand-hue)); --brand-800: oklch(30% 0.08 var(--brand-hue)); --brand-900: oklch(20% 0.04 var(--brand-hue)); }"
+          - button "Copy code" [ref=e519] [cursor=pointer]:
+            - generic [ref=e520]: 
+        - heading "Hue Reference" [level=3] [ref=e521]
+        - table [ref=e522]:
+          - rowgroup [ref=e523]:
+            - row "Hue Color" [ref=e524]:
+              - columnheader "Hue" [ref=e525]
+              - columnheader "Color" [ref=e526]
+          - rowgroup [ref=e527]:
+            - row "0-30 Red / Orange" [ref=e528]:
+              - cell "0-30" [ref=e529]
+              - cell "Red / Orange" [ref=e530]
+            - row "30-90 Orange / Yellow" [ref=e531]:
+              - cell "30-90" [ref=e532]
+              - cell "Orange / Yellow" [ref=e533]
+            - row "90-150 Yellow / Green" [ref=e534]:
+              - cell "90-150" [ref=e535]
+              - cell "Yellow / Green" [ref=e536]
+            - row "150-200 Green / Cyan" [ref=e537]:
+              - cell "150-200" [ref=e538]
+              - cell "Green / Cyan" [ref=e539]
+            - row "200-270 Cyan / Blue" [ref=e540]:
+              - cell "200-270" [ref=e541]
+              - cell "Cyan / Blue" [ref=e542]
+            - row "270-330 Blue / Purple" [ref=e543]:
+              - cell "270-330" [ref=e544]
+              - cell "Blue / Purple" [ref=e545]
+            - row "330-360 Purple / Red" [ref=e546]:
+              - cell "330-360" [ref=e547]
+              - cell "Purple / Red" [ref=e548]
+        - separator [ref=e549]
+        - heading "Quick Reference" [level=2] [ref=e550]
+        - generic [ref=e551]:
+          - code [ref=e553]: /* Backgrounds */ var(--bg-primary) /* Main surface */ var(--bg-secondary) /* Elevated/recessed surfaces */ /* Text */ var(--text-primary) /* Headings, body text */ var(--text-secondary) /* Captions, placeholders */ /* Borders */ var(--border-subtle) /* Dividers, card edges */ var(--border-strong) /* Input borders, emphasis */ /* Accent */ var(--accent-primary) /* Links, buttons, focus */ /* Semantic (inline values) */ oklch(55% 0.15 150) /* Success - green */ oklch(70% 0.15 80) /* Warning - amber */ oklch(55% 0.2 25) /* Error - red */ oklch(60% 0.15 250) /* Info - blue */
+          - button "Copy code" [ref=e554] [cursor=pointer]:
+            - generic [ref=e555]: 
+      - paragraph [ref=e557]: "Carbon v0.2 • Last built: 2/4/2026, 5:00:18 AM"
+    - complementary [ref=e558]:
+      - navigation [ref=e559]:
+        - heading "On this page" [level=3] [ref=e560]
+        - list [ref=e561]:
+          - listitem [ref=e562]:
+            - link "Why OKLCH?" [ref=e563] [cursor=pointer]:
+              - /url: "#why-oklch-"
+          - listitem [ref=e564]:
+            - link "OKLCH Values" [ref=e565] [cursor=pointer]:
+              - /url: "#oklch-values"
+          - listitem [ref=e566]:
+            - link "Core Palette" [ref=e567] [cursor=pointer]:
+              - /url: "#core-palette"
+          - listitem [ref=e568]:
+            - link "Backgrounds" [ref=e569] [cursor=pointer]:
+              - /url: "#backgrounds"
+          - listitem [ref=e570]:
+            - link "Text" [ref=e571] [cursor=pointer]:
+              - /url: "#text"
+          - listitem [ref=e572]:
+            - link "Borders" [ref=e573] [cursor=pointer]:
+              - /url: "#borders"
+          - listitem [ref=e574]:
+            - link "Accent" [ref=e575] [cursor=pointer]:
+              - /url: "#accent"
+          - listitem [ref=e576]:
+            - link "Semantic Colors" [ref=e577] [cursor=pointer]:
+              - /url: "#semantic-colors"
+          - listitem [ref=e578]:
+            - link "Usage in Components" [ref=e579] [cursor=pointer]:
+              - /url: "#usage-in-components"
+          - listitem [ref=e580]:
+            - link "Dark Mode" [ref=e581] [cursor=pointer]:
+              - /url: "#dark-mode"
+          - listitem [ref=e582]:
+            - link "Implementation" [ref=e583] [cursor=pointer]:
+              - /url: "#implementation"
+          - listitem [ref=e584]:
+            - link "All Tokens by Theme" [ref=e585] [cursor=pointer]:
+              - /url: "#all-tokens-by-theme"
+          - listitem [ref=e586]:
+            - link "Accessibility" [ref=e587] [cursor=pointer]:
+              - /url: "#accessibility"
+          - listitem [ref=e588]:
+            - link "Contrast Requirements" [ref=e589] [cursor=pointer]:
+              - /url: "#contrast-requirements"
+          - listitem [ref=e590]:
+            - link "Tips for Accessible Color Usage" [ref=e591] [cursor=pointer]:
+              - /url: "#tips-for-accessible-color-usage"
+          - listitem [ref=e592]:
+            - link "Extending the Palette" [ref=e593] [cursor=pointer]:
+              - /url: "#extending-the-palette"
+          - listitem [ref=e594]:
+            - link "Hue Reference" [ref=e595] [cursor=pointer]:
+              - /url: "#hue-reference"
+          - listitem [ref=e596]:
+            - link "Quick Reference" [ref=e597] [cursor=pointer]:
+              - /url: "#quick-reference"
+```

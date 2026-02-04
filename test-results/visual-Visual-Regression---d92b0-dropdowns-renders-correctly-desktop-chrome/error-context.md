@@ -1,0 +1,1047 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - text: 
+      - link " Carbon" [ref=e4] [cursor=pointer]:
+        - /url: ../index.html
+        - generic [ref=e5]: 
+        - generic [ref=e6]: Carbon
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - generic [ref=e9]: 
+        - textbox "Search" [ref=e10]:
+          - /placeholder: Search...
+      - button "Toggle theme" [ref=e11] [cursor=pointer]:
+        - generic [ref=e12]: 
+  - generic [ref=e13]:
+    - complementary [ref=e14]:
+      - navigation [ref=e15]:
+        - list [ref=e16]:
+          - listitem [ref=e17]:
+            - link "Introduction" [ref=e18] [cursor=pointer]:
+              - /url: ../index.html
+          - listitem [ref=e19]:
+            - generic [ref=e20]: Components
+            - list [ref=e21]:
+              - listitem [ref=e22]:
+                - link "Accordions" [ref=e23] [cursor=pointer]:
+                  - /url: ../components/accordions.html
+              - listitem [ref=e24]:
+                - link "Alerts" [ref=e25] [cursor=pointer]:
+                  - /url: ../components/alerts.html
+              - listitem [ref=e26]:
+                - link "Avatars" [ref=e27] [cursor=pointer]:
+                  - /url: ../components/avatars.html
+              - listitem [ref=e28]:
+                - link "Badges" [ref=e29] [cursor=pointer]:
+                  - /url: ../components/badges.html
+              - listitem [ref=e30]:
+                - link "Breadcrumbs" [ref=e31] [cursor=pointer]:
+                  - /url: ../components/breadcrumbs.html
+              - listitem [ref=e32]:
+                - link "Buttons" [ref=e33] [cursor=pointer]:
+                  - /url: ../components/buttons.html
+              - listitem [ref=e34]:
+                - link "Cards" [ref=e35] [cursor=pointer]:
+                  - /url: ../components/cards.html
+              - listitem [ref=e36]:
+                - link "Chips" [ref=e37] [cursor=pointer]:
+                  - /url: ../components/chips.html
+              - listitem [ref=e38]:
+                - link "Dividers" [ref=e39] [cursor=pointer]:
+                  - /url: ../components/dividers.html
+              - listitem [ref=e40]:
+                - link "Drawer" [ref=e41] [cursor=pointer]:
+                  - /url: ../components/drawer.html
+              - listitem [ref=e42]:
+                - link "Dropdowns" [ref=e43] [cursor=pointer]:
+                  - /url: ../components/dropdowns.html
+              - listitem [ref=e44]:
+                - link "File upload" [ref=e45] [cursor=pointer]:
+                  - /url: ../components/file-upload.html
+              - listitem [ref=e46]:
+                - link "Forms" [ref=e47] [cursor=pointer]:
+                  - /url: ../components/forms.html
+              - listitem [ref=e48]:
+                - link "Icons" [ref=e49] [cursor=pointer]:
+                  - /url: ../components/icons.html
+              - listitem [ref=e50]:
+                - link "Links" [ref=e51] [cursor=pointer]:
+                  - /url: ../components/links.html
+              - listitem [ref=e52]:
+                - link "Lists" [ref=e53] [cursor=pointer]:
+                  - /url: ../components/lists.html
+              - listitem [ref=e54]:
+                - link "Menus" [ref=e55] [cursor=pointer]:
+                  - /url: ../components/menus.html
+              - listitem [ref=e56]:
+                - link "Modals" [ref=e57] [cursor=pointer]:
+                  - /url: ../components/modals.html
+              - listitem [ref=e58]:
+                - link "Pagination" [ref=e59] [cursor=pointer]:
+                  - /url: ../components/pagination.html
+              - listitem [ref=e60]:
+                - link "Progress" [ref=e61] [cursor=pointer]:
+                  - /url: ../components/progress.html
+              - listitem [ref=e62]:
+                - link "Rating" [ref=e63] [cursor=pointer]:
+                  - /url: ../components/rating.html
+              - listitem [ref=e64]:
+                - link "Skeletons" [ref=e65] [cursor=pointer]:
+                  - /url: ../components/skeletons.html
+              - listitem [ref=e66]:
+                - link "Sliders" [ref=e67] [cursor=pointer]:
+                  - /url: ../components/sliders.html
+              - listitem [ref=e68]:
+                - link "Steppers" [ref=e69] [cursor=pointer]:
+                  - /url: ../components/steppers.html
+              - listitem [ref=e70]:
+                - link "Switches" [ref=e71] [cursor=pointer]:
+                  - /url: ../components/switches.html
+              - listitem [ref=e72]:
+                - link "Tables" [ref=e73] [cursor=pointer]:
+                  - /url: ../components/tables.html
+              - listitem [ref=e74]:
+                - link "Tabs" [ref=e75] [cursor=pointer]:
+                  - /url: ../components/tabs.html
+              - listitem [ref=e76]:
+                - link "Textarea" [ref=e77] [cursor=pointer]:
+                  - /url: ../components/textarea.html
+              - listitem [ref=e78]:
+                - link "Timeline" [ref=e79] [cursor=pointer]:
+                  - /url: ../components/timeline.html
+              - listitem [ref=e80]:
+                - link "Toasts" [ref=e81] [cursor=pointer]:
+                  - /url: ../components/toasts.html
+              - listitem [ref=e82]:
+                - link "Toolbar" [ref=e83] [cursor=pointer]:
+                  - /url: ../components/toolbar.html
+              - listitem [ref=e84]:
+                - link "Tooltips" [ref=e85] [cursor=pointer]:
+                  - /url: ../components/tooltips.html
+          - listitem [ref=e86]:
+            - generic [ref=e87]: Patterns
+            - list [ref=e88]:
+              - listitem [ref=e89]:
+                - link "Empty states" [ref=e90] [cursor=pointer]:
+                  - /url: ../patterns/empty-states.html
+              - listitem [ref=e91]:
+                - link "Layouts" [ref=e92] [cursor=pointer]:
+                  - /url: ../patterns/layouts.html
+          - listitem [ref=e93]:
+            - generic [ref=e94]: Tokens
+            - list [ref=e95]:
+              - listitem [ref=e96]:
+                - link "Colors" [ref=e97] [cursor=pointer]:
+                  - /url: ../tokens/colors.html
+              - listitem [ref=e98]:
+                - link "Spacing" [ref=e99] [cursor=pointer]:
+                  - /url: ../tokens/spacing.html
+              - listitem [ref=e100]:
+                - link "Typography" [ref=e101] [cursor=pointer]:
+                  - /url: ../tokens/typography.html
+    - main [ref=e102]:
+      - generic [ref=e103]:
+        - navigation "Breadcrumb" [ref=e104]:
+          - link "Carbon" [ref=e105] [cursor=pointer]:
+            - /url: ../index.html
+          - generic [ref=e106]: /
+          - generic [ref=e107]: Components
+          - generic [ref=e108]: /
+          - generic [ref=e109]: Dropdowns
+        - heading "Dropdowns" [level=1] [ref=e110]
+      - article [ref=e111]:
+        - heading "Dropdowns" [level=1] [ref=e112]
+        - paragraph [ref=e113]: Dropdowns display a list of actions or options when triggered. They help declutter interfaces by hiding secondary actions until needed.
+        - separator [ref=e114]
+        - heading "Installation" [level=2] [ref=e115]
+        - paragraph [ref=e116]:
+          - text: Copy the dropdown CSS from
+          - code [ref=e117]: styles/docs.css
+          - text: "or include the Carbon stylesheet:"
+        - generic [ref=e118]:
+          - code [ref=e120]:
+            - generic [ref=e121]:
+              - generic [ref=e122]: <link
+              - text: rel
+              - generic [ref=e123]: ="stylesheet"
+              - text: href
+              - generic [ref=e124]: ="carbon.min.css"
+              - text: ">"
+          - button "Copy code" [ref=e125] [cursor=pointer]:
+            - generic [ref=e126]: 
+        - paragraph [ref=e127]: "Then use dropdown classes in your HTML:"
+        - generic [ref=e128]:
+          - code [ref=e130]:
+            - generic [ref=e131]:
+              - generic [ref=e132]: <div
+              - text: class
+              - generic [ref=e133]: ="Dropdown"
+              - text: ">"
+            - generic [ref=e134]:
+              - generic [ref=e135]: <button
+              - text: class
+              - generic [ref=e136]: ="Button Dropdown-trigger"
+              - text: ">"
+            - text: Options
+            - generic [ref=e137]:
+              - generic [ref=e138]: <i
+              - text: class
+              - generic [ref=e139]: ="ph ph-caret-down"
+              - text: ">"
+            - generic [ref=e140]:
+              - generic [ref=e141]: </i
+              - text: ">"
+            - generic [ref=e142]:
+              - generic [ref=e143]: </button
+              - text: ">"
+            - generic [ref=e144]:
+              - generic [ref=e145]: <div
+              - text: class
+              - generic [ref=e146]: ="Dropdown-menu"
+              - text: ">"
+            - generic [ref=e147]:
+              - generic [ref=e148]: <a
+              - text: href
+              - generic [ref=e149]: ="#"
+              - text: class
+              - generic [ref=e150]: ="Dropdown-item"
+              - text: ">"
+            - text: Edit
+            - generic [ref=e151]:
+              - generic [ref=e152]: </a
+              - text: ">"
+            - generic [ref=e153]:
+              - generic [ref=e154]: <a
+              - text: href
+              - generic [ref=e155]: ="#"
+              - text: class
+              - generic [ref=e156]: ="Dropdown-item"
+              - text: ">"
+            - text: Delete
+            - generic [ref=e157]:
+              - generic [ref=e158]: </a
+              - text: ">"
+            - generic [ref=e159]:
+              - generic [ref=e160]: </div
+              - text: ">"
+            - generic [ref=e161]:
+              - generic [ref=e162]: </div
+              - text: ">"
+          - button "Copy code" [ref=e163] [cursor=pointer]:
+            - generic [ref=e164]: 
+        - separator [ref=e165]
+        - heading "Usage" [level=2] [ref=e166]
+        - paragraph [ref=e167]:
+          - text: Wrap a trigger and menu in
+          - code [ref=e168]: .Dropdown
+          - text: . The trigger toggles the
+          - code [ref=e169]: .Dropdown-menu
+          - text: visibility.
+        - generic [ref=e170]:
+          - generic [ref=e171]:
+            - generic [ref=e172]:
+              - button " Preview" [ref=e173] [cursor=pointer]:
+                - generic [ref=e174]: 
+                - text: Preview
+              - button " HTML" [ref=e175] [cursor=pointer]:
+                - generic [ref=e176]: 
+                - text: HTML
+            - generic [ref=e177]:
+              - generic [ref=e178]:
+                - button "" [ref=e179] [cursor=pointer]:
+                  - generic [ref=e180]: 
+                - button "" [ref=e181] [cursor=pointer]:
+                  - generic [ref=e182]: 
+                - button "" [ref=e183] [cursor=pointer]:
+                  - generic [ref=e184]: 
+              - button "" [ref=e185] [cursor=pointer]:
+                - generic [ref=e186]: 
+              - button "" [ref=e187] [cursor=pointer]:
+                - generic [ref=e188]: 
+              - button "" [ref=e189] [cursor=pointer]:
+                - generic [ref=e190]: 
+          - generic [ref=e193]:
+            - button "Options " [ref=e194] [cursor=pointer]:
+              - text: Options
+              - generic [ref=e195]: 
+            - generic [ref=e196]:
+              - link "Edit" [ref=e197] [cursor=pointer]:
+                - /url: "#"
+              - link "Duplicate" [ref=e198] [cursor=pointer]:
+                - /url: "#"
+              - link "Archive" [ref=e199] [cursor=pointer]:
+                - /url: "#"
+          - text: 
+        - separator [ref=e200]
+        - heading "Examples" [level=2] [ref=e201]
+        - heading "Basic Dropdown" [level=3] [ref=e202]
+        - paragraph [ref=e203]: A simple dropdown with action items and a divider.
+        - generic [ref=e204]:
+          - generic [ref=e205]:
+            - generic [ref=e206]:
+              - button " Preview" [ref=e207] [cursor=pointer]:
+                - generic [ref=e208]: 
+                - text: Preview
+              - button " HTML" [ref=e209] [cursor=pointer]:
+                - generic [ref=e210]: 
+                - text: HTML
+            - generic [ref=e211]:
+              - generic [ref=e212]:
+                - button "" [ref=e213] [cursor=pointer]:
+                  - generic [ref=e214]: 
+                - button "" [ref=e215] [cursor=pointer]:
+                  - generic [ref=e216]: 
+                - button "" [ref=e217] [cursor=pointer]:
+                  - generic [ref=e218]: 
+              - button "" [ref=e219] [cursor=pointer]:
+                - generic [ref=e220]: 
+              - button "" [ref=e221] [cursor=pointer]:
+                - generic [ref=e222]: 
+              - button "" [ref=e223] [cursor=pointer]:
+                - generic [ref=e224]: 
+          - generic [ref=e227]:
+            - button "Actions " [ref=e228] [cursor=pointer]:
+              - text: Actions
+              - generic [ref=e229]: 
+            - generic [ref=e230]:
+              - link "Edit" [ref=e231] [cursor=pointer]:
+                - /url: "#"
+              - link "Duplicate" [ref=e232] [cursor=pointer]:
+                - /url: "#"
+              - link "Archive" [ref=e233] [cursor=pointer]:
+                - /url: "#"
+              - separator [ref=e234]
+              - link "Delete" [ref=e235] [cursor=pointer]:
+                - /url: "#"
+          - text: 
+        - heading "With Icons" [level=3] [ref=e236]
+        - paragraph [ref=e237]: Add icons to dropdown items for visual reinforcement.
+        - generic [ref=e238]:
+          - generic [ref=e239]:
+            - generic [ref=e240]:
+              - button " Preview" [ref=e241] [cursor=pointer]:
+                - generic [ref=e242]: 
+                - text: Preview
+              - button " HTML" [ref=e243] [cursor=pointer]:
+                - generic [ref=e244]: 
+                - text: HTML
+            - generic [ref=e245]:
+              - generic [ref=e246]:
+                - button "" [ref=e247] [cursor=pointer]:
+                  - generic [ref=e248]: 
+                - button "" [ref=e249] [cursor=pointer]:
+                  - generic [ref=e250]: 
+                - button "" [ref=e251] [cursor=pointer]:
+                  - generic [ref=e252]: 
+              - button "" [ref=e253] [cursor=pointer]:
+                - generic [ref=e254]: 
+              - button "" [ref=e255] [cursor=pointer]:
+                - generic [ref=e256]: 
+              - button "" [ref=e257] [cursor=pointer]:
+                - generic [ref=e258]: 
+          - generic [ref=e261]:
+            - link " Edit" [ref=e262] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e263]: 
+              - generic [ref=e264]: Edit
+            - link " Duplicate" [ref=e265] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e266]: 
+              - generic [ref=e267]: Duplicate
+            - link " Archive" [ref=e268] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e269]: 
+              - generic [ref=e270]: Archive
+            - separator [ref=e271]
+            - link " Delete" [ref=e272] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e273]: 
+              - generic [ref=e274]: Delete
+          - text: 
+        - heading "With Sections" [level=3] [ref=e275]
+        - paragraph [ref=e276]: Group related items using headers and dividers.
+        - generic [ref=e277]:
+          - generic [ref=e278]:
+            - generic [ref=e279]:
+              - button " Preview" [ref=e280] [cursor=pointer]:
+                - generic [ref=e281]: 
+                - text: Preview
+              - button " HTML" [ref=e282] [cursor=pointer]:
+                - generic [ref=e283]: 
+                - text: HTML
+            - generic [ref=e284]:
+              - generic [ref=e285]:
+                - button "" [ref=e286] [cursor=pointer]:
+                  - generic [ref=e287]: 
+                - button "" [ref=e288] [cursor=pointer]:
+                  - generic [ref=e289]: 
+                - button "" [ref=e290] [cursor=pointer]:
+                  - generic [ref=e291]: 
+              - button "" [ref=e292] [cursor=pointer]:
+                - generic [ref=e293]: 
+              - button "" [ref=e294] [cursor=pointer]:
+                - generic [ref=e295]: 
+              - button "" [ref=e296] [cursor=pointer]:
+                - generic [ref=e297]: 
+          - generic [ref=e300]:
+            - generic [ref=e301]: Actions
+            - link "Edit profile" [ref=e302] [cursor=pointer]:
+              - /url: "#"
+            - link "Preferences" [ref=e303] [cursor=pointer]:
+              - /url: "#"
+            - separator [ref=e304]
+            - generic [ref=e305]: Account
+            - link "Billing" [ref=e306] [cursor=pointer]:
+              - /url: "#"
+            - link "Team members" [ref=e307] [cursor=pointer]:
+              - /url: "#"
+            - separator [ref=e308]
+            - link "Sign out" [ref=e309] [cursor=pointer]:
+              - /url: "#"
+          - text: 
+        - heading "Checkable Items" [level=3] [ref=e310]
+        - paragraph [ref=e311]: Use for multi-select or toggle options within a dropdown.
+        - generic [ref=e312]:
+          - generic [ref=e313]:
+            - generic [ref=e314]:
+              - button " Preview" [ref=e315] [cursor=pointer]:
+                - generic [ref=e316]: 
+                - text: Preview
+              - button " HTML" [ref=e317] [cursor=pointer]:
+                - generic [ref=e318]: 
+                - text: HTML
+            - generic [ref=e319]:
+              - generic [ref=e320]:
+                - button "" [ref=e321] [cursor=pointer]:
+                  - generic [ref=e322]: 
+                - button "" [ref=e323] [cursor=pointer]:
+                  - generic [ref=e324]: 
+                - button "" [ref=e325] [cursor=pointer]:
+                  - generic [ref=e326]: 
+              - button "" [ref=e327] [cursor=pointer]:
+                - generic [ref=e328]: 
+              - button "" [ref=e329] [cursor=pointer]:
+                - generic [ref=e330]: 
+              - button "" [ref=e331] [cursor=pointer]:
+                - generic [ref=e332]: 
+          - generic [ref=e335]:
+            - generic [ref=e336] [cursor=pointer]:
+              - checkbox "Show sidebar" [checked] [ref=e337]
+              - generic [ref=e338]: Show sidebar
+            - generic [ref=e339] [cursor=pointer]:
+              - checkbox "Show toolbar" [checked] [ref=e340]
+              - generic [ref=e341]: Show toolbar
+            - generic [ref=e342] [cursor=pointer]:
+              - checkbox "Compact mode" [ref=e343]
+              - generic [ref=e344]: Compact mode
+          - text: 
+        - heading "Icon Button Trigger" [level=3] [ref=e345]
+        - paragraph [ref=e346]: Common pattern for contextual action menus.
+        - generic [ref=e347]:
+          - generic [ref=e348]:
+            - generic [ref=e349]:
+              - button " Preview" [ref=e350] [cursor=pointer]:
+                - generic [ref=e351]: 
+                - text: Preview
+              - button " HTML" [ref=e352] [cursor=pointer]:
+                - generic [ref=e353]: 
+                - text: HTML
+            - generic [ref=e354]:
+              - generic [ref=e355]:
+                - button "" [ref=e356] [cursor=pointer]:
+                  - generic [ref=e357]: 
+                - button "" [ref=e358] [cursor=pointer]:
+                  - generic [ref=e359]: 
+                - button "" [ref=e360] [cursor=pointer]:
+                  - generic [ref=e361]: 
+              - button "" [ref=e362] [cursor=pointer]:
+                - generic [ref=e363]: 
+              - button "" [ref=e364] [cursor=pointer]:
+                - generic [ref=e365]: 
+              - button "" [ref=e366] [cursor=pointer]:
+                - generic [ref=e367]: 
+          - generic [ref=e370]:
+            - button "More options" [ref=e372] [cursor=pointer]:
+              - generic [ref=e373]: 
+            - button "More options" [ref=e375] [cursor=pointer]:
+              - generic [ref=e376]: 
+          - text: 
+        - heading "With Descriptions" [level=3] [ref=e377]
+        - paragraph [ref=e378]: Add helper text to clarify actions.
+        - generic [ref=e379]:
+          - generic [ref=e380]:
+            - generic [ref=e381]:
+              - button " Preview" [ref=e382] [cursor=pointer]:
+                - generic [ref=e383]: 
+                - text: Preview
+              - button " HTML" [ref=e384] [cursor=pointer]:
+                - generic [ref=e385]: 
+                - text: HTML
+            - generic [ref=e386]:
+              - generic [ref=e387]:
+                - button "" [ref=e388] [cursor=pointer]:
+                  - generic [ref=e389]: 
+                - button "" [ref=e390] [cursor=pointer]:
+                  - generic [ref=e391]: 
+                - button "" [ref=e392] [cursor=pointer]:
+                  - generic [ref=e393]: 
+              - button "" [ref=e394] [cursor=pointer]:
+                - generic [ref=e395]: 
+              - button "" [ref=e396] [cursor=pointer]:
+                - generic [ref=e397]: 
+              - button "" [ref=e398] [cursor=pointer]:
+                - generic [ref=e399]: 
+          - generic [ref=e402]:
+            - link "Public Anyone can view this item" [ref=e403] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e404]: Public Anyone can view this item
+            - link "Private Only you can view this item" [ref=e405] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e406]: Private Only you can view this item
+            - link "Team only Only team members can view" [ref=e407] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e408]: Team only Only team members can view
+          - text: 
+        - heading "With Keyboard Shortcuts" [level=3] [ref=e409]
+        - paragraph [ref=e410]: Display keyboard shortcuts alongside actions.
+        - generic [ref=e411]:
+          - generic [ref=e412]:
+            - generic [ref=e413]:
+              - button " Preview" [ref=e414] [cursor=pointer]:
+                - generic [ref=e415]: 
+                - text: Preview
+              - button " HTML" [ref=e416] [cursor=pointer]:
+                - generic [ref=e417]: 
+                - text: HTML
+            - generic [ref=e418]:
+              - generic [ref=e419]:
+                - button "" [ref=e420] [cursor=pointer]:
+                  - generic [ref=e421]: 
+                - button "" [ref=e422] [cursor=pointer]:
+                  - generic [ref=e423]: 
+                - button "" [ref=e424] [cursor=pointer]:
+                  - generic [ref=e425]: 
+              - button "" [ref=e426] [cursor=pointer]:
+                - generic [ref=e427]: 
+              - button "" [ref=e428] [cursor=pointer]:
+                - generic [ref=e429]: 
+              - button "" [ref=e430] [cursor=pointer]:
+                - generic [ref=e431]: 
+          - generic [ref=e434]:
+            - link "Undo ⌘Z" [ref=e435] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e436]: Undo
+              - generic [ref=e437]: ⌘Z
+            - link "Redo ⌘⇧Z" [ref=e438] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e439]: Redo
+              - generic [ref=e440]: ⌘⇧Z
+            - separator [ref=e441]
+            - link "Cut ⌘X" [ref=e442] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e443]: Cut
+              - generic [ref=e444]: ⌘X
+            - link "Copy ⌘C" [ref=e445] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e446]: Copy
+              - generic [ref=e447]: ⌘C
+            - link "Paste ⌘V" [ref=e448] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e449]: Paste
+              - generic [ref=e450]: ⌘V
+          - text: 
+        - separator [ref=e451]
+        - heading "Common Patterns" [level=2] [ref=e452]
+        - heading "User Account Menu" [level=3] [ref=e453]
+        - generic [ref=e454]:
+          - generic [ref=e455]:
+            - generic [ref=e456]:
+              - button " Preview" [ref=e457] [cursor=pointer]:
+                - generic [ref=e458]: 
+                - text: Preview
+              - button " HTML" [ref=e459] [cursor=pointer]:
+                - generic [ref=e460]: 
+                - text: HTML
+            - generic [ref=e461]:
+              - generic [ref=e462]:
+                - button "" [ref=e463] [cursor=pointer]:
+                  - generic [ref=e464]: 
+                - button "" [ref=e465] [cursor=pointer]:
+                  - generic [ref=e466]: 
+                - button "" [ref=e467] [cursor=pointer]:
+                  - generic [ref=e468]: 
+              - button "" [ref=e469] [cursor=pointer]:
+                - generic [ref=e470]: 
+              - button "" [ref=e471] [cursor=pointer]:
+                - generic [ref=e472]: 
+              - button "" [ref=e473] [cursor=pointer]:
+                - generic [ref=e474]: 
+          - generic [ref=e477]:
+            - generic [ref=e478]:
+              - generic [ref=e479]: John Doe
+              - generic [ref=e480]: john@example.com
+            - link " Profile" [ref=e481] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e482]: 
+              - generic [ref=e483]: Profile
+            - link " Settings" [ref=e484] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e485]: 
+              - generic [ref=e486]: Settings
+            - link " Billing" [ref=e487] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e488]: 
+              - generic [ref=e489]: Billing
+            - separator [ref=e490]
+            - link " Sign out" [ref=e491] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e492]: 
+              - generic [ref=e493]: Sign out
+          - text: 
+        - heading "Table Row Actions" [level=3] [ref=e494]
+        - generic [ref=e495]:
+          - generic [ref=e496]:
+            - generic [ref=e497]:
+              - button " Preview" [ref=e498] [cursor=pointer]:
+                - generic [ref=e499]: 
+                - text: Preview
+              - button " HTML" [ref=e500] [cursor=pointer]:
+                - generic [ref=e501]: 
+                - text: HTML
+            - generic [ref=e502]:
+              - generic [ref=e503]:
+                - button "" [ref=e504] [cursor=pointer]:
+                  - generic [ref=e505]: 
+                - button "" [ref=e506] [cursor=pointer]:
+                  - generic [ref=e507]: 
+                - button "" [ref=e508] [cursor=pointer]:
+                  - generic [ref=e509]: 
+              - button "" [ref=e510] [cursor=pointer]:
+                - generic [ref=e511]: 
+              - button "" [ref=e512] [cursor=pointer]:
+                - generic [ref=e513]: 
+              - button "" [ref=e514] [cursor=pointer]:
+                - generic [ref=e515]: 
+          - generic [ref=e518]:
+            - button "Row actions" [ref=e520] [cursor=pointer]:
+              - generic [ref=e521]: 
+            - generic [ref=e522]:
+              - link " View" [ref=e523] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e524]: 
+                - generic [ref=e525]: View
+              - link " Edit" [ref=e526] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e527]: 
+                - generic [ref=e528]: Edit
+              - separator [ref=e529]
+              - link " Delete" [ref=e530] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e531]: 
+                - generic [ref=e532]: Delete
+          - text: 
+        - separator [ref=e533]
+        - heading "Customization" [level=2] [ref=e534]
+        - paragraph [ref=e535]: "Override dropdown styles using CSS custom properties:"
+        - generic [ref=e536]:
+          - code [ref=e538]: "/* Custom dropdown menu width */ .Dropdown-menu { --dropdown-min-width: 280px; min-width: var(--dropdown-min-width); } /* Custom item colors */ .Dropdown-item { --dropdown-item-hover: oklch(95% 0.02 250); } .Dropdown-item:hover { background: var(--dropdown-item-hover); } /* Custom danger color */ .Dropdown-item--danger { --dropdown-danger: oklch(55% 0.2 25); color: var(--dropdown-danger); } /* Rounded menu */ .Dropdown-menu--rounded { border-radius: var(--space-3); }"
+          - button "Copy code" [ref=e539] [cursor=pointer]:
+            - generic [ref=e540]: 
+        - separator [ref=e541]
+        - heading "JavaScript" [level=2] [ref=e542]
+        - paragraph [ref=e543]: "Basic toggle logic for dropdown interaction:"
+        - generic [ref=e544]:
+          - code [ref=e546]: "document.querySelectorAll('.Dropdown').forEach(dropdown => { const trigger = dropdown.querySelector('.Dropdown-trigger'); const menu = dropdown.querySelector('.Dropdown-menu'); trigger.addEventListener('click', (e) => { e.stopPropagation(); // Close other dropdowns document.querySelectorAll('.Dropdown-menu.is-open').forEach(m => { if (m !== menu) m.classList.remove('is-open'); }); menu.classList.toggle('is-open'); }); }); // Close on outside click document.addEventListener('click', () => { document.querySelectorAll('.Dropdown-menu.is-open') .forEach(m => m.classList.remove('is-open')); }); // Close on Escape key document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { document.querySelectorAll('.Dropdown-menu.is-open') .forEach(m => m.classList.remove('is-open')); } });"
+          - button "Copy code" [ref=e547] [cursor=pointer]:
+            - generic [ref=e548]: 
+        - separator [ref=e549]
+        - heading "API Reference" [level=2] [ref=e550]
+        - heading "Container Classes" [level=3] [ref=e551]
+        - table [ref=e552]:
+          - rowgroup [ref=e553]:
+            - row "Class Description" [ref=e554]:
+              - columnheader "Class" [ref=e555]
+              - columnheader "Description" [ref=e556]
+          - rowgroup [ref=e557]:
+            - row ".Dropdown Container for dropdown trigger and menu" [ref=e558]:
+              - cell ".Dropdown" [ref=e559]:
+                - code [ref=e560]: .Dropdown
+              - cell "Container for dropdown trigger and menu" [ref=e561]
+            - row ".Dropdown-trigger Element that toggles the dropdown (add to button)" [ref=e562]:
+              - cell ".Dropdown-trigger" [ref=e563]:
+                - code [ref=e564]: .Dropdown-trigger
+              - cell "Element that toggles the dropdown (add to button)" [ref=e565]
+            - row ".Dropdown-menu The dropdown menu panel" [ref=e566]:
+              - cell ".Dropdown-menu" [ref=e567]:
+                - code [ref=e568]: .Dropdown-menu
+              - cell "The dropdown menu panel" [ref=e569]
+        - heading "Menu Item Classes" [level=3] [ref=e570]
+        - table [ref=e571]:
+          - rowgroup [ref=e572]:
+            - row "Class Description" [ref=e573]:
+              - columnheader "Class" [ref=e574]
+              - columnheader "Description" [ref=e575]
+          - rowgroup [ref=e576]:
+            - row ".Dropdown-item Individual menu item (link or button)" [ref=e577]:
+              - cell ".Dropdown-item" [ref=e578]:
+                - code [ref=e579]: .Dropdown-item
+              - cell "Individual menu item (link or button)" [ref=e580]
+            - row ".Dropdown-item--danger Destructive action styling (red)" [ref=e581]:
+              - cell ".Dropdown-item--danger" [ref=e582]:
+                - code [ref=e583]: .Dropdown-item--danger
+              - cell "Destructive action styling (red)" [ref=e584]
+            - row ".Dropdown-item--check Checkable item with checkbox input" [ref=e585]:
+              - cell ".Dropdown-item--check" [ref=e586]:
+                - code [ref=e587]: .Dropdown-item--check
+              - cell "Checkable item with checkbox input" [ref=e588]
+            - row ".Dropdown-item--descriptive Item with description text" [ref=e589]:
+              - cell ".Dropdown-item--descriptive" [ref=e590]:
+                - code [ref=e591]: .Dropdown-item--descriptive
+              - cell "Item with description text" [ref=e592]
+        - heading "Structure Classes" [level=3] [ref=e593]
+        - table [ref=e594]:
+          - rowgroup [ref=e595]:
+            - row "Class Description" [ref=e596]:
+              - columnheader "Class" [ref=e597]
+              - columnheader "Description" [ref=e598]
+          - rowgroup [ref=e599]:
+            - row ".Dropdown-header Section header label" [ref=e600]:
+              - cell ".Dropdown-header" [ref=e601]:
+                - code [ref=e602]: .Dropdown-header
+              - cell "Section header label" [ref=e603]
+            - row ".Dropdown-divider Horizontal separator between items" [ref=e604]:
+              - cell ".Dropdown-divider" [ref=e605]:
+                - code [ref=e606]: .Dropdown-divider
+              - cell "Horizontal separator between items" [ref=e607]
+            - row ".Dropdown-shortcut Keyboard shortcut display (use with <kbd>)" [ref=e608]:
+              - cell ".Dropdown-shortcut" [ref=e609]:
+                - code [ref=e610]: .Dropdown-shortcut
+              - cell "Keyboard shortcut display (use with <kbd>)" [ref=e611]:
+                - text: Keyboard shortcut display (use with
+                - code [ref=e612]: <kbd>
+                - text: )
+        - heading "State Classes" [level=3] [ref=e613]
+        - table [ref=e614]:
+          - rowgroup [ref=e615]:
+            - row "Class Description" [ref=e616]:
+              - columnheader "Class" [ref=e617]
+              - columnheader "Description" [ref=e618]
+          - rowgroup [ref=e619]:
+            - row ".is-open Shows the dropdown menu (add via JS)" [ref=e620]:
+              - cell ".is-open" [ref=e621]:
+                - code [ref=e622]: .is-open
+              - cell "Shows the dropdown menu (add via JS)" [ref=e623]
+        - separator [ref=e624]
+        - heading "Accessibility" [level=2] [ref=e625]
+        - heading "Keyboard Support" [level=3] [ref=e626]
+        - table [ref=e627]:
+          - rowgroup [ref=e628]:
+            - row "Key Action" [ref=e629]:
+              - columnheader "Key" [ref=e630]
+              - columnheader "Action" [ref=e631]
+          - rowgroup [ref=e632]:
+            - row "Enter / Space Opens dropdown, activates focused item" [ref=e633]:
+              - cell "Enter / Space" [ref=e634]
+              - cell "Opens dropdown, activates focused item" [ref=e635]
+            - row "Escape Closes dropdown" [ref=e636]:
+              - cell "Escape" [ref=e637]
+              - cell "Closes dropdown" [ref=e638]
+            - row "Arrow Down Moves focus to next item" [ref=e639]:
+              - cell "Arrow Down" [ref=e640]
+              - cell "Moves focus to next item" [ref=e641]
+            - row "Arrow Up Moves focus to previous item" [ref=e642]:
+              - cell "Arrow Up" [ref=e643]
+              - cell "Moves focus to previous item" [ref=e644]
+            - row "Home Moves focus to first item" [ref=e645]:
+              - cell "Home" [ref=e646]
+              - cell "Moves focus to first item" [ref=e647]
+            - row "End Moves focus to last item" [ref=e648]:
+              - cell "End" [ref=e649]
+              - cell "Moves focus to last item" [ref=e650]
+            - row "Tab Closes dropdown, moves to next element" [ref=e651]:
+              - cell "Tab" [ref=e652]
+              - cell "Closes dropdown, moves to next element" [ref=e653]
+        - heading "ARIA Attributes" [level=3] [ref=e654]
+        - generic [ref=e655]:
+          - code [ref=e657]:
+            - text: <!-- Proper dropdown markup -->
+            - generic [ref=e658]:
+              - generic [ref=e659]: <div
+              - text: class
+              - generic [ref=e660]: ="Dropdown"
+              - text: ">"
+            - generic [ref=e661]:
+              - generic [ref=e662]: <button
+              - text: class
+              - generic [ref=e663]: ="Button Dropdown-trigger"
+              - text: aria-haspopup
+              - generic [ref=e664]: ="true"
+              - text: aria-expanded
+              - generic [ref=e665]: ="false"
+              - text: aria-controls
+              - generic [ref=e666]: ="dropdown-menu-1"
+              - text: ">"
+            - text: Options
+            - generic [ref=e667]:
+              - generic [ref=e668]: <i
+              - text: class
+              - generic [ref=e669]: ="ph ph-caret-down"
+              - text: aria-hidden
+              - generic [ref=e670]: ="true"
+              - text: ">"
+            - generic [ref=e671]:
+              - generic [ref=e672]: </i
+              - text: ">"
+            - generic [ref=e673]:
+              - generic [ref=e674]: </button
+              - text: ">"
+            - generic [ref=e675]:
+              - generic [ref=e676]: <div
+              - text: class
+              - generic [ref=e677]: ="Dropdown-menu"
+              - text: id
+              - generic [ref=e678]: ="dropdown-menu-1"
+              - text: role
+              - generic [ref=e679]: ="menu"
+              - text: aria-labelledby
+              - generic [ref=e680]: ="dropdown-trigger-1"
+              - text: ">"
+            - generic [ref=e681]:
+              - generic [ref=e682]: <a
+              - text: href
+              - generic [ref=e683]: ="#"
+              - text: class
+              - generic [ref=e684]: ="Dropdown-item"
+              - text: role
+              - generic [ref=e685]: ="menuitem"
+              - text: ">"
+            - text: Edit
+            - generic [ref=e686]:
+              - generic [ref=e687]: </a
+              - text: ">"
+            - generic [ref=e688]:
+              - generic [ref=e689]: <a
+              - text: href
+              - generic [ref=e690]: ="#"
+              - text: class
+              - generic [ref=e691]: ="Dropdown-item"
+              - text: role
+              - generic [ref=e692]: ="menuitem"
+              - text: ">"
+            - text: Duplicate
+            - generic [ref=e693]:
+              - generic [ref=e694]: </a
+              - text: ">"
+            - generic [ref=e695]:
+              - generic [ref=e696]: <hr
+              - text: class
+              - generic [ref=e697]: ="Dropdown-divider"
+              - text: role
+              - generic [ref=e698]: ="separator"
+              - text: ">"
+            - generic [ref=e699]:
+              - generic [ref=e700]: <a
+              - text: href
+              - generic [ref=e701]: ="#"
+              - text: class
+              - generic [ref=e702]: ="Dropdown-item Dropdown-item--danger"
+              - text: role
+              - generic [ref=e703]: ="menuitem"
+              - text: ">"
+            - text: Delete
+            - generic [ref=e704]:
+              - generic [ref=e705]: </a
+              - text: ">"
+            - generic [ref=e706]:
+              - generic [ref=e707]: </div
+              - text: ">"
+            - generic [ref=e708]:
+              - generic [ref=e709]: </div
+              - text: ">"
+            - text: <!-- When open, update aria-expanded -->
+            - generic [ref=e710]:
+              - generic [ref=e711]: <button
+              - text: aria-expanded
+              - generic [ref=e712]: ="true"
+              - text: ">"
+            - text: ...
+            - generic [ref=e713]:
+              - generic [ref=e714]: </button
+              - text: ">"
+            - text: <!-- Checkable items use menuitemcheckbox -->
+            - generic [ref=e715]:
+              - generic [ref=e716]: <label
+              - text: class
+              - generic [ref=e717]: ="Dropdown-item Dropdown-item--check"
+              - text: role
+              - generic [ref=e718]: ="menuitemcheckbox"
+              - text: aria-checked
+              - generic [ref=e719]: ="true"
+              - text: ">"
+            - generic [ref=e720]:
+              - generic [ref=e721]: <input
+              - text: type
+              - generic [ref=e722]: ="checkbox"
+              - text: checked>
+            - generic [ref=e723]:
+              - generic [ref=e724]: <span
+              - text: ">"
+            - text: Show sidebar
+            - generic [ref=e725]:
+              - generic [ref=e726]: </span
+              - text: ">"
+            - generic [ref=e727]:
+              - generic [ref=e728]: </label
+              - text: ">"
+          - button "Copy code" [ref=e729] [cursor=pointer]:
+            - generic [ref=e730]: 
+        - heading "Focus Management" [level=3] [ref=e731]
+        - generic [ref=e732]:
+          - code [ref=e734]: // Move focus into menu when opened menu.classList.add('is-open'); menu.querySelector('.Dropdown-item')?.focus(); // Return focus to trigger when closed menu.classList.remove('is-open'); trigger.focus();
+          - button "Copy code" [ref=e735] [cursor=pointer]:
+            - generic [ref=e736]: 
+        - separator [ref=e737]
+        - heading "Best Practices" [level=2] [ref=e738]
+        - heading "Do" [level=3] [ref=e739]
+        - list [ref=e740]:
+          - listitem [ref=e741]:
+            - text: ✓
+            - strong [ref=e742]: Group related actions
+            - text: — Use headers and dividers to organize
+          - listitem [ref=e743]:
+            - text: ✓
+            - strong [ref=e744]: Put destructive actions last
+            - text: — Separate with a divider
+          - listitem [ref=e745]:
+            - text: ✓
+            - strong [ref=e746]: Use clear action labels
+            - text: — “Delete project” not just “Delete”
+          - listitem [ref=e747]:
+            - text: ✓
+            - strong [ref=e748]: Add keyboard shortcuts
+            - text: — For frequently used actions
+          - listitem [ref=e749]:
+            - text: ✓
+            - strong [ref=e750]: Keep menus focused
+            - text: — 5-7 items max before grouping
+          - listitem [ref=e751]:
+            - text: ✓
+            - strong [ref=e752]: Close on action
+            - text: — Dismiss dropdown after user selects
+        - heading "Don’t" [level=3] [ref=e753]
+        - list [ref=e754]:
+          - listitem [ref=e755]:
+            - text: ✗
+            - strong [ref=e756]: Nest dropdowns
+            - text: — Use a different pattern for sub-menus
+          - listitem [ref=e757]:
+            - text: ✗
+            - strong [ref=e758]: Use for navigation
+            - text: — Dropdowns are for actions, not nav links
+          - listitem [ref=e759]:
+            - text: ✗
+            - strong [ref=e760]: Hide primary actions
+            - text: — Important actions should be visible
+          - listitem [ref=e761]:
+            - text: ✗
+            - strong [ref=e762]: Overload with options
+            - text: — Too many items overwhelm users
+          - listitem [ref=e763]:
+            - text: ✗
+            - strong [ref=e764]: Forget mobile
+            - text: — Ensure touch targets are large enough (44px min)
+          - listitem [ref=e765]:
+            - text: ✗
+            - strong [ref=e766]: Skip the caret icon
+            - text: — Visual affordance helps discoverability
+      - paragraph [ref=e768]: "Carbon v0.2 • Last built: 2/4/2026, 5:00:18 AM"
+    - complementary [ref=e769]:
+      - navigation [ref=e770]:
+        - heading "On this page" [level=3] [ref=e771]
+        - list [ref=e772]:
+          - listitem [ref=e773]:
+            - link "Installation" [ref=e774] [cursor=pointer]:
+              - /url: "#installation"
+          - listitem [ref=e775]:
+            - link "Usage" [ref=e776] [cursor=pointer]:
+              - /url: "#usage"
+          - listitem [ref=e777]:
+            - link "Examples" [ref=e778] [cursor=pointer]:
+              - /url: "#examples"
+          - listitem [ref=e779]:
+            - link "Basic Dropdown" [ref=e780] [cursor=pointer]:
+              - /url: "#basic-dropdown"
+          - listitem [ref=e781]:
+            - link "With Icons" [ref=e782] [cursor=pointer]:
+              - /url: "#with-icons"
+          - listitem [ref=e783]:
+            - link "With Sections" [ref=e784] [cursor=pointer]:
+              - /url: "#with-sections"
+          - listitem [ref=e785]:
+            - link "Checkable Items" [ref=e786] [cursor=pointer]:
+              - /url: "#checkable-items"
+          - listitem [ref=e787]:
+            - link "Icon Button Trigger" [ref=e788] [cursor=pointer]:
+              - /url: "#icon-button-trigger"
+          - listitem [ref=e789]:
+            - link "With Descriptions" [ref=e790] [cursor=pointer]:
+              - /url: "#with-descriptions"
+          - listitem [ref=e791]:
+            - link "With Keyboard Shortcuts" [ref=e792] [cursor=pointer]:
+              - /url: "#with-keyboard-shortcuts"
+          - listitem [ref=e793]:
+            - link "Common Patterns" [ref=e794] [cursor=pointer]:
+              - /url: "#common-patterns"
+          - listitem [ref=e795]:
+            - link "User Account Menu" [ref=e796] [cursor=pointer]:
+              - /url: "#user-account-menu"
+          - listitem [ref=e797]:
+            - link "Table Row Actions" [ref=e798] [cursor=pointer]:
+              - /url: "#table-row-actions"
+          - listitem [ref=e799]:
+            - link "Customization" [ref=e800] [cursor=pointer]:
+              - /url: "#customization"
+          - listitem [ref=e801]:
+            - link "JavaScript" [ref=e802] [cursor=pointer]:
+              - /url: "#javascript"
+          - listitem [ref=e803]:
+            - link "API Reference" [ref=e804] [cursor=pointer]:
+              - /url: "#api-reference"
+          - listitem [ref=e805]:
+            - link "Container Classes" [ref=e806] [cursor=pointer]:
+              - /url: "#container-classes"
+          - listitem [ref=e807]:
+            - link "Menu Item Classes" [ref=e808] [cursor=pointer]:
+              - /url: "#menu-item-classes"
+          - listitem [ref=e809]:
+            - link "Structure Classes" [ref=e810] [cursor=pointer]:
+              - /url: "#structure-classes"
+          - listitem [ref=e811]:
+            - link "State Classes" [ref=e812] [cursor=pointer]:
+              - /url: "#state-classes"
+          - listitem [ref=e813]:
+            - link "Accessibility" [ref=e814] [cursor=pointer]:
+              - /url: "#accessibility"
+          - listitem [ref=e815]:
+            - link "Keyboard Support" [ref=e816] [cursor=pointer]:
+              - /url: "#keyboard-support"
+          - listitem [ref=e817]:
+            - link "ARIA Attributes" [ref=e818] [cursor=pointer]:
+              - /url: "#aria-attributes"
+          - listitem [ref=e819]:
+            - link "Focus Management" [ref=e820] [cursor=pointer]:
+              - /url: "#focus-management"
+          - listitem [ref=e821]:
+            - link "Best Practices" [ref=e822] [cursor=pointer]:
+              - /url: "#best-practices"
+          - listitem [ref=e823]:
+            - link "Do" [ref=e824] [cursor=pointer]:
+              - /url: "#do"
+          - listitem [ref=e825]:
+            - link "Don't" [ref=e826] [cursor=pointer]:
+              - /url: "#don-t"
+```

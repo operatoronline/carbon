@@ -1,0 +1,761 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - text: 
+      - link " Carbon" [ref=e4] [cursor=pointer]:
+        - /url: ../index.html
+        - generic [ref=e5]: 
+        - generic [ref=e6]: Carbon
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - generic [ref=e9]: 
+        - textbox "Search" [ref=e10]:
+          - /placeholder: Search...
+      - button "Toggle theme" [ref=e11] [cursor=pointer]:
+        - generic [ref=e12]: 
+  - generic [ref=e13]:
+    - complementary [ref=e14]:
+      - navigation [ref=e15]:
+        - list [ref=e16]:
+          - listitem [ref=e17]:
+            - link "Introduction" [ref=e18] [cursor=pointer]:
+              - /url: ../index.html
+          - listitem [ref=e19]:
+            - generic [ref=e20]: Components
+            - list [ref=e21]:
+              - listitem [ref=e22]:
+                - link "Accordions" [ref=e23] [cursor=pointer]:
+                  - /url: ../components/accordions.html
+              - listitem [ref=e24]:
+                - link "Alerts" [ref=e25] [cursor=pointer]:
+                  - /url: ../components/alerts.html
+              - listitem [ref=e26]:
+                - link "Avatars" [ref=e27] [cursor=pointer]:
+                  - /url: ../components/avatars.html
+              - listitem [ref=e28]:
+                - link "Badges" [ref=e29] [cursor=pointer]:
+                  - /url: ../components/badges.html
+              - listitem [ref=e30]:
+                - link "Breadcrumbs" [ref=e31] [cursor=pointer]:
+                  - /url: ../components/breadcrumbs.html
+              - listitem [ref=e32]:
+                - link "Buttons" [ref=e33] [cursor=pointer]:
+                  - /url: ../components/buttons.html
+              - listitem [ref=e34]:
+                - link "Cards" [ref=e35] [cursor=pointer]:
+                  - /url: ../components/cards.html
+              - listitem [ref=e36]:
+                - link "Chips" [ref=e37] [cursor=pointer]:
+                  - /url: ../components/chips.html
+              - listitem [ref=e38]:
+                - link "Dividers" [ref=e39] [cursor=pointer]:
+                  - /url: ../components/dividers.html
+              - listitem [ref=e40]:
+                - link "Drawer" [ref=e41] [cursor=pointer]:
+                  - /url: ../components/drawer.html
+              - listitem [ref=e42]:
+                - link "Dropdowns" [ref=e43] [cursor=pointer]:
+                  - /url: ../components/dropdowns.html
+              - listitem [ref=e44]:
+                - link "File upload" [ref=e45] [cursor=pointer]:
+                  - /url: ../components/file-upload.html
+              - listitem [ref=e46]:
+                - link "Forms" [ref=e47] [cursor=pointer]:
+                  - /url: ../components/forms.html
+              - listitem [ref=e48]:
+                - link "Icons" [ref=e49] [cursor=pointer]:
+                  - /url: ../components/icons.html
+              - listitem [ref=e50]:
+                - link "Links" [ref=e51] [cursor=pointer]:
+                  - /url: ../components/links.html
+              - listitem [ref=e52]:
+                - link "Lists" [ref=e53] [cursor=pointer]:
+                  - /url: ../components/lists.html
+              - listitem [ref=e54]:
+                - link "Menus" [ref=e55] [cursor=pointer]:
+                  - /url: ../components/menus.html
+              - listitem [ref=e56]:
+                - link "Modals" [ref=e57] [cursor=pointer]:
+                  - /url: ../components/modals.html
+              - listitem [ref=e58]:
+                - link "Pagination" [ref=e59] [cursor=pointer]:
+                  - /url: ../components/pagination.html
+              - listitem [ref=e60]:
+                - link "Progress" [ref=e61] [cursor=pointer]:
+                  - /url: ../components/progress.html
+              - listitem [ref=e62]:
+                - link "Rating" [ref=e63] [cursor=pointer]:
+                  - /url: ../components/rating.html
+              - listitem [ref=e64]:
+                - link "Skeletons" [ref=e65] [cursor=pointer]:
+                  - /url: ../components/skeletons.html
+              - listitem [ref=e66]:
+                - link "Sliders" [ref=e67] [cursor=pointer]:
+                  - /url: ../components/sliders.html
+              - listitem [ref=e68]:
+                - link "Steppers" [ref=e69] [cursor=pointer]:
+                  - /url: ../components/steppers.html
+              - listitem [ref=e70]:
+                - link "Switches" [ref=e71] [cursor=pointer]:
+                  - /url: ../components/switches.html
+              - listitem [ref=e72]:
+                - link "Tables" [ref=e73] [cursor=pointer]:
+                  - /url: ../components/tables.html
+              - listitem [ref=e74]:
+                - link "Tabs" [ref=e75] [cursor=pointer]:
+                  - /url: ../components/tabs.html
+              - listitem [ref=e76]:
+                - link "Textarea" [ref=e77] [cursor=pointer]:
+                  - /url: ../components/textarea.html
+              - listitem [ref=e78]:
+                - link "Timeline" [ref=e79] [cursor=pointer]:
+                  - /url: ../components/timeline.html
+              - listitem [ref=e80]:
+                - link "Toasts" [ref=e81] [cursor=pointer]:
+                  - /url: ../components/toasts.html
+              - listitem [ref=e82]:
+                - link "Toolbar" [ref=e83] [cursor=pointer]:
+                  - /url: ../components/toolbar.html
+              - listitem [ref=e84]:
+                - link "Tooltips" [ref=e85] [cursor=pointer]:
+                  - /url: ../components/tooltips.html
+          - listitem [ref=e86]:
+            - generic [ref=e87]: Patterns
+            - list [ref=e88]:
+              - listitem [ref=e89]:
+                - link "Empty states" [ref=e90] [cursor=pointer]:
+                  - /url: ../patterns/empty-states.html
+              - listitem [ref=e91]:
+                - link "Layouts" [ref=e92] [cursor=pointer]:
+                  - /url: ../patterns/layouts.html
+          - listitem [ref=e93]:
+            - generic [ref=e94]: Tokens
+            - list [ref=e95]:
+              - listitem [ref=e96]:
+                - link "Colors" [ref=e97] [cursor=pointer]:
+                  - /url: ../tokens/colors.html
+              - listitem [ref=e98]:
+                - link "Spacing" [ref=e99] [cursor=pointer]:
+                  - /url: ../tokens/spacing.html
+              - listitem [ref=e100]:
+                - link "Typography" [ref=e101] [cursor=pointer]:
+                  - /url: ../tokens/typography.html
+    - main [ref=e102]:
+      - generic [ref=e103]:
+        - navigation "Breadcrumb" [ref=e104]:
+          - link "Carbon" [ref=e105] [cursor=pointer]:
+            - /url: ../index.html
+          - generic [ref=e106]: /
+          - generic [ref=e107]: Tokens
+          - generic [ref=e108]: /
+          - generic [ref=e109]: Typography
+        - heading "Typography" [level=1] [ref=e110]
+      - article [ref=e111]:
+        - heading "Typography" [level=1] [ref=e112]
+        - paragraph [ref=e113]:
+          - text: Carbon uses
+          - strong [ref=e114]: DM Sans
+          - text: — a geometric sans-serif designed for clarity at all sizes. The type system is built on a modular scale for consistent visual hierarchy.
+        - heading "Font Stack" [level=2] [ref=e115]
+        - generic [ref=e116]:
+          - code [ref=e118]: "--font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; --font-mono: 'SF Mono', 'Fira Code', 'Consolas', monospace;"
+          - button "Copy code" [ref=e119] [cursor=pointer]:
+            - generic [ref=e120]: 
+        - generic [ref=e121]:
+          - generic [ref=e122]:
+            - generic [ref=e123]:
+              - button " Preview" [ref=e124] [cursor=pointer]:
+                - generic [ref=e125]: 
+                - text: Preview
+              - button " HTML" [ref=e126] [cursor=pointer]:
+                - generic [ref=e127]: 
+                - text: HTML
+            - generic [ref=e128]:
+              - generic [ref=e129]:
+                - button "" [ref=e130] [cursor=pointer]:
+                  - generic [ref=e131]: 
+                - button "" [ref=e132] [cursor=pointer]:
+                  - generic [ref=e133]: 
+                - button "" [ref=e134] [cursor=pointer]:
+                  - generic [ref=e135]: 
+              - button "" [ref=e136] [cursor=pointer]:
+                - generic [ref=e137]: 
+              - button "" [ref=e138] [cursor=pointer]:
+                - generic [ref=e139]: 
+              - button "" [ref=e140] [cursor=pointer]:
+                - generic [ref=e141]: 
+          - generic [ref=e144]:
+            - generic [ref=e145]:
+              - generic [ref=e146]: Sans (Primary)
+              - generic [ref=e147]: The quick brown fox jumps over the lazy dog.
+            - generic [ref=e148]:
+              - generic [ref=e149]: Monospace (Code)
+              - generic [ref=e150]: const greeting = "Hello, World!";
+          - text: 
+        - separator [ref=e151]
+        - heading "Type Scale" [level=2] [ref=e152]
+        - paragraph [ref=e153]:
+          - text: Based on a
+          - strong [ref=e154]: 1.25 ratio
+          - text: (Major Third), creating harmonious size progression.
+        - table [ref=e155]:
+          - rowgroup [ref=e156]:
+            - row "Level Size Rem Pixels Usage" [ref=e157]:
+              - columnheader "Level" [ref=e158]
+              - columnheader "Size" [ref=e159]
+              - columnheader "Rem" [ref=e160]
+              - columnheader "Pixels" [ref=e161]
+              - columnheader "Usage" [ref=e162]
+          - rowgroup [ref=e163]:
+            - row "Display 3rem 3 48px Hero headlines" [ref=e164]:
+              - cell "Display" [ref=e165]
+              - cell "3rem" [ref=e166]
+              - cell "3" [ref=e167]
+              - cell "48px" [ref=e168]
+              - cell "Hero headlines" [ref=e169]
+            - row "H1 2.5rem 2.5 40px Page titles" [ref=e170]:
+              - cell "H1" [ref=e171]
+              - cell "2.5rem" [ref=e172]
+              - cell "2.5" [ref=e173]
+              - cell "40px" [ref=e174]
+              - cell "Page titles" [ref=e175]
+            - row "H2 2rem 2 32px Section headers" [ref=e176]:
+              - cell "H2" [ref=e177]
+              - cell "2rem" [ref=e178]
+              - cell "2" [ref=e179]
+              - cell "32px" [ref=e180]
+              - cell "Section headers" [ref=e181]
+            - row "H3 1.5rem 1.5 24px Subsections" [ref=e182]:
+              - cell "H3" [ref=e183]
+              - cell "1.5rem" [ref=e184]
+              - cell "1.5" [ref=e185]
+              - cell "24px" [ref=e186]
+              - cell "Subsections" [ref=e187]
+            - row "H4 1.25rem 1.25 20px Card titles" [ref=e188]:
+              - cell "H4" [ref=e189]
+              - cell "1.25rem" [ref=e190]
+              - cell "1.25" [ref=e191]
+              - cell "20px" [ref=e192]
+              - cell "Card titles" [ref=e193]
+            - row "Body 1rem 1 16px Paragraphs" [ref=e194]:
+              - cell "Body" [ref=e195]
+              - cell "1rem" [ref=e196]
+              - cell "1" [ref=e197]
+              - cell "16px" [ref=e198]
+              - cell "Paragraphs" [ref=e199]
+            - row "Small 0.875rem 0.875 14px Captions, labels" [ref=e200]:
+              - cell "Small" [ref=e201]
+              - cell "0.875rem" [ref=e202]
+              - cell "0.875" [ref=e203]
+              - cell "14px" [ref=e204]
+              - cell "Captions, labels" [ref=e205]
+            - row "XSmall 0.75rem 0.75 12px Fine print" [ref=e206]:
+              - cell "XSmall" [ref=e207]
+              - cell "0.75rem" [ref=e208]
+              - cell "0.75" [ref=e209]
+              - cell "12px" [ref=e210]
+              - cell "Fine print" [ref=e211]
+        - generic [ref=e212]:
+          - generic [ref=e213]:
+            - generic [ref=e214]:
+              - button " Preview" [ref=e215] [cursor=pointer]:
+                - generic [ref=e216]: 
+                - text: Preview
+              - button " HTML" [ref=e217] [cursor=pointer]:
+                - generic [ref=e218]: 
+                - text: HTML
+            - generic [ref=e219]:
+              - generic [ref=e220]:
+                - button "" [ref=e221] [cursor=pointer]:
+                  - generic [ref=e222]: 
+                - button "" [ref=e223] [cursor=pointer]:
+                  - generic [ref=e224]: 
+                - button "" [ref=e225] [cursor=pointer]:
+                  - generic [ref=e226]: 
+              - button "" [ref=e227] [cursor=pointer]:
+                - generic [ref=e228]: 
+              - button "" [ref=e229] [cursor=pointer]:
+                - generic [ref=e230]: 
+              - button "" [ref=e231] [cursor=pointer]:
+                - generic [ref=e232]: 
+          - generic [ref=e235]:
+            - generic [ref=e236]: Display
+            - generic [ref=e237]: Heading 1
+            - generic [ref=e238]: Heading 2
+            - generic [ref=e239]: Heading 3
+            - generic [ref=e240]: Heading 4
+            - generic [ref=e241]: Body text — the quick brown fox jumps over the lazy dog.
+            - generic [ref=e242]: Small text for captions and supporting content.
+            - generic [ref=e243]: Extra small for fine print and legal text.
+          - text: 
+        - separator [ref=e244]
+        - heading "Font Weights" [level=2] [ref=e245]
+        - paragraph [ref=e246]: DM Sans provides five weights. Use them intentionally to create hierarchy.
+        - table [ref=e247]:
+          - rowgroup [ref=e248]:
+            - row "Weight Value Usage" [ref=e249]:
+              - columnheader "Weight" [ref=e250]
+              - columnheader "Value" [ref=e251]
+              - columnheader "Usage" [ref=e252]
+          - rowgroup [ref=e253]:
+            - row "Regular 400 Body text, descriptions" [ref=e254]:
+              - cell "Regular" [ref=e255]
+              - cell "400" [ref=e256]
+              - cell "Body text, descriptions" [ref=e257]
+            - row "Medium 500 UI labels, buttons" [ref=e258]:
+              - cell "Medium" [ref=e259]
+              - cell "500" [ref=e260]
+              - cell "UI labels, buttons" [ref=e261]
+            - row "Semi-Bold 600 Subheadings, emphasis" [ref=e262]:
+              - cell "Semi-Bold" [ref=e263]
+              - cell "600" [ref=e264]
+              - cell "Subheadings, emphasis" [ref=e265]
+            - row "Bold 700 Headings, strong emphasis" [ref=e266]:
+              - cell "Bold" [ref=e267]
+              - cell "700" [ref=e268]
+              - cell "Headings, strong emphasis" [ref=e269]
+        - generic [ref=e270]:
+          - generic [ref=e271]:
+            - generic [ref=e272]:
+              - button " Preview" [ref=e273] [cursor=pointer]:
+                - generic [ref=e274]: 
+                - text: Preview
+              - button " HTML" [ref=e275] [cursor=pointer]:
+                - generic [ref=e276]: 
+                - text: HTML
+            - generic [ref=e277]:
+              - generic [ref=e278]:
+                - button "" [ref=e279] [cursor=pointer]:
+                  - generic [ref=e280]: 
+                - button "" [ref=e281] [cursor=pointer]:
+                  - generic [ref=e282]: 
+                - button "" [ref=e283] [cursor=pointer]:
+                  - generic [ref=e284]: 
+              - button "" [ref=e285] [cursor=pointer]:
+                - generic [ref=e286]: 
+              - button "" [ref=e287] [cursor=pointer]:
+                - generic [ref=e288]: 
+              - button "" [ref=e289] [cursor=pointer]:
+                - generic [ref=e290]: 
+          - generic [ref=e293]:
+            - generic [ref=e294]: Regular (400) — Default body weight
+            - generic [ref=e295]: Medium (500) — Buttons and labels
+            - generic [ref=e296]: Semi-Bold (600) — Subheadings
+            - generic [ref=e297]: Bold (700) — Headlines and emphasis
+          - text: 
+        - generic [ref=e298]:
+          - code [ref=e300]: "/* Weight usage */ body { font-weight: 400; } .Button { font-weight: 500; } h3, h4 { font-weight: 600; } h1, h2 { font-weight: 700; }"
+          - button "Copy code" [ref=e301] [cursor=pointer]:
+            - generic [ref=e302]: 
+        - separator [ref=e303]
+        - heading "Line Height" [level=2] [ref=e304]
+        - paragraph [ref=e305]: Proper leading improves readability. Tighter for headings, looser for body text.
+        - table [ref=e306]:
+          - rowgroup [ref=e307]:
+            - row "Context Line Height Ratio" [ref=e308]:
+              - columnheader "Context" [ref=e309]
+              - columnheader "Line Height" [ref=e310]
+              - columnheader "Ratio" [ref=e311]
+          - rowgroup [ref=e312]:
+            - row "Display/H1 1.1 – 1.2 Tight" [ref=e313]:
+              - cell "Display/H1" [ref=e314]
+              - cell "1.1 – 1.2" [ref=e315]
+              - cell "Tight" [ref=e316]
+            - row "H2/H3 1.25 – 1.3 Snug" [ref=e317]:
+              - cell "H2/H3" [ref=e318]
+              - cell "1.25 – 1.3" [ref=e319]
+              - cell "Snug" [ref=e320]
+            - row "H4/UI 1.4 Normal" [ref=e321]:
+              - cell "H4/UI" [ref=e322]
+              - cell "1.4" [ref=e323]
+              - cell "Normal" [ref=e324]
+            - row "Body 1.5 – 1.6 Relaxed" [ref=e325]:
+              - cell "Body" [ref=e326]
+              - cell "1.5 – 1.6" [ref=e327]
+              - cell "Relaxed" [ref=e328]
+            - row "Long-form 1.7 – 1.8 Loose" [ref=e329]:
+              - cell "Long-form" [ref=e330]
+              - cell "1.7 – 1.8" [ref=e331]
+              - cell "Loose" [ref=e332]
+        - generic [ref=e333]:
+          - generic [ref=e334]:
+            - generic [ref=e335]:
+              - button " Preview" [ref=e336] [cursor=pointer]:
+                - generic [ref=e337]: 
+                - text: Preview
+              - button " HTML" [ref=e338] [cursor=pointer]:
+                - generic [ref=e339]: 
+                - text: HTML
+            - generic [ref=e340]:
+              - generic [ref=e341]:
+                - button "" [ref=e342] [cursor=pointer]:
+                  - generic [ref=e343]: 
+                - button "" [ref=e344] [cursor=pointer]:
+                  - generic [ref=e345]: 
+                - button "" [ref=e346] [cursor=pointer]:
+                  - generic [ref=e347]: 
+              - button "" [ref=e348] [cursor=pointer]:
+                - generic [ref=e349]: 
+              - button "" [ref=e350] [cursor=pointer]:
+                - generic [ref=e351]: 
+              - button "" [ref=e352] [cursor=pointer]:
+                - generic [ref=e353]: 
+          - generic [ref=e356]:
+            - generic [ref=e357]:
+              - generic [ref=e358]: "line-height: 1.2 (Headings)"
+              - generic [ref=e359]: Tight leading for headlines keeps them compact and impactful
+            - generic [ref=e360]:
+              - generic [ref=e361]: "line-height: 1.6 (Body)"
+              - generic [ref=e362]: Relaxed leading for body text improves readability over multiple lines of content
+          - text: 
+        - generic [ref=e363]:
+          - code [ref=e365]: "/* Line heights */ h1, .display { line-height: 1.1; } h2 { line-height: 1.25; } h3 { line-height: 1.3; } h4 { line-height: 1.4; } body, p { line-height: 1.5; } .prose { line-height: 1.7; }"
+          - button "Copy code" [ref=e366] [cursor=pointer]:
+            - generic [ref=e367]: 
+        - separator [ref=e368]
+        - heading "Letter Spacing" [level=2] [ref=e369]
+        - paragraph [ref=e370]: Subtle tracking adjustments improve legibility at extreme sizes.
+        - table [ref=e371]:
+          - rowgroup [ref=e372]:
+            - row "Context Letter Spacing When" [ref=e373]:
+              - columnheader "Context" [ref=e374]
+              - columnheader "Letter Spacing" [ref=e375]
+              - columnheader "When" [ref=e376]
+          - rowgroup [ref=e377]:
+            - row "Tight -0.02em Large display text" [ref=e378]:
+              - cell "Tight" [ref=e379]
+              - cell "-0.02em" [ref=e380]
+              - cell "Large display text" [ref=e381]
+            - row "Normal 0 Body text" [ref=e382]:
+              - cell "Normal" [ref=e383]
+              - cell "0" [ref=e384]
+              - cell "Body text" [ref=e385]
+            - row "Wide 0.02em Small caps, labels" [ref=e386]:
+              - cell "Wide" [ref=e387]
+              - cell "0.02em" [ref=e388]
+              - cell "Small caps, labels" [ref=e389]
+            - row "Extra Wide 0.05em Uppercase headings" [ref=e390]:
+              - cell "Extra Wide" [ref=e391]
+              - cell "0.05em" [ref=e392]
+              - cell "Uppercase headings" [ref=e393]
+        - generic [ref=e394]:
+          - generic [ref=e395]:
+            - generic [ref=e396]:
+              - button " Preview" [ref=e397] [cursor=pointer]:
+                - generic [ref=e398]: 
+                - text: Preview
+              - button " HTML" [ref=e399] [cursor=pointer]:
+                - generic [ref=e400]: 
+                - text: HTML
+            - generic [ref=e401]:
+              - generic [ref=e402]:
+                - button "" [ref=e403] [cursor=pointer]:
+                  - generic [ref=e404]: 
+                - button "" [ref=e405] [cursor=pointer]:
+                  - generic [ref=e406]: 
+                - button "" [ref=e407] [cursor=pointer]:
+                  - generic [ref=e408]: 
+              - button "" [ref=e409] [cursor=pointer]:
+                - generic [ref=e410]: 
+              - button "" [ref=e411] [cursor=pointer]:
+                - generic [ref=e412]: 
+              - button "" [ref=e413] [cursor=pointer]:
+                - generic [ref=e414]: 
+          - generic [ref=e417]:
+            - generic [ref=e418]:
+              - text: "-0.02em (Display)"
+              - generic [ref=e419]: Tight Tracking
+            - generic [ref=e420]:
+              - text: 0 (Default)
+              - generic [ref=e421]: Normal body text with default letter spacing.
+            - generic [ref=e422]:
+              - text: 0.05em (Labels)
+              - generic [ref=e423]: Section Label
+          - text: 
+        - generic [ref=e424]:
+          - code [ref=e426]: "/* Letter spacing */ .display { letter-spacing: -0.02em; } .label { letter-spacing: 0.05em; text-transform: uppercase; } .nav-group { letter-spacing: 0.05em; }"
+          - button "Copy code" [ref=e427] [cursor=pointer]:
+            - generic [ref=e428]: 
+        - separator [ref=e429]
+        - heading "Text Colors" [level=2] [ref=e430]
+        - paragraph [ref=e431]: Use semantic color tokens for consistent hierarchy.
+        - generic [ref=e432]:
+          - generic [ref=e433]:
+            - generic [ref=e434]:
+              - button " Preview" [ref=e435] [cursor=pointer]:
+                - generic [ref=e436]: 
+                - text: Preview
+              - button " HTML" [ref=e437] [cursor=pointer]:
+                - generic [ref=e438]: 
+                - text: HTML
+            - generic [ref=e439]:
+              - generic [ref=e440]:
+                - button "" [ref=e441] [cursor=pointer]:
+                  - generic [ref=e442]: 
+                - button "" [ref=e443] [cursor=pointer]:
+                  - generic [ref=e444]: 
+                - button "" [ref=e445] [cursor=pointer]:
+                  - generic [ref=e446]: 
+              - button "" [ref=e447] [cursor=pointer]:
+                - generic [ref=e448]: 
+              - button "" [ref=e449] [cursor=pointer]:
+                - generic [ref=e450]: 
+              - button "" [ref=e451] [cursor=pointer]:
+                - generic [ref=e452]: 
+          - generic [ref=e455]:
+            - generic [ref=e456]: Primary — Headlines & Body
+            - generic [ref=e457]: Secondary — Descriptions, captions, and supporting text
+            - generic [ref=e458]: Accent — Links and interactive elements
+            - generic [ref=e459]: Success — Positive messages
+            - generic [ref=e460]: Error — Error messages
+          - text: 
+        - generic [ref=e461]:
+          - code [ref=e463]: "/* Text colors */ .text-primary { color: var(--text-primary); } .text-secondary { color: var(--text-secondary); } .text-accent { color: var(--accent-primary); } .text-success { color: oklch(55% 0.15 150); } .text-error { color: oklch(55% 0.2 25); }"
+          - button "Copy code" [ref=e464] [cursor=pointer]:
+            - generic [ref=e465]: 
+        - separator [ref=e466]
+        - heading "Heading Styles" [level=2] [ref=e467]
+        - paragraph [ref=e468]: Complete heading definitions with all properties.
+        - generic [ref=e469]:
+          - generic [ref=e470]:
+            - generic [ref=e471]:
+              - button " Preview" [ref=e472] [cursor=pointer]:
+                - generic [ref=e473]: 
+                - text: Preview
+              - button " HTML" [ref=e474] [cursor=pointer]:
+                - generic [ref=e475]: 
+                - text: HTML
+            - generic [ref=e476]:
+              - generic [ref=e477]:
+                - button "" [ref=e478] [cursor=pointer]:
+                  - generic [ref=e479]: 
+                - button "" [ref=e480] [cursor=pointer]:
+                  - generic [ref=e481]: 
+                - button "" [ref=e482] [cursor=pointer]:
+                  - generic [ref=e483]: 
+              - button "" [ref=e484] [cursor=pointer]:
+                - generic [ref=e485]: 
+              - button "" [ref=e486] [cursor=pointer]:
+                - generic [ref=e487]: 
+              - button "" [ref=e488] [cursor=pointer]:
+                - generic [ref=e489]: 
+          - generic [ref=e492]:
+            - generic [ref=e493]:
+              - heading "Heading 1" [level=1] [ref=e494]
+              - code [ref=e495]: 2.5rem / 700 / 1.2 / -0.01em
+            - generic [ref=e496]:
+              - heading "Heading 2" [level=2] [ref=e497]
+              - code [ref=e498]: 2rem / 600 / 1.25 / 0
+            - generic [ref=e499]:
+              - heading "Heading 3" [level=3] [ref=e500]
+              - code [ref=e501]: 1.5rem / 600 / 1.3 / 0
+          - text: 
+        - generic [ref=e502]:
+          - code [ref=e504]: "h1 { font-size: 2.5rem; font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; } h2 { font-size: 2rem; font-weight: 600; line-height: 1.25; } h3 { font-size: 1.5rem; font-weight: 600; line-height: 1.3; } h4 { font-size: 1.25rem; font-weight: 600; line-height: 1.4; }"
+          - button "Copy code" [ref=e505] [cursor=pointer]:
+            - generic [ref=e506]: 
+        - separator [ref=e507]
+        - heading "Prose Styles" [level=2] [ref=e508]
+        - paragraph [ref=e509]: Optimized typography for long-form reading.
+        - generic [ref=e510]:
+          - generic [ref=e511]:
+            - generic [ref=e512]:
+              - button " Preview" [ref=e513] [cursor=pointer]:
+                - generic [ref=e514]: 
+                - text: Preview
+              - button " HTML" [ref=e515] [cursor=pointer]:
+                - generic [ref=e516]: 
+                - text: HTML
+            - generic [ref=e517]:
+              - generic [ref=e518]:
+                - button "" [ref=e519] [cursor=pointer]:
+                  - generic [ref=e520]: 
+                - button "" [ref=e521] [cursor=pointer]:
+                  - generic [ref=e522]: 
+                - button "" [ref=e523] [cursor=pointer]:
+                  - generic [ref=e524]: 
+              - button "" [ref=e525] [cursor=pointer]:
+                - generic [ref=e526]: 
+              - button "" [ref=e527] [cursor=pointer]:
+                - generic [ref=e528]: 
+              - button "" [ref=e529] [cursor=pointer]:
+                - generic [ref=e530]: 
+          - generic [ref=e533]:
+            - paragraph [ref=e534]: Good typography is invisible. When type is well-set, the reader doesn't notice the mechanics — they simply absorb the content. This is the goal of Carbon's typography system.
+            - paragraph [ref=e535]:
+              - text: The
+              - strong [ref=e536]: measure
+              - text: (line length) is kept between 45-75 characters for optimal readability. Combined with generous
+              - emphasis [ref=e537]: line-height
+              - text: and proper spacing between paragraphs, long-form content becomes effortless to read.
+            - paragraph [ref=e538]: Notice how your eye flows naturally from line to line without strain.
+          - text: 
+        - generic [ref=e539]:
+          - code [ref=e541]: ".prose { max-width: 65ch; /* Optimal line length */ line-height: 1.7; } .prose p + p { margin-top: var(--space-4); } .prose strong { font-weight: 600; } .prose a { color: var(--accent-primary); text-decoration: underline; text-underline-offset: 2px; }"
+          - button "Copy code" [ref=e542] [cursor=pointer]:
+            - generic [ref=e543]: 
+        - separator [ref=e544]
+        - heading "Responsive Typography" [level=2] [ref=e545]
+        - paragraph [ref=e546]: Scale type sizes at different breakpoints for optimal reading.
+        - generic [ref=e547]:
+          - code [ref=e549]:
+            - text: "/* Base (Mobile) */ html { font-size: 16px; } h1 { font-size: 2rem; } h2 { font-size: 1.5rem; } /* Tablet (768px+) */"
+            - generic [ref=e550]: "@media (min-width: 768px)"
+            - text: "{ h1 { font-size: 2.25rem; } h2 { font-size: 1.75rem; } } /* Desktop (1024px+) */"
+            - generic [ref=e551]: "@media (min-width: 1024px)"
+            - text: "{ h1 { font-size: 2.5rem; } h2 { font-size: 2rem; } }"
+          - button "Copy code" [ref=e552] [cursor=pointer]:
+            - generic [ref=e553]: 
+        - heading "Fluid Typography (Optional)" [level=3] [ref=e554]
+        - paragraph [ref=e555]: "For smoother scaling, use clamp():"
+        - generic [ref=e556]:
+          - code [ref=e558]: "h1 { /* Min: 2rem, Preferred: 5vw, Max: 3rem */ font-size: clamp(2rem, 5vw, 3rem); } h2 { font-size: clamp(1.5rem, 4vw, 2rem); }"
+          - button "Copy code" [ref=e559] [cursor=pointer]:
+            - generic [ref=e560]: 
+        - separator [ref=e561]
+        - heading "Code Typography" [level=2] [ref=e562]
+        - paragraph [ref=e563]: Monospace styles for code blocks and inline code.
+        - generic [ref=e564]:
+          - generic [ref=e565]:
+            - generic [ref=e566]:
+              - button " Preview" [ref=e567] [cursor=pointer]:
+                - generic [ref=e568]: 
+                - text: Preview
+              - button " HTML" [ref=e569] [cursor=pointer]:
+                - generic [ref=e570]: 
+                - text: HTML
+            - generic [ref=e571]:
+              - generic [ref=e572]:
+                - button "" [ref=e573] [cursor=pointer]:
+                  - generic [ref=e574]: 
+                - button "" [ref=e575] [cursor=pointer]:
+                  - generic [ref=e576]: 
+                - button "" [ref=e577] [cursor=pointer]:
+                  - generic [ref=e578]: 
+              - button "" [ref=e579] [cursor=pointer]:
+                - generic [ref=e580]: 
+              - button "" [ref=e581] [cursor=pointer]:
+                - generic [ref=e582]: 
+              - button "" [ref=e583] [cursor=pointer]:
+                - generic [ref=e584]: 
+          - generic [ref=e587]:
+            - generic [ref=e588]:
+              - generic [ref=e589]: Inline Code
+              - paragraph [ref=e590]:
+                - text: Use the
+                - code [ref=e591]: var(--space-4)
+                - text: token for standard spacing.
+            - generic [ref=e592]:
+              - generic [ref=e593]: Code Block
+              - code [ref=e595]: "function greet(name) { return `Hello, ${name}!`; }"
+          - text: 
+        - generic [ref=e596]:
+          - code [ref=e598]: "code { font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace; font-size: 0.9em; background: var(--bg-secondary); padding: 2px var(--space-1); border-radius: 3px; } pre code { font-size: 0.875rem; line-height: 1.6; background: none; padding: 0; }"
+          - button "Copy code" [ref=e599] [cursor=pointer]:
+            - generic [ref=e600]: 
+        - separator [ref=e601]
+        - heading "Best Practices" [level=2] [ref=e602]
+        - heading "Do" [level=3] [ref=e603]
+        - list [ref=e604]:
+          - listitem [ref=e605]:
+            - text: ✓
+            - strong [ref=e606]: Establish clear hierarchy
+            - text: — Size + weight should guide the eye
+          - listitem [ref=e607]:
+            - text: ✓
+            - strong [ref=e608]: Limit font variations
+            - text: — 2-3 weights max per page
+          - listitem [ref=e609]:
+            - text: ✓
+            - strong [ref=e610]: Use appropriate measure
+            - text: — 45-75 characters per line
+          - listitem [ref=e611]:
+            - text: ✓
+            - strong [ref=e612]: Add breathing room
+            - text: — Generous line-height for body text
+          - listitem [ref=e613]:
+            - text: ✓
+            - strong [ref=e614]: Test at real sizes
+            - text: — Check actual rendered output
+        - heading "Don’t" [level=3] [ref=e615]
+        - list [ref=e616]:
+          - listitem [ref=e617]:
+            - text: ✗
+            - strong [ref=e618]: Mix too many sizes
+            - text: — Stick to the scale
+          - listitem [ref=e619]:
+            - text: ✗
+            - strong [ref=e620]: Use pure black text
+            - text: — Use --text-primary (oklch(20% 0 0))
+          - listitem [ref=e621]:
+            - text: ✗
+            - strong [ref=e622]: Justify body text
+            - text: — Left-align for better readability
+          - listitem [ref=e623]:
+            - text: ✗
+            - strong [ref=e624]: Use light weights for body
+            - text: — 400 minimum for readability
+          - listitem [ref=e625]:
+            - text: ✗
+            - strong [ref=e626]: Forget mobile
+            - text: — Test typography at small viewports
+        - separator [ref=e627]
+        - heading "Quick Reference" [level=2] [ref=e628]
+        - generic [ref=e629]:
+          - code [ref=e631]: "/* Font Families */ font-family: var(--font-sans); /* DM Sans - UI & body */ font-family: var(--font-mono); /* SF Mono - code */ /* Sizes */ font-size: 3rem; /* Display */ font-size: 2.5rem; /* H1 */ font-size: 2rem; /* H2 */ font-size: 1.5rem; /* H3 */ font-size: 1.25rem; /* H4 */ font-size: 1rem; /* Body */ font-size: 0.875rem; /* Small */ font-size: 0.75rem; /* XSmall */ /* Weights */ font-weight: 400; /* Regular */ font-weight: 500; /* Medium */ font-weight: 600; /* Semi-Bold */ font-weight: 700; /* Bold */ /* Line Heights */ line-height: 1.1; /* Display */ line-height: 1.25; /* Headings */ line-height: 1.5; /* Body */ line-height: 1.7; /* Prose */"
+          - button "Copy code" [ref=e632] [cursor=pointer]:
+            - generic [ref=e633]: 
+      - paragraph [ref=e635]: "Carbon v0.2 • Last built: 2/4/2026, 5:00:12 AM"
+    - complementary [ref=e636]:
+      - navigation [ref=e637]:
+        - heading "On this page" [level=3] [ref=e638]
+        - list [ref=e639]:
+          - listitem [ref=e640]:
+            - link "Font Stack" [ref=e641] [cursor=pointer]:
+              - /url: "#font-stack"
+          - listitem [ref=e642]:
+            - link "Type Scale" [ref=e643] [cursor=pointer]:
+              - /url: "#type-scale"
+          - listitem [ref=e644]:
+            - link "Font Weights" [ref=e645] [cursor=pointer]:
+              - /url: "#font-weights"
+          - listitem [ref=e646]:
+            - link "Line Height" [ref=e647] [cursor=pointer]:
+              - /url: "#line-height"
+          - listitem [ref=e648]:
+            - link "Letter Spacing" [ref=e649] [cursor=pointer]:
+              - /url: "#letter-spacing"
+          - listitem [ref=e650]:
+            - link "Text Colors" [ref=e651] [cursor=pointer]:
+              - /url: "#text-colors"
+          - listitem [ref=e652]:
+            - link "Heading Styles" [ref=e653] [cursor=pointer]:
+              - /url: "#heading-styles"
+          - listitem [ref=e654]:
+            - link "Prose Styles" [ref=e655] [cursor=pointer]:
+              - /url: "#prose-styles"
+          - listitem [ref=e656]:
+            - link "Responsive Typography" [ref=e657] [cursor=pointer]:
+              - /url: "#responsive-typography"
+          - listitem [ref=e658]:
+            - link "Fluid Typography (Optional)" [ref=e659] [cursor=pointer]:
+              - /url: "#fluid-typography-optional-"
+          - listitem [ref=e660]:
+            - link "Code Typography" [ref=e661] [cursor=pointer]:
+              - /url: "#code-typography"
+          - listitem [ref=e662]:
+            - link "Best Practices" [ref=e663] [cursor=pointer]:
+              - /url: "#best-practices"
+          - listitem [ref=e664]:
+            - link "Do" [ref=e665] [cursor=pointer]:
+              - /url: "#do"
+          - listitem [ref=e666]:
+            - link "Don't" [ref=e667] [cursor=pointer]:
+              - /url: "#don-t"
+          - listitem [ref=e668]:
+            - link "Quick Reference" [ref=e669] [cursor=pointer]:
+              - /url: "#quick-reference"
+```
