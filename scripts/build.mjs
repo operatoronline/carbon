@@ -9,7 +9,26 @@ const md = new MarkdownIt({
     typographer: true
 });
 
-// Custom Plugin for <Preview> blocks
+// Escape HTML for display in code blocks
+function escapeHtml(str) {
+    return str
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+}
+
+// Format HTML for display (basic indentation)
+function formatHtml(html) {
+    // Remove leading/trailing whitespace from lines
+    return html.split('\n')
+        .map(line => line.trim())
+        .filter(line => line.length > 0)
+        .join('\n');
+}
+
+// Custom Plugin for <Preview> blocks (v0.2 Enhanced)
 const previewPlugin = (md) => {
     const defaultRender = md.renderer.rules.html_block || function(tokens, idx, options, env, self) {
         return self.renderToken(tokens, idx, options);
@@ -18,18 +37,71 @@ const previewPlugin = (md) => {
     md.renderer.rules.html_block = (tokens, idx, options, env, self) => {
         const content = tokens[idx].content;
         if (content.trim().startsWith('<Preview')) {
+            // Parse attributes
             const titleMatch = content.match(/title="([^"]+)"/);
             const title = titleMatch ? titleMatch[1] : 'Preview';
+            const bgMatch = content.match(/background="([^"]+)"/);
+            const defaultBg = bgMatch ? bgMatch[1] : 'default';
+            const compactMatch = content.match(/compact="true"/);
+            const isCompact = !!compactMatch;
+            
+            // Extract inner HTML content
             const innerContent = content
                 .replace(/<Preview[^>]*>/, '')
                 .replace(/<\/Preview>/, '')
                 .trim();
             
+            const formattedCode = formatHtml(innerContent);
+            const escapedCode = escapeHtml(formattedCode);
+            
+            // Generate unique ID for this preview
+            const previewId = `preview-${Math.random().toString(36).substr(2, 9)}`;
+            
+            // Build the enhanced Preview HTML
             return `
-<section class="Preview-container">
-    <header class="Preview-header">${title}</header>
-    <div class="Preview-canvas">${innerContent}</div>
-</section>`;
+<div class="Preview" id="${previewId}">
+    <div class="Preview-toolbar">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">
+                <i class="ph ph-eye"></i> Preview
+            </button>
+            <button class="Preview-tab" data-tab="html">
+                <i class="ph ph-code"></i> HTML
+            </button>
+        </div>
+        <div class="Preview-controls">
+            <div class="Preview-viewport-group">
+                <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                    <i class="ph ph-desktop"></i>
+                </button>
+                <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                    <i class="ph ph-device-tablet"></i>
+                </button>
+                <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                    <i class="ph ph-device-mobile"></i>
+                </button>
+            </div>
+            <button class="Preview-control${defaultBg === 'light' ? ' active' : ''}" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control${defaultBg === 'dark' ? ' active' : ''}" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control${defaultBg === 'checkered' ? ' active' : ''}" data-bg="checkered" title="Checkered background">
+                <i class="ph ph-grid-four"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas${defaultBg !== 'default' ? ` Preview-canvas--${defaultBg}` : ''}">${innerContent}</div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <div class="Preview-code">
+            <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+            <pre class="language-html"><code class="language-html">${escapedCode}</code></pre>
+        </div>
+    </div>
+</div>`;
         }
         return defaultRender(tokens, idx, options, env, self);
     };
@@ -42,7 +114,7 @@ const CONFIG = {
     distDir: 'dist',
     templatePath: 'templates/page.html',
     assets: ['styles', 'scripts', 'assets'],
-    version: 'v0.1'
+    version: 'v0.2'
 };
 
 async function build() {

@@ -222,4 +222,86 @@ document.addEventListener('DOMContentLoaded', () => {
 
         headings.forEach(heading => observer.observe(heading));
     }
+
+    // Enhanced Preview Component (v0.2)
+    document.querySelectorAll('.Preview').forEach(preview => {
+        // Tab switching
+        const tabs = preview.querySelectorAll('.Preview-tab');
+        const panes = preview.querySelectorAll('.Preview-pane');
+        
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = tab.dataset.tab;
+                
+                // Update tabs
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                // Update panes
+                panes.forEach(pane => {
+                    pane.classList.toggle('active', pane.dataset.pane === target);
+                });
+            });
+        });
+
+        // Background toggle
+        const bgControls = preview.querySelectorAll('.Preview-control[data-bg]');
+        const canvas = preview.querySelector('.Preview-canvas');
+        
+        bgControls.forEach(control => {
+            control.addEventListener('click', () => {
+                const bg = control.dataset.bg;
+                
+                // Update controls
+                bgControls.forEach(c => c.classList.remove('active'));
+                control.classList.add('active');
+                
+                // Update canvas background
+                canvas.classList.remove('Preview-canvas--light', 'Preview-canvas--dark', 'Preview-canvas--checkered');
+                if (bg !== 'default') {
+                    canvas.classList.add(`Preview-canvas--${bg}`);
+                }
+            });
+        });
+
+        // Viewport toggle
+        const viewportControls = preview.querySelectorAll('.Preview-control[data-viewport]');
+        
+        viewportControls.forEach(control => {
+            control.addEventListener('click', () => {
+                const viewport = control.dataset.viewport;
+                
+                // Update controls
+                viewportControls.forEach(c => c.classList.remove('active'));
+                control.classList.add('active');
+                
+                // Update canvas viewport
+                canvas.classList.remove('Preview-canvas--mobile', 'Preview-canvas--tablet');
+                if (viewport !== 'desktop') {
+                    canvas.classList.add(`Preview-canvas--${viewport}`);
+                }
+            });
+        });
+
+        // Copy buttons
+        preview.querySelectorAll('.Preview-code-copy').forEach(copyBtn => {
+            copyBtn.addEventListener('click', async () => {
+                const codePane = copyBtn.closest('.Preview-pane');
+                const code = codePane.querySelector('code')?.textContent || codePane.querySelector('pre')?.textContent || '';
+                
+                try {
+                    await navigator.clipboard.writeText(code);
+                    const originalText = copyBtn.innerHTML;
+                    copyBtn.innerHTML = '<i class="ph ph-check"></i> Copied';
+                    copyBtn.classList.add('copied');
+                    setTimeout(() => {
+                        copyBtn.innerHTML = originalText;
+                        copyBtn.classList.remove('copied');
+                    }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy:', err);
+                }
+            });
+        });
+    });
 });

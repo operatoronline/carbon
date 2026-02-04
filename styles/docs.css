@@ -5333,3 +5333,325 @@ details[open] .Accordion-icon {
   --prose-spacing: var(--space-8);
   --prose-spacing-tight: var(--space-6);
 }
+
+/* ================================================
+   Enhanced Preview Component (v0.2)
+   ================================================ */
+
+.Preview {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--space-2);
+  margin: var(--space-4) 0;
+  overflow: hidden;
+  background-color: var(--bg-primary);
+}
+
+/* Preview Toolbar */
+.Preview-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+  gap: var(--space-2);
+}
+
+.Preview-tabs {
+  display: flex;
+  gap: var(--space-1);
+}
+
+.Preview-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  border: none;
+  background: none;
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: var(--space-1);
+  transition: all 0.15s;
+}
+
+.Preview-tab:hover {
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+}
+
+.Preview-tab.active {
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  box-shadow: 0 1px 2px oklch(0% 0 0 / 0.05);
+}
+
+/* Preview Controls (right side) */
+.Preview-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.Preview-control {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+  border-radius: var(--space-1);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.15s;
+}
+
+.Preview-control:hover {
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}
+
+.Preview-control.active {
+  color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  background-color: oklch(60% 0.15 250 / 0.1);
+}
+
+/* Viewport toggles */
+.Preview-viewport-group {
+  display: flex;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--space-1);
+  overflow: hidden;
+}
+
+.Preview-viewport-group .Preview-control {
+  border: none;
+  border-radius: 0;
+  border-right: 1px solid var(--border-subtle);
+}
+
+.Preview-viewport-group .Preview-control:last-child {
+  border-right: none;
+}
+
+/* Preview Panes */
+.Preview-pane {
+  display: none;
+}
+
+.Preview-pane.active {
+  display: block;
+}
+
+/* Preview Canvas (visual preview) */
+.Preview-canvas {
+  padding: var(--space-6);
+  display: flex;
+  gap: var(--space-4);
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 80px;
+  transition: all 0.2s;
+}
+
+/* Center single items, left-align multiple */
+.Preview-canvas:has(> :only-child) {
+  justify-content: center;
+}
+
+/* Background variants */
+.Preview-canvas--light {
+  background-color: oklch(100% 0 0);
+}
+
+.Preview-canvas--dark {
+  background-color: oklch(15% 0 0);
+}
+
+.Preview-canvas--checkered {
+  background-image: 
+    linear-gradient(45deg, oklch(92% 0 0) 25%, transparent 25%),
+    linear-gradient(-45deg, oklch(92% 0 0) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, oklch(92% 0 0) 75%),
+    linear-gradient(-45deg, transparent 75%, oklch(92% 0 0) 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+  background-color: oklch(98% 0 0);
+}
+
+[data-theme="dark"] .Preview-canvas--checkered {
+  background-image: 
+    linear-gradient(45deg, oklch(20% 0 0) 25%, transparent 25%),
+    linear-gradient(-45deg, oklch(20% 0 0) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, oklch(20% 0 0) 75%),
+    linear-gradient(-45deg, transparent 75%, oklch(20% 0 0) 75%);
+  background-color: oklch(15% 0 0);
+}
+
+/* Viewport sizes */
+.Preview-canvas--mobile {
+  max-width: 375px;
+  margin: 0 auto;
+  border-left: 1px dashed var(--border-subtle);
+  border-right: 1px dashed var(--border-subtle);
+}
+
+.Preview-canvas--tablet {
+  max-width: 768px;
+  margin: 0 auto;
+  border-left: 1px dashed var(--border-subtle);
+  border-right: 1px dashed var(--border-subtle);
+}
+
+/* Code pane */
+.Preview-code {
+  position: relative;
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.Preview-code pre {
+  margin: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+.Preview-code-copy {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--space-1);
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+  z-index: 10;
+}
+
+.Preview-code-copy:hover {
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}
+
+.Preview-code-copy.copied {
+  color: oklch(55% 0.15 150);
+  border-color: oklch(55% 0.15 150);
+}
+
+/* API Reference Table */
+.ApiTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  margin: var(--space-4) 0;
+}
+
+.ApiTable th,
+.ApiTable td {
+  padding: var(--space-3);
+  text-align: left;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.ApiTable th {
+  font-weight: 600;
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ApiTable td {
+  vertical-align: top;
+}
+
+.ApiTable-prop {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-weight: 500;
+  color: oklch(55% 0.18 280);
+}
+
+.ApiTable-type {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.8rem;
+  color: oklch(55% 0.15 150);
+}
+
+.ApiTable-default {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.ApiTable-desc {
+  color: var(--text-secondary);
+}
+
+/* Variant Grid */
+.VariantGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: var(--space-4);
+  margin: var(--space-4) 0;
+}
+
+.VariantGrid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  background-color: var(--bg-secondary);
+  border-radius: var(--space-2);
+  text-align: center;
+}
+
+.VariantGrid-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Size Scale */
+.SizeScale {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background-color: var(--bg-secondary);
+  border-radius: var(--space-2);
+  margin: var(--space-4) 0;
+  flex-wrap: wrap;
+}
+
+.SizeScale-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.SizeScale-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
