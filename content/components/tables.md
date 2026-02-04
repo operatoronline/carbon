@@ -1,1242 +1,1093 @@
 # Tables
 
-Tables organize and display data in rows and columns, making it easy to scan, compare, and analyze information.
+Tables display structured data in rows and columns, making it easy to scan, compare, and analyze information. They're essential for dashboards, admin panels, and data-heavy applications.
 
 ---
 
-## Basic Table
+## Installation
 
-A standard table with header and body rows.
+Copy the table CSS from `styles/docs.css` or include the Carbon stylesheet:
 
-<Preview title="Basic Table">
-    <table class="Table">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Role</th>
-                <th>Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Aiden</td>
-                <td>Design Engineer</td>
-                <td><span class="Badge Badge--success">Active</span></td>
-            </tr>
-            <tr>
-                <td>Sarah</td>
-                <td>Product Manager</td>
-                <td><span class="Badge Badge--success">Active</span></td>
-            </tr>
-            <tr>
-                <td>Marcus</td>
-                <td>Developer</td>
-                <td><span class="Badge">Inactive</span></td>
-            </tr>
-        </tbody>
-    </table>
-</Preview>
+```html
+<link rel="stylesheet" href="carbon.min.css">
+```
+
+Then use table classes in your HTML:
 
 ```html
 <table class="Table">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Role</th>
-            <th>Status</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Aiden</td>
-            <td>Design Engineer</td>
-            <td><span class="Badge Badge--success">Active</span></td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Project Alpha</td>
+      <td>Active</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
 ---
 
-## Bordered Table
+## Usage
 
-Add borders between all cells.
+The base `.Table` class provides clean table styling with proper spacing and borders. Add modifier classes to enable features like striping, hover states, and responsive behavior.
 
-<Preview title="Bordered Table">
-    <table class="Table Table--bordered">
-        <thead>
-            <tr>
-                <th>Property</th>
-                <th>Value</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><code>--space-4</code></td>
-                <td>16px</td>
-                <td>Base spacing unit</td>
-            </tr>
-            <tr>
-                <td><code>--accent-primary</code></td>
-                <td>oklch(60% 0.15 250)</td>
-                <td>Primary brand color</td>
-            </tr>
-            <tr>
-                <td><code>--font-sans</code></td>
-                <td>DM Sans</td>
-                <td>Primary typeface</td>
-            </tr>
-        </tbody>
-    </table>
-</Preview>
-
-```html
-<table class="Table Table--bordered">...</table>
-```
-
----
-
-## Striped Rows
-
-Alternate row backgrounds for easier scanning.
-
-<Preview title="Striped Table">
-    <table class="Table Table--striped">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Event</th>
-                <th>Location</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Feb 15</td>
-                <td>Design Review</td>
-                <td>Room A</td>
-            </tr>
-            <tr>
-                <td>Feb 18</td>
-                <td>Sprint Planning</td>
-                <td>Room B</td>
-            </tr>
-            <tr>
-                <td>Feb 20</td>
-                <td>Team Standup</td>
-                <td>Virtual</td>
-            </tr>
-            <tr>
-                <td>Feb 22</td>
-                <td>Retrospective</td>
-                <td>Room A</td>
-            </tr>
-            <tr>
-                <td>Feb 25</td>
-                <td>Demo Day</td>
-                <td>Auditorium</td>
-            </tr>
-        </tbody>
-    </table>
-</Preview>
-
-```html
-<table class="Table Table--striped">...</table>
-```
-
----
-
-## Hoverable Rows
-
-Highlight rows on hover for better tracking.
-
-<Preview title="Hoverable Table">
-    <table class="Table Table--hoverable">
-        <thead>
-            <tr>
-                <th>Product</th>
-                <th>SKU</th>
-                <th>Price</th>
-                <th>Stock</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Widget Pro</td>
-                <td>WP-001</td>
-                <td>$29.99</td>
-                <td>142</td>
-            </tr>
-            <tr>
-                <td>Gadget Plus</td>
-                <td>GP-002</td>
-                <td>$49.99</td>
-                <td>89</td>
-            </tr>
-            <tr>
-                <td>Tool Basic</td>
-                <td>TB-003</td>
-                <td>$19.99</td>
-                <td>256</td>
-            </tr>
-        </tbody>
-    </table>
-</Preview>
-
-```html
-<table class="Table Table--hoverable">...</table>
-```
-
----
-
-## Compact Table
-
-Reduced padding for dense data displays.
-
-<Preview title="Compact Table">
-    <table class="Table Table--compact Table--bordered">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Value</th>
-                <th>Change</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>001</td>
-                <td>Alpha</td>
-                <td>1,234</td>
-                <td style="color: oklch(55% 0.15 150);">+5.2%</td>
-            </tr>
-            <tr>
-                <td>002</td>
-                <td>Beta</td>
-                <td>987</td>
-                <td style="color: oklch(55% 0.2 25);">-2.1%</td>
-            </tr>
-            <tr>
-                <td>003</td>
-                <td>Gamma</td>
-                <td>2,456</td>
-                <td style="color: oklch(55% 0.15 150);">+12.8%</td>
-            </tr>
-            <tr>
-                <td>004</td>
-                <td>Delta</td>
-                <td>543</td>
-                <td style="color: var(--text-secondary);">0.0%</td>
-            </tr>
-        </tbody>
-    </table>
-</Preview>
-
-```html
-<table class="Table Table--compact">...</table>
-```
-
----
-
-## Sortable Columns
-
-Indicate sortable columns with icons.
-
-<Preview title="Sortable Table">
-    <table class="Table Table--hoverable">
-        <thead>
-            <tr>
-                <th class="Table-sortable Table-sortable--asc">
-                    Name
-                    <i class="ph ph-caret-up"></i>
-                </th>
-                <th class="Table-sortable">
-                    Email
-                    <i class="ph ph-caret-up-down"></i>
-                </th>
-                <th class="Table-sortable">
-                    Joined
-                    <i class="ph ph-caret-up-down"></i>
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Alice Chen</td>
-                <td>alice@example.com</td>
-                <td>Jan 15, 2026</td>
-            </tr>
-            <tr>
-                <td>Bob Martinez</td>
-                <td>bob@example.com</td>
-                <td>Feb 2, 2026</td>
-            </tr>
-            <tr>
-                <td>Carol Kim</td>
-                <td>carol@example.com</td>
-                <td>Dec 8, 2025</td>
-            </tr>
-        </tbody>
-    </table>
-</Preview>
-
-```html
-<th class="Table-sortable Table-sortable--asc">
-    Name
-    <i class="ph ph-caret-up"></i>
-</th>
-<th class="Table-sortable">
-    Email
-    <i class="ph ph-caret-up-down"></i>
-</th>
-```
-
----
-
-## Selectable Rows
-
-Add checkboxes for row selection.
-
-<Preview title="Selectable Table">
-    <table class="Table Table--hoverable">
-        <thead>
-            <tr>
-                <th style="width: 40px;">
-                    <label class="Checkbox" style="margin: 0;">
-                        <input type="checkbox" class="Checkbox-input">
-                        <span class="Checkbox-box"></span>
-                    </label>
-                </th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Role</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="Table-row--selected">
-                <td>
-                    <label class="Checkbox" style="margin: 0;">
-                        <input type="checkbox" class="Checkbox-input" checked>
-                        <span class="Checkbox-box"></span>
-                    </label>
-                </td>
-                <td>Alice Chen</td>
-                <td>alice@example.com</td>
-                <td>Admin</td>
-            </tr>
-            <tr>
-                <td>
-                    <label class="Checkbox" style="margin: 0;">
-                        <input type="checkbox" class="Checkbox-input">
-                        <span class="Checkbox-box"></span>
-                    </label>
-                </td>
-                <td>Bob Martinez</td>
-                <td>bob@example.com</td>
-                <td>Editor</td>
-            </tr>
-            <tr class="Table-row--selected">
-                <td>
-                    <label class="Checkbox" style="margin: 0;">
-                        <input type="checkbox" class="Checkbox-input" checked>
-                        <span class="Checkbox-box"></span>
-                    </label>
-                </td>
-                <td>Carol Kim</td>
-                <td>carol@example.com</td>
-                <td>Viewer</td>
-            </tr>
-        </tbody>
-    </table>
-</Preview>
-
-```html
-<tr class="Table-row--selected">
-    <td>
-        <label class="Checkbox">
-            <input type="checkbox" class="Checkbox-input" checked>
-            <span class="Checkbox-box"></span>
-        </label>
-    </td>
-    <td>Alice Chen</td>
-    ...
-</tr>
-```
-
----
-
-## Table with Actions
-
-Add action buttons to each row.
-
-<Preview title="Table with Actions">
-    <table class="Table Table--hoverable">
-        <thead>
-            <tr>
-                <th>Project</th>
-                <th>Owner</th>
-                <th>Status</th>
-                <th style="width: 100px;"></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    <div style="font-weight: 500;">Carbon Design</div>
-                    <div style="font-size: 0.8rem; color: var(--text-secondary);">Design system</div>
-                </td>
-                <td>Aiden</td>
-                <td><span class="Badge Badge--success">Active</span></td>
-                <td>
-                    <div style="display: flex; gap: var(--space-1);">
-                        <button class="Button Button--icon Button--ghost Button--small" aria-label="Edit">
-                            <i class="ph ph-pencil"></i>
-                        </button>
-                        <button class="Button Button--icon Button--ghost Button--small" aria-label="Delete">
-                            <i class="ph ph-trash"></i>
-                        </button>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div style="font-weight: 500;">Marketing Site</div>
-                    <div style="font-size: 0.8rem; color: var(--text-secondary);">Website</div>
-                </td>
-                <td>Sarah</td>
-                <td><span class="Badge Badge--warning">Review</span></td>
-                <td>
-                    <div style="display: flex; gap: var(--space-1);">
-                        <button class="Button Button--icon Button--ghost Button--small" aria-label="Edit">
-                            <i class="ph ph-pencil"></i>
-                        </button>
-                        <button class="Button Button--icon Button--ghost Button--small" aria-label="Delete">
-                            <i class="ph ph-trash"></i>
-                        </button>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<Preview>
+<table class="Table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Role</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Alice Chen</td>
+      <td>alice@example.com</td>
+      <td>Admin</td>
+    </tr>
+    <tr>
+      <td>Bob Smith</td>
+      <td>bob@example.com</td>
+      <td>Editor</td>
+    </tr>
+    <tr>
+      <td>Carol Davis</td>
+      <td>carol@example.com</td>
+      <td>Viewer</td>
+    </tr>
+  </tbody>
+</table>
 </Preview>
 
 ---
 
-## Responsive Table
+## Examples
 
-Horizontal scroll for tables on small screens.
+### Basic Table
 
-<Preview title="Responsive Table">
-    <div class="Table-responsive">
-        <table class="Table">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Product Name</th>
-                    <th>Category</th>
-                    <th>Price</th>
-                    <th>Stock</th>
-                    <th>Last Updated</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>P001</td>
-                    <td>Wireless Headphones Pro</td>
-                    <td>Electronics</td>
-                    <td>$149.99</td>
-                    <td>234</td>
-                    <td>Feb 2, 2026</td>
-                    <td><span class="Badge Badge--success">In Stock</span></td>
-                </tr>
-                <tr>
-                    <td>P002</td>
-                    <td>Mechanical Keyboard RGB</td>
-                    <td>Electronics</td>
-                    <td>$89.99</td>
-                    <td>56</td>
-                    <td>Feb 1, 2026</td>
-                    <td><span class="Badge Badge--warning">Low Stock</span></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+A simple table with header row and body content. The base `.Table` class handles typography, spacing, and subtle borders.
+
+<Preview>
+<table class="Table">
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Category</th>
+      <th>Price</th>
+      <th>Stock</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Wireless Headphones</td>
+      <td>Electronics</td>
+      <td>$149.00</td>
+      <td>234</td>
+    </tr>
+    <tr>
+      <td>Ergonomic Keyboard</td>
+      <td>Electronics</td>
+      <td>$89.00</td>
+      <td>156</td>
+    </tr>
+    <tr>
+      <td>Standing Desk Mat</td>
+      <td>Furniture</td>
+      <td>$45.00</td>
+      <td>89</td>
+    </tr>
+  </tbody>
+</table>
 </Preview>
 
-```html
-<div class="Table-responsive">
-    <table class="Table">...</table>
-</div>
-```
+### Striped Rows
 
----
+Alternating row colors improve readability for large datasets. Add `.Table--striped` for zebra striping.
 
-## Sticky Header
-
-Keep header visible while scrolling.
-
-<Preview title="Sticky Header Table">
-    <div class="Table-container" style="max-height: 200px; overflow-y: auto;">
-        <table class="Table Table--stickyHeader Table--striped">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Department</th>
-                    <th>Location</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Alice Chen</td><td>Engineering</td><td>SF</td></tr>
-                <tr><td>Bob Martinez</td><td>Design</td><td>NYC</td></tr>
-                <tr><td>Carol Kim</td><td>Product</td><td>LA</td></tr>
-                <tr><td>David Lee</td><td>Engineering</td><td>SF</td></tr>
-                <tr><td>Emma Wilson</td><td>Marketing</td><td>NYC</td></tr>
-                <tr><td>Frank Brown</td><td>Sales</td><td>Chicago</td></tr>
-                <tr><td>Grace Taylor</td><td>Engineering</td><td>Remote</td></tr>
-                <tr><td>Henry Davis</td><td>Design</td><td>SF</td></tr>
-            </tbody>
-        </table>
-    </div>
+<Preview>
+<table class="Table Table--striped">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Description</th>
+      <th>Amount</th>
+      <th>Balance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Feb 1, 2026</td>
+      <td>Opening Balance</td>
+      <td>—</td>
+      <td>$5,000.00</td>
+    </tr>
+    <tr>
+      <td>Feb 2, 2026</td>
+      <td>Wire Transfer</td>
+      <td>+$2,500.00</td>
+      <td>$7,500.00</td>
+    </tr>
+    <tr>
+      <td>Feb 3, 2026</td>
+      <td>Software License</td>
+      <td>-$299.00</td>
+      <td>$7,201.00</td>
+    </tr>
+    <tr>
+      <td>Feb 3, 2026</td>
+      <td>Office Supplies</td>
+      <td>-$85.50</td>
+      <td>$7,115.50</td>
+    </tr>
+    <tr>
+      <td>Feb 4, 2026</td>
+      <td>Client Payment</td>
+      <td>+$1,200.00</td>
+      <td>$8,315.50</td>
+    </tr>
+  </tbody>
+</table>
 </Preview>
 
-```html
-<div class="Table-container" style="max-height: 200px; overflow-y: auto;">
-    <table class="Table Table--stickyHeader">...</table>
-</div>
-```
+### Hoverable Rows
 
----
+Highlight rows on hover for better focus. Add `.Table--hoverable` to enable hover states.
 
-## Pagination
-
-Add pagination below tables for large data sets.
-
-<Preview title="Table with Pagination">
-    <div class="Table-wrapper">
-        <table class="Table Table--hoverable">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Role</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Alice Chen</td>
-                    <td>alice@example.com</td>
-                    <td>Admin</td>
-                    <td><span class="Badge Badge--success">Active</span></td>
-                </tr>
-                <tr>
-                    <td>Bob Martinez</td>
-                    <td>bob@example.com</td>
-                    <td>Editor</td>
-                    <td><span class="Badge Badge--success">Active</span></td>
-                </tr>
-                <tr>
-                    <td>Carol Kim</td>
-                    <td>carol@example.com</td>
-                    <td>Viewer</td>
-                    <td><span class="Badge">Inactive</span></td>
-                </tr>
-                <tr>
-                    <td>David Lee</td>
-                    <td>david@example.com</td>
-                    <td>Editor</td>
-                    <td><span class="Badge Badge--success">Active</span></td>
-                </tr>
-                <tr>
-                    <td>Emma Wilson</td>
-                    <td>emma@example.com</td>
-                    <td>Viewer</td>
-                    <td><span class="Badge Badge--warning">Pending</span></td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="Table-pagination">
-            <span class="Table-pagination-info">Showing 1-5 of 24 results</span>
-            <div class="Table-pagination-controls">
-                <button class="Button Button--icon Button--secondary Button--small" disabled aria-label="Previous page">
-                    <i class="ph ph-caret-left"></i>
-                </button>
-                <button class="Button Button--secondary Button--small Table-pagination-page Table-pagination-page--active">1</button>
-                <button class="Button Button--secondary Button--small Table-pagination-page">2</button>
-                <button class="Button Button--secondary Button--small Table-pagination-page">3</button>
-                <span class="Table-pagination-ellipsis">...</span>
-                <button class="Button Button--secondary Button--small Table-pagination-page">5</button>
-                <button class="Button Button--icon Button--secondary Button--small" aria-label="Next page">
-                    <i class="ph ph-caret-right"></i>
-                </button>
-            </div>
-        </div>
-    </div>
+<Preview>
+<table class="Table Table--hoverable">
+  <thead>
+    <tr>
+      <th>Employee</th>
+      <th>Department</th>
+      <th>Location</th>
+      <th>Start Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Emma Wilson</td>
+      <td>Engineering</td>
+      <td>San Francisco</td>
+      <td>Jan 15, 2024</td>
+    </tr>
+    <tr>
+      <td>James Lee</td>
+      <td>Design</td>
+      <td>New York</td>
+      <td>Mar 8, 2024</td>
+    </tr>
+    <tr>
+      <td>Sofia Martinez</td>
+      <td>Marketing</td>
+      <td>Austin</td>
+      <td>Jul 22, 2024</td>
+    </tr>
+  </tbody>
+</table>
 </Preview>
 
-```html
+### Bordered Table
+
+Full borders around all cells. Add `.Table--bordered` for a grid appearance.
+
+<Preview>
+<table class="Table Table--bordered">
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Free</th>
+      <th>Pro</th>
+      <th>Enterprise</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Projects</td>
+      <td>3</td>
+      <td>Unlimited</td>
+      <td>Unlimited</td>
+    </tr>
+    <tr>
+      <td>Team Members</td>
+      <td>1</td>
+      <td>10</td>
+      <td>Unlimited</td>
+    </tr>
+    <tr>
+      <td>Storage</td>
+      <td>1 GB</td>
+      <td>100 GB</td>
+      <td>1 TB</td>
+    </tr>
+    <tr>
+      <td>Support</td>
+      <td>Community</td>
+      <td>Email</td>
+      <td>24/7 Phone</td>
+    </tr>
+  </tbody>
+</table>
+</Preview>
+
+### Responsive / Scrollable Table
+
+Wrap tables in `.Table-wrapper` for horizontal scrolling on small screens.
+
+<Preview>
 <div class="Table-wrapper">
-    <table class="Table">...</table>
-    <div class="Table-pagination">
-        <span class="Table-pagination-info">Showing 1-10 of 100 results</span>
-        <div class="Table-pagination-controls">
-            <button class="Button Button--icon Button--secondary Button--small" aria-label="Previous">
-                <i class="ph ph-caret-left"></i>
-            </button>
-            <button class="Button Button--secondary Button--small Table-pagination-page--active">1</button>
-            <button class="Button Button--secondary Button--small">2</button>
-            <button class="Button Button--secondary Button--small">3</button>
-            <button class="Button Button--icon Button--secondary Button--small" aria-label="Next">
-                <i class="ph ph-caret-right"></i>
-            </button>
-        </div>
-    </div>
+  <table class="Table">
+    <thead>
+      <tr>
+        <th>Order ID</th>
+        <th>Customer</th>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Unit Price</th>
+        <th>Total</th>
+        <th>Status</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>#ORD-001</td>
+        <td>Acme Corp</td>
+        <td>Widget Pro</td>
+        <td>50</td>
+        <td>$25.00</td>
+        <td>$1,250.00</td>
+        <td><span class="Badge Badge--success">Shipped</span></td>
+        <td>Feb 1, 2026</td>
+      </tr>
+      <tr>
+        <td>#ORD-002</td>
+        <td>Tech Solutions</td>
+        <td>Gadget Plus</td>
+        <td>25</td>
+        <td>$75.00</td>
+        <td>$1,875.00</td>
+        <td><span class="Badge Badge--warning">Processing</span></td>
+        <td>Feb 2, 2026</td>
+      </tr>
+      <tr>
+        <td>#ORD-003</td>
+        <td>Global Industries</td>
+        <td>Device Max</td>
+        <td>100</td>
+        <td>$50.00</td>
+        <td>$5,000.00</td>
+        <td><span class="Badge Badge--info">Pending</span></td>
+        <td>Feb 3, 2026</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
+</Preview>
+
+### Sortable Headers
+
+Add `.Table--sortable` and use `.Table-sort` buttons in headers. JavaScript handles the sorting logic.
+
+<Preview>
+<table class="Table Table--sortable Table--hoverable">
+  <thead>
+    <tr>
+      <th>
+        <button class="Table-sort Table-sort--active" aria-sort="ascending">
+          Name
+          <i class="ph ph-caret-up Table-sortIcon"></i>
+        </button>
+      </th>
+      <th>
+        <button class="Table-sort">
+          Size
+          <i class="ph ph-caret-up-down Table-sortIcon"></i>
+        </button>
+      </th>
+      <th>
+        <button class="Table-sort">
+          Modified
+          <i class="ph ph-caret-up-down Table-sortIcon"></i>
+        </button>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><i class="ph ph-folder Table-fileIcon"></i> Documents</td>
+      <td>—</td>
+      <td>Feb 4, 2026</td>
+    </tr>
+    <tr>
+      <td><i class="ph ph-folder Table-fileIcon"></i> Images</td>
+      <td>—</td>
+      <td>Feb 3, 2026</td>
+    </tr>
+    <tr>
+      <td><i class="ph ph-file-text Table-fileIcon"></i> notes.md</td>
+      <td>4.2 KB</td>
+      <td>Feb 2, 2026</td>
+    </tr>
+    <tr>
+      <td><i class="ph ph-file-text Table-fileIcon"></i> readme.txt</td>
+      <td>1.8 KB</td>
+      <td>Feb 1, 2026</td>
+    </tr>
+  </tbody>
+</table>
+</Preview>
+
+### Selectable Rows
+
+Add checkboxes for row selection. Use `.Table--selectable` for proper alignment.
+
+<Preview>
+<table class="Table Table--selectable Table--hoverable">
+  <thead>
+    <tr>
+      <th class="Table-checkbox">
+        <input type="checkbox" class="Checkbox" aria-label="Select all rows">
+      </th>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Size</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="Table-row--selected">
+      <td class="Table-checkbox">
+        <input type="checkbox" class="Checkbox" checked aria-label="Select row">
+      </td>
+      <td>project-v2.zip</td>
+      <td>Archive</td>
+      <td>45.2 MB</td>
+    </tr>
+    <tr>
+      <td class="Table-checkbox">
+        <input type="checkbox" class="Checkbox" aria-label="Select row">
+      </td>
+      <td>design-specs.pdf</td>
+      <td>Document</td>
+      <td>2.8 MB</td>
+    </tr>
+    <tr class="Table-row--selected">
+      <td class="Table-checkbox">
+        <input type="checkbox" class="Checkbox" checked aria-label="Select row">
+      </td>
+      <td>logo-final.svg</td>
+      <td>Image</td>
+      <td>128 KB</td>
+    </tr>
+    <tr>
+      <td class="Table-checkbox">
+        <input type="checkbox" class="Checkbox" aria-label="Select row">
+      </td>
+      <td>meeting-notes.docx</td>
+      <td>Document</td>
+      <td>340 KB</td>
+    </tr>
+  </tbody>
+</table>
+</Preview>
+
+### Expandable Rows
+
+Rows that expand to show additional details. Use `.Table-expandBtn` to toggle nested content.
+
+<Preview>
+<table class="Table Table--expandable Table--hoverable">
+  <thead>
+    <tr>
+      <th class="Table-expandCol"></th>
+      <th>Order</th>
+      <th>Customer</th>
+      <th>Total</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="Table-row--expandable">
+      <td class="Table-expandCol">
+        <button class="Table-expandBtn" aria-expanded="false" aria-label="Expand row">
+          <i class="ph ph-caret-right"></i>
+        </button>
+      </td>
+      <td>#ORD-1234</td>
+      <td>John Doe</td>
+      <td>$299.00</td>
+      <td><span class="Badge Badge--success">Complete</span></td>
+    </tr>
+    <tr class="Table-row--expanded">
+      <td class="Table-expandCol">
+        <button class="Table-expandBtn Table-expandBtn--open" aria-expanded="true" aria-label="Collapse row">
+          <i class="ph ph-caret-down"></i>
+        </button>
+      </td>
+      <td>#ORD-1235</td>
+      <td>Jane Smith</td>
+      <td>$549.00</td>
+      <td><span class="Badge Badge--warning">Processing</span></td>
+    </tr>
+    <tr class="Table-expandContent">
+      <td colspan="5">
+        <div class="Table-expandPanel">
+          <div class="Table-expandDetail">
+            <strong>Shipping Address:</strong> 123 Main St, New York, NY 10001
+          </div>
+          <div class="Table-expandDetail">
+            <strong>Items:</strong> Widget Pro (2), Gadget Plus (1)
+          </div>
+          <div class="Table-expandDetail">
+            <strong>Notes:</strong> Please leave at front door
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr class="Table-row--expandable">
+      <td class="Table-expandCol">
+        <button class="Table-expandBtn" aria-expanded="false" aria-label="Expand row">
+          <i class="ph ph-caret-right"></i>
+        </button>
+      </td>
+      <td>#ORD-1236</td>
+      <td>Bob Johnson</td>
+      <td>$125.00</td>
+      <td><span class="Badge Badge--info">Pending</span></td>
+    </tr>
+  </tbody>
+</table>
+</Preview>
+
+### Sticky Header
+
+Keep headers visible while scrolling long tables. Add `.Table--stickyHeader` and set a max-height on the wrapper.
+
+<Preview>
+<div class="Table-wrapper Table-wrapper--scrollable" style="max-height: 240px;">
+  <table class="Table Table--stickyHeader Table--striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Event</th>
+        <th>User</th>
+        <th>Timestamp</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>001</td>
+        <td>User Login</td>
+        <td>alice@example.com</td>
+        <td>04:02:15</td>
+      </tr>
+      <tr>
+        <td>002</td>
+        <td>Page View</td>
+        <td>alice@example.com</td>
+        <td>04:02:18</td>
+      </tr>
+      <tr>
+        <td>003</td>
+        <td>File Upload</td>
+        <td>bob@example.com</td>
+        <td>04:03:22</td>
+      </tr>
+      <tr>
+        <td>004</td>
+        <td>Settings Change</td>
+        <td>alice@example.com</td>
+        <td>04:05:01</td>
+      </tr>
+      <tr>
+        <td>005</td>
+        <td>User Logout</td>
+        <td>bob@example.com</td>
+        <td>04:08:45</td>
+      </tr>
+      <tr>
+        <td>006</td>
+        <td>User Login</td>
+        <td>carol@example.com</td>
+        <td>04:10:12</td>
+      </tr>
+      <tr>
+        <td>007</td>
+        <td>API Request</td>
+        <td>system</td>
+        <td>04:12:33</td>
+      </tr>
+      <tr>
+        <td>008</td>
+        <td>Error</td>
+        <td>system</td>
+        <td>04:15:00</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</Preview>
+
+### Compact / Dense Table
+
+Reduce padding for data-dense interfaces. Add `.Table--compact` for tighter spacing.
+
+<Preview>
+<table class="Table Table--compact Table--striped Table--bordered">
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Value</th>
+      <th>Type</th>
+      <th>Updated</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>API_KEY</code></td>
+      <td><code>sk_live_***</code></td>
+      <td>Secret</td>
+      <td>2h ago</td>
+    </tr>
+    <tr>
+      <td><code>DEBUG_MODE</code></td>
+      <td><code>false</code></td>
+      <td>Boolean</td>
+      <td>1d ago</td>
+    </tr>
+    <tr>
+      <td><code>MAX_UPLOAD_SIZE</code></td>
+      <td><code>10485760</code></td>
+      <td>Number</td>
+      <td>3d ago</td>
+    </tr>
+    <tr>
+      <td><code>TIMEZONE</code></td>
+      <td><code>UTC</code></td>
+      <td>String</td>
+      <td>7d ago</td>
+    </tr>
+  </tbody>
+</table>
+</Preview>
+
+### Table with Actions Column
+
+Add action buttons in the last column for row-level operations.
+
+<Preview>
+<table class="Table Table--hoverable">
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Email</th>
+      <th>Role</th>
+      <th>Status</th>
+      <th class="Table-actions">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <div class="Table-user">
+          <div class="Avatar Avatar--small">AC</div>
+          <span>Alice Chen</span>
+        </div>
+      </td>
+      <td>alice@example.com</td>
+      <td>Admin</td>
+      <td><span class="Badge Badge--success">Active</span></td>
+      <td class="Table-actions">
+        <button class="Button Button--icon Button--ghost Button--small" aria-label="Edit user">
+          <i class="ph ph-pencil"></i>
+        </button>
+        <button class="Button Button--icon Button--ghost Button--small" aria-label="Delete user">
+          <i class="ph ph-trash"></i>
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="Table-user">
+          <div class="Avatar Avatar--small">BS</div>
+          <span>Bob Smith</span>
+        </div>
+      </td>
+      <td>bob@example.com</td>
+      <td>Editor</td>
+      <td><span class="Badge Badge--success">Active</span></td>
+      <td class="Table-actions">
+        <button class="Button Button--icon Button--ghost Button--small" aria-label="Edit user">
+          <i class="ph ph-pencil"></i>
+        </button>
+        <button class="Button Button--icon Button--ghost Button--small" aria-label="Delete user">
+          <i class="ph ph-trash"></i>
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="Table-user">
+          <div class="Avatar Avatar--small">CD</div>
+          <span>Carol Davis</span>
+        </div>
+      </td>
+      <td>carol@example.com</td>
+      <td>Viewer</td>
+      <td><span class="Badge Badge--muted">Inactive</span></td>
+      <td class="Table-actions">
+        <button class="Button Button--icon Button--ghost Button--small" aria-label="Edit user">
+          <i class="ph ph-pencil"></i>
+        </button>
+        <button class="Button Button--icon Button--ghost Button--small" aria-label="Delete user">
+          <i class="ph ph-trash"></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</Preview>
+
+### Pagination
+
+Combine tables with pagination controls for large datasets.
+
+<Preview>
+<div class="Table-container">
+  <table class="Table Table--hoverable">
+    <thead>
+      <tr>
+        <th>Invoice</th>
+        <th>Client</th>
+        <th>Amount</th>
+        <th>Date</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>#INV-0042</td>
+        <td>Acme Corporation</td>
+        <td>$3,450.00</td>
+        <td>Jan 28, 2026</td>
+        <td><span class="Badge Badge--success">Paid</span></td>
+      </tr>
+      <tr>
+        <td>#INV-0041</td>
+        <td>Tech Startup Inc</td>
+        <td>$1,200.00</td>
+        <td>Jan 25, 2026</td>
+        <td><span class="Badge Badge--success">Paid</span></td>
+      </tr>
+      <tr>
+        <td>#INV-0040</td>
+        <td>Design Studio</td>
+        <td>$890.00</td>
+        <td>Jan 22, 2026</td>
+        <td><span class="Badge Badge--warning">Pending</span></td>
+      </tr>
+      <tr>
+        <td>#INV-0039</td>
+        <td>Marketing Agency</td>
+        <td>$2,100.00</td>
+        <td>Jan 18, 2026</td>
+        <td><span class="Badge Badge--danger">Overdue</span></td>
+      </tr>
+      <tr>
+        <td>#INV-0038</td>
+        <td>Consulting LLC</td>
+        <td>$4,500.00</td>
+        <td>Jan 15, 2026</td>
+        <td><span class="Badge Badge--success">Paid</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="Table-pagination">
+    <span class="Table-pageInfo">Showing 1-5 of 42 results</span>
+    <div class="Table-pageControls">
+      <button class="Button Button--icon Button--secondary Button--small" disabled aria-label="Previous page">
+        <i class="ph ph-caret-left"></i>
+      </button>
+      <button class="Button Button--secondary Button--small Table-pageBtn--active">1</button>
+      <button class="Button Button--ghost Button--small">2</button>
+      <button class="Button Button--ghost Button--small">3</button>
+      <span class="Table-pageEllipsis">...</span>
+      <button class="Button Button--ghost Button--small">9</button>
+      <button class="Button Button--icon Button--secondary Button--small" aria-label="Next page">
+        <i class="ph ph-caret-right"></i>
+      </button>
+    </div>
+  </div>
+</div>
+</Preview>
+
+---
+
+## Customization
+
+Override table styles using CSS custom properties:
+
+```css
+/* Custom table colors */
+.Table {
+  --table-border-color: oklch(85% 0 0);
+  --table-header-bg: oklch(97% 0 0);
+  --table-stripe-bg: oklch(98% 0 0);
+  --table-hover-bg: oklch(95% 0.02 250);
+  --table-selected-bg: oklch(95% 0.05 250);
+}
+
+/* Dark mode overrides */
+[data-theme="dark"] .Table {
+  --table-border-color: oklch(30% 0 0);
+  --table-header-bg: oklch(20% 0 0);
+  --table-stripe-bg: oklch(18% 0 0);
+  --table-hover-bg: oklch(25% 0.02 250);
+  --table-selected-bg: oklch(25% 0.05 250);
+}
+
+/* Custom compact sizing */
+.Table--extra-compact {
+  --table-cell-padding-y: var(--space-1);
+  --table-cell-padding-x: var(--space-2);
+  font-size: 0.75rem;
+}
+
+/* Accent header row */
+.Table--accent-header thead {
+  background: var(--accent);
+  color: white;
+}
 ```
 
-<Preview title="Pagination with Rows Per Page">
-    <div class="Table-pagination" style="border-top: none;">
-        <div style="display: flex; align-items: center; gap: var(--space-2);">
-            <span style="font-size: 0.875rem; color: var(--text-secondary);">Rows per page:</span>
-            <select class="Select" style="width: auto; padding: var(--space-1) var(--space-6) var(--space-1) var(--space-2); font-size: 0.875rem;">
-                <option>10</option>
-                <option>25</option>
-                <option>50</option>
-                <option>100</option>
-            </select>
-        </div>
-        <span class="Table-pagination-info">1-10 of 156</span>
-        <div class="Table-pagination-controls">
-            <button class="Button Button--icon Button--ghost Button--small" disabled aria-label="First page">
-                <i class="ph ph-caret-double-left"></i>
-            </button>
-            <button class="Button Button--icon Button--ghost Button--small" disabled aria-label="Previous page">
-                <i class="ph ph-caret-left"></i>
-            </button>
-            <button class="Button Button--icon Button--ghost Button--small" aria-label="Next page">
-                <i class="ph ph-caret-right"></i>
-            </button>
-            <button class="Button Button--icon Button--ghost Button--small" aria-label="Last page">
-                <i class="ph ph-caret-double-right"></i>
-            </button>
-        </div>
-    </div>
-</Preview>
-
 ---
 
-## Empty State
+## API Reference
 
-Show a message when no data is available.
+### Base Classes
 
-<Preview title="Empty Table">
-    <table class="Table">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td colspan="3" class="Table-empty">
-                    <div style="text-align: center; padding: var(--space-8);">
-                        <i class="ph ph-folder-open" style="font-size: 2.5rem; color: var(--text-secondary); margin-bottom: var(--space-3);"></i>
-                        <p style="margin: 0; color: var(--text-secondary);">No data available</p>
-                        <button class="Button Button--primary Button--small" style="margin-top: var(--space-4);">Add First Entry</button>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</Preview>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Table</code></td>
+<td class="ApiTable-desc">Base table styles (required)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Table-wrapper</code></td>
+<td class="ApiTable-desc">Responsive wrapper for horizontal scrolling</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Table-container</code></td>
+<td class="ApiTable-desc">Container with pagination area</td>
+</tr>
+</tbody>
+</table>
 
----
+### Variant Classes
 
-## Loading State
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Table--striped</code></td>
+<td class="ApiTable-desc">Alternating row background colors</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Table--hoverable</code></td>
+<td class="ApiTable-desc">Highlight rows on hover</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Table--bordered</code></td>
+<td class="ApiTable-desc">Full borders around all cells</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Table--compact</code></td>
+<td class="ApiTable-desc">Reduced cell padding for dense data</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Table--stickyHeader</code></td>
+<td class="ApiTable-desc">Fixed header during vertical scroll</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Table--selectable</code></td>
+<td class="ApiTable-desc">Optimized for row selection with checkboxes</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Table--sortable</code></td>
+<td class="ApiTable-desc">Styled for sortable column headers</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Table--expandable</code></td>
+<td class="ApiTable-desc">Support for expandable row content</td>
+</tr>
+</tbody>
+</table>
 
-Skeleton rows while data loads.
+### Row Classes
 
-<Preview title="Loading Table">
-    <table class="Table">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Role</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><div class="Skeleton Skeleton--text" style="width: 120px;"></div></td>
-                <td><div class="Skeleton Skeleton--text" style="width: 180px;"></div></td>
-                <td><div class="Skeleton Skeleton--text" style="width: 80px;"></div></td>
-            </tr>
-            <tr>
-                <td><div class="Skeleton Skeleton--text" style="width: 100px;"></div></td>
-                <td><div class="Skeleton Skeleton--text" style="width: 160px;"></div></td>
-                <td><div class="Skeleton Skeleton--text" style="width: 60px;"></div></td>
-            </tr>
-            <tr>
-                <td><div class="Skeleton Skeleton--text" style="width: 140px;"></div></td>
-                <td><div class="Skeleton Skeleton--text" style="width: 200px;"></div></td>
-                <td><div class="Skeleton Skeleton--text" style="width: 70px;"></div></td>
-            </tr>
-        </tbody>
-    </table>
-</Preview>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Table-row--selected</code></td>
+<td class="ApiTable-desc">Highlighted selected row state</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Table-row--expandable</code></td>
+<td class="ApiTable-desc">Row that can be expanded</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Table-row--expanded</code></td>
+<td class="ApiTable-desc">Currently expanded row</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Table-expandContent</code></td>
+<td class="ApiTable-desc">Row containing expanded content</td>
+</tr>
+</tbody>
+</table>
 
----
+### Cell Classes
 
-## Column Alignment
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Table-checkbox</code></td>
+<td class="ApiTable-desc">Checkbox cell with proper alignment</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Table-actions</code></td>
+<td class="ApiTable-desc">Actions column (right-aligned)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Table-expandCol</code></td>
+<td class="ApiTable-desc">Expand/collapse button column</td>
+</tr>
+</tbody>
+</table>
 
-Align content by type.
+### Interactive Elements
 
-<Preview title="Column Alignment">
-    <table class="Table Table--bordered">
-        <thead>
-            <tr>
-                <th>Item</th>
-                <th class="Table-cell--right">Quantity</th>
-                <th class="Table-cell--right">Price</th>
-                <th class="Table-cell--right">Total</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Widget A</td>
-                <td class="Table-cell--right">5</td>
-                <td class="Table-cell--right">$10.00</td>
-                <td class="Table-cell--right">$50.00</td>
-            </tr>
-            <tr>
-                <td>Widget B</td>
-                <td class="Table-cell--right">3</td>
-                <td class="Table-cell--right">$25.00</td>
-                <td class="Table-cell--right">$75.00</td>
-            </tr>
-            <tr>
-                <td>Widget C</td>
-                <td class="Table-cell--right">10</td>
-                <td class="Table-cell--right">$5.00</td>
-                <td class="Table-cell--right">$50.00</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="3" class="Table-cell--right" style="font-weight: 600;">Subtotal</td>
-                <td class="Table-cell--right" style="font-weight: 600;">$175.00</td>
-            </tr>
-        </tfoot>
-    </table>
-</Preview>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Table-sort</code></td>
+<td class="ApiTable-desc">Sortable column header button</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Table-sort--active</code></td>
+<td class="ApiTable-desc">Currently sorted column</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Table-sortIcon</code></td>
+<td class="ApiTable-desc">Sort direction indicator icon</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Table-expandBtn</code></td>
+<td class="ApiTable-desc">Row expand/collapse button</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Table-expandBtn--open</code></td>
+<td class="ApiTable-desc">Expanded state for button</td>
+</tr>
+</tbody>
+</table>
 
-```html
-<th class="Table-cell--right">Price</th>
-<td class="Table-cell--right">$10.00</td>
-```
+### Pagination Classes
 
----
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Table-pagination</code></td>
+<td class="ApiTable-desc">Pagination controls container</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Table-pageInfo</code></td>
+<td class="ApiTable-desc">"Showing X of Y" text</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Table-pageControls</code></td>
+<td class="ApiTable-desc">Page buttons container</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Table-pageBtn--active</code></td>
+<td class="ApiTable-desc">Current page button</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Table-pageEllipsis</code></td>
+<td class="ApiTable-desc">Ellipsis between page numbers</td>
+</tr>
+</tbody>
+</table>
 
-## Real-World Examples
+### Utility Classes
 
-### User Management Table
-
-<Preview title="User Management Table">
-    <div class="Table-wrapper">
-        <div class="Table-toolbar">
-            <div class="Input-wrapper" style="max-width: 240px;">
-                <i class="ph ph-magnifying-glass Input-icon"></i>
-                <input type="text" class="Input Input--small Input--withIcon" placeholder="Search users...">
-            </div>
-            <div style="display: flex; gap: var(--space-2);">
-                <select class="Select" style="width: auto; padding: var(--space-1) var(--space-6) var(--space-1) var(--space-2); font-size: 0.875rem;">
-                    <option>All Roles</option>
-                    <option>Admin</option>
-                    <option>Editor</option>
-                    <option>Viewer</option>
-                </select>
-                <button class="Button Button--primary Button--small">
-                    <i class="ph ph-plus Button-icon"></i>
-                    Add User
-                </button>
-            </div>
-        </div>
-        <table class="Table Table--hoverable">
-            <thead>
-                <tr>
-                    <th style="width: 40px;">
-                        <label class="Checkbox" style="margin: 0;">
-                            <input type="checkbox" class="Checkbox-input">
-                            <span class="Checkbox-box"></span>
-                        </label>
-                    </th>
-                    <th class="Table-sortable Table-sortable--asc">User <i class="ph ph-caret-up"></i></th>
-                    <th>Email</th>
-                    <th>Role</th>
-                    <th>Status</th>
-                    <th class="Table-sortable">Last Active <i class="ph ph-caret-up-down"></i></th>
-                    <th style="width: 80px;"></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><label class="Checkbox" style="margin: 0;"><input type="checkbox" class="Checkbox-input"><span class="Checkbox-box"></span></label></td>
-                    <td>
-                        <div style="display: flex; align-items: center; gap: var(--space-3);">
-                            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=user1" class="Avatar Avatar--small" alt="Alice">
-                            <span style="font-weight: 500;">Alice Chen</span>
-                        </div>
-                    </td>
-                    <td>alice@example.com</td>
-                    <td><span class="Badge Badge--primary Badge--small">Admin</span></td>
-                    <td><span class="Badge Badge--success Badge--small">Active</span></td>
-                    <td style="color: var(--text-secondary);">2 min ago</td>
-                    <td>
-                        <button class="Button Button--icon Button--ghost Button--small" aria-label="More actions">
-                            <i class="ph ph-dots-three"></i>
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><label class="Checkbox" style="margin: 0;"><input type="checkbox" class="Checkbox-input"><span class="Checkbox-box"></span></label></td>
-                    <td>
-                        <div style="display: flex; align-items: center; gap: var(--space-3);">
-                            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=user2" class="Avatar Avatar--small" alt="Bob">
-                            <span style="font-weight: 500;">Bob Martinez</span>
-                        </div>
-                    </td>
-                    <td>bob@example.com</td>
-                    <td><span class="Badge Badge--secondary Badge--small">Editor</span></td>
-                    <td><span class="Badge Badge--success Badge--small">Active</span></td>
-                    <td style="color: var(--text-secondary);">1 hour ago</td>
-                    <td>
-                        <button class="Button Button--icon Button--ghost Button--small" aria-label="More actions">
-                            <i class="ph ph-dots-three"></i>
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><label class="Checkbox" style="margin: 0;"><input type="checkbox" class="Checkbox-input"><span class="Checkbox-box"></span></label></td>
-                    <td>
-                        <div style="display: flex; align-items: center; gap: var(--space-3);">
-                            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=user3" class="Avatar Avatar--small" alt="Carol">
-                            <span style="font-weight: 500;">Carol Kim</span>
-                        </div>
-                    </td>
-                    <td>carol@example.com</td>
-                    <td><span class="Badge Badge--secondary Badge--small">Viewer</span></td>
-                    <td><span class="Badge Badge--warning Badge--small">Pending</span></td>
-                    <td style="color: var(--text-secondary);">—</td>
-                    <td>
-                        <button class="Button Button--icon Button--ghost Button--small" aria-label="More actions">
-                            <i class="ph ph-dots-three"></i>
-                        </button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="Table-pagination">
-            <span class="Table-pagination-info">Showing 1-3 of 24 users</span>
-            <div class="Table-pagination-controls">
-                <button class="Button Button--icon Button--secondary Button--small" disabled><i class="ph ph-caret-left"></i></button>
-                <button class="Button Button--secondary Button--small Table-pagination-page--active">1</button>
-                <button class="Button Button--secondary Button--small">2</button>
-                <button class="Button Button--secondary Button--small">3</button>
-                <button class="Button Button--icon Button--secondary Button--small"><i class="ph ph-caret-right"></i></button>
-            </div>
-        </div>
-    </div>
-</Preview>
-
-### Pricing Comparison Table
-
-<Preview title="Pricing Table">
-    <table class="Table Table--bordered" style="text-align: center;">
-        <thead>
-            <tr>
-                <th style="text-align: left;">Feature</th>
-                <th style="width: 140px;">
-                    <div style="font-size: 0.75rem; color: var(--text-secondary); font-weight: 400;">STARTER</div>
-                    <div style="font-size: 1.25rem; margin-top: var(--space-1);">$9<span style="font-size: 0.75rem; font-weight: 400;">/mo</span></div>
-                </th>
-                <th style="width: 140px; background: oklch(60% 0.15 250 / 0.05);">
-                    <div style="font-size: 0.75rem; color: var(--accent-primary); font-weight: 400;">POPULAR</div>
-                    <div style="font-size: 1.25rem; margin-top: var(--space-1);">$29<span style="font-size: 0.75rem; font-weight: 400;">/mo</span></div>
-                </th>
-                <th style="width: 140px;">
-                    <div style="font-size: 0.75rem; color: var(--text-secondary); font-weight: 400;">ENTERPRISE</div>
-                    <div style="font-size: 1.25rem; margin-top: var(--space-1);">$99<span style="font-size: 0.75rem; font-weight: 400;">/mo</span></div>
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td style="text-align: left;">Users</td>
-                <td>1</td>
-                <td style="background: oklch(60% 0.15 250 / 0.05);">5</td>
-                <td>Unlimited</td>
-            </tr>
-            <tr>
-                <td style="text-align: left;">Storage</td>
-                <td>5 GB</td>
-                <td style="background: oklch(60% 0.15 250 / 0.05);">50 GB</td>
-                <td>500 GB</td>
-            </tr>
-            <tr>
-                <td style="text-align: left;">API Access</td>
-                <td><i class="ph ph-x" style="color: var(--text-secondary);"></i></td>
-                <td style="background: oklch(60% 0.15 250 / 0.05);"><i class="ph ph-check" style="color: oklch(55% 0.15 150);"></i></td>
-                <td><i class="ph ph-check" style="color: oklch(55% 0.15 150);"></i></td>
-            </tr>
-            <tr>
-                <td style="text-align: left;">Priority Support</td>
-                <td><i class="ph ph-x" style="color: var(--text-secondary);"></i></td>
-                <td style="background: oklch(60% 0.15 250 / 0.05);"><i class="ph ph-check" style="color: oklch(55% 0.15 150);"></i></td>
-                <td><i class="ph ph-check" style="color: oklch(55% 0.15 150);"></i></td>
-            </tr>
-            <tr>
-                <td style="text-align: left;">Custom Branding</td>
-                <td><i class="ph ph-x" style="color: var(--text-secondary);"></i></td>
-                <td style="background: oklch(60% 0.15 250 / 0.05);"><i class="ph ph-x" style="color: var(--text-secondary);"></i></td>
-                <td><i class="ph ph-check" style="color: oklch(55% 0.15 150);"></i></td>
-            </tr>
-            <tr>
-                <td style="text-align: left;">SSO</td>
-                <td><i class="ph ph-x" style="color: var(--text-secondary);"></i></td>
-                <td style="background: oklch(60% 0.15 250 / 0.05);"><i class="ph ph-x" style="color: var(--text-secondary);"></i></td>
-                <td><i class="ph ph-check" style="color: oklch(55% 0.15 150);"></i></td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td></td>
-                <td><button class="Button Button--secondary Button--small">Choose</button></td>
-                <td style="background: oklch(60% 0.15 250 / 0.05);"><button class="Button Button--primary Button--small">Choose</button></td>
-                <td><button class="Button Button--secondary Button--small">Contact Us</button></td>
-            </tr>
-        </tfoot>
-    </table>
-</Preview>
-
-### Order History Table
-
-<Preview title="Order History">
-    <div class="Table-responsive">
-        <table class="Table Table--striped Table--hoverable">
-            <thead>
-                <tr>
-                    <th>Order ID</th>
-                    <th>Date</th>
-                    <th>Items</th>
-                    <th class="Table-cell--right">Total</th>
-                    <th>Status</th>
-                    <th style="width: 100px;"></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><span style="font-family: monospace; font-size: 0.85rem;">#ORD-2024-001</span></td>
-                    <td>Feb 2, 2026</td>
-                    <td>3 items</td>
-                    <td class="Table-cell--right" style="font-weight: 500;">$149.99</td>
-                    <td><span class="Badge Badge--success">Delivered</span></td>
-                    <td>
-                        <button class="Button Button--secondary Button--small">View</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><span style="font-family: monospace; font-size: 0.85rem;">#ORD-2024-002</span></td>
-                    <td>Feb 1, 2026</td>
-                    <td>1 item</td>
-                    <td class="Table-cell--right" style="font-weight: 500;">$59.99</td>
-                    <td><span class="Badge Badge--warning">In Transit</span></td>
-                    <td>
-                        <button class="Button Button--secondary Button--small">Track</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><span style="font-family: monospace; font-size: 0.85rem;">#ORD-2024-003</span></td>
-                    <td>Jan 28, 2026</td>
-                    <td>2 items</td>
-                    <td class="Table-cell--right" style="font-weight: 500;">$89.99</td>
-                    <td><span class="Badge Badge--success">Delivered</span></td>
-                    <td>
-                        <button class="Button Button--secondary Button--small">View</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><span style="font-family: monospace; font-size: 0.85rem;">#ORD-2024-004</span></td>
-                    <td>Jan 25, 2026</td>
-                    <td>5 items</td>
-                    <td class="Table-cell--right" style="font-weight: 500;">$234.50</td>
-                    <td><span class="Badge Badge--error">Cancelled</span></td>
-                    <td>
-                        <button class="Button Button--secondary Button--small">Details</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</Preview>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Table-user</code></td>
+<td class="ApiTable-desc">User cell with avatar layout</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Table-fileIcon</code></td>
+<td class="ApiTable-desc">File/folder icon in cells</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Table-expandPanel</code></td>
+<td class="ApiTable-desc">Container for expanded content</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Table-expandDetail</code></td>
+<td class="ApiTable-desc">Individual detail item in expanded content</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Table-wrapper--scrollable</code></td>
+<td class="ApiTable-desc">Wrapper with vertical scroll (use with max-height)</td>
+</tr>
+</tbody>
+</table>
 
 ---
 
 ## Accessibility
 
-Tables require proper structure for screen readers.
+### Keyboard Support
 
-### Headers
+| Key | Action |
+|-----|--------|
+| Tab | Move focus to next interactive element |
+| Shift + Tab | Move focus to previous interactive element |
+| Space | Toggle checkbox, activate sort button |
+| Enter | Activate buttons, expand/collapse rows |
+| Arrow Keys | Navigate within pagination controls |
+
+### Screen Readers
+
 ```html
-<!-- Always use th for headers -->
-<thead>
-    <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Email</th>
-    </tr>
-</thead>
+<!-- Sortable header with proper ARIA -->
+<th>
+  <button class="Table-sort" aria-sort="ascending">
+    Name
+    <i class="ph ph-caret-up Table-sortIcon" aria-hidden="true"></i>
+  </button>
+</th>
 
-<!-- For row headers -->
-<tbody>
-    <tr>
-        <th scope="row">Total</th>
-        <td>$175.00</td>
-    </tr>
-</tbody>
+<!-- Select all checkbox -->
+<th class="Table-checkbox">
+  <input type="checkbox" 
+         class="Checkbox" 
+         aria-label="Select all rows">
+</th>
+
+<!-- Row selection checkbox -->
+<td class="Table-checkbox">
+  <input type="checkbox" 
+         class="Checkbox" 
+         aria-label="Select John Doe">
+</td>
+
+<!-- Expandable row -->
+<button class="Table-expandBtn" 
+        aria-expanded="false" 
+        aria-controls="row-details-1"
+        aria-label="Show details for Order #1234">
+  <i class="ph ph-caret-right" aria-hidden="true"></i>
+</button>
+
+<!-- Action buttons with labels -->
+<button class="Button Button--icon Button--ghost" 
+        aria-label="Edit Alice Chen">
+  <i class="ph ph-pencil"></i>
+</button>
 ```
 
-### Caption
+### Caption and Summary
+
 ```html
-<!-- Describe the table -->
+<!-- Table caption for context -->
 <table class="Table">
-    <caption>Q1 2026 Sales Report</caption>
-    ...
+  <caption class="sr-only">
+    User accounts showing name, email, role, and status. 
+    Sortable by name column.
+  </caption>
+  <!-- ... -->
+</table>
+
+<!-- Or use aria-describedby -->
+<p id="table-desc" class="sr-only">
+  Monthly revenue data for Q4 2025
+</p>
+<table class="Table" aria-describedby="table-desc">
+  <!-- ... -->
 </table>
 ```
 
-### Sortable Columns
+### Row Headers
+
 ```html
-<th scope="col" aria-sort="ascending">
-    Name
-    <i class="ph ph-caret-up" aria-hidden="true"></i>
-</th>
-<th scope="col" aria-sort="none">
-    Email
-    <i class="ph ph-caret-up-down" aria-hidden="true"></i>
-</th>
-```
-
-### Selectable Rows
-```html
-<tr aria-selected="true">
-    <td>
-        <input type="checkbox" aria-label="Select Alice Chen" checked>
-    </td>
-    <td>Alice Chen</td>
-</tr>
-```
-
----
-
-## CSS Reference
-
-```css
-/* Base Table */
-.Table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.9rem;
-}
-
-.Table th,
-.Table td {
-  padding: var(--space-3) var(--space-4);
-  text-align: left;
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.Table th {
-  font-weight: 600;
-  color: var(--text-primary);
-  background-color: var(--bg-secondary);
-}
-
-.Table td {
-  color: var(--text-primary);
-}
-
-/* Bordered */
-.Table--bordered th,
-.Table--bordered td {
-  border: 1px solid var(--border-subtle);
-}
-
-/* Striped */
-.Table--striped tbody tr:nth-child(even) {
-  background-color: var(--bg-secondary);
-}
-
-/* Hoverable */
-.Table--hoverable tbody tr {
-  transition: background-color 0.15s;
-}
-
-.Table--hoverable tbody tr:hover {
-  background-color: oklch(60% 0.15 250 / 0.05);
-}
-
-/* Compact */
-.Table--compact th,
-.Table--compact td {
-  padding: var(--space-2) var(--space-3);
-  font-size: 0.85rem;
-}
-
-/* Sortable */
-.Table-sortable {
-  cursor: pointer;
-  user-select: none;
-}
-
-.Table-sortable i {
-  margin-left: var(--space-1);
-  opacity: 0.5;
-}
-
-.Table-sortable:hover i {
-  opacity: 1;
-}
-
-.Table-sortable--asc i,
-.Table-sortable--desc i {
-  opacity: 1;
-  color: var(--accent-primary);
-}
-
-/* Selectable */
-.Table-row--selected {
-  background-color: oklch(60% 0.15 250 / 0.08) !important;
-}
-
-/* Alignment */
-.Table-cell--right {
-  text-align: right;
-}
-
-.Table-cell--center {
-  text-align: center;
-}
-
-/* Responsive */
-.Table-responsive {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-/* Sticky Header */
-.Table--stickyHeader thead th {
-  position: sticky;
-  top: 0;
-  background-color: var(--bg-secondary);
-  z-index: 1;
-}
-
-/* Container */
-.Table-container {
-  overflow: auto;
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--space-2);
-}
-
-.Table-container .Table {
-  margin: 0;
-}
-
-.Table-container .Table th:first-child,
-.Table-container .Table td:first-child {
-  border-left: none;
-}
-
-.Table-container .Table th:last-child,
-.Table-container .Table td:last-child {
-  border-right: none;
-}
-
-/* Empty */
-.Table-empty {
-  background-color: var(--bg-primary) !important;
-}
-
-/* Footer */
-.Table tfoot td {
-  border-top: 2px solid var(--border-strong);
-  background-color: var(--bg-secondary);
-}
-
-/* Wrapper */
-.Table-wrapper {
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--space-2);
-  overflow: hidden;
-}
-
-.Table-wrapper .Table {
-  border-radius: 0;
-}
-
-.Table-wrapper .Table th:first-child,
-.Table-wrapper .Table td:first-child {
-  border-left: none;
-}
-
-.Table-wrapper .Table th:last-child,
-.Table-wrapper .Table td:last-child {
-  border-right: none;
-}
-
-/* Toolbar */
-.Table-toolbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: var(--space-3) var(--space-4);
-  border-bottom: 1px solid var(--border-subtle);
-  background-color: var(--bg-primary);
-}
-
-/* Pagination */
-.Table-pagination {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: var(--space-3) var(--space-4);
-  border-top: 1px solid var(--border-subtle);
-  background-color: var(--bg-primary);
-}
-
-.Table-pagination-info {
-  font-size: 0.875rem;
-  color: var(--text-secondary);
-}
-
-.Table-pagination-controls {
-  display: flex;
-  align-items: center;
-  gap: var(--space-1);
-}
-
-.Table-pagination-page--active {
-  background-color: var(--accent-primary) !important;
-  color: white !important;
-  border-color: var(--accent-primary) !important;
-}
-
-.Table-pagination-ellipsis {
-  padding: 0 var(--space-2);
-  color: var(--text-secondary);
-}
+<!-- Use th for row headers in data tables -->
+<table class="Table">
+  <thead>
+    <tr>
+      <th scope="col">Month</th>
+      <th scope="col">Revenue</th>
+      <th scope="col">Expenses</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">January</th>
+      <td>$45,000</td>
+      <td>$32,000</td>
+    </tr>
+  </tbody>
+</table>
 ```
 
 ---
@@ -1245,16 +1096,18 @@ Tables require proper structure for screen readers.
 
 ### Do
 
-- ✓ **Use semantic markup** — `<thead>`, `<tbody>`, `<tfoot>`, `<th>`
-- ✓ **Align numbers right** — Easier to compare values
-- ✓ **Keep rows scannable** — Limit columns, use truncation
-- ✓ **Add empty states** — Don't show blank tables
-- ✓ **Consider mobile** — Use responsive wrapper or alternative layouts
+- ✓ **Use tables for tabular data** — Don't use tables for layout
+- ✓ **Keep columns scannable** — Align numbers right, text left
+- ✓ **Truncate long content** — Use ellipsis or expand on hover
+- ✓ **Show loading states** — Skeleton rows or spinner for async data
+- ✓ **Provide empty states** — Clear message when no data exists
+- ✓ **Make actions discoverable** — Hover to reveal or always visible
 
 ### Don't
 
-- ✗ **Overcrowd cells** — Too much data hurts readability
-- ✗ **Skip headers** — Always label columns
-- ✗ **Use tables for layout** — Tables are for data only
-- ✗ **Hide horizontal scroll** — Indicate scrollable content
-- ✗ **Forget keyboard navigation** — Sortable/selectable tables need focus states
+- ✗ **Overload with columns** — 5-7 columns max for readability
+- ✗ **Hide critical information** — Key data should always be visible
+- ✗ **Use inconsistent alignment** — Pick one style and stick to it
+- ✗ **Forget mobile** — Use responsive wrapper or card layout
+- ✗ **Skip keyboard support** — All actions must be keyboard accessible
+- ✗ **Nest tables** — Use expandable rows instead

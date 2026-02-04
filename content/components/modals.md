@@ -1,793 +1,585 @@
 # Modals
 
-Modals (dialogs) focus user attention on a single task or piece of information. They appear over the main content and require user interaction before returning to the main flow.
+Modals are overlay dialogs that require user interaction before returning to the main content. They focus attention on critical information, decisions, or forms.
 
 ---
 
-## Basic Modal
+## Installation
 
-A standard modal with header, body, and footer actions.
-
-<Preview title="Basic Modal">
-    <button class="Button Button--primary" onclick="document.getElementById('modal-basic').classList.add('Modal-overlay--active')">Open Modal</button>
-    <div id="modal-basic" class="Modal-overlay" onclick="if(event.target === this) this.classList.remove('Modal-overlay--active')">
-        <div class="Modal">
-            <header class="Modal-header">
-                <h4 class="Modal-title">Modal Title</h4>
-                <button class="Button Button--icon Button--ghost" onclick="document.getElementById('modal-basic').classList.remove('Modal-overlay--active')" aria-label="Close">
-                    <i class="ph ph-x"></i>
-                </button>
-            </header>
-            <div class="Modal-body">
-                <p>This is the modal body content. You can place any content here including forms, text, images, or other components.</p>
-            </div>
-            <footer class="Modal-footer">
-                <button class="Button Button--tertiary" onclick="document.getElementById('modal-basic').classList.remove('Modal-overlay--active')">Cancel</button>
-                <button class="Button Button--primary" onclick="document.getElementById('modal-basic').classList.remove('Modal-overlay--active')">Save Changes</button>
-            </footer>
-        </div>
-    </div>
-</Preview>
+Copy the modal CSS from `styles/docs.css` or include the Carbon stylesheet:
 
 ```html
-<div class="Modal-overlay Modal-overlay--active">
-    <div class="Modal">
-        <header class="Modal-header">
-            <h4 class="Modal-title">Modal Title</h4>
-            <button class="Button Button--icon Button--ghost" aria-label="Close">
-                <i class="ph ph-x"></i>
-            </button>
-        </header>
-        <div class="Modal-body">
-            <p>Content goes here...</p>
-        </div>
-        <footer class="Modal-footer">
-            <button class="Button Button--tertiary">Cancel</button>
-            <button class="Button Button--primary">Save Changes</button>
-        </footer>
+<link rel="stylesheet" href="carbon.min.css">
+```
+
+Basic modal structure:
+
+```html
+<div class="Modal-overlay">
+  <div class="Modal">
+    <header class="Modal-header">
+      <h2 class="Modal-title">Modal Title</h2>
+      <button class="Button Button--icon Button--ghost" aria-label="Close">
+        <i class="ph ph-x"></i>
+      </button>
+    </header>
+    <div class="Modal-body">
+      <p>Modal content goes here.</p>
     </div>
+    <footer class="Modal-footer">
+      <button class="Button Button--tertiary">Cancel</button>
+      <button class="Button Button--primary">Confirm</button>
+    </footer>
+  </div>
 </div>
 ```
 
 ---
 
-## Modal Sizes
+## Usage
 
-Modals come in three sizes: small, medium (default), and large.
+Modals use a two-part structure: `.Modal-overlay` for the backdrop and `.Modal` for the dialog itself. Add `.active` or `.Modal-overlay--active` to show the modal.
 
-<Preview title="Small Modal">
-    <button class="Button Button--secondary" onclick="document.getElementById('modal-small').classList.add('Modal-overlay--active')">Small Modal</button>
-    <div id="modal-small" class="Modal-overlay" onclick="if(event.target === this) this.classList.remove('Modal-overlay--active')">
-        <div class="Modal Modal--small">
-            <header class="Modal-header">
-                <h4 class="Modal-title">Quick Action</h4>
-                <button class="Button Button--icon Button--ghost" onclick="document.getElementById('modal-small').classList.remove('Modal-overlay--active')" aria-label="Close">
-                    <i class="ph ph-x"></i>
-                </button>
-            </header>
-            <div class="Modal-body">
-                <p>Small modals are perfect for quick confirmations or simple inputs.</p>
-            </div>
-            <footer class="Modal-footer">
-                <button class="Button Button--primary Button--small" onclick="document.getElementById('modal-small').classList.remove('Modal-overlay--active')">Got it</button>
-            </footer>
-        </div>
+<Preview>
+<div style="position: relative; width: 100%; height: 200px; background: var(--bg-secondary); border-radius: var(--space-2); display: flex; align-items: center; justify-content: center;">
+  <div class="Modal" style="position: relative; transform: none; max-width: 320px;">
+    <header class="Modal-header">
+      <h2 class="Modal-title">Example Modal</h2>
+      <button class="Button Button--icon Button--ghost" aria-label="Close">
+        <i class="ph ph-x"></i>
+      </button>
+    </header>
+    <div class="Modal-body">
+      <p>This is an example modal dialog.</p>
     </div>
-</Preview>
-
-<Preview title="Large Modal">
-    <button class="Button Button--secondary" onclick="document.getElementById('modal-large').classList.add('Modal-overlay--active')">Large Modal</button>
-    <div id="modal-large" class="Modal-overlay" onclick="if(event.target === this) this.classList.remove('Modal-overlay--active')">
-        <div class="Modal Modal--large">
-            <header class="Modal-header">
-                <h4 class="Modal-title">Detailed View</h4>
-                <button class="Button Button--icon Button--ghost" onclick="document.getElementById('modal-large').classList.remove('Modal-overlay--active')" aria-label="Close">
-                    <i class="ph ph-x"></i>
-                </button>
-            </header>
-            <div class="Modal-body">
-                <p>Large modals provide more space for complex content like forms with multiple fields, data tables, or detailed information.</p>
-                <div style="margin-top: var(--space-4); padding: var(--space-4); background: var(--bg-secondary); border-radius: var(--space-2);">
-                    <p style="color: var(--text-secondary); margin: 0;">This is an example of additional content that benefits from extra space.</p>
-                </div>
-            </div>
-            <footer class="Modal-footer">
-                <button class="Button Button--tertiary" onclick="document.getElementById('modal-large').classList.remove('Modal-overlay--active')">Cancel</button>
-                <button class="Button Button--primary" onclick="document.getElementById('modal-large').classList.remove('Modal-overlay--active')">Continue</button>
-            </footer>
-        </div>
-    </div>
-</Preview>
-
-```html
-<div class="Modal Modal--small">...</div>
-<div class="Modal">...</div> <!-- Default medium -->
-<div class="Modal Modal--large">...</div>
-```
-
----
-
-## Fullscreen Modal
-
-For immersive experiences or mobile views.
-
-<Preview title="Fullscreen Modal">
-    <button class="Button Button--secondary" onclick="document.getElementById('modal-fullscreen').classList.add('Modal-overlay--active')">Fullscreen Modal</button>
-    <div id="modal-fullscreen" class="Modal-overlay" onclick="if(event.target === this) this.classList.remove('Modal-overlay--active')">
-        <div class="Modal Modal--fullscreen">
-            <header class="Modal-header">
-                <h4 class="Modal-title">Full Screen Experience</h4>
-                <button class="Button Button--icon Button--ghost" onclick="document.getElementById('modal-fullscreen').classList.remove('Modal-overlay--active')" aria-label="Close">
-                    <i class="ph ph-x"></i>
-                </button>
-            </header>
-            <div class="Modal-body">
-                <p>Fullscreen modals take over the entire viewport. Use for complex workflows, media viewers, or mobile experiences.</p>
-            </div>
-            <footer class="Modal-footer">
-                <button class="Button Button--primary" onclick="document.getElementById('modal-fullscreen').classList.remove('Modal-overlay--active')">Done</button>
-            </footer>
-        </div>
-    </div>
-</Preview>
-
-```html
-<div class="Modal Modal--fullscreen">...</div>
-```
-
----
-
-## Modal with Form
-
-Common pattern for data entry.
-
-<Preview title="Form Modal">
-    <button class="Button Button--primary" onclick="document.getElementById('modal-form').classList.add('Modal-overlay--active')">Create Account</button>
-    <div id="modal-form" class="Modal-overlay" onclick="if(event.target === this) this.classList.remove('Modal-overlay--active')">
-        <div class="Modal">
-            <header class="Modal-header">
-                <h4 class="Modal-title">Create Account</h4>
-                <button class="Button Button--icon Button--ghost" onclick="document.getElementById('modal-form').classList.remove('Modal-overlay--active')" aria-label="Close">
-                    <i class="ph ph-x"></i>
-                </button>
-            </header>
-            <div class="Modal-body">
-                <form style="display: flex; flex-direction: column; gap: var(--space-4);">
-                    <div class="FormField">
-                        <label class="FormField-label FormField-label--required">Full Name</label>
-                        <input type="text" class="Input" placeholder="John Doe">
-                    </div>
-                    <div class="FormField">
-                        <label class="FormField-label FormField-label--required">Email</label>
-                        <input type="email" class="Input" placeholder="john@example.com">
-                    </div>
-                    <div class="FormField">
-                        <label class="FormField-label FormField-label--required">Password</label>
-                        <input type="password" class="Input" placeholder="••••••••">
-                        <span class="FormField-helper">At least 8 characters</span>
-                    </div>
-                    <label class="Checkbox">
-                        <input type="checkbox" class="Checkbox-input">
-                        <span class="Checkbox-box"></span>
-                        <span class="Checkbox-label">I agree to the Terms of Service</span>
-                    </label>
-                </form>
-            </div>
-            <footer class="Modal-footer">
-                <button class="Button Button--tertiary" onclick="document.getElementById('modal-form').classList.remove('Modal-overlay--active')">Cancel</button>
-                <button class="Button Button--primary" onclick="document.getElementById('modal-form').classList.remove('Modal-overlay--active')">Create Account</button>
-            </footer>
-        </div>
-    </div>
-</Preview>
-
----
-
-## Scrolling Content
-
-For modals with content that exceeds viewport height.
-
-<Preview title="Scrolling Modal">
-    <button class="Button Button--secondary" onclick="document.getElementById('modal-scroll').classList.add('Modal-overlay--active')">Long Content Modal</button>
-    <div id="modal-scroll" class="Modal-overlay" onclick="if(event.target === this) this.classList.remove('Modal-overlay--active')">
-        <div class="Modal">
-            <header class="Modal-header">
-                <h4 class="Modal-title">Terms of Service</h4>
-                <button class="Button Button--icon Button--ghost" onclick="document.getElementById('modal-scroll').classList.remove('Modal-overlay--active')" aria-label="Close">
-                    <i class="ph ph-x"></i>
-                </button>
-            </header>
-            <div class="Modal-body Modal-body--scrollable" style="max-height: 300px;">
-                <h5 style="margin-bottom: var(--space-3);">1. Introduction</h5>
-                <p style="margin-bottom: var(--space-4);">Welcome to our service. These terms govern your use of our platform and services. By accessing or using our services, you agree to be bound by these terms.</p>
-                <h5 style="margin-bottom: var(--space-3);">2. User Accounts</h5>
-                <p style="margin-bottom: var(--space-4);">You are responsible for maintaining the confidentiality of your account credentials. You agree to notify us immediately of any unauthorized use of your account.</p>
-                <h5 style="margin-bottom: var(--space-3);">3. Acceptable Use</h5>
-                <p style="margin-bottom: var(--space-4);">You agree not to use our services for any unlawful purpose or in any way that could damage, disable, or impair our services.</p>
-                <h5 style="margin-bottom: var(--space-3);">4. Privacy</h5>
-                <p style="margin-bottom: var(--space-4);">Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use, and protect your information.</p>
-                <h5 style="margin-bottom: var(--space-3);">5. Termination</h5>
-                <p>We reserve the right to terminate or suspend your account at any time for violations of these terms or for any other reason at our discretion.</p>
-            </div>
-            <footer class="Modal-footer">
-                <button class="Button Button--tertiary" onclick="document.getElementById('modal-scroll').classList.remove('Modal-overlay--active')">Decline</button>
-                <button class="Button Button--primary" onclick="document.getElementById('modal-scroll').classList.remove('Modal-overlay--active')">Accept</button>
-            </footer>
-        </div>
-    </div>
-</Preview>
-
-```html
-<div class="Modal-body Modal-body--scrollable" style="max-height: 300px;">
-    <!-- Long content here -->
+    <footer class="Modal-footer">
+      <button class="Button Button--tertiary">Cancel</button>
+      <button class="Button Button--primary">Confirm</button>
+    </footer>
+  </div>
 </div>
-```
-
----
-
-## Confirmation Modal
-
-For confirming user actions.
-
-<Preview title="Confirmation Modal">
-    <button class="Button Button--secondary" onclick="document.getElementById('modal-confirm').classList.add('Modal-overlay--active')">Show Confirmation</button>
-    <div id="modal-confirm" class="Modal-overlay" onclick="if(event.target === this) this.classList.remove('Modal-overlay--active')">
-        <div class="Modal Modal--small">
-            <header class="Modal-header">
-                <h4 class="Modal-title">Confirm Action</h4>
-            </header>
-            <div class="Modal-body">
-                <p>Are you sure you want to publish this document? This action will make it visible to all users.</p>
-            </div>
-            <footer class="Modal-footer">
-                <button class="Button Button--tertiary" onclick="document.getElementById('modal-confirm').classList.remove('Modal-overlay--active')">Cancel</button>
-                <button class="Button Button--primary" onclick="document.getElementById('modal-confirm').classList.remove('Modal-overlay--active')">Publish</button>
-            </footer>
-        </div>
-    </div>
 </Preview>
 
 ---
 
-## Danger Modal
+## Examples
 
-For destructive actions that require careful confirmation.
+### Basic
 
-<Preview title="Danger Modal">
-    <button class="Button Button--danger" onclick="document.getElementById('modal-danger').classList.add('Modal-overlay--active')">Delete Account</button>
-    <div id="modal-danger" class="Modal-overlay" onclick="if(event.target === this) this.classList.remove('Modal-overlay--active')">
-        <div class="Modal Modal--small">
-            <header class="Modal-header">
-                <div style="width: 48px; height: 48px; border-radius: 50%; background: oklch(55% 0.2 25 / 0.1); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-3);">
-                    <i class="ph ph-warning" style="font-size: 1.5rem; color: oklch(55% 0.2 25);"></i>
-                </div>
-                <h4 class="Modal-title">Delete Account?</h4>
-            </header>
-            <div class="Modal-body" style="text-align: center;">
-                <p style="color: var(--text-secondary);">This action cannot be undone. All your data, including projects, files, and settings will be permanently deleted.</p>
-            </div>
-            <footer class="Modal-footer" style="justify-content: center;">
-                <button class="Button Button--secondary" onclick="document.getElementById('modal-danger').classList.remove('Modal-overlay--active')">Keep Account</button>
-                <button class="Button Button--danger" onclick="document.getElementById('modal-danger').classList.remove('Modal-overlay--active')">Delete Forever</button>
-            </footer>
-        </div>
+A simple modal with header, body, and footer actions.
+
+<Preview>
+<div style="position: relative; width: 100%; height: 220px; background: oklch(0% 0 0 / 0.5); border-radius: var(--space-2); display: flex; align-items: center; justify-content: center; padding: var(--space-4);">
+  <div class="Modal" style="position: relative; transform: none;">
+    <header class="Modal-header">
+      <h2 class="Modal-title">Save Changes?</h2>
+      <button class="Button Button--icon Button--ghost" aria-label="Close">
+        <i class="ph ph-x"></i>
+      </button>
+    </header>
+    <div class="Modal-body">
+      <p>You have unsaved changes. Would you like to save them before leaving?</p>
     </div>
-</Preview>
-
----
-
-## Modal with Image
-
-For media previews or visual content.
-
-<Preview title="Image Modal">
-    <button class="Button Button--secondary" onclick="document.getElementById('modal-image').classList.add('Modal-overlay--active')">View Image</button>
-    <div id="modal-image" class="Modal-overlay" onclick="if(event.target === this) this.classList.remove('Modal-overlay--active')">
-        <div class="Modal Modal--large">
-            <header class="Modal-header">
-                <h4 class="Modal-title">Image Preview</h4>
-                <button class="Button Button--icon Button--ghost" onclick="document.getElementById('modal-image').classList.remove('Modal-overlay--active')" aria-label="Close">
-                    <i class="ph ph-x"></i>
-                </button>
-            </header>
-            <div class="Modal-body" style="padding: 0;">
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=800" alt="Abstract gradient" style="width: 100%; display: block;">
-            </div>
-            <footer class="Modal-footer">
-                <button class="Button Button--secondary" onclick="document.getElementById('modal-image').classList.remove('Modal-overlay--active')">Close</button>
-                <button class="Button Button--primary">
-                    <i class="ph ph-download Button-icon"></i>
-                    Download
-                </button>
-            </footer>
-        </div>
-    </div>
-</Preview>
-
----
-
-## Centered Modal (No Header)
-
-Simplified modal for alerts or simple messages.
-
-<Preview title="Centered Alert">
-    <button class="Button Button--secondary" onclick="document.getElementById('modal-alert').classList.add('Modal-overlay--active')">Show Alert</button>
-    <div id="modal-alert" class="Modal-overlay" onclick="if(event.target === this) this.classList.remove('Modal-overlay--active')">
-        <div class="Modal Modal--small Modal--centered">
-            <div class="Modal-body" style="text-align: center; padding: var(--space-8);">
-                <div style="width: 64px; height: 64px; border-radius: 50%; background: oklch(55% 0.15 150 / 0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-4);">
-                    <i class="ph ph-check" style="font-size: 2rem; color: oklch(55% 0.15 150);"></i>
-                </div>
-                <h4 style="margin-bottom: var(--space-2);">Success!</h4>
-                <p style="color: var(--text-secondary); margin-bottom: var(--space-6);">Your changes have been saved successfully.</p>
-                <button class="Button Button--primary" onclick="document.getElementById('modal-alert').classList.remove('Modal-overlay--active')">Continue</button>
-            </div>
-        </div>
-    </div>
-</Preview>
-
----
-
-## Modal with Steps
-
-For multi-step wizards or workflows.
-
-<Preview title="Stepper Modal">
-    <button class="Button Button--primary" onclick="document.getElementById('modal-stepper').classList.add('Modal-overlay--active')">Open Wizard</button>
-    <div id="modal-stepper" class="Modal-overlay" onclick="if(event.target === this) this.classList.remove('Modal-overlay--active')">
-        <div class="Modal">
-            <header class="Modal-header">
-                <h4 class="Modal-title">Create Project</h4>
-                <button class="Button Button--icon Button--ghost" onclick="document.getElementById('modal-stepper').classList.remove('Modal-overlay--active')" aria-label="Close">
-                    <i class="ph ph-x"></i>
-                </button>
-            </header>
-            <div class="Modal-steps">
-                <div class="Modal-step Modal-step--completed">
-                    <div class="Modal-step-indicator">
-                        <i class="ph ph-check"></i>
-                    </div>
-                    <span class="Modal-step-label">Details</span>
-                </div>
-                <div class="Modal-step Modal-step--active">
-                    <div class="Modal-step-indicator">2</div>
-                    <span class="Modal-step-label">Team</span>
-                </div>
-                <div class="Modal-step">
-                    <div class="Modal-step-indicator">3</div>
-                    <span class="Modal-step-label">Settings</span>
-                </div>
-            </div>
-            <div class="Modal-body">
-                <h5 style="margin-bottom: var(--space-4);">Add Team Members</h5>
-                <div class="FormField" style="margin-bottom: var(--space-4);">
-                    <label class="FormField-label">Invite by email</label>
-                    <div class="Input-group">
-                        <input type="email" class="Input Input--grouped" placeholder="teammate@example.com">
-                        <button class="Button Button--secondary">Add</button>
-                    </div>
-                </div>
-                <div style="display: flex; flex-direction: column; gap: var(--space-3);">
-                    <div style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-2); background: var(--bg-secondary); border-radius: var(--space-2);">
-                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=team1" class="Avatar Avatar--small" alt="Sarah">
-                        <div style="flex: 1;">
-                            <div style="font-weight: 500; font-size: 0.9rem;">Sarah Chen</div>
-                            <div style="font-size: 0.75rem; color: var(--text-secondary);">sarah@example.com</div>
-                        </div>
-                        <select class="Select" style="width: auto; padding: var(--space-1) var(--space-6) var(--space-1) var(--space-2); font-size: 0.8rem;">
-                            <option>Editor</option>
-                            <option>Viewer</option>
-                            <option>Admin</option>
-                        </select>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-2); background: var(--bg-secondary); border-radius: var(--space-2);">
-                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=team2" class="Avatar Avatar--small" alt="Mike">
-                        <div style="flex: 1;">
-                            <div style="font-weight: 500; font-size: 0.9rem;">Mike Johnson</div>
-                            <div style="font-size: 0.75rem; color: var(--text-secondary);">mike@example.com</div>
-                        </div>
-                        <select class="Select" style="width: auto; padding: var(--space-1) var(--space-6) var(--space-1) var(--space-2); font-size: 0.8rem;">
-                            <option>Viewer</option>
-                            <option>Editor</option>
-                            <option>Admin</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <footer class="Modal-footer">
-                <button class="Button Button--tertiary">Back</button>
-                <button class="Button Button--primary" onclick="document.getElementById('modal-stepper').classList.remove('Modal-overlay--active')">Continue</button>
-            </footer>
-        </div>
-    </div>
-</Preview>
-
-```html
-<div class="Modal-steps">
-    <div class="Modal-step Modal-step--completed">
-        <div class="Modal-step-indicator"><i class="ph ph-check"></i></div>
-        <span class="Modal-step-label">Details</span>
-    </div>
-    <div class="Modal-step Modal-step--active">
-        <div class="Modal-step-indicator">2</div>
-        <span class="Modal-step-label">Team</span>
-    </div>
-    <div class="Modal-step">
-        <div class="Modal-step-indicator">3</div>
-        <span class="Modal-step-label">Settings</span>
-    </div>
+    <footer class="Modal-footer">
+      <button class="Button Button--tertiary">Discard</button>
+      <button class="Button Button--primary">Save</button>
+    </footer>
+  </div>
 </div>
-```
-
----
-
-## Loading State
-
-Show loading indicator during async operations.
-
-<Preview title="Loading Modal">
-    <button class="Button Button--secondary" onclick="document.getElementById('modal-loading').classList.add('Modal-overlay--active')">Show Loading</button>
-    <div id="modal-loading" class="Modal-overlay" onclick="if(event.target === this) this.classList.remove('Modal-overlay--active')">
-        <div class="Modal Modal--small">
-            <div class="Modal-body" style="text-align: center; padding: var(--space-8);">
-                <div class="Modal-spinner"></div>
-                <h4 style="margin: var(--space-4) 0 var(--space-2);">Processing...</h4>
-                <p style="color: var(--text-secondary); margin: 0;">Please wait while we save your changes.</p>
-            </div>
-        </div>
-    </div>
 </Preview>
 
-<Preview title="Modal with Loading Footer">
-    <button class="Button Button--secondary" onclick="document.getElementById('modal-loading-footer').classList.add('Modal-overlay--active')">Submit Form</button>
-    <div id="modal-loading-footer" class="Modal-overlay" onclick="if(event.target === this) this.classList.remove('Modal-overlay--active')">
-        <div class="Modal Modal--small">
-            <header class="Modal-header">
-                <h4 class="Modal-title">Save Changes</h4>
-            </header>
-            <div class="Modal-body">
-                <p>Your changes are being saved to the server. This may take a moment.</p>
-            </div>
-            <footer class="Modal-footer">
-                <button class="Button Button--tertiary" onclick="document.getElementById('modal-loading-footer').classList.remove('Modal-overlay--active')">Cancel</button>
-                <button class="Button Button--primary Button--loading" disabled>
-                    <span class="Button-spinner"></span>
-                    Saving...
-                </button>
-            </footer>
-        </div>
-    </div>
-</Preview>
+### Confirmation
 
-```html
-<!-- Full loading state -->
-<div class="Modal-body" style="text-align: center;">
-    <div class="Modal-spinner"></div>
-    <h4>Processing...</h4>
-    <p>Please wait...</p>
+Use danger buttons for destructive actions. Clear messaging helps users understand consequences.
+
+<Preview>
+<div style="position: relative; width: 100%; height: 240px; background: oklch(0% 0 0 / 0.5); border-radius: var(--space-2); display: flex; align-items: center; justify-content: center; padding: var(--space-4);">
+  <div class="Modal Modal--small" style="position: relative; transform: none;">
+    <header class="Modal-header">
+      <h2 class="Modal-title">Delete Project?</h2>
+      <button class="Button Button--icon Button--ghost" aria-label="Close">
+        <i class="ph ph-x"></i>
+      </button>
+    </header>
+    <div class="Modal-body">
+      <p>This will permanently delete <strong>"My Project"</strong> and all associated files. This action cannot be undone.</p>
+    </div>
+    <footer class="Modal-footer">
+      <button class="Button Button--secondary">Cancel</button>
+      <button class="Button Button--danger">Delete Project</button>
+    </footer>
+  </div>
 </div>
+</Preview>
 
-<!-- Loading button in footer -->
-<button class="Button Button--primary Button--loading" disabled>
-    <span class="Button-spinner"></span>
-    Saving...
-</button>
+### Form Modal
+
+Modals work great for focused form inputs. Keep forms short — complex flows belong on dedicated pages.
+
+<Preview>
+<div style="position: relative; width: 100%; height: 360px; background: oklch(0% 0 0 / 0.5); border-radius: var(--space-2); display: flex; align-items: center; justify-content: center; padding: var(--space-4);">
+  <div class="Modal" style="position: relative; transform: none;">
+    <header class="Modal-header">
+      <h2 class="Modal-title">Create New Workspace</h2>
+      <button class="Button Button--icon Button--ghost" aria-label="Close">
+        <i class="ph ph-x"></i>
+      </button>
+    </header>
+    <div class="Modal-body">
+      <div class="FormField" style="margin-bottom: var(--space-4);">
+        <label class="FormField-label">Workspace Name</label>
+        <input type="text" class="Input" placeholder="My Workspace">
+      </div>
+      <div class="FormField">
+        <label class="FormField-label">Description</label>
+        <input type="text" class="Input" placeholder="Optional description...">
+      </div>
+    </div>
+    <footer class="Modal-footer">
+      <button class="Button Button--tertiary">Cancel</button>
+      <button class="Button Button--primary">Create Workspace</button>
+    </footer>
+  </div>
+</div>
+</Preview>
+
+### Fullscreen
+
+Fullscreen modals take over the entire viewport. Use for immersive experiences or complex multi-step flows.
+
+<Preview>
+<div style="position: relative; width: 100%; height: 300px; background: oklch(0% 0 0 / 0.5); border-radius: var(--space-2); display: flex; align-items: center; justify-content: center;">
+  <div class="Modal Modal--fullscreen" style="position: relative; transform: none; height: 100%; border-radius: var(--space-2);">
+    <header class="Modal-header">
+      <h2 class="Modal-title">Document Editor</h2>
+      <button class="Button Button--icon Button--ghost" aria-label="Close">
+        <i class="ph ph-x"></i>
+      </button>
+    </header>
+    <div class="Modal-body" style="display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
+      <p>Fullscreen content area</p>
+    </div>
+    <footer class="Modal-footer">
+      <button class="Button Button--tertiary">Cancel</button>
+      <button class="Button Button--primary">Save Document</button>
+    </footer>
+  </div>
+</div>
+</Preview>
+
+### Slideout / Drawer
+
+Slide-in panels from the side work well for settings, filters, or detailed information.
+
+<Preview>
+<div style="position: relative; width: 100%; height: 280px; background: oklch(0% 0 0 / 0.5); border-radius: var(--space-2); display: flex; justify-content: flex-end; overflow: hidden;">
+  <div class="Modal" style="position: relative; transform: none; height: 100%; border-radius: 0; max-width: 320px; border-left: 1px solid var(--border-subtle);">
+    <header class="Modal-header">
+      <h2 class="Modal-title">Filters</h2>
+      <button class="Button Button--icon Button--ghost" aria-label="Close">
+        <i class="ph ph-x"></i>
+      </button>
+    </header>
+    <div class="Modal-body">
+      <div class="FormField" style="margin-bottom: var(--space-4);">
+        <label class="FormField-label">Category</label>
+        <select class="Select">
+          <option>All Categories</option>
+          <option>Design</option>
+          <option>Development</option>
+        </select>
+      </div>
+      <div class="FormField">
+        <label class="FormField-label">Status</label>
+        <select class="Select">
+          <option>Any Status</option>
+          <option>Active</option>
+          <option>Archived</option>
+        </select>
+      </div>
+    </div>
+    <footer class="Modal-footer">
+      <button class="Button Button--tertiary">Reset</button>
+      <button class="Button Button--primary">Apply Filters</button>
+    </footer>
+  </div>
+</div>
+</Preview>
+
+### Nested
+
+Open a modal from within another modal. The second modal uses `.Modal-overlay--nested` for higher z-index.
+
+<Preview>
+<div style="position: relative; width: 100%; height: 320px; background: oklch(0% 0 0 / 0.5); border-radius: var(--space-2); display: flex; align-items: center; justify-content: center; padding: var(--space-4);">
+  <div class="Modal" style="position: relative; transform: none; opacity: 0.6; scale: 0.95;">
+    <header class="Modal-header">
+      <h2 class="Modal-title">Edit Profile</h2>
+    </header>
+    <div class="Modal-body">
+      <p>Primary modal content...</p>
+    </div>
+  </div>
+  <div class="Modal Modal--small" style="position: absolute; transform: none;">
+    <header class="Modal-header">
+      <h2 class="Modal-title">Discard Changes?</h2>
+      <button class="Button Button--icon Button--ghost" aria-label="Close">
+        <i class="ph ph-x"></i>
+      </button>
+    </header>
+    <div class="Modal-body">
+      <p>You have unsaved changes. Are you sure you want to close?</p>
+    </div>
+    <footer class="Modal-footer">
+      <button class="Button Button--tertiary">Keep Editing</button>
+      <button class="Button Button--danger">Discard</button>
+    </footer>
+  </div>
+</div>
+</Preview>
+
+### Image Lightbox
+
+Display images in a focused, centered view with minimal chrome.
+
+<Preview>
+<div style="position: relative; width: 100%; height: 280px; background: oklch(0% 0 0 / 0.85); border-radius: var(--space-2); display: flex; align-items: center; justify-content: center; padding: var(--space-4);">
+  <button class="Button Button--icon Button--ghost" style="position: absolute; top: var(--space-3); right: var(--space-3); color: white;" aria-label="Close">
+    <i class="ph ph-x"></i>
+  </button>
+  <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=200&fit=crop" alt="Mountain landscape" style="max-width: 100%; max-height: 220px; border-radius: var(--space-2); object-fit: cover;">
+  <button class="Button Button--icon Button--ghost" style="position: absolute; left: var(--space-3); color: white;" aria-label="Previous">
+    <i class="ph ph-caret-left"></i>
+  </button>
+  <button class="Button Button--icon Button--ghost" style="position: absolute; right: var(--space-3); color: white;" aria-label="Next">
+    <i class="ph ph-caret-right"></i>
+  </button>
+</div>
+</Preview>
+
+### Video Modal
+
+Embed video content with playback controls.
+
+<Preview>
+<div style="position: relative; width: 100%; height: 280px; background: oklch(0% 0 0 / 0.85); border-radius: var(--space-2); display: flex; align-items: center; justify-content: center; padding: var(--space-6);">
+  <button class="Button Button--icon Button--ghost" style="position: absolute; top: var(--space-3); right: var(--space-3); color: white;" aria-label="Close">
+    <i class="ph ph-x"></i>
+  </button>
+  <div style="width: 100%; max-width: 480px; aspect-ratio: 16/9; background: oklch(10% 0 0); border-radius: var(--space-2); display: flex; align-items: center; justify-content: center;">
+    <button class="Button Button--icon Button--primary Button--large" aria-label="Play video">
+      <i class="ph ph-play-fill"></i>
+    </button>
+  </div>
+</div>
+</Preview>
+
+---
+
+## Sizes
+
+Modals come in three sizes: small, medium (default), and large. Fullscreen is also available.
+
+<Preview>
+<div style="display: flex; flex-direction: column; gap: var(--space-4); width: 100%;">
+  <div class="Modal Modal--small" style="position: relative; transform: none; margin: 0 auto;">
+    <header class="Modal-header">
+      <h2 class="Modal-title">Small (360px)</h2>
+    </header>
+    <div class="Modal-body">
+      <p>Compact dialogs</p>
+    </div>
+  </div>
+  <div class="Modal" style="position: relative; transform: none; margin: 0 auto;">
+    <header class="Modal-header">
+      <h2 class="Modal-title">Medium (480px) — Default</h2>
+    </header>
+    <div class="Modal-body">
+      <p>Standard modal width</p>
+    </div>
+  </div>
+  <div class="Modal Modal--large" style="position: relative; transform: none; margin: 0 auto; max-width: 100%;">
+    <header class="Modal-header">
+      <h2 class="Modal-title">Large (720px)</h2>
+    </header>
+    <div class="Modal-body">
+      <p>For complex content or forms</p>
+    </div>
+  </div>
+</div>
+</Preview>
+
+---
+
+## Customization
+
+Override modal styles using CSS custom properties:
+
+```css
+/* Custom modal width */
+.Modal--custom {
+  max-width: 600px;
+}
+
+/* Custom overlay color */
+.Modal-overlay--branded {
+  background-color: oklch(25% 0.05 250 / 0.8);
+}
+
+/* Remove backdrop blur for performance */
+.Modal-overlay--no-blur {
+  backdrop-filter: none;
+}
+
+/* Slide-in from side animation */
+.Modal-overlay--slideout .Modal {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  max-width: 400px;
+  height: 100%;
+  border-radius: 0;
+  transform: translateX(100%);
+}
+
+.Modal-overlay--slideout.active .Modal {
+  transform: translateX(0);
+}
+
+/* Centered content variant */
+.Modal--centered .Modal-header {
+  text-align: center;
+  justify-content: center;
+}
+
+.Modal--centered .Modal-body {
+  text-align: center;
+}
+
+.Modal--centered .Modal-footer {
+  justify-content: center;
+}
 ```
 
 ---
 
-## Modal Stack (Nested)
+## API Reference
 
-Handle multiple modals with proper z-index stacking.
+### Overlay Classes
 
-<Preview title="Nested Modals">
-    <button class="Button Button--secondary" onclick="document.getElementById('modal-parent').classList.add('Modal-overlay--active')">Open First Modal</button>
-    <div id="modal-parent" class="Modal-overlay" onclick="if(event.target === this) this.classList.remove('Modal-overlay--active')">
-        <div class="Modal">
-            <header class="Modal-header">
-                <h4 class="Modal-title">First Modal</h4>
-                <button class="Button Button--icon Button--ghost" onclick="document.getElementById('modal-parent').classList.remove('Modal-overlay--active')" aria-label="Close">
-                    <i class="ph ph-x"></i>
-                </button>
-            </header>
-            <div class="Modal-body">
-                <p>This is the first modal. Click below to open a nested modal.</p>
-                <button class="Button Button--secondary" style="margin-top: var(--space-4);" onclick="document.getElementById('modal-child').classList.add('Modal-overlay--active')">Open Second Modal</button>
-            </div>
-        </div>
-    </div>
-    <div id="modal-child" class="Modal-overlay Modal-overlay--nested" onclick="if(event.target === this) this.classList.remove('Modal-overlay--active')">
-        <div class="Modal Modal--small">
-            <header class="Modal-header">
-                <h4 class="Modal-title">Second Modal</h4>
-                <button class="Button Button--icon Button--ghost" onclick="document.getElementById('modal-child').classList.remove('Modal-overlay--active')" aria-label="Close">
-                    <i class="ph ph-x"></i>
-                </button>
-            </header>
-            <div class="Modal-body">
-                <p>This is a nested modal that appears above the first one.</p>
-            </div>
-            <footer class="Modal-footer">
-                <button class="Button Button--primary" onclick="document.getElementById('modal-child').classList.remove('Modal-overlay--active')">Close</button>
-            </footer>
-        </div>
-    </div>
-</Preview>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Modal-overlay</code></td>
+<td class="ApiTable-desc">Full-screen backdrop with centering</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Modal-overlay.active</code></td>
+<td class="ApiTable-desc">Shows the modal (visible, interactive)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Modal-overlay--active</code></td>
+<td class="ApiTable-desc">Alternative active class</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Modal-overlay--nested</code></td>
+<td class="ApiTable-desc">Higher z-index for stacked modals</td>
+</tr>
+</tbody>
+</table>
+
+### Modal Classes
+
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Modal</code></td>
+<td class="ApiTable-desc">Modal container (required)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Modal--small</code></td>
+<td class="ApiTable-desc">Small modal (360px max-width)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Modal--large</code></td>
+<td class="ApiTable-desc">Large modal (720px max-width)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Modal--fullscreen</code></td>
+<td class="ApiTable-desc">Full viewport modal</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Modal--centered</code></td>
+<td class="ApiTable-desc">Center-aligned header and content</td>
+</tr>
+</tbody>
+</table>
+
+### Structure Classes
+
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Modal-header</code></td>
+<td class="ApiTable-desc">Header area with title and close button</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Modal-title</code></td>
+<td class="ApiTable-desc">Modal heading text</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Modal-body</code></td>
+<td class="ApiTable-desc">Main content area (scrollable)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Modal-body--scrollable</code></td>
+<td class="ApiTable-desc">Explicit scrollable body</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Modal-footer</code></td>
+<td class="ApiTable-desc">Action buttons area</td>
+</tr>
+</tbody>
+</table>
 
 ---
 
 ## Accessibility
 
-Modals require careful attention to accessibility:
+Proper modal accessibility ensures all users can interact with your dialogs, including those using keyboards and screen readers.
 
 ### Focus Management
-```javascript
-// Trap focus within modal
-const modal = document.querySelector('.Modal');
-const focusableElements = modal.querySelectorAll(
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-);
-const firstElement = focusableElements[0];
-const lastElement = focusableElements[focusableElements.length - 1];
 
-modal.addEventListener('keydown', (e) => {
-    if (e.key === 'Tab') {
-        if (e.shiftKey && document.activeElement === firstElement) {
-            e.preventDefault();
-            lastElement.focus();
-        } else if (!e.shiftKey && document.activeElement === lastElement) {
-            e.preventDefault();
-            firstElement.focus();
-        }
-    }
-});
-
-// Focus first element on open
-firstElement.focus();
-```
-
-### Escape to Close
-```javascript
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-        closeModal();
-    }
-});
-```
-
-### ARIA Attributes
 ```html
-<div 
-    class="Modal-overlay Modal-overlay--active" 
-    role="dialog" 
-    aria-modal="true"
-    aria-labelledby="modal-title"
-    aria-describedby="modal-description"
->
-    <div class="Modal">
-        <header class="Modal-header">
-            <h4 id="modal-title" class="Modal-title">Modal Title</h4>
-        </header>
-        <div class="Modal-body">
-            <p id="modal-description">Modal description...</p>
-        </div>
+<!-- Modal should trap focus when open -->
+<div class="Modal-overlay active" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="Modal">
+    <header class="Modal-header">
+      <h2 class="Modal-title" id="modal-title">Accessible Modal</h2>
+      <button class="Button Button--icon Button--ghost" aria-label="Close modal">
+        <i class="ph ph-x"></i>
+      </button>
+    </header>
+    <div class="Modal-body">
+      <p>First focusable element receives focus on open.</p>
+      <input type="text" class="Input" placeholder="Focus starts here">
     </div>
+    <footer class="Modal-footer">
+      <button class="Button Button--tertiary">Cancel</button>
+      <button class="Button Button--primary">Submit</button>
+    </footer>
+  </div>
 </div>
 ```
 
-### Return Focus
-```javascript
-// Store the element that opened the modal
-const triggerElement = document.activeElement;
+### Focus Trap
 
-// On close, return focus
-function closeModal() {
-    overlay.classList.remove('Modal-overlay--active');
-    triggerElement.focus();
+Keep focus within the modal while open. Tab cycles through focusable elements without escaping to background content.
+
+```javascript
+// Basic focus trap implementation
+function trapFocus(modal) {
+  const focusable = modal.querySelectorAll(
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+  );
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+
+  modal.addEventListener('keydown', (e) => {
+    if (e.key !== 'Tab') return;
+
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  });
 }
 ```
 
----
+### Escape Key
 
-## CSS Reference
+Allow users to close the modal by pressing Escape.
 
-```css
-/* Overlay */
-.Modal-overlay {
-  position: fixed;
-  inset: 0;
-  background-color: oklch(0% 0 0 / 0.5);
-  backdrop-filter: blur(4px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--space-4);
-  z-index: 1000;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.2s, visibility 0.2s;
+```javascript
+function handleEscapeKey(modal, closeCallback) {
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      closeCallback();
+    }
+  });
+}
+```
+
+### ARIA Attributes
+
+| Attribute | Element | Description |
+|-----------|---------|-------------|
+| `role="dialog"` | `.Modal-overlay` | Identifies as a dialog |
+| `aria-modal="true"` | `.Modal-overlay` | Indicates modal behavior |
+| `aria-labelledby` | `.Modal-overlay` | Points to title ID |
+| `aria-describedby` | `.Modal-overlay` | Points to description (optional) |
+| `aria-label` | Close button | Describes the button action |
+
+### Screen Reader Announcements
+
+```html
+<!-- Use aria-live for dynamic content -->
+<div class="Modal-body">
+  <div aria-live="polite" aria-atomic="true">
+    <!-- Dynamic messages announced to screen readers -->
+    <p class="Alert Alert--success">Changes saved successfully!</p>
+  </div>
+</div>
+```
+
+### Keyboard Support
+
+| Key | Action |
+|-----|--------|
+| Tab | Move focus to next focusable element |
+| Shift + Tab | Move focus to previous focusable element |
+| Escape | Close the modal |
+| Enter | Activate focused button |
+
+### Return Focus
+
+When the modal closes, return focus to the element that triggered it.
+
+```javascript
+let triggerElement = null;
+
+function openModal(modal, trigger) {
+  triggerElement = trigger;
+  modal.classList.add('active');
+  modal.querySelector('input, button')?.focus();
 }
 
-.Modal-overlay--active {
-  opacity: 1;
-  visibility: visible;
-}
-
-.Modal-overlay--nested {
-  z-index: 1001;
-}
-
-/* Modal */
-.Modal {
-  background-color: var(--bg-primary);
-  border-radius: var(--space-3);
-  box-shadow: 0 20px 40px oklch(0% 0 0 / 0.2);
-  width: 100%;
-  max-width: 480px;
-  max-height: calc(100vh - var(--space-8));
-  display: flex;
-  flex-direction: column;
-  transform: translateY(10px);
-  transition: transform 0.2s;
-}
-
-.Modal-overlay--active .Modal {
-  transform: translateY(0);
-}
-
-/* Sizes */
-.Modal--small {
-  max-width: 360px;
-}
-
-.Modal--large {
-  max-width: 720px;
-}
-
-.Modal--fullscreen {
-  max-width: 100%;
-  max-height: 100%;
-  height: 100%;
-  border-radius: 0;
-}
-
-/* Header */
-.Modal-header {
-  padding: var(--space-4) var(--space-6);
-  border-bottom: 1px solid var(--border-subtle);
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: var(--space-4);
-}
-
-.Modal-title {
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin: 0;
-}
-
-/* Body */
-.Modal-body {
-  padding: var(--space-6);
-  flex: 1;
-  overflow-y: auto;
-}
-
-.Modal-body--scrollable {
-  overflow-y: auto;
-}
-
-.Modal-body p {
-  margin: 0;
-  line-height: 1.6;
-}
-
-/* Footer */
-.Modal-footer {
-  padding: var(--space-4) var(--space-6);
-  border-top: 1px solid var(--border-subtle);
-  display: flex;
-  justify-content: flex-end;
-  gap: var(--space-3);
-}
-
-/* Centered variant */
-.Modal--centered .Modal-header {
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-/* Prevent body scroll when modal is open */
-body:has(.Modal-overlay--active) {
-  overflow: hidden;
-}
-
-/* Steps/Stepper */
-.Modal-steps {
-  display: flex;
-  justify-content: center;
-  padding: var(--space-4) var(--space-6);
-  border-bottom: 1px solid var(--border-subtle);
-  gap: var(--space-6);
-}
-
-.Modal-step {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-2);
-  position: relative;
-}
-
-.Modal-step:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  top: 14px;
-  left: calc(50% + 20px);
-  width: calc(100% + var(--space-2));
-  height: 2px;
-  background-color: var(--border-subtle);
-}
-
-.Modal-step--completed:not(:last-child)::after {
-  background-color: var(--accent-primary);
-}
-
-.Modal-step-indicator {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background-color: var(--bg-secondary);
-  border: 2px solid var(--border-subtle);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--text-secondary);
-  position: relative;
-  z-index: 1;
-}
-
-.Modal-step--active .Modal-step-indicator {
-  background-color: var(--accent-primary);
-  border-color: var(--accent-primary);
-  color: white;
-}
-
-.Modal-step--completed .Modal-step-indicator {
-  background-color: var(--accent-primary);
-  border-color: var(--accent-primary);
-  color: white;
-}
-
-.Modal-step-label {
-  font-size: 0.75rem;
-  color: var(--text-secondary);
-}
-
-.Modal-step--active .Modal-step-label {
-  color: var(--text-primary);
-  font-weight: 500;
-}
-
-/* Loading Spinner */
-.Modal-spinner {
-  width: 40px;
-  height: 40px;
-  border: 3px solid var(--border-subtle);
-  border-top-color: var(--accent-primary);
-  border-radius: 50%;
-  animation: modal-spin 0.8s linear infinite;
-  margin: 0 auto;
-}
-
-@keyframes modal-spin {
-  to { transform: rotate(360deg); }
+function closeModal(modal) {
+  modal.classList.remove('active');
+  triggerElement?.focus();
+  triggerElement = null;
 }
 ```
 
@@ -797,16 +589,22 @@ body:has(.Modal-overlay--active) {
 
 ### Do
 
-- ✓ **Use for focused tasks** — Modals demand attention, use purposefully
-- ✓ **Provide clear escape** — Always offer a way to close (X button, Cancel, Escape key)
-- ✓ **Keep content focused** — One task per modal
-- ✓ **Use descriptive titles** — Help users understand context
-- ✓ **Return focus** — Focus the trigger element when modal closes
+- ✓ **Use clear, specific titles** — "Delete Project?" not "Confirm"
+- ✓ **Keep content concise** — Modals interrupt flow, respect users' time
+- ✓ **Provide obvious exit paths** — Close button, Cancel action, Escape key
+- ✓ **Trap focus** — Keep keyboard navigation within the modal
+- ✓ **Return focus** — On close, focus returns to the trigger element
+- ✓ **Prevent background scroll** — Body shouldn't scroll when modal is open
+- ✓ **Match button order to reading flow** — Primary action on the right
+- ✓ **Use danger styling** — Red buttons for destructive actions
 
 ### Don't
 
-- ✗ **Stack many modals** — Avoid more than 2 levels of nesting
-- ✗ **Use for simple messages** — Consider toasts or inline alerts instead
-- ✗ **Block without explanation** — Always explain why a modal appeared
+- ✗ **Stack too many modals** — Two max; consider page navigation instead
+- ✗ **Use for complex flows** — Long forms belong on dedicated pages
+- ✗ **Auto-open modals on page load** — Let users initiate the interaction
+- ✗ **Hide the close button** — Users must always be able to dismiss
+- ✗ **Put critical content in modals** — Important info should be on the page
+- ✗ **Use vague actions** — "OK" and "Cancel" don't describe what happens
 - ✗ **Forget mobile** — Ensure modals work on small screens
-- ✗ **Auto-open on page load** — Let users initiate modal interactions
+- ✗ **Block background interaction permanently** — Always provide an exit

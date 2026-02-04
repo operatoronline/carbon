@@ -1,739 +1,976 @@
 # Cards
 
-Cards are surfaces that group related information and actions. They provide entry points to more detailed content and serve as a consistent container across your interface.
+Cards are flexible containers that group related content and actions. They provide a clean, elevated surface for displaying everything from simple text to complex interactive layouts.
 
 ---
 
-## Basic Card
+## Installation
 
-A simple card with body content.
+Copy the card CSS from `styles/docs.css` or include the Carbon stylesheet:
 
-<Preview title="Basic Card">
-    <div class="Card" style="max-width: 320px;">
-        <div class="Card-body">
-            <h4 class="Card-title">Card Title</h4>
-            <p class="Card-text">This is a basic card with some descriptive text inside the body area.</p>
-        </div>
-    </div>
-</Preview>
+```html
+<link rel="stylesheet" href="carbon.min.css">
+```
+
+Then use card classes in your HTML:
 
 ```html
 <div class="Card">
     <div class="Card-body">
-        <h4 class="Card-title">Card Title</h4>
-        <p class="Card-text">Description text...</p>
+        <h3 class="Card-title">Card Title</h3>
+        <p class="Card-text">Card content goes here.</p>
     </div>
 </div>
 ```
 
 ---
 
-## Card with Header
+## Usage
 
-Add a header section for titles or metadata.
+The base `.Card` class provides core styling with elevation and border radius. Add sections like `.Card-header`, `.Card-body`, and `.Card-footer` to structure content.
 
-<Preview title="Card with Header">
-    <div class="Card" style="max-width: 320px;">
-        <div class="Card-header">
-            <h4 class="Card-title">Project Update</h4>
-            <span class="Badge Badge--primary">New</span>
-        </div>
-        <div class="Card-body">
-            <p class="Card-text">Review the latest changes to the design system documentation and component library.</p>
-        </div>
+<Preview>
+<div class="Card" style="max-width: 320px;">
+    <div class="Card-body">
+        <h3 class="Card-title">Simple Card</h3>
+        <p class="Card-text">Cards group related content and actions together.</p>
     </div>
+</div>
 </Preview>
 
-```html
-<div class="Card">
+---
+
+## Examples
+
+### Basic Card
+
+A minimal card with title and text content.
+
+<Preview>
+<div class="Card" style="max-width: 320px;">
+    <div class="Card-body">
+        <h3 class="Card-title">Project Update</h3>
+        <p class="Card-text">The new dashboard feature is ready for review. All tests passing.</p>
+    </div>
+</div>
+</Preview>
+
+### Card with Header and Footer
+
+Use header and footer sections for titles, metadata, and actions.
+
+<Preview>
+<div class="Card" style="max-width: 320px;">
     <div class="Card-header">
-        <h4 class="Card-title">Project Update</h4>
-        <span class="Badge Badge--primary">New</span>
+        <h3 class="Card-title">Weekly Report</h3>
+        <span class="Card-subtitle">Feb 3, 2026</span>
     </div>
     <div class="Card-body">
-        <p class="Card-text">Content...</p>
+        <p class="Card-text">Revenue increased 12% this week. Customer satisfaction scores remain high at 4.8/5.</p>
     </div>
-</div>
-```
-
----
-
-## Card with Footer
-
-Add a footer for actions or metadata.
-
-<Preview title="Card with Footer">
-    <div class="Card" style="max-width: 320px;">
-        <div class="Card-body">
-            <h4 class="Card-title">Subscription</h4>
-            <p class="Card-text">Your current plan is Pro. Next billing date is March 15, 2026.</p>
-        </div>
-        <div class="Card-footer">
-            <button class="Button Button--tertiary Button--small">Cancel</button>
-            <button class="Button Button--primary Button--small">Upgrade</button>
-        </div>
-    </div>
-</Preview>
-
-```html
-<div class="Card">
-    <div class="Card-body">...</div>
     <div class="Card-footer">
-        <button class="Button Button--tertiary Button--small">Cancel</button>
-        <button class="Button Button--primary Button--small">Upgrade</button>
+        <button class="Button Button--tertiary Button--small">Dismiss</button>
+        <button class="Button Button--primary Button--small">View Details</button>
     </div>
 </div>
-```
-
----
-
-## Card with Image
-
-Cards can include images for visual interest.
-
-<Preview title="Card with Image">
-    <div class="Card" style="max-width: 320px;">
-        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=640&h=320" class="Card-image" alt="Abstract gradient">
-        <div class="Card-body">
-            <h4 class="Card-title">Design Inspiration</h4>
-            <p class="Card-text">Explore the latest trends in visual design and color theory.</p>
-        </div>
-    </div>
 </Preview>
 
-```html
-<div class="Card">
-    <img src="..." class="Card-image" alt="...">
+### Card with Image
+
+Add images to cards using `.Card-image` at the top.
+
+<Preview>
+<div class="Card" style="max-width: 320px;">
+    <div class="Card-image" style="background: linear-gradient(135deg, oklch(60% 0.15 250), oklch(50% 0.2 280)); height: 160px;"></div>
     <div class="Card-body">
-        <h4 class="Card-title">Title</h4>
-        <p class="Card-text">Description...</p>
+        <h3 class="Card-title">Mountain Retreat</h3>
+        <p class="Card-text">Escape to the peaks for a weekend of hiking and relaxation.</p>
+        <button class="Button Button--primary Button--small">Book Now</button>
     </div>
 </div>
-```
-
----
-
-## Interactive Card
-
-Cards that respond to hover and can be clicked as a whole.
-
-<Preview title="Interactive Card">
-    <a href="#" class="Card Card--interactive" style="max-width: 320px; text-decoration: none;">
-        <div class="Card-body">
-            <h4 class="Card-title">Getting Started Guide</h4>
-            <p class="Card-text">Learn the basics of setting up and using the Carbon design system.</p>
-        </div>
-        <div class="Card-footer Card-footer--link">
-            <span class="Link">Read more</span>
-            <i class="ph ph-arrow-right"></i>
-        </div>
-    </a>
 </Preview>
 
-```html
-<a href="#" class="Card Card--interactive">
-    <div class="Card-body">
-        <h4 class="Card-title">Getting Started Guide</h4>
-        <p class="Card-text">Learn the basics...</p>
+### Card with Image Overlay
+
+Overlay text on images for hero-style cards.
+
+<Preview>
+<div class="Card Card--overlay" style="max-width: 400px;">
+    <div class="Card-image" style="background: linear-gradient(135deg, oklch(45% 0.18 30), oklch(35% 0.15 350)); height: 220px;"></div>
+    <div class="Card-overlay">
+        <span class="Card-tag">Featured</span>
+        <h3 class="Card-title">Sunset Photography Workshop</h3>
+        <p class="Card-text">Learn to capture golden hour magic</p>
     </div>
-    <div class="Card-footer Card-footer--link">
-        <span class="Link">Read more</span>
-        <i class="ph ph-arrow-right"></i>
+</div>
+</Preview>
+
+### Horizontal Card
+
+Side-by-side layout for media and content.
+
+<Preview>
+<div class="Card Card--horizontal" style="max-width: 480px;">
+    <div class="Card-image" style="background: linear-gradient(135deg, oklch(55% 0.12 170), oklch(45% 0.15 200)); min-width: 140px;"></div>
+    <div class="Card-body">
+        <span class="Card-tag">Article</span>
+        <h3 class="Card-title">Design Systems at Scale</h3>
+        <p class="Card-text">How leading teams maintain consistency across products.</p>
+        <span class="Card-meta">8 min read</span>
+    </div>
+</div>
+</Preview>
+
+### Interactive Card
+
+Clickable cards with hover effects.
+
+<Preview>
+<a href="#" class="Card Card--interactive" style="max-width: 320px; text-decoration: none;">
+    <div class="Card-body">
+        <div style="display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-3);">
+            <div style="width: 40px; height: 40px; border-radius: var(--space-2); background: oklch(60% 0.15 250); display: flex; align-items: center; justify-content: center;">
+                <i class="ph ph-folder" style="color: white; font-size: 1.25rem;"></i>
+            </div>
+            <div>
+                <h3 class="Card-title" style="margin: 0;">Design Files</h3>
+                <span class="Card-meta">24 items</span>
+            </div>
+        </div>
+        <p class="Card-text">Figma files, brand assets, and component libraries.</p>
     </div>
 </a>
-```
-
----
-
-## Horizontal Card
-
-Image on the left, content on the right.
-
-<Preview title="Horizontal Card">
-    <div class="Card Card--horizontal" style="max-width: 480px;">
-        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=200&h=200" class="Card-image" alt="Abstract gradient">
-        <div class="Card-body">
-            <span class="Badge Badge--success" style="margin-bottom: var(--space-2);">Available</span>
-            <h4 class="Card-title">Premium Course</h4>
-            <p class="Card-text">Deep dive into advanced design patterns and techniques.</p>
-            <button class="Button Button--primary Button--small">Enroll Now</button>
-        </div>
-    </div>
 </Preview>
 
-```html
-<div class="Card Card--horizontal">
-    <img src="..." class="Card-image" alt="...">
+### Profile Card
+
+Display user information and quick actions.
+
+<Preview>
+<div class="Card" style="max-width: 300px; text-align: center;">
     <div class="Card-body">
-        <h4 class="Card-title">Title</h4>
-        <p class="Card-text">Description...</p>
+        <div class="Card-avatar" style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, oklch(65% 0.15 150), oklch(55% 0.18 180)); margin: 0 auto var(--space-4);"></div>
+        <h3 class="Card-title">Alex Chen</h3>
+        <p class="Card-subtitle">Senior Product Designer</p>
+        <p class="Card-text" style="margin-top: var(--space-3);">Creating delightful experiences at Acme Corp. Previously at Figma.</p>
+        <div style="display: flex; gap: var(--space-2); justify-content: center; margin-top: var(--space-4);">
+            <button class="Button Button--primary Button--small">Follow</button>
+            <button class="Button Button--secondary Button--small">Message</button>
+        </div>
     </div>
 </div>
-```
-
----
-
-## Selectable Card
-
-Cards that can be selected, often used for multi-select interfaces.
-
-<Preview title="Selectable Cards">
-    <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
-        <label class="Card Card--selectable" style="width: 160px;">
-            <input type="checkbox" class="Card-checkbox">
-            <div class="Card-body" style="text-align: center;">
-                <i class="ph ph-image" style="font-size: 2rem; color: var(--text-secondary); margin-bottom: var(--space-2);"></i>
-                <span class="Card-title" style="font-size: 0.9rem;">Images</span>
-            </div>
-        </label>
-        <label class="Card Card--selectable Card--selected" style="width: 160px;">
-            <input type="checkbox" class="Card-checkbox" checked>
-            <div class="Card-body" style="text-align: center;">
-                <i class="ph ph-file-text" style="font-size: 2rem; color: var(--text-secondary); margin-bottom: var(--space-2);"></i>
-                <span class="Card-title" style="font-size: 0.9rem;">Documents</span>
-            </div>
-        </label>
-        <label class="Card Card--selectable" style="width: 160px;">
-            <input type="checkbox" class="Card-checkbox">
-            <div class="Card-body" style="text-align: center;">
-                <i class="ph ph-video" style="font-size: 2rem; color: var(--text-secondary); margin-bottom: var(--space-2);"></i>
-                <span class="Card-title" style="font-size: 0.9rem;">Videos</span>
-            </div>
-        </label>
-    </div>
 </Preview>
 
-```html
-<label class="Card Card--selectable">
-    <input type="checkbox" class="Card-checkbox">
-    <div class="Card-body">
-        <i class="ph ph-image"></i>
-        <span class="Card-title">Images</span>
-    </div>
-</label>
-```
+### Stats Card
 
----
+Highlight key metrics and numbers.
 
-## Card Variants
-
-### Elevated Card
-
-Subtle shadow for depth.
-
-<Preview title="Elevated Card">
-    <div class="Card Card--elevated" style="max-width: 320px;">
-        <div class="Card-body">
-            <h4 class="Card-title">Elevated Card</h4>
-            <p class="Card-text">This card has a subtle shadow for visual depth and hierarchy.</p>
+<Preview>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); max-width: 600px;">
+    <div class="Card">
+        <div class="Card-body" style="text-align: center;">
+            <span class="Card-stat">2,847</span>
+            <span class="Card-stat-label">Total Users</span>
+            <span class="Card-stat-change Card-stat-change--positive">+12.5%</span>
         </div>
     </div>
-</Preview>
-
-```html
-<div class="Card Card--elevated">...</div>
-```
-
-### Bordered Card
-
-Stronger border emphasis.
-
-<Preview title="Bordered Card">
-    <div class="Card Card--bordered" style="max-width: 320px;">
-        <div class="Card-body">
-            <h4 class="Card-title">Bordered Card</h4>
-            <p class="Card-text">This card has a more prominent border for definition.</p>
+    <div class="Card">
+        <div class="Card-body" style="text-align: center;">
+            <span class="Card-stat">$48.2k</span>
+            <span class="Card-stat-label">Revenue</span>
+            <span class="Card-stat-change Card-stat-change--positive">+8.2%</span>
         </div>
     </div>
-</Preview>
-
-```html
-<div class="Card Card--bordered">...</div>
-```
-
-### Filled Card
-
-Subtle background fill for visual grouping.
-
-<Preview title="Filled Card">
-    <div class="Card Card--filled" style="max-width: 320px;">
-        <div class="Card-body">
-            <h4 class="Card-title">Filled Card</h4>
-            <p class="Card-text">This card has a subtle background fill to stand out from the page.</p>
+    <div class="Card">
+        <div class="Card-body" style="text-align: center;">
+            <span class="Card-stat">94.2%</span>
+            <span class="Card-stat-label">Uptime</span>
+            <span class="Card-stat-change Card-stat-change--negative">-0.3%</span>
         </div>
-    </div>
-</Preview>
-
-```html
-<div class="Card Card--filled">...</div>
-```
-
-<Preview title="All Variants Compared">
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-4);">
-        <div class="Card">
-            <div class="Card-body">
-                <h4 class="Card-title" style="font-size: 0.9rem;">Default</h4>
-                <p class="Card-text" style="font-size: 0.8rem;">Standard card with subtle border</p>
-            </div>
-        </div>
-        <div class="Card Card--elevated">
-            <div class="Card-body">
-                <h4 class="Card-title" style="font-size: 0.9rem;">Elevated</h4>
-                <p class="Card-text" style="font-size: 0.8rem;">Shadow for depth and hierarchy</p>
-            </div>
-        </div>
-        <div class="Card Card--bordered">
-            <div class="Card-body">
-                <h4 class="Card-title" style="font-size: 0.9rem;">Bordered</h4>
-                <p class="Card-text" style="font-size: 0.8rem;">Stronger border emphasis</p>
-            </div>
-        </div>
-        <div class="Card Card--filled">
-            <div class="Card-body">
-                <h4 class="Card-title" style="font-size: 0.9rem;">Filled</h4>
-                <p class="Card-text" style="font-size: 0.8rem;">Background fill for grouping</p>
-            </div>
-        </div>
-    </div>
-</Preview>
-
-### Compact Card
-
-Reduced padding for denser layouts.
-
-<Preview title="Compact Card">
-    <div class="Card Card--compact" style="max-width: 280px;">
-        <div class="Card-body">
-            <h4 class="Card-title">Compact Card</h4>
-            <p class="Card-text">Smaller padding for tighter layouts.</p>
-        </div>
-    </div>
-</Preview>
-
-```html
-<div class="Card Card--compact">...</div>
-```
-
----
-
-## Loading State
-
-Skeleton placeholder while loading.
-
-<Preview title="Loading Card">
-    <div class="Card Card--loading" style="max-width: 320px;">
-        <div class="Skeleton Skeleton--image" style="height: 160px;"></div>
-        <div class="Card-body">
-            <div class="Skeleton Skeleton--text Skeleton--title" style="width: 60%;"></div>
-            <div class="Skeleton Skeleton--text" style="margin-top: var(--space-2);"></div>
-            <div class="Skeleton Skeleton--text" style="width: 80%; margin-top: var(--space-1);"></div>
-        </div>
-    </div>
-</Preview>
-
-```html
-<div class="Card Card--loading">
-    <div class="Skeleton Skeleton--image"></div>
-    <div class="Card-body">
-        <div class="Skeleton Skeleton--text Skeleton--title"></div>
-        <div class="Skeleton Skeleton--text"></div>
     </div>
 </div>
-```
+</Preview>
+
+### Pricing Card
+
+Display pricing tiers and features.
+
+<Preview>
+<div class="Card Card--pricing" style="max-width: 320px;">
+    <div class="Card-header" style="text-align: center;">
+        <span class="Card-tag">Popular</span>
+        <h3 class="Card-title">Pro</h3>
+        <div class="Card-price">
+            <span class="Card-price-amount">$29</span>
+            <span class="Card-price-period">/month</span>
+        </div>
+    </div>
+    <div class="Card-body">
+        <ul class="Card-features">
+            <li class="Card-feature">
+                <i class="ph ph-check"></i>
+                Unlimited projects
+            </li>
+            <li class="Card-feature">
+                <i class="ph ph-check"></i>
+                50GB storage
+            </li>
+            <li class="Card-feature">
+                <i class="ph ph-check"></i>
+                Priority support
+            </li>
+            <li class="Card-feature">
+                <i class="ph ph-check"></i>
+                Advanced analytics
+            </li>
+            <li class="Card-feature Card-feature--disabled">
+                <i class="ph ph-x"></i>
+                Custom domain
+            </li>
+        </ul>
+    </div>
+    <div class="Card-footer">
+        <button class="Button Button--primary Button--block">Get Started</button>
+    </div>
+</div>
+</Preview>
+
+### Product Card
+
+E-commerce style product display.
+
+<Preview>
+<div class="Card" style="max-width: 280px;">
+    <div class="Card-image" style="background: linear-gradient(135deg, oklch(92% 0.02 80), oklch(88% 0.03 60)); height: 200px; position: relative;">
+        <button class="Card-wishlist" aria-label="Add to wishlist">
+            <i class="ph ph-heart"></i>
+        </button>
+    </div>
+    <div class="Card-body">
+        <span class="Card-category">Electronics</span>
+        <h3 class="Card-title">Wireless Headphones</h3>
+        <div class="Card-rating">
+            <i class="ph-fill ph-star"></i>
+            <i class="ph-fill ph-star"></i>
+            <i class="ph-fill ph-star"></i>
+            <i class="ph-fill ph-star"></i>
+            <i class="ph ph-star"></i>
+            <span class="Card-rating-count">(128)</span>
+        </div>
+        <div class="Card-price-row">
+            <span class="Card-price-current">$79.99</span>
+            <span class="Card-price-original">$99.99</span>
+        </div>
+        <button class="Button Button--primary Button--block Button--small">Add to Cart</button>
+    </div>
+</div>
+</Preview>
+
+### Notification Card
+
+Alert or notification style cards.
+
+<Preview>
+<div class="Card Card--notification Card--notification-info" style="max-width: 400px;">
+    <div class="Card-body" style="display: flex; gap: var(--space-3);">
+        <i class="ph ph-info" style="font-size: 1.25rem; flex-shrink: 0;"></i>
+        <div>
+            <h4 class="Card-title" style="margin-bottom: var(--space-1);">New Feature Available</h4>
+            <p class="Card-text">Dark mode is now available. Update your preferences in settings.</p>
+        </div>
+        <button class="Button Button--ghost Button--icon Button--small" aria-label="Dismiss">
+            <i class="ph ph-x"></i>
+        </button>
+    </div>
+</div>
+</Preview>
+
+<Preview>
+<div class="Card Card--notification Card--notification-success" style="max-width: 400px;">
+    <div class="Card-body" style="display: flex; gap: var(--space-3);">
+        <i class="ph ph-check-circle" style="font-size: 1.25rem; flex-shrink: 0;"></i>
+        <div>
+            <h4 class="Card-title" style="margin-bottom: var(--space-1);">Payment Successful</h4>
+            <p class="Card-text">Your subscription has been renewed for another year.</p>
+        </div>
+    </div>
+</div>
+</Preview>
+
+### List Card
+
+Cards containing list items.
+
+<Preview>
+<div class="Card" style="max-width: 360px;">
+    <div class="Card-header">
+        <h3 class="Card-title">Recent Activity</h3>
+        <button class="Button Button--ghost Button--small">View All</button>
+    </div>
+    <ul class="Card-list">
+        <li class="Card-list-item">
+            <div class="Card-list-icon" style="background: oklch(60% 0.15 150);">
+                <i class="ph ph-file-text" style="color: white;"></i>
+            </div>
+            <div class="Card-list-content">
+                <span class="Card-list-title">Document uploaded</span>
+                <span class="Card-list-meta">report-q4.pdf • 2 min ago</span>
+            </div>
+        </li>
+        <li class="Card-list-item">
+            <div class="Card-list-icon" style="background: oklch(60% 0.15 250);">
+                <i class="ph ph-user-plus" style="color: white;"></i>
+            </div>
+            <div class="Card-list-content">
+                <span class="Card-list-title">New team member</span>
+                <span class="Card-list-meta">Sarah joined Design • 1 hour ago</span>
+            </div>
+        </li>
+        <li class="Card-list-item">
+            <div class="Card-list-icon" style="background: oklch(65% 0.15 45);">
+                <i class="ph ph-star" style="color: white;"></i>
+            </div>
+            <div class="Card-list-content">
+                <span class="Card-list-title">Project starred</span>
+                <span class="Card-list-meta">Carbon Design System • 3 hours ago</span>
+            </div>
+        </li>
+    </ul>
+</div>
+</Preview>
+
+---
+
+## Variants
+
+### Elevated
+
+Default cards have subtle elevation with shadow.
+
+<Preview>
+<div class="Card" style="max-width: 280px;">
+    <div class="Card-body">
+        <h3 class="Card-title">Elevated Card</h3>
+        <p class="Card-text">Default shadow provides depth.</p>
+    </div>
+</div>
+</Preview>
+
+### Outlined
+
+Border-only variant without shadow.
+
+<Preview>
+<div class="Card Card--outlined" style="max-width: 280px;">
+    <div class="Card-body">
+        <h3 class="Card-title">Outlined Card</h3>
+        <p class="Card-text">Clean border, no shadow.</p>
+    </div>
+</div>
+</Preview>
+
+### Flat
+
+No border or shadow — blends with background.
+
+<Preview>
+<div class="Card Card--flat" style="max-width: 280px;">
+    <div class="Card-body">
+        <h3 class="Card-title">Flat Card</h3>
+        <p class="Card-text">Minimal visual weight.</p>
+    </div>
+</div>
+</Preview>
+
+### Filled
+
+Filled background without shadow.
+
+<Preview>
+<div class="Card Card--filled" style="max-width: 280px;">
+    <div class="Card-body">
+        <h3 class="Card-title">Filled Card</h3>
+        <p class="Card-text">Solid background color.</p>
+    </div>
+</div>
+</Preview>
+
+---
+
+## Padding Sizes
+
+<Preview>
+<div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
+    <div class="Card Card--compact" style="max-width: 200px;">
+        <div class="Card-body">
+            <h4 class="Card-title">Compact</h4>
+            <p class="Card-text">Less padding</p>
+        </div>
+    </div>
+    <div class="Card" style="max-width: 200px;">
+        <div class="Card-body">
+            <h4 class="Card-title">Default</h4>
+            <p class="Card-text">Standard padding</p>
+        </div>
+    </div>
+    <div class="Card Card--spacious" style="max-width: 200px;">
+        <div class="Card-body">
+            <h4 class="Card-title">Spacious</h4>
+            <p class="Card-text">More padding</p>
+        </div>
+    </div>
+</div>
+</Preview>
 
 ---
 
 ## Card Grid
 
-Standard responsive card layout.
+Responsive grid layout for multiple cards.
 
-<Preview title="Card Grid">
-    <div class="CardGrid">
-        <div class="Card">
-            <div class="Card-body">
-                <h4 class="Card-title">Card One</h4>
-                <p class="Card-text">First card in the grid layout.</p>
-            </div>
-        </div>
-        <div class="Card">
-            <div class="Card-body">
-                <h4 class="Card-title">Card Two</h4>
-                <p class="Card-text">Second card in the grid layout.</p>
-            </div>
-        </div>
-        <div class="Card">
-            <div class="Card-body">
-                <h4 class="Card-title">Card Three</h4>
-                <p class="Card-text">Third card in the grid layout.</p>
-            </div>
+<Preview>
+<div class="CardGrid">
+    <div class="Card">
+        <div class="Card-image" style="background: linear-gradient(135deg, oklch(60% 0.15 30), oklch(50% 0.18 10)); height: 120px;"></div>
+        <div class="Card-body">
+            <h3 class="Card-title">Card One</h3>
+            <p class="Card-text">Description text for the first card.</p>
         </div>
     </div>
+    <div class="Card">
+        <div class="Card-image" style="background: linear-gradient(135deg, oklch(60% 0.15 150), oklch(50% 0.18 170)); height: 120px;"></div>
+        <div class="Card-body">
+            <h3 class="Card-title">Card Two</h3>
+            <p class="Card-text">Description text for the second card.</p>
+        </div>
+    </div>
+    <div class="Card">
+        <div class="Card-image" style="background: linear-gradient(135deg, oklch(60% 0.15 250), oklch(50% 0.18 270)); height: 120px;"></div>
+        <div class="Card-body">
+            <h3 class="Card-title">Card Three</h3>
+            <p class="Card-text">Description text for the third card.</p>
+        </div>
+    </div>
+</div>
 </Preview>
 
-```html
-<div class="CardGrid">
-    <div class="Card">...</div>
-    <div class="Card">...</div>
-    <div class="Card">...</div>
-</div>
+---
+
+## Customization
+
+Override card styles using CSS custom properties:
+
+```css
+/* Custom card background */
+.Card--custom {
+  --card-bg: oklch(95% 0.02 250);
+  --card-border: oklch(85% 0.05 250);
+  background-color: var(--card-bg);
+  border-color: var(--card-border);
+}
+
+/* Custom shadow depth */
+.Card--deep {
+  box-shadow: 
+    0 4px 6px -1px oklch(0% 0 0 / 0.1),
+    0 10px 15px -3px oklch(0% 0 0 / 0.1);
+}
+
+/* Custom border radius */
+.Card--rounded {
+  border-radius: var(--space-6);
+}
+
+/* Custom padding */
+.Card--tight {
+  --card-padding: var(--space-3);
+}
+
+.Card--loose {
+  --card-padding: var(--space-8);
+}
+
+/* Accent border */
+.Card--accent {
+  border-left: 4px solid var(--accent);
+}
+```
+
+### Theme Variants
+
+```css
+/* Success card */
+.Card--success {
+  --card-bg: oklch(95% 0.04 150);
+  --card-border: oklch(70% 0.15 150);
+  border-left: 4px solid var(--card-border);
+}
+
+/* Warning card */
+.Card--warning {
+  --card-bg: oklch(95% 0.04 85);
+  --card-border: oklch(75% 0.15 85);
+  border-left: 4px solid var(--card-border);
+}
+
+/* Error card */
+.Card--error {
+  --card-bg: oklch(95% 0.04 25);
+  --card-border: oklch(65% 0.2 25);
+  border-left: 4px solid var(--card-border);
+}
 ```
 
 ---
 
-## Real-World Examples
+## API Reference
 
-### Product Card
+### Base Classes
 
-<Preview title="Product Card">
-    <div class="Card" style="max-width: 280px;">
-        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=280&h=200" class="Card-image" alt="Watch">
-        <div class="Card-body">
-            <span style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em;">Accessories</span>
-            <h4 class="Card-title" style="margin-top: var(--space-1);">Minimal Watch</h4>
-            <div style="display: flex; align-items: center; gap: var(--space-2); margin-top: var(--space-2);">
-                <span style="font-size: 1.25rem; font-weight: 600;">$129</span>
-                <span style="font-size: 0.9rem; color: var(--text-secondary); text-decoration: line-through;">$159</span>
-            </div>
-        </div>
-        <div class="Card-footer">
-            <button class="Button Button--primary Button--block Button--small">Add to Cart</button>
-        </div>
-    </div>
-</Preview>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Card</code></td>
+<td class="ApiTable-desc">Base card container (required)</td>
+</tr>
+</tbody>
+</table>
 
-### Profile Card
+### Structure Classes
 
-<Preview title="Profile Card">
-    <div class="Card" style="max-width: 320px; text-align: center;">
-        <div class="Card-body">
-            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=profile" class="Avatar Avatar--large" alt="User" style="margin: 0 auto var(--space-4);">
-            <h4 class="Card-title">Sarah Chen</h4>
-            <p class="Card-text" style="color: var(--text-secondary);">Senior Product Designer</p>
-            <div style="display: flex; justify-content: center; gap: var(--space-6); margin-top: var(--space-4); padding-top: var(--space-4); border-top: 1px solid var(--border-subtle);">
-                <div>
-                    <div style="font-size: 1.25rem; font-weight: 600;">142</div>
-                    <div style="font-size: 0.75rem; color: var(--text-secondary);">Projects</div>
-                </div>
-                <div>
-                    <div style="font-size: 1.25rem; font-weight: 600;">8.2k</div>
-                    <div style="font-size: 0.75rem; color: var(--text-secondary);">Followers</div>
-                </div>
-                <div>
-                    <div style="font-size: 1.25rem; font-weight: 600;">521</div>
-                    <div style="font-size: 0.75rem; color: var(--text-secondary);">Following</div>
-                </div>
-            </div>
-        </div>
-        <div class="Card-footer">
-            <button class="Button Button--primary Button--small">Follow</button>
-            <button class="Button Button--secondary Button--small">Message</button>
-        </div>
-    </div>
-</Preview>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Card-header</code></td>
+<td class="ApiTable-desc">Card header section with title and actions</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-body</code></td>
+<td class="ApiTable-desc">Main content area with padding</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-footer</code></td>
+<td class="ApiTable-desc">Footer section for actions</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-image</code></td>
+<td class="ApiTable-desc">Image container at card top</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-overlay</code></td>
+<td class="ApiTable-desc">Text overlay on images</td>
+</tr>
+</tbody>
+</table>
 
-### Article Card
+### Typography Classes
 
-<Preview title="Article Card">
-    <a href="#" class="Card Card--interactive" style="max-width: 380px; text-decoration: none;">
-        <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=380&h=200" class="Card-image" alt="Laptop with coffee">
-        <div class="Card-body">
-            <div style="display: flex; gap: var(--space-2); margin-bottom: var(--space-3);">
-                <span class="Badge Badge--outline Badge--small">Design</span>
-                <span class="Badge Badge--outline Badge--small">Tutorial</span>
-            </div>
-            <h4 class="Card-title">Getting Started with Design Systems</h4>
-            <p class="Card-text">Learn how to build and maintain a scalable design system that grows with your product.</p>
-            <div style="display: flex; align-items: center; gap: var(--space-3); margin-top: var(--space-4); padding-top: var(--space-3); border-top: 1px solid var(--border-subtle);">
-                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=article" class="Avatar Avatar--small" alt="Author">
-                <div style="flex: 1;">
-                    <div style="font-weight: 500; font-size: 0.85rem;">Sarah Chen</div>
-                    <div style="font-size: 0.75rem; color: var(--text-secondary);">Jan 15 · 8 min read</div>
-                </div>
-                <button class="Button Button--icon Button--ghost Button--small" aria-label="Bookmark" onclick="event.preventDefault();">
-                    <i class="ph ph-bookmark"></i>
-                </button>
-            </div>
-        </div>
-    </a>
-</Preview>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Card-title</code></td>
+<td class="ApiTable-desc">Card heading text</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-subtitle</code></td>
+<td class="ApiTable-desc">Secondary heading or date</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-text</code></td>
+<td class="ApiTable-desc">Body text content</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-meta</code></td>
+<td class="ApiTable-desc">Metadata like timestamps or counts</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-tag</code></td>
+<td class="ApiTable-desc">Category or status tag</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-category</code></td>
+<td class="ApiTable-desc">Product/content category label</td>
+</tr>
+</tbody>
+</table>
 
-### Blog Card Grid
+### Variant Classes
 
-<Preview title="Blog Card Grid">
-    <div class="CardGrid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
-        <a href="#" class="Card Card--interactive" style="text-decoration: none;">
-            <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&q=80&w=280&h=160" class="Card-image" alt="Code on screen">
-            <div class="Card-body">
-                <span class="Badge Badge--primary Badge--small" style="margin-bottom: var(--space-2);">Featured</span>
-                <h4 class="Card-title" style="font-size: 0.95rem;">Building Accessible Components</h4>
-                <p class="Card-text" style="font-size: 0.85rem;">Best practices for creating inclusive web experiences.</p>
-            </div>
-        </a>
-        <a href="#" class="Card Card--interactive" style="text-decoration: none;">
-            <img src="https://images.unsplash.com/photo-1545665277-5937489579f2?auto=format&fit=crop&q=80&w=280&h=160" class="Card-image" alt="Design tools">
-            <div class="Card-body">
-                <span class="Badge Badge--secondary Badge--small" style="margin-bottom: var(--space-2);">Tutorial</span>
-                <h4 class="Card-title" style="font-size: 0.95rem;">Color Theory for Developers</h4>
-                <p class="Card-text" style="font-size: 0.85rem;">Understanding color to build better interfaces.</p>
-            </div>
-        </a>
-        <a href="#" class="Card Card--interactive" style="text-decoration: none;">
-            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=280&h=160" class="Card-image" alt="Laptop setup">
-            <div class="Card-body">
-                <span class="Badge Badge--secondary Badge--small" style="margin-bottom: var(--space-2);">Guide</span>
-                <h4 class="Card-title" style="font-size: 0.95rem;">CSS Custom Properties Deep Dive</h4>
-                <p class="Card-text" style="font-size: 0.85rem;">Advanced techniques for theming with CSS variables.</p>
-            </div>
-        </a>
-    </div>
-</Preview>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Card--outlined</code></td>
+<td class="ApiTable-desc">Border only, no shadow</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card--flat</code></td>
+<td class="ApiTable-desc">No border or shadow</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card--filled</code></td>
+<td class="ApiTable-desc">Filled background, no shadow</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card--interactive</code></td>
+<td class="ApiTable-desc">Clickable with hover effects</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card--horizontal</code></td>
+<td class="ApiTable-desc">Side-by-side layout</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card--overlay</code></td>
+<td class="ApiTable-desc">Text overlaid on image</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card--pricing</code></td>
+<td class="ApiTable-desc">Pricing tier styling</td>
+</tr>
+</tbody>
+</table>
 
-### Stats Card
+### Size Classes
 
-<Preview title="Stats Card">
-    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); max-width: 600px;">
-        <div class="Card Card--compact">
-            <div class="Card-body">
-                <div style="display: flex; align-items: center; justify-content: space-between;">
-                    <span style="font-size: 0.8rem; color: var(--text-secondary);">Revenue</span>
-                    <i class="ph ph-trend-up" style="color: oklch(55% 0.15 150);"></i>
-                </div>
-                <div style="font-size: 1.5rem; font-weight: 700; margin-top: var(--space-2);">$48,234</div>
-                <div style="font-size: 0.75rem; color: oklch(55% 0.15 150); margin-top: var(--space-1);">+12.5% from last month</div>
-            </div>
-        </div>
-        <div class="Card Card--compact">
-            <div class="Card-body">
-                <div style="display: flex; align-items: center; justify-content: space-between;">
-                    <span style="font-size: 0.8rem; color: var(--text-secondary);">Users</span>
-                    <i class="ph ph-users" style="color: var(--accent-primary);"></i>
-                </div>
-                <div style="font-size: 1.5rem; font-weight: 700; margin-top: var(--space-2);">2,847</div>
-                <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: var(--space-1);">+89 this week</div>
-            </div>
-        </div>
-        <div class="Card Card--compact">
-            <div class="Card-body">
-                <div style="display: flex; align-items: center; justify-content: space-between;">
-                    <span style="font-size: 0.8rem; color: var(--text-secondary);">Orders</span>
-                    <i class="ph ph-shopping-cart" style="color: oklch(70% 0.15 80);"></i>
-                </div>
-                <div style="font-size: 1.5rem; font-weight: 700; margin-top: var(--space-2);">384</div>
-                <div style="font-size: 0.75rem; color: oklch(55% 0.2 25); margin-top: var(--space-1);">-3.2% from last month</div>
-            </div>
-        </div>
-    </div>
-</Preview>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Card--compact</code></td>
+<td class="ApiTable-desc">Reduced padding</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card--spacious</code></td>
+<td class="ApiTable-desc">Increased padding</td>
+</tr>
+</tbody>
+</table>
+
+### Stats Classes
+
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Card-stat</code></td>
+<td class="ApiTable-desc">Large metric number</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-stat-label</code></td>
+<td class="ApiTable-desc">Metric label text</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-stat-change</code></td>
+<td class="ApiTable-desc">Change indicator</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-stat-change--positive</code></td>
+<td class="ApiTable-desc">Positive change (green)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-stat-change--negative</code></td>
+<td class="ApiTable-desc">Negative change (red)</td>
+</tr>
+</tbody>
+</table>
+
+### Pricing Classes
+
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Card-price</code></td>
+<td class="ApiTable-desc">Price container</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-price-amount</code></td>
+<td class="ApiTable-desc">Large price number</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-price-period</code></td>
+<td class="ApiTable-desc">Billing period text</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-features</code></td>
+<td class="ApiTable-desc">Feature list container</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-feature</code></td>
+<td class="ApiTable-desc">Individual feature item</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-feature--disabled</code></td>
+<td class="ApiTable-desc">Unavailable feature (grayed)</td>
+</tr>
+</tbody>
+</table>
+
+### Product Classes
+
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Card-wishlist</code></td>
+<td class="ApiTable-desc">Wishlist heart button</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-rating</code></td>
+<td class="ApiTable-desc">Star rating container</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-rating-count</code></td>
+<td class="ApiTable-desc">Review count text</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-price-current</code></td>
+<td class="ApiTable-desc">Current sale price</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-price-original</code></td>
+<td class="ApiTable-desc">Original strikethrough price</td>
+</tr>
+</tbody>
+</table>
+
+### Notification Classes
+
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Card--notification</code></td>
+<td class="ApiTable-desc">Notification card base</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card--notification-info</code></td>
+<td class="ApiTable-desc">Info notification (blue)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card--notification-success</code></td>
+<td class="ApiTable-desc">Success notification (green)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card--notification-warning</code></td>
+<td class="ApiTable-desc">Warning notification (yellow)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card--notification-error</code></td>
+<td class="ApiTable-desc">Error notification (red)</td>
+</tr>
+</tbody>
+</table>
+
+### List Classes
+
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Card-list</code></td>
+<td class="ApiTable-desc">List container inside card</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-list-item</code></td>
+<td class="ApiTable-desc">Individual list item</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-list-icon</code></td>
+<td class="ApiTable-desc">Icon container for list item</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-list-content</code></td>
+<td class="ApiTable-desc">Text content wrapper</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-list-title</code></td>
+<td class="ApiTable-desc">List item title</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-list-meta</code></td>
+<td class="ApiTable-desc">List item metadata</td>
+</tr>
+</tbody>
+</table>
+
+### Layout Classes
+
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.CardGrid</code></td>
+<td class="ApiTable-desc">Responsive card grid container</td>
+</tr>
+</tbody>
+</table>
 
 ---
 
 ## Accessibility
 
-Cards require attention to ensure they're accessible:
+### Semantic Structure
 
-### Interactive Cards
 ```html
-<!-- Entire card is clickable -->
-<a href="/article" class="Card Card--interactive">
+<!-- Use article for standalone content -->
+<article class="Card">
     <div class="Card-body">
-        <h4 class="Card-title">Article Title</h4>
-        <p class="Card-text">Description...</p>
+        <h3 class="Card-title">Article Title</h3>
+        <p class="Card-text">Self-contained content.</p>
     </div>
-</a>
+</article>
 
-<!-- Card with internal link (use CSS to expand click area) -->
+<!-- Use heading hierarchy -->
 <div class="Card">
+    <div class="Card-header">
+        <h2 class="Card-title">Section Title</h2>
+    </div>
     <div class="Card-body">
-        <h4 class="Card-title">
-            <a href="/article" class="Card-link">Article Title</a>
-        </h4>
-        <p class="Card-text">Description...</p>
+        <h3>Subsection</h3>
+        <p class="Card-text">Content under subsection.</p>
     </div>
 </div>
 ```
 
-### Selectable Cards
+### Interactive Cards
+
 ```html
-<!-- Always use proper form controls -->
-<label class="Card Card--selectable">
-    <input type="checkbox" class="Card-checkbox" aria-describedby="card-desc">
+<!-- Clickable card as link -->
+<a href="/project" class="Card Card--interactive">
     <div class="Card-body">
-        <span class="Card-title">Option Name</span>
-        <span id="card-desc" class="Card-text">Description of this option</span>
+        <h3 class="Card-title">Project Name</h3>
+        <p class="Card-text">Click to view project details.</p>
     </div>
-</label>
+</a>
+
+<!-- Card with multiple actions — don't make whole card clickable -->
+<div class="Card">
+    <div class="Card-body">
+        <h3 class="Card-title">Project Name</h3>
+        <p class="Card-text">Project description here.</p>
+        <div class="Card-actions">
+            <a href="/project/edit">Edit</a>
+            <button>Delete</button>
+        </div>
+    </div>
+</div>
 ```
 
 ### Images
-```html
-<!-- Always provide meaningful alt text -->
-<img src="..." class="Card-image" alt="Description of what's in the image">
 
-<!-- For decorative images -->
-<img src="..." class="Card-image" alt="" role="presentation">
+```html
+<!-- Decorative image -->
+<div class="Card">
+    <div class="Card-image" role="presentation" aria-hidden="true"
+         style="background-image: url('pattern.jpg');"></div>
+    <div class="Card-body">
+        <h3 class="Card-title">Title</h3>
+    </div>
+</div>
+
+<!-- Meaningful image -->
+<div class="Card">
+    <img class="Card-image" src="product.jpg" 
+         alt="Blue wireless headphones with cushioned ear cups">
+    <div class="Card-body">
+        <h3 class="Card-title">Wireless Headphones</h3>
+    </div>
+</div>
 ```
 
----
+### Keyboard Navigation
 
-## CSS Reference
+| Key | Action |
+|-----|--------|
+| Tab | Move focus to interactive elements |
+| Enter | Activate focused link or button |
+| Space | Activate focused button |
 
-```css
-/* Base Card */
-.Card {
-  background-color: var(--bg-primary);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--space-2);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
+### Screen Reader Considerations
 
-.Card-header {
-  padding: var(--space-4);
-  border-bottom: 1px solid var(--border-subtle);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+```html
+<!-- Price with context -->
+<div class="Card-price-row">
+    <span class="Card-price-current" aria-label="Sale price: $79.99">$79.99</span>
+    <span class="Card-price-original" aria-label="Original price: $99.99">
+        <s>$99.99</s>
+    </span>
+</div>
 
-.Card-body {
-  padding: var(--space-4);
-  flex: 1;
-}
+<!-- Stats with labels -->
+<div class="Card-body">
+    <span class="Card-stat" aria-describedby="stat-label-users">2,847</span>
+    <span class="Card-stat-label" id="stat-label-users">Total Users</span>
+</div>
 
-.Card-footer {
-  padding: var(--space-3) var(--space-4);
-  border-top: 1px solid var(--border-subtle);
-  display: flex;
-  gap: var(--space-2);
-  justify-content: flex-end;
-}
-
-.Card-footer--link {
-  justify-content: space-between;
-  align-items: center;
-}
-
-.Card-title {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin: 0;
-}
-
-.Card-text {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  margin: var(--space-2) 0 0;
-  line-height: 1.5;
-}
-
-.Card-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-/* Interactive */
-.Card--interactive {
-  cursor: pointer;
-  transition: all 0.2s;
-  color: inherit;
-}
-
-.Card--interactive:hover {
-  border-color: var(--border-strong);
-  box-shadow: 0 4px 12px oklch(0% 0 0 / 0.08);
-}
-
-/* Horizontal */
-.Card--horizontal {
-  flex-direction: row;
-}
-
-.Card--horizontal .Card-image {
-  width: 200px;
-  height: auto;
-  flex-shrink: 0;
-}
-
-/* Selectable */
-.Card--selectable {
-  cursor: pointer;
-  transition: all 0.15s;
-}
-
-.Card--selectable:hover {
-  border-color: var(--border-strong);
-}
-
-.Card-checkbox {
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.Card--selectable:has(.Card-checkbox:checked),
-.Card--selected {
-  border-color: var(--accent-primary);
-  background-color: oklch(60% 0.15 250 / 0.05);
-}
-
-.Card--selectable:has(.Card-checkbox:focus-visible) {
-  outline: 2px solid var(--accent-primary);
-  outline-offset: 2px;
-}
-
-/* Variants */
-.Card--elevated {
-  border-color: transparent;
-  box-shadow: 0 2px 8px oklch(0% 0 0 / 0.08), 0 1px 2px oklch(0% 0 0 / 0.04);
-}
-
-.Card--bordered {
-  border-width: 2px;
-}
-
-.Card--filled {
-  background-color: var(--bg-secondary);
-  border-color: transparent;
-}
-
-.Card--compact .Card-body,
-.Card--compact .Card-header,
-.Card--compact .Card-footer {
-  padding: var(--space-3);
-}
-
-/* Loading */
-.Card--loading {
-  pointer-events: none;
-}
-
-/* Card Link (expands to fill card) */
-.Card-link {
-  text-decoration: none;
-  color: inherit;
-}
-
-.Card-link::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-}
-
-.Card:has(.Card-link) {
-  position: relative;
-}
-
-/* Card Grid */
-.CardGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: var(--space-4);
-}
+<!-- Rating with text alternative -->
+<div class="Card-rating" aria-label="4 out of 5 stars, 128 reviews">
+    <i class="ph-fill ph-star" aria-hidden="true"></i>
+    <i class="ph-fill ph-star" aria-hidden="true"></i>
+    <i class="ph-fill ph-star" aria-hidden="true"></i>
+    <i class="ph-fill ph-star" aria-hidden="true"></i>
+    <i class="ph ph-star" aria-hidden="true"></i>
+    <span class="Card-rating-count">(128)</span>
+</div>
 ```
 
 ---
@@ -742,16 +979,32 @@ Cards require attention to ensure they're accessible:
 
 ### Do
 
-- ✓ **Keep cards focused** — One topic or action per card
-- ✓ **Use consistent sizing** — Cards in a grid should match heights
-- ✓ **Provide clear actions** — Make primary actions obvious
-- ✓ **Use meaningful images** — Images should reinforce content
-- ✓ **Consider mobile** — Horizontal cards may need to stack
+- ✓ **Use consistent card heights** in grids — align content or use CSS Grid
+- ✓ **Limit content** — Cards should be scannable, not essays
+- ✓ **Single primary action** — One clear CTA per card
+- ✓ **Meaningful images** — Images should add value, not just decoration
+- ✓ **Clear visual hierarchy** — Title → Supporting text → Actions
+- ✓ **Group related cards** — Use grids with consistent spacing
 
 ### Don't
 
-- ✗ **Overload with content** — Cards should be scannable
-- ✗ **Use too many actions** — Limit to 1-2 primary actions
-- ✗ **Nest cards** — Avoid cards within cards
-- ✗ **Forget loading states** — Use skeletons for async content
-- ✗ **Make everything clickable** — Be intentional about interactive areas
+- ✗ **Nest cards** — Cards inside cards creates visual confusion
+- ✗ **Too many actions** — More than 2-3 actions clutters the card
+- ✗ **Walls of text** — Keep descriptions to 2-3 lines max
+- ✗ **Inconsistent styling** — Mix variants sparingly within a view
+- ✗ **Click the whole card with multiple CTAs** — Accessibility nightmare
+- ✗ **Tiny touch targets** — Ensure buttons/links are at least 44px
+
+### Content Guidelines
+
+**Titles:** Keep to one line when possible. Be specific.
+- ✓ "Q4 Revenue Report"
+- ✗ "Report"
+
+**Descriptions:** Front-load important info. Truncate gracefully.
+- ✓ "Revenue increased 12% driven by new enterprise clients."
+- ✗ "In this quarter we saw various changes across multiple metrics..."
+
+**Actions:** Use clear, specific verbs.
+- ✓ "View Report", "Add to Cart", "Start Trial"
+- ✗ "Click Here", "Submit", "Go"

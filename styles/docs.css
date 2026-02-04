@@ -5655,3 +5655,285 @@ details[open] .Accordion-icon {
   color: var(--text-secondary);
   text-transform: uppercase;
 }
+
+/* ==========================================================================
+   File Upload Component
+   ========================================================================== */
+
+.FileUpload {
+  --file-upload-bg: var(--bg-secondary);
+  --file-upload-border: var(--border-subtle);
+  --file-upload-border-hover: var(--border-strong);
+  --file-upload-border-active: var(--accent-primary);
+  --file-upload-radius: var(--space-2);
+  --file-upload-padding: var(--space-8);
+  --file-upload-icon-color: var(--text-secondary);
+  --file-upload-text-color: var(--text-primary);
+  --file-upload-hint-color: var(--text-secondary);
+  --file-upload-link-color: var(--accent-primary);
+  --file-upload-progress-bg: var(--bg-primary);
+  --file-upload-progress-fill: var(--accent-primary);
+  --file-upload-error-color: oklch(55% 0.2 25);
+  --file-upload-success-color: oklch(55% 0.15 150);
+}
+
+.FileUpload-dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--file-upload-padding);
+  background-color: var(--file-upload-bg);
+  border: 2px dashed var(--file-upload-border);
+  border-radius: var(--file-upload-radius);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  text-align: center;
+}
+
+.FileUpload-dropzone:hover {
+  border-color: var(--file-upload-border-hover);
+  background-color: var(--bg-primary);
+}
+
+.FileUpload-dropzone.is-dragover {
+  border-color: var(--file-upload-border-active);
+  border-style: solid;
+  background-color: oklch(from var(--accent-primary) l c h / 0.05);
+}
+
+.FileUpload-input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.FileUpload-input:disabled {
+  cursor: not-allowed;
+}
+
+.FileUpload-icon {
+  color: var(--file-upload-icon-color);
+  margin-bottom: var(--space-2);
+}
+
+.FileUpload-text {
+  font-size: 0.9375rem;
+  color: var(--file-upload-text-color);
+  margin: 0;
+}
+
+.FileUpload-link {
+  color: var(--file-upload-link-color);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.FileUpload-link:hover {
+  text-decoration: underline;
+}
+
+.FileUpload-hint {
+  font-size: 0.8125rem;
+  color: var(--file-upload-hint-color);
+  margin: 0;
+}
+
+/* Compact variant */
+.FileUpload--compact .FileUpload-dropzone {
+  flex-direction: row;
+  padding: var(--space-3) var(--space-4);
+  gap: var(--space-3);
+}
+
+.FileUpload--compact .FileUpload-icon {
+  margin-bottom: 0;
+}
+
+/* Bordered variant */
+.FileUpload--bordered .FileUpload-dropzone {
+  border-style: solid;
+  border-width: 1px;
+}
+
+/* Preview variant */
+.FileUpload--preview .FileUpload-dropzone {
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: var(--space-4);
+  gap: var(--space-4);
+}
+
+.FileUpload-preview {
+  flex-shrink: 0;
+}
+
+.FileUpload-thumbnail {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: var(--space-1);
+  background-color: var(--bg-primary);
+}
+
+.FileUpload--preview .FileUpload-content {
+  text-align: left;
+}
+
+/* Disabled state */
+.FileUpload--disabled .FileUpload-dropzone {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.FileUpload--disabled .FileUpload-dropzone:hover {
+  border-color: var(--file-upload-border);
+  background-color: var(--file-upload-bg);
+}
+
+/* Error state */
+.FileUpload--error .FileUpload-dropzone {
+  border-color: var(--file-upload-error-color);
+  background-color: oklch(from var(--file-upload-error-color) l c h / 0.05);
+}
+
+.FileUpload--error .FileUpload-icon {
+  color: var(--file-upload-error-color);
+}
+
+.FileUpload--error .FileUpload-text {
+  color: var(--file-upload-error-color);
+}
+
+/* File List */
+.FileUpload-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-4) 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.FileUpload-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--space-1);
+}
+
+.FileUpload-itemIcon {
+  flex-shrink: 0;
+  color: var(--text-secondary);
+}
+
+.FileUpload-itemIcon--success {
+  color: var(--file-upload-success-color);
+}
+
+.FileUpload-itemIcon--error {
+  color: var(--file-upload-error-color);
+}
+
+.FileUpload-itemInfo {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.FileUpload-itemName {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.FileUpload-itemSize {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.FileUpload-itemSize--error {
+  color: var(--file-upload-error-color);
+}
+
+.FileUpload-progress {
+  width: 100%;
+  height: 4px;
+  background-color: var(--file-upload-progress-bg);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.FileUpload-progressBar {
+  height: 100%;
+  background-color: var(--file-upload-progress-fill);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.FileUpload-itemRemove,
+.FileUpload-itemRetry {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-radius: var(--space-1);
+  transition: all 0.15s;
+}
+
+.FileUpload-itemRemove:hover {
+  background-color: oklch(from var(--file-upload-error-color) l c h / 0.1);
+  color: var(--file-upload-error-color);
+}
+
+.FileUpload-itemRetry:hover {
+  background-color: oklch(from var(--accent-primary) l c h / 0.1);
+  color: var(--accent-primary);
+}
+
+/* Item states */
+.FileUpload-item--complete {
+  border-color: var(--file-upload-success-color);
+  background-color: oklch(from var(--file-upload-success-color) l c h / 0.03);
+}
+
+.FileUpload-item--error {
+  border-color: var(--file-upload-error-color);
+  background-color: oklch(from var(--file-upload-error-color) l c h / 0.03);
+}
+
+/* Dark mode */
+[data-theme="dark"] .FileUpload {
+  --file-upload-bg: oklch(18% 0 0);
+  --file-upload-border: oklch(30% 0 0);
+  --file-upload-border-hover: oklch(40% 0 0);
+  --file-upload-progress-bg: oklch(25% 0 0);
+}
+
+[data-theme="dark"] .FileUpload-dropzone:hover {
+  background-color: oklch(20% 0 0);
+}
+
+[data-theme="dark"] .FileUpload-item {
+  background-color: oklch(18% 0 0);
+  border-color: oklch(30% 0 0);
+}
