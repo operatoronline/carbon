@@ -238,7 +238,7 @@ Stack actions vertically for sidebars or narrow spaces.
 A floating toolbar for contextual actions (like text editors).
 
 <Preview>
-  <div style="padding: var(--space-8); background: var(--bg-secondary); border-radius: var(--radius-md);">
+  <div style="padding: var(--space-8); background: var(--bg-s); border-radius: var(--radius-md);">
     <div class="Toolbar Toolbar--floating">
       <button class="Button Button--ghost Button--icon Button--sm"><i class="ph ph-text-b"></i></button>
       <button class="Button Button--ghost Button--icon Button--sm"><i class="ph ph-text-italic"></i></button>
@@ -276,7 +276,7 @@ A floating toolbar for contextual actions (like text editors).
 .Toolbar-divider {
   width: 1px;
   height: 1.5rem;
-  background: var(--border-subtle);
+  background: var(--bd);
   margin: 0 var(--space-2);
 }
 
@@ -288,22 +288,22 @@ A floating toolbar for contextual actions (like text editors).
 /* Text content */
 .Toolbar-text {
   font-size: var(--text-sm);
-  color: var(--text-secondary);
+  color: var(--fg-3);
   padding: 0 var(--space-2);
 }
 
 .Toolbar-label {
   font-size: var(--text-sm);
   font-weight: 500;
-  color: var(--text-primary);
+  color: var(--fg);
   padding: 0 var(--space-2);
 }
 
 /* Bordered variant */
 .Toolbar--bordered {
-  border: 1px solid var(--border-subtle);
+  border: 1px solid var(--bd);
   border-radius: var(--radius-md);
-  background: var(--bg-primary);
+  background: var(--bg);
 }
 
 /* Sizes */
@@ -323,7 +323,7 @@ A floating toolbar for contextual actions (like text editors).
 
 /* Floating (elevated) */
 .Toolbar--floating {
-  background: var(--bg-primary);
+  background: var(--bg);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-lg);
   padding: var(--space-1);
@@ -331,7 +331,7 @@ A floating toolbar for contextual actions (like text editors).
 
 /* Contextual (selection) */
 .Toolbar--contextual {
-  background: var(--accent-primary);
+  background: var(--accent);
   color: white;
   border-radius: var(--radius-md);
   padding: var(--space-2) var(--space-3);
@@ -346,16 +346,16 @@ A floating toolbar for contextual actions (like text editors).
   align-items: center;
   gap: var(--space-2);
   padding: var(--space-1) var(--space-2);
-  background: var(--bg-secondary);
+  background: var(--bg-s);
   border-radius: var(--radius-sm);
-  color: var(--text-secondary);
+  color: var(--fg-3);
 }
 .Toolbar-searchInput {
   border: none;
   background: transparent;
   outline: none;
   font-size: var(--text-sm);
-  color: var(--text-primary);
+  color: var(--fg);
   min-width: 150px;
 }
 
@@ -374,7 +374,7 @@ A floating toolbar for contextual actions (like text editors).
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
 }
 .ButtonGroup .Button.active {
-  background: var(--bg-secondary);
+  background: var(--bg-s);
 }
 ```
 

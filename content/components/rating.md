@@ -404,7 +404,7 @@ Include a text label.
 
 /* Star element */
 .Rating-star {
-  color: var(--border-strong);
+  color: var(--bd-s);
   font-size: 1.25rem;
   transition: color 0.15s, transform 0.15s;
 }
@@ -445,7 +445,7 @@ Include a text label.
 }
 .Rating-value--sm { font-size: var(--text-sm); }
 .Rating-count {
-  color: var(--text-secondary);
+  color: var(--fg-3);
   font-size: var(--text-sm);
 }
 
@@ -463,14 +463,14 @@ Include a text label.
   align-items: center;
   gap: var(--space-1);
   padding: var(--space-1) var(--space-2);
-  border: 1px solid var(--border-subtle);
+  border: 1px solid var(--bd);
   border-radius: var(--radius-sm);
   background: transparent;
   cursor: pointer;
   transition: all 0.15s;
 }
 .Rating-thumb:hover {
-  background: var(--bg-secondary);
+  background: var(--bg-s);
 }
 .Rating-thumb--up:hover { color: oklch(55% 0.15 150); }
 .Rating-thumb--down:hover { color: oklch(55% 0.2 25); }
@@ -508,13 +508,13 @@ Include a text label.
 }
 .Rating-breakdownLabel {
   font-size: var(--text-sm);
-  color: var(--text-secondary);
+  color: var(--fg-3);
   min-width: 60px;
 }
 .Rating-breakdownBar {
   flex: 1;
   height: 8px;
-  background: var(--bg-secondary);
+  background: var(--bg-s);
   border-radius: var(--radius-full);
   overflow: hidden;
 }
@@ -525,7 +525,7 @@ Include a text label.
 }
 .Rating-breakdownCount {
   font-size: var(--text-sm);
-  color: var(--text-secondary);
+  color: var(--fg-3);
   min-width: 40px;
   text-align: right;
 }
@@ -548,7 +548,7 @@ Include a text label.
 .Rating-helper {
   display: block;
   font-size: var(--text-xs);
-  color: var(--text-secondary);
+  color: var(--fg-3);
   margin-top: var(--space-1);
 }
 ```

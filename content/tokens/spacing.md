@@ -27,43 +27,43 @@ Carbon uses a **4px base unit** for all spacing. This creates consistent rhythm 
     <div style="display: flex; flex-direction: column; gap: var(--space-3); width: 100%;">
         <div style="display: flex; align-items: center; gap: var(--space-4);">
             <code style="width: 100px;">--space-1</code>
-            <div style="width: 4px; height: 24px; background: var(--accent-primary); border-radius: 2px;"></div>
-            <span style="color: var(--text-secondary);">4px</span>
+            <div style="width: 4px; height: 24px; background: var(--accent); border-radius: 2px;"></div>
+            <span style="color: var(--fg-3);">4px</span>
         </div>
         <div style="display: flex; align-items: center; gap: var(--space-4);">
             <code style="width: 100px;">--space-2</code>
-            <div style="width: 8px; height: 24px; background: var(--accent-primary); border-radius: 2px;"></div>
-            <span style="color: var(--text-secondary);">8px</span>
+            <div style="width: 8px; height: 24px; background: var(--accent); border-radius: 2px;"></div>
+            <span style="color: var(--fg-3);">8px</span>
         </div>
         <div style="display: flex; align-items: center; gap: var(--space-4);">
             <code style="width: 100px;">--space-3</code>
-            <div style="width: 12px; height: 24px; background: var(--accent-primary); border-radius: 2px;"></div>
-            <span style="color: var(--text-secondary);">12px</span>
+            <div style="width: 12px; height: 24px; background: var(--accent); border-radius: 2px;"></div>
+            <span style="color: var(--fg-3);">12px</span>
         </div>
         <div style="display: flex; align-items: center; gap: var(--space-4);">
             <code style="width: 100px;">--space-4</code>
-            <div style="width: 16px; height: 24px; background: var(--accent-primary); border-radius: 2px;"></div>
-            <span style="color: var(--text-secondary);">16px</span>
+            <div style="width: 16px; height: 24px; background: var(--accent); border-radius: 2px;"></div>
+            <span style="color: var(--fg-3);">16px</span>
         </div>
         <div style="display: flex; align-items: center; gap: var(--space-4);">
             <code style="width: 100px;">--space-5</code>
-            <div style="width: 20px; height: 24px; background: var(--accent-primary); border-radius: 2px;"></div>
-            <span style="color: var(--text-secondary);">20px</span>
+            <div style="width: 20px; height: 24px; background: var(--accent); border-radius: 2px;"></div>
+            <span style="color: var(--fg-3);">20px</span>
         </div>
         <div style="display: flex; align-items: center; gap: var(--space-4);">
             <code style="width: 100px;">--space-6</code>
-            <div style="width: 24px; height: 24px; background: var(--accent-primary); border-radius: 2px;"></div>
-            <span style="color: var(--text-secondary);">24px</span>
+            <div style="width: 24px; height: 24px; background: var(--accent); border-radius: 2px;"></div>
+            <span style="color: var(--fg-3);">24px</span>
         </div>
         <div style="display: flex; align-items: center; gap: var(--space-4);">
             <code style="width: 100px;">--space-8</code>
-            <div style="width: 32px; height: 24px; background: var(--accent-primary); border-radius: 2px;"></div>
-            <span style="color: var(--text-secondary);">32px</span>
+            <div style="width: 32px; height: 24px; background: var(--accent); border-radius: 2px;"></div>
+            <span style="color: var(--fg-3);">32px</span>
         </div>
         <div style="display: flex; align-items: center; gap: var(--space-4);">
             <code style="width: 100px;">--space-12</code>
-            <div style="width: 48px; height: 24px; background: var(--accent-primary); border-radius: 2px;"></div>
-            <span style="color: var(--text-secondary);">48px</span>
+            <div style="width: 48px; height: 24px; background: var(--accent); border-radius: 2px;"></div>
+            <span style="color: var(--fg-3);">48px</span>
         </div>
     </div>
 </Preview>
@@ -113,7 +113,7 @@ Use consistent gaps between related elements.
 <Preview title="Gap Spacing">
     <div style="display: flex; flex-direction: column; gap: var(--space-6); width: 100%;">
         <div>
-            <small style="color: var(--text-secondary); display: block; margin-bottom: var(--space-2);">Tight (--space-2)</small>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Tight (--space-2)</small>
             <div style="display: flex; gap: var(--space-2);">
                 <span class="Badge">Tag</span>
                 <span class="Badge">Tag</span>
@@ -121,17 +121,17 @@ Use consistent gaps between related elements.
             </div>
         </div>
         <div>
-            <small style="color: var(--text-secondary); display: block; margin-bottom: var(--space-2);">Standard (--space-4)</small>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Standard (--space-4)</small>
             <div style="display: flex; gap: var(--space-4);">
                 <button class="Button Button--primary">Save</button>
                 <button class="Button">Cancel</button>
             </div>
         </div>
         <div>
-            <small style="color: var(--text-secondary); display: block; margin-bottom: var(--space-2);">Loose (--space-6)</small>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Loose (--space-6)</small>
             <div style="display: flex; gap: var(--space-6);">
-                <div style="padding: var(--space-4); background: var(--bg-secondary); border-radius: var(--space-2);">Card A</div>
-                <div style="padding: var(--space-4); background: var(--bg-secondary); border-radius: var(--space-2);">Card B</div>
+                <div style="padding: var(--space-4); background: var(--bg-s); border-radius: var(--r-m);">Card A</div>
+                <div style="padding: var(--space-4); background: var(--bg-s); border-radius: var(--r-m);">Card B</div>
             </div>
         </div>
     </div>
@@ -153,19 +153,19 @@ gap: var(--space-6);
 Use larger values (6-12) for page-level spacing.
 
 <Preview title="Section Spacing">
-    <div style="display: flex; flex-direction: column; width: 100%; border: 1px solid var(--border-subtle); border-radius: var(--space-2); overflow: hidden;">
-        <div style="padding: var(--space-6); background: var(--bg-secondary); border-bottom: 1px solid var(--border-subtle);">
+    <div style="display: flex; flex-direction: column; width: 100%; border: 1px solid var(--bd); border-radius: var(--r-m); overflow: hidden;">
+        <div style="padding: var(--space-6); background: var(--bg-s); border-bottom: 1px solid var(--bd);">
             <strong>Header</strong>
             <code style="float: right; font-size: 0.8em;">padding: var(--space-6)</code>
         </div>
         <div style="padding: var(--space-8);">
             <strong>Main Content</strong>
             <code style="float: right; font-size: 0.8em;">padding: var(--space-8)</code>
-            <div style="margin-top: var(--space-6); padding: var(--space-4); background: var(--bg-secondary); border-radius: var(--space-1);">
+            <div style="margin-top: var(--space-6); padding: var(--space-4); background: var(--bg-s); border-radius: var(--r-s);">
                 <small>Nested section with margin-top: var(--space-6)</small>
             </div>
         </div>
-        <div style="padding: var(--space-4); background: var(--bg-secondary); border-top: 1px solid var(--border-subtle);">
+        <div style="padding: var(--space-4); background: var(--bg-s); border-top: 1px solid var(--bd);">
             <strong>Footer</strong>
             <code style="float: right; font-size: 0.8em;">padding: var(--space-4)</code>
         </div>
@@ -193,9 +193,9 @@ Vertical spacing between block elements.
 
 <Preview title="Stack Spacing">
     <div class="Layout-stack" style="max-width: 300px;">
-        <div style="padding: var(--space-4); background: var(--bg-secondary); border-radius: var(--space-1);">First item</div>
-        <div style="padding: var(--space-4); background: var(--bg-secondary); border-radius: var(--space-1);">Second item</div>
-        <div style="padding: var(--space-4); background: var(--bg-secondary); border-radius: var(--space-1);">Third item</div>
+        <div style="padding: var(--space-4); background: var(--bg-s); border-radius: var(--r-s);">First item</div>
+        <div style="padding: var(--space-4); background: var(--bg-s); border-radius: var(--r-s);">Second item</div>
+        <div style="padding: var(--space-4); background: var(--bg-s); border-radius: var(--r-s);">Third item</div>
     </div>
 </Preview>
 
@@ -211,14 +211,14 @@ Equal padding on all sides.
 
 <Preview title="Inset Variations">
     <div style="display: flex; gap: var(--space-4);">
-        <div style="padding: var(--space-2); background: var(--bg-secondary); border: 1px dashed var(--border-strong); border-radius: var(--space-1);">
-            <div style="background: var(--accent-primary); color: white; padding: var(--space-2); border-radius: var(--space-1); font-size: 0.8em;">space-2</div>
+        <div style="padding: var(--space-2); background: var(--bg-s); border: 1px dashed var(--bd-s); border-radius: var(--r-s);">
+            <div style="background: var(--accent); color: white; padding: var(--space-2); border-radius: var(--r-s); font-size: 0.8em;">space-2</div>
         </div>
-        <div style="padding: var(--space-4); background: var(--bg-secondary); border: 1px dashed var(--border-strong); border-radius: var(--space-1);">
-            <div style="background: var(--accent-primary); color: white; padding: var(--space-2); border-radius: var(--space-1); font-size: 0.8em;">space-4</div>
+        <div style="padding: var(--space-4); background: var(--bg-s); border: 1px dashed var(--bd-s); border-radius: var(--r-s);">
+            <div style="background: var(--accent); color: white; padding: var(--space-2); border-radius: var(--r-s); font-size: 0.8em;">space-4</div>
         </div>
-        <div style="padding: var(--space-6); background: var(--bg-secondary); border: 1px dashed var(--border-strong); border-radius: var(--space-1);">
-            <div style="background: var(--accent-primary); color: white; padding: var(--space-2); border-radius: var(--space-1); font-size: 0.8em;">space-6</div>
+        <div style="padding: var(--space-6); background: var(--bg-s); border: 1px dashed var(--bd-s); border-radius: var(--r-s);">
+            <div style="background: var(--accent); color: white; padding: var(--space-2); border-radius: var(--r-s); font-size: 0.8em;">space-6</div>
         </div>
     </div>
 </Preview>
@@ -229,13 +229,13 @@ Reduced vertical padding (common for buttons and pills).
 
 <Preview title="Squish Inset">
     <div style="display: flex; gap: var(--space-4); align-items: center;">
-        <div style="padding: var(--space-1) var(--space-3); background: var(--accent-primary); color: white; border-radius: var(--space-1); font-size: 0.85em;">
+        <div style="padding: var(--space-1) var(--space-3); background: var(--accent); color: white; border-radius: var(--r-s); font-size: 0.85em;">
             Squish: 1 × 3
         </div>
-        <div style="padding: var(--space-2) var(--space-4); background: var(--accent-primary); color: white; border-radius: var(--space-1);">
+        <div style="padding: var(--space-2) var(--space-4); background: var(--accent); color: white; border-radius: var(--r-s);">
             Squish: 2 × 4
         </div>
-        <div style="padding: var(--space-3) var(--space-6); background: var(--accent-primary); color: white; border-radius: var(--space-1);">
+        <div style="padding: var(--space-3) var(--space-6); background: var(--accent); color: white; border-radius: var(--r-s);">
             Squish: 3 × 6
         </div>
     </div>
@@ -306,17 +306,17 @@ Adjust spacing at different breakpoints for optimal density.
     <div style="display: flex; gap: var(--space-8); width: 100%;">
         <div style="flex: 1;">
             <small style="color: oklch(55% 0.2 25); font-weight: 600; display: block; margin-bottom: var(--space-2);">❌ Inconsistent</small>
-            <div style="border: 1px solid var(--border-subtle); border-radius: var(--space-2); padding: 15px;">
+            <div style="border: 1px solid var(--bd); border-radius: var(--r-m); padding: 15px;">
                 <div style="margin-bottom: 10px; font-weight: 600;">Title</div>
-                <div style="margin-bottom: 18px; color: var(--text-secondary);">Description text</div>
+                <div style="margin-bottom: 18px; color: var(--fg-3);">Description text</div>
                 <button class="Button Button--primary" style="margin-top: 12px;">Action</button>
             </div>
         </div>
         <div style="flex: 1;">
             <small style="color: oklch(55% 0.15 150); font-weight: 600; display: block; margin-bottom: var(--space-2);">✓ Consistent</small>
-            <div style="border: 1px solid var(--border-subtle); border-radius: var(--space-2); padding: var(--space-4);">
+            <div style="border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-4);">
                 <div style="margin-bottom: var(--space-2); font-weight: 600;">Title</div>
-                <div style="margin-bottom: var(--space-4); color: var(--text-secondary);">Description text</div>
+                <div style="margin-bottom: var(--space-4); color: var(--fg-3);">Description text</div>
                 <button class="Button Button--primary">Action</button>
             </div>
         </div>

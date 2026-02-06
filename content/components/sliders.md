@@ -120,15 +120,15 @@ Use the `step` attribute for predefined increments.
 <Preview title="Slider Sizes">
     <div class="Layout-stack" style="max-width: 320px;">
         <div>
-            <small style="color: var(--text-secondary); display: block; margin-bottom: var(--space-2);">Small</small>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Small</small>
             <input type="range" class="Slider Slider--small" min="0" max="100" value="30">
         </div>
         <div>
-            <small style="color: var(--text-secondary); display: block; margin-bottom: var(--space-2);">Default</small>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Default</small>
             <input type="range" class="Slider" min="0" max="100" value="50">
         </div>
         <div>
-            <small style="color: var(--text-secondary); display: block; margin-bottom: var(--space-2);">Large</small>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Large</small>
             <input type="range" class="Slider Slider--large" min="0" max="100" value="70">
         </div>
     </div>
@@ -147,19 +147,19 @@ Use the `step` attribute for predefined increments.
 <Preview title="Colored Sliders">
     <div class="Layout-stack" style="max-width: 320px;">
         <div>
-            <small style="color: var(--text-secondary); display: block; margin-bottom: var(--space-2);">Default (Accent)</small>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Default (Accent)</small>
             <input type="range" class="Slider" min="0" max="100" value="60">
         </div>
         <div>
-            <small style="color: var(--text-secondary); display: block; margin-bottom: var(--space-2);">Success</small>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Success</small>
             <input type="range" class="Slider Slider--success" min="0" max="100" value="80">
         </div>
         <div>
-            <small style="color: var(--text-secondary); display: block; margin-bottom: var(--space-2);">Warning</small>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Warning</small>
             <input type="range" class="Slider Slider--warning" min="0" max="100" value="40">
         </div>
         <div>
-            <small style="color: var(--text-secondary); display: block; margin-bottom: var(--space-2);">Error</small>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Error</small>
             <input type="range" class="Slider Slider--error" min="0" max="100" value="20">
         </div>
     </div>
@@ -192,25 +192,25 @@ Use the `step` attribute for predefined increments.
 Common slider use cases in forms.
 
 <Preview title="Settings Form">
-    <div class="Layout-stack" style="max-width: 400px; padding: var(--space-4); background: var(--bg-secondary); border-radius: var(--space-2);">
+    <div class="Layout-stack" style="max-width: 400px; padding: var(--space-4); background: var(--bg-s); border-radius: var(--r-m);">
         <div class="Slider-container">
             <div class="Layout-split" style="margin-bottom: var(--space-2);">
                 <label style="font-weight: 500;">Brightness</label>
-                <span style="color: var(--text-secondary);">75%</span>
+                <span style="color: var(--fg-3);">75%</span>
             </div>
             <input type="range" class="Slider" min="0" max="100" value="75">
         </div>
         <div class="Slider-container">
             <div class="Layout-split" style="margin-bottom: var(--space-2);">
                 <label style="font-weight: 500;">Contrast</label>
-                <span style="color: var(--text-secondary);">50%</span>
+                <span style="color: var(--fg-3);">50%</span>
             </div>
             <input type="range" class="Slider" min="0" max="100" value="50">
         </div>
         <div class="Slider-container">
             <div class="Layout-split" style="margin-bottom: var(--space-2);">
                 <label style="font-weight: 500;">Saturation</label>
-                <span style="color: var(--text-secondary);">60%</span>
+                <span style="color: var(--fg-3);">60%</span>
             </div>
             <input type="range" class="Slider" min="0" max="100" value="60">
         </div>
@@ -220,22 +220,22 @@ Common slider use cases in forms.
 ### Price Range Filter
 
 <Preview title="Price Range">
-    <div style="max-width: 320px; padding: var(--space-4); border: 1px solid var(--border-subtle); border-radius: var(--space-2);">
+    <div style="max-width: 320px; padding: var(--space-4); border: 1px solid var(--bd); border-radius: var(--r-m);">
         <div style="font-weight: 600; margin-bottom: var(--space-3);">Price Range</div>
         <div class="Layout-split" style="margin-bottom: var(--space-3);">
             <div>
-                <small style="color: var(--text-secondary);">Min</small>
+                <small style="color: var(--fg-3);">Min</small>
                 <div style="font-size: 1.25rem; font-weight: 600;">$25</div>
             </div>
             <div style="text-align: right;">
-                <small style="color: var(--text-secondary);">Max</small>
+                <small style="color: var(--fg-3);">Max</small>
                 <div style="font-size: 1.25rem; font-weight: 600;">$150</div>
             </div>
         </div>
         <input type="range" class="Slider" min="0" max="200" value="150">
         <div class="Slider-labels" style="margin-top: var(--space-1);">
-            <span style="font-size: 0.75rem; color: var(--text-secondary);">$0</span>
-            <span style="font-size: 0.75rem; color: var(--text-secondary);">$200</span>
+            <span style="font-size: 0.75rem; color: var(--fg-3);">$0</span>
+            <span style="font-size: 0.75rem; color: var(--fg-3);">$200</span>
         </div>
     </div>
 </Preview>
@@ -330,7 +330,7 @@ For custom implementations, ensure:
   appearance: none;
   width: 100%;
   height: 6px;
-  background: var(--border-subtle);
+  background: var(--bd);
   border-radius: 3px;
   outline: none;
   cursor: pointer;
@@ -339,7 +339,7 @@ For custom implementations, ensure:
 /* Track - WebKit */
 .Slider::-webkit-slider-runnable-track {
   height: 6px;
-  background: var(--border-subtle);
+  background: var(--bd);
   border-radius: 3px;
 }
 
@@ -349,7 +349,7 @@ For custom implementations, ensure:
   appearance: none;
   width: 18px;
   height: 18px;
-  background: var(--accent-primary);
+  background: var(--accent);
   border-radius: 50%;
   cursor: pointer;
   margin-top: -6px;
@@ -370,7 +370,7 @@ For custom implementations, ensure:
 .Slider::-moz-range-thumb {
   width: 18px;
   height: 18px;
-  background: var(--accent-primary);
+  background: var(--accent);
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -379,7 +379,7 @@ For custom implementations, ensure:
 
 /* Focus */
 .Slider:focus-visible::-webkit-slider-thumb {
-  outline: 2px solid var(--accent-primary);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
@@ -409,7 +409,7 @@ For custom implementations, ensure:
   display: flex;
   justify-content: space-between;
   font-size: 0.8rem;
-  color: var(--text-secondary);
+  color: var(--fg-3);
   margin-bottom: var(--space-1);
 }
 
@@ -417,13 +417,13 @@ For custom implementations, ensure:
   display: flex;
   justify-content: space-between;
   font-size: 0.75rem;
-  color: var(--text-secondary);
+  color: var(--fg-3);
   margin-top: var(--space-1);
 }
 
 .Slider-value {
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--fg);
   min-width: 3ch;
   text-align: right;
 }

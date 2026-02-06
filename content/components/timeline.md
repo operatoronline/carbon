@@ -410,7 +410,7 @@ Include actions within timeline items.
   top: 0;
   bottom: 0;
   width: 2px;
-  background: var(--border-subtle);
+  background: var(--bd);
 }
 
 /* Timeline item */
@@ -430,8 +430,8 @@ Include actions within timeline items.
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: var(--bg-primary);
-  border: 2px solid var(--border-strong);
+  background: var(--bg);
+  border: 2px solid var(--bd-s);
 }
 
 /* Icon markers */
@@ -442,10 +442,10 @@ Include actions within timeline items.
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--bg-secondary);
-  border: 2px solid var(--border-subtle);
+  background: var(--bg-s);
+  border: 2px solid var(--bd);
   font-size: 14px;
-  color: var(--text-secondary);
+  color: var(--fg-3);
 }
 
 /* Status variants */
@@ -462,12 +462,12 @@ Include actions within timeline items.
   border-color: oklch(55% 0.2 25);
 }
 .Timeline-marker--info {
-  background: var(--accent-primary);
-  border-color: var(--accent-primary);
+  background: var(--accent);
+  border-color: var(--accent);
 }
 .Timeline-marker--active {
-  background: var(--accent-primary);
-  border-color: var(--accent-primary);
+  background: var(--accent);
+  border-color: var(--accent);
   box-shadow: 0 0 0 4px oklch(60% 0.15 250 / 0.2);
 }
 
@@ -478,19 +478,19 @@ Include actions within timeline items.
 
 .Timeline-title {
   font-weight: 500;
-  color: var(--text-primary);
+  color: var(--fg);
 }
 
 .Timeline-description {
   margin-top: var(--space-1);
-  color: var(--text-secondary);
+  color: var(--fg-3);
   font-size: var(--text-sm);
 }
 
 .Timeline-time {
   margin-top: var(--space-1);
   font-size: var(--text-xs);
-  color: var(--text-secondary);
+  color: var(--fg-3);
 }
 
 /* Compact variant */

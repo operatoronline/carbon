@@ -80,7 +80,7 @@ Switches toggle a single option on or off.
         <label class="Switch-label">
             <span class="Switch-label-text">
                 <span>Dark mode</span>
-                <small style="color: var(--text-secondary);">Use dark theme across the app</small>
+                <small style="color: var(--fg-3);">Use dark theme across the app</small>
             </span>
             <span class="Switch">
                 <input type="checkbox">
@@ -90,7 +90,7 @@ Switches toggle a single option on or off.
         <label class="Switch-label">
             <span class="Switch-label-text">
                 <span>Notifications</span>
-                <small style="color: var(--text-secondary);">Receive push notifications</small>
+                <small style="color: var(--fg-3);">Receive push notifications</small>
             </span>
             <span class="Switch">
                 <input type="checkbox" checked>
@@ -117,21 +117,21 @@ Switches toggle a single option on or off.
 
 <Preview title="Settings Form">
     <div style="width: 320px; display: flex; flex-direction: column; gap: var(--space-3);">
-        <label class="Switch-label" style="padding: var(--space-3) 0; border-bottom: 1px solid var(--border-subtle);">
+        <label class="Switch-label" style="padding: var(--space-3) 0; border-bottom: 1px solid var(--bd);">
             <span>Email notifications</span>
             <span class="Switch Switch--small">
                 <input type="checkbox" checked>
                 <span class="Switch-slider"></span>
             </span>
         </label>
-        <label class="Switch-label" style="padding: var(--space-3) 0; border-bottom: 1px solid var(--border-subtle);">
+        <label class="Switch-label" style="padding: var(--space-3) 0; border-bottom: 1px solid var(--bd);">
             <span>SMS alerts</span>
             <span class="Switch Switch--small">
                 <input type="checkbox">
                 <span class="Switch-slider"></span>
             </span>
         </label>
-        <label class="Switch-label" style="padding: var(--space-3) 0; border-bottom: 1px solid var(--border-subtle);">
+        <label class="Switch-label" style="padding: var(--space-3) 0; border-bottom: 1px solid var(--bd);">
             <span>Marketing emails</span>
             <span class="Switch Switch--small">
                 <input type="checkbox">

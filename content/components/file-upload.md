@@ -303,7 +303,7 @@ Active state when files are dragged over the drop zone.
   /* Dropzone */
   --file-upload-bg: var(--surface-1);
   --file-upload-border: var(--border-default);
-  --file-upload-border-hover: var(--border-strong);
+  --file-upload-border-hover: var(--bd-s);
   --file-upload-border-active: var(--color-primary);
   --file-upload-radius: var(--radius-lg);
   --file-upload-padding: var(--space-8);

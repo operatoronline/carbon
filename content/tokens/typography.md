@@ -1,23 +1,28 @@
 # Typography
 
-Carbon uses **DM Sans** — a geometric sans-serif designed for clarity at all sizes. The type system is built on a modular scale for consistent visual hierarchy.
+Carbon uses a refined type system with **three font families**: **Instrument Serif** for display headings, **Outfit** for body text and UI, and **JetBrains Mono** for code.
 
 ## Font Stack
 
 ```css
---font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
---font-mono: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+--ff-d: 'Instrument Serif', Georgia, serif;     /* Display */
+--ff-b: 'Outfit', system-ui, sans-serif;        /* Body */
+--ff-m: 'JetBrains Mono', ui-monospace, monospace; /* Mono */
 ```
 
 <Preview title="Font Families">
     <div style="display: flex; flex-direction: column; gap: var(--space-6);">
         <div>
-            <small style="color: var(--text-secondary); display: block; margin-bottom: var(--space-2);">Sans (Primary)</small>
-            <div style="font-family: var(--font-sans); font-size: 1.5rem;">The quick brown fox jumps over the lazy dog.</div>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Instrument Serif (Display)</small>
+            <div style="font-family: var(--ff-d); font-size: 2rem; letter-spacing: -0.02em;">The quick brown fox jumps over the lazy dog.</div>
         </div>
         <div>
-            <small style="color: var(--text-secondary); display: block; margin-bottom: var(--space-2);">Monospace (Code)</small>
-            <div style="font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace; font-size: 1rem;">const greeting = "Hello, World!";</div>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Outfit (Body & UI)</small>
+            <div style="font-family: var(--ff-b); font-size: 1rem;">The quick brown fox jumps over the lazy dog. Perfect for readable body text and clean UI elements.</div>
+        </div>
+        <div>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">JetBrains Mono (Code)</small>
+            <div style="font-family: var(--ff-m); font-size: 0.9rem; color: var(--accent);">const greeting = "Hello, World!";</div>
         </div>
     </div>
 </Preview>
@@ -28,27 +33,25 @@ Carbon uses **DM Sans** — a geometric sans-serif designed for clarity at all s
 
 Based on a **1.25 ratio** (Major Third), creating harmonious size progression.
 
-| Level | Size | Rem | Pixels | Usage |
-|-------|------|-----|--------|-------|
-| Display | 3rem | 3 | 48px | Hero headlines |
-| H1 | 2.5rem | 2.5 | 40px | Page titles |
-| H2 | 2rem | 2 | 32px | Section headers |
-| H3 | 1.5rem | 1.5 | 24px | Subsections |
-| H4 | 1.25rem | 1.25 | 20px | Card titles |
-| Body | 1rem | 1 | 16px | Paragraphs |
-| Small | 0.875rem | 0.875 | 14px | Captions, labels |
-| XSmall | 0.75rem | 0.75 | 12px | Fine print |
+| Level | Size | Usage | Font |
+|-------|------|-------|------|
+| Display | clamp(2.5rem, 8vw, 4rem) | Hero headlines | Instrument Serif |
+| H1 | 2.5rem | Page titles | Instrument Serif |
+| H2 | 1.75rem | Section headers | Instrument Serif |
+| H3 | 1.125rem | Subsections | Outfit |
+| Body | 1rem | Paragraphs | Outfit |
+| Small | 0.875rem | Captions, labels | Outfit |
+| XSmall | 0.75rem | Fine print | Outfit |
+| Mono | 0.8125rem | Code blocks | JetBrains Mono |
 
 <Preview title="Type Scale">
     <div style="display: flex; flex-direction: column; gap: var(--space-4);">
-        <div style="font-size: 3rem; font-weight: 700; line-height: 1.1;">Display</div>
-        <div style="font-size: 2.5rem; font-weight: 700; line-height: 1.2;">Heading 1</div>
-        <div style="font-size: 2rem; font-weight: 600; line-height: 1.25;">Heading 2</div>
-        <div style="font-size: 1.5rem; font-weight: 600; line-height: 1.3;">Heading 3</div>
-        <div style="font-size: 1.25rem; font-weight: 600; line-height: 1.4;">Heading 4</div>
-        <div style="font-size: 1rem; line-height: 1.5;">Body text — the quick brown fox jumps over the lazy dog.</div>
-        <div style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.5;">Small text for captions and supporting content.</div>
-        <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.4;">Extra small for fine print and legal text.</div>
+        <div style="font-family: var(--ff-d); font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 400; line-height: 1; letter-spacing: -0.035em;">Display</div>
+        <div style="font-family: var(--ff-d); font-size: 1.75rem; font-weight: 400; line-height: 1.25; letter-spacing: -0.02em;">Heading 2</div>
+        <div style="font-family: var(--ff-b); font-size: 1.125rem; font-weight: 600; line-height: 1.4;">Heading 3</div>
+        <div style="font-family: var(--ff-b); font-size: 1rem; line-height: 1.6; color: var(--fg-2);">Body text — the quick brown fox jumps over the lazy dog. This is readable body copy.</div>
+        <div style="font-family: var(--ff-b); font-size: 0.875rem; color: var(--fg-3); line-height: 1.5;">Small text for captions and supporting content.</div>
+        <div style="font-family: var(--ff-m); font-size: 0.8125rem; color: var(--accent); line-height: 1.7; background: var(--bg-s); padding: var(--space-2) var(--space-3); border-radius: var(--r-s);">const code = "monospace";</div>
     </div>
 </Preview>
 
@@ -56,30 +59,43 @@ Based on a **1.25 ratio** (Major Third), creating harmonious size progression.
 
 ## Font Weights
 
-DM Sans provides five weights. Use them intentionally to create hierarchy.
+Outfit provides a range of weights. Use them intentionally to create hierarchy.
 
 | Weight | Value | Usage |
 |--------|-------|-------|
+| Light | 300 | Large display text only |
 | Regular | 400 | Body text, descriptions |
 | Medium | 500 | UI labels, buttons |
 | Semi-Bold | 600 | Subheadings, emphasis |
-| Bold | 700 | Headings, strong emphasis |
+| Bold | 700 | Strong emphasis |
 
-<Preview title="Font Weights">
-    <div style="display: flex; flex-direction: column; gap: var(--space-3); font-size: 1.25rem;">
+<Preview title="Font Weights (Outfit)">
+    <div style="display: flex; flex-direction: column; gap: var(--space-3); font-size: 1.125rem; font-family: var(--ff-b);">
+        <div style="font-weight: 300;">Light (300) — Large display only</div>
         <div style="font-weight: 400;">Regular (400) — Default body weight</div>
         <div style="font-weight: 500;">Medium (500) — Buttons and labels</div>
         <div style="font-weight: 600;">Semi-Bold (600) — Subheadings</div>
-        <div style="font-weight: 700;">Bold (700) — Headlines and emphasis</div>
+        <div style="font-weight: 700;">Bold (700) — Strong emphasis</div>
+    </div>
+</Preview>
+
+### Instrument Serif
+
+Instrument Serif works best at regular weight (400), with italics for emphasis.
+
+<Preview title="Instrument Serif Styles">
+    <div style="display: flex; flex-direction: column; gap: var(--space-3); font-size: 1.5rem; font-family: var(--ff-d);">
+        <div style="font-weight: 400;">Regular — Elegant display headings</div>
+        <div style="font-style: italic;">Italic — <em>Beautiful</em> emphasis</div>
     </div>
 </Preview>
 
 ```css
 /* Weight usage */
-body { font-weight: 400; }
+body { font-family: var(--ff-b); font-weight: 400; }
 .Button { font-weight: 500; }
-h3, h4 { font-weight: 600; }
-h1, h2 { font-weight: 700; }
+h3 { font-weight: 600; }
+h1, h2 { font-family: var(--ff-d); font-weight: 400; }
 ```
 
 ---
@@ -90,23 +106,23 @@ Proper leading improves readability. Tighter for headings, looser for body text.
 
 | Context | Line Height | Ratio |
 |---------|-------------|-------|
-| Display/H1 | 1.1 – 1.2 | Tight |
-| H2/H3 | 1.25 – 1.3 | Snug |
-| H4/UI | 1.4 | Normal |
-| Body | 1.5 – 1.6 | Relaxed |
-| Long-form | 1.7 – 1.8 | Loose |
+| Display/H1 | 1.0 – 1.1 | Tight |
+| H2 | 1.25 | Snug |
+| H3/UI | 1.4 | Normal |
+| Body | 1.6 – 1.7 | Relaxed |
+| Long-form | 1.7 | Loose |
 
 <Preview title="Line Height Comparison">
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); width: 100%;">
         <div>
-            <small style="color: var(--text-secondary); display: block; margin-bottom: var(--space-2);">line-height: 1.2 (Headings)</small>
-            <div style="font-size: 1.5rem; font-weight: 600; line-height: 1.2; padding: var(--space-3); background: var(--bg-secondary); border-radius: var(--space-1);">
-                Tight leading for headlines keeps them compact and impactful
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">line-height: 1.1 (Display)</small>
+            <div style="font-family: var(--ff-d); font-size: 1.5rem; line-height: 1.1; padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-m);">
+                Tight leading for serif headlines keeps them compact and impactful
             </div>
         </div>
         <div>
-            <small style="color: var(--text-secondary); display: block; margin-bottom: var(--space-2);">line-height: 1.6 (Body)</small>
-            <div style="font-size: 1rem; line-height: 1.6; padding: var(--space-3); background: var(--bg-secondary); border-radius: var(--space-1);">
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">line-height: 1.6 (Body)</small>
+            <div style="font-family: var(--ff-b); font-size: 1rem; line-height: 1.6; padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-m);">
                 Relaxed leading for body text improves readability over multiple lines of content
             </div>
         </div>
@@ -115,11 +131,10 @@ Proper leading improves readability. Tighter for headings, looser for body text.
 
 ```css
 /* Line heights */
-h1, .display { line-height: 1.1; }
-h2 { line-height: 1.25; }
-h3 { line-height: 1.3; }
-h4 { line-height: 1.4; }
-body, p { line-height: 1.5; }
+.page-header h1 { line-height: 1; }
+.prose h2 { line-height: 1.25; }
+h3 { line-height: 1.4; }
+body, p { line-height: 1.6; }
 .prose { line-height: 1.7; }
 ```
 
@@ -131,33 +146,33 @@ Subtle tracking adjustments improve legibility at extreme sizes.
 
 | Context | Letter Spacing | When |
 |---------|----------------|------|
-| Tight | -0.02em | Large display text |
+| Display | -0.035em | Large serif headings |
+| Headings | -0.02em | Section titles |
 | Normal | 0 | Body text |
-| Wide | 0.02em | Small caps, labels |
-| Extra Wide | 0.05em | Uppercase headings |
+| Labels | 0.03em – 0.06em | Uppercase, monospace labels |
 
 <Preview title="Letter Spacing">
     <div style="display: flex; flex-direction: column; gap: var(--space-4);">
         <div>
-            <small style="color: var(--text-secondary);">-0.02em (Display)</small>
-            <div style="font-size: 2.5rem; font-weight: 700; letter-spacing: -0.02em;">Tight Tracking</div>
+            <small style="color: var(--fg-3);">-0.035em (Display)</small>
+            <div style="font-family: var(--ff-d); font-size: 2.5rem; letter-spacing: -0.035em;">Tight Serif Tracking</div>
         </div>
         <div>
-            <small style="color: var(--text-secondary);">0 (Default)</small>
-            <div style="font-size: 1rem;">Normal body text with default letter spacing.</div>
+            <small style="color: var(--fg-3);">0 (Default)</small>
+            <div style="font-family: var(--ff-b); font-size: 1rem;">Normal body text with default letter spacing.</div>
         </div>
         <div>
-            <small style="color: var(--text-secondary);">0.05em (Labels)</small>
-            <div style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary);">Section Label</div>
+            <small style="color: var(--fg-3);">0.06em (Labels)</small>
+            <div style="font-family: var(--ff-m); font-size: 0.625rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; color: var(--fg-3);">Section Label</div>
         </div>
     </div>
 </Preview>
 
 ```css
 /* Letter spacing */
-.display { letter-spacing: -0.02em; }
-.label { letter-spacing: 0.05em; text-transform: uppercase; }
-.nav-group { letter-spacing: 0.05em; }
+.page-header h1 { letter-spacing: -0.035em; }
+.prose h2 { letter-spacing: -0.02em; }
+.fnav-btn { letter-spacing: 0.06em; text-transform: uppercase; }
 ```
 
 ---
@@ -168,70 +183,78 @@ Use semantic color tokens for consistent hierarchy.
 
 <Preview title="Text Hierarchy">
     <div style="display: flex; flex-direction: column; gap: var(--space-3);">
-        <div style="color: var(--text-primary); font-size: 1.25rem; font-weight: 600;">Primary — Headlines & Body</div>
-        <div style="color: var(--text-secondary);">Secondary — Descriptions, captions, and supporting text</div>
-        <div style="color: var(--accent-primary);">Accent — Links and interactive elements</div>
-        <div style="color: oklch(55% 0.15 150);">Success — Positive messages</div>
-        <div style="color: oklch(55% 0.2 25);">Error — Error messages</div>
+        <div style="color: var(--fg); font-size: 1.25rem; font-weight: 600;">--fg — Headlines & primary text</div>
+        <div style="color: var(--fg-2);">--fg-2 — Body text, descriptions</div>
+        <div style="color: var(--fg-3);">--fg-3 — Captions, placeholders</div>
+        <div style="color: var(--fg-4);">--fg-4 — Disabled, decorative</div>
+        <div style="color: var(--accent);">--accent — Links and interactive elements</div>
+        <div style="color: var(--ok);">--ok — Success messages</div>
+        <div style="color: var(--err);">--err — Error messages</div>
     </div>
 </Preview>
 
 ```css
 /* Text colors */
-.text-primary { color: var(--text-primary); }
-.text-secondary { color: var(--text-secondary); }
-.text-accent { color: var(--accent-primary); }
-.text-success { color: oklch(55% 0.15 150); }
-.text-error { color: oklch(55% 0.2 25); }
+.text-primary { color: var(--fg); }
+.text-secondary { color: var(--fg-2); }
+.text-muted { color: var(--fg-3); }
+.text-accent { color: var(--accent); }
+.text-success { color: var(--ok); }
+.text-error { color: var(--err); }
 ```
 
 ---
 
 ## Heading Styles
 
-Complete heading definitions with all properties.
+Complete heading definitions matching the Library aesthetic.
 
 <Preview title="Heading Definitions">
     <div style="display: flex; flex-direction: column; gap: var(--space-6);">
         <div>
-            <h1 style="margin: 0;">Heading 1</h1>
-            <code style="font-size: 0.8em; color: var(--text-secondary);">2.5rem / 700 / 1.2 / -0.01em</code>
+            <div style="font-family: var(--ff-d); font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 400; line-height: 1; letter-spacing: -0.035em;">Page Title</div>
+            <code style="font-size: 0.75em; color: var(--fg-3);">Display: ff-d / clamp(2.5rem, 8vw, 4rem) / 400 / 1 / -0.035em</code>
         </div>
         <div>
-            <h2 style="margin: 0;">Heading 2</h2>
-            <code style="font-size: 0.8em; color: var(--text-secondary);">2rem / 600 / 1.25 / 0</code>
+            <h2 style="font-family: var(--ff-d); font-size: 1.75rem; font-weight: 400; line-height: 1.25; letter-spacing: -0.02em; margin: 0;">Section Header</h2>
+            <code style="font-size: 0.75em; color: var(--fg-3);">H2: ff-d / 1.75rem / 400 / 1.25 / -0.02em</code>
         </div>
         <div>
-            <h3 style="margin: 0;">Heading 3</h3>
-            <code style="font-size: 0.8em; color: var(--text-secondary);">1.5rem / 600 / 1.3 / 0</code>
+            <h3 style="font-family: var(--ff-b); font-size: 1.125rem; font-weight: 600; line-height: 1.4; margin: 0;">Subsection</h3>
+            <code style="font-size: 0.75em; color: var(--fg-3);">H3: ff-b / 1.125rem / 600 / 1.4 / 0</code>
         </div>
     </div>
 </Preview>
 
 ```css
-h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
+.page-header h1 {
+  font-family: var(--ff-d);
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.035em;
 }
 
-h2 {
-  font-size: 2rem;
-  font-weight: 600;
+.page-header h1 em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.prose h2 {
+  font-family: var(--ff-d);
+  font-size: 1.75rem;
+  font-weight: 400;
   line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin: var(--space-10) 0 var(--space-4);
 }
 
-h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 1.3;
-}
-
-h4 {
-  font-size: 1.25rem;
+.prose h3 {
+  font-family: var(--ff-b);
+  font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.4;
+  margin: var(--space-8) 0 var(--space-3);
 }
 ```
 
@@ -242,31 +265,79 @@ h4 {
 Optimized typography for long-form reading.
 
 <Preview title="Prose Example">
-    <div style="max-width: 65ch; line-height: 1.7;">
-        <p style="margin-bottom: var(--space-4);">Good typography is invisible. When type is well-set, the reader doesn't notice the mechanics — they simply absorb the content. This is the goal of Carbon's typography system.</p>
-        <p style="margin-bottom: var(--space-4);">The <strong>measure</strong> (line length) is kept between 45-75 characters for optimal readability. Combined with generous <em>line-height</em> and proper spacing between paragraphs, long-form content becomes effortless to read.</p>
-        <p>Notice how your eye flows naturally from line to line without strain.</p>
+    <div class="prose" style="max-width: 65ch;">
+        <p style="margin-bottom: var(--space-4); line-height: 1.7; color: var(--fg-2);">Good typography is invisible. When type is well-set, the reader doesn't notice the mechanics — they simply absorb the content. This is the goal of Carbon's typography system.</p>
+        <p style="margin-bottom: var(--space-4); line-height: 1.7; color: var(--fg-2);">The <strong style="font-weight: 600; color: var(--fg);">measure</strong> (line length) is kept between 45-75 characters for optimal readability. Combined with generous <em>line-height</em> and proper spacing between paragraphs, long-form content becomes effortless to read.</p>
+        <p style="line-height: 1.7; color: var(--fg-2);">Notice how your eye flows naturally from line to line without strain.</p>
     </div>
 </Preview>
 
 ```css
 .prose {
-  max-width: 65ch; /* Optimal line length */
+  font-size: 1rem;
   line-height: 1.7;
+  color: var(--fg-2);
+  max-width: 65ch; /* Optimal line length */
 }
 
-.prose p + p {
-  margin-top: var(--space-4);
+.prose p {
+  margin-bottom: var(--space-4);
 }
 
 .prose strong {
   font-weight: 600;
+  color: var(--fg);
 }
 
-.prose a {
-  color: var(--accent-primary);
-  text-decoration: underline;
-  text-underline-offset: 2px;
+.prose code:not([class*="language-"]) {
+  font-family: var(--ff-m);
+  font-size: 0.875em;
+  padding: 2px 6px;
+  background: var(--bg-m);
+  border-radius: var(--r-s);
+  color: var(--accent);
+}
+```
+
+---
+
+## Code Typography
+
+JetBrains Mono styles for code blocks and inline code.
+
+<Preview title="Code Styles">
+    <div style="display: flex; flex-direction: column; gap: var(--space-4);">
+        <div>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Inline Code</small>
+            <p style="font-family: var(--ff-b);">Use the <code style="font-family: var(--ff-m); font-size: 0.875em; padding: 2px 6px; background: var(--bg-m); border-radius: var(--r-s); color: var(--accent);">var(--space-4)</code> token for standard spacing.</p>
+        </div>
+        <div>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Code Block</small>
+            <pre style="font-family: var(--ff-m); font-size: 0.8125rem; line-height: 1.7; background: var(--g950); color: var(--g100); padding: var(--space-4); border-radius: var(--r-l); overflow-x: auto;"><code>function greet(name) {
+  return `Hello, ${name}!`;
+}</code></pre>
+        </div>
+    </div>
+</Preview>
+
+```css
+code:not([class*="language-"]) {
+  font-family: var(--ff-m);
+  font-size: 0.875em;
+  padding: 2px 6px;
+  background: var(--bg-m);
+  border-radius: var(--r-s);
+  color: var(--accent);
+}
+
+pre[class*="language-"] {
+  font-family: var(--ff-m);
+  font-size: 0.8125rem;
+  line-height: 1.7;
+  background: var(--g950);
+  border: 1px solid var(--g800);
+  border-radius: var(--r-l);
+  padding: var(--space-4);
 }
 ```
 
@@ -278,73 +349,53 @@ Scale type sizes at different breakpoints for optimal reading.
 
 ```css
 /* Base (Mobile) */
-html { font-size: 16px; }
-h1 { font-size: 2rem; }
-h2 { font-size: 1.5rem; }
-
-/* Tablet (768px+) */
-@media (min-width: 768px) {
-  h1 { font-size: 2.25rem; }
-  h2 { font-size: 1.75rem; }
+.page-header h1 { 
+  font-size: clamp(2.5rem, 8vw, 4rem); 
 }
 
-/* Desktop (1024px+) */
+/* Prose scales naturally with rem */
+.prose { font-size: 1rem; }
+
+/* Breakpoint-specific adjustments */
+@media (min-width: 768px) {
+  .prose h2 { font-size: 1.75rem; }
+}
+
 @media (min-width: 1024px) {
-  h1 { font-size: 2.5rem; }
-  h2 { font-size: 2rem; }
+  .prose h2 { font-size: 2rem; }
 }
 ```
 
-### Fluid Typography (Optional)
+### Fluid Typography
 
-For smoother scaling, use clamp():
+The display heading uses `clamp()` for smooth scaling:
 
 ```css
-h1 {
-  /* Min: 2rem, Preferred: 5vw, Max: 3rem */
-  font-size: clamp(2rem, 5vw, 3rem);
-}
-
-h2 {
-  font-size: clamp(1.5rem, 4vw, 2rem);
-}
+/* Scales from 2.5rem (40px) to 4rem (64px) based on viewport */
+font-size: clamp(2.5rem, 8vw, 4rem);
 ```
 
 ---
 
-## Code Typography
+## Navigation Typography
 
-Monospace styles for code blocks and inline code.
+The floating pill nav uses monospace labels with wide tracking.
 
-<Preview title="Code Styles">
-    <div style="display: flex; flex-direction: column; gap: var(--space-4);">
-        <div>
-            <small style="color: var(--text-secondary); display: block; margin-bottom: var(--space-2);">Inline Code</small>
-            <p>Use the <code>var(--space-4)</code> token for standard spacing.</p>
-        </div>
-        <div>
-            <small style="color: var(--text-secondary); display: block; margin-bottom: var(--space-2);">Code Block</small>
-            <pre style="background: var(--bg-secondary); padding: var(--space-4); border-radius: var(--space-2); overflow-x: auto;"><code>function greet(name) {
-  return `Hello, ${name}!`;
-}</code></pre>
-        </div>
+<Preview title="Nav Label Style">
+    <div style="display: flex; gap: var(--space-4); align-items: center;">
+        <span style="font-family: var(--ff-m); font-size: 0.5625rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; color: var(--fg-3);">Components</span>
+        <span style="font-family: var(--ff-m); font-size: 0.5625rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; color: var(--fg-3);">Tokens</span>
+        <span style="font-family: var(--ff-m); font-size: 0.5625rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; background: var(--accent); color: white; padding: var(--space-2) var(--space-4); border-radius: var(--r-f);">Guides</span>
     </div>
 </Preview>
 
 ```css
-code {
-  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
-  font-size: 0.9em;
-  background: var(--bg-secondary);
-  padding: 2px var(--space-1);
-  border-radius: 3px;
-}
-
-pre code {
-  font-size: 0.875rem;
-  line-height: 1.6;
-  background: none;
-  padding: 0;
+.fnav-btn {
+  font-family: var(--ff-m);
+  font-size: 0.5625rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 ```
 
@@ -354,19 +405,21 @@ pre code {
 
 ### Do
 
-- ✓ **Establish clear hierarchy** — Size + weight should guide the eye
-- ✓ **Limit font variations** — 2-3 weights max per page
+- ✓ **Use Instrument Serif for display** — Large headlines, hero text
+- ✓ **Use Outfit for body and UI** — Readable and clean
+- ✓ **Use JetBrains Mono for code** — Clear differentiation
+- ✓ **Establish clear hierarchy** — Size + font + weight guides the eye
 - ✓ **Use appropriate measure** — 45-75 characters per line
 - ✓ **Add breathing room** — Generous line-height for body text
-- ✓ **Test at real sizes** — Check actual rendered output
 
 ### Don't
 
 - ✗ **Mix too many sizes** — Stick to the scale
-- ✗ **Use pure black text** — Use --text-primary (oklch(20% 0 0))
+- ✗ **Use pure black text** — Use --fg (oklch-based)
 - ✗ **Justify body text** — Left-align for better readability
-- ✗ **Use light weights for body** — 400 minimum for readability
+- ✗ **Use Instrument Serif for body** — Save it for headlines
 - ✗ **Forget mobile** — Test typography at small viewports
+- ✗ **Over-style code** — Keep it clean and readable
 
 ---
 
@@ -374,28 +427,34 @@ pre code {
 
 ```css
 /* Font Families */
-font-family: var(--font-sans);  /* DM Sans - UI & body */
-font-family: var(--font-mono);  /* SF Mono - code */
+font-family: var(--ff-d);  /* Instrument Serif - Display */
+font-family: var(--ff-b);  /* Outfit - Body & UI */
+font-family: var(--ff-m);  /* JetBrains Mono - Code */
 
-/* Sizes */
-font-size: 3rem;      /* Display */
-font-size: 2.5rem;    /* H1 */
-font-size: 2rem;      /* H2 */
-font-size: 1.5rem;    /* H3 */
-font-size: 1.25rem;   /* H4 */
-font-size: 1rem;      /* Body */
-font-size: 0.875rem;  /* Small */
-font-size: 0.75rem;   /* XSmall */
+/* Display Sizes */
+font-size: clamp(2.5rem, 8vw, 4rem);  /* Hero */
+font-size: 1.75rem;                    /* H2 */
+font-size: 1.125rem;                   /* H3 */
+font-size: 1rem;                       /* Body */
+font-size: 0.875rem;                   /* Small */
+font-size: 0.8125rem;                  /* Code */
+font-size: 0.5625rem;                  /* Nav labels */
 
 /* Weights */
-font-weight: 400;  /* Regular */
-font-weight: 500;  /* Medium */
-font-weight: 600;  /* Semi-Bold */
-font-weight: 700;  /* Bold */
+font-weight: 400;  /* Regular (body, serif) */
+font-weight: 500;  /* Medium (buttons) */
+font-weight: 600;  /* Semi-Bold (subheads) */
+font-weight: 700;  /* Bold (emphasis) */
 
 /* Line Heights */
-line-height: 1.1;  /* Display */
+line-height: 1;    /* Display */
 line-height: 1.25; /* Headings */
-line-height: 1.5;  /* Body */
-line-height: 1.7;  /* Prose */
+line-height: 1.4;  /* UI */
+line-height: 1.6;  /* Body */
+line-height: 1.7;  /* Prose/Code */
+
+/* Letter Spacing */
+letter-spacing: -0.035em; /* Display */
+letter-spacing: -0.02em;  /* H2 */
+letter-spacing: 0.06em;   /* Labels */
 ```

@@ -288,7 +288,7 @@ Add secondary text for more context on complex actions.
 Right-click style context menu for in-place actions.
 
 <Preview>
-<div style="position: relative; padding: var(--space-8); background: var(--bg-secondary); border-radius: var(--space-2); text-align: center; color: var(--text-secondary);">
+<div style="position: relative; padding: var(--space-8); background: var(--bg-s); border-radius: var(--r-m); text-align: center; color: var(--fg-3);">
     <span>Right-click area (simulated)</span>
     <div class="Menu Menu--open Menu--context" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
         <button class="Menu-item">
@@ -350,7 +350,7 @@ Override menu styles using CSS custom properties:
 ```css
 /* Custom menu appearance */
 .Menu {
-  --menu-bg: var(--bg-primary);
+  --menu-bg: var(--bg);
   --menu-border: var(--border-primary);
   --menu-shadow: var(--shadow-lg);
   --menu-radius: var(--radius-lg);
@@ -359,7 +359,7 @@ Override menu styles using CSS custom properties:
 /* Custom item styling */
 .Menu-item {
   --menu-item-padding: var(--space-2) var(--space-3);
-  --menu-item-hover: var(--bg-secondary);
+  --menu-item-hover: var(--bg-s);
 }
 
 /* Danger variant color */

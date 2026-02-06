@@ -47,19 +47,19 @@ Add a centered label to provide context.
 <Preview title="Label Positions">
     <div class="Layout-stack Layout-stack--loose">
         <div>
-            <small style="color: var(--text-secondary); display: block; margin-bottom: var(--space-2);">Left</small>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Left</small>
             <div class="Divider Divider--label Divider--label-left">
                 <span>Section</span>
             </div>
         </div>
         <div>
-            <small style="color: var(--text-secondary); display: block; margin-bottom: var(--space-2);">Center (default)</small>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Center (default)</small>
             <div class="Divider Divider--label">
                 <span>Section</span>
             </div>
         </div>
         <div>
-            <small style="color: var(--text-secondary); display: block; margin-bottom: var(--space-2);">Right</small>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Right</small>
             <div class="Divider Divider--label Divider--label-right">
                 <span>Section</span>
             </div>
@@ -106,7 +106,7 @@ Separate inline or flex items horizontally.
 Control the margin around dividers.
 
 <Preview title="Spacing Variants">
-    <div style="background: var(--bg-secondary); padding: var(--space-4); border-radius: var(--space-2);">
+    <div style="background: var(--bg-s); padding: var(--space-4); border-radius: var(--r-m);">
         <p>Tight spacing below:</p>
         <hr class="Divider Divider--tight">
         <p>Default spacing below:</p>
@@ -130,15 +130,15 @@ Control the margin around dividers.
 <Preview title="Divider Styles">
     <div class="Layout-stack Layout-stack--loose">
         <div>
-            <small style="color: var(--text-secondary); display: block; margin-bottom: var(--space-2);">Solid (default)</small>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Solid (default)</small>
             <hr class="Divider">
         </div>
         <div>
-            <small style="color: var(--text-secondary); display: block; margin-bottom: var(--space-2);">Dashed</small>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Dashed</small>
             <hr class="Divider Divider--dashed">
         </div>
         <div>
-            <small style="color: var(--text-secondary); display: block; margin-bottom: var(--space-2);">Dotted</small>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Dotted</small>
             <hr class="Divider Divider--dotted">
         </div>
     </div>
@@ -172,7 +172,7 @@ Control the margin around dividers.
                 <span>Shipping</span>
                 <span>$5.00</span>
             </div>
-            <div class="Layout-split" style="color: var(--text-secondary);">
+            <div class="Layout-split" style="color: var(--fg-3);">
                 <span>Tax</span>
                 <span>$8.32</span>
             </div>
@@ -190,10 +190,10 @@ Control the margin around dividers.
 ### Menu Sections
 
 <Preview title="Menu with Dividers">
-    <div style="width: 200px; background: var(--bg-primary); border: 1px solid var(--border-subtle); border-radius: var(--space-2); padding: var(--space-1) 0;">
-        <a href="#" style="display: block; padding: var(--space-2) var(--space-3); text-decoration: none; color: var(--text-primary);">Profile</a>
-        <a href="#" style="display: block; padding: var(--space-2) var(--space-3); text-decoration: none; color: var(--text-primary);">Settings</a>
-        <a href="#" style="display: block; padding: var(--space-2) var(--space-3); text-decoration: none; color: var(--text-primary);">Billing</a>
+    <div style="width: 200px; background: var(--bg); border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-1) 0;">
+        <a href="#" style="display: block; padding: var(--space-2) var(--space-3); text-decoration: none; color: var(--fg);">Profile</a>
+        <a href="#" style="display: block; padding: var(--space-2) var(--space-3); text-decoration: none; color: var(--fg);">Settings</a>
+        <a href="#" style="display: block; padding: var(--space-2) var(--space-3); text-decoration: none; color: var(--fg);">Billing</a>
         <hr class="Divider Divider--tight" style="margin-left: var(--space-3); margin-right: var(--space-3);">
         <a href="#" style="display: block; padding: var(--space-2) var(--space-3); text-decoration: none; color: oklch(55% 0.2 25);">Sign Out</a>
     </div>
@@ -314,7 +314,7 @@ Control the margin around dividers.
 /* Base horizontal divider */
 .Divider {
   border: none;
-  border-top: 1px solid var(--border-subtle);
+  border-top: 1px solid var(--bd);
   margin: var(--space-4) 0;
 }
 
@@ -331,7 +331,7 @@ Control the margin around dividers.
   display: inline-block;
   width: 1px;
   height: 1em;
-  background-color: var(--border-subtle);
+  background-color: var(--bd);
   vertical-align: middle;
 }
 
@@ -349,12 +349,12 @@ Control the margin around dividers.
   content: "";
   flex: 1;
   height: 1px;
-  background-color: var(--border-subtle);
+  background-color: var(--bd);
 }
 
 .Divider--label span {
   font-size: 0.85rem;
-  color: var(--text-secondary);
+  color: var(--fg-3);
   white-space: nowrap;
 }
 

@@ -102,17 +102,17 @@ Simulate loading text with multiple lines.
 
 <Preview title="Table Skeleton">
     <div style="width: 100%;">
-        <div style="display: flex; gap: var(--space-4); padding: var(--space-3) 0; border-bottom: 2px solid var(--border-subtle);">
+        <div style="display: flex; gap: var(--space-4); padding: var(--space-3) 0; border-bottom: 2px solid var(--bd);">
             <div class="Skeleton" style="height: 12px; width: 80px;"></div>
             <div class="Skeleton" style="height: 12px; width: 120px;"></div>
             <div class="Skeleton" style="height: 12px; width: 60px;"></div>
         </div>
-        <div style="display: flex; gap: var(--space-4); padding: var(--space-3) 0; border-bottom: 1px solid var(--border-subtle);">
+        <div style="display: flex; gap: var(--space-4); padding: var(--space-3) 0; border-bottom: 1px solid var(--bd);">
             <div class="Skeleton" style="height: 14px; width: 80px;"></div>
             <div class="Skeleton" style="height: 14px; width: 120px;"></div>
             <div class="Skeleton" style="height: 14px; width: 60px;"></div>
         </div>
-        <div style="display: flex; gap: var(--space-4); padding: var(--space-3) 0; border-bottom: 1px solid var(--border-subtle);">
+        <div style="display: flex; gap: var(--space-4); padding: var(--space-3) 0; border-bottom: 1px solid var(--bd);">
             <div class="Skeleton" style="height: 14px; width: 80px;"></div>
             <div class="Skeleton" style="height: 14px; width: 120px;"></div>
             <div class="Skeleton" style="height: 14px; width: 60px;"></div>

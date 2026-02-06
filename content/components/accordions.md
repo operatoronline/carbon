@@ -135,7 +135,7 @@ Add visible borders between items with the `.Accordion--bordered` modifier.
 No outer borders for seamless integration into cards or panels.
 
 <Preview>
-<div style="background: var(--bg-secondary); padding: var(--space-4); border-radius: var(--space-2);">
+<div style="background: var(--bg-s); padding: var(--space-4); border-radius: var(--r-m);">
     <div class="Accordion Accordion--flush">
         <details class="Accordion-item" open>
             <summary class="Accordion-header">
@@ -263,10 +263,10 @@ Accordions can contain any content, including other components.
             <div class="Layout-stack Layout-stack--tight">
                 <div class="Layout-split">
                     <div style="display: flex; align-items: center; gap: var(--space-3);">
-                        <div class="Avatar" style="background: var(--accent-primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: 600;">A</div>
+                        <div class="Avatar" style="background: var(--accent); color: white; display: flex; align-items: center; justify-content: center; font-weight: 600;">A</div>
                         <div>
                             <div style="font-weight: 500;">Alice Johnson</div>
-                            <div style="font-size: 0.85rem; color: var(--text-secondary);">Design Lead</div>
+                            <div style="font-size: 0.85rem; color: var(--fg-3);">Design Lead</div>
                         </div>
                     </div>
                     <span class="Badge Badge--success">Active</span>
@@ -276,7 +276,7 @@ Accordions can contain any content, including other components.
                         <div class="Avatar" style="background: oklch(55% 0.15 150); color: white; display: flex; align-items: center; justify-content: center; font-weight: 600;">B</div>
                         <div>
                             <div style="font-weight: 500;">Bob Smith</div>
-                            <div style="font-size: 0.85rem; color: var(--text-secondary);">Developer</div>
+                            <div style="font-size: 0.85rem; color: var(--fg-3);">Developer</div>
                         </div>
                     </div>
                     <span class="Badge Badge--success">Active</span>

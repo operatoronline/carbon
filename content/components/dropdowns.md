@@ -219,7 +219,7 @@ Display keyboard shortcuts alongside actions.
 <div class="Dropdown-menu" style="position: relative; display: block; width: 240px;">
     <div style="padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--border-color);">
         <div style="font-weight: 500;">John Doe</div>
-        <div style="font-size: 0.875rem; color: var(--text-secondary);">john@example.com</div>
+        <div style="font-size: 0.875rem; color: var(--fg-3);">john@example.com</div>
     </div>
     <a href="#" class="Dropdown-item">
         <i class="ph ph-user"></i>

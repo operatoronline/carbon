@@ -267,7 +267,7 @@ Buttons can expand to fill their container.
 ### Toolbar
 
 <Preview>
-<div style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3); background: var(--bg-secondary); border-radius: var(--space-2);">
+<div style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-m);">
     <button class="Button Button--primary Button--small">
         <i class="ph ph-plus Button-icon"></i>
         New

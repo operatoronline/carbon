@@ -1,0 +1,1479 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - navigation "Main navigation" [ref=e3]:
+    - link "Home" [ref=e4] [cursor=pointer]:
+      - /url: ../index.html
+      - generic [ref=e5]: 
+      - generic [ref=e6]: Home
+    - link "Tokens" [ref=e7] [cursor=pointer]:
+      - /url: ../tokens/colors.html
+      - generic [ref=e8]: 
+      - generic [ref=e9]: Tokens
+    - link "Components" [ref=e10] [cursor=pointer]:
+      - /url: ../components/buttons.html
+      - generic [ref=e11]: 
+      - generic [ref=e12]: Components
+    - link "Patterns" [ref=e13] [cursor=pointer]:
+      - /url: ../patterns/layouts.html
+      - generic [ref=e14]: 
+      - generic [ref=e15]: Patterns
+    - button "Search" [ref=e17] [cursor=pointer]:
+      - generic [ref=e18]: 
+    - button "Toggle theme" [ref=e19] [cursor=pointer]:
+      - generic [ref=e20]: 
+  - banner [ref=e21]:
+    - link " Carbon" [ref=e23] [cursor=pointer]:
+      - /url: ../index.html
+      - generic [ref=e24]: 
+      - generic [ref=e25]: Carbon
+    - generic [ref=e27]:
+      - generic [ref=e28]: 
+      - textbox "Search" [ref=e29]:
+        - /placeholder: Search components...
+  - main [ref=e31]:
+    - generic [ref=e32]:
+      - navigation "Breadcrumb" [ref=e33]:
+        - link "Carbon" [ref=e34] [cursor=pointer]:
+          - /url: ../index.html
+        - generic [ref=e35]: /
+        - generic [ref=e36]: Components
+        - generic [ref=e37]: /
+        - generic [ref=e38]: Cards
+      - heading "Cards" [level=1] [ref=e39]:
+        - emphasis [ref=e40]: Cards
+    - article [ref=e41]:
+      - heading "Cards" [level=1] [ref=e42]
+      - paragraph [ref=e43]: Cards are flexible containers that group related content and actions. They provide a clean, elevated surface for displaying everything from simple text to complex interactive layouts.
+      - separator [ref=e44]
+      - heading "Installation" [level=2] [ref=e45]
+      - paragraph [ref=e46]:
+        - text: Copy the card CSS from
+        - code [ref=e47]: styles/docs.css
+        - text: "or include the Carbon stylesheet:"
+      - generic [ref=e48]:
+        - code [ref=e50]:
+          - generic [ref=e51]:
+            - generic [ref=e52]: <link
+            - text: rel
+            - generic [ref=e53]: ="stylesheet"
+            - text: href
+            - generic [ref=e54]: ="carbon.min.css"
+            - text: ">"
+        - button "Copy code" [ref=e55] [cursor=pointer]:
+          - generic [ref=e56]: 
+      - paragraph [ref=e57]: "Then use card classes in your HTML:"
+      - generic [ref=e58]:
+        - code [ref=e60]:
+          - generic [ref=e61]:
+            - generic [ref=e62]: <div
+            - text: class
+            - generic [ref=e63]: ="Card"
+            - text: ">"
+          - generic [ref=e64]:
+            - generic [ref=e65]: <div
+            - text: class
+            - generic [ref=e66]: ="Card-body"
+            - text: ">"
+          - generic [ref=e67]:
+            - generic [ref=e68]: <h3
+            - text: class
+            - generic [ref=e69]: ="Card-title"
+            - text: ">"
+          - text: Card Title
+          - generic [ref=e70]:
+            - generic [ref=e71]: </h3
+            - text: ">"
+          - generic [ref=e72]:
+            - generic [ref=e73]: <p
+            - text: class
+            - generic [ref=e74]: ="Card-text"
+            - text: ">"
+          - text: Card content goes here.
+          - generic [ref=e75]:
+            - generic [ref=e76]: </p
+            - text: ">"
+          - generic [ref=e77]:
+            - generic [ref=e78]: </div
+            - text: ">"
+          - generic [ref=e79]:
+            - generic [ref=e80]: </div
+            - text: ">"
+        - button "Copy code" [ref=e81] [cursor=pointer]:
+          - generic [ref=e82]: 
+      - separator [ref=e83]
+      - heading "Usage" [level=2] [ref=e84]
+      - paragraph [ref=e85]:
+        - text: The base
+        - code [ref=e86]: .Card
+        - text: class provides core styling with elevation and border radius. Add sections like
+        - code [ref=e87]: .Card-header
+        - text: ","
+        - code [ref=e88]: .Card-body
+        - text: ", and"
+        - code [ref=e89]: .Card-footer
+        - text: to structure content.
+      - generic [ref=e90]:
+        - generic [ref=e91]:
+          - generic [ref=e92]:
+            - button "Preview" [ref=e93] [cursor=pointer]
+            - button "HTML" [ref=e94] [cursor=pointer]
+          - generic [ref=e95]:
+            - button "" [ref=e96] [cursor=pointer]:
+              - generic [ref=e97]: 
+            - button "" [ref=e98] [cursor=pointer]:
+              - generic [ref=e99]: 
+            - button "" [ref=e100] [cursor=pointer]:
+              - generic [ref=e101]: 
+            - button "" [ref=e103] [cursor=pointer]:
+              - generic [ref=e104]: 
+            - button "" [ref=e105] [cursor=pointer]:
+              - generic [ref=e106]: 
+            - button "" [ref=e107] [cursor=pointer]:
+              - generic [ref=e108]: 
+        - generic [ref=e112]:
+          - heading "Simple Card" [level=3] [ref=e113]
+          - paragraph [ref=e114]: Cards group related content and actions together.
+        - text: 
+      - separator [ref=e115]
+      - heading "Examples" [level=2] [ref=e116]
+      - heading "Basic Card" [level=3] [ref=e117]
+      - paragraph [ref=e118]: A minimal card with title and text content.
+      - generic [ref=e119]:
+        - generic [ref=e120]:
+          - generic [ref=e121]:
+            - button "Preview" [ref=e122] [cursor=pointer]
+            - button "HTML" [ref=e123] [cursor=pointer]
+          - generic [ref=e124]:
+            - button "" [ref=e125] [cursor=pointer]:
+              - generic [ref=e126]: 
+            - button "" [ref=e127] [cursor=pointer]:
+              - generic [ref=e128]: 
+            - button "" [ref=e129] [cursor=pointer]:
+              - generic [ref=e130]: 
+            - button "" [ref=e132] [cursor=pointer]:
+              - generic [ref=e133]: 
+            - button "" [ref=e134] [cursor=pointer]:
+              - generic [ref=e135]: 
+            - button "" [ref=e136] [cursor=pointer]:
+              - generic [ref=e137]: 
+        - generic [ref=e141]:
+          - heading "Project Update" [level=3] [ref=e142]
+          - paragraph [ref=e143]: The new dashboard feature is ready for review. All tests passing.
+        - text: 
+      - heading "Card with Header and Footer" [level=3] [ref=e144]
+      - paragraph [ref=e145]: Use header and footer sections for titles, metadata, and actions.
+      - generic [ref=e146]:
+        - generic [ref=e147]:
+          - generic [ref=e148]:
+            - button "Preview" [ref=e149] [cursor=pointer]
+            - button "HTML" [ref=e150] [cursor=pointer]
+          - generic [ref=e151]:
+            - button "" [ref=e152] [cursor=pointer]:
+              - generic [ref=e153]: 
+            - button "" [ref=e154] [cursor=pointer]:
+              - generic [ref=e155]: 
+            - button "" [ref=e156] [cursor=pointer]:
+              - generic [ref=e157]: 
+            - button "" [ref=e159] [cursor=pointer]:
+              - generic [ref=e160]: 
+            - button "" [ref=e161] [cursor=pointer]:
+              - generic [ref=e162]: 
+            - button "" [ref=e163] [cursor=pointer]:
+              - generic [ref=e164]: 
+        - generic [ref=e167]:
+          - generic [ref=e168]:
+            - heading "Weekly Report" [level=3] [ref=e169]
+            - generic [ref=e170]: Feb 3, 2026
+          - paragraph [ref=e172]: Revenue increased 12% this week. Customer satisfaction scores remain high at 4.8/5.
+          - generic [ref=e173]:
+            - button "Dismiss" [ref=e174] [cursor=pointer]
+            - button "View Details" [ref=e175] [cursor=pointer]
+        - text: 
+      - heading "Card with Image" [level=3] [ref=e176]
+      - paragraph [ref=e177]:
+        - text: Add images to cards using
+        - code [ref=e178]: .Card-image
+        - text: at the top.
+      - generic [ref=e179]:
+        - generic [ref=e180]:
+          - generic [ref=e181]:
+            - button "Preview" [ref=e182] [cursor=pointer]
+            - button "HTML" [ref=e183] [cursor=pointer]
+          - generic [ref=e184]:
+            - button "" [ref=e185] [cursor=pointer]:
+              - generic [ref=e186]: 
+            - button "" [ref=e187] [cursor=pointer]:
+              - generic [ref=e188]: 
+            - button "" [ref=e189] [cursor=pointer]:
+              - generic [ref=e190]: 
+            - button "" [ref=e192] [cursor=pointer]:
+              - generic [ref=e193]: 
+            - button "" [ref=e194] [cursor=pointer]:
+              - generic [ref=e195]: 
+            - button "" [ref=e196] [cursor=pointer]:
+              - generic [ref=e197]: 
+        - generic [ref=e202]:
+          - heading "Mountain Retreat" [level=3] [ref=e203]
+          - paragraph [ref=e204]: Escape to the peaks for a weekend of hiking and relaxation.
+          - button "Book Now" [ref=e205] [cursor=pointer]
+        - text: 
+      - heading "Card with Image Overlay" [level=3] [ref=e206]
+      - paragraph [ref=e207]: Overlay text on images for hero-style cards.
+      - generic [ref=e208]:
+        - generic [ref=e209]:
+          - generic [ref=e210]:
+            - button "Preview" [ref=e211] [cursor=pointer]
+            - button "HTML" [ref=e212] [cursor=pointer]
+          - generic [ref=e213]:
+            - button "" [ref=e214] [cursor=pointer]:
+              - generic [ref=e215]: 
+            - button "" [ref=e216] [cursor=pointer]:
+              - generic [ref=e217]: 
+            - button "" [ref=e218] [cursor=pointer]:
+              - generic [ref=e219]: 
+            - button "" [ref=e221] [cursor=pointer]:
+              - generic [ref=e222]: 
+            - button "" [ref=e223] [cursor=pointer]:
+              - generic [ref=e224]: 
+            - button "" [ref=e225] [cursor=pointer]:
+              - generic [ref=e226]: 
+        - generic [ref=e231]:
+          - text: Featured
+          - heading "Sunset Photography Workshop" [level=3] [ref=e232]
+          - paragraph [ref=e233]: Learn to capture golden hour magic
+        - text: 
+      - heading "Horizontal Card" [level=3] [ref=e234]
+      - paragraph [ref=e235]: Side-by-side layout for media and content.
+      - generic [ref=e236]:
+        - generic [ref=e237]:
+          - generic [ref=e238]:
+            - button "Preview" [ref=e239] [cursor=pointer]
+            - button "HTML" [ref=e240] [cursor=pointer]
+          - generic [ref=e241]:
+            - button "" [ref=e242] [cursor=pointer]:
+              - generic [ref=e243]: 
+            - button "" [ref=e244] [cursor=pointer]:
+              - generic [ref=e245]: 
+            - button "" [ref=e246] [cursor=pointer]:
+              - generic [ref=e247]: 
+            - button "" [ref=e249] [cursor=pointer]:
+              - generic [ref=e250]: 
+            - button "" [ref=e251] [cursor=pointer]:
+              - generic [ref=e252]: 
+            - button "" [ref=e253] [cursor=pointer]:
+              - generic [ref=e254]: 
+        - generic [ref=e258]:
+          - text: Article
+          - heading "Design Systems at Scale" [level=3] [ref=e259]
+          - paragraph [ref=e260]: How leading teams maintain consistency across products.
+          - text: 8 min read
+        - text: 
+      - heading "Interactive Card" [level=3] [ref=e261]
+      - paragraph [ref=e262]: Clickable cards with hover effects.
+      - generic [ref=e263]:
+        - generic [ref=e264]:
+          - generic [ref=e265]:
+            - button "Preview" [ref=e266] [cursor=pointer]
+            - button "HTML" [ref=e267] [cursor=pointer]
+          - generic [ref=e268]:
+            - button "" [ref=e269] [cursor=pointer]:
+              - generic [ref=e270]: 
+            - button "" [ref=e271] [cursor=pointer]:
+              - generic [ref=e272]: 
+            - button "" [ref=e273] [cursor=pointer]:
+              - generic [ref=e274]: 
+            - button "" [ref=e276] [cursor=pointer]:
+              - generic [ref=e277]: 
+            - button "" [ref=e278] [cursor=pointer]:
+              - generic [ref=e279]: 
+            - button "" [ref=e280] [cursor=pointer]:
+              - generic [ref=e281]: 
+        - link " Design Files 24 items Figma files, brand assets, and component libraries." [ref=e284] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e285]:
+            - generic [ref=e286]:
+              - generic [ref=e288]: 
+              - generic [ref=e289]:
+                - heading "Design Files" [level=3] [ref=e290]
+                - text: 24 items
+            - paragraph [ref=e291]: Figma files, brand assets, and component libraries.
+        - text: 
+      - heading "Profile Card" [level=3] [ref=e292]
+      - paragraph [ref=e293]: Display user information and quick actions.
+      - generic [ref=e294]:
+        - generic [ref=e295]:
+          - generic [ref=e296]:
+            - button "Preview" [ref=e297] [cursor=pointer]
+            - button "HTML" [ref=e298] [cursor=pointer]
+          - generic [ref=e299]:
+            - button "" [ref=e300] [cursor=pointer]:
+              - generic [ref=e301]: 
+            - button "" [ref=e302] [cursor=pointer]:
+              - generic [ref=e303]: 
+            - button "" [ref=e304] [cursor=pointer]:
+              - generic [ref=e305]: 
+            - button "" [ref=e307] [cursor=pointer]:
+              - generic [ref=e308]: 
+            - button "" [ref=e309] [cursor=pointer]:
+              - generic [ref=e310]: 
+            - button "" [ref=e311] [cursor=pointer]:
+              - generic [ref=e312]: 
+        - generic [ref=e316]:
+          - heading "Alex Chen" [level=3] [ref=e318]
+          - paragraph [ref=e319]: Senior Product Designer
+          - paragraph [ref=e320]: Creating delightful experiences at Acme Corp. Previously at Figma.
+          - generic [ref=e321]:
+            - button "Follow" [ref=e322] [cursor=pointer]
+            - button "Message" [ref=e323] [cursor=pointer]
+        - text: 
+      - heading "Stats Card" [level=3] [ref=e324]
+      - paragraph [ref=e325]: Highlight key metrics and numbers.
+      - generic [ref=e326]:
+        - generic [ref=e327]:
+          - generic [ref=e328]:
+            - button "Preview" [ref=e329] [cursor=pointer]
+            - button "HTML" [ref=e330] [cursor=pointer]
+          - generic [ref=e331]:
+            - button "" [ref=e332] [cursor=pointer]:
+              - generic [ref=e333]: 
+            - button "" [ref=e334] [cursor=pointer]:
+              - generic [ref=e335]: 
+            - button "" [ref=e336] [cursor=pointer]:
+              - generic [ref=e337]: 
+            - button "" [ref=e339] [cursor=pointer]:
+              - generic [ref=e340]: 
+            - button "" [ref=e341] [cursor=pointer]:
+              - generic [ref=e342]: 
+            - button "" [ref=e343] [cursor=pointer]:
+              - generic [ref=e344]: 
+        - generic [ref=e347]:
+          - generic [ref=e349]: 2,847 Total Users +12.5%
+          - generic [ref=e351]: $48.2k Revenue +8.2%
+          - generic [ref=e353]: 94.2% Uptime -0.3%
+        - text: 
+      - heading "Pricing Card" [level=3] [ref=e354]
+      - paragraph [ref=e355]: Display pricing tiers and features.
+      - generic [ref=e356]:
+        - generic [ref=e357]:
+          - generic [ref=e358]:
+            - button "Preview" [ref=e359] [cursor=pointer]
+            - button "HTML" [ref=e360] [cursor=pointer]
+          - generic [ref=e361]:
+            - button "" [ref=e362] [cursor=pointer]:
+              - generic [ref=e363]: 
+            - button "" [ref=e364] [cursor=pointer]:
+              - generic [ref=e365]: 
+            - button "" [ref=e366] [cursor=pointer]:
+              - generic [ref=e367]: 
+            - button "" [ref=e369] [cursor=pointer]:
+              - generic [ref=e370]: 
+            - button "" [ref=e371] [cursor=pointer]:
+              - generic [ref=e372]: 
+            - button "" [ref=e373] [cursor=pointer]:
+              - generic [ref=e374]: 
+        - generic [ref=e377]:
+          - generic [ref=e378]:
+            - generic [ref=e379]: Popular
+            - heading "Pro" [level=3] [ref=e380]
+            - generic [ref=e381]: $29 /month
+          - list [ref=e383]:
+            - listitem [ref=e384]:
+              - generic [ref=e385]: 
+              - text: Unlimited projects
+            - listitem [ref=e386]:
+              - generic [ref=e387]: 
+              - text: 50GB storage
+            - listitem [ref=e388]:
+              - generic [ref=e389]: 
+              - text: Priority support
+            - listitem [ref=e390]:
+              - generic [ref=e391]: 
+              - text: Advanced analytics
+            - listitem [ref=e392]:
+              - generic [ref=e393]: 
+              - text: Custom domain
+          - button "Get Started" [ref=e395] [cursor=pointer]
+        - text: 
+      - heading "Product Card" [level=3] [ref=e396]
+      - paragraph [ref=e397]: E-commerce style product display.
+      - generic [ref=e398]:
+        - generic [ref=e399]:
+          - generic [ref=e400]:
+            - button "Preview" [ref=e401] [cursor=pointer]
+            - button "HTML" [ref=e402] [cursor=pointer]
+          - generic [ref=e403]:
+            - button "" [ref=e404] [cursor=pointer]:
+              - generic [ref=e405]: 
+            - button "" [ref=e406] [cursor=pointer]:
+              - generic [ref=e407]: 
+            - button "" [ref=e408] [cursor=pointer]:
+              - generic [ref=e409]: 
+            - button "" [ref=e411] [cursor=pointer]:
+              - generic [ref=e412]: 
+            - button "" [ref=e413] [cursor=pointer]:
+              - generic [ref=e414]: 
+            - button "" [ref=e415] [cursor=pointer]:
+              - generic [ref=e416]: 
+        - generic [ref=e419]:
+          - button "Add to wishlist" [ref=e421] [cursor=pointer]:
+            - generic [ref=e422]: 
+          - generic [ref=e423]:
+            - text: Electronics
+            - heading "Wireless Headphones" [level=3] [ref=e424]
+            - generic [ref=e425]:
+              - generic [ref=e426]: 
+              - text: (128)
+            - generic [ref=e427]: $79.99 $99.99
+            - button "Add to Cart" [ref=e428] [cursor=pointer]
+        - text: 
+      - heading "Notification Card" [level=3] [ref=e429]
+      - paragraph [ref=e430]: Alert or notification style cards.
+      - generic [ref=e431]:
+        - generic [ref=e432]:
+          - generic [ref=e433]:
+            - button "Preview" [ref=e434] [cursor=pointer]
+            - button "HTML" [ref=e435] [cursor=pointer]
+          - generic [ref=e436]:
+            - button "" [ref=e437] [cursor=pointer]:
+              - generic [ref=e438]: 
+            - button "" [ref=e439] [cursor=pointer]:
+              - generic [ref=e440]: 
+            - button "" [ref=e441] [cursor=pointer]:
+              - generic [ref=e442]: 
+            - button "" [ref=e444] [cursor=pointer]:
+              - generic [ref=e445]: 
+            - button "" [ref=e446] [cursor=pointer]:
+              - generic [ref=e447]: 
+            - button "" [ref=e448] [cursor=pointer]:
+              - generic [ref=e449]: 
+        - generic [ref=e453]:
+          - generic [ref=e454]: 
+          - generic [ref=e455]:
+            - heading "New Feature Available" [level=4] [ref=e456]
+            - paragraph [ref=e457]: Dark mode is now available. Update your preferences in settings.
+          - button "Dismiss" [ref=e458] [cursor=pointer]:
+            - generic [ref=e459]: 
+        - text: 
+      - generic [ref=e460]:
+        - generic [ref=e461]:
+          - generic [ref=e462]:
+            - button "Preview" [ref=e463] [cursor=pointer]
+            - button "HTML" [ref=e464] [cursor=pointer]
+          - generic [ref=e465]:
+            - button "" [ref=e466] [cursor=pointer]:
+              - generic [ref=e467]: 
+            - button "" [ref=e468] [cursor=pointer]:
+              - generic [ref=e469]: 
+            - button "" [ref=e470] [cursor=pointer]:
+              - generic [ref=e471]: 
+            - button "" [ref=e473] [cursor=pointer]:
+              - generic [ref=e474]: 
+            - button "" [ref=e475] [cursor=pointer]:
+              - generic [ref=e476]: 
+            - button "" [ref=e477] [cursor=pointer]:
+              - generic [ref=e478]: 
+        - generic [ref=e482]:
+          - generic [ref=e483]: 
+          - generic [ref=e484]:
+            - heading "Payment Successful" [level=4] [ref=e485]
+            - paragraph [ref=e486]: Your subscription has been renewed for another year.
+        - text: 
+      - heading "List Card" [level=3] [ref=e487]
+      - paragraph [ref=e488]: Cards containing list items.
+      - generic [ref=e489]:
+        - generic [ref=e490]:
+          - generic [ref=e491]:
+            - button "Preview" [ref=e492] [cursor=pointer]
+            - button "HTML" [ref=e493] [cursor=pointer]
+          - generic [ref=e494]:
+            - button "" [ref=e495] [cursor=pointer]:
+              - generic [ref=e496]: 
+            - button "" [ref=e497] [cursor=pointer]:
+              - generic [ref=e498]: 
+            - button "" [ref=e499] [cursor=pointer]:
+              - generic [ref=e500]: 
+            - button "" [ref=e502] [cursor=pointer]:
+              - generic [ref=e503]: 
+            - button "" [ref=e504] [cursor=pointer]:
+              - generic [ref=e505]: 
+            - button "" [ref=e506] [cursor=pointer]:
+              - generic [ref=e507]: 
+        - generic [ref=e510]:
+          - generic [ref=e511]:
+            - heading "Recent Activity" [level=3] [ref=e512]
+            - button "View All" [ref=e513] [cursor=pointer]
+          - list [ref=e514]:
+            - listitem [ref=e515]:
+              - generic [ref=e517]: 
+              - generic [ref=e518]: Document uploaded report-q4.pdf • 2 min ago
+            - listitem [ref=e519]:
+              - generic [ref=e521]: 
+              - generic [ref=e522]: New team member Sarah joined Design • 1 hour ago
+            - listitem [ref=e523]:
+              - generic [ref=e525]: 
+              - generic [ref=e526]: Project starred Carbon Design System • 3 hours ago
+        - text: 
+      - separator [ref=e527]
+      - heading "Variants" [level=2] [ref=e528]
+      - heading "Elevated" [level=3] [ref=e529]
+      - paragraph [ref=e530]: Default cards have subtle elevation with shadow.
+      - generic [ref=e531]:
+        - generic [ref=e532]:
+          - generic [ref=e533]:
+            - button "Preview" [ref=e534] [cursor=pointer]
+            - button "HTML" [ref=e535] [cursor=pointer]
+          - generic [ref=e536]:
+            - button "" [ref=e537] [cursor=pointer]:
+              - generic [ref=e538]: 
+            - button "" [ref=e539] [cursor=pointer]:
+              - generic [ref=e540]: 
+            - button "" [ref=e541] [cursor=pointer]:
+              - generic [ref=e542]: 
+            - button "" [ref=e544] [cursor=pointer]:
+              - generic [ref=e545]: 
+            - button "" [ref=e546] [cursor=pointer]:
+              - generic [ref=e547]: 
+            - button "" [ref=e548] [cursor=pointer]:
+              - generic [ref=e549]: 
+        - generic [ref=e553]:
+          - heading "Elevated Card" [level=3] [ref=e554]
+          - paragraph [ref=e555]: Default shadow provides depth.
+        - text: 
+      - heading "Outlined" [level=3] [ref=e556]
+      - paragraph [ref=e557]: Border-only variant without shadow.
+      - generic [ref=e558]:
+        - generic [ref=e559]:
+          - generic [ref=e560]:
+            - button "Preview" [ref=e561] [cursor=pointer]
+            - button "HTML" [ref=e562] [cursor=pointer]
+          - generic [ref=e563]:
+            - button "" [ref=e564] [cursor=pointer]:
+              - generic [ref=e565]: 
+            - button "" [ref=e566] [cursor=pointer]:
+              - generic [ref=e567]: 
+            - button "" [ref=e568] [cursor=pointer]:
+              - generic [ref=e569]: 
+            - button "" [ref=e571] [cursor=pointer]:
+              - generic [ref=e572]: 
+            - button "" [ref=e573] [cursor=pointer]:
+              - generic [ref=e574]: 
+            - button "" [ref=e575] [cursor=pointer]:
+              - generic [ref=e576]: 
+        - generic [ref=e580]:
+          - heading "Outlined Card" [level=3] [ref=e581]
+          - paragraph [ref=e582]: Clean border, no shadow.
+        - text: 
+      - heading "Flat" [level=3] [ref=e583]
+      - paragraph [ref=e584]: No border or shadow — blends with background.
+      - generic [ref=e585]:
+        - generic [ref=e586]:
+          - generic [ref=e587]:
+            - button "Preview" [ref=e588] [cursor=pointer]
+            - button "HTML" [ref=e589] [cursor=pointer]
+          - generic [ref=e590]:
+            - button "" [ref=e591] [cursor=pointer]:
+              - generic [ref=e592]: 
+            - button "" [ref=e593] [cursor=pointer]:
+              - generic [ref=e594]: 
+            - button "" [ref=e595] [cursor=pointer]:
+              - generic [ref=e596]: 
+            - button "" [ref=e598] [cursor=pointer]:
+              - generic [ref=e599]: 
+            - button "" [ref=e600] [cursor=pointer]:
+              - generic [ref=e601]: 
+            - button "" [ref=e602] [cursor=pointer]:
+              - generic [ref=e603]: 
+        - generic [ref=e607]:
+          - heading "Flat Card" [level=3] [ref=e608]
+          - paragraph [ref=e609]: Minimal visual weight.
+        - text: 
+      - heading "Filled" [level=3] [ref=e610]
+      - paragraph [ref=e611]: Filled background without shadow.
+      - generic [ref=e612]:
+        - generic [ref=e613]:
+          - generic [ref=e614]:
+            - button "Preview" [ref=e615] [cursor=pointer]
+            - button "HTML" [ref=e616] [cursor=pointer]
+          - generic [ref=e617]:
+            - button "" [ref=e618] [cursor=pointer]:
+              - generic [ref=e619]: 
+            - button "" [ref=e620] [cursor=pointer]:
+              - generic [ref=e621]: 
+            - button "" [ref=e622] [cursor=pointer]:
+              - generic [ref=e623]: 
+            - button "" [ref=e625] [cursor=pointer]:
+              - generic [ref=e626]: 
+            - button "" [ref=e627] [cursor=pointer]:
+              - generic [ref=e628]: 
+            - button "" [ref=e629] [cursor=pointer]:
+              - generic [ref=e630]: 
+        - generic [ref=e634]:
+          - heading "Filled Card" [level=3] [ref=e635]
+          - paragraph [ref=e636]: Solid background color.
+        - text: 
+      - separator [ref=e637]
+      - heading "Padding Sizes" [level=2] [ref=e638]
+      - generic [ref=e639]:
+        - generic [ref=e640]:
+          - generic [ref=e641]:
+            - button "Preview" [ref=e642] [cursor=pointer]
+            - button "HTML" [ref=e643] [cursor=pointer]
+          - generic [ref=e644]:
+            - button "" [ref=e645] [cursor=pointer]:
+              - generic [ref=e646]: 
+            - button "" [ref=e647] [cursor=pointer]:
+              - generic [ref=e648]: 
+            - button "" [ref=e649] [cursor=pointer]:
+              - generic [ref=e650]: 
+            - button "" [ref=e652] [cursor=pointer]:
+              - generic [ref=e653]: 
+            - button "" [ref=e654] [cursor=pointer]:
+              - generic [ref=e655]: 
+            - button "" [ref=e656] [cursor=pointer]:
+              - generic [ref=e657]: 
+        - generic [ref=e660]:
+          - generic [ref=e662]:
+            - heading "Compact" [level=4] [ref=e663]
+            - paragraph [ref=e664]: Less padding
+          - generic [ref=e666]:
+            - heading "Default" [level=4] [ref=e667]
+            - paragraph [ref=e668]: Standard padding
+          - generic [ref=e670]:
+            - heading "Spacious" [level=4] [ref=e671]
+            - paragraph [ref=e672]: More padding
+        - text: 
+      - separator [ref=e673]
+      - heading "Card Grid" [level=2] [ref=e674]
+      - paragraph [ref=e675]: Responsive grid layout for multiple cards.
+      - generic [ref=e676]:
+        - generic [ref=e677]:
+          - generic [ref=e678]:
+            - button "Preview" [ref=e679] [cursor=pointer]
+            - button "HTML" [ref=e680] [cursor=pointer]
+          - generic [ref=e681]:
+            - button "" [ref=e682] [cursor=pointer]:
+              - generic [ref=e683]: 
+            - button "" [ref=e684] [cursor=pointer]:
+              - generic [ref=e685]: 
+            - button "" [ref=e686] [cursor=pointer]:
+              - generic [ref=e687]: 
+            - button "" [ref=e689] [cursor=pointer]:
+              - generic [ref=e690]: 
+            - button "" [ref=e691] [cursor=pointer]:
+              - generic [ref=e692]: 
+            - button "" [ref=e693] [cursor=pointer]:
+              - generic [ref=e694]: 
+        - generic [ref=e697]:
+          - generic [ref=e700]:
+            - heading "Card One" [level=3] [ref=e701]
+            - paragraph [ref=e702]: Description text for the first card.
+          - generic [ref=e705]:
+            - heading "Card Two" [level=3] [ref=e706]
+            - paragraph [ref=e707]: Description text for the second card.
+          - generic [ref=e710]:
+            - heading "Card Three" [level=3] [ref=e711]
+            - paragraph [ref=e712]: Description text for the third card.
+        - text: 
+      - separator [ref=e713]
+      - heading "Customization" [level=2] [ref=e714]
+      - paragraph [ref=e715]: "Override card styles using CSS custom properties:"
+      - generic [ref=e716]:
+        - code [ref=e718]: "/* Custom card background */ .Card--custom { --card-bg: oklch(95% 0.02 250); --card-border: oklch(85% 0.05 250); background-color: var(--card-bg); border-color: var(--card-border); } /* Custom shadow depth */ .Card--deep { box-shadow: 0 4px 6px -1px oklch(0% 0 0 / 0.1), 0 10px 15px -3px oklch(0% 0 0 / 0.1); } /* Custom border radius */ .Card--rounded { border-radius: var(--space-6); } /* Custom padding */ .Card--tight { --card-padding: var(--space-3); } .Card--loose { --card-padding: var(--space-8); } /* Accent border */ .Card--accent { border-left: 4px solid var(--accent); }"
+        - button "Copy code" [ref=e719] [cursor=pointer]:
+          - generic [ref=e720]: 
+      - heading "Theme Variants" [level=3] [ref=e721]
+      - generic [ref=e722]:
+        - code [ref=e724]: "/* Success card */ .Card--success { --card-bg: oklch(95% 0.04 150); --card-border: oklch(70% 0.15 150); border-left: 4px solid var(--card-border); } /* Warning card */ .Card--warning { --card-bg: oklch(95% 0.04 85); --card-border: oklch(75% 0.15 85); border-left: 4px solid var(--card-border); } /* Error card */ .Card--error { --card-bg: oklch(95% 0.04 25); --card-border: oklch(65% 0.2 25); border-left: 4px solid var(--card-border); }"
+        - button "Copy code" [ref=e725] [cursor=pointer]:
+          - generic [ref=e726]: 
+      - separator [ref=e727]
+      - heading "API Reference" [level=2] [ref=e728]
+      - heading "Base Classes" [level=3] [ref=e729]
+      - table [ref=e730]:
+        - rowgroup [ref=e731]:
+          - row "Class Description" [ref=e732]:
+            - columnheader "Class" [ref=e733]
+            - columnheader "Description" [ref=e734]
+        - rowgroup [ref=e735]:
+          - row ".Card Base card container (required)" [ref=e736]:
+            - cell ".Card" [ref=e737]:
+              - code [ref=e738]: .Card
+            - cell "Base card container (required)" [ref=e739]
+      - heading "Structure Classes" [level=3] [ref=e740]
+      - table [ref=e741]:
+        - rowgroup [ref=e742]:
+          - row "Class Description" [ref=e743]:
+            - columnheader "Class" [ref=e744]
+            - columnheader "Description" [ref=e745]
+        - rowgroup [ref=e746]:
+          - row ".Card-header Card header section with title and actions" [ref=e747]:
+            - cell ".Card-header" [ref=e748]:
+              - code [ref=e749]: .Card-header
+            - cell "Card header section with title and actions" [ref=e750]
+          - row ".Card-body Main content area with padding" [ref=e751]:
+            - cell ".Card-body" [ref=e752]:
+              - code [ref=e753]: .Card-body
+            - cell "Main content area with padding" [ref=e754]
+          - row ".Card-footer Footer section for actions" [ref=e755]:
+            - cell ".Card-footer" [ref=e756]:
+              - code [ref=e757]: .Card-footer
+            - cell "Footer section for actions" [ref=e758]
+          - row ".Card-image Image container at card top" [ref=e759]:
+            - cell ".Card-image" [ref=e760]:
+              - code [ref=e761]: .Card-image
+            - cell "Image container at card top" [ref=e762]
+          - row ".Card-overlay Text overlay on images" [ref=e763]:
+            - cell ".Card-overlay" [ref=e764]:
+              - code [ref=e765]: .Card-overlay
+            - cell "Text overlay on images" [ref=e766]
+      - heading "Typography Classes" [level=3] [ref=e767]
+      - table [ref=e768]:
+        - rowgroup [ref=e769]:
+          - row "Class Description" [ref=e770]:
+            - columnheader "Class" [ref=e771]
+            - columnheader "Description" [ref=e772]
+        - rowgroup [ref=e773]:
+          - row ".Card-title Card heading text" [ref=e774]:
+            - cell ".Card-title" [ref=e775]:
+              - code [ref=e776]: .Card-title
+            - cell "Card heading text" [ref=e777]
+          - row ".Card-subtitle Secondary heading or date" [ref=e778]:
+            - cell ".Card-subtitle" [ref=e779]:
+              - code [ref=e780]: .Card-subtitle
+            - cell "Secondary heading or date" [ref=e781]
+          - row ".Card-text Body text content" [ref=e782]:
+            - cell ".Card-text" [ref=e783]:
+              - code [ref=e784]: .Card-text
+            - cell "Body text content" [ref=e785]
+          - row ".Card-meta Metadata like timestamps or counts" [ref=e786]:
+            - cell ".Card-meta" [ref=e787]:
+              - code [ref=e788]: .Card-meta
+            - cell "Metadata like timestamps or counts" [ref=e789]
+          - row ".Card-tag Category or status tag" [ref=e790]:
+            - cell ".Card-tag" [ref=e791]:
+              - code [ref=e792]: .Card-tag
+            - cell "Category or status tag" [ref=e793]
+          - row ".Card-category Product/content category label" [ref=e794]:
+            - cell ".Card-category" [ref=e795]:
+              - code [ref=e796]: .Card-category
+            - cell "Product/content category label" [ref=e797]
+      - heading "Variant Classes" [level=3] [ref=e798]
+      - table [ref=e799]:
+        - rowgroup [ref=e800]:
+          - row "Class Description" [ref=e801]:
+            - columnheader "Class" [ref=e802]
+            - columnheader "Description" [ref=e803]
+        - rowgroup [ref=e804]:
+          - row ".Card--outlined Border only, no shadow" [ref=e805]:
+            - cell ".Card--outlined" [ref=e806]:
+              - code [ref=e807]: .Card--outlined
+            - cell "Border only, no shadow" [ref=e808]
+          - row ".Card--flat No border or shadow" [ref=e809]:
+            - cell ".Card--flat" [ref=e810]:
+              - code [ref=e811]: .Card--flat
+            - cell "No border or shadow" [ref=e812]
+          - row ".Card--filled Filled background, no shadow" [ref=e813]:
+            - cell ".Card--filled" [ref=e814]:
+              - code [ref=e815]: .Card--filled
+            - cell "Filled background, no shadow" [ref=e816]
+          - row ".Card--interactive Clickable with hover effects" [ref=e817]:
+            - cell ".Card--interactive" [ref=e818]:
+              - code [ref=e819]: .Card--interactive
+            - cell "Clickable with hover effects" [ref=e820]
+          - row ".Card--horizontal Side-by-side layout" [ref=e821]:
+            - cell ".Card--horizontal" [ref=e822]:
+              - code [ref=e823]: .Card--horizontal
+            - cell "Side-by-side layout" [ref=e824]
+          - row ".Card--overlay Text overlaid on image" [ref=e825]:
+            - cell ".Card--overlay" [ref=e826]:
+              - code [ref=e827]: .Card--overlay
+            - cell "Text overlaid on image" [ref=e828]
+          - row ".Card--pricing Pricing tier styling" [ref=e829]:
+            - cell ".Card--pricing" [ref=e830]:
+              - code [ref=e831]: .Card--pricing
+            - cell "Pricing tier styling" [ref=e832]
+      - heading "Size Classes" [level=3] [ref=e833]
+      - table [ref=e834]:
+        - rowgroup [ref=e835]:
+          - row "Class Description" [ref=e836]:
+            - columnheader "Class" [ref=e837]
+            - columnheader "Description" [ref=e838]
+        - rowgroup [ref=e839]:
+          - row ".Card--compact Reduced padding" [ref=e840]:
+            - cell ".Card--compact" [ref=e841]:
+              - code [ref=e842]: .Card--compact
+            - cell "Reduced padding" [ref=e843]
+          - row ".Card--spacious Increased padding" [ref=e844]:
+            - cell ".Card--spacious" [ref=e845]:
+              - code [ref=e846]: .Card--spacious
+            - cell "Increased padding" [ref=e847]
+      - heading "Stats Classes" [level=3] [ref=e848]
+      - table [ref=e849]:
+        - rowgroup [ref=e850]:
+          - row "Class Description" [ref=e851]:
+            - columnheader "Class" [ref=e852]
+            - columnheader "Description" [ref=e853]
+        - rowgroup [ref=e854]:
+          - row ".Card-stat Large metric number" [ref=e855]:
+            - cell ".Card-stat" [ref=e856]:
+              - code [ref=e857]: .Card-stat
+            - cell "Large metric number" [ref=e858]
+          - row ".Card-stat-label Metric label text" [ref=e859]:
+            - cell ".Card-stat-label" [ref=e860]:
+              - code [ref=e861]: .Card-stat-label
+            - cell "Metric label text" [ref=e862]
+          - row ".Card-stat-change Change indicator" [ref=e863]:
+            - cell ".Card-stat-change" [ref=e864]:
+              - code [ref=e865]: .Card-stat-change
+            - cell "Change indicator" [ref=e866]
+          - row ".Card-stat-change--positive Positive change (green)" [ref=e867]:
+            - cell ".Card-stat-change--positive" [ref=e868]:
+              - code [ref=e869]: .Card-stat-change--positive
+            - cell "Positive change (green)" [ref=e870]
+          - row ".Card-stat-change--negative Negative change (red)" [ref=e871]:
+            - cell ".Card-stat-change--negative" [ref=e872]:
+              - code [ref=e873]: .Card-stat-change--negative
+            - cell "Negative change (red)" [ref=e874]
+      - heading "Pricing Classes" [level=3] [ref=e875]
+      - table [ref=e876]:
+        - rowgroup [ref=e877]:
+          - row "Class Description" [ref=e878]:
+            - columnheader "Class" [ref=e879]
+            - columnheader "Description" [ref=e880]
+        - rowgroup [ref=e881]:
+          - row ".Card-price Price container" [ref=e882]:
+            - cell ".Card-price" [ref=e883]:
+              - code [ref=e884]: .Card-price
+            - cell "Price container" [ref=e885]
+          - row ".Card-price-amount Large price number" [ref=e886]:
+            - cell ".Card-price-amount" [ref=e887]:
+              - code [ref=e888]: .Card-price-amount
+            - cell "Large price number" [ref=e889]
+          - row ".Card-price-period Billing period text" [ref=e890]:
+            - cell ".Card-price-period" [ref=e891]:
+              - code [ref=e892]: .Card-price-period
+            - cell "Billing period text" [ref=e893]
+          - row ".Card-features Feature list container" [ref=e894]:
+            - cell ".Card-features" [ref=e895]:
+              - code [ref=e896]: .Card-features
+            - cell "Feature list container" [ref=e897]
+          - row ".Card-feature Individual feature item" [ref=e898]:
+            - cell ".Card-feature" [ref=e899]:
+              - code [ref=e900]: .Card-feature
+            - cell "Individual feature item" [ref=e901]
+          - row ".Card-feature--disabled Unavailable feature (grayed)" [ref=e902]:
+            - cell ".Card-feature--disabled" [ref=e903]:
+              - code [ref=e904]: .Card-feature--disabled
+            - cell "Unavailable feature (grayed)" [ref=e905]
+      - heading "Product Classes" [level=3] [ref=e906]
+      - table [ref=e907]:
+        - rowgroup [ref=e908]:
+          - row "Class Description" [ref=e909]:
+            - columnheader "Class" [ref=e910]
+            - columnheader "Description" [ref=e911]
+        - rowgroup [ref=e912]:
+          - row ".Card-wishlist Wishlist heart button" [ref=e913]:
+            - cell ".Card-wishlist" [ref=e914]:
+              - code [ref=e915]: .Card-wishlist
+            - cell "Wishlist heart button" [ref=e916]
+          - row ".Card-rating Star rating container" [ref=e917]:
+            - cell ".Card-rating" [ref=e918]:
+              - code [ref=e919]: .Card-rating
+            - cell "Star rating container" [ref=e920]
+          - row ".Card-rating-count Review count text" [ref=e921]:
+            - cell ".Card-rating-count" [ref=e922]:
+              - code [ref=e923]: .Card-rating-count
+            - cell "Review count text" [ref=e924]
+          - row ".Card-price-current Current sale price" [ref=e925]:
+            - cell ".Card-price-current" [ref=e926]:
+              - code [ref=e927]: .Card-price-current
+            - cell "Current sale price" [ref=e928]
+          - row ".Card-price-original Original strikethrough price" [ref=e929]:
+            - cell ".Card-price-original" [ref=e930]:
+              - code [ref=e931]: .Card-price-original
+            - cell "Original strikethrough price" [ref=e932]
+      - heading "Notification Classes" [level=3] [ref=e933]
+      - table [ref=e934]:
+        - rowgroup [ref=e935]:
+          - row "Class Description" [ref=e936]:
+            - columnheader "Class" [ref=e937]
+            - columnheader "Description" [ref=e938]
+        - rowgroup [ref=e939]:
+          - row ".Card--notification Notification card base" [ref=e940]:
+            - cell ".Card--notification" [ref=e941]:
+              - code [ref=e942]: .Card--notification
+            - cell "Notification card base" [ref=e943]
+          - row ".Card--notification-info Info notification (blue)" [ref=e944]:
+            - cell ".Card--notification-info" [ref=e945]:
+              - code [ref=e946]: .Card--notification-info
+            - cell "Info notification (blue)" [ref=e947]
+          - row ".Card--notification-success Success notification (green)" [ref=e948]:
+            - cell ".Card--notification-success" [ref=e949]:
+              - code [ref=e950]: .Card--notification-success
+            - cell "Success notification (green)" [ref=e951]
+          - row ".Card--notification-warning Warning notification (yellow)" [ref=e952]:
+            - cell ".Card--notification-warning" [ref=e953]:
+              - code [ref=e954]: .Card--notification-warning
+            - cell "Warning notification (yellow)" [ref=e955]
+          - row ".Card--notification-error Error notification (red)" [ref=e956]:
+            - cell ".Card--notification-error" [ref=e957]:
+              - code [ref=e958]: .Card--notification-error
+            - cell "Error notification (red)" [ref=e959]
+      - heading "List Classes" [level=3] [ref=e960]
+      - table [ref=e961]:
+        - rowgroup [ref=e962]:
+          - row "Class Description" [ref=e963]:
+            - columnheader "Class" [ref=e964]
+            - columnheader "Description" [ref=e965]
+        - rowgroup [ref=e966]:
+          - row ".Card-list List container inside card" [ref=e967]:
+            - cell ".Card-list" [ref=e968]:
+              - code [ref=e969]: .Card-list
+            - cell "List container inside card" [ref=e970]
+          - row ".Card-list-item Individual list item" [ref=e971]:
+            - cell ".Card-list-item" [ref=e972]:
+              - code [ref=e973]: .Card-list-item
+            - cell "Individual list item" [ref=e974]
+          - row ".Card-list-icon Icon container for list item" [ref=e975]:
+            - cell ".Card-list-icon" [ref=e976]:
+              - code [ref=e977]: .Card-list-icon
+            - cell "Icon container for list item" [ref=e978]
+          - row ".Card-list-content Text content wrapper" [ref=e979]:
+            - cell ".Card-list-content" [ref=e980]:
+              - code [ref=e981]: .Card-list-content
+            - cell "Text content wrapper" [ref=e982]
+          - row ".Card-list-title List item title" [ref=e983]:
+            - cell ".Card-list-title" [ref=e984]:
+              - code [ref=e985]: .Card-list-title
+            - cell "List item title" [ref=e986]
+          - row ".Card-list-meta List item metadata" [ref=e987]:
+            - cell ".Card-list-meta" [ref=e988]:
+              - code [ref=e989]: .Card-list-meta
+            - cell "List item metadata" [ref=e990]
+      - heading "Layout Classes" [level=3] [ref=e991]
+      - table [ref=e992]:
+        - rowgroup [ref=e993]:
+          - row "Class Description" [ref=e994]:
+            - columnheader "Class" [ref=e995]
+            - columnheader "Description" [ref=e996]
+        - rowgroup [ref=e997]:
+          - row ".CardGrid Responsive card grid container" [ref=e998]:
+            - cell ".CardGrid" [ref=e999]:
+              - code [ref=e1000]: .CardGrid
+            - cell "Responsive card grid container" [ref=e1001]
+      - separator [ref=e1002]
+      - heading "Accessibility" [level=2] [ref=e1003]
+      - heading "Semantic Structure" [level=3] [ref=e1004]
+      - generic [ref=e1005]:
+        - code [ref=e1007]:
+          - text: <!-- Use article for standalone content -->
+          - generic [ref=e1008]:
+            - generic [ref=e1009]: <article
+            - text: class
+            - generic [ref=e1010]: ="Card"
+            - text: ">"
+          - generic [ref=e1011]:
+            - generic [ref=e1012]: <div
+            - text: class
+            - generic [ref=e1013]: ="Card-body"
+            - text: ">"
+          - generic [ref=e1014]:
+            - generic [ref=e1015]: <h3
+            - text: class
+            - generic [ref=e1016]: ="Card-title"
+            - text: ">"
+          - text: Article Title
+          - generic [ref=e1017]:
+            - generic [ref=e1018]: </h3
+            - text: ">"
+          - generic [ref=e1019]:
+            - generic [ref=e1020]: <p
+            - text: class
+            - generic [ref=e1021]: ="Card-text"
+            - text: ">"
+          - text: Self-contained content.
+          - generic [ref=e1022]:
+            - generic [ref=e1023]: </p
+            - text: ">"
+          - generic [ref=e1024]:
+            - generic [ref=e1025]: </div
+            - text: ">"
+          - generic [ref=e1026]:
+            - generic [ref=e1027]: </article
+            - text: ">"
+          - text: <!-- Use heading hierarchy -->
+          - generic [ref=e1028]:
+            - generic [ref=e1029]: <div
+            - text: class
+            - generic [ref=e1030]: ="Card"
+            - text: ">"
+          - generic [ref=e1031]:
+            - generic [ref=e1032]: <div
+            - text: class
+            - generic [ref=e1033]: ="Card-header"
+            - text: ">"
+          - generic [ref=e1034]:
+            - generic [ref=e1035]: <h2
+            - text: class
+            - generic [ref=e1036]: ="Card-title"
+            - text: ">"
+          - text: Section Title
+          - generic [ref=e1037]:
+            - generic [ref=e1038]: </h2
+            - text: ">"
+          - generic [ref=e1039]:
+            - generic [ref=e1040]: </div
+            - text: ">"
+          - generic [ref=e1041]:
+            - generic [ref=e1042]: <div
+            - text: class
+            - generic [ref=e1043]: ="Card-body"
+            - text: ">"
+          - generic [ref=e1044]:
+            - generic [ref=e1045]: <h3
+            - text: ">"
+          - text: Subsection
+          - generic [ref=e1046]:
+            - generic [ref=e1047]: </h3
+            - text: ">"
+          - generic [ref=e1048]:
+            - generic [ref=e1049]: <p
+            - text: class
+            - generic [ref=e1050]: ="Card-text"
+            - text: ">"
+          - text: Content under subsection.
+          - generic [ref=e1051]:
+            - generic [ref=e1052]: </p
+            - text: ">"
+          - generic [ref=e1053]:
+            - generic [ref=e1054]: </div
+            - text: ">"
+          - generic [ref=e1055]:
+            - generic [ref=e1056]: </div
+            - text: ">"
+        - button "Copy code" [ref=e1057] [cursor=pointer]:
+          - generic [ref=e1058]: 
+      - heading "Interactive Cards" [level=3] [ref=e1059]
+      - generic [ref=e1060]:
+        - code [ref=e1062]:
+          - text: <!-- Clickable card as link -->
+          - generic [ref=e1063]:
+            - generic [ref=e1064]: <a
+            - text: href
+            - generic [ref=e1065]: ="/project"
+            - text: class
+            - generic [ref=e1066]: ="Card Card--interactive"
+            - text: ">"
+          - generic [ref=e1067]:
+            - generic [ref=e1068]: <div
+            - text: class
+            - generic [ref=e1069]: ="Card-body"
+            - text: ">"
+          - generic [ref=e1070]:
+            - generic [ref=e1071]: <h3
+            - text: class
+            - generic [ref=e1072]: ="Card-title"
+            - text: ">"
+          - text: Project Name
+          - generic [ref=e1073]:
+            - generic [ref=e1074]: </h3
+            - text: ">"
+          - generic [ref=e1075]:
+            - generic [ref=e1076]: <p
+            - text: class
+            - generic [ref=e1077]: ="Card-text"
+            - text: ">"
+          - text: Click to view project details.
+          - generic [ref=e1078]:
+            - generic [ref=e1079]: </p
+            - text: ">"
+          - generic [ref=e1080]:
+            - generic [ref=e1081]: </div
+            - text: ">"
+          - generic [ref=e1082]:
+            - generic [ref=e1083]: </a
+            - text: ">"
+          - text: <!-- Card with multiple actions — don't make whole card clickable -->
+          - generic [ref=e1084]:
+            - generic [ref=e1085]: <div
+            - text: class
+            - generic [ref=e1086]: ="Card"
+            - text: ">"
+          - generic [ref=e1087]:
+            - generic [ref=e1088]: <div
+            - text: class
+            - generic [ref=e1089]: ="Card-body"
+            - text: ">"
+          - generic [ref=e1090]:
+            - generic [ref=e1091]: <h3
+            - text: class
+            - generic [ref=e1092]: ="Card-title"
+            - text: ">"
+          - text: Project Name
+          - generic [ref=e1093]:
+            - generic [ref=e1094]: </h3
+            - text: ">"
+          - generic [ref=e1095]:
+            - generic [ref=e1096]: <p
+            - text: class
+            - generic [ref=e1097]: ="Card-text"
+            - text: ">"
+          - text: Project description here.
+          - generic [ref=e1098]:
+            - generic [ref=e1099]: </p
+            - text: ">"
+          - generic [ref=e1100]:
+            - generic [ref=e1101]: <div
+            - text: class
+            - generic [ref=e1102]: ="Card-actions"
+            - text: ">"
+          - generic [ref=e1103]:
+            - generic [ref=e1104]: <a
+            - text: href
+            - generic [ref=e1105]: ="/project/edit"
+            - text: ">"
+          - text: Edit
+          - generic [ref=e1106]:
+            - generic [ref=e1107]: </a
+            - text: ">"
+          - generic [ref=e1108]:
+            - generic [ref=e1109]: <button
+            - text: ">"
+          - text: Delete
+          - generic [ref=e1110]:
+            - generic [ref=e1111]: </button
+            - text: ">"
+          - generic [ref=e1112]:
+            - generic [ref=e1113]: </div
+            - text: ">"
+          - generic [ref=e1114]:
+            - generic [ref=e1115]: </div
+            - text: ">"
+          - generic [ref=e1116]:
+            - generic [ref=e1117]: </div
+            - text: ">"
+        - button "Copy code" [ref=e1118] [cursor=pointer]:
+          - generic [ref=e1119]: 
+      - heading "Images" [level=3] [ref=e1120]
+      - generic [ref=e1121]:
+        - code [ref=e1123]:
+          - text: <!-- Decorative image -->
+          - generic [ref=e1124]:
+            - generic [ref=e1125]: <div
+            - text: class
+            - generic [ref=e1126]: ="Card"
+            - text: ">"
+          - generic [ref=e1127]:
+            - generic [ref=e1128]: <div
+            - text: class
+            - generic [ref=e1129]: ="Card-image"
+            - text: role
+            - generic [ref=e1130]: ="presentation"
+            - text: aria-hidden
+            - generic [ref=e1131]: ="true"
+            - generic [ref=e1132]:
+              - text: style
+              - generic [ref=e1133]:
+                - text: ="
+                - generic [ref=e1134]:
+                  - text: "background-image:"
+                  - generic [ref=e1135]: url('pattern.jpg')
+                  - text: ;
+                - text: "\""
+            - text: ">"
+          - generic [ref=e1136]:
+            - generic [ref=e1137]: </div
+            - text: ">"
+          - generic [ref=e1138]:
+            - generic [ref=e1139]: <div
+            - text: class
+            - generic [ref=e1140]: ="Card-body"
+            - text: ">"
+          - generic [ref=e1141]:
+            - generic [ref=e1142]: <h3
+            - text: class
+            - generic [ref=e1143]: ="Card-title"
+            - text: ">"
+          - text: Title
+          - generic [ref=e1144]:
+            - generic [ref=e1145]: </h3
+            - text: ">"
+          - generic [ref=e1146]:
+            - generic [ref=e1147]: </div
+            - text: ">"
+          - generic [ref=e1148]:
+            - generic [ref=e1149]: </div
+            - text: ">"
+          - text: <!-- Meaningful image -->
+          - generic [ref=e1150]:
+            - generic [ref=e1151]: <div
+            - text: class
+            - generic [ref=e1152]: ="Card"
+            - text: ">"
+          - generic [ref=e1153]:
+            - generic [ref=e1154]: <img
+            - text: class
+            - generic [ref=e1155]: ="Card-image"
+            - text: src
+            - generic [ref=e1156]: ="product.jpg"
+            - text: alt
+            - generic [ref=e1157]: ="Blue wireless headphones with cushioned ear cups"
+            - text: ">"
+          - generic [ref=e1158]:
+            - generic [ref=e1159]: <div
+            - text: class
+            - generic [ref=e1160]: ="Card-body"
+            - text: ">"
+          - generic [ref=e1161]:
+            - generic [ref=e1162]: <h3
+            - text: class
+            - generic [ref=e1163]: ="Card-title"
+            - text: ">"
+          - text: Wireless Headphones
+          - generic [ref=e1164]:
+            - generic [ref=e1165]: </h3
+            - text: ">"
+          - generic [ref=e1166]:
+            - generic [ref=e1167]: </div
+            - text: ">"
+          - generic [ref=e1168]:
+            - generic [ref=e1169]: </div
+            - text: ">"
+        - button "Copy code" [ref=e1170] [cursor=pointer]:
+          - generic [ref=e1171]: 
+      - heading "Keyboard Navigation" [level=3] [ref=e1172]
+      - table [ref=e1173]:
+        - rowgroup [ref=e1174]:
+          - row "Key Action" [ref=e1175]:
+            - columnheader "Key" [ref=e1176]
+            - columnheader "Action" [ref=e1177]
+        - rowgroup [ref=e1178]:
+          - row "Tab Move focus to interactive elements" [ref=e1179]:
+            - cell "Tab" [ref=e1180]
+            - cell "Move focus to interactive elements" [ref=e1181]
+          - row "Enter Activate focused link or button" [ref=e1182]:
+            - cell "Enter" [ref=e1183]
+            - cell "Activate focused link or button" [ref=e1184]
+          - row "Space Activate focused button" [ref=e1185]:
+            - cell "Space" [ref=e1186]
+            - cell "Activate focused button" [ref=e1187]
+      - heading "Screen Reader Considerations" [level=3] [ref=e1188]
+      - generic [ref=e1189]:
+        - code [ref=e1191]:
+          - text: <!-- Price with context -->
+          - generic [ref=e1192]:
+            - generic [ref=e1193]: <div
+            - text: class
+            - generic [ref=e1194]: ="Card-price-row"
+            - text: ">"
+          - generic [ref=e1195]:
+            - generic [ref=e1196]: <span
+            - text: class
+            - generic [ref=e1197]: ="Card-price-current"
+            - text: aria-label
+            - generic [ref=e1198]: "=\"Sale price: $79.99\""
+            - text: ">"
+          - text: $79.99
+          - generic [ref=e1199]:
+            - generic [ref=e1200]: </span
+            - text: ">"
+          - generic [ref=e1201]:
+            - generic [ref=e1202]: <span
+            - text: class
+            - generic [ref=e1203]: ="Card-price-original"
+            - text: aria-label
+            - generic [ref=e1204]: "=\"Original price: $99.99\""
+            - text: ">"
+          - generic [ref=e1205]:
+            - generic [ref=e1206]: <s
+            - text: ">"
+          - text: $99.99
+          - generic [ref=e1207]:
+            - generic [ref=e1208]: </s
+            - text: ">"
+          - generic [ref=e1209]:
+            - generic [ref=e1210]: </span
+            - text: ">"
+          - generic [ref=e1211]:
+            - generic [ref=e1212]: </div
+            - text: ">"
+          - text: <!-- Stats with labels -->
+          - generic [ref=e1213]:
+            - generic [ref=e1214]: <div
+            - text: class
+            - generic [ref=e1215]: ="Card-body"
+            - text: ">"
+          - generic [ref=e1216]:
+            - generic [ref=e1217]: <span
+            - text: class
+            - generic [ref=e1218]: ="Card-stat"
+            - text: aria-describedby
+            - generic [ref=e1219]: ="stat-label-users"
+            - text: ">"
+          - text: 2,847
+          - generic [ref=e1220]:
+            - generic [ref=e1221]: </span
+            - text: ">"
+          - generic [ref=e1222]:
+            - generic [ref=e1223]: <span
+            - text: class
+            - generic [ref=e1224]: ="Card-stat-label"
+            - text: id
+            - generic [ref=e1225]: ="stat-label-users"
+            - text: ">"
+          - text: Total Users
+          - generic [ref=e1226]:
+            - generic [ref=e1227]: </span
+            - text: ">"
+          - generic [ref=e1228]:
+            - generic [ref=e1229]: </div
+            - text: ">"
+          - text: <!-- Rating with text alternative -->
+          - generic [ref=e1230]:
+            - generic [ref=e1231]: <div
+            - text: class
+            - generic [ref=e1232]: ="Card-rating"
+            - text: aria-label
+            - generic [ref=e1233]: ="4 out of 5 stars, 128 reviews"
+            - text: ">"
+          - generic [ref=e1234]:
+            - generic [ref=e1235]: <i
+            - text: class
+            - generic [ref=e1236]: ="ph-fill ph-star"
+            - text: aria-hidden
+            - generic [ref=e1237]: ="true"
+            - text: ">"
+          - generic [ref=e1238]:
+            - generic [ref=e1239]: </i
+            - text: ">"
+          - generic [ref=e1240]:
+            - generic [ref=e1241]: <i
+            - text: class
+            - generic [ref=e1242]: ="ph-fill ph-star"
+            - text: aria-hidden
+            - generic [ref=e1243]: ="true"
+            - text: ">"
+          - generic [ref=e1244]:
+            - generic [ref=e1245]: </i
+            - text: ">"
+          - generic [ref=e1246]:
+            - generic [ref=e1247]: <i
+            - text: class
+            - generic [ref=e1248]: ="ph-fill ph-star"
+            - text: aria-hidden
+            - generic [ref=e1249]: ="true"
+            - text: ">"
+          - generic [ref=e1250]:
+            - generic [ref=e1251]: </i
+            - text: ">"
+          - generic [ref=e1252]:
+            - generic [ref=e1253]: <i
+            - text: class
+            - generic [ref=e1254]: ="ph-fill ph-star"
+            - text: aria-hidden
+            - generic [ref=e1255]: ="true"
+            - text: ">"
+          - generic [ref=e1256]:
+            - generic [ref=e1257]: </i
+            - text: ">"
+          - generic [ref=e1258]:
+            - generic [ref=e1259]: <i
+            - text: class
+            - generic [ref=e1260]: ="ph ph-star"
+            - text: aria-hidden
+            - generic [ref=e1261]: ="true"
+            - text: ">"
+          - generic [ref=e1262]:
+            - generic [ref=e1263]: </i
+            - text: ">"
+          - generic [ref=e1264]:
+            - generic [ref=e1265]: <span
+            - text: class
+            - generic [ref=e1266]: ="Card-rating-count"
+            - text: ">"
+          - text: (128)
+          - generic [ref=e1267]:
+            - generic [ref=e1268]: </span
+            - text: ">"
+          - generic [ref=e1269]:
+            - generic [ref=e1270]: </div
+            - text: ">"
+        - button "Copy code" [ref=e1271] [cursor=pointer]:
+          - generic [ref=e1272]: 
+      - separator [ref=e1273]
+      - heading "Best Practices" [level=2] [ref=e1274]
+      - heading "Do" [level=3] [ref=e1275]
+      - list [ref=e1276]:
+        - listitem [ref=e1277]:
+          - text: ✓
+          - strong [ref=e1278]: Use consistent card heights
+          - text: in grids — align content or use CSS Grid
+        - listitem [ref=e1279]:
+          - text: ✓
+          - strong [ref=e1280]: Limit content
+          - text: — Cards should be scannable, not essays
+        - listitem [ref=e1281]:
+          - text: ✓
+          - strong [ref=e1282]: Single primary action
+          - text: — One clear CTA per card
+        - listitem [ref=e1283]:
+          - text: ✓
+          - strong [ref=e1284]: Meaningful images
+          - text: — Images should add value, not just decoration
+        - listitem [ref=e1285]:
+          - text: ✓
+          - strong [ref=e1286]: Clear visual hierarchy
+          - text: — Title → Supporting text → Actions
+        - listitem [ref=e1287]:
+          - text: ✓
+          - strong [ref=e1288]: Group related cards
+          - text: — Use grids with consistent spacing
+      - heading "Don’t" [level=3] [ref=e1289]
+      - list [ref=e1290]:
+        - listitem [ref=e1291]:
+          - text: ✗
+          - strong [ref=e1292]: Nest cards
+          - text: — Cards inside cards creates visual confusion
+        - listitem [ref=e1293]:
+          - text: ✗
+          - strong [ref=e1294]: Too many actions
+          - text: — More than 2-3 actions clutters the card
+        - listitem [ref=e1295]:
+          - text: ✗
+          - strong [ref=e1296]: Walls of text
+          - text: — Keep descriptions to 2-3 lines max
+        - listitem [ref=e1297]:
+          - text: ✗
+          - strong [ref=e1298]: Inconsistent styling
+          - text: — Mix variants sparingly within a view
+        - listitem [ref=e1299]:
+          - text: ✗
+          - strong [ref=e1300]: Click the whole card with multiple CTAs
+          - text: — Accessibility nightmare
+        - listitem [ref=e1301]:
+          - text: ✗
+          - strong [ref=e1302]: Tiny touch targets
+          - text: — Ensure buttons/links are at least 44px
+      - heading "Content Guidelines" [level=3] [ref=e1303]
+      - paragraph [ref=e1304]:
+        - strong [ref=e1305]: "Titles:"
+        - text: Keep to one line when possible. Be specific.
+      - list [ref=e1306]:
+        - listitem [ref=e1307]: ✓ “Q4 Revenue Report”
+        - listitem [ref=e1308]: ✗ “Report”
+      - paragraph [ref=e1309]:
+        - strong [ref=e1310]: "Descriptions:"
+        - text: Front-load important info. Truncate gracefully.
+      - list [ref=e1311]:
+        - listitem [ref=e1312]: ✓ “Revenue increased 12% driven by new enterprise clients.”
+        - listitem [ref=e1313]: ✗ “In this quarter we saw various changes across multiple metrics…”
+      - paragraph [ref=e1314]:
+        - strong [ref=e1315]: "Actions:"
+        - text: Use clear, specific verbs.
+      - list [ref=e1316]:
+        - listitem [ref=e1317]: ✓ “View Report”, “Add to Cart”, “Start Trial”
+        - listitem [ref=e1318]: ✗ “Click Here”, “Submit”, “Go”
+    - paragraph [ref=e1320]: "Carbon v0.3 • Last built: 2/5/2026, 6:19:55 PM"
+```

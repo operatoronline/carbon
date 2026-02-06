@@ -1,25 +1,30 @@
-// Carbon Documentation Shell Logic
+// Carbon Design System v0.3 — Shell Logic
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Carbon initialized');
+    console.log('Carbon v0.3 initialized');
 
-    // Theme Toggle
+    // ═══════════════════════════════════════
+    // THEME TOGGLE
+    // ═══════════════════════════════════════
     const themeBtn = document.getElementById('theme-btn');
     const html = document.documentElement;
     
-    const savedTheme = localStorage.getItem('theme') || 'light';
+    const savedTheme = localStorage.getItem('carbon-theme') || 'light';
     html.setAttribute('data-theme', savedTheme);
     updateThemeIcon(savedTheme);
 
-    themeBtn.addEventListener('click', () => {
-        const currentTheme = html.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        
-        html.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        updateThemeIcon(newTheme);
-    });
+    if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('carbon-theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+    }
 
     function updateThemeIcon(theme) {
+        if (!themeBtn) return;
         const icon = themeBtn.querySelector('i');
         if (theme === 'dark') {
             icon.className = 'ph ph-sun';
@@ -28,61 +33,45 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Mobile Menu Toggle
-    const menuToggle = document.getElementById('menu-toggle');
-    const sidebar = document.getElementById('sidebar');
-
-    if (menuToggle && sidebar) {
-        menuToggle.addEventListener('click', () => {
-            sidebar.classList.toggle('active');
-            const icon = menuToggle.querySelector('i');
-            if (sidebar.classList.contains('active')) {
-                icon.className = 'ph ph-x';
-            } else {
-                icon.className = 'ph ph-list';
-            }
-        });
-
-        // Close sidebar when clicking a nav link (mobile)
-        sidebar.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 1024) {
-                    sidebar.classList.remove('active');
-                    menuToggle.querySelector('i').className = 'ph ph-list';
-                }
-            });
-        });
-
-        // Close sidebar when clicking outside (mobile)
-        document.addEventListener('click', (e) => {
-            if (window.innerWidth <= 1024 && 
-                sidebar.classList.contains('active') &&
-                !sidebar.contains(e.target) && 
-                !menuToggle.contains(e.target)) {
-                sidebar.classList.remove('active');
-                menuToggle.querySelector('i').className = 'ph ph-list';
+    // ═══════════════════════════════════════
+    // FLOATING NAV ACTIVE STATE
+    // ═══════════════════════════════════════
+    const fnav = document.getElementById('fnav');
+    if (fnav) {
+        const currentPath = window.location.pathname;
+        const navLinks = fnav.querySelectorAll('a.fnav-btn[data-section]');
+        
+        // Determine current section from path
+        let currentSection = 'home';
+        if (currentPath.includes('/tokens/')) {
+            currentSection = 'tokens';
+        } else if (currentPath.includes('/components/')) {
+            currentSection = 'components';
+        } else if (currentPath.includes('/patterns/')) {
+            currentSection = 'patterns';
+        }
+        
+        navLinks.forEach(link => {
+            const section = link.getAttribute('data-section');
+            if (section === currentSection) {
+                link.classList.add('active');
             }
         });
     }
 
-    // Modal Close on Overlay Click
-    document.addEventListener('click', (e) => {
-        if (e.target.classList.contains('Modal-overlay')) {
-            e.target.classList.remove('active');
-        }
-    });
-
-    // Search Functionality
+    // ═══════════════════════════════════════
+    // SEARCH FUNCTIONALITY
+    // ═══════════════════════════════════════
     const searchInput = document.getElementById('search-input');
     const searchResults = document.getElementById('search-results');
     const searchContainer = document.getElementById('search-container');
+    const searchToggle = document.getElementById('search-toggle');
     let fuse = null;
     let searchIndex = null;
 
     // Load search index
     async function loadSearchIndex() {
         try {
-            // Find the root path from any REL_ROOT in the page
             const relRoot = document.querySelector('link[href*="styles/docs.css"]')
                 ?.getAttribute('href')
                 ?.replace('styles/docs.css', '') || './';
@@ -105,6 +94,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     loadSearchIndex();
+
+    // Search toggle for mobile
+    if (searchToggle) {
+        searchToggle.addEventListener('click', () => {
+            if (searchInput) {
+                searchInput.focus();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
+    }
 
     if (searchInput && searchResults) {
         searchInput.addEventListener('input', (e) => {
@@ -139,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Close search results when clicking outside
         document.addEventListener('click', (e) => {
-            if (!searchContainer.contains(e.target)) {
+            if (searchContainer && !searchContainer.contains(e.target)) {
                 searchResults.classList.remove('active');
             }
         });
@@ -170,8 +169,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Copy Code Button (only for code blocks NOT in Preview containers)
-    document.querySelectorAll('pre[class*="language-"]:not(.Preview-code pre)').forEach(pre => {
+    // ═══════════════════════════════════════
+    // MODAL HANDLING
+    // ═══════════════════════════════════════
+    document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('Modal-overlay')) {
+            e.target.classList.remove('active');
+        }
+    });
+
+    // ═══════════════════════════════════════
+    // CODE COPY BUTTONS
+    // ═══════════════════════════════════════
+    document.querySelectorAll('pre[class*="language-"]:not(.Preview-pane pre)').forEach(pre => {
+        // Don't double-wrap
+        if (pre.parentElement.classList.contains('code-block-wrapper')) return;
+        
         const wrapper = document.createElement('div');
         wrapper.className = 'code-block-wrapper';
         pre.parentNode.insertBefore(wrapper, pre);
@@ -199,31 +212,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // TOC Active Highlighting
-    const tocLinks = document.querySelectorAll('.toc a');
-    const headings = document.querySelectorAll('article h2[id], article h3[id]');
-
-    if (tocLinks.length && headings.length) {
-        const observerOptions = {
-            rootMargin: '-80px 0px -70% 0px',
-            threshold: 0
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const id = entry.target.getAttribute('id');
-                    tocLinks.forEach(link => {
-                        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
-                    });
-                }
-            });
-        }, observerOptions);
-
-        headings.forEach(heading => observer.observe(heading));
-    }
-
-    // Enhanced Preview Component (v0.2)
+    // ═══════════════════════════════════════
+    // ENHANCED PREVIEW COMPONENT (v0.2+)
+    // ═══════════════════════════════════════
     document.querySelectorAll('.Preview').forEach(preview => {
         // Tab switching
         const tabs = preview.querySelectorAll('.Preview-tab');
@@ -233,11 +224,9 @@ document.addEventListener('DOMContentLoaded', () => {
             tab.addEventListener('click', () => {
                 const target = tab.dataset.tab;
                 
-                // Update tabs
                 tabs.forEach(t => t.classList.remove('active'));
                 tab.classList.add('active');
                 
-                // Update panes
                 panes.forEach(pane => {
                     pane.classList.toggle('active', pane.dataset.pane === target);
                 });
@@ -252,11 +241,9 @@ document.addEventListener('DOMContentLoaded', () => {
             control.addEventListener('click', () => {
                 const bg = control.dataset.bg;
                 
-                // Update controls
                 bgControls.forEach(c => c.classList.remove('active'));
                 control.classList.add('active');
                 
-                // Update canvas background
                 canvas.classList.remove('Preview-canvas--light', 'Preview-canvas--dark', 'Preview-canvas--checkered');
                 if (bg !== 'default') {
                     canvas.classList.add(`Preview-canvas--${bg}`);
@@ -271,11 +258,9 @@ document.addEventListener('DOMContentLoaded', () => {
             control.addEventListener('click', () => {
                 const viewport = control.dataset.viewport;
                 
-                // Update controls
                 viewportControls.forEach(c => c.classList.remove('active'));
                 control.classList.add('active');
                 
-                // Update canvas viewport
                 canvas.classList.remove('Preview-canvas--mobile', 'Preview-canvas--tablet');
                 if (viewport !== 'desktop') {
                     canvas.classList.add(`Preview-canvas--${viewport}`);
@@ -303,5 +288,39 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         });
+    });
+
+    // ═══════════════════════════════════════
+    // SMOOTH SCROLL FOR ANCHOR LINKS
+    // ═══════════════════════════════════════
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href').slice(1);
+            const targetEl = document.getElementById(targetId);
+            if (targetEl) {
+                e.preventDefault();
+                targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                history.pushState(null, null, `#${targetId}`);
+            }
+        });
+    });
+
+    // ═══════════════════════════════════════
+    // KEYBOARD SHORTCUTS
+    // ═══════════════════════════════════════
+    document.addEventListener('keydown', (e) => {
+        // Cmd/Ctrl + K to focus search
+        if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+            e.preventDefault();
+            if (searchInput) {
+                searchInput.focus();
+            }
+        }
+        
+        // Escape to blur search
+        if (e.key === 'Escape' && document.activeElement === searchInput) {
+            searchInput.blur();
+            if (searchResults) searchResults.classList.remove('active');
+        }
     });
 });

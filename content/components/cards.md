@@ -129,7 +129,7 @@ Clickable cards with hover effects.
 <a href="#" class="Card Card--interactive" style="max-width: 320px; text-decoration: none;">
     <div class="Card-body">
         <div style="display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-3);">
-            <div style="width: 40px; height: 40px; border-radius: var(--space-2); background: oklch(60% 0.15 250); display: flex; align-items: center; justify-content: center;">
+            <div style="width: 40px; height: 40px; border-radius: var(--r-m); background: oklch(60% 0.15 250); display: flex; align-items: center; justify-content: center;">
                 <i class="ph ph-folder" style="color: white; font-size: 1.25rem;"></i>
             </div>
             <div>

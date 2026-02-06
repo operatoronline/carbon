@@ -296,20 +296,20 @@ Badges that can be clicked or dismissed.
 ### Table Row Status
 
 <Preview title="Status in Table Row">
-    <div style="display: flex; align-items: center; gap: var(--space-4); padding: var(--space-3); background: var(--bg-secondary); border-radius: var(--space-2);">
+    <div style="display: flex; align-items: center; gap: var(--space-4); padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-m);">
         <span style="flex: 1; font-weight: 500;">Order #12345</span>
         <span class="Badge Badge--success">Delivered</span>
-        <span style="color: var(--text-secondary); font-size: 0.875rem;">Today</span>
+        <span style="color: var(--fg-3); font-size: 0.875rem;">Today</span>
     </div>
-    <div style="display: flex; align-items: center; gap: var(--space-4); padding: var(--space-3); background: var(--bg-secondary); border-radius: var(--space-2); margin-top: var(--space-2);">
+    <div style="display: flex; align-items: center; gap: var(--space-4); padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-m); margin-top: var(--space-2);">
         <span style="flex: 1; font-weight: 500;">Order #12346</span>
         <span class="Badge Badge--warning">In Transit</span>
-        <span style="color: var(--text-secondary); font-size: 0.875rem;">Est. Tomorrow</span>
+        <span style="color: var(--fg-3); font-size: 0.875rem;">Est. Tomorrow</span>
     </div>
-    <div style="display: flex; align-items: center; gap: var(--space-4); padding: var(--space-3); background: var(--bg-secondary); border-radius: var(--space-2); margin-top: var(--space-2);">
+    <div style="display: flex; align-items: center; gap: var(--space-4); padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-m); margin-top: var(--space-2);">
         <span style="flex: 1; font-weight: 500;">Order #12347</span>
         <span class="Badge Badge--error">Cancelled</span>
-        <span style="color: var(--text-secondary); font-size: 0.875rem;">—</span>
+        <span style="color: var(--fg-3); font-size: 0.875rem;">—</span>
     </div>
 </Preview>
 
@@ -324,7 +324,7 @@ Badges that can be clicked or dismissed.
             </div>
             <div style="flex: 1;">
                 <div style="font-weight: 500; font-size: 0.9rem;">Sarah Chen</div>
-                <div style="font-size: 0.75rem; color: var(--text-secondary);">Online</div>
+                <div style="font-size: 0.75rem; color: var(--fg-3);">Online</div>
             </div>
             <span class="Badge Badge--primary Badge--small">Admin</span>
         </div>
@@ -335,18 +335,18 @@ Badges that can be clicked or dismissed.
             </div>
             <div style="flex: 1;">
                 <div style="font-weight: 500; font-size: 0.9rem;">John Smith</div>
-                <div style="font-size: 0.75rem; color: var(--text-secondary);">Away</div>
+                <div style="font-size: 0.75rem; color: var(--fg-3);">Away</div>
             </div>
             <span class="Badge Badge--secondary Badge--small">Editor</span>
         </div>
         <div style="display: flex; align-items: center; gap: var(--space-3);">
             <div style="position: relative;">
                 <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=user3" class="Avatar Avatar--small" alt="Mike">
-                <span class="Badge Badge--dot Badge--avatar" style="background-color: var(--text-secondary);"></span>
+                <span class="Badge Badge--dot Badge--avatar" style="background-color: var(--fg-3);"></span>
             </div>
             <div style="flex: 1;">
                 <div style="font-weight: 500; font-size: 0.9rem;">Mike Johnson</div>
-                <div style="font-size: 0.75rem; color: var(--text-secondary);">Offline</div>
+                <div style="font-size: 0.75rem; color: var(--fg-3);">Offline</div>
             </div>
             <span class="Badge Badge--secondary Badge--small">Viewer</span>
         </div>
@@ -376,7 +376,7 @@ Badges that can be clicked or dismissed.
 ### Notification Header
 
 <Preview title="Notification Header">
-    <div style="display: flex; align-items: center; justify-content: space-between; padding: var(--space-4); background: var(--bg-secondary); border-radius: var(--space-2); max-width: 400px;">
+    <div style="display: flex; align-items: center; justify-content: space-between; padding: var(--space-4); background: var(--bg-s); border-radius: var(--r-m); max-width: 400px;">
         <div style="display: flex; align-items: center; gap: var(--space-3);">
             <h4 style="margin: 0; font-size: 1rem;">Notifications</h4>
             <span class="Badge Badge--error Badge--small">4 new</span>
@@ -483,14 +483,14 @@ Badges require attention to ensure they're accessible:
   align-items: center;
   gap: var(--space-1);
   padding: var(--space-1) var(--space-2);
-  border-radius: var(--space-1);
+  border-radius: var(--r-s);
   font-family: var(--font-sans);
   font-size: 0.75rem;
   font-weight: 500;
   line-height: 1.2;
   white-space: nowrap;
-  background-color: var(--bg-secondary);
-  color: var(--text-primary);
+  background-color: var(--bg-s);
+  color: var(--fg);
   border: 1px solid transparent;
 }
 
@@ -501,9 +501,9 @@ Badges require attention to ensure they're accessible:
 }
 
 .Badge--secondary {
-  background-color: var(--bg-secondary);
-  color: var(--text-secondary);
-  border-color: var(--border-subtle);
+  background-color: var(--bg-s);
+  color: var(--fg-3);
+  border-color: var(--bd);
 }
 
 .Badge--success {
@@ -573,7 +573,7 @@ Badges require attention to ensure they're accessible:
   height: 8px;
   padding: 0;
   border-radius: 50%;
-  background-color: var(--text-secondary);
+  background-color: var(--fg-3);
 }
 
 .Badge--dot.Badge--success {
@@ -589,7 +589,7 @@ Badges require attention to ensure they're accessible:
 }
 
 .Badge--dot.Badge--primary {
-  background-color: var(--accent-primary);
+  background-color: var(--accent);
 }
 
 /* Count */
@@ -616,7 +616,7 @@ Badges require attention to ensure they're accessible:
   position: absolute;
   bottom: 0;
   right: 0;
-  border: 2px solid var(--bg-primary);
+  border: 2px solid var(--bg);
 }
 
 /* Icon */

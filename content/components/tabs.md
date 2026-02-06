@@ -52,7 +52,7 @@ The base `.Tabs` class provides the container. The `.Tabs-list` holds tab button
 <Preview>
 <div style="display: flex; flex-direction: column; gap: var(--space-8);">
     <div>
-        <div style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: var(--space-2);">Default</div>
+        <div style="font-size: 0.75rem; color: var(--fg-3); margin-bottom: var(--space-2);">Default</div>
         <div class="Tabs">
             <div class="Tabs-list" role="tablist">
                 <button class="Tabs-tab active" role="tab" aria-selected="true">Tab</button>
@@ -62,7 +62,7 @@ The base `.Tabs` class provides the container. The `.Tabs-list` holds tab button
         </div>
     </div>
     <div>
-        <div style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: var(--space-2);">Contained</div>
+        <div style="font-size: 0.75rem; color: var(--fg-3); margin-bottom: var(--space-2);">Contained</div>
         <div class="Tabs Tabs--contained">
             <div class="Tabs-list" role="tablist">
                 <button class="Tabs-tab active" role="tab" aria-selected="true">Tab</button>
@@ -72,7 +72,7 @@ The base `.Tabs` class provides the container. The `.Tabs-list` holds tab button
         </div>
     </div>
     <div>
-        <div style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: var(--space-2);">Pills</div>
+        <div style="font-size: 0.75rem; color: var(--fg-3); margin-bottom: var(--space-2);">Pills</div>
         <div class="Tabs Tabs--pills">
             <div class="Tabs-list" role="tablist">
                 <button class="Tabs-tab active" role="tab" aria-selected="true">Tab</button>
@@ -229,7 +229,7 @@ Tabs come in three sizes to fit different contexts.
 <Preview>
 <div style="display: flex; flex-direction: column; gap: var(--space-6);">
     <div>
-        <div style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: var(--space-2);">Small</div>
+        <div style="font-size: 0.75rem; color: var(--fg-3); margin-bottom: var(--space-2);">Small</div>
         <div class="Tabs Tabs--small">
             <div class="Tabs-list" role="tablist">
                 <button class="Tabs-tab active" role="tab" aria-selected="true">Details</button>
@@ -239,7 +239,7 @@ Tabs come in three sizes to fit different contexts.
         </div>
     </div>
     <div>
-        <div style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: var(--space-2);">Default</div>
+        <div style="font-size: 0.75rem; color: var(--fg-3); margin-bottom: var(--space-2);">Default</div>
         <div class="Tabs">
             <div class="Tabs-list" role="tablist">
                 <button class="Tabs-tab active" role="tab" aria-selected="true">Details</button>
@@ -249,7 +249,7 @@ Tabs come in three sizes to fit different contexts.
         </div>
     </div>
     <div>
-        <div style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: var(--space-2);">Large</div>
+        <div style="font-size: 0.75rem; color: var(--fg-3); margin-bottom: var(--space-2);">Large</div>
         <div class="Tabs Tabs--large">
             <div class="Tabs-list" role="tablist">
                 <button class="Tabs-tab active" role="tab" aria-selected="true">Details</button>
@@ -307,7 +307,7 @@ Tabs can stretch to fill their container width. Useful for mobile layouts.
         <div class="Tabs-panel active" role="tabpanel">
             <div style="padding: var(--space-4) 0;">
                 <h3 style="margin: 0 0 var(--space-3);">Account Settings</h3>
-                <p style="color: var(--text-secondary); margin: 0;">Manage your account information and preferences.</p>
+                <p style="color: var(--fg-3); margin: 0;">Manage your account information and preferences.</p>
             </div>
         </div>
     </div>
@@ -323,7 +323,7 @@ Tabs can stretch to fill their container width. Useful for mobile layouts.
         <button class="Tabs-tab" role="tab" aria-selected="false">styles.css</button>
         <button class="Tabs-tab" role="tab" aria-selected="false">app.js</button>
     </div>
-    <div class="Tabs-panel active" role="tabpanel" style="background: var(--bg-secondary); padding: var(--space-4);">
+    <div class="Tabs-panel active" role="tabpanel" style="background: var(--bg-s); padding: var(--space-4);">
         <pre style="margin: 0; font-size: 0.875rem;"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
   &lt;head&gt;
@@ -354,7 +354,7 @@ Tabs can stretch to fill their container width. Useful for mobile layouts.
 
 <Preview>
 <div class="Tabs Tabs--vertical" style="display: flex; gap: var(--space-4);">
-    <div class="Tabs-list" role="tablist" style="flex-direction: column; border-bottom: none; border-right: 1px solid var(--border-subtle); padding-right: var(--space-4);">
+    <div class="Tabs-list" role="tablist" style="flex-direction: column; border-bottom: none; border-right: 1px solid var(--bd); padding-right: var(--space-4);">
         <button class="Tabs-tab active" role="tab" aria-selected="true">General</button>
         <button class="Tabs-tab" role="tab" aria-selected="false">Security</button>
         <button class="Tabs-tab" role="tab" aria-selected="false">Billing</button>
@@ -362,7 +362,7 @@ Tabs can stretch to fill their container width. Useful for mobile layouts.
     </div>
     <div class="Tabs-panel active" role="tabpanel" style="flex: 1;">
         <h4 style="margin: 0 0 var(--space-2);">General Settings</h4>
-        <p style="margin: 0; color: var(--text-secondary);">Configure your general preferences and options.</p>
+        <p style="margin: 0; color: var(--fg-3);">Configure your general preferences and options.</p>
     </div>
 </div>
 </Preview>
@@ -471,11 +471,11 @@ Override tab styles using CSS custom properties:
   border: 1px solid var(--border-default);
   border-radius: var(--radius-md);
   padding: var(--space-1);
-  background: var(--bg-secondary);
+  background: var(--bg-s);
 }
 
 .Tabs--bordered .Tabs-tab.active {
-  background: var(--bg-primary);
+  background: var(--bg);
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-sm);
 }

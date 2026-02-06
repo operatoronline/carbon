@@ -1,0 +1,888 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - navigation "Main navigation" [ref=e3]:
+    - link "Home" [ref=e4] [cursor=pointer]:
+      - /url: ../index.html
+      - generic [ref=e5]: 
+      - generic [ref=e6]: Home
+    - link "Tokens" [ref=e7] [cursor=pointer]:
+      - /url: ../tokens/colors.html
+      - generic [ref=e8]: 
+      - generic [ref=e9]: Tokens
+    - link "Components" [ref=e10] [cursor=pointer]:
+      - /url: ../components/buttons.html
+      - generic [ref=e11]: 
+      - generic [ref=e12]: Components
+    - link "Patterns" [ref=e13] [cursor=pointer]:
+      - /url: ../patterns/layouts.html
+      - generic [ref=e14]: 
+      - generic [ref=e15]: Patterns
+    - button "Search" [ref=e17] [cursor=pointer]:
+      - generic [ref=e18]: 
+    - button "Toggle theme" [ref=e19] [cursor=pointer]:
+      - generic [ref=e20]: 
+  - banner [ref=e21]:
+    - link " Carbon" [ref=e23] [cursor=pointer]:
+      - /url: ../index.html
+      - generic [ref=e24]: 
+      - generic [ref=e25]: Carbon
+    - generic [ref=e27]:
+      - generic [ref=e28]: 
+      - textbox "Search" [ref=e29]:
+        - /placeholder: Search components...
+  - main [ref=e31]:
+    - generic [ref=e32]:
+      - navigation "Breadcrumb" [ref=e33]:
+        - link "Carbon" [ref=e34] [cursor=pointer]:
+          - /url: ../index.html
+        - generic [ref=e35]: /
+        - generic [ref=e36]: Components
+        - generic [ref=e37]: /
+        - generic [ref=e38]: Modals
+      - heading "Modals" [level=1] [ref=e39]:
+        - emphasis [ref=e40]: Modals
+    - article [ref=e41]:
+      - heading "Modals" [level=1] [ref=e42]
+      - paragraph [ref=e43]: Modals are overlay dialogs that require user interaction before returning to the main content. They focus attention on critical information, decisions, or forms.
+      - separator [ref=e44]
+      - heading "Installation" [level=2] [ref=e45]
+      - paragraph [ref=e46]:
+        - text: Copy the modal CSS from
+        - code [ref=e47]: styles/docs.css
+        - text: "or include the Carbon stylesheet:"
+      - generic [ref=e48]:
+        - code [ref=e50]:
+          - generic [ref=e51]:
+            - generic [ref=e52]: <link
+            - text: rel
+            - generic [ref=e53]: ="stylesheet"
+            - text: href
+            - generic [ref=e54]: ="carbon.min.css"
+            - text: ">"
+        - button "Copy code" [ref=e55] [cursor=pointer]:
+          - generic [ref=e56]: 
+      - paragraph [ref=e57]: "Basic modal structure:"
+      - generic [ref=e58]:
+        - code [ref=e60]:
+          - generic [ref=e61]:
+            - generic [ref=e62]: <div
+            - text: class
+            - generic [ref=e63]: ="Modal-overlay"
+            - text: ">"
+          - generic [ref=e64]:
+            - generic [ref=e65]: <div
+            - text: class
+            - generic [ref=e66]: ="Modal"
+            - text: ">"
+          - generic [ref=e67]:
+            - generic [ref=e68]: <header
+            - text: class
+            - generic [ref=e69]: ="Modal-header"
+            - text: ">"
+          - generic [ref=e70]:
+            - generic [ref=e71]: <h2
+            - text: class
+            - generic [ref=e72]: ="Modal-title"
+            - text: ">"
+          - text: Modal Title
+          - generic [ref=e73]:
+            - generic [ref=e74]: </h2
+            - text: ">"
+          - generic [ref=e75]:
+            - generic [ref=e76]: <button
+            - text: class
+            - generic [ref=e77]: ="Button Button--icon Button--ghost"
+            - text: aria-label
+            - generic [ref=e78]: ="Close"
+            - text: ">"
+          - generic [ref=e79]:
+            - generic [ref=e80]: <i
+            - text: class
+            - generic [ref=e81]: ="ph ph-x"
+            - text: ">"
+          - generic [ref=e82]:
+            - generic [ref=e83]: </i
+            - text: ">"
+          - generic [ref=e84]:
+            - generic [ref=e85]: </button
+            - text: ">"
+          - generic [ref=e86]:
+            - generic [ref=e87]: </header
+            - text: ">"
+          - generic [ref=e88]:
+            - generic [ref=e89]: <div
+            - text: class
+            - generic [ref=e90]: ="Modal-body"
+            - text: ">"
+          - generic [ref=e91]:
+            - generic [ref=e92]: <p
+            - text: ">"
+          - text: Modal content goes here.
+          - generic [ref=e93]:
+            - generic [ref=e94]: </p
+            - text: ">"
+          - generic [ref=e95]:
+            - generic [ref=e96]: </div
+            - text: ">"
+          - generic [ref=e97]:
+            - generic [ref=e98]: <footer
+            - text: class
+            - generic [ref=e99]: ="Modal-footer"
+            - text: ">"
+          - generic [ref=e100]:
+            - generic [ref=e101]: <button
+            - text: class
+            - generic [ref=e102]: ="Button Button--tertiary"
+            - text: ">"
+          - text: Cancel
+          - generic [ref=e103]:
+            - generic [ref=e104]: </button
+            - text: ">"
+          - generic [ref=e105]:
+            - generic [ref=e106]: <button
+            - text: class
+            - generic [ref=e107]: ="Button Button--primary"
+            - text: ">"
+          - text: Confirm
+          - generic [ref=e108]:
+            - generic [ref=e109]: </button
+            - text: ">"
+          - generic [ref=e110]:
+            - generic [ref=e111]: </footer
+            - text: ">"
+          - generic [ref=e112]:
+            - generic [ref=e113]: </div
+            - text: ">"
+          - generic [ref=e114]:
+            - generic [ref=e115]: </div
+            - text: ">"
+        - button "Copy code" [ref=e116] [cursor=pointer]:
+          - generic [ref=e117]: 
+      - separator [ref=e118]
+      - heading "Usage" [level=2] [ref=e119]
+      - paragraph [ref=e120]:
+        - text: "Modals use a two-part structure:"
+        - code [ref=e121]: .Modal-overlay
+        - text: for the backdrop and
+        - code [ref=e122]: .Modal
+        - text: for the dialog itself. Add
+        - code [ref=e123]: .active
+        - text: or
+        - code [ref=e124]: .Modal-overlay--active
+        - text: to show the modal.
+      - generic [ref=e125]:
+        - generic [ref=e126]:
+          - generic [ref=e127]:
+            - button "Preview" [ref=e128] [cursor=pointer]
+            - button "HTML" [ref=e129] [cursor=pointer]
+          - generic [ref=e130]:
+            - button "" [ref=e131] [cursor=pointer]:
+              - generic [ref=e132]: 
+            - button "" [ref=e133] [cursor=pointer]:
+              - generic [ref=e134]: 
+            - button "" [ref=e135] [cursor=pointer]:
+              - generic [ref=e136]: 
+            - button "" [ref=e138] [cursor=pointer]:
+              - generic [ref=e139]: 
+            - button "" [ref=e140] [cursor=pointer]:
+              - generic [ref=e141]: 
+            - button "" [ref=e142] [cursor=pointer]:
+              - generic [ref=e143]: 
+        - generic [ref=e147]:
+          - generic [ref=e148]:
+            - heading "Example Modal" [level=2] [ref=e149]
+            - button "Close" [ref=e150] [cursor=pointer]:
+              - generic [ref=e151]: 
+          - paragraph [ref=e153]: This is an example modal dialog.
+          - generic [ref=e154]:
+            - button "Cancel" [ref=e155] [cursor=pointer]
+            - button "Confirm" [ref=e156] [cursor=pointer]
+        - text: 
+      - separator [ref=e157]
+      - heading "Examples" [level=2] [ref=e158]
+      - heading "Basic" [level=3] [ref=e159]
+      - paragraph [ref=e160]: A simple modal with header, body, and footer actions.
+      - generic [ref=e161]:
+        - generic [ref=e162]:
+          - generic [ref=e163]:
+            - button "Preview" [ref=e164] [cursor=pointer]
+            - button "HTML" [ref=e165] [cursor=pointer]
+          - generic [ref=e166]:
+            - button "" [ref=e167] [cursor=pointer]:
+              - generic [ref=e168]: 
+            - button "" [ref=e169] [cursor=pointer]:
+              - generic [ref=e170]: 
+            - button "" [ref=e171] [cursor=pointer]:
+              - generic [ref=e172]: 
+            - button "" [ref=e174] [cursor=pointer]:
+              - generic [ref=e175]: 
+            - button "" [ref=e176] [cursor=pointer]:
+              - generic [ref=e177]: 
+            - button "" [ref=e178] [cursor=pointer]:
+              - generic [ref=e179]: 
+        - generic [ref=e183]:
+          - generic [ref=e184]:
+            - heading "Save Changes?" [level=2] [ref=e185]
+            - button "Close" [ref=e186] [cursor=pointer]:
+              - generic [ref=e187]: 
+          - paragraph [ref=e189]: You have unsaved changes. Would you like to save them before leaving?
+          - generic [ref=e190]:
+            - button "Discard" [ref=e191] [cursor=pointer]
+            - button "Save" [ref=e192] [cursor=pointer]
+        - text: 
+      - heading "Confirmation" [level=3] [ref=e193]
+      - paragraph [ref=e194]: Use danger buttons for destructive actions. Clear messaging helps users understand consequences.
+      - generic [ref=e195]:
+        - generic [ref=e196]:
+          - generic [ref=e197]:
+            - button "Preview" [ref=e198] [cursor=pointer]
+            - button "HTML" [ref=e199] [cursor=pointer]
+          - generic [ref=e200]:
+            - button "" [ref=e201] [cursor=pointer]:
+              - generic [ref=e202]: 
+            - button "" [ref=e203] [cursor=pointer]:
+              - generic [ref=e204]: 
+            - button "" [ref=e205] [cursor=pointer]:
+              - generic [ref=e206]: 
+            - button "" [ref=e208] [cursor=pointer]:
+              - generic [ref=e209]: 
+            - button "" [ref=e210] [cursor=pointer]:
+              - generic [ref=e211]: 
+            - button "" [ref=e212] [cursor=pointer]:
+              - generic [ref=e213]: 
+        - generic [ref=e217]:
+          - generic [ref=e218]:
+            - heading "Delete Project?" [level=2] [ref=e219]
+            - button "Close" [ref=e220] [cursor=pointer]:
+              - generic [ref=e221]: 
+          - paragraph [ref=e223]:
+            - text: This will permanently delete
+            - strong [ref=e224]: "\"My Project\""
+            - text: and all associated files. This action cannot be undone.
+          - generic [ref=e225]:
+            - button "Cancel" [ref=e226] [cursor=pointer]
+            - button "Delete Project" [ref=e227] [cursor=pointer]
+        - text: 
+      - heading "Form Modal" [level=3] [ref=e228]
+      - paragraph [ref=e229]: Modals work great for focused form inputs. Keep forms short — complex flows belong on dedicated pages.
+      - generic [ref=e230]:
+        - generic [ref=e231]:
+          - generic [ref=e232]:
+            - button "Preview" [ref=e233] [cursor=pointer]
+            - button "HTML" [ref=e234] [cursor=pointer]
+          - generic [ref=e235]:
+            - button "" [ref=e236] [cursor=pointer]:
+              - generic [ref=e237]: 
+            - button "" [ref=e238] [cursor=pointer]:
+              - generic [ref=e239]: 
+            - button "" [ref=e240] [cursor=pointer]:
+              - generic [ref=e241]: 
+            - button "" [ref=e243] [cursor=pointer]:
+              - generic [ref=e244]: 
+            - button "" [ref=e245] [cursor=pointer]:
+              - generic [ref=e246]: 
+            - button "" [ref=e247] [cursor=pointer]:
+              - generic [ref=e248]: 
+        - generic [ref=e252]:
+          - generic [ref=e253]:
+            - heading "Create New Workspace" [level=2] [ref=e254]
+            - button "Close" [ref=e255] [cursor=pointer]:
+              - generic [ref=e256]: 
+          - generic [ref=e257]:
+            - generic [ref=e258]:
+              - generic [ref=e259]: Workspace Name
+              - textbox "My Workspace" [ref=e260]
+            - generic [ref=e261]:
+              - generic [ref=e262]: Description
+              - textbox "Optional description..." [ref=e263]
+          - generic [ref=e264]:
+            - button "Cancel" [ref=e265] [cursor=pointer]
+            - button "Create Workspace" [ref=e266] [cursor=pointer]
+        - text: 
+      - heading "Fullscreen" [level=3] [ref=e267]
+      - paragraph [ref=e268]: Fullscreen modals take over the entire viewport. Use for immersive experiences or complex multi-step flows.
+      - generic [ref=e269]:
+        - generic [ref=e270]:
+          - generic [ref=e271]:
+            - button "Preview" [ref=e272] [cursor=pointer]
+            - button "HTML" [ref=e273] [cursor=pointer]
+          - generic [ref=e274]:
+            - button "" [ref=e275] [cursor=pointer]:
+              - generic [ref=e276]: 
+            - button "" [ref=e277] [cursor=pointer]:
+              - generic [ref=e278]: 
+            - button "" [ref=e279] [cursor=pointer]:
+              - generic [ref=e280]: 
+            - button "" [ref=e282] [cursor=pointer]:
+              - generic [ref=e283]: 
+            - button "" [ref=e284] [cursor=pointer]:
+              - generic [ref=e285]: 
+            - button "" [ref=e286] [cursor=pointer]:
+              - generic [ref=e287]: 
+        - generic [ref=e291]:
+          - generic [ref=e292]:
+            - heading "Document Editor" [level=2] [ref=e293]
+            - button "Close" [ref=e294] [cursor=pointer]:
+              - generic [ref=e295]: 
+          - paragraph [ref=e297]: Fullscreen content area
+          - generic [ref=e298]:
+            - button "Cancel" [ref=e299] [cursor=pointer]
+            - button "Save Document" [ref=e300] [cursor=pointer]
+        - text: 
+      - heading "Slideout / Drawer" [level=3] [ref=e301]
+      - paragraph [ref=e302]: Slide-in panels from the side work well for settings, filters, or detailed information.
+      - generic [ref=e303]:
+        - generic [ref=e304]:
+          - generic [ref=e305]:
+            - button "Preview" [ref=e306] [cursor=pointer]
+            - button "HTML" [ref=e307] [cursor=pointer]
+          - generic [ref=e308]:
+            - button "" [ref=e309] [cursor=pointer]:
+              - generic [ref=e310]: 
+            - button "" [ref=e311] [cursor=pointer]:
+              - generic [ref=e312]: 
+            - button "" [ref=e313] [cursor=pointer]:
+              - generic [ref=e314]: 
+            - button "" [ref=e316] [cursor=pointer]:
+              - generic [ref=e317]: 
+            - button "" [ref=e318] [cursor=pointer]:
+              - generic [ref=e319]: 
+            - button "" [ref=e320] [cursor=pointer]:
+              - generic [ref=e321]: 
+        - generic [ref=e325]:
+          - generic [ref=e326]:
+            - heading "Filters" [level=2] [ref=e327]
+            - button "Close" [ref=e328] [cursor=pointer]:
+              - generic [ref=e329]: 
+          - generic [ref=e330]:
+            - generic [ref=e331]:
+              - generic [ref=e332]: Category
+              - combobox [ref=e333]:
+                - option "All Categories" [selected]
+                - option "Design"
+                - option "Development"
+            - generic [ref=e334]:
+              - generic [ref=e335]: Status
+              - combobox [ref=e336]:
+                - option "Any Status" [selected]
+                - option "Active"
+                - option "Archived"
+          - generic [ref=e337]:
+            - button "Reset" [ref=e338] [cursor=pointer]
+            - button "Apply Filters" [ref=e339] [cursor=pointer]
+        - text: 
+      - heading "Nested" [level=3] [ref=e340]
+      - paragraph [ref=e341]:
+        - text: Open a modal from within another modal. The second modal uses
+        - code [ref=e342]: .Modal-overlay--nested
+        - text: for higher z-index.
+      - generic [ref=e343]:
+        - generic [ref=e344]:
+          - generic [ref=e345]:
+            - button "Preview" [ref=e346] [cursor=pointer]
+            - button "HTML" [ref=e347] [cursor=pointer]
+          - generic [ref=e348]:
+            - button "" [ref=e349] [cursor=pointer]:
+              - generic [ref=e350]: 
+            - button "" [ref=e351] [cursor=pointer]:
+              - generic [ref=e352]: 
+            - button "" [ref=e353] [cursor=pointer]:
+              - generic [ref=e354]: 
+            - button "" [ref=e356] [cursor=pointer]:
+              - generic [ref=e357]: 
+            - button "" [ref=e358] [cursor=pointer]:
+              - generic [ref=e359]: 
+            - button "" [ref=e360] [cursor=pointer]:
+              - generic [ref=e361]: 
+        - generic [ref=e364]:
+          - generic [ref=e365]:
+            - heading "Edit Profile" [level=2] [ref=e367]
+            - paragraph [ref=e369]: Primary modal content...
+          - generic [ref=e370]:
+            - generic [ref=e371]:
+              - heading "Discard Changes?" [level=2] [ref=e372]
+              - button "Close" [ref=e373] [cursor=pointer]:
+                - generic [ref=e374]: 
+            - paragraph [ref=e376]: You have unsaved changes. Are you sure you want to close?
+            - generic [ref=e377]:
+              - button "Keep Editing" [ref=e378] [cursor=pointer]
+              - button "Discard" [ref=e379] [cursor=pointer]
+        - text: 
+      - heading "Image Lightbox" [level=3] [ref=e380]
+      - paragraph [ref=e381]: Display images in a focused, centered view with minimal chrome.
+      - generic [ref=e382]:
+        - generic [ref=e383]:
+          - generic [ref=e384]:
+            - button "Preview" [ref=e385] [cursor=pointer]
+            - button "HTML" [ref=e386] [cursor=pointer]
+          - generic [ref=e387]:
+            - button "" [ref=e388] [cursor=pointer]:
+              - generic [ref=e389]: 
+            - button "" [ref=e390] [cursor=pointer]:
+              - generic [ref=e391]: 
+            - button "" [ref=e392] [cursor=pointer]:
+              - generic [ref=e393]: 
+            - button "" [ref=e395] [cursor=pointer]:
+              - generic [ref=e396]: 
+            - button "" [ref=e397] [cursor=pointer]:
+              - generic [ref=e398]: 
+            - button "" [ref=e399] [cursor=pointer]:
+              - generic [ref=e400]: 
+        - generic [ref=e403]:
+          - button "Close" [ref=e404] [cursor=pointer]:
+            - generic [ref=e405]: 
+          - img "Mountain landscape" [ref=e406]
+          - button "Previous" [ref=e407] [cursor=pointer]:
+            - generic [ref=e408]: 
+          - button "Next" [ref=e409] [cursor=pointer]:
+            - generic [ref=e410]: 
+        - text: 
+      - heading "Video Modal" [level=3] [ref=e411]
+      - paragraph [ref=e412]: Embed video content with playback controls.
+      - generic [ref=e413]:
+        - generic [ref=e414]:
+          - generic [ref=e415]:
+            - button "Preview" [ref=e416] [cursor=pointer]
+            - button "HTML" [ref=e417] [cursor=pointer]
+          - generic [ref=e418]:
+            - button "" [ref=e419] [cursor=pointer]:
+              - generic [ref=e420]: 
+            - button "" [ref=e421] [cursor=pointer]:
+              - generic [ref=e422]: 
+            - button "" [ref=e423] [cursor=pointer]:
+              - generic [ref=e424]: 
+            - button "" [ref=e426] [cursor=pointer]:
+              - generic [ref=e427]: 
+            - button "" [ref=e428] [cursor=pointer]:
+              - generic [ref=e429]: 
+            - button "" [ref=e430] [cursor=pointer]:
+              - generic [ref=e431]: 
+        - generic [ref=e434]:
+          - button "Close" [ref=e435] [cursor=pointer]:
+            - generic [ref=e436]: 
+          - button "Play video" [ref=e438] [cursor=pointer]
+        - text: 
+      - separator [ref=e439]
+      - heading "Sizes" [level=2] [ref=e440]
+      - paragraph [ref=e441]: "Modals come in three sizes: small, medium (default), and large. Fullscreen is also available."
+      - generic [ref=e442]:
+        - generic [ref=e443]:
+          - generic [ref=e444]:
+            - button "Preview" [ref=e445] [cursor=pointer]
+            - button "HTML" [ref=e446] [cursor=pointer]
+          - generic [ref=e447]:
+            - button "" [ref=e448] [cursor=pointer]:
+              - generic [ref=e449]: 
+            - button "" [ref=e450] [cursor=pointer]:
+              - generic [ref=e451]: 
+            - button "" [ref=e452] [cursor=pointer]:
+              - generic [ref=e453]: 
+            - button "" [ref=e455] [cursor=pointer]:
+              - generic [ref=e456]: 
+            - button "" [ref=e457] [cursor=pointer]:
+              - generic [ref=e458]: 
+            - button "" [ref=e459] [cursor=pointer]:
+              - generic [ref=e460]: 
+        - generic [ref=e463]:
+          - generic [ref=e464]:
+            - heading "Small (360px)" [level=2] [ref=e466]
+            - paragraph [ref=e468]: Compact dialogs
+          - generic [ref=e469]:
+            - heading "Medium (480px) — Default" [level=2] [ref=e471]
+            - paragraph [ref=e473]: Standard modal width
+          - generic [ref=e474]:
+            - heading "Large (720px)" [level=2] [ref=e476]
+            - paragraph [ref=e478]: For complex content or forms
+        - text: 
+      - separator [ref=e479]
+      - heading "Customization" [level=2] [ref=e480]
+      - paragraph [ref=e481]: "Override modal styles using CSS custom properties:"
+      - generic [ref=e482]:
+        - code [ref=e484]: "/* Custom modal width */ .Modal--custom { max-width: 600px; } /* Custom overlay color */ .Modal-overlay--branded { background-color: oklch(25% 0.05 250 / 0.8); } /* Remove backdrop blur for performance */ .Modal-overlay--no-blur { backdrop-filter: none; } /* Slide-in from side animation */ .Modal-overlay--slideout .Modal { position: fixed; right: 0; top: 0; bottom: 0; max-width: 400px; height: 100%; border-radius: 0; transform: translateX(100%); } .Modal-overlay--slideout.active .Modal { transform: translateX(0); } /* Centered content variant */ .Modal--centered .Modal-header { text-align: center; justify-content: center; } .Modal--centered .Modal-body { text-align: center; } .Modal--centered .Modal-footer { justify-content: center; }"
+        - button "Copy code" [ref=e485] [cursor=pointer]:
+          - generic [ref=e486]: 
+      - separator [ref=e487]
+      - heading "API Reference" [level=2] [ref=e488]
+      - heading "Overlay Classes" [level=3] [ref=e489]
+      - table [ref=e490]:
+        - rowgroup [ref=e491]:
+          - row "Class Description" [ref=e492]:
+            - columnheader "Class" [ref=e493]
+            - columnheader "Description" [ref=e494]
+        - rowgroup [ref=e495]:
+          - row ".Modal-overlay Full-screen backdrop with centering" [ref=e496]:
+            - cell ".Modal-overlay" [ref=e497]:
+              - code [ref=e498]: .Modal-overlay
+            - cell "Full-screen backdrop with centering" [ref=e499]
+          - row ".Modal-overlay.active Shows the modal (visible, interactive)" [ref=e500]:
+            - cell ".Modal-overlay.active" [ref=e501]:
+              - code [ref=e502]: .Modal-overlay.active
+            - cell "Shows the modal (visible, interactive)" [ref=e503]
+          - row ".Modal-overlay--active Alternative active class" [ref=e504]:
+            - cell ".Modal-overlay--active" [ref=e505]:
+              - code [ref=e506]: .Modal-overlay--active
+            - cell "Alternative active class" [ref=e507]
+          - row ".Modal-overlay--nested Higher z-index for stacked modals" [ref=e508]:
+            - cell ".Modal-overlay--nested" [ref=e509]:
+              - code [ref=e510]: .Modal-overlay--nested
+            - cell "Higher z-index for stacked modals" [ref=e511]
+      - heading "Modal Classes" [level=3] [ref=e512]
+      - table [ref=e513]:
+        - rowgroup [ref=e514]:
+          - row "Class Description" [ref=e515]:
+            - columnheader "Class" [ref=e516]
+            - columnheader "Description" [ref=e517]
+        - rowgroup [ref=e518]:
+          - row ".Modal Modal container (required)" [ref=e519]:
+            - cell ".Modal" [ref=e520]:
+              - code [ref=e521]: .Modal
+            - cell "Modal container (required)" [ref=e522]
+          - row ".Modal--small Small modal (360px max-width)" [ref=e523]:
+            - cell ".Modal--small" [ref=e524]:
+              - code [ref=e525]: .Modal--small
+            - cell "Small modal (360px max-width)" [ref=e526]
+          - row ".Modal--large Large modal (720px max-width)" [ref=e527]:
+            - cell ".Modal--large" [ref=e528]:
+              - code [ref=e529]: .Modal--large
+            - cell "Large modal (720px max-width)" [ref=e530]
+          - row ".Modal--fullscreen Full viewport modal" [ref=e531]:
+            - cell ".Modal--fullscreen" [ref=e532]:
+              - code [ref=e533]: .Modal--fullscreen
+            - cell "Full viewport modal" [ref=e534]
+          - row ".Modal--centered Center-aligned header and content" [ref=e535]:
+            - cell ".Modal--centered" [ref=e536]:
+              - code [ref=e537]: .Modal--centered
+            - cell "Center-aligned header and content" [ref=e538]
+      - heading "Structure Classes" [level=3] [ref=e539]
+      - table [ref=e540]:
+        - rowgroup [ref=e541]:
+          - row "Class Description" [ref=e542]:
+            - columnheader "Class" [ref=e543]
+            - columnheader "Description" [ref=e544]
+        - rowgroup [ref=e545]:
+          - row ".Modal-header Header area with title and close button" [ref=e546]:
+            - cell ".Modal-header" [ref=e547]:
+              - code [ref=e548]: .Modal-header
+            - cell "Header area with title and close button" [ref=e549]
+          - row ".Modal-title Modal heading text" [ref=e550]:
+            - cell ".Modal-title" [ref=e551]:
+              - code [ref=e552]: .Modal-title
+            - cell "Modal heading text" [ref=e553]
+          - row ".Modal-body Main content area (scrollable)" [ref=e554]:
+            - cell ".Modal-body" [ref=e555]:
+              - code [ref=e556]: .Modal-body
+            - cell "Main content area (scrollable)" [ref=e557]
+          - row ".Modal-body--scrollable Explicit scrollable body" [ref=e558]:
+            - cell ".Modal-body--scrollable" [ref=e559]:
+              - code [ref=e560]: .Modal-body--scrollable
+            - cell "Explicit scrollable body" [ref=e561]
+          - row ".Modal-footer Action buttons area" [ref=e562]:
+            - cell ".Modal-footer" [ref=e563]:
+              - code [ref=e564]: .Modal-footer
+            - cell "Action buttons area" [ref=e565]
+      - separator [ref=e566]
+      - heading "Accessibility" [level=2] [ref=e567]
+      - paragraph [ref=e568]: Proper modal accessibility ensures all users can interact with your dialogs, including those using keyboards and screen readers.
+      - heading "Focus Management" [level=3] [ref=e569]
+      - generic [ref=e570]:
+        - code [ref=e572]:
+          - text: <!-- Modal should trap focus when open -->
+          - generic [ref=e573]:
+            - generic [ref=e574]: <div
+            - text: class
+            - generic [ref=e575]: ="Modal-overlay active"
+            - text: role
+            - generic [ref=e576]: ="dialog"
+            - text: aria-modal
+            - generic [ref=e577]: ="true"
+            - text: aria-labelledby
+            - generic [ref=e578]: ="modal-title"
+            - text: ">"
+          - generic [ref=e579]:
+            - generic [ref=e580]: <div
+            - text: class
+            - generic [ref=e581]: ="Modal"
+            - text: ">"
+          - generic [ref=e582]:
+            - generic [ref=e583]: <header
+            - text: class
+            - generic [ref=e584]: ="Modal-header"
+            - text: ">"
+          - generic [ref=e585]:
+            - generic [ref=e586]: <h2
+            - text: class
+            - generic [ref=e587]: ="Modal-title"
+            - text: id
+            - generic [ref=e588]: ="modal-title"
+            - text: ">"
+          - text: Accessible Modal
+          - generic [ref=e589]:
+            - generic [ref=e590]: </h2
+            - text: ">"
+          - generic [ref=e591]:
+            - generic [ref=e592]: <button
+            - text: class
+            - generic [ref=e593]: ="Button Button--icon Button--ghost"
+            - text: aria-label
+            - generic [ref=e594]: ="Close modal"
+            - text: ">"
+          - generic [ref=e595]:
+            - generic [ref=e596]: <i
+            - text: class
+            - generic [ref=e597]: ="ph ph-x"
+            - text: ">"
+          - generic [ref=e598]:
+            - generic [ref=e599]: </i
+            - text: ">"
+          - generic [ref=e600]:
+            - generic [ref=e601]: </button
+            - text: ">"
+          - generic [ref=e602]:
+            - generic [ref=e603]: </header
+            - text: ">"
+          - generic [ref=e604]:
+            - generic [ref=e605]: <div
+            - text: class
+            - generic [ref=e606]: ="Modal-body"
+            - text: ">"
+          - generic [ref=e607]:
+            - generic [ref=e608]: <p
+            - text: ">"
+          - text: First focusable element receives focus on open.
+          - generic [ref=e609]:
+            - generic [ref=e610]: </p
+            - text: ">"
+          - generic [ref=e611]:
+            - generic [ref=e612]: <input
+            - text: type
+            - generic [ref=e613]: ="text"
+            - text: class
+            - generic [ref=e614]: ="Input"
+            - text: placeholder
+            - generic [ref=e615]: ="Focus starts here"
+            - text: ">"
+          - generic [ref=e616]:
+            - generic [ref=e617]: </div
+            - text: ">"
+          - generic [ref=e618]:
+            - generic [ref=e619]: <footer
+            - text: class
+            - generic [ref=e620]: ="Modal-footer"
+            - text: ">"
+          - generic [ref=e621]:
+            - generic [ref=e622]: <button
+            - text: class
+            - generic [ref=e623]: ="Button Button--tertiary"
+            - text: ">"
+          - text: Cancel
+          - generic [ref=e624]:
+            - generic [ref=e625]: </button
+            - text: ">"
+          - generic [ref=e626]:
+            - generic [ref=e627]: <button
+            - text: class
+            - generic [ref=e628]: ="Button Button--primary"
+            - text: ">"
+          - text: Submit
+          - generic [ref=e629]:
+            - generic [ref=e630]: </button
+            - text: ">"
+          - generic [ref=e631]:
+            - generic [ref=e632]: </footer
+            - text: ">"
+          - generic [ref=e633]:
+            - generic [ref=e634]: </div
+            - text: ">"
+          - generic [ref=e635]:
+            - generic [ref=e636]: </div
+            - text: ">"
+        - button "Copy code" [ref=e637] [cursor=pointer]:
+          - generic [ref=e638]: 
+      - heading "Focus Trap" [level=3] [ref=e639]
+      - paragraph [ref=e640]: Keep focus within the modal while open. Tab cycles through focusable elements without escaping to background content.
+      - generic [ref=e641]:
+        - code [ref=e643]: "// Basic focus trap implementation function trapFocus(modal) { const focusable = modal.querySelectorAll( 'button, [href], input, select, textarea, [tabindex]:not([tabindex=\"-1\"])' ); const first = focusable[0]; const last = focusable[focusable.length - 1]; modal.addEventListener('keydown', (e) => { if (e.key !== 'Tab') return; if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); } else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); } }); }"
+        - button "Copy code" [ref=e644] [cursor=pointer]:
+          - generic [ref=e645]: 
+      - heading "Escape Key" [level=3] [ref=e646]
+      - paragraph [ref=e647]: Allow users to close the modal by pressing Escape.
+      - generic [ref=e648]:
+        - code [ref=e650]:
+          - text: function handleEscapeKey(
+          - generic [ref=e651]: modal, closeCallback
+          - text: ") { document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modal.classList.contains('active')) { closeCallback(); } }); }"
+        - button "Copy code" [ref=e652] [cursor=pointer]:
+          - generic [ref=e653]: 
+      - heading "ARIA Attributes" [level=3] [ref=e654]
+      - table [ref=e655]:
+        - rowgroup [ref=e656]:
+          - row "Attribute Element Description" [ref=e657]:
+            - columnheader "Attribute" [ref=e658]
+            - columnheader "Element" [ref=e659]
+            - columnheader "Description" [ref=e660]
+        - rowgroup [ref=e661]:
+          - row "role=\"dialog\" .Modal-overlay Identifies as a dialog" [ref=e662]:
+            - cell "role=\"dialog\"" [ref=e663]:
+              - code [ref=e664]: role="dialog"
+            - cell ".Modal-overlay" [ref=e665]:
+              - code [ref=e666]: .Modal-overlay
+            - cell "Identifies as a dialog" [ref=e667]
+          - row "aria-modal=\"true\" .Modal-overlay Indicates modal behavior" [ref=e668]:
+            - cell "aria-modal=\"true\"" [ref=e669]:
+              - code [ref=e670]: aria-modal="true"
+            - cell ".Modal-overlay" [ref=e671]:
+              - code [ref=e672]: .Modal-overlay
+            - cell "Indicates modal behavior" [ref=e673]
+          - row "aria-labelledby .Modal-overlay Points to title ID" [ref=e674]:
+            - cell "aria-labelledby" [ref=e675]:
+              - code [ref=e676]: aria-labelledby
+            - cell ".Modal-overlay" [ref=e677]:
+              - code [ref=e678]: .Modal-overlay
+            - cell "Points to title ID" [ref=e679]
+          - row "aria-describedby .Modal-overlay Points to description (optional)" [ref=e680]:
+            - cell "aria-describedby" [ref=e681]:
+              - code [ref=e682]: aria-describedby
+            - cell ".Modal-overlay" [ref=e683]:
+              - code [ref=e684]: .Modal-overlay
+            - cell "Points to description (optional)" [ref=e685]
+          - row "aria-label Close button Describes the button action" [ref=e686]:
+            - cell "aria-label" [ref=e687]:
+              - code [ref=e688]: aria-label
+            - cell "Close button" [ref=e689]
+            - cell "Describes the button action" [ref=e690]
+      - heading "Screen Reader Announcements" [level=3] [ref=e691]
+      - generic [ref=e692]:
+        - code [ref=e694]:
+          - text: <!-- Use aria-live for dynamic content -->
+          - generic [ref=e695]:
+            - generic [ref=e696]: <div
+            - text: class
+            - generic [ref=e697]: ="Modal-body"
+            - text: ">"
+          - generic [ref=e698]:
+            - generic [ref=e699]: <div
+            - text: aria-live
+            - generic [ref=e700]: ="polite"
+            - text: aria-atomic
+            - generic [ref=e701]: ="true"
+            - text: ">"
+          - text: <!-- Dynamic messages announced to screen readers -->
+          - generic [ref=e702]:
+            - generic [ref=e703]: <p
+            - text: class
+            - generic [ref=e704]: ="Alert Alert--success"
+            - text: ">"
+          - text: Changes saved successfully!
+          - generic [ref=e705]:
+            - generic [ref=e706]: </p
+            - text: ">"
+          - generic [ref=e707]:
+            - generic [ref=e708]: </div
+            - text: ">"
+          - generic [ref=e709]:
+            - generic [ref=e710]: </div
+            - text: ">"
+        - button "Copy code" [ref=e711] [cursor=pointer]:
+          - generic [ref=e712]: 
+      - heading "Keyboard Support" [level=3] [ref=e713]
+      - table [ref=e714]:
+        - rowgroup [ref=e715]:
+          - row "Key Action" [ref=e716]:
+            - columnheader "Key" [ref=e717]
+            - columnheader "Action" [ref=e718]
+        - rowgroup [ref=e719]:
+          - row "Tab Move focus to next focusable element" [ref=e720]:
+            - cell "Tab" [ref=e721]
+            - cell "Move focus to next focusable element" [ref=e722]
+          - row "Shift + Tab Move focus to previous focusable element" [ref=e723]:
+            - cell "Shift + Tab" [ref=e724]
+            - cell "Move focus to previous focusable element" [ref=e725]
+          - row "Escape Close the modal" [ref=e726]:
+            - cell "Escape" [ref=e727]
+            - cell "Close the modal" [ref=e728]
+          - row "Enter Activate focused button" [ref=e729]:
+            - cell "Enter" [ref=e730]
+            - cell "Activate focused button" [ref=e731]
+      - heading "Return Focus" [level=3] [ref=e732]
+      - paragraph [ref=e733]: When the modal closes, return focus to the element that triggered it.
+      - generic [ref=e734]:
+        - code [ref=e736]:
+          - text: let triggerElement = null; function openModal(
+          - generic [ref=e737]: modal, trigger
+          - text: ") { triggerElement = trigger; modal.classList.add('active'); modal.querySelector('input, button')?.focus(); } function closeModal(modal) { modal.classList.remove('active'); triggerElement?.focus(); triggerElement = null; }"
+        - button "Copy code" [ref=e738] [cursor=pointer]:
+          - generic [ref=e739]: 
+      - separator [ref=e740]
+      - heading "Best Practices" [level=2] [ref=e741]
+      - heading "Do" [level=3] [ref=e742]
+      - list [ref=e743]:
+        - listitem [ref=e744]:
+          - text: ✓
+          - strong [ref=e745]: Use clear, specific titles
+          - text: — “Delete Project?” not “Confirm”
+        - listitem [ref=e746]:
+          - text: ✓
+          - strong [ref=e747]: Keep content concise
+          - text: — Modals interrupt flow, respect users’ time
+        - listitem [ref=e748]:
+          - text: ✓
+          - strong [ref=e749]: Provide obvious exit paths
+          - text: — Close button, Cancel action, Escape key
+        - listitem [ref=e750]:
+          - text: ✓
+          - strong [ref=e751]: Trap focus
+          - text: — Keep keyboard navigation within the modal
+        - listitem [ref=e752]:
+          - text: ✓
+          - strong [ref=e753]: Return focus
+          - text: — On close, focus returns to the trigger element
+        - listitem [ref=e754]:
+          - text: ✓
+          - strong [ref=e755]: Prevent background scroll
+          - text: — Body shouldn’t scroll when modal is open
+        - listitem [ref=e756]:
+          - text: ✓
+          - strong [ref=e757]: Match button order to reading flow
+          - text: — Primary action on the right
+        - listitem [ref=e758]:
+          - text: ✓
+          - strong [ref=e759]: Use danger styling
+          - text: — Red buttons for destructive actions
+      - heading "Don’t" [level=3] [ref=e760]
+      - list [ref=e761]:
+        - listitem [ref=e762]:
+          - text: ✗
+          - strong [ref=e763]: Stack too many modals
+          - text: — Two max; consider page navigation instead
+        - listitem [ref=e764]:
+          - text: ✗
+          - strong [ref=e765]: Use for complex flows
+          - text: — Long forms belong on dedicated pages
+        - listitem [ref=e766]:
+          - text: ✗
+          - strong [ref=e767]: Auto-open modals on page load
+          - text: — Let users initiate the interaction
+        - listitem [ref=e768]:
+          - text: ✗
+          - strong [ref=e769]: Hide the close button
+          - text: — Users must always be able to dismiss
+        - listitem [ref=e770]:
+          - text: ✗
+          - strong [ref=e771]: Put critical content in modals
+          - text: — Important info should be on the page
+        - listitem [ref=e772]:
+          - text: ✗
+          - strong [ref=e773]: Use vague actions
+          - text: — “OK” and “Cancel” don’t describe what happens
+        - listitem [ref=e774]:
+          - text: ✗
+          - strong [ref=e775]: Forget mobile
+          - text: — Ensure modals work on small screens
+        - listitem [ref=e776]:
+          - text: ✗
+          - strong [ref=e777]: Block background interaction permanently
+          - text: — Always provide an exit
+    - paragraph [ref=e779]: "Carbon v0.3 • Last built: 2/5/2026, 6:19:55 PM"
+```

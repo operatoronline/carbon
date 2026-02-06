@@ -249,9 +249,9 @@ Common patterns for grouping related links.
 <Preview title="Footer Links">
     <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
         <a href="#" class="Link Link--muted Link--small">Privacy Policy</a>
-        <span style="color: var(--text-secondary);">·</span>
+        <span style="color: var(--fg-3);">·</span>
         <a href="#" class="Link Link--muted Link--small">Terms of Service</a>
-        <span style="color: var(--text-secondary);">·</span>
+        <span style="color: var(--fg-3);">·</span>
         <a href="#" class="Link Link--muted Link--small">Cookie Settings</a>
     </div>
 </Preview>
@@ -270,7 +270,7 @@ Accessibility pattern for keyboard navigation.
 
 <Preview title="Skip Link">
     <a href="#main-content" class="Link Link--skip">Skip to main content</a>
-    <p style="margin-top: var(--space-4); color: var(--text-secondary); font-size: 0.875rem;">
+    <p style="margin-top: var(--space-4); color: var(--fg-3); font-size: 0.875rem;">
         (Tab to this preview to see the skip link appear)
     </p>
 </Preview>
@@ -337,10 +337,10 @@ Style for downloadable resources.
 <Preview title="Breadcrumbs">
     <nav aria-label="Breadcrumb" style="display: flex; align-items: center; gap: var(--space-2); font-size: 0.9rem;">
         <a href="#" class="Link Link--muted">Home</a>
-        <i class="ph ph-caret-right" style="color: var(--text-secondary); font-size: 0.75rem;"></i>
+        <i class="ph ph-caret-right" style="color: var(--fg-3); font-size: 0.75rem;"></i>
         <a href="#" class="Link Link--muted">Products</a>
-        <i class="ph ph-caret-right" style="color: var(--text-secondary); font-size: 0.75rem;"></i>
-        <span style="color: var(--text-primary);">Widget Pro</span>
+        <i class="ph ph-caret-right" style="color: var(--fg-3); font-size: 0.75rem;"></i>
+        <span style="color: var(--fg);">Widget Pro</span>
     </nav>
 </Preview>
 
@@ -382,9 +382,9 @@ Style for downloadable resources.
 
 <Preview title="Empty State">
     <div style="text-align: center; padding: var(--space-8); max-width: 400px;">
-        <i class="ph ph-magnifying-glass" style="font-size: 3rem; color: var(--text-secondary); margin-bottom: var(--space-4);"></i>
+        <i class="ph ph-magnifying-glass" style="font-size: 3rem; color: var(--fg-3); margin-bottom: var(--space-4);"></i>
         <h4 style="margin: 0 0 var(--space-2);">No results found</h4>
-        <p style="color: var(--text-secondary); margin: 0 0 var(--space-4);">
+        <p style="color: var(--fg-3); margin: 0 0 var(--space-4);">
             We couldn't find anything matching your search. Try 
             <a href="#" class="Link">browsing all items</a> or 
             <a href="#" class="Link">adjusting your filters</a>.
@@ -396,7 +396,7 @@ Style for downloadable resources.
 
 <Preview title="Reference Section">
     <div style="max-width: 480px;">
-        <h5 style="margin: 0 0 var(--space-3); font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary);">Related Resources</h5>
+        <h5 style="margin: 0 0 var(--space-3); font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--fg-3);">Related Resources</h5>
         <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-2);">
             <li>
                 <a href="#" class="Link">
@@ -528,7 +528,7 @@ Links require careful attention to accessibility:
   display: inline-flex;
   align-items: center;
   gap: var(--space-1);
-  color: var(--accent-primary);
+  color: var(--accent);
   text-decoration: none;
   cursor: pointer;
   transition: color 0.15s, text-decoration 0.15s;
@@ -540,7 +540,7 @@ Links require careful attention to accessibility:
 }
 
 .Link:focus-visible {
-  outline: 2px solid var(--accent-primary);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
   border-radius: 2px;
 }
@@ -553,19 +553,19 @@ Links require careful attention to accessibility:
 
 /* Variants */
 .Link--subtle {
-  color: var(--text-primary);
+  color: var(--fg);
 }
 
 .Link--subtle:hover {
-  color: var(--accent-primary);
+  color: var(--accent);
 }
 
 .Link--muted {
-  color: var(--text-secondary);
+  color: var(--fg-3);
 }
 
 .Link--muted:hover {
-  color: var(--text-primary);
+  color: var(--fg);
 }
 
 .Link--underline {
@@ -594,7 +594,7 @@ Links require careful attention to accessibility:
 
 /* Disabled */
 .Link--disabled {
-  color: var(--text-secondary);
+  color: var(--fg-3);
   cursor: not-allowed;
   opacity: 0.6;
 }
@@ -605,17 +605,17 @@ Links require careful attention to accessibility:
 
 /* Navigation Links */
 .Link--nav {
-  color: var(--text-secondary);
+  color: var(--fg-3);
   font-weight: 500;
 }
 
 .Link--nav:hover {
-  color: var(--text-primary);
+  color: var(--fg);
   text-decoration: none;
 }
 
 .Link--nav.Link--active {
-  color: var(--accent-primary);
+  color: var(--accent);
 }
 
 /* Visited State */
@@ -625,7 +625,7 @@ Links require careful attention to accessibility:
 
 .Link--subtle:visited,
 .Link--muted:visited {
-  color: var(--text-secondary);
+  color: var(--fg-3);
 }
 
 /* Skip Link */
@@ -635,9 +635,9 @@ Links require careful attention to accessibility:
   top: var(--space-4);
   z-index: 9999;
   padding: var(--space-2) var(--space-4);
-  background-color: var(--bg-primary);
-  border: 1px solid var(--border-strong);
-  border-radius: var(--space-1);
+  background-color: var(--bg);
+  border: 1px solid var(--bd-s);
+  border-radius: var(--r-s);
   font-weight: 500;
 }
 

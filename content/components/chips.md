@@ -175,21 +175,21 @@ Lighter visual weight with border-only styling.
 <Preview title="Chip Sizes">
     <div class="Layout-stack">
         <div>
-            <small style="color: var(--text-secondary); display: block; margin-bottom: var(--space-2);">Small</small>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Small</small>
             <div class="Layout-cluster">
                 <span class="Chip Chip--small">Small</span>
                 <span class="Chip Chip--small Chip--primary">Primary</span>
             </div>
         </div>
         <div>
-            <small style="color: var(--text-secondary); display: block; margin-bottom: var(--space-2);">Default</small>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Default</small>
             <div class="Layout-cluster">
                 <span class="Chip">Default</span>
                 <span class="Chip Chip--primary">Primary</span>
             </div>
         </div>
         <div>
-            <small style="color: var(--text-secondary); display: block; margin-bottom: var(--space-2);">Large</small>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Large</small>
             <div class="Layout-cluster">
                 <span class="Chip Chip--large">Large</span>
                 <span class="Chip Chip--large Chip--primary">Primary</span>
@@ -213,7 +213,7 @@ Chips with leading avatar for people or entities.
 <Preview title="Avatar Chips">
     <div class="Layout-cluster">
         <span class="Chip Chip--avatar">
-            <span class="Chip-avatar" style="background: var(--accent-primary);">A</span>
+            <span class="Chip-avatar" style="background: var(--accent);">A</span>
             Alice
         </span>
         <span class="Chip Chip--avatar Chip--removable">
@@ -249,7 +249,7 @@ Chips with leading avatar for people or entities.
 Common pattern for tag inputs in forms.
 
 <Preview title="Tag Input">
-    <div style="border: 1px solid var(--border-strong); border-radius: var(--space-1); padding: var(--space-2); display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; min-height: 44px;">
+    <div style="border: 1px solid var(--bd-s); border-radius: var(--r-s); padding: var(--space-2); display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; min-height: 44px;">
         <span class="Chip Chip--small Chip--removable">
             javascript
             <button class="Chip-remove" aria-label="Remove javascript">
@@ -290,7 +290,7 @@ Common pattern for tag inputs in forms.
 
 <Preview title="Filter Example">
     <div class="Layout-stack Layout-stack--tight">
-        <small style="color: var(--text-secondary);">Active filters:</small>
+        <small style="color: var(--fg-3);">Active filters:</small>
         <div class="Layout-cluster">
             <span class="Chip Chip--primary Chip--removable">
                 Status: Open
@@ -415,19 +415,19 @@ Common pattern for tag inputs in forms.
   align-items: center;
   gap: var(--space-1);
   padding: var(--space-1) var(--space-2);
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border-subtle);
+  background-color: var(--bg-s);
+  border: 1px solid var(--bd);
   border-radius: var(--space-4);
   font-family: var(--font-sans);
   font-size: 0.85rem;
   font-weight: 500;
-  color: var(--text-primary);
+  color: var(--fg);
   white-space: nowrap;
 }
 
 .Chip i {
   font-size: 1rem;
-  color: var(--text-secondary);
+  color: var(--fg-3);
 }
 
 /* Remove button */
@@ -442,13 +442,13 @@ Common pattern for tag inputs in forms.
   margin-left: var(--space-1);
   border-radius: 50%;
   cursor: pointer;
-  color: var(--text-secondary);
+  color: var(--fg-3);
   transition: all 0.15s;
 }
 
 .Chip-remove:hover {
   background-color: oklch(0% 0 0 / 0.1);
-  color: var(--text-primary);
+  color: var(--fg);
 }
 
 /* Selectable */
@@ -458,12 +458,12 @@ Common pattern for tag inputs in forms.
 }
 
 .Chip--selectable:hover {
-  border-color: var(--border-strong);
+  border-color: var(--bd-s);
 }
 
 .Chip--selected {
-  background-color: var(--accent-primary);
-  border-color: var(--accent-primary);
+  background-color: var(--accent);
+  border-color: var(--accent);
   color: white;
 }
 

@@ -262,7 +262,7 @@ A minimal stepper for space-constrained layouts.
             <div class="Stepper-indicator">5</div>
         </div>
     </div>
-    <p style="text-align: center; margin-top: var(--space-4); color: var(--text-secondary); font-size: 0.9rem;">Step 3 of 5: Payment Details</p>
+    <p style="text-align: center; margin-top: var(--space-4); color: var(--fg-3); font-size: 0.9rem;">Step 3 of 5: Payment Details</p>
 </Preview>
 
 ```html
@@ -409,7 +409,7 @@ Combine with a progress indicator for completion status.
         <div class="Progress" style="height: 4px;">
             <div class="Progress-bar" style="width: 66%;"></div>
         </div>
-        <div style="display: flex; justify-content: space-between; margin-top: var(--space-2); font-size: 0.85rem; color: var(--text-secondary);">
+        <div style="display: flex; justify-content: space-between; margin-top: var(--space-2); font-size: 0.85rem; color: var(--fg-3);">
             <span>Step 3 of 4</span>
             <span>66% complete</span>
         </div>

@@ -134,7 +134,7 @@ Breadcrumbs come in three sizes: small, medium (default), and large.
 <Preview>
 <div class="Layout-stack">
     <div>
-        <small style="color: var(--text-secondary); display: block; margin-bottom: var(--space-2);">Small</small>
+        <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Small</small>
         <nav class="Breadcrumb Breadcrumb--small" aria-label="Small breadcrumb">
             <ol class="Breadcrumb-list">
                 <li class="Breadcrumb-item"><a href="#">Home</a></li>
@@ -144,7 +144,7 @@ Breadcrumbs come in three sizes: small, medium (default), and large.
         </nav>
     </div>
     <div>
-        <small style="color: var(--text-secondary); display: block; margin-bottom: var(--space-2);">Default</small>
+        <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Default</small>
         <nav class="Breadcrumb" aria-label="Default breadcrumb">
             <ol class="Breadcrumb-list">
                 <li class="Breadcrumb-item"><a href="#">Home</a></li>
@@ -154,7 +154,7 @@ Breadcrumbs come in three sizes: small, medium (default), and large.
         </nav>
     </div>
     <div>
-        <small style="color: var(--text-secondary); display: block; margin-bottom: var(--space-2);">Large</small>
+        <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Large</small>
         <nav class="Breadcrumb Breadcrumb--large" aria-label="Large breadcrumb">
             <ol class="Breadcrumb-list">
                 <li class="Breadcrumb-item"><a href="#">Home</a></li>
@@ -231,12 +231,12 @@ Override breadcrumb styles using CSS custom properties:
 /* Custom separator */
 .Breadcrumb--custom .Breadcrumb-item + .Breadcrumb-item::before {
     content: "→";
-    color: var(--accent-primary);
+    color: var(--accent);
 }
 
 /* Custom link colors */
 .Breadcrumb--brand .Breadcrumb-item a {
-    color: var(--accent-primary);
+    color: var(--accent);
 }
 
 .Breadcrumb--brand .Breadcrumb-item a:hover {
@@ -246,7 +246,7 @@ Override breadcrumb styles using CSS custom properties:
 
 /* Pill-style breadcrumb */
 .Breadcrumb--pills .Breadcrumb-item a {
-    background: var(--bg-secondary);
+    background: var(--bg-s);
     padding: var(--space-1) var(--space-2);
     border-radius: var(--space-4);
 }

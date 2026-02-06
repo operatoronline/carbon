@@ -11,7 +11,7 @@ Drawers are panels that slide in from the edge of the screen, commonly used for 
 A simple slide-out panel from the right.
 
 <Preview>
-  <div style="position: relative; height: 300px; overflow: hidden; border: 1px solid var(--border-subtle); border-radius: var(--radius-md);">
+  <div style="position: relative; height: 300px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--radius-md);">
     <div class="Drawer-backdrop Drawer-backdrop--visible"></div>
     <div class="Drawer Drawer--right Drawer--open" style="position: absolute;">
       <div class="Drawer-header">
@@ -44,28 +44,28 @@ Drawers can slide in from any edge.
 
 <Preview>
   <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4);">
-    <div style="position: relative; height: 200px; overflow: hidden; border: 1px solid var(--border-subtle); border-radius: var(--radius-md);">
+    <div style="position: relative; height: 200px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--radius-md);">
       <div class="Drawer Drawer--left Drawer--open Drawer--sm" style="position: absolute;">
         <div class="Drawer-header">
           <h4 class="Drawer-title">Left</h4>
         </div>
       </div>
     </div>
-    <div style="position: relative; height: 200px; overflow: hidden; border: 1px solid var(--border-subtle); border-radius: var(--radius-md);">
+    <div style="position: relative; height: 200px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--radius-md);">
       <div class="Drawer Drawer--right Drawer--open Drawer--sm" style="position: absolute;">
         <div class="Drawer-header">
           <h4 class="Drawer-title">Right</h4>
         </div>
       </div>
     </div>
-    <div style="position: relative; height: 200px; overflow: hidden; border: 1px solid var(--border-subtle); border-radius: var(--radius-md);">
+    <div style="position: relative; height: 200px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--radius-md);">
       <div class="Drawer Drawer--top Drawer--open Drawer--sm" style="position: absolute;">
         <div class="Drawer-header">
           <h4 class="Drawer-title">Top</h4>
         </div>
       </div>
     </div>
-    <div style="position: relative; height: 200px; overflow: hidden; border: 1px solid var(--border-subtle); border-radius: var(--radius-md);">
+    <div style="position: relative; height: 200px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--radius-md);">
       <div class="Drawer Drawer--bottom Drawer--open Drawer--sm" style="position: absolute;">
         <div class="Drawer-header">
           <h4 class="Drawer-title">Bottom</h4>
@@ -88,17 +88,17 @@ Drawers come in different widths.
 
 <Preview>
   <div style="display: flex; flex-direction: column; gap: var(--space-4);">
-    <div style="position: relative; height: 150px; overflow: hidden; border: 1px solid var(--border-subtle); border-radius: var(--radius-md);">
+    <div style="position: relative; height: 150px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--radius-md);">
       <div class="Drawer Drawer--right Drawer--open Drawer--xs" style="position: absolute;">
         <div class="Drawer-header"><h4 class="Drawer-title">XS (240px)</h4></div>
       </div>
     </div>
-    <div style="position: relative; height: 150px; overflow: hidden; border: 1px solid var(--border-subtle); border-radius: var(--radius-md);">
+    <div style="position: relative; height: 150px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--radius-md);">
       <div class="Drawer Drawer--right Drawer--open Drawer--sm" style="position: absolute;">
         <div class="Drawer-header"><h4 class="Drawer-title">SM (320px)</h4></div>
       </div>
     </div>
-    <div style="position: relative; height: 150px; overflow: hidden; border: 1px solid var(--border-subtle); border-radius: var(--radius-md);">
+    <div style="position: relative; height: 150px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--radius-md);">
       <div class="Drawer Drawer--right Drawer--open" style="position: absolute;">
         <div class="Drawer-header"><h4 class="Drawer-title">Default (400px)</h4></div>
       </div>
@@ -120,11 +120,11 @@ Drawers come in different widths.
 A sidebar navigation pattern.
 
 <Preview>
-  <div style="position: relative; height: 400px; overflow: hidden; border: 1px solid var(--border-subtle); border-radius: var(--radius-md);">
+  <div style="position: relative; height: 400px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--radius-md);">
     <div class="Drawer Drawer--left Drawer--open Drawer--sm" style="position: absolute;">
       <div class="Drawer-header">
         <div style="display: flex; align-items: center; gap: var(--space-2);">
-          <div style="width: 32px; height: 32px; background: var(--accent-primary); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">C</div>
+          <div style="width: 32px; height: 32px; background: var(--accent); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">C</div>
           <span style="font-weight: 600;">Carbon</span>
         </div>
       </div>
@@ -187,7 +187,7 @@ A sidebar navigation pattern.
 A drawer for filter controls.
 
 <Preview>
-  <div style="position: relative; height: 400px; overflow: hidden; border: 1px solid var(--border-subtle); border-radius: var(--radius-md);">
+  <div style="position: relative; height: 400px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--radius-md);">
     <div class="Drawer-backdrop Drawer-backdrop--visible"></div>
     <div class="Drawer Drawer--right Drawer--open Drawer--sm" style="position: absolute;">
       <div class="Drawer-header">
@@ -249,7 +249,7 @@ A drawer for filter controls.
 Organize drawer content with tabs.
 
 <Preview>
-  <div style="position: relative; height: 350px; overflow: hidden; border: 1px solid var(--border-subtle); border-radius: var(--radius-md);">
+  <div style="position: relative; height: 350px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--radius-md);">
     <div class="Drawer Drawer--right Drawer--open" style="position: absolute;">
       <div class="Drawer-header">
         <h3 class="Drawer-title">Details</h3>
@@ -292,7 +292,7 @@ Organize drawer content with tabs.
 A drawer that stays open alongside main content.
 
 <Preview>
-  <div style="display: flex; height: 300px; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); overflow: hidden;">
+  <div style="display: flex; height: 300px; border: 1px solid var(--bd); border-radius: var(--radius-md); overflow: hidden;">
     <div class="Drawer Drawer--persistent Drawer--open Drawer--sm" style="position: relative;">
       <nav class="Drawer-nav">
         <a href="#" class="Drawer-navItem Drawer-navItem--active">
@@ -309,8 +309,8 @@ A drawer that stays open alongside main content.
         </a>
       </nav>
     </div>
-    <div style="flex: 1; padding: var(--space-4); background: var(--bg-secondary);">
-      <p style="color: var(--text-secondary);">Main content area</p>
+    <div style="flex: 1; padding: var(--space-4); background: var(--bg-s);">
+      <p style="color: var(--fg-3);">Main content area</p>
     </div>
   </div>
 </Preview>
@@ -331,7 +331,7 @@ A drawer that stays open alongside main content.
 Collapsed sidebar showing only icons, expands on hover.
 
 <Preview>
-  <div style="display: flex; height: 300px; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); overflow: hidden;">
+  <div style="display: flex; height: 300px; border: 1px solid var(--bd); border-radius: var(--radius-md); overflow: hidden;">
     <div class="Drawer Drawer--persistent Drawer--mini Drawer--open" style="position: relative;">
       <nav class="Drawer-nav">
         <a href="#" class="Drawer-navItem Drawer-navItem--active" title="Home">
@@ -352,8 +352,8 @@ Collapsed sidebar showing only icons, expands on hover.
         </a>
       </nav>
     </div>
-    <div style="flex: 1; padding: var(--space-4); background: var(--bg-secondary);">
-      <p style="color: var(--text-secondary);">Hover over the sidebar to expand</p>
+    <div style="flex: 1; padding: var(--space-4); background: var(--bg-s);">
+      <p style="color: var(--fg-3);">Hover over the sidebar to expand</p>
     </div>
   </div>
 </Preview>
@@ -390,7 +390,7 @@ Collapsed sidebar showing only icons, expands on hover.
 /* Base drawer */
 .Drawer {
   position: fixed;
-  background: var(--bg-primary);
+  background: var(--bg);
   z-index: 999;
   display: flex;
   flex-direction: column;
@@ -444,7 +444,7 @@ Collapsed sidebar showing only icons, expands on hover.
 .Drawer--persistent {
   position: relative;
   box-shadow: none;
-  border-right: 1px solid var(--border-subtle);
+  border-right: 1px solid var(--bd);
   transform: none;
 }
 
@@ -472,7 +472,7 @@ Collapsed sidebar showing only icons, expands on hover.
   align-items: center;
   justify-content: space-between;
   padding: var(--space-4);
-  border-bottom: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--bd);
 }
 .Drawer-title {
   margin: 0;
@@ -492,7 +492,7 @@ Collapsed sidebar showing only icons, expands on hover.
   display: flex;
   gap: var(--space-3);
   padding: var(--space-4);
-  border-top: 1px solid var(--border-subtle);
+  border-top: 1px solid var(--bd);
 }
 
 /* Navigation */
@@ -507,21 +507,21 @@ Collapsed sidebar showing only icons, expands on hover.
   gap: var(--space-3);
   padding: var(--space-2) var(--space-3);
   border-radius: var(--radius-sm);
-  color: var(--text-secondary);
+  color: var(--fg-3);
   text-decoration: none;
   transition: background 0.15s, color 0.15s;
 }
 .Drawer-navItem:hover {
-  background: var(--bg-secondary);
-  color: var(--text-primary);
+  background: var(--bg-s);
+  color: var(--fg);
 }
 .Drawer-navItem--active {
   background: oklch(60% 0.15 250 / 0.1);
-  color: var(--accent-primary);
+  color: var(--accent);
 }
 .Drawer-navDivider {
   height: 1px;
-  background: var(--border-subtle);
+  background: var(--bd);
   margin: var(--space-2) 0;
 }
 
@@ -533,7 +533,7 @@ Collapsed sidebar showing only icons, expands on hover.
   font-size: var(--text-sm);
   font-weight: 600;
   margin-bottom: var(--space-2);
-  color: var(--text-primary);
+  color: var(--fg);
 }
 ```
 

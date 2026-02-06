@@ -9,7 +9,7 @@ Layout patterns for structuring content with responsive grids, stacks, and conta
 Centers content with a max-width and consistent padding.
 
 <Preview title="Container">
-    <div class="Layout-container" style="background: var(--bg-secondary); padding: var(--space-4); border-radius: var(--space-1);">
+    <div class="Layout-container" style="background: var(--bg-s); padding: var(--space-4); border-radius: var(--r-s);">
         <p>Content is centered with max-width and horizontal padding.</p>
     </div>
 </Preview>
@@ -30,13 +30,13 @@ Centers content with a max-width and consistent padding.
 
 <Preview title="Container Sizes">
     <div style="display: flex; flex-direction: column; gap: var(--space-4); width: 100%;">
-        <div class="Layout-container Layout-container--narrow" style="background: var(--bg-secondary); padding: var(--space-3); border-radius: var(--space-1);">
+        <div class="Layout-container Layout-container--narrow" style="background: var(--bg-s); padding: var(--space-3); border-radius: var(--r-s);">
             <small>Narrow (640px) — Articles, forms</small>
         </div>
-        <div class="Layout-container" style="background: var(--bg-secondary); padding: var(--space-3); border-radius: var(--space-1);">
+        <div class="Layout-container" style="background: var(--bg-s); padding: var(--space-3); border-radius: var(--r-s);">
             <small>Default (960px) — General pages</small>
         </div>
-        <div class="Layout-container Layout-container--wide" style="background: var(--bg-secondary); padding: var(--space-3); border-radius: var(--space-1);">
+        <div class="Layout-container Layout-container--wide" style="background: var(--bg-s); padding: var(--space-3); border-radius: var(--r-s);">
             <small>Wide (1280px) — Dashboards</small>
         </div>
     </div>
@@ -56,9 +56,9 @@ A responsive 12-column grid. Columns stack on mobile (<768px).
 
 <Preview title="12-Column Grid">
     <div class="Layout-grid" style="width: 100%;">
-        <div class="Layout-col-4" style="background: var(--accent-primary); color: white; padding: var(--space-3); border-radius: var(--space-1); text-align: center;">4</div>
-        <div class="Layout-col-4" style="background: var(--accent-primary); color: white; padding: var(--space-3); border-radius: var(--space-1); text-align: center;">4</div>
-        <div class="Layout-col-4" style="background: var(--accent-primary); color: white; padding: var(--space-3); border-radius: var(--space-1); text-align: center;">4</div>
+        <div class="Layout-col-4" style="background: var(--accent); color: white; padding: var(--space-3); border-radius: var(--r-s); text-align: center;">4</div>
+        <div class="Layout-col-4" style="background: var(--accent); color: white; padding: var(--space-3); border-radius: var(--r-s); text-align: center;">4</div>
+        <div class="Layout-col-4" style="background: var(--accent); color: white; padding: var(--space-3); border-radius: var(--r-s); text-align: center;">4</div>
     </div>
 </Preview>
 
@@ -76,8 +76,8 @@ Use `Layout-col-{1-12}` to control column width.
 
 <Preview title="Mixed Columns">
     <div class="Layout-grid" style="width: 100%;">
-        <div class="Layout-col-8" style="background: oklch(55% 0.12 250); color: white; padding: var(--space-3); border-radius: var(--space-1);">8 columns (Main)</div>
-        <div class="Layout-col-4" style="background: oklch(70% 0.08 250); padding: var(--space-3); border-radius: var(--space-1);">4 columns (Sidebar)</div>
+        <div class="Layout-col-8" style="background: oklch(55% 0.12 250); color: white; padding: var(--space-3); border-radius: var(--r-s);">8 columns (Main)</div>
+        <div class="Layout-col-4" style="background: oklch(70% 0.08 250); padding: var(--space-3); border-radius: var(--r-s);">4 columns (Sidebar)</div>
     </div>
 </Preview>
 
@@ -87,8 +87,8 @@ Use `Layout-col-{n}@md` for tablet+ breakpoints.
 
 <Preview title="Responsive Grid">
     <div class="Layout-grid" style="width: 100%;">
-        <div class="Layout-col-12 Layout-col-6@md" style="background: oklch(55% 0.12 150); color: white; padding: var(--space-3); border-radius: var(--space-1);">Full → Half</div>
-        <div class="Layout-col-12 Layout-col-6@md" style="background: oklch(55% 0.12 150); color: white; padding: var(--space-3); border-radius: var(--space-1);">Full → Half</div>
+        <div class="Layout-col-12 Layout-col-6@md" style="background: oklch(55% 0.12 150); color: white; padding: var(--space-3); border-radius: var(--r-s);">Full → Half</div>
+        <div class="Layout-col-12 Layout-col-6@md" style="background: oklch(55% 0.12 150); color: white; padding: var(--space-3); border-radius: var(--r-s);">Full → Half</div>
     </div>
 </Preview>
 
@@ -108,9 +108,9 @@ Vertical stacking with consistent spacing. The foundation of most layouts.
 
 <Preview title="Stack">
     <div class="Layout-stack" style="max-width: 280px;">
-        <div style="background: var(--bg-secondary); padding: var(--space-3); border-radius: var(--space-1);">Item 1</div>
-        <div style="background: var(--bg-secondary); padding: var(--space-3); border-radius: var(--space-1);">Item 2</div>
-        <div style="background: var(--bg-secondary); padding: var(--space-3); border-radius: var(--space-1);">Item 3</div>
+        <div style="background: var(--bg-s); padding: var(--space-3); border-radius: var(--r-s);">Item 1</div>
+        <div style="background: var(--bg-s); padding: var(--space-3); border-radius: var(--r-s);">Item 2</div>
+        <div style="background: var(--bg-s); padding: var(--space-3); border-radius: var(--r-s);">Item 3</div>
     </div>
 </Preview>
 
@@ -127,24 +127,24 @@ Vertical stacking with consistent spacing. The foundation of most layouts.
 <Preview title="Stack Sizes">
     <div style="display: flex; gap: var(--space-8);">
         <div>
-            <small style="color: var(--text-secondary); display: block; margin-bottom: var(--space-2);">Tight (8px)</small>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Tight (8px)</small>
             <div class="Layout-stack Layout-stack--tight" style="width: 100px;">
-                <div style="background: var(--bg-secondary); padding: var(--space-2); border-radius: var(--space-1); text-align: center;">A</div>
-                <div style="background: var(--bg-secondary); padding: var(--space-2); border-radius: var(--space-1); text-align: center;">B</div>
+                <div style="background: var(--bg-s); padding: var(--space-2); border-radius: var(--r-s); text-align: center;">A</div>
+                <div style="background: var(--bg-s); padding: var(--space-2); border-radius: var(--r-s); text-align: center;">B</div>
             </div>
         </div>
         <div>
-            <small style="color: var(--text-secondary); display: block; margin-bottom: var(--space-2);">Default (16px)</small>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Default (16px)</small>
             <div class="Layout-stack" style="width: 100px;">
-                <div style="background: var(--bg-secondary); padding: var(--space-2); border-radius: var(--space-1); text-align: center;">A</div>
-                <div style="background: var(--bg-secondary); padding: var(--space-2); border-radius: var(--space-1); text-align: center;">B</div>
+                <div style="background: var(--bg-s); padding: var(--space-2); border-radius: var(--r-s); text-align: center;">A</div>
+                <div style="background: var(--bg-s); padding: var(--space-2); border-radius: var(--r-s); text-align: center;">B</div>
             </div>
         </div>
         <div>
-            <small style="color: var(--text-secondary); display: block; margin-bottom: var(--space-2);">Loose (32px)</small>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Loose (32px)</small>
             <div class="Layout-stack Layout-stack--loose" style="width: 100px;">
-                <div style="background: var(--bg-secondary); padding: var(--space-2); border-radius: var(--space-1); text-align: center;">A</div>
-                <div style="background: var(--bg-secondary); padding: var(--space-2); border-radius: var(--space-1); text-align: center;">B</div>
+                <div style="background: var(--bg-s); padding: var(--space-2); border-radius: var(--r-s); text-align: center;">A</div>
+                <div style="background: var(--bg-s); padding: var(--space-2); border-radius: var(--r-s); text-align: center;">B</div>
             </div>
         </div>
     </div>
@@ -187,9 +187,9 @@ Horizontal grouping with wrapping. Perfect for tags, buttons, and inline element
 Push items to opposite ends of a row. Common for headers and footers.
 
 <Preview title="Split">
-    <div class="Layout-split" style="width: 100%; background: var(--bg-secondary); padding: var(--space-3); border-radius: var(--space-1);">
+    <div class="Layout-split" style="width: 100%; background: var(--bg-s); padding: var(--space-3); border-radius: var(--r-s);">
         <span style="font-weight: 600;">Left Content</span>
-        <span style="color: var(--text-secondary);">Right Content</span>
+        <span style="color: var(--fg-3);">Right Content</span>
     </div>
 </Preview>
 
@@ -208,13 +208,13 @@ Fixed-width sidebar with fluid main area. Stacks on mobile.
 
 <Preview title="Sidebar Layout">
     <div class="Layout-sidebar" style="width: 100%;">
-        <aside style="background: var(--bg-secondary); padding: var(--space-4); border-radius: var(--space-1);">
+        <aside style="background: var(--bg-s); padding: var(--space-4); border-radius: var(--r-s);">
             <strong style="display: block; margin-bottom: var(--space-2);">Sidebar</strong>
-            <small style="color: var(--text-secondary);">240px fixed</small>
+            <small style="color: var(--fg-3);">240px fixed</small>
         </aside>
-        <main style="background: var(--bg-secondary); padding: var(--space-4); border-radius: var(--space-1);">
+        <main style="background: var(--bg-s); padding: var(--space-4); border-radius: var(--r-s);">
             <strong style="display: block; margin-bottom: var(--space-2);">Main Content</strong>
-            <small style="color: var(--text-secondary);">Fluid width</small>
+            <small style="color: var(--fg-3);">Fluid width</small>
         </main>
     </div>
 </Preview>
@@ -230,10 +230,10 @@ Fixed-width sidebar with fluid main area. Stacks on mobile.
 
 <Preview title="Sidebar Right">
     <div class="Layout-sidebar Layout-sidebar--right" style="width: 100%;">
-        <main style="background: var(--bg-secondary); padding: var(--space-4); border-radius: var(--space-1);">
+        <main style="background: var(--bg-s); padding: var(--space-4); border-radius: var(--r-s);">
             <strong>Main Content</strong>
         </main>
-        <aside style="background: var(--bg-secondary); padding: var(--space-4); border-radius: var(--space-1);">
+        <aside style="background: var(--bg-s); padding: var(--space-4); border-radius: var(--r-s);">
             <strong>Sidebar</strong>
         </aside>
     </div>
@@ -253,11 +253,11 @@ Fixed-width sidebar with fluid main area. Stacks on mobile.
 Vertically and horizontally center content. Useful for empty states and loading screens.
 
 <Preview title="Center">
-    <div class="Layout-center" style="height: 150px; background: var(--bg-secondary); border-radius: var(--space-1);">
+    <div class="Layout-center" style="height: 150px; background: var(--bg-s); border-radius: var(--r-s);">
         <div style="text-align: center;">
             <div style="font-size: 2rem; margin-bottom: var(--space-2);">📭</div>
             <div style="font-weight: 600;">No items yet</div>
-            <div style="color: var(--text-secondary); font-size: 0.9rem;">Add your first item to get started</div>
+            <div style="color: var(--fg-3); font-size: 0.9rem;">Add your first item to get started</div>
         </div>
     </div>
 </Preview>
@@ -275,8 +275,8 @@ Vertically and horizontally center content. Useful for empty states and loading 
 ### Marketing Page
 
 <Preview title="Marketing Layout">
-    <div style="width: 100%; border: 1px solid var(--border-subtle); border-radius: var(--space-2); overflow: hidden;">
-        <header style="padding: var(--space-4) var(--space-6); border-bottom: 1px solid var(--border-subtle);">
+    <div style="width: 100%; border: 1px solid var(--bd); border-radius: var(--r-m); overflow: hidden;">
+        <header style="padding: var(--space-4) var(--space-6); border-bottom: 1px solid var(--bd);">
             <div class="Layout-split">
                 <strong>Logo</strong>
                 <nav class="Layout-cluster">
@@ -289,7 +289,7 @@ Vertically and horizontally center content. Useful for empty states and loading 
         <main style="padding: var(--space-8);">
             <div class="Layout-container Layout-container--narrow" style="text-align: center;">
                 <h2 style="margin-bottom: var(--space-4);">Hero Headline</h2>
-                <p style="color: var(--text-secondary); margin-bottom: var(--space-6);">Supporting text that explains the value proposition.</p>
+                <p style="color: var(--fg-3); margin-bottom: var(--space-6);">Supporting text that explains the value proposition.</p>
                 <div class="Layout-cluster" style="justify-content: center;">
                     <button class="Button Button--primary">Get Started</button>
                     <button class="Button">Learn More</button>
@@ -320,14 +320,14 @@ Vertically and horizontally center content. Useful for empty states and loading 
 ### Dashboard
 
 <Preview title="Dashboard Layout">
-    <div style="width: 100%; border: 1px solid var(--border-subtle); border-radius: var(--space-2); overflow: hidden; height: 280px;">
+    <div style="width: 100%; border: 1px solid var(--bd); border-radius: var(--r-m); overflow: hidden; height: 280px;">
         <div style="display: flex; height: 100%;">
-            <aside style="width: 200px; background: var(--bg-secondary); padding: var(--space-4); border-right: 1px solid var(--border-subtle);">
+            <aside style="width: 200px; background: var(--bg-s); padding: var(--space-4); border-right: 1px solid var(--bd);">
                 <div class="Layout-stack Layout-stack--tight">
-                    <small style="font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em;">Menu</small>
-                    <a href="#" style="padding: var(--space-2); background: var(--accent-primary); color: white; border-radius: var(--space-1); text-decoration: none;">Dashboard</a>
-                    <a href="#" style="padding: var(--space-2); color: var(--text-secondary); text-decoration: none;">Projects</a>
-                    <a href="#" style="padding: var(--space-2); color: var(--text-secondary); text-decoration: none;">Settings</a>
+                    <small style="font-weight: 600; color: var(--fg-3); text-transform: uppercase; letter-spacing: 0.05em;">Menu</small>
+                    <a href="#" style="padding: var(--space-2); background: var(--accent); color: white; border-radius: var(--r-s); text-decoration: none;">Dashboard</a>
+                    <a href="#" style="padding: var(--space-2); color: var(--fg-3); text-decoration: none;">Projects</a>
+                    <a href="#" style="padding: var(--space-2); color: var(--fg-3); text-decoration: none;">Settings</a>
                 </div>
             </aside>
             <main style="flex: 1; padding: var(--space-4); overflow: auto;">
@@ -337,16 +337,16 @@ Vertically and horizontally center content. Useful for empty states and loading 
                         <button class="Button Button--primary" style="font-size: 0.85rem;">New Project</button>
                     </div>
                     <div class="Layout-grid">
-                        <div class="Layout-col-4" style="background: var(--bg-secondary); padding: var(--space-4); border-radius: var(--space-1);">
-                            <small style="color: var(--text-secondary);">Total Users</small>
+                        <div class="Layout-col-4" style="background: var(--bg-s); padding: var(--space-4); border-radius: var(--r-s);">
+                            <small style="color: var(--fg-3);">Total Users</small>
                             <div style="font-size: 1.5rem; font-weight: 700;">1,234</div>
                         </div>
-                        <div class="Layout-col-4" style="background: var(--bg-secondary); padding: var(--space-4); border-radius: var(--space-1);">
-                            <small style="color: var(--text-secondary);">Revenue</small>
+                        <div class="Layout-col-4" style="background: var(--bg-s); padding: var(--space-4); border-radius: var(--r-s);">
+                            <small style="color: var(--fg-3);">Revenue</small>
                             <div style="font-size: 1.5rem; font-weight: 700;">$12.4k</div>
                         </div>
-                        <div class="Layout-col-4" style="background: var(--bg-secondary); padding: var(--space-4); border-radius: var(--space-1);">
-                            <small style="color: var(--text-secondary);">Active Now</small>
+                        <div class="Layout-col-4" style="background: var(--bg-s); padding: var(--space-4); border-radius: var(--r-s);">
+                            <small style="color: var(--fg-3);">Active Now</small>
                             <div style="font-size: 1.5rem; font-weight: 700;">89</div>
                         </div>
                     </div>
@@ -407,7 +407,7 @@ Vertically and horizontally center content. Useful for empty states and loading 
 ### Form Layout
 
 <Preview title="Form Layout">
-    <div class="Layout-container Layout-container--narrow" style="padding: var(--space-6); background: var(--bg-secondary); border-radius: var(--space-2);">
+    <div class="Layout-container Layout-container--narrow" style="padding: var(--space-6); background: var(--bg-s); border-radius: var(--r-m);">
         <div class="Layout-stack">
             <h3 style="margin: 0;">Create Account</h3>
             <div class="Layout-grid">
@@ -446,10 +446,10 @@ Vertically and horizontally center content. Useful for empty states and loading 
             <header style="margin-bottom: var(--space-6);">
                 <div class="Layout-cluster" style="margin-bottom: var(--space-3);">
                     <span class="Badge Badge--primary">Design</span>
-                    <span style="color: var(--text-secondary); font-size: 0.85rem;">5 min read</span>
+                    <span style="color: var(--fg-3); font-size: 0.85rem;">5 min read</span>
                 </div>
                 <h2 style="margin: 0 0 var(--space-2);">Article Headline Goes Here</h2>
-                <p style="color: var(--text-secondary); margin: 0;">A brief summary or subtitle that gives context to the article.</p>
+                <p style="color: var(--fg-3); margin: 0;">A brief summary or subtitle that gives context to the article.</p>
             </header>
             <div style="line-height: 1.7;">
                 <p>Article body text with optimal line height for comfortable reading. The measure is kept between 45-75 characters per line.</p>

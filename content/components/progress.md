@@ -56,19 +56,19 @@ Progress indicators show the status of ongoing processes.
 <Preview title="Progress Sizes">
     <div style="display: flex; flex-direction: column; gap: var(--space-4); width: 100%;">
         <div>
-            <small style="color: var(--text-secondary);">Small</small>
+            <small style="color: var(--fg-3);">Small</small>
             <div class="Progress Progress--small" style="margin-top: var(--space-1);">
                 <div class="Progress-bar" style="width: 60%;"></div>
             </div>
         </div>
         <div>
-            <small style="color: var(--text-secondary);">Default</small>
+            <small style="color: var(--fg-3);">Default</small>
             <div class="Progress" style="margin-top: var(--space-1);">
                 <div class="Progress-bar" style="width: 60%;"></div>
             </div>
         </div>
         <div>
-            <small style="color: var(--text-secondary);">Large</small>
+            <small style="color: var(--fg-3);">Large</small>
             <div class="Progress Progress--large" style="margin-top: var(--space-1);">
                 <div class="Progress-bar" style="width: 60%;"></div>
             </div>
@@ -166,10 +166,10 @@ For inline loading states.
 ## Full Page Loader
 
 <Preview title="Page Loader">
-    <div style="height: 200px; display: flex; align-items: center; justify-content: center; background: var(--bg-secondary); border-radius: var(--space-2);">
+    <div style="height: 200px; display: flex; align-items: center; justify-content: center; background: var(--bg-s); border-radius: var(--r-m);">
         <div style="text-align: center;">
             <div class="Spinner Spinner--large"></div>
-            <p style="margin-top: var(--space-3); color: var(--text-secondary); font-size: 0.9rem;">Loading...</p>
+            <p style="margin-top: var(--space-3); color: var(--fg-3); font-size: 0.9rem;">Loading...</p>
         </div>
     </div>
 </Preview>

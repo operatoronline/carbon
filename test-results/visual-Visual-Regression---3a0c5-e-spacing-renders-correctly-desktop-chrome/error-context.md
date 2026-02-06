@@ -1,0 +1,483 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - navigation "Main navigation" [ref=e3]:
+    - link "Home" [ref=e4] [cursor=pointer]:
+      - /url: ../index.html
+      - generic [ref=e5]: 
+      - generic [ref=e6]: Home
+    - link "Tokens" [ref=e7] [cursor=pointer]:
+      - /url: ../tokens/colors.html
+      - generic [ref=e8]: 
+      - generic [ref=e9]: Tokens
+    - link "Components" [ref=e10] [cursor=pointer]:
+      - /url: ../components/buttons.html
+      - generic [ref=e11]: 
+      - generic [ref=e12]: Components
+    - link "Patterns" [ref=e13] [cursor=pointer]:
+      - /url: ../patterns/layouts.html
+      - generic [ref=e14]: 
+      - generic [ref=e15]: Patterns
+    - button "Search" [ref=e17] [cursor=pointer]:
+      - generic [ref=e18]: 
+    - button "Toggle theme" [ref=e19] [cursor=pointer]:
+      - generic [ref=e20]: 
+  - banner [ref=e21]:
+    - link " Carbon" [ref=e23] [cursor=pointer]:
+      - /url: ../index.html
+      - generic [ref=e24]: 
+      - generic [ref=e25]: Carbon
+    - generic [ref=e27]:
+      - generic [ref=e28]: 
+      - textbox "Search" [ref=e29]:
+        - /placeholder: Search components...
+  - main [ref=e31]:
+    - generic [ref=e32]:
+      - navigation "Breadcrumb" [ref=e33]:
+        - link "Carbon" [ref=e34] [cursor=pointer]:
+          - /url: ../index.html
+        - generic [ref=e35]: /
+        - generic [ref=e36]: Tokens
+        - generic [ref=e37]: /
+        - generic [ref=e38]: Spacing
+      - heading "Spacing" [level=1] [ref=e39]:
+        - emphasis [ref=e40]: Spacing
+    - article [ref=e41]:
+      - heading "Spacing" [level=1] [ref=e42]
+      - paragraph [ref=e43]:
+        - text: Carbon uses a
+        - strong [ref=e44]: 4px base unit
+        - text: for all spacing. This creates consistent rhythm and alignment across every component and layout.
+      - heading "Why 4px?" [level=2] [ref=e45]
+      - list [ref=e46]:
+        - listitem [ref=e47]:
+          - strong [ref=e48]: Divisible
+          - text: — Works cleanly with common screen densities (1x, 2x, 3x)
+        - listitem [ref=e49]:
+          - strong [ref=e50]: Flexible
+          - text: — Small enough for fine-tuning, large enough to create visible hierarchy
+        - listitem [ref=e51]:
+          - strong [ref=e52]: Industry standard
+          - text: — Used by Material Design, GitHub Primer, and most modern systems
+      - separator [ref=e53]
+      - heading "The Scale" [level=2] [ref=e54]
+      - table [ref=e55]:
+        - rowgroup [ref=e56]:
+          - row "Token Value Pixels Common Usage" [ref=e57]:
+            - columnheader "Token" [ref=e58]
+            - columnheader "Value" [ref=e59]
+            - columnheader "Pixels" [ref=e60]
+            - columnheader "Common Usage" [ref=e61]
+        - rowgroup [ref=e62]:
+          - row "--space-1 0.25rem 4px Icon gaps, tight padding" [ref=e63]:
+            - cell "--space-1" [ref=e64]:
+              - code [ref=e65]: "--space-1"
+            - cell "0.25rem" [ref=e66]
+            - cell "4px" [ref=e67]
+            - cell "Icon gaps, tight padding" [ref=e68]
+          - row "--space-2 0.5rem 8px Button padding, small gaps" [ref=e69]:
+            - cell "--space-2" [ref=e70]:
+              - code [ref=e71]: "--space-2"
+            - cell "0.5rem" [ref=e72]
+            - cell "8px" [ref=e73]
+            - cell "Button padding, small gaps" [ref=e74]
+          - row "--space-3 0.75rem 12px Input padding, list spacing" [ref=e75]:
+            - cell "--space-3" [ref=e76]:
+              - code [ref=e77]: "--space-3"
+            - cell "0.75rem" [ref=e78]
+            - cell "12px" [ref=e79]
+            - cell "Input padding, list spacing" [ref=e80]
+          - row "--space-4 1rem 16px Card padding, standard gaps" [ref=e81]:
+            - cell "--space-4" [ref=e82]:
+              - code [ref=e83]: "--space-4"
+            - cell "1rem" [ref=e84]
+            - cell "16px" [ref=e85]
+            - cell "Card padding, standard gaps" [ref=e86]
+          - row "--space-5 1.25rem 20px Section spacing" [ref=e87]:
+            - cell "--space-5" [ref=e88]:
+              - code [ref=e89]: "--space-5"
+            - cell "1.25rem" [ref=e90]
+            - cell "20px" [ref=e91]
+            - cell "Section spacing" [ref=e92]
+          - row "--space-6 1.5rem 24px Component margins" [ref=e93]:
+            - cell "--space-6" [ref=e94]:
+              - code [ref=e95]: "--space-6"
+            - cell "1.5rem" [ref=e96]
+            - cell "24px" [ref=e97]
+            - cell "Component margins" [ref=e98]
+          - row "--space-8 2rem 32px Large gaps, section breaks" [ref=e99]:
+            - cell "--space-8" [ref=e100]:
+              - code [ref=e101]: "--space-8"
+            - cell "2rem" [ref=e102]
+            - cell "32px" [ref=e103]
+            - cell "Large gaps, section breaks" [ref=e104]
+          - row "--space-12 3rem 48px Page sections, hero spacing" [ref=e105]:
+            - cell "--space-12" [ref=e106]:
+              - code [ref=e107]: "--space-12"
+            - cell "3rem" [ref=e108]
+            - cell "48px" [ref=e109]
+            - cell "Page sections, hero spacing" [ref=e110]
+      - generic [ref=e111]:
+        - generic [ref=e112]:
+          - generic [ref=e113]:
+            - button "Preview" [ref=e114] [cursor=pointer]
+            - button "HTML" [ref=e115] [cursor=pointer]
+          - generic [ref=e116]:
+            - button "" [ref=e117] [cursor=pointer]:
+              - generic [ref=e118]: 
+            - button "" [ref=e119] [cursor=pointer]:
+              - generic [ref=e120]: 
+            - button "" [ref=e121] [cursor=pointer]:
+              - generic [ref=e122]: 
+            - button "" [ref=e124] [cursor=pointer]:
+              - generic [ref=e125]: 
+            - button "" [ref=e126] [cursor=pointer]:
+              - generic [ref=e127]: 
+            - button "" [ref=e128] [cursor=pointer]:
+              - generic [ref=e129]: 
+        - generic [ref=e132]:
+          - generic [ref=e133]:
+            - code [ref=e134]: "--space-1"
+            - generic [ref=e136]: 4px
+          - generic [ref=e137]:
+            - code [ref=e138]: "--space-2"
+            - generic [ref=e140]: 8px
+          - generic [ref=e141]:
+            - code [ref=e142]: "--space-3"
+            - generic [ref=e144]: 12px
+          - generic [ref=e145]:
+            - code [ref=e146]: "--space-4"
+            - generic [ref=e148]: 16px
+          - generic [ref=e149]:
+            - code [ref=e150]: "--space-5"
+            - generic [ref=e152]: 20px
+          - generic [ref=e153]:
+            - code [ref=e154]: "--space-6"
+            - generic [ref=e156]: 24px
+          - generic [ref=e157]:
+            - code [ref=e158]: "--space-8"
+            - generic [ref=e160]: 32px
+          - generic [ref=e161]:
+            - code [ref=e162]: "--space-12"
+            - generic [ref=e164]: 48px
+        - text: 
+      - separator [ref=e165]
+      - heading "Usage Guidelines" [level=2] [ref=e166]
+      - heading "Component Internal Spacing" [level=3] [ref=e167]
+      - paragraph [ref=e168]: Use smaller values (1-4) for padding and gaps within components.
+      - generic [ref=e169]:
+        - generic [ref=e170]:
+          - generic [ref=e171]:
+            - button "Preview" [ref=e172] [cursor=pointer]
+            - button "HTML" [ref=e173] [cursor=pointer]
+          - generic [ref=e174]:
+            - button "" [ref=e175] [cursor=pointer]:
+              - generic [ref=e176]: 
+            - button "" [ref=e177] [cursor=pointer]:
+              - generic [ref=e178]: 
+            - button "" [ref=e179] [cursor=pointer]:
+              - generic [ref=e180]: 
+            - button "" [ref=e182] [cursor=pointer]:
+              - generic [ref=e183]: 
+            - button "" [ref=e184] [cursor=pointer]:
+              - generic [ref=e185]: 
+            - button "" [ref=e186] [cursor=pointer]:
+              - generic [ref=e187]: 
+        - generic [ref=e190]:
+          - generic [ref=e191]:
+            - button "Standard Button" [ref=e192] [cursor=pointer]
+            - code [ref=e193]: "padding: var(--space-2) var(--space-4)"
+          - generic [ref=e194]:
+            - button "Small Button" [ref=e195] [cursor=pointer]
+            - code [ref=e196]: "padding: var(--space-1) var(--space-2)"
+        - text: 
+      - generic [ref=e197]:
+        - code [ref=e199]: "/* Buttons */ .Button { padding: var(--space-2) var(--space-4); } .Button--small { padding: var(--space-1) var(--space-2); } .Button--large { padding: var(--space-3) var(--space-6); } /* Inputs */ .Input { padding: var(--space-2) var(--space-3); } /* Cards */ .Card-body { padding: var(--space-4); }"
+        - button "Copy code" [ref=e200] [cursor=pointer]:
+          - generic [ref=e201]: 
+      - heading "Component Gaps" [level=3] [ref=e202]
+      - paragraph [ref=e203]: Use consistent gaps between related elements.
+      - generic [ref=e204]:
+        - generic [ref=e205]:
+          - generic [ref=e206]:
+            - button "Preview" [ref=e207] [cursor=pointer]
+            - button "HTML" [ref=e208] [cursor=pointer]
+          - generic [ref=e209]:
+            - button "" [ref=e210] [cursor=pointer]:
+              - generic [ref=e211]: 
+            - button "" [ref=e212] [cursor=pointer]:
+              - generic [ref=e213]: 
+            - button "" [ref=e214] [cursor=pointer]:
+              - generic [ref=e215]: 
+            - button "" [ref=e217] [cursor=pointer]:
+              - generic [ref=e218]: 
+            - button "" [ref=e219] [cursor=pointer]:
+              - generic [ref=e220]: 
+            - button "" [ref=e221] [cursor=pointer]:
+              - generic [ref=e222]: 
+        - generic [ref=e225]:
+          - generic [ref=e226]:
+            - generic [ref=e227]: Tight (--space-2)
+            - generic [ref=e228]:
+              - generic [ref=e229]: Tag
+              - generic [ref=e230]: Tag
+              - generic [ref=e231]: Tag
+          - generic [ref=e232]:
+            - generic [ref=e233]: Standard (--space-4)
+            - generic [ref=e234]:
+              - button "Save" [ref=e235] [cursor=pointer]
+              - button "Cancel" [ref=e236] [cursor=pointer]
+          - generic [ref=e237]:
+            - generic [ref=e238]: Loose (--space-6)
+            - generic [ref=e239]:
+              - generic [ref=e240]: Card A
+              - generic [ref=e241]: Card B
+        - text: 
+      - generic [ref=e242]:
+        - code [ref=e244]: "/* Tight - inline elements */ gap: var(--space-2); /* Standard - buttons, form rows */ gap: var(--space-4); /* Loose - cards, sections */ gap: var(--space-6);"
+        - button "Copy code" [ref=e245] [cursor=pointer]:
+          - generic [ref=e246]: 
+      - heading "Layout Spacing" [level=3] [ref=e247]
+      - paragraph [ref=e248]: Use larger values (6-12) for page-level spacing.
+      - generic [ref=e249]:
+        - generic [ref=e250]:
+          - generic [ref=e251]:
+            - button "Preview" [ref=e252] [cursor=pointer]
+            - button "HTML" [ref=e253] [cursor=pointer]
+          - generic [ref=e254]:
+            - button "" [ref=e255] [cursor=pointer]:
+              - generic [ref=e256]: 
+            - button "" [ref=e257] [cursor=pointer]:
+              - generic [ref=e258]: 
+            - button "" [ref=e259] [cursor=pointer]:
+              - generic [ref=e260]: 
+            - button "" [ref=e262] [cursor=pointer]:
+              - generic [ref=e263]: 
+            - button "" [ref=e264] [cursor=pointer]:
+              - generic [ref=e265]: 
+            - button "" [ref=e266] [cursor=pointer]:
+              - generic [ref=e267]: 
+        - generic [ref=e270]:
+          - generic [ref=e271]:
+            - strong [ref=e272]: Header
+            - code [ref=e273]: "padding: var(--space-6)"
+          - generic [ref=e274]:
+            - strong [ref=e275]: Main Content
+            - code [ref=e276]: "padding: var(--space-8)"
+            - generic [ref=e277]: "Nested section with margin-top: var(--space-6)"
+          - generic [ref=e278]:
+            - strong [ref=e279]: Footer
+            - code [ref=e280]: "padding: var(--space-4)"
+        - text: 
+      - generic [ref=e281]:
+        - code [ref=e283]: "/* Page container */ .container { padding: 0 var(--space-6); } /* Section margins */ .section { margin-bottom: var(--space-12); } /* Content blocks */ .content > * + * { margin-top: var(--space-6); }"
+        - button "Copy code" [ref=e284] [cursor=pointer]:
+          - generic [ref=e285]: 
+      - separator [ref=e286]
+      - heading "Spacing Patterns" [level=2] [ref=e287]
+      - heading "Stack Pattern" [level=3] [ref=e288]
+      - paragraph [ref=e289]: Vertical spacing between block elements.
+      - generic [ref=e290]:
+        - generic [ref=e291]:
+          - generic [ref=e292]:
+            - button "Preview" [ref=e293] [cursor=pointer]
+            - button "HTML" [ref=e294] [cursor=pointer]
+          - generic [ref=e295]:
+            - button "" [ref=e296] [cursor=pointer]:
+              - generic [ref=e297]: 
+            - button "" [ref=e298] [cursor=pointer]:
+              - generic [ref=e299]: 
+            - button "" [ref=e300] [cursor=pointer]:
+              - generic [ref=e301]: 
+            - button "" [ref=e303] [cursor=pointer]:
+              - generic [ref=e304]: 
+            - button "" [ref=e305] [cursor=pointer]:
+              - generic [ref=e306]: 
+            - button "" [ref=e307] [cursor=pointer]:
+              - generic [ref=e308]: 
+        - generic [ref=e311]:
+          - generic [ref=e312]: First item
+          - generic [ref=e313]: Second item
+          - generic [ref=e314]: Third item
+        - text: 
+      - generic [ref=e315]:
+        - code [ref=e317]: ".Layout-stack { gap: var(--space-4); } .Layout-stack--tight { gap: var(--space-2); } .Layout-stack--loose { gap: var(--space-8); }"
+        - button "Copy code" [ref=e318] [cursor=pointer]:
+          - generic [ref=e319]: 
+      - heading "Inset Pattern" [level=3] [ref=e320]
+      - paragraph [ref=e321]: Equal padding on all sides.
+      - generic [ref=e322]:
+        - generic [ref=e323]:
+          - generic [ref=e324]:
+            - button "Preview" [ref=e325] [cursor=pointer]
+            - button "HTML" [ref=e326] [cursor=pointer]
+          - generic [ref=e327]:
+            - button "" [ref=e328] [cursor=pointer]:
+              - generic [ref=e329]: 
+            - button "" [ref=e330] [cursor=pointer]:
+              - generic [ref=e331]: 
+            - button "" [ref=e332] [cursor=pointer]:
+              - generic [ref=e333]: 
+            - button "" [ref=e335] [cursor=pointer]:
+              - generic [ref=e336]: 
+            - button "" [ref=e337] [cursor=pointer]:
+              - generic [ref=e338]: 
+            - button "" [ref=e339] [cursor=pointer]:
+              - generic [ref=e340]: 
+        - generic [ref=e343]:
+          - generic [ref=e345]: space-2
+          - generic [ref=e347]: space-4
+          - generic [ref=e349]: space-6
+        - text: 
+      - heading "Squish Pattern" [level=3] [ref=e350]
+      - paragraph [ref=e351]: Reduced vertical padding (common for buttons and pills).
+      - generic [ref=e352]:
+        - generic [ref=e353]:
+          - generic [ref=e354]:
+            - button "Preview" [ref=e355] [cursor=pointer]
+            - button "HTML" [ref=e356] [cursor=pointer]
+          - generic [ref=e357]:
+            - button "" [ref=e358] [cursor=pointer]:
+              - generic [ref=e359]: 
+            - button "" [ref=e360] [cursor=pointer]:
+              - generic [ref=e361]: 
+            - button "" [ref=e362] [cursor=pointer]:
+              - generic [ref=e363]: 
+            - button "" [ref=e365] [cursor=pointer]:
+              - generic [ref=e366]: 
+            - button "" [ref=e367] [cursor=pointer]:
+              - generic [ref=e368]: 
+            - button "" [ref=e369] [cursor=pointer]:
+              - generic [ref=e370]: 
+        - generic [ref=e373]:
+          - generic [ref=e374]: "Squish: 1 × 3"
+          - generic [ref=e375]: "Squish: 2 × 4"
+          - generic [ref=e376]: "Squish: 3 × 6"
+        - text: 
+      - generic [ref=e377]:
+        - code [ref=e379]: "/* Squish ratios (vertical × horizontal) */ padding: var(--space-1) var(--space-3); /* 1:3 - pills, small tags */ padding: var(--space-2) var(--space-4); /* 1:2 - buttons */ padding: var(--space-3) var(--space-6); /* 1:2 - large buttons */"
+        - button "Copy code" [ref=e380] [cursor=pointer]:
+          - generic [ref=e381]: 
+      - separator [ref=e382]
+      - heading "Responsive Spacing" [level=2] [ref=e383]
+      - paragraph [ref=e384]: Adjust spacing at different breakpoints for optimal density.
+      - generic [ref=e385]:
+        - code [ref=e387]:
+          - text: "/* Base mobile spacing */ .container { padding: 0 var(--space-4); } /* Tablet and up */"
+          - generic [ref=e388]: "@media (min-width: 768px)"
+          - text: "{ .container { padding: 0 var(--space-6); } } /* Desktop */"
+          - generic [ref=e389]: "@media (min-width: 1024px)"
+          - text: "{ .container { padding: 0 var(--space-8); } }"
+        - button "Copy code" [ref=e390] [cursor=pointer]:
+          - generic [ref=e391]: 
+      - heading "Spacing Scale by Context" [level=3] [ref=e392]
+      - table [ref=e393]:
+        - rowgroup [ref=e394]:
+          - row "Context Mobile Tablet Desktop" [ref=e395]:
+            - columnheader "Context" [ref=e396]
+            - columnheader "Mobile" [ref=e397]
+            - columnheader "Tablet" [ref=e398]
+            - columnheader "Desktop" [ref=e399]
+        - rowgroup [ref=e400]:
+          - row "Page padding space-4 space-6 space-8" [ref=e401]:
+            - cell "Page padding" [ref=e402]
+            - cell "space-4" [ref=e403]
+            - cell "space-6" [ref=e404]
+            - cell "space-8" [ref=e405]
+          - row "Section gap space-6 space-8 space-12" [ref=e406]:
+            - cell "Section gap" [ref=e407]
+            - cell "space-6" [ref=e408]
+            - cell "space-8" [ref=e409]
+            - cell "space-12" [ref=e410]
+          - row "Card padding space-3 space-4 space-4" [ref=e411]:
+            - cell "Card padding" [ref=e412]
+            - cell "space-3" [ref=e413]
+            - cell "space-4" [ref=e414]
+            - cell "space-4" [ref=e415]
+          - row "Component gap space-2 space-3 space-4" [ref=e416]:
+            - cell "Component gap" [ref=e417]
+            - cell "space-2" [ref=e418]
+            - cell "space-3" [ref=e419]
+            - cell "space-4" [ref=e420]
+      - separator [ref=e421]
+      - heading "Best Practices" [level=2] [ref=e422]
+      - heading "Do" [level=3] [ref=e423]
+      - list [ref=e424]:
+        - listitem [ref=e425]:
+          - text: ✓
+          - strong [ref=e426]: Use tokens, not arbitrary values
+          - text: —
+          - code [ref=e427]: var(--space-4)
+          - text: not
+          - code [ref=e428]: 15px
+        - listitem [ref=e429]:
+          - text: ✓
+          - strong [ref=e430]: Be consistent
+          - text: — Same spacing for same relationships
+        - listitem [ref=e431]:
+          - text: ✓
+          - strong [ref=e432]: Create hierarchy
+          - text: — More space = more separation
+        - listitem [ref=e433]:
+          - text: ✓
+          - strong [ref=e434]: Use the scale
+          - text: — Jump by meaningful increments (2→4→6, not 2→3→4)
+      - heading "Don’t" [level=3] [ref=e435]
+      - list [ref=e436]:
+        - listitem [ref=e437]:
+          - text: ✗
+          - strong [ref=e438]: Mix units
+          - text: — Don’t combine px and rem arbitrarily
+        - listitem [ref=e439]:
+          - text: ✗
+          - strong [ref=e440]: Invent values
+          - text: — Stick to the scale
+        - listitem [ref=e441]:
+          - text: ✗
+          - strong [ref=e442]: Overspace
+          - text: — Dense UIs can feel more professional
+        - listitem [ref=e443]:
+          - text: ✗
+          - strong [ref=e444]: Underspace
+          - text: — Cramped layouts hurt readability
+      - generic [ref=e445]:
+        - generic [ref=e446]:
+          - generic [ref=e447]:
+            - button "Preview" [ref=e448] [cursor=pointer]
+            - button "HTML" [ref=e449] [cursor=pointer]
+          - generic [ref=e450]:
+            - button "" [ref=e451] [cursor=pointer]:
+              - generic [ref=e452]: 
+            - button "" [ref=e453] [cursor=pointer]:
+              - generic [ref=e454]: 
+            - button "" [ref=e455] [cursor=pointer]:
+              - generic [ref=e456]: 
+            - button "" [ref=e458] [cursor=pointer]:
+              - generic [ref=e459]: 
+            - button "" [ref=e460] [cursor=pointer]:
+              - generic [ref=e461]: 
+            - button "" [ref=e462] [cursor=pointer]:
+              - generic [ref=e463]: 
+        - generic [ref=e466]:
+          - generic [ref=e467]:
+            - generic [ref=e468]: ❌ Inconsistent
+            - generic [ref=e469]:
+              - generic [ref=e470]: Title
+              - generic [ref=e471]: Description text
+              - button "Action" [ref=e472] [cursor=pointer]
+          - generic [ref=e473]:
+            - generic [ref=e474]: ✓ Consistent
+            - generic [ref=e475]:
+              - generic [ref=e476]: Title
+              - generic [ref=e477]: Description text
+              - button "Action" [ref=e478] [cursor=pointer]
+        - text: 
+      - separator [ref=e479]
+      - heading "Quick Reference" [level=2] [ref=e480]
+      - generic [ref=e481]:
+        - code [ref=e483]: /* Micro */ var(--space-1) /* 4px - Icon gaps, borders */ var(--space-2) /* 8px - Button padding, small gaps */ /* Standard */ var(--space-3) /* 12px - Input padding */ var(--space-4) /* 16px - Card padding, default gap */ /* Comfortable */ var(--space-5) /* 20px - Section spacing */ var(--space-6) /* 24px - Component margins */ /* Spacious */ var(--space-8) /* 32px - Section breaks */ var(--space-12) /* 48px - Page sections */
+        - button "Copy code" [ref=e484] [cursor=pointer]:
+          - generic [ref=e485]: 
+    - paragraph [ref=e487]: "Carbon v0.3 • Last built: 2/5/2026, 6:19:55 PM"
+```

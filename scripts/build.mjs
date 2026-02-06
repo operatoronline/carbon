@@ -21,11 +21,23 @@ function escapeHtml(str) {
 
 // Format HTML for display (basic indentation)
 function formatHtml(html) {
-    // Remove leading/trailing whitespace from lines
     return html.split('\n')
         .map(line => line.trim())
         .filter(line => line.length > 0)
         .join('\n');
+}
+
+// Create display title with italic accent word (Library aesthetic)
+// Pattern: First word or last word gets the italic treatment
+function createDisplayTitle(title) {
+    const words = title.split(' ');
+    if (words.length === 1) {
+        // Single word: italicize the whole word
+        return `<em>${title}</em>`;
+    }
+    // Multiple words: italicize the first word
+    words[0] = `<em>${words[0]}</em>`;
+    return words.join(' ');
 }
 
 // Custom Plugin for <Preview> blocks (v0.2 Enhanced)
@@ -60,35 +72,30 @@ const previewPlugin = (md) => {
             // Build the enhanced Preview HTML
             return `
 <div class="Preview" id="${previewId}">
-    <div class="Preview-toolbar">
+    <div class="Preview-header">
         <div class="Preview-tabs">
-            <button class="Preview-tab active" data-tab="preview">
-                <i class="ph ph-eye"></i> Preview
-            </button>
-            <button class="Preview-tab" data-tab="html">
-                <i class="ph ph-code"></i> HTML
-            </button>
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
         </div>
         <div class="Preview-controls">
-            <div class="Preview-viewport-group">
-                <button class="Preview-control active" data-viewport="desktop" title="Desktop">
-                    <i class="ph ph-desktop"></i>
-                </button>
-                <button class="Preview-control" data-viewport="tablet" title="Tablet">
-                    <i class="ph ph-device-tablet"></i>
-                </button>
-                <button class="Preview-control" data-viewport="mobile" title="Mobile">
-                    <i class="ph ph-device-mobile"></i>
-                </button>
-            </div>
             <button class="Preview-control${defaultBg === 'light' ? ' active' : ''}" data-bg="light" title="Light background">
                 <i class="ph ph-sun"></i>
             </button>
             <button class="Preview-control${defaultBg === 'dark' ? ' active' : ''}" data-bg="dark" title="Dark background">
                 <i class="ph ph-moon"></i>
             </button>
-            <button class="Preview-control${defaultBg === 'checkered' ? ' active' : ''}" data-bg="checkered" title="Checkered background">
+            <button class="Preview-control${defaultBg === 'checkered' ? ' active' : ''}" data-bg="checkered" title="Checkered">
                 <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
             </button>
         </div>
     </div>
@@ -96,10 +103,8 @@ const previewPlugin = (md) => {
         <div class="Preview-canvas${defaultBg !== 'default' ? ` Preview-canvas--${defaultBg}` : ''}">${innerContent}</div>
     </div>
     <div class="Preview-pane" data-pane="html">
-        <div class="Preview-code">
-            <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
-            <pre class="language-html"><code class="language-html">${escapedCode}</code></pre>
-        </div>
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">${escapedCode}</code></pre>
     </div>
 </div>`;
         }
@@ -114,19 +119,17 @@ const CONFIG = {
     distDir: 'dist',
     templatePath: 'templates/page.html',
     assets: ['styles', 'scripts', 'assets'],
-    version: 'v0.2'
+    version: 'v0.3'
 };
 
 async function build() {
     const startTime = Date.now();
-    console.log('🚀 Starting Carbon build...');
+    console.log('🚀 Starting Carbon v0.3 build...');
 
     const template = await fs.readFile(CONFIG.templatePath, 'utf-8');
 
     // 1. Clean dist and copy assets
     await fs.ensureDir(CONFIG.distDir);
-    // Note: In our specific setup, dist is a symlink to /var/www/prototypes/carbon
-    // We should clean its contents rather than deleting the folder itself.
     const filesInDist = await fs.readdir(CONFIG.distDir);
     for (const file of filesInDist) {
         await fs.remove(path.join(CONFIG.distDir, file));
@@ -201,8 +204,6 @@ async function build() {
                 if (i === pathParts.length - 1) {
                     breadcrumbsHtml += `<span>${capitalizedLabel}</span>`;
                 } else {
-                    // This is simple and assumes folders don't have index files, 
-                    // which is true in our current structure.
                     breadcrumbsHtml += `<span>${capitalizedLabel}</span>`;
                 }
             }
@@ -218,7 +219,6 @@ async function build() {
                     const text = tokens[i + 1].content;
                     const id = text.toLowerCase().replace(/[^\w]+/g, '-');
                     tocEntries.push({ level, text, id });
-                    // Add ID to heading
                     tokens[i].attrPush(['id', id]);
                 }
             }
@@ -230,9 +230,13 @@ async function build() {
         const title = baseName === 'index' 
             ? 'Introduction' 
             : baseName.replace(/-/g, ' ').charAt(0).toUpperCase() + baseName.replace(/-/g, ' ').slice(1);
+        
+        // Create display title with italic accent for hero treatment
+        const titleDisplay = createDisplayTitle(title);
 
         const finalHtml = template
             .replace(/{{TITLE}}/g, title)
+            .replace(/{{TITLE_DISPLAY}}/g, titleDisplay)
             .replace(/{{NAV_HTML}}/g, navHtml)
             .replace(/{{BREADCRUMBS_HTML}}/g, breadcrumbsHtml)
             .replace(/{{TOC_HTML}}/g, tocHtml)
@@ -255,7 +259,6 @@ async function build() {
         const title = path.basename(file, '.md').replace(/-/g, ' ');
         const capitalizedTitle = title.charAt(0).toUpperCase() + title.slice(1);
         
-        // Extract plain text (strip HTML and Preview blocks)
         const plainText = rawContent
             .replace(/<Preview[^>]*>[\s\S]*?<\/Preview>/g, '')
             .replace(/<[^>]+>/g, '')
@@ -266,7 +269,6 @@ async function build() {
             .trim()
             .slice(0, 500);
         
-        // Get section from path
         const section = relativePath.includes(path.sep) 
             ? relativePath.split(path.sep)[0] 
             : 'home';

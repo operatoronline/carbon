@@ -40,9 +40,9 @@ Replace the icon with a custom illustration for more personality.
     <div class="EmptyState">
         <div class="EmptyState-illustration">
             <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
-                <circle cx="60" cy="60" r="50" fill="var(--bg-secondary)" stroke="var(--border-subtle)" stroke-width="2"/>
-                <path d="M40 55 L60 75 L80 55" stroke="var(--accent-primary)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                <circle cx="60" cy="40" r="6" fill="var(--accent-primary)"/>
+                <circle cx="60" cy="60" r="50" fill="var(--bg-s)" stroke="var(--bd)" stroke-width="2"/>
+                <path d="M40 55 L60 75 L80 55" stroke="var(--accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <circle cx="60" cy="40" r="6" fill="var(--accent)"/>
             </svg>
         </div>
         <h3 class="EmptyState-title">Your inbox is empty</h3>
@@ -67,7 +67,7 @@ Replace the icon with a custom illustration for more personality.
 For smaller containers like sidebars or cards.
 
 <Preview title="Compact Empty State">
-    <div style="max-width: 280px; border: 1px solid var(--border-subtle); border-radius: var(--space-2); padding: var(--space-4);">
+    <div style="max-width: 280px; border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-4);">
         <div class="EmptyState EmptyState--compact">
             <div class="EmptyState-icon">
                 <i class="ph ph-file-text"></i>
@@ -176,11 +176,11 @@ Onboarding empty states that guide new users.
             </div>
             <div style="display: flex; gap: var(--space-3); align-items: flex-start;">
                 <span class="Badge" style="border-radius: 50%; min-width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;">2</span>
-                <span style="color: var(--text-secondary);">Invite team members</span>
+                <span style="color: var(--fg-3);">Invite team members</span>
             </div>
             <div style="display: flex; gap: var(--space-3); align-items: flex-start;">
                 <span class="Badge" style="border-radius: 50%; min-width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;">3</span>
-                <span style="color: var(--text-secondary);">Start collaborating</span>
+                <span style="color: var(--fg-3);">Start collaborating</span>
             </div>
         </div>
         <button class="Button Button--primary" style="margin-top: var(--space-4);">Create Project</button>
@@ -199,7 +199,7 @@ Empty states within card components.
             <div class="Card" style="height: 200px;">
                 <div class="Card-body" style="height: 100%; display: flex; align-items: center; justify-content: center;">
                     <div class="EmptyState EmptyState--compact">
-                        <i class="ph ph-chart-line" style="font-size: 2rem; color: var(--text-secondary);"></i>
+                        <i class="ph ph-chart-line" style="font-size: 2rem; color: var(--fg-3);"></i>
                         <p class="EmptyState-description">No data to display</p>
                     </div>
                 </div>
@@ -209,7 +209,7 @@ Empty states within card components.
             <div class="Card" style="height: 200px;">
                 <div class="Card-body" style="height: 100%; display: flex; align-items: center; justify-content: center;">
                     <div class="EmptyState EmptyState--compact">
-                        <i class="ph ph-users" style="font-size: 2rem; color: var(--text-secondary);"></i>
+                        <i class="ph ph-users" style="font-size: 2rem; color: var(--fg-3);"></i>
                         <p class="EmptyState-description">No team members</p>
                         <a href="#" class="Link" style="font-size: 0.85rem;">Invite people</a>
                     </div>
@@ -226,7 +226,7 @@ Empty states within card components.
 Empty state for table components.
 
 <Preview title="Empty Table">
-    <div style="border: 1px solid var(--border-subtle); border-radius: var(--space-2); overflow: hidden;">
+    <div style="border: 1px solid var(--bd); border-radius: var(--r-m); overflow: hidden;">
         <table class="Table" style="margin: 0;">
             <thead>
                 <tr>
@@ -298,8 +298,8 @@ Empty state for table components.
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background-color: var(--bg-secondary);
-  color: var(--text-secondary);
+  background-color: var(--bg-s);
+  color: var(--fg-3);
   font-size: 2rem;
   margin-bottom: var(--space-4);
 }
@@ -317,13 +317,13 @@ Empty state for table components.
 .EmptyState-title {
   font-size: 1.25rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--fg);
   margin: 0 0 var(--space-2);
 }
 
 .EmptyState-description {
   font-size: 0.9rem;
-  color: var(--text-secondary);
+  color: var(--fg-3);
   max-width: 320px;
   margin: 0 0 var(--space-4);
 }

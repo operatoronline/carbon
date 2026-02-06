@@ -32,19 +32,19 @@ Phosphor icons come in multiple styles: regular, bold, fill, and duotone.
     <div style="display: flex; gap: var(--space-6); align-items: center;">
         <div style="text-align: center;">
             <i class="ph ph-heart" style="font-size: 2rem;"></i>
-            <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: var(--space-2);">Regular</div>
+            <div style="font-size: 0.75rem; color: var(--fg-3); margin-top: var(--space-2);">Regular</div>
         </div>
         <div style="text-align: center;">
             <i class="ph-bold ph-heart" style="font-size: 2rem;"></i>
-            <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: var(--space-2);">Bold</div>
+            <div style="font-size: 0.75rem; color: var(--fg-3); margin-top: var(--space-2);">Bold</div>
         </div>
         <div style="text-align: center;">
             <i class="ph-fill ph-heart" style="font-size: 2rem;"></i>
-            <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: var(--space-2);">Fill</div>
+            <div style="font-size: 0.75rem; color: var(--fg-3); margin-top: var(--space-2);">Fill</div>
         </div>
         <div style="text-align: center;">
             <i class="ph-duotone ph-heart" style="font-size: 2rem;"></i>
-            <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: var(--space-2);">Duotone</div>
+            <div style="font-size: 0.75rem; color: var(--fg-3); margin-top: var(--space-2);">Duotone</div>
         </div>
     </div>
 </Preview>
@@ -99,7 +99,7 @@ Icons inherit the current text color. Override with CSS.
     <i class="ph ph-check-circle" style="font-size: 1.5rem; color: oklch(55% 0.15 150);"></i>
     <i class="ph ph-warning" style="font-size: 1.5rem; color: oklch(70% 0.15 80);"></i>
     <i class="ph ph-x-circle" style="font-size: 1.5rem; color: oklch(55% 0.2 25);"></i>
-    <i class="ph ph-info" style="font-size: 1.5rem; color: var(--accent-primary);"></i>
+    <i class="ph ph-info" style="font-size: 1.5rem; color: var(--accent);"></i>
     <i class="ph ph-star-fill" style="font-size: 1.5rem; color: oklch(75% 0.15 80);"></i>
 </Preview>
 
@@ -232,8 +232,8 @@ Enhance list items with icons.
             <span>Priority customer support</span>
         </li>
         <li style="display: flex; align-items: center; gap: var(--space-3);">
-            <i class="ph ph-x-circle" style="color: var(--text-secondary);"></i>
-            <span style="color: var(--text-secondary);">Advanced analytics</span>
+            <i class="ph ph-x-circle" style="color: var(--fg-3);"></i>
+            <span style="color: var(--fg-3);">Advanced analytics</span>
         </li>
     </ul>
 </Preview>
@@ -341,7 +341,7 @@ Icons with loading or state animations.
 ```
 
 <Preview title="Pulsing Icon">
-    <i class="ph ph-bell Icon Icon--pulse" style="font-size: 1.5rem; color: var(--accent-primary);"></i>
+    <i class="ph ph-bell Icon Icon--pulse" style="font-size: 1.5rem; color: var(--accent);"></i>
     <i class="ph ph-heart-fill Icon Icon--pulse" style="font-size: 1.5rem; color: oklch(55% 0.2 25);"></i>
 </Preview>
 
@@ -359,27 +359,27 @@ Icons with loading or state animations.
     <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-4); text-align: center;">
         <div>
             <i class="ph ph-house" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">house</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">house</div>
         </div>
         <div>
             <i class="ph ph-magnifying-glass" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">magnifying-glass</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">magnifying-glass</div>
         </div>
         <div>
             <i class="ph ph-gear" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">gear</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">gear</div>
         </div>
         <div>
             <i class="ph ph-bell" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">bell</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">bell</div>
         </div>
         <div>
             <i class="ph ph-user" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">user</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">user</div>
         </div>
         <div>
             <i class="ph ph-sign-out" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">sign-out</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">sign-out</div>
         </div>
     </div>
 </Preview>
@@ -390,27 +390,27 @@ Icons with loading or state animations.
     <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-4); text-align: center;">
         <div>
             <i class="ph ph-plus" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">plus</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">plus</div>
         </div>
         <div>
             <i class="ph ph-pencil" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">pencil</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">pencil</div>
         </div>
         <div>
             <i class="ph ph-trash" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">trash</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">trash</div>
         </div>
         <div>
             <i class="ph ph-download" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">download</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">download</div>
         </div>
         <div>
             <i class="ph ph-upload" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">upload</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">upload</div>
         </div>
         <div>
             <i class="ph ph-share" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">share</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">share</div>
         </div>
     </div>
 </Preview>
@@ -421,27 +421,27 @@ Icons with loading or state animations.
     <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-4); text-align: center;">
         <div>
             <i class="ph ph-check" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">check</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">check</div>
         </div>
         <div>
             <i class="ph ph-x" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">x</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">x</div>
         </div>
         <div>
             <i class="ph ph-warning" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">warning</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">warning</div>
         </div>
         <div>
             <i class="ph ph-info" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">info</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">info</div>
         </div>
         <div>
             <i class="ph ph-question" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">question</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">question</div>
         </div>
         <div>
             <i class="ph ph-spinner" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">spinner</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">spinner</div>
         </div>
     </div>
 </Preview>
@@ -452,27 +452,27 @@ Icons with loading or state animations.
     <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-4); text-align: center;">
         <div>
             <i class="ph ph-arrow-left" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">arrow-left</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">arrow-left</div>
         </div>
         <div>
             <i class="ph ph-arrow-right" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">arrow-right</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">arrow-right</div>
         </div>
         <div>
             <i class="ph ph-caret-down" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">caret-down</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">caret-down</div>
         </div>
         <div>
             <i class="ph ph-caret-right" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">caret-right</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">caret-right</div>
         </div>
         <div>
             <i class="ph ph-arrow-square-out" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">arrow-square-out</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">arrow-square-out</div>
         </div>
         <div>
             <i class="ph ph-arrows-clockwise" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">arrows-clockwise</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">arrows-clockwise</div>
         </div>
     </div>
 </Preview>
@@ -483,27 +483,27 @@ Icons with loading or state animations.
     <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-4); text-align: center;">
         <div>
             <i class="ph ph-image" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">image</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">image</div>
         </div>
         <div>
             <i class="ph ph-file" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">file</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">file</div>
         </div>
         <div>
             <i class="ph ph-folder" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">folder</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">folder</div>
         </div>
         <div>
             <i class="ph ph-video" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">video</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">video</div>
         </div>
         <div>
             <i class="ph ph-link" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">link</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">link</div>
         </div>
         <div>
             <i class="ph ph-paperclip" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">paperclip</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">paperclip</div>
         </div>
     </div>
 </Preview>
@@ -514,27 +514,27 @@ Icons with loading or state animations.
     <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-4); text-align: center;">
         <div>
             <i class="ph ph-envelope" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">envelope</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">envelope</div>
         </div>
         <div>
             <i class="ph ph-chat" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">chat</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">chat</div>
         </div>
         <div>
             <i class="ph ph-phone" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">phone</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">phone</div>
         </div>
         <div>
             <i class="ph ph-paper-plane-tilt" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">paper-plane-tilt</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">paper-plane-tilt</div>
         </div>
         <div>
             <i class="ph ph-at" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">at</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">at</div>
         </div>
         <div>
             <i class="ph ph-users" style="font-size: 1.5rem;"></i>
-            <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: var(--space-1);">users</div>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">users</div>
         </div>
     </div>
 </Preview>
@@ -548,10 +548,10 @@ Icons with loading or state animations.
 <Preview title="Empty State with Icon">
     <div style="text-align: center; padding: var(--space-8); max-width: 320px; margin: 0 auto;">
         <span class="IconBg IconBg--large" style="margin-bottom: var(--space-4);">
-            <i class="ph ph-folder-open" style="font-size: 2rem; color: var(--text-secondary);"></i>
+            <i class="ph ph-folder-open" style="font-size: 2rem; color: var(--fg-3);"></i>
         </span>
         <h4 style="margin: 0 0 var(--space-2);">No files yet</h4>
-        <p style="color: var(--text-secondary); margin: 0 0 var(--space-4); font-size: 0.9rem;">Upload your first file to get started.</p>
+        <p style="color: var(--fg-3); margin: 0 0 var(--space-4); font-size: 0.9rem;">Upload your first file to get started.</p>
         <button class="Button Button--primary">
             <i class="ph ph-upload Button-icon"></i>
             Upload File
@@ -601,21 +601,21 @@ Icons with loading or state animations.
 ### Menu with Icons
 
 <Preview title="Dropdown Menu">
-    <div style="background: var(--bg-primary); border: 1px solid var(--border-subtle); border-radius: var(--space-2); padding: var(--space-2); width: 200px; box-shadow: 0 4px 12px oklch(0% 0 0 / 0.1);">
-        <button style="display: flex; align-items: center; gap: var(--space-3); width: 100%; padding: var(--space-2) var(--space-3); border: none; background: none; cursor: pointer; border-radius: var(--space-1); font-size: 0.9rem; color: var(--text-primary);">
+    <div style="background: var(--bg); border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-2); width: 200px; box-shadow: 0 4px 12px oklch(0% 0 0 / 0.1);">
+        <button style="display: flex; align-items: center; gap: var(--space-3); width: 100%; padding: var(--space-2) var(--space-3); border: none; background: none; cursor: pointer; border-radius: var(--r-s); font-size: 0.9rem; color: var(--fg);">
             <i class="ph ph-user"></i>
             Profile
         </button>
-        <button style="display: flex; align-items: center; gap: var(--space-3); width: 100%; padding: var(--space-2) var(--space-3); border: none; background: none; cursor: pointer; border-radius: var(--space-1); font-size: 0.9rem; color: var(--text-primary);">
+        <button style="display: flex; align-items: center; gap: var(--space-3); width: 100%; padding: var(--space-2) var(--space-3); border: none; background: none; cursor: pointer; border-radius: var(--r-s); font-size: 0.9rem; color: var(--fg);">
             <i class="ph ph-gear"></i>
             Settings
         </button>
-        <button style="display: flex; align-items: center; gap: var(--space-3); width: 100%; padding: var(--space-2) var(--space-3); border: none; background: none; cursor: pointer; border-radius: var(--space-1); font-size: 0.9rem; color: var(--text-primary);">
+        <button style="display: flex; align-items: center; gap: var(--space-3); width: 100%; padding: var(--space-2) var(--space-3); border: none; background: none; cursor: pointer; border-radius: var(--r-s); font-size: 0.9rem; color: var(--fg);">
             <i class="ph ph-question"></i>
             Help
         </button>
-        <hr style="border: none; border-top: 1px solid var(--border-subtle); margin: var(--space-2) 0;">
-        <button style="display: flex; align-items: center; gap: var(--space-3); width: 100%; padding: var(--space-2) var(--space-3); border: none; background: none; cursor: pointer; border-radius: var(--space-1); font-size: 0.9rem; color: oklch(55% 0.2 25);">
+        <hr style="border: none; border-top: 1px solid var(--bd); margin: var(--space-2) 0;">
+        <button style="display: flex; align-items: center; gap: var(--space-3); width: 100%; padding: var(--space-2) var(--space-3); border: none; background: none; cursor: pointer; border-radius: var(--r-s); font-size: 0.9rem; color: oklch(55% 0.2 25);">
             <i class="ph ph-sign-out"></i>
             Sign out
         </button>
@@ -736,7 +736,7 @@ Icons require attention to ensure they're accessible:
 .Icon--success { color: oklch(55% 0.15 150); }
 .Icon--warning { color: oklch(70% 0.15 80); }
 .Icon--error { color: oklch(55% 0.2 25); }
-.Icon--info { color: var(--accent-primary); }
+.Icon--info { color: var(--accent); }
 
 /* Animations */
 .Icon--spin {
@@ -765,8 +765,8 @@ Icons require attention to ensure they're accessible:
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: var(--bg-secondary);
-  color: var(--text-secondary);
+  background-color: var(--bg-s);
+  color: var(--fg-3);
 }
 
 .IconBg--small {

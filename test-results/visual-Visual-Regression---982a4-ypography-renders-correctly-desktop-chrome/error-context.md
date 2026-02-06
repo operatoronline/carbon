@@ -1,0 +1,630 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - navigation "Main navigation" [ref=e3]:
+    - link "Home" [ref=e4] [cursor=pointer]:
+      - /url: ../index.html
+      - generic [ref=e5]: 
+      - generic [ref=e6]: Home
+    - link "Tokens" [ref=e7] [cursor=pointer]:
+      - /url: ../tokens/colors.html
+      - generic [ref=e8]: 
+      - generic [ref=e9]: Tokens
+    - link "Components" [ref=e10] [cursor=pointer]:
+      - /url: ../components/buttons.html
+      - generic [ref=e11]: 
+      - generic [ref=e12]: Components
+    - link "Patterns" [ref=e13] [cursor=pointer]:
+      - /url: ../patterns/layouts.html
+      - generic [ref=e14]: 
+      - generic [ref=e15]: Patterns
+    - button "Search" [ref=e17] [cursor=pointer]:
+      - generic [ref=e18]: 
+    - button "Toggle theme" [ref=e19] [cursor=pointer]:
+      - generic [ref=e20]: 
+  - banner [ref=e21]:
+    - link " Carbon" [ref=e23] [cursor=pointer]:
+      - /url: ../index.html
+      - generic [ref=e24]: 
+      - generic [ref=e25]: Carbon
+    - generic [ref=e27]:
+      - generic [ref=e28]: 
+      - textbox "Search" [ref=e29]:
+        - /placeholder: Search components...
+  - main [ref=e31]:
+    - generic [ref=e32]:
+      - navigation "Breadcrumb" [ref=e33]:
+        - link "Carbon" [ref=e34] [cursor=pointer]:
+          - /url: ../index.html
+        - generic [ref=e35]: /
+        - generic [ref=e36]: Tokens
+        - generic [ref=e37]: /
+        - generic [ref=e38]: Typography
+      - heading "Typography" [level=1] [ref=e39]:
+        - emphasis [ref=e40]: Typography
+    - article [ref=e41]:
+      - heading "Typography" [level=1] [ref=e42]
+      - paragraph [ref=e43]:
+        - text: Carbon uses a refined type system with
+        - strong [ref=e44]: three font families
+        - text: ":"
+        - strong [ref=e45]: Instrument Serif
+        - text: for display headings,
+        - strong [ref=e46]: Outfit
+        - text: for body text and UI, and
+        - strong [ref=e47]: JetBrains Mono
+        - text: for code.
+      - heading "Font Stack" [level=2] [ref=e48]
+      - generic [ref=e49]:
+        - code [ref=e51]: "--ff-d: 'Instrument Serif', Georgia, serif; /* Display */ --ff-b: 'Outfit', system-ui, sans-serif; /* Body */ --ff-m: 'JetBrains Mono', ui-monospace, monospace; /* Mono */"
+        - button "Copy code" [ref=e52] [cursor=pointer]:
+          - generic [ref=e53]: 
+      - generic [ref=e54]:
+        - generic [ref=e55]:
+          - generic [ref=e56]:
+            - button "Preview" [ref=e57] [cursor=pointer]
+            - button "HTML" [ref=e58] [cursor=pointer]
+          - generic [ref=e59]:
+            - button "" [ref=e60] [cursor=pointer]:
+              - generic [ref=e61]: 
+            - button "" [ref=e62] [cursor=pointer]:
+              - generic [ref=e63]: 
+            - button "" [ref=e64] [cursor=pointer]:
+              - generic [ref=e65]: 
+            - button "" [ref=e67] [cursor=pointer]:
+              - generic [ref=e68]: 
+            - button "" [ref=e69] [cursor=pointer]:
+              - generic [ref=e70]: 
+            - button "" [ref=e71] [cursor=pointer]:
+              - generic [ref=e72]: 
+        - generic [ref=e75]:
+          - generic [ref=e76]:
+            - generic [ref=e77]: Instrument Serif (Display)
+            - generic [ref=e78]: The quick brown fox jumps over the lazy dog.
+          - generic [ref=e79]:
+            - generic [ref=e80]: Outfit (Body & UI)
+            - generic [ref=e81]: The quick brown fox jumps over the lazy dog. Perfect for readable body text and clean UI elements.
+          - generic [ref=e82]:
+            - generic [ref=e83]: JetBrains Mono (Code)
+            - generic [ref=e84]: const greeting = "Hello, World!";
+        - text: 
+      - separator [ref=e85]
+      - heading "Type Scale" [level=2] [ref=e86]
+      - paragraph [ref=e87]:
+        - text: Based on a
+        - strong [ref=e88]: 1.25 ratio
+        - text: (Major Third), creating harmonious size progression.
+      - table [ref=e89]:
+        - rowgroup [ref=e90]:
+          - row "Level Size Usage Font" [ref=e91]:
+            - columnheader "Level" [ref=e92]
+            - columnheader "Size" [ref=e93]
+            - columnheader "Usage" [ref=e94]
+            - columnheader "Font" [ref=e95]
+        - rowgroup [ref=e96]:
+          - row "Display clamp(2.5rem, 8vw, 4rem) Hero headlines Instrument Serif" [ref=e97]:
+            - cell "Display" [ref=e98]
+            - cell "clamp(2.5rem, 8vw, 4rem)" [ref=e99]
+            - cell "Hero headlines" [ref=e100]
+            - cell "Instrument Serif" [ref=e101]
+          - row "H1 2.5rem Page titles Instrument Serif" [ref=e102]:
+            - cell "H1" [ref=e103]
+            - cell "2.5rem" [ref=e104]
+            - cell "Page titles" [ref=e105]
+            - cell "Instrument Serif" [ref=e106]
+          - row "H2 1.75rem Section headers Instrument Serif" [ref=e107]:
+            - cell "H2" [ref=e108]
+            - cell "1.75rem" [ref=e109]
+            - cell "Section headers" [ref=e110]
+            - cell "Instrument Serif" [ref=e111]
+          - row "H3 1.125rem Subsections Outfit" [ref=e112]:
+            - cell "H3" [ref=e113]
+            - cell "1.125rem" [ref=e114]
+            - cell "Subsections" [ref=e115]
+            - cell "Outfit" [ref=e116]
+          - row "Body 1rem Paragraphs Outfit" [ref=e117]:
+            - cell "Body" [ref=e118]
+            - cell "1rem" [ref=e119]
+            - cell "Paragraphs" [ref=e120]
+            - cell "Outfit" [ref=e121]
+          - row "Small 0.875rem Captions, labels Outfit" [ref=e122]:
+            - cell "Small" [ref=e123]
+            - cell "0.875rem" [ref=e124]
+            - cell "Captions, labels" [ref=e125]
+            - cell "Outfit" [ref=e126]
+          - row "XSmall 0.75rem Fine print Outfit" [ref=e127]:
+            - cell "XSmall" [ref=e128]
+            - cell "0.75rem" [ref=e129]
+            - cell "Fine print" [ref=e130]
+            - cell "Outfit" [ref=e131]
+          - row "Mono 0.8125rem Code blocks JetBrains Mono" [ref=e132]:
+            - cell "Mono" [ref=e133]
+            - cell "0.8125rem" [ref=e134]
+            - cell "Code blocks" [ref=e135]
+            - cell "JetBrains Mono" [ref=e136]
+      - generic [ref=e137]:
+        - generic [ref=e138]:
+          - generic [ref=e139]:
+            - button "Preview" [ref=e140] [cursor=pointer]
+            - button "HTML" [ref=e141] [cursor=pointer]
+          - generic [ref=e142]:
+            - button "" [ref=e143] [cursor=pointer]:
+              - generic [ref=e144]: 
+            - button "" [ref=e145] [cursor=pointer]:
+              - generic [ref=e146]: 
+            - button "" [ref=e147] [cursor=pointer]:
+              - generic [ref=e148]: 
+            - button "" [ref=e150] [cursor=pointer]:
+              - generic [ref=e151]: 
+            - button "" [ref=e152] [cursor=pointer]:
+              - generic [ref=e153]: 
+            - button "" [ref=e154] [cursor=pointer]:
+              - generic [ref=e155]: 
+        - generic [ref=e158]:
+          - generic [ref=e159]: Display
+          - generic [ref=e160]: Heading 2
+          - generic [ref=e161]: Heading 3
+          - generic [ref=e162]: Body text — the quick brown fox jumps over the lazy dog. This is readable body copy.
+          - generic [ref=e163]: Small text for captions and supporting content.
+          - generic [ref=e164]: const code = "monospace";
+        - text: 
+      - separator [ref=e165]
+      - heading "Font Weights" [level=2] [ref=e166]
+      - paragraph [ref=e167]: Outfit provides a range of weights. Use them intentionally to create hierarchy.
+      - table [ref=e168]:
+        - rowgroup [ref=e169]:
+          - row "Weight Value Usage" [ref=e170]:
+            - columnheader "Weight" [ref=e171]
+            - columnheader "Value" [ref=e172]
+            - columnheader "Usage" [ref=e173]
+        - rowgroup [ref=e174]:
+          - row "Light 300 Large display text only" [ref=e175]:
+            - cell "Light" [ref=e176]
+            - cell "300" [ref=e177]
+            - cell "Large display text only" [ref=e178]
+          - row "Regular 400 Body text, descriptions" [ref=e179]:
+            - cell "Regular" [ref=e180]
+            - cell "400" [ref=e181]
+            - cell "Body text, descriptions" [ref=e182]
+          - row "Medium 500 UI labels, buttons" [ref=e183]:
+            - cell "Medium" [ref=e184]
+            - cell "500" [ref=e185]
+            - cell "UI labels, buttons" [ref=e186]
+          - row "Semi-Bold 600 Subheadings, emphasis" [ref=e187]:
+            - cell "Semi-Bold" [ref=e188]
+            - cell "600" [ref=e189]
+            - cell "Subheadings, emphasis" [ref=e190]
+          - row "Bold 700 Strong emphasis" [ref=e191]:
+            - cell "Bold" [ref=e192]
+            - cell "700" [ref=e193]
+            - cell "Strong emphasis" [ref=e194]
+      - generic [ref=e195]:
+        - generic [ref=e196]:
+          - generic [ref=e197]:
+            - button "Preview" [ref=e198] [cursor=pointer]
+            - button "HTML" [ref=e199] [cursor=pointer]
+          - generic [ref=e200]:
+            - button "" [ref=e201] [cursor=pointer]:
+              - generic [ref=e202]: 
+            - button "" [ref=e203] [cursor=pointer]:
+              - generic [ref=e204]: 
+            - button "" [ref=e205] [cursor=pointer]:
+              - generic [ref=e206]: 
+            - button "" [ref=e208] [cursor=pointer]:
+              - generic [ref=e209]: 
+            - button "" [ref=e210] [cursor=pointer]:
+              - generic [ref=e211]: 
+            - button "" [ref=e212] [cursor=pointer]:
+              - generic [ref=e213]: 
+        - generic [ref=e216]:
+          - generic [ref=e217]: Light (300) — Large display only
+          - generic [ref=e218]: Regular (400) — Default body weight
+          - generic [ref=e219]: Medium (500) — Buttons and labels
+          - generic [ref=e220]: Semi-Bold (600) — Subheadings
+          - generic [ref=e221]: Bold (700) — Strong emphasis
+        - text: 
+      - heading "Instrument Serif" [level=3] [ref=e222]
+      - paragraph [ref=e223]: Instrument Serif works best at regular weight (400), with italics for emphasis.
+      - generic [ref=e224]:
+        - generic [ref=e225]:
+          - generic [ref=e226]:
+            - button "Preview" [ref=e227] [cursor=pointer]
+            - button "HTML" [ref=e228] [cursor=pointer]
+          - generic [ref=e229]:
+            - button "" [ref=e230] [cursor=pointer]:
+              - generic [ref=e231]: 
+            - button "" [ref=e232] [cursor=pointer]:
+              - generic [ref=e233]: 
+            - button "" [ref=e234] [cursor=pointer]:
+              - generic [ref=e235]: 
+            - button "" [ref=e237] [cursor=pointer]:
+              - generic [ref=e238]: 
+            - button "" [ref=e239] [cursor=pointer]:
+              - generic [ref=e240]: 
+            - button "" [ref=e241] [cursor=pointer]:
+              - generic [ref=e242]: 
+        - generic [ref=e245]:
+          - generic [ref=e246]: Regular — Elegant display headings
+          - generic [ref=e247]:
+            - text: Italic —
+            - emphasis [ref=e248]: Beautiful
+            - text: emphasis
+        - text: 
+      - generic [ref=e249]:
+        - code [ref=e251]: "/* Weight usage */ body { font-family: var(--ff-b); font-weight: 400; } .Button { font-weight: 500; } h3 { font-weight: 600; } h1, h2 { font-family: var(--ff-d); font-weight: 400; }"
+        - button "Copy code" [ref=e252] [cursor=pointer]:
+          - generic [ref=e253]: 
+      - separator [ref=e254]
+      - heading "Line Height" [level=2] [ref=e255]
+      - paragraph [ref=e256]: Proper leading improves readability. Tighter for headings, looser for body text.
+      - table [ref=e257]:
+        - rowgroup [ref=e258]:
+          - row "Context Line Height Ratio" [ref=e259]:
+            - columnheader "Context" [ref=e260]
+            - columnheader "Line Height" [ref=e261]
+            - columnheader "Ratio" [ref=e262]
+        - rowgroup [ref=e263]:
+          - row "Display/H1 1.0 – 1.1 Tight" [ref=e264]:
+            - cell "Display/H1" [ref=e265]
+            - cell "1.0 – 1.1" [ref=e266]
+            - cell "Tight" [ref=e267]
+          - row "H2 1.25 Snug" [ref=e268]:
+            - cell "H2" [ref=e269]
+            - cell "1.25" [ref=e270]
+            - cell "Snug" [ref=e271]
+          - row "H3/UI 1.4 Normal" [ref=e272]:
+            - cell "H3/UI" [ref=e273]
+            - cell "1.4" [ref=e274]
+            - cell "Normal" [ref=e275]
+          - row "Body 1.6 – 1.7 Relaxed" [ref=e276]:
+            - cell "Body" [ref=e277]
+            - cell "1.6 – 1.7" [ref=e278]
+            - cell "Relaxed" [ref=e279]
+          - row "Long-form 1.7 Loose" [ref=e280]:
+            - cell "Long-form" [ref=e281]
+            - cell "1.7" [ref=e282]
+            - cell "Loose" [ref=e283]
+      - generic [ref=e284]:
+        - generic [ref=e285]:
+          - generic [ref=e286]:
+            - button "Preview" [ref=e287] [cursor=pointer]
+            - button "HTML" [ref=e288] [cursor=pointer]
+          - generic [ref=e289]:
+            - button "" [ref=e290] [cursor=pointer]:
+              - generic [ref=e291]: 
+            - button "" [ref=e292] [cursor=pointer]:
+              - generic [ref=e293]: 
+            - button "" [ref=e294] [cursor=pointer]:
+              - generic [ref=e295]: 
+            - button "" [ref=e297] [cursor=pointer]:
+              - generic [ref=e298]: 
+            - button "" [ref=e299] [cursor=pointer]:
+              - generic [ref=e300]: 
+            - button "" [ref=e301] [cursor=pointer]:
+              - generic [ref=e302]: 
+        - generic [ref=e305]:
+          - generic [ref=e306]:
+            - generic [ref=e307]: "line-height: 1.1 (Display)"
+            - generic [ref=e308]: Tight leading for serif headlines keeps them compact and impactful
+          - generic [ref=e309]:
+            - generic [ref=e310]: "line-height: 1.6 (Body)"
+            - generic [ref=e311]: Relaxed leading for body text improves readability over multiple lines of content
+        - text: 
+      - generic [ref=e312]:
+        - code [ref=e314]: "/* Line heights */ .page-header h1 { line-height: 1; } .prose h2 { line-height: 1.25; } h3 { line-height: 1.4; } body, p { line-height: 1.6; } .prose { line-height: 1.7; }"
+        - button "Copy code" [ref=e315] [cursor=pointer]:
+          - generic [ref=e316]: 
+      - separator [ref=e317]
+      - heading "Letter Spacing" [level=2] [ref=e318]
+      - paragraph [ref=e319]: Subtle tracking adjustments improve legibility at extreme sizes.
+      - table [ref=e320]:
+        - rowgroup [ref=e321]:
+          - row "Context Letter Spacing When" [ref=e322]:
+            - columnheader "Context" [ref=e323]
+            - columnheader "Letter Spacing" [ref=e324]
+            - columnheader "When" [ref=e325]
+        - rowgroup [ref=e326]:
+          - row "Display -0.035em Large serif headings" [ref=e327]:
+            - cell "Display" [ref=e328]
+            - cell "-0.035em" [ref=e329]
+            - cell "Large serif headings" [ref=e330]
+          - row "Headings -0.02em Section titles" [ref=e331]:
+            - cell "Headings" [ref=e332]
+            - cell "-0.02em" [ref=e333]
+            - cell "Section titles" [ref=e334]
+          - row "Normal 0 Body text" [ref=e335]:
+            - cell "Normal" [ref=e336]
+            - cell "0" [ref=e337]
+            - cell "Body text" [ref=e338]
+          - row "Labels 0.03em – 0.06em Uppercase, monospace labels" [ref=e339]:
+            - cell "Labels" [ref=e340]
+            - cell "0.03em – 0.06em" [ref=e341]
+            - cell "Uppercase, monospace labels" [ref=e342]
+      - generic [ref=e343]:
+        - generic [ref=e344]:
+          - generic [ref=e345]:
+            - button "Preview" [ref=e346] [cursor=pointer]
+            - button "HTML" [ref=e347] [cursor=pointer]
+          - generic [ref=e348]:
+            - button "" [ref=e349] [cursor=pointer]:
+              - generic [ref=e350]: 
+            - button "" [ref=e351] [cursor=pointer]:
+              - generic [ref=e352]: 
+            - button "" [ref=e353] [cursor=pointer]:
+              - generic [ref=e354]: 
+            - button "" [ref=e356] [cursor=pointer]:
+              - generic [ref=e357]: 
+            - button "" [ref=e358] [cursor=pointer]:
+              - generic [ref=e359]: 
+            - button "" [ref=e360] [cursor=pointer]:
+              - generic [ref=e361]: 
+        - generic [ref=e364]:
+          - generic [ref=e365]:
+            - text: "-0.035em (Display)"
+            - generic [ref=e366]: Tight Serif Tracking
+          - generic [ref=e367]:
+            - text: 0 (Default)
+            - generic [ref=e368]: Normal body text with default letter spacing.
+          - generic [ref=e369]:
+            - text: 0.06em (Labels)
+            - generic [ref=e370]: Section Label
+        - text: 
+      - generic [ref=e371]:
+        - code [ref=e373]: "/* Letter spacing */ .page-header h1 { letter-spacing: -0.035em; } .prose h2 { letter-spacing: -0.02em; } .fnav-btn { letter-spacing: 0.06em; text-transform: uppercase; }"
+        - button "Copy code" [ref=e374] [cursor=pointer]:
+          - generic [ref=e375]: 
+      - separator [ref=e376]
+      - heading "Text Colors" [level=2] [ref=e377]
+      - paragraph [ref=e378]: Use semantic color tokens for consistent hierarchy.
+      - generic [ref=e379]:
+        - generic [ref=e380]:
+          - generic [ref=e381]:
+            - button "Preview" [ref=e382] [cursor=pointer]
+            - button "HTML" [ref=e383] [cursor=pointer]
+          - generic [ref=e384]:
+            - button "" [ref=e385] [cursor=pointer]:
+              - generic [ref=e386]: 
+            - button "" [ref=e387] [cursor=pointer]:
+              - generic [ref=e388]: 
+            - button "" [ref=e389] [cursor=pointer]:
+              - generic [ref=e390]: 
+            - button "" [ref=e392] [cursor=pointer]:
+              - generic [ref=e393]: 
+            - button "" [ref=e394] [cursor=pointer]:
+              - generic [ref=e395]: 
+            - button "" [ref=e396] [cursor=pointer]:
+              - generic [ref=e397]: 
+        - generic [ref=e400]:
+          - generic [ref=e401]: "--fg — Headlines & primary text"
+          - generic [ref=e402]: "--fg-2 — Body text, descriptions"
+          - generic [ref=e403]: "--fg-3 — Captions, placeholders"
+          - generic [ref=e404]: "--fg-4 — Disabled, decorative"
+          - generic [ref=e405]: "--accent — Links and interactive elements"
+          - generic [ref=e406]: "--ok — Success messages"
+          - generic [ref=e407]: "--err — Error messages"
+        - text: 
+      - generic [ref=e408]:
+        - code [ref=e410]: "/* Text colors */ .text-primary { color: var(--fg); } .text-secondary { color: var(--fg-2); } .text-muted { color: var(--fg-3); } .text-accent { color: var(--accent); } .text-success { color: var(--ok); } .text-error { color: var(--err); }"
+        - button "Copy code" [ref=e411] [cursor=pointer]:
+          - generic [ref=e412]: 
+      - separator [ref=e413]
+      - heading "Heading Styles" [level=2] [ref=e414]
+      - paragraph [ref=e415]: Complete heading definitions matching the Library aesthetic.
+      - generic [ref=e416]:
+        - generic [ref=e417]:
+          - generic [ref=e418]:
+            - button "Preview" [ref=e419] [cursor=pointer]
+            - button "HTML" [ref=e420] [cursor=pointer]
+          - generic [ref=e421]:
+            - button "" [ref=e422] [cursor=pointer]:
+              - generic [ref=e423]: 
+            - button "" [ref=e424] [cursor=pointer]:
+              - generic [ref=e425]: 
+            - button "" [ref=e426] [cursor=pointer]:
+              - generic [ref=e427]: 
+            - button "" [ref=e429] [cursor=pointer]:
+              - generic [ref=e430]: 
+            - button "" [ref=e431] [cursor=pointer]:
+              - generic [ref=e432]: 
+            - button "" [ref=e433] [cursor=pointer]:
+              - generic [ref=e434]: 
+        - generic [ref=e437]:
+          - generic [ref=e438]:
+            - generic [ref=e439]: Page Title
+            - code [ref=e440]: "Display: ff-d / clamp(2.5rem, 8vw, 4rem) / 400 / 1 / -0.035em"
+          - generic [ref=e441]:
+            - heading "Section Header" [level=2] [ref=e442]
+            - code [ref=e443]: "H2: ff-d / 1.75rem / 400 / 1.25 / -0.02em"
+          - generic [ref=e444]:
+            - heading "Subsection" [level=3] [ref=e445]
+            - code [ref=e446]: "H3: ff-b / 1.125rem / 600 / 1.4 / 0"
+        - text: 
+      - generic [ref=e447]:
+        - code [ref=e449]: ".page-header h1 { font-family: var(--ff-d); font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 400; line-height: 1; letter-spacing: -0.035em; } .page-header h1 em { font-style: italic; color: var(--accent); } .prose h2 { font-family: var(--ff-d); font-size: 1.75rem; font-weight: 400; line-height: 1.25; letter-spacing: -0.02em; margin: var(--space-10) 0 var(--space-4); } .prose h3 { font-family: var(--ff-b); font-size: 1.125rem; font-weight: 600; line-height: 1.4; margin: var(--space-8) 0 var(--space-3); }"
+        - button "Copy code" [ref=e450] [cursor=pointer]:
+          - generic [ref=e451]: 
+      - separator [ref=e452]
+      - heading "Prose Styles" [level=2] [ref=e453]
+      - paragraph [ref=e454]: Optimized typography for long-form reading.
+      - generic [ref=e455]:
+        - generic [ref=e456]:
+          - generic [ref=e457]:
+            - button "Preview" [ref=e458] [cursor=pointer]
+            - button "HTML" [ref=e459] [cursor=pointer]
+          - generic [ref=e460]:
+            - button "" [ref=e461] [cursor=pointer]:
+              - generic [ref=e462]: 
+            - button "" [ref=e463] [cursor=pointer]:
+              - generic [ref=e464]: 
+            - button "" [ref=e465] [cursor=pointer]:
+              - generic [ref=e466]: 
+            - button "" [ref=e468] [cursor=pointer]:
+              - generic [ref=e469]: 
+            - button "" [ref=e470] [cursor=pointer]:
+              - generic [ref=e471]: 
+            - button "" [ref=e472] [cursor=pointer]:
+              - generic [ref=e473]: 
+        - generic [ref=e476]:
+          - paragraph [ref=e477]: Good typography is invisible. When type is well-set, the reader doesn't notice the mechanics — they simply absorb the content. This is the goal of Carbon's typography system.
+          - paragraph [ref=e478]:
+            - text: The
+            - strong [ref=e479]: measure
+            - text: (line length) is kept between 45-75 characters for optimal readability. Combined with generous
+            - emphasis [ref=e480]: line-height
+            - text: and proper spacing between paragraphs, long-form content becomes effortless to read.
+          - paragraph [ref=e481]: Notice how your eye flows naturally from line to line without strain.
+        - text: 
+      - generic [ref=e482]:
+        - code [ref=e484]: ".prose { font-size: 1rem; line-height: 1.7; color: var(--fg-2); max-width: 65ch; /* Optimal line length */ } .prose p { margin-bottom: var(--space-4); } .prose strong { font-weight: 600; color: var(--fg); } .prose code:not([class*=\"language-\"]) { font-family: var(--ff-m); font-size: 0.875em; padding: 2px 6px; background: var(--bg-m); border-radius: var(--r-s); color: var(--accent); }"
+        - button "Copy code" [ref=e485] [cursor=pointer]:
+          - generic [ref=e486]: 
+      - separator [ref=e487]
+      - heading "Code Typography" [level=2] [ref=e488]
+      - paragraph [ref=e489]: JetBrains Mono styles for code blocks and inline code.
+      - generic [ref=e490]:
+        - generic [ref=e491]:
+          - generic [ref=e492]:
+            - button "Preview" [ref=e493] [cursor=pointer]
+            - button "HTML" [ref=e494] [cursor=pointer]
+          - generic [ref=e495]:
+            - button "" [ref=e496] [cursor=pointer]:
+              - generic [ref=e497]: 
+            - button "" [ref=e498] [cursor=pointer]:
+              - generic [ref=e499]: 
+            - button "" [ref=e500] [cursor=pointer]:
+              - generic [ref=e501]: 
+            - button "" [ref=e503] [cursor=pointer]:
+              - generic [ref=e504]: 
+            - button "" [ref=e505] [cursor=pointer]:
+              - generic [ref=e506]: 
+            - button "" [ref=e507] [cursor=pointer]:
+              - generic [ref=e508]: 
+        - generic [ref=e511]:
+          - generic [ref=e512]:
+            - generic [ref=e513]: Inline Code
+            - paragraph [ref=e514]:
+              - text: Use the
+              - code [ref=e515]: var(--space-4)
+              - text: token for standard spacing.
+          - generic [ref=e516]:
+            - generic [ref=e517]: Code Block
+            - code [ref=e519]: "function greet(name) { return `Hello, ${name}!`; }"
+        - text: 
+      - generic [ref=e520]:
+        - code [ref=e522]: "code:not([class*=\"language-\"]) { font-family: var(--ff-m); font-size: 0.875em; padding: 2px 6px; background: var(--bg-m); border-radius: var(--r-s); color: var(--accent); } pre[class*=\"language-\"] { font-family: var(--ff-m); font-size: 0.8125rem; line-height: 1.7; background: var(--g950); border: 1px solid var(--g800); border-radius: var(--r-l); padding: var(--space-4); }"
+        - button "Copy code" [ref=e523] [cursor=pointer]:
+          - generic [ref=e524]: 
+      - separator [ref=e525]
+      - heading "Responsive Typography" [level=2] [ref=e526]
+      - paragraph [ref=e527]: Scale type sizes at different breakpoints for optimal reading.
+      - generic [ref=e528]:
+        - code [ref=e530]:
+          - text: "/* Base (Mobile) */ .page-header h1 { font-size: clamp(2.5rem, 8vw, 4rem); } /* Prose scales naturally with rem */ .prose { font-size: 1rem; } /* Breakpoint-specific adjustments */"
+          - generic [ref=e531]: "@media (min-width: 768px)"
+          - text: "{ .prose h2 { font-size: 1.75rem; } }"
+          - generic [ref=e532]: "@media (min-width: 1024px)"
+          - text: "{ .prose h2 { font-size: 2rem; } }"
+        - button "Copy code" [ref=e533] [cursor=pointer]:
+          - generic [ref=e534]: 
+      - heading "Fluid Typography" [level=3] [ref=e535]
+      - paragraph [ref=e536]:
+        - text: The display heading uses
+        - code [ref=e537]: clamp()
+        - text: "for smooth scaling:"
+      - generic [ref=e538]:
+        - code [ref=e540]: "/* Scales from 2.5rem (40px) to 4rem (64px) based on viewport */ font-size: clamp(2.5rem, 8vw, 4rem);"
+        - button "Copy code" [ref=e541] [cursor=pointer]:
+          - generic [ref=e542]: 
+      - separator [ref=e543]
+      - heading "Navigation Typography" [level=2] [ref=e544]
+      - paragraph [ref=e545]: The floating pill nav uses monospace labels with wide tracking.
+      - generic [ref=e546]:
+        - generic [ref=e547]:
+          - generic [ref=e548]:
+            - button "Preview" [ref=e549] [cursor=pointer]
+            - button "HTML" [ref=e550] [cursor=pointer]
+          - generic [ref=e551]:
+            - button "" [ref=e552] [cursor=pointer]:
+              - generic [ref=e553]: 
+            - button "" [ref=e554] [cursor=pointer]:
+              - generic [ref=e555]: 
+            - button "" [ref=e556] [cursor=pointer]:
+              - generic [ref=e557]: 
+            - button "" [ref=e559] [cursor=pointer]:
+              - generic [ref=e560]: 
+            - button "" [ref=e561] [cursor=pointer]:
+              - generic [ref=e562]: 
+            - button "" [ref=e563] [cursor=pointer]:
+              - generic [ref=e564]: 
+        - generic [ref=e567]:
+          - generic [ref=e568]: Components
+          - generic [ref=e569]: Tokens
+          - generic [ref=e570]: Guides
+        - text: 
+      - generic [ref=e571]:
+        - code [ref=e573]: ".fnav-btn { font-family: var(--ff-m); font-size: 0.5625rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; }"
+        - button "Copy code" [ref=e574] [cursor=pointer]:
+          - generic [ref=e575]: 
+      - separator [ref=e576]
+      - heading "Best Practices" [level=2] [ref=e577]
+      - heading "Do" [level=3] [ref=e578]
+      - list [ref=e579]:
+        - listitem [ref=e580]:
+          - text: ✓
+          - strong [ref=e581]: Use Instrument Serif for display
+          - text: — Large headlines, hero text
+        - listitem [ref=e582]:
+          - text: ✓
+          - strong [ref=e583]: Use Outfit for body and UI
+          - text: — Readable and clean
+        - listitem [ref=e584]:
+          - text: ✓
+          - strong [ref=e585]: Use JetBrains Mono for code
+          - text: — Clear differentiation
+        - listitem [ref=e586]:
+          - text: ✓
+          - strong [ref=e587]: Establish clear hierarchy
+          - text: — Size + font + weight guides the eye
+        - listitem [ref=e588]:
+          - text: ✓
+          - strong [ref=e589]: Use appropriate measure
+          - text: — 45-75 characters per line
+        - listitem [ref=e590]:
+          - text: ✓
+          - strong [ref=e591]: Add breathing room
+          - text: — Generous line-height for body text
+      - heading "Don’t" [level=3] [ref=e592]
+      - list [ref=e593]:
+        - listitem [ref=e594]:
+          - text: ✗
+          - strong [ref=e595]: Mix too many sizes
+          - text: — Stick to the scale
+        - listitem [ref=e596]:
+          - text: ✗
+          - strong [ref=e597]: Use pure black text
+          - text: — Use --fg (oklch-based)
+        - listitem [ref=e598]:
+          - text: ✗
+          - strong [ref=e599]: Justify body text
+          - text: — Left-align for better readability
+        - listitem [ref=e600]:
+          - text: ✗
+          - strong [ref=e601]: Use Instrument Serif for body
+          - text: — Save it for headlines
+        - listitem [ref=e602]:
+          - text: ✗
+          - strong [ref=e603]: Forget mobile
+          - text: — Test typography at small viewports
+        - listitem [ref=e604]:
+          - text: ✗
+          - strong [ref=e605]: Over-style code
+          - text: — Keep it clean and readable
+      - separator [ref=e606]
+      - heading "Quick Reference" [level=2] [ref=e607]
+      - generic [ref=e608]:
+        - code [ref=e610]: "/* Font Families */ font-family: var(--ff-d); /* Instrument Serif - Display */ font-family: var(--ff-b); /* Outfit - Body & UI */ font-family: var(--ff-m); /* JetBrains Mono - Code */ /* Display Sizes */ font-size: clamp(2.5rem, 8vw, 4rem); /* Hero */ font-size: 1.75rem; /* H2 */ font-size: 1.125rem; /* H3 */ font-size: 1rem; /* Body */ font-size: 0.875rem; /* Small */ font-size: 0.8125rem; /* Code */ font-size: 0.5625rem; /* Nav labels */ /* Weights */ font-weight: 400; /* Regular (body, serif) */ font-weight: 500; /* Medium (buttons) */ font-weight: 600; /* Semi-Bold (subheads) */ font-weight: 700; /* Bold (emphasis) */ /* Line Heights */ line-height: 1; /* Display */ line-height: 1.25; /* Headings */ line-height: 1.4; /* UI */ line-height: 1.6; /* Body */ line-height: 1.7; /* Prose/Code */ /* Letter Spacing */ letter-spacing: -0.035em; /* Display */ letter-spacing: -0.02em; /* H2 */ letter-spacing: 0.06em; /* Labels */"
+        - button "Copy code" [ref=e611] [cursor=pointer]:
+          - generic [ref=e612]: 
+    - paragraph [ref=e614]: "Carbon v0.3 • Last built: 2/5/2026, 6:19:55 PM"
+```

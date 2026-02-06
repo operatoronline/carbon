@@ -108,7 +108,7 @@ For tight spaces, use the compact variant.
 
 <Preview title="Pagination with Page Size">
     <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-        <div style="display: flex; align-items: center; gap: var(--space-2); font-size: 0.9rem; color: var(--text-secondary);">
+        <div style="display: flex; align-items: center; gap: var(--space-2); font-size: 0.9rem; color: var(--fg-3);">
             <span>Show</span>
             <select class="Select" style="width: auto; padding: var(--space-1) var(--space-2);">
                 <option>10</option>

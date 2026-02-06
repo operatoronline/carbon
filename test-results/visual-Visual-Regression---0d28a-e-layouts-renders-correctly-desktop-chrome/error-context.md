@@ -1,0 +1,1054 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - navigation "Main navigation" [ref=e3]:
+    - link "Home" [ref=e4] [cursor=pointer]:
+      - /url: ../index.html
+      - generic [ref=e5]: 
+      - generic [ref=e6]: Home
+    - link "Tokens" [ref=e7] [cursor=pointer]:
+      - /url: ../tokens/colors.html
+      - generic [ref=e8]: 
+      - generic [ref=e9]: Tokens
+    - link "Components" [ref=e10] [cursor=pointer]:
+      - /url: ../components/buttons.html
+      - generic [ref=e11]: 
+      - generic [ref=e12]: Components
+    - link "Patterns" [ref=e13] [cursor=pointer]:
+      - /url: ../patterns/layouts.html
+      - generic [ref=e14]: 
+      - generic [ref=e15]: Patterns
+    - button "Search" [ref=e17] [cursor=pointer]:
+      - generic [ref=e18]: 
+    - button "Toggle theme" [ref=e19] [cursor=pointer]:
+      - generic [ref=e20]: 
+  - banner [ref=e21]:
+    - link " Carbon" [ref=e23] [cursor=pointer]:
+      - /url: ../index.html
+      - generic [ref=e24]: 
+      - generic [ref=e25]: Carbon
+    - generic [ref=e27]:
+      - generic [ref=e28]: 
+      - textbox "Search" [ref=e29]:
+        - /placeholder: Search components...
+  - main [ref=e31]:
+    - generic [ref=e32]:
+      - navigation "Breadcrumb" [ref=e33]:
+        - link "Carbon" [ref=e34] [cursor=pointer]:
+          - /url: ../index.html
+        - generic [ref=e35]: /
+        - generic [ref=e36]: Patterns
+        - generic [ref=e37]: /
+        - generic [ref=e38]: Layouts
+      - heading "Layouts" [level=1] [ref=e39]:
+        - emphasis [ref=e40]: Layouts
+    - article [ref=e41]:
+      - heading "Layouts" [level=1] [ref=e42]
+      - paragraph [ref=e43]: Layout patterns for structuring content with responsive grids, stacks, and containers. These primitives compose into any page structure.
+      - separator [ref=e44]
+      - heading "Container" [level=2] [ref=e45]
+      - paragraph [ref=e46]: Centers content with a max-width and consistent padding.
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - button "Preview" [ref=e50] [cursor=pointer]
+            - button "HTML" [ref=e51] [cursor=pointer]
+          - generic [ref=e52]:
+            - button "" [ref=e53] [cursor=pointer]:
+              - generic [ref=e54]: 
+            - button "" [ref=e55] [cursor=pointer]:
+              - generic [ref=e56]: 
+            - button "" [ref=e57] [cursor=pointer]:
+              - generic [ref=e58]: 
+            - button "" [ref=e60] [cursor=pointer]:
+              - generic [ref=e61]: 
+            - button "" [ref=e62] [cursor=pointer]:
+              - generic [ref=e63]: 
+            - button "" [ref=e64] [cursor=pointer]:
+              - generic [ref=e65]: 
+        - paragraph [ref=e69]: Content is centered with max-width and horizontal padding.
+        - text: 
+      - generic [ref=e70]:
+        - code [ref=e72]:
+          - generic [ref=e73]:
+            - generic [ref=e74]: <div
+            - text: class
+            - generic [ref=e75]: ="Layout-container"
+            - text: ">"
+          - text: <!-- Content here -->
+          - generic [ref=e76]:
+            - generic [ref=e77]: </div
+            - text: ">"
+        - button "Copy code" [ref=e78] [cursor=pointer]:
+          - generic [ref=e79]: 
+      - heading "Container Sizes" [level=3] [ref=e80]
+      - table [ref=e81]:
+        - rowgroup [ref=e82]:
+          - row "Modifier Max Width Use Case" [ref=e83]:
+            - columnheader "Modifier" [ref=e84]
+            - columnheader "Max Width" [ref=e85]
+            - columnheader "Use Case" [ref=e86]
+        - rowgroup [ref=e87]:
+          - row "--narrow 640px Articles, forms, focused content" [ref=e88]:
+            - cell "--narrow" [ref=e89]:
+              - code [ref=e90]: "--narrow"
+            - cell "640px" [ref=e91]
+            - cell "Articles, forms, focused content" [ref=e92]
+          - row "(default) 960px General content pages" [ref=e93]:
+            - cell "(default)" [ref=e94]
+            - cell "960px" [ref=e95]
+            - cell "General content pages" [ref=e96]
+          - row "--wide 1280px Dashboards, data-heavy pages" [ref=e97]:
+            - cell "--wide" [ref=e98]:
+              - code [ref=e99]: "--wide"
+            - cell "1280px" [ref=e100]
+            - cell "Dashboards, data-heavy pages" [ref=e101]
+      - generic [ref=e102]:
+        - generic [ref=e103]:
+          - generic [ref=e104]:
+            - button "Preview" [ref=e105] [cursor=pointer]
+            - button "HTML" [ref=e106] [cursor=pointer]
+          - generic [ref=e107]:
+            - button "" [ref=e108] [cursor=pointer]:
+              - generic [ref=e109]: 
+            - button "" [ref=e110] [cursor=pointer]:
+              - generic [ref=e111]: 
+            - button "" [ref=e112] [cursor=pointer]:
+              - generic [ref=e113]: 
+            - button "" [ref=e115] [cursor=pointer]:
+              - generic [ref=e116]: 
+            - button "" [ref=e117] [cursor=pointer]:
+              - generic [ref=e118]: 
+            - button "" [ref=e119] [cursor=pointer]:
+              - generic [ref=e120]: 
+        - generic [ref=e123]:
+          - generic [ref=e124]: Narrow (640px) — Articles, forms
+          - generic [ref=e125]: Default (960px) — General pages
+          - generic [ref=e126]: Wide (1280px) — Dashboards
+        - text: 
+      - generic [ref=e127]:
+        - code [ref=e129]: ".Layout-container { max-width: 960px; } .Layout-container--narrow { max-width: 640px; } .Layout-container--wide { max-width: 1280px; }"
+        - button "Copy code" [ref=e130] [cursor=pointer]:
+          - generic [ref=e131]: 
+      - separator [ref=e132]
+      - heading "Grid" [level=2] [ref=e133]
+      - paragraph [ref=e134]: A responsive 12-column grid. Columns stack on mobile (<768px).
+      - generic [ref=e135]:
+        - generic [ref=e136]:
+          - generic [ref=e137]:
+            - button "Preview" [ref=e138] [cursor=pointer]
+            - button "HTML" [ref=e139] [cursor=pointer]
+          - generic [ref=e140]:
+            - button "" [ref=e141] [cursor=pointer]:
+              - generic [ref=e142]: 
+            - button "" [ref=e143] [cursor=pointer]:
+              - generic [ref=e144]: 
+            - button "" [ref=e145] [cursor=pointer]:
+              - generic [ref=e146]: 
+            - button "" [ref=e148] [cursor=pointer]:
+              - generic [ref=e149]: 
+            - button "" [ref=e150] [cursor=pointer]:
+              - generic [ref=e151]: 
+            - button "" [ref=e152] [cursor=pointer]:
+              - generic [ref=e153]: 
+        - generic [ref=e156]:
+          - generic [ref=e157]: "4"
+          - generic [ref=e158]: "4"
+          - generic [ref=e159]: "4"
+        - text: 
+      - generic [ref=e160]:
+        - code [ref=e162]:
+          - generic [ref=e163]:
+            - generic [ref=e164]: <div
+            - text: class
+            - generic [ref=e165]: ="Layout-grid"
+            - text: ">"
+          - generic [ref=e166]:
+            - generic [ref=e167]: <div
+            - text: class
+            - generic [ref=e168]: ="Layout-col-4"
+            - text: ">"
+          - text: ...
+          - generic [ref=e169]:
+            - generic [ref=e170]: </div
+            - text: ">"
+          - generic [ref=e171]:
+            - generic [ref=e172]: <div
+            - text: class
+            - generic [ref=e173]: ="Layout-col-4"
+            - text: ">"
+          - text: ...
+          - generic [ref=e174]:
+            - generic [ref=e175]: </div
+            - text: ">"
+          - generic [ref=e176]:
+            - generic [ref=e177]: <div
+            - text: class
+            - generic [ref=e178]: ="Layout-col-4"
+            - text: ">"
+          - text: ...
+          - generic [ref=e179]:
+            - generic [ref=e180]: </div
+            - text: ">"
+          - generic [ref=e181]:
+            - generic [ref=e182]: </div
+            - text: ">"
+        - button "Copy code" [ref=e183] [cursor=pointer]:
+          - generic [ref=e184]: 
+      - heading "Column Spans" [level=3] [ref=e185]
+      - paragraph [ref=e186]:
+        - text: Use
+        - code [ref=e187]: "Layout-col-{1-12}"
+        - text: to control column width.
+      - generic [ref=e188]:
+        - generic [ref=e189]:
+          - generic [ref=e190]:
+            - button "Preview" [ref=e191] [cursor=pointer]
+            - button "HTML" [ref=e192] [cursor=pointer]
+          - generic [ref=e193]:
+            - button "" [ref=e194] [cursor=pointer]:
+              - generic [ref=e195]: 
+            - button "" [ref=e196] [cursor=pointer]:
+              - generic [ref=e197]: 
+            - button "" [ref=e198] [cursor=pointer]:
+              - generic [ref=e199]: 
+            - button "" [ref=e201] [cursor=pointer]:
+              - generic [ref=e202]: 
+            - button "" [ref=e203] [cursor=pointer]:
+              - generic [ref=e204]: 
+            - button "" [ref=e205] [cursor=pointer]:
+              - generic [ref=e206]: 
+        - generic [ref=e209]:
+          - generic [ref=e210]: 8 columns (Main)
+          - generic [ref=e211]: 4 columns (Sidebar)
+        - text: 
+      - heading "Responsive Columns" [level=3] [ref=e212]
+      - paragraph [ref=e213]:
+        - text: Use
+        - code [ref=e214]: "Layout-col-{n}@md"
+        - text: for tablet+ breakpoints.
+      - generic [ref=e215]:
+        - generic [ref=e216]:
+          - generic [ref=e217]:
+            - button "Preview" [ref=e218] [cursor=pointer]
+            - button "HTML" [ref=e219] [cursor=pointer]
+          - generic [ref=e220]:
+            - button "" [ref=e221] [cursor=pointer]:
+              - generic [ref=e222]: 
+            - button "" [ref=e223] [cursor=pointer]:
+              - generic [ref=e224]: 
+            - button "" [ref=e225] [cursor=pointer]:
+              - generic [ref=e226]: 
+            - button "" [ref=e228] [cursor=pointer]:
+              - generic [ref=e229]: 
+            - button "" [ref=e230] [cursor=pointer]:
+              - generic [ref=e231]: 
+            - button "" [ref=e232] [cursor=pointer]:
+              - generic [ref=e233]: 
+        - generic [ref=e236]:
+          - generic [ref=e237]: Full → Half
+          - generic [ref=e238]: Full → Half
+        - text: 
+      - generic [ref=e239]:
+        - code [ref=e241]:
+          - text: <!-- Full width on mobile, half on tablet+ -->
+          - generic [ref=e242]:
+            - generic [ref=e243]: <div
+            - text: class
+            - generic [ref=e244]: ="Layout-grid"
+            - text: ">"
+          - generic [ref=e245]:
+            - generic [ref=e246]: <div
+            - text: class
+            - generic [ref=e247]: ="Layout-col-12 Layout-col-6@md"
+            - text: ">"
+          - text: ...
+          - generic [ref=e248]:
+            - generic [ref=e249]: </div
+            - text: ">"
+          - generic [ref=e250]:
+            - generic [ref=e251]: <div
+            - text: class
+            - generic [ref=e252]: ="Layout-col-12 Layout-col-6@md"
+            - text: ">"
+          - text: ...
+          - generic [ref=e253]:
+            - generic [ref=e254]: </div
+            - text: ">"
+          - generic [ref=e255]:
+            - generic [ref=e256]: </div
+            - text: ">"
+        - button "Copy code" [ref=e257] [cursor=pointer]:
+          - generic [ref=e258]: 
+      - separator [ref=e259]
+      - heading "Stack" [level=2] [ref=e260]
+      - paragraph [ref=e261]: Vertical stacking with consistent spacing. The foundation of most layouts.
+      - generic [ref=e262]:
+        - generic [ref=e263]:
+          - generic [ref=e264]:
+            - button "Preview" [ref=e265] [cursor=pointer]
+            - button "HTML" [ref=e266] [cursor=pointer]
+          - generic [ref=e267]:
+            - button "" [ref=e268] [cursor=pointer]:
+              - generic [ref=e269]: 
+            - button "" [ref=e270] [cursor=pointer]:
+              - generic [ref=e271]: 
+            - button "" [ref=e272] [cursor=pointer]:
+              - generic [ref=e273]: 
+            - button "" [ref=e275] [cursor=pointer]:
+              - generic [ref=e276]: 
+            - button "" [ref=e277] [cursor=pointer]:
+              - generic [ref=e278]: 
+            - button "" [ref=e279] [cursor=pointer]:
+              - generic [ref=e280]: 
+        - generic [ref=e283]:
+          - generic [ref=e284]: Item 1
+          - generic [ref=e285]: Item 2
+          - generic [ref=e286]: Item 3
+        - text: 
+      - generic [ref=e287]:
+        - code [ref=e289]:
+          - generic [ref=e290]:
+            - generic [ref=e291]: <div
+            - text: class
+            - generic [ref=e292]: ="Layout-stack"
+            - text: ">"
+          - generic [ref=e293]:
+            - generic [ref=e294]: <div
+            - text: ">"
+          - text: Item 1
+          - generic [ref=e295]:
+            - generic [ref=e296]: </div
+            - text: ">"
+          - generic [ref=e297]:
+            - generic [ref=e298]: <div
+            - text: ">"
+          - text: Item 2
+          - generic [ref=e299]:
+            - generic [ref=e300]: </div
+            - text: ">"
+          - generic [ref=e301]:
+            - generic [ref=e302]: <div
+            - text: ">"
+          - text: Item 3
+          - generic [ref=e303]:
+            - generic [ref=e304]: </div
+            - text: ">"
+          - generic [ref=e305]:
+            - generic [ref=e306]: </div
+            - text: ">"
+        - button "Copy code" [ref=e307] [cursor=pointer]:
+          - generic [ref=e308]: 
+      - heading "Stack Spacing Variants" [level=3] [ref=e309]
+      - generic [ref=e310]:
+        - generic [ref=e311]:
+          - generic [ref=e312]:
+            - button "Preview" [ref=e313] [cursor=pointer]
+            - button "HTML" [ref=e314] [cursor=pointer]
+          - generic [ref=e315]:
+            - button "" [ref=e316] [cursor=pointer]:
+              - generic [ref=e317]: 
+            - button "" [ref=e318] [cursor=pointer]:
+              - generic [ref=e319]: 
+            - button "" [ref=e320] [cursor=pointer]:
+              - generic [ref=e321]: 
+            - button "" [ref=e323] [cursor=pointer]:
+              - generic [ref=e324]: 
+            - button "" [ref=e325] [cursor=pointer]:
+              - generic [ref=e326]: 
+            - button "" [ref=e327] [cursor=pointer]:
+              - generic [ref=e328]: 
+        - generic [ref=e331]:
+          - generic [ref=e332]:
+            - generic [ref=e333]: Tight (8px)
+            - generic [ref=e334]:
+              - generic [ref=e335]: A
+              - generic [ref=e336]: B
+          - generic [ref=e337]:
+            - generic [ref=e338]: Default (16px)
+            - generic [ref=e339]:
+              - generic [ref=e340]: A
+              - generic [ref=e341]: B
+          - generic [ref=e342]:
+            - generic [ref=e343]: Loose (32px)
+            - generic [ref=e344]:
+              - generic [ref=e345]: A
+              - generic [ref=e346]: B
+        - text: 
+      - generic [ref=e347]:
+        - code [ref=e349]: ".Layout-stack { gap: var(--space-4); } /* 16px */ .Layout-stack--tight { gap: var(--space-2); } /* 8px */ .Layout-stack--loose { gap: var(--space-8); } /* 32px */"
+        - button "Copy code" [ref=e350] [cursor=pointer]:
+          - generic [ref=e351]: 
+      - separator [ref=e352]
+      - heading "Cluster" [level=2] [ref=e353]
+      - paragraph [ref=e354]: Horizontal grouping with wrapping. Perfect for tags, buttons, and inline elements.
+      - generic [ref=e355]:
+        - generic [ref=e356]:
+          - generic [ref=e357]:
+            - button "Preview" [ref=e358] [cursor=pointer]
+            - button "HTML" [ref=e359] [cursor=pointer]
+          - generic [ref=e360]:
+            - button "" [ref=e361] [cursor=pointer]:
+              - generic [ref=e362]: 
+            - button "" [ref=e363] [cursor=pointer]:
+              - generic [ref=e364]: 
+            - button "" [ref=e365] [cursor=pointer]:
+              - generic [ref=e366]: 
+            - button "" [ref=e368] [cursor=pointer]:
+              - generic [ref=e369]: 
+            - button "" [ref=e370] [cursor=pointer]:
+              - generic [ref=e371]: 
+            - button "" [ref=e372] [cursor=pointer]:
+              - generic [ref=e373]: 
+        - generic [ref=e376]:
+          - generic [ref=e377]: Design
+          - generic [ref=e378]: Development
+          - generic [ref=e379]: Product
+          - generic [ref=e380]: Research
+          - generic [ref=e381]: Strategy
+        - text: 
+      - generic [ref=e382]:
+        - code [ref=e384]:
+          - generic [ref=e385]:
+            - generic [ref=e386]: <div
+            - text: class
+            - generic [ref=e387]: ="Layout-cluster"
+            - text: ">"
+          - generic [ref=e388]:
+            - generic [ref=e389]: <span
+            - text: class
+            - generic [ref=e390]: ="Badge"
+            - text: ">"
+          - text: Tag 1
+          - generic [ref=e391]:
+            - generic [ref=e392]: </span
+            - text: ">"
+          - generic [ref=e393]:
+            - generic [ref=e394]: <span
+            - text: class
+            - generic [ref=e395]: ="Badge"
+            - text: ">"
+          - text: Tag 2
+          - generic [ref=e396]:
+            - generic [ref=e397]: </span
+            - text: ">"
+          - text: ...
+          - generic [ref=e398]:
+            - generic [ref=e399]: </div
+            - text: ">"
+        - button "Copy code" [ref=e400] [cursor=pointer]:
+          - generic [ref=e401]: 
+      - separator [ref=e402]
+      - heading "Split" [level=2] [ref=e403]
+      - paragraph [ref=e404]: Push items to opposite ends of a row. Common for headers and footers.
+      - generic [ref=e405]:
+        - generic [ref=e406]:
+          - generic [ref=e407]:
+            - button "Preview" [ref=e408] [cursor=pointer]
+            - button "HTML" [ref=e409] [cursor=pointer]
+          - generic [ref=e410]:
+            - button "" [ref=e411] [cursor=pointer]:
+              - generic [ref=e412]: 
+            - button "" [ref=e413] [cursor=pointer]:
+              - generic [ref=e414]: 
+            - button "" [ref=e415] [cursor=pointer]:
+              - generic [ref=e416]: 
+            - button "" [ref=e418] [cursor=pointer]:
+              - generic [ref=e419]: 
+            - button "" [ref=e420] [cursor=pointer]:
+              - generic [ref=e421]: 
+            - button "" [ref=e422] [cursor=pointer]:
+              - generic [ref=e423]: 
+        - generic [ref=e426]:
+          - generic [ref=e427]: Left Content
+          - generic [ref=e428]: Right Content
+        - text: 
+      - generic [ref=e429]:
+        - code [ref=e431]:
+          - generic [ref=e432]:
+            - generic [ref=e433]: <div
+            - text: class
+            - generic [ref=e434]: ="Layout-split"
+            - text: ">"
+          - generic [ref=e435]:
+            - generic [ref=e436]: <span
+            - text: ">"
+          - text: Left content
+          - generic [ref=e437]:
+            - generic [ref=e438]: </span
+            - text: ">"
+          - generic [ref=e439]:
+            - generic [ref=e440]: <span
+            - text: ">"
+          - text: Right content
+          - generic [ref=e441]:
+            - generic [ref=e442]: </span
+            - text: ">"
+          - generic [ref=e443]:
+            - generic [ref=e444]: </div
+            - text: ">"
+        - button "Copy code" [ref=e445] [cursor=pointer]:
+          - generic [ref=e446]: 
+      - separator [ref=e447]
+      - heading "Sidebar Layout" [level=2] [ref=e448]
+      - paragraph [ref=e449]: Fixed-width sidebar with fluid main area. Stacks on mobile.
+      - generic [ref=e450]:
+        - generic [ref=e451]:
+          - generic [ref=e452]:
+            - button "Preview" [ref=e453] [cursor=pointer]
+            - button "HTML" [ref=e454] [cursor=pointer]
+          - generic [ref=e455]:
+            - button "" [ref=e456] [cursor=pointer]:
+              - generic [ref=e457]: 
+            - button "" [ref=e458] [cursor=pointer]:
+              - generic [ref=e459]: 
+            - button "" [ref=e460] [cursor=pointer]:
+              - generic [ref=e461]: 
+            - button "" [ref=e463] [cursor=pointer]:
+              - generic [ref=e464]: 
+            - button "" [ref=e465] [cursor=pointer]:
+              - generic [ref=e466]: 
+            - button "" [ref=e467] [cursor=pointer]:
+              - generic [ref=e468]: 
+        - generic [ref=e471]:
+          - complementary [ref=e472]:
+            - strong [ref=e473]: Sidebar
+            - text: 240px fixed
+          - main [ref=e474]:
+            - strong [ref=e475]: Main Content
+            - text: Fluid width
+        - text: 
+      - generic [ref=e476]:
+        - code [ref=e478]:
+          - generic [ref=e479]:
+            - generic [ref=e480]: <div
+            - text: class
+            - generic [ref=e481]: ="Layout-sidebar"
+            - text: ">"
+          - generic [ref=e482]:
+            - generic [ref=e483]: <aside
+            - text: ">"
+          - text: Sidebar content
+          - generic [ref=e484]:
+            - generic [ref=e485]: </aside
+            - text: ">"
+          - generic [ref=e486]:
+            - generic [ref=e487]: <main
+            - text: ">"
+          - text: Main content
+          - generic [ref=e488]:
+            - generic [ref=e489]: </main
+            - text: ">"
+          - generic [ref=e490]:
+            - generic [ref=e491]: </div
+            - text: ">"
+        - button "Copy code" [ref=e492] [cursor=pointer]:
+          - generic [ref=e493]: 
+      - heading "Sidebar on Right" [level=3] [ref=e494]
+      - generic [ref=e495]:
+        - generic [ref=e496]:
+          - generic [ref=e497]:
+            - button "Preview" [ref=e498] [cursor=pointer]
+            - button "HTML" [ref=e499] [cursor=pointer]
+          - generic [ref=e500]:
+            - button "" [ref=e501] [cursor=pointer]:
+              - generic [ref=e502]: 
+            - button "" [ref=e503] [cursor=pointer]:
+              - generic [ref=e504]: 
+            - button "" [ref=e505] [cursor=pointer]:
+              - generic [ref=e506]: 
+            - button "" [ref=e508] [cursor=pointer]:
+              - generic [ref=e509]: 
+            - button "" [ref=e510] [cursor=pointer]:
+              - generic [ref=e511]: 
+            - button "" [ref=e512] [cursor=pointer]:
+              - generic [ref=e513]: 
+        - generic [ref=e516]:
+          - main [ref=e517]:
+            - strong [ref=e518]: Main Content
+          - complementary [ref=e519]:
+            - strong [ref=e520]: Sidebar
+        - text: 
+      - generic [ref=e521]:
+        - code [ref=e523]:
+          - generic [ref=e524]:
+            - generic [ref=e525]: <div
+            - text: class
+            - generic [ref=e526]: ="Layout-sidebar Layout-sidebar--right"
+            - text: ">"
+          - generic [ref=e527]:
+            - generic [ref=e528]: <main
+            - text: ">"
+          - text: Main content
+          - generic [ref=e529]:
+            - generic [ref=e530]: </main
+            - text: ">"
+          - generic [ref=e531]:
+            - generic [ref=e532]: <aside
+            - text: ">"
+          - text: Sidebar content
+          - generic [ref=e533]:
+            - generic [ref=e534]: </aside
+            - text: ">"
+          - generic [ref=e535]:
+            - generic [ref=e536]: </div
+            - text: ">"
+        - button "Copy code" [ref=e537] [cursor=pointer]:
+          - generic [ref=e538]: 
+      - separator [ref=e539]
+      - heading "Center" [level=2] [ref=e540]
+      - paragraph [ref=e541]: Vertically and horizontally center content. Useful for empty states and loading screens.
+      - generic [ref=e542]:
+        - generic [ref=e543]:
+          - generic [ref=e544]:
+            - button "Preview" [ref=e545] [cursor=pointer]
+            - button "HTML" [ref=e546] [cursor=pointer]
+          - generic [ref=e547]:
+            - button "" [ref=e548] [cursor=pointer]:
+              - generic [ref=e549]: 
+            - button "" [ref=e550] [cursor=pointer]:
+              - generic [ref=e551]: 
+            - button "" [ref=e552] [cursor=pointer]:
+              - generic [ref=e553]: 
+            - button "" [ref=e555] [cursor=pointer]:
+              - generic [ref=e556]: 
+            - button "" [ref=e557] [cursor=pointer]:
+              - generic [ref=e558]: 
+            - button "" [ref=e559] [cursor=pointer]:
+              - generic [ref=e560]: 
+        - generic [ref=e564]:
+          - generic [ref=e565]: 📭
+          - generic [ref=e566]: No items yet
+          - generic [ref=e567]: Add your first item to get started
+        - text: 
+      - generic [ref=e568]:
+        - code [ref=e570]:
+          - generic [ref=e571]:
+            - generic [ref=e572]: <div
+            - text: class
+            - generic [ref=e573]: ="Layout-center"
+            - generic [ref=e574]:
+              - text: style
+              - generic [ref=e575]:
+                - text: ="
+                - generic [ref=e576]: "height: 300px;"
+                - text: "\""
+            - text: ">"
+          - generic [ref=e577]:
+            - generic [ref=e578]: <div
+            - text: ">"
+          - text: Centered content
+          - generic [ref=e579]:
+            - generic [ref=e580]: </div
+            - text: ">"
+          - generic [ref=e581]:
+            - generic [ref=e582]: </div
+            - text: ">"
+        - button "Copy code" [ref=e583] [cursor=pointer]:
+          - generic [ref=e584]: 
+      - separator [ref=e585]
+      - heading "Real-World Patterns" [level=2] [ref=e586]
+      - heading "Marketing Page" [level=3] [ref=e587]
+      - generic [ref=e588]:
+        - generic [ref=e589]:
+          - generic [ref=e590]:
+            - button "Preview" [ref=e591] [cursor=pointer]
+            - button "HTML" [ref=e592] [cursor=pointer]
+          - generic [ref=e593]:
+            - button "" [ref=e594] [cursor=pointer]:
+              - generic [ref=e595]: 
+            - button "" [ref=e596] [cursor=pointer]:
+              - generic [ref=e597]: 
+            - button "" [ref=e598] [cursor=pointer]:
+              - generic [ref=e599]: 
+            - button "" [ref=e601] [cursor=pointer]:
+              - generic [ref=e602]: 
+            - button "" [ref=e603] [cursor=pointer]:
+              - generic [ref=e604]: 
+            - button "" [ref=e605] [cursor=pointer]:
+              - generic [ref=e606]: 
+        - generic [ref=e609]:
+          - generic [ref=e611]:
+            - strong [ref=e612]: Logo
+            - navigation [ref=e613]:
+              - link "Features" [ref=e614] [cursor=pointer]:
+                - /url: "#"
+              - link "Pricing" [ref=e615] [cursor=pointer]:
+                - /url: "#"
+              - link "Docs" [ref=e616] [cursor=pointer]:
+                - /url: "#"
+          - main [ref=e617]:
+            - generic [ref=e618]:
+              - heading "Hero Headline" [level=2] [ref=e619]
+              - paragraph [ref=e620]: Supporting text that explains the value proposition.
+              - generic [ref=e621]:
+                - button "Get Started" [ref=e622] [cursor=pointer]
+                - button "Learn More" [ref=e623] [cursor=pointer]
+        - text: 
+      - generic [ref=e624]:
+        - code [ref=e626]:
+          - generic [ref=e627]:
+            - generic [ref=e628]: <header
+            - text: ">"
+          - generic [ref=e629]:
+            - generic [ref=e630]: <div
+            - text: class
+            - generic [ref=e631]: ="Layout-split"
+            - text: ">"
+          - generic [ref=e632]:
+            - generic [ref=e633]: <Logo
+            - text: />
+          - generic [ref=e634]:
+            - generic [ref=e635]: <nav
+            - text: class
+            - generic [ref=e636]: ="Layout-cluster"
+            - text: ">"
+          - text: ...
+          - generic [ref=e637]:
+            - generic [ref=e638]: </nav
+            - text: ">"
+          - generic [ref=e639]:
+            - generic [ref=e640]: </div
+            - text: ">"
+          - generic [ref=e641]:
+            - generic [ref=e642]: </header
+            - text: ">"
+          - generic [ref=e643]:
+            - generic [ref=e644]: <main
+            - text: ">"
+          - generic [ref=e645]:
+            - generic [ref=e646]: <div
+            - text: class
+            - generic [ref=e647]: ="Layout-container Layout-container--narrow"
+            - text: ">"
+          - generic [ref=e648]:
+            - generic [ref=e649]: <h1
+            - text: ">"
+          - text: Hero Headline
+          - generic [ref=e650]:
+            - generic [ref=e651]: </h1
+            - text: ">"
+          - generic [ref=e652]:
+            - generic [ref=e653]: <p
+            - text: ">"
+          - text: ...
+          - generic [ref=e654]:
+            - generic [ref=e655]: </p
+            - text: ">"
+          - generic [ref=e656]:
+            - generic [ref=e657]: <div
+            - text: class
+            - generic [ref=e658]: ="Layout-cluster"
+            - text: ">"
+          - generic [ref=e659]:
+            - generic [ref=e660]: <Button
+            - text: ">"
+          - text: Get Started
+          - generic [ref=e661]:
+            - generic [ref=e662]: </Button
+            - text: ">"
+          - generic [ref=e663]:
+            - generic [ref=e664]: </div
+            - text: ">"
+          - generic [ref=e665]:
+            - generic [ref=e666]: </div
+            - text: ">"
+          - generic [ref=e667]:
+            - generic [ref=e668]: </main
+            - text: ">"
+        - button "Copy code" [ref=e669] [cursor=pointer]:
+          - generic [ref=e670]: 
+      - heading "Dashboard" [level=3] [ref=e671]
+      - generic [ref=e672]:
+        - generic [ref=e673]:
+          - generic [ref=e674]:
+            - button "Preview" [ref=e675] [cursor=pointer]
+            - button "HTML" [ref=e676] [cursor=pointer]
+          - generic [ref=e677]:
+            - button "" [ref=e678] [cursor=pointer]:
+              - generic [ref=e679]: 
+            - button "" [ref=e680] [cursor=pointer]:
+              - generic [ref=e681]: 
+            - button "" [ref=e682] [cursor=pointer]:
+              - generic [ref=e683]: 
+            - button "" [ref=e685] [cursor=pointer]:
+              - generic [ref=e686]: 
+            - button "" [ref=e687] [cursor=pointer]:
+              - generic [ref=e688]: 
+            - button "" [ref=e689] [cursor=pointer]:
+              - generic [ref=e690]: 
+        - generic [ref=e694]:
+          - complementary [ref=e695]:
+            - generic [ref=e696]:
+              - generic [ref=e697]: Menu
+              - link "Dashboard" [ref=e698] [cursor=pointer]:
+                - /url: "#"
+              - link "Projects" [ref=e699] [cursor=pointer]:
+                - /url: "#"
+              - link "Settings" [ref=e700] [cursor=pointer]:
+                - /url: "#"
+          - main [ref=e701]:
+            - generic [ref=e702]:
+              - generic [ref=e703]:
+                - heading "Dashboard" [level=3] [ref=e704]
+                - button "New Project" [ref=e705] [cursor=pointer]
+              - generic [ref=e706]:
+                - generic [ref=e707]:
+                  - text: Total Users
+                  - generic [ref=e708]: 1,234
+                - generic [ref=e709]:
+                  - text: Revenue
+                  - generic [ref=e710]: $12.4k
+                - generic [ref=e711]:
+                  - text: Active Now
+                  - generic [ref=e712]: "89"
+        - text: 
+      - heading "Card Grid" [level=3] [ref=e713]
+      - generic [ref=e714]:
+        - generic [ref=e715]:
+          - generic [ref=e716]:
+            - button "Preview" [ref=e717] [cursor=pointer]
+            - button "HTML" [ref=e718] [cursor=pointer]
+          - generic [ref=e719]:
+            - button "" [ref=e720] [cursor=pointer]:
+              - generic [ref=e721]: 
+            - button "" [ref=e722] [cursor=pointer]:
+              - generic [ref=e723]: 
+            - button "" [ref=e724] [cursor=pointer]:
+              - generic [ref=e725]: 
+            - button "" [ref=e727] [cursor=pointer]:
+              - generic [ref=e728]: 
+            - button "" [ref=e729] [cursor=pointer]:
+              - generic [ref=e730]: 
+            - button "" [ref=e731] [cursor=pointer]:
+              - generic [ref=e732]: 
+        - generic [ref=e735]:
+          - generic [ref=e739]:
+            - generic [ref=e740]: Card Title
+            - generic [ref=e741]: Brief description of this card's content.
+          - generic [ref=e745]:
+            - generic [ref=e746]: Card Title
+            - generic [ref=e747]: Brief description of this card's content.
+          - generic [ref=e751]:
+            - generic [ref=e752]: Card Title
+            - generic [ref=e753]: Brief description of this card's content.
+        - text: 
+      - generic [ref=e754]:
+        - code [ref=e756]:
+          - generic [ref=e757]:
+            - generic [ref=e758]: <div
+            - text: class
+            - generic [ref=e759]: ="Layout-grid"
+            - text: ">"
+          - generic [ref=e760]:
+            - generic [ref=e761]: <div
+            - text: class
+            - generic [ref=e762]: ="Layout-col-12 Layout-col-4@md"
+            - text: ">"
+          - generic [ref=e763]:
+            - generic [ref=e764]: <Card
+            - text: />
+          - generic [ref=e765]:
+            - generic [ref=e766]: </div
+            - text: ">"
+          - generic [ref=e767]:
+            - generic [ref=e768]: <div
+            - text: class
+            - generic [ref=e769]: ="Layout-col-12 Layout-col-4@md"
+            - text: ">"
+          - generic [ref=e770]:
+            - generic [ref=e771]: <Card
+            - text: />
+          - generic [ref=e772]:
+            - generic [ref=e773]: </div
+            - text: ">"
+          - generic [ref=e774]:
+            - generic [ref=e775]: <div
+            - text: class
+            - generic [ref=e776]: ="Layout-col-12 Layout-col-4@md"
+            - text: ">"
+          - generic [ref=e777]:
+            - generic [ref=e778]: <Card
+            - text: />
+          - generic [ref=e779]:
+            - generic [ref=e780]: </div
+            - text: ">"
+          - generic [ref=e781]:
+            - generic [ref=e782]: </div
+            - text: ">"
+        - button "Copy code" [ref=e783] [cursor=pointer]:
+          - generic [ref=e784]: 
+      - heading "Form Layout" [level=3] [ref=e785]
+      - generic [ref=e786]:
+        - generic [ref=e787]:
+          - generic [ref=e788]:
+            - button "Preview" [ref=e789] [cursor=pointer]
+            - button "HTML" [ref=e790] [cursor=pointer]
+          - generic [ref=e791]:
+            - button "" [ref=e792] [cursor=pointer]:
+              - generic [ref=e793]: 
+            - button "" [ref=e794] [cursor=pointer]:
+              - generic [ref=e795]: 
+            - button "" [ref=e796] [cursor=pointer]:
+              - generic [ref=e797]: 
+            - button "" [ref=e799] [cursor=pointer]:
+              - generic [ref=e800]: 
+            - button "" [ref=e801] [cursor=pointer]:
+              - generic [ref=e802]: 
+            - button "" [ref=e803] [cursor=pointer]:
+              - generic [ref=e804]: 
+        - generic [ref=e808]:
+          - heading "Create Account" [level=3] [ref=e809]
+          - generic [ref=e810]:
+            - generic [ref=e811]:
+              - generic [ref=e812]: First Name
+              - textbox "John" [ref=e813]
+            - generic [ref=e814]:
+              - generic [ref=e815]: Last Name
+              - textbox "Doe" [ref=e816]
+          - generic [ref=e817]:
+            - generic [ref=e818]: Email
+            - textbox "john@example.com" [ref=e819]
+          - generic [ref=e820]:
+            - generic [ref=e821] [cursor=pointer]:
+              - generic [ref=e822]:
+                - checkbox "Remember me"
+              - generic [ref=e824]: Remember me
+            - button "Sign Up" [ref=e825] [cursor=pointer]
+        - text: 
+      - heading "Article Layout" [level=3] [ref=e826]
+      - generic [ref=e827]:
+        - generic [ref=e828]:
+          - generic [ref=e829]:
+            - button "Preview" [ref=e830] [cursor=pointer]
+            - button "HTML" [ref=e831] [cursor=pointer]
+          - generic [ref=e832]:
+            - button "" [ref=e833] [cursor=pointer]:
+              - generic [ref=e834]: 
+            - button "" [ref=e835] [cursor=pointer]:
+              - generic [ref=e836]: 
+            - button "" [ref=e837] [cursor=pointer]:
+              - generic [ref=e838]: 
+            - button "" [ref=e840] [cursor=pointer]:
+              - generic [ref=e841]: 
+            - button "" [ref=e842] [cursor=pointer]:
+              - generic [ref=e843]: 
+            - button "" [ref=e844] [cursor=pointer]:
+              - generic [ref=e845]: 
+        - article [ref=e849]:
+          - generic [ref=e850]:
+            - generic [ref=e851]:
+              - generic [ref=e852]: Design
+              - generic [ref=e853]: 5 min read
+            - heading "Article Headline Goes Here" [level=2] [ref=e854]
+            - paragraph [ref=e855]: A brief summary or subtitle that gives context to the article.
+          - paragraph [ref=e857]: Article body text with optimal line height for comfortable reading. The measure is kept between 45-75 characters per line.
+        - text: 
+      - separator [ref=e858]
+      - heading "Combining Patterns" [level=2] [ref=e859]
+      - paragraph [ref=e860]: "The power of these primitives comes from composition:"
+      - generic [ref=e861]:
+        - code [ref=e863]:
+          - text: <!-- Common page structure -->
+          - generic [ref=e864]:
+            - generic [ref=e865]: <div
+            - text: class
+            - generic [ref=e866]: ="Layout-container"
+            - text: ">"
+          - generic [ref=e867]:
+            - generic [ref=e868]: <div
+            - text: class
+            - generic [ref=e869]: ="Layout-stack Layout-stack--loose"
+            - text: ">"
+          - text: <!-- Page header -->
+          - generic [ref=e870]:
+            - generic [ref=e871]: <header
+            - text: class
+            - generic [ref=e872]: ="Layout-split"
+            - text: ">"
+          - generic [ref=e873]:
+            - generic [ref=e874]: <h1
+            - text: ">"
+          - text: Page Title
+          - generic [ref=e875]:
+            - generic [ref=e876]: </h1
+            - text: ">"
+          - generic [ref=e877]:
+            - generic [ref=e878]: <Button
+            - text: ">"
+          - text: Action
+          - generic [ref=e879]:
+            - generic [ref=e880]: </Button
+            - text: ">"
+          - generic [ref=e881]:
+            - generic [ref=e882]: </header
+            - text: ">"
+          - text: <!-- Main content with sidebar -->
+          - generic [ref=e883]:
+            - generic [ref=e884]: <div
+            - text: class
+            - generic [ref=e885]: ="Layout-sidebar"
+            - text: ">"
+          - generic [ref=e886]:
+            - generic [ref=e887]: <main
+            - text: class
+            - generic [ref=e888]: ="Layout-stack"
+            - text: ">"
+          - text: <!-- Content sections -->
+          - generic [ref=e889]:
+            - generic [ref=e890]: </main
+            - text: ">"
+          - generic [ref=e891]:
+            - generic [ref=e892]: <aside
+            - text: class
+            - generic [ref=e893]: ="Layout-stack"
+            - text: ">"
+          - text: <!-- Sidebar widgets -->
+          - generic [ref=e894]:
+            - generic [ref=e895]: </aside
+            - text: ">"
+          - generic [ref=e896]:
+            - generic [ref=e897]: </div
+            - text: ">"
+          - text: <!-- Footer -->
+          - generic [ref=e898]:
+            - generic [ref=e899]: <footer
+            - text: class
+            - generic [ref=e900]: ="Layout-split"
+            - text: ">"
+          - generic [ref=e901]:
+            - generic [ref=e902]: <span
+            - text: ">"
+          - text: © 2026
+          - generic [ref=e903]:
+            - generic [ref=e904]: </span
+            - text: ">"
+          - generic [ref=e905]:
+            - generic [ref=e906]: <nav
+            - text: class
+            - generic [ref=e907]: ="Layout-cluster"
+            - text: ">"
+          - text: ...
+          - generic [ref=e908]:
+            - generic [ref=e909]: </nav
+            - text: ">"
+          - generic [ref=e910]:
+            - generic [ref=e911]: </footer
+            - text: ">"
+          - generic [ref=e912]:
+            - generic [ref=e913]: </div
+            - text: ">"
+          - generic [ref=e914]:
+            - generic [ref=e915]: </div
+            - text: ">"
+        - button "Copy code" [ref=e916] [cursor=pointer]:
+          - generic [ref=e917]: 
+      - separator [ref=e918]
+      - heading "Quick Reference" [level=2] [ref=e919]
+      - generic [ref=e920]:
+        - code [ref=e922]: "/* Container */ .Layout-container /* 960px max */ .Layout-container--narrow /* 640px max */ .Layout-container--wide /* 1280px max */ /* Grid */ .Layout-grid /* 12-column grid */ .Layout-col-{1-12} /* Column span */ .Layout-col-{1-12}@md /* Tablet+ column span */ /* Stack */ .Layout-stack /* Vertical, 16px gap */ .Layout-stack--tight /* 8px gap */ .Layout-stack--loose /* 32px gap */ /* Cluster */ .Layout-cluster /* Horizontal with wrap */ /* Split */ .Layout-split /* Space between */ /* Sidebar */ .Layout-sidebar /* Sidebar left */ .Layout-sidebar--right /* Sidebar right */ /* Center */ .Layout-center /* Center content */"
+        - button "Copy code" [ref=e923] [cursor=pointer]:
+          - generic [ref=e924]: 
+    - paragraph [ref=e926]: "Carbon v0.3 • Last built: 2/5/2026, 6:19:55 PM"
+```

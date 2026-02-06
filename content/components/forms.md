@@ -266,7 +266,7 @@ For "select all" patterns where some items are selected.
 
 <Preview>
 <div style="max-width: 300px;">
-    <label class="Checkbox" style="margin-bottom: var(--space-3); border-bottom: 1px solid var(--border-subtle); padding-bottom: var(--space-3);">
+    <label class="Checkbox" style="margin-bottom: var(--space-3); border-bottom: 1px solid var(--bd); padding-bottom: var(--space-3);">
         <input type="checkbox" class="Checkbox-input Checkbox-input--indeterminate">
         <span class="Checkbox-box Checkbox-box--indeterminate"></span>
         <span class="Checkbox-label" style="font-weight: 500;">Select All Files</span>
@@ -581,7 +581,7 @@ Side-by-side fields for related data.
     <div class="Card-body">
         <div style="text-align: center; margin-bottom: var(--space-6);">
             <h3 style="margin: 0 0 var(--space-2);">Welcome back</h3>
-            <p style="color: var(--text-secondary); margin: 0; font-size: 0.9rem;">Sign in to your account</p>
+            <p style="color: var(--fg-3); margin: 0; font-size: 0.9rem;">Sign in to your account</p>
         </div>
         <form style="display: flex; flex-direction: column; gap: var(--space-4);">
             <div class="FormField">
@@ -610,8 +610,8 @@ Side-by-side fields for related data.
             </label>
             <button type="submit" class="Button Button--primary Button--block">Sign In</button>
         </form>
-        <div style="text-align: center; margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--border-subtle);">
-            <span style="color: var(--text-secondary); font-size: 0.9rem;">Don't have an account? </span>
+        <div style="text-align: center; margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--bd);">
+            <span style="color: var(--fg-3); font-size: 0.9rem;">Don't have an account? </span>
             <a href="#" class="Link">Sign up</a>
         </div>
     </div>
@@ -625,7 +625,7 @@ Side-by-side fields for related data.
     <div class="Card-body">
         <div style="text-align: center; margin-bottom: var(--space-6);">
             <h3 style="margin: 0 0 var(--space-2);">Create your account</h3>
-            <p style="color: var(--text-secondary); margin: 0; font-size: 0.9rem;">Start your 14-day free trial</p>
+            <p style="color: var(--fg-3); margin: 0; font-size: 0.9rem;">Start your 14-day free trial</p>
         </div>
         <form style="display: flex; flex-direction: column; gap: var(--space-4);">
             <div class="FormRow">
@@ -710,7 +710,7 @@ Side-by-side fields for related data.
             </label>
         </div>
     </fieldset>
-    <div style="display: flex; gap: var(--space-3); justify-content: flex-end; padding-top: var(--space-4); border-top: 1px solid var(--border-subtle);">
+    <div style="display: flex; gap: var(--space-3); justify-content: flex-end; padding-top: var(--space-4); border-top: 1px solid var(--bd);">
         <button type="button" class="Button Button--secondary">Cancel</button>
         <button type="submit" class="Button Button--primary">Save Changes</button>
     </div>
@@ -797,8 +797,8 @@ Override form styles using CSS custom properties:
 /* Custom input styling */
 .Input {
   --input-radius: var(--space-2);
-  --input-border: var(--border-strong);
-  --input-focus: var(--accent-primary);
+  --input-border: var(--bd-s);
+  --input-focus: var(--accent);
   
   border-radius: var(--input-radius);
   border-color: var(--input-border);

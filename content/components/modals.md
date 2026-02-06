@@ -41,7 +41,7 @@ Basic modal structure:
 Modals use a two-part structure: `.Modal-overlay` for the backdrop and `.Modal` for the dialog itself. Add `.active` or `.Modal-overlay--active` to show the modal.
 
 <Preview>
-<div style="position: relative; width: 100%; height: 200px; background: var(--bg-secondary); border-radius: var(--space-2); display: flex; align-items: center; justify-content: center;">
+<div style="position: relative; width: 100%; height: 200px; background: var(--bg-s); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center;">
   <div class="Modal" style="position: relative; transform: none; max-width: 320px;">
     <header class="Modal-header">
       <h2 class="Modal-title">Example Modal</h2>
@@ -69,7 +69,7 @@ Modals use a two-part structure: `.Modal-overlay` for the backdrop and `.Modal` 
 A simple modal with header, body, and footer actions.
 
 <Preview>
-<div style="position: relative; width: 100%; height: 220px; background: oklch(0% 0 0 / 0.5); border-radius: var(--space-2); display: flex; align-items: center; justify-content: center; padding: var(--space-4);">
+<div style="position: relative; width: 100%; height: 220px; background: oklch(0% 0 0 / 0.5); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center; padding: var(--space-4);">
   <div class="Modal" style="position: relative; transform: none;">
     <header class="Modal-header">
       <h2 class="Modal-title">Save Changes?</h2>
@@ -93,7 +93,7 @@ A simple modal with header, body, and footer actions.
 Use danger buttons for destructive actions. Clear messaging helps users understand consequences.
 
 <Preview>
-<div style="position: relative; width: 100%; height: 240px; background: oklch(0% 0 0 / 0.5); border-radius: var(--space-2); display: flex; align-items: center; justify-content: center; padding: var(--space-4);">
+<div style="position: relative; width: 100%; height: 240px; background: oklch(0% 0 0 / 0.5); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center; padding: var(--space-4);">
   <div class="Modal Modal--small" style="position: relative; transform: none;">
     <header class="Modal-header">
       <h2 class="Modal-title">Delete Project?</h2>
@@ -117,7 +117,7 @@ Use danger buttons for destructive actions. Clear messaging helps users understa
 Modals work great for focused form inputs. Keep forms short — complex flows belong on dedicated pages.
 
 <Preview>
-<div style="position: relative; width: 100%; height: 360px; background: oklch(0% 0 0 / 0.5); border-radius: var(--space-2); display: flex; align-items: center; justify-content: center; padding: var(--space-4);">
+<div style="position: relative; width: 100%; height: 360px; background: oklch(0% 0 0 / 0.5); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center; padding: var(--space-4);">
   <div class="Modal" style="position: relative; transform: none;">
     <header class="Modal-header">
       <h2 class="Modal-title">Create New Workspace</h2>
@@ -148,15 +148,15 @@ Modals work great for focused form inputs. Keep forms short — complex flows be
 Fullscreen modals take over the entire viewport. Use for immersive experiences or complex multi-step flows.
 
 <Preview>
-<div style="position: relative; width: 100%; height: 300px; background: oklch(0% 0 0 / 0.5); border-radius: var(--space-2); display: flex; align-items: center; justify-content: center;">
-  <div class="Modal Modal--fullscreen" style="position: relative; transform: none; height: 100%; border-radius: var(--space-2);">
+<div style="position: relative; width: 100%; height: 300px; background: oklch(0% 0 0 / 0.5); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center;">
+  <div class="Modal Modal--fullscreen" style="position: relative; transform: none; height: 100%; border-radius: var(--r-m);">
     <header class="Modal-header">
       <h2 class="Modal-title">Document Editor</h2>
       <button class="Button Button--icon Button--ghost" aria-label="Close">
         <i class="ph ph-x"></i>
       </button>
     </header>
-    <div class="Modal-body" style="display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
+    <div class="Modal-body" style="display: flex; align-items: center; justify-content: center; color: var(--fg-3);">
       <p>Fullscreen content area</p>
     </div>
     <footer class="Modal-footer">
@@ -172,8 +172,8 @@ Fullscreen modals take over the entire viewport. Use for immersive experiences o
 Slide-in panels from the side work well for settings, filters, or detailed information.
 
 <Preview>
-<div style="position: relative; width: 100%; height: 280px; background: oklch(0% 0 0 / 0.5); border-radius: var(--space-2); display: flex; justify-content: flex-end; overflow: hidden;">
-  <div class="Modal" style="position: relative; transform: none; height: 100%; border-radius: 0; max-width: 320px; border-left: 1px solid var(--border-subtle);">
+<div style="position: relative; width: 100%; height: 280px; background: oklch(0% 0 0 / 0.5); border-radius: var(--r-m); display: flex; justify-content: flex-end; overflow: hidden;">
+  <div class="Modal" style="position: relative; transform: none; height: 100%; border-radius: 0; max-width: 320px; border-left: 1px solid var(--bd);">
     <header class="Modal-header">
       <h2 class="Modal-title">Filters</h2>
       <button class="Button Button--icon Button--ghost" aria-label="Close">
@@ -211,7 +211,7 @@ Slide-in panels from the side work well for settings, filters, or detailed infor
 Open a modal from within another modal. The second modal uses `.Modal-overlay--nested` for higher z-index.
 
 <Preview>
-<div style="position: relative; width: 100%; height: 320px; background: oklch(0% 0 0 / 0.5); border-radius: var(--space-2); display: flex; align-items: center; justify-content: center; padding: var(--space-4);">
+<div style="position: relative; width: 100%; height: 320px; background: oklch(0% 0 0 / 0.5); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center; padding: var(--space-4);">
   <div class="Modal" style="position: relative; transform: none; opacity: 0.6; scale: 0.95;">
     <header class="Modal-header">
       <h2 class="Modal-title">Edit Profile</h2>
@@ -243,11 +243,11 @@ Open a modal from within another modal. The second modal uses `.Modal-overlay--n
 Display images in a focused, centered view with minimal chrome.
 
 <Preview>
-<div style="position: relative; width: 100%; height: 280px; background: oklch(0% 0 0 / 0.85); border-radius: var(--space-2); display: flex; align-items: center; justify-content: center; padding: var(--space-4);">
+<div style="position: relative; width: 100%; height: 280px; background: oklch(0% 0 0 / 0.85); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center; padding: var(--space-4);">
   <button class="Button Button--icon Button--ghost" style="position: absolute; top: var(--space-3); right: var(--space-3); color: white;" aria-label="Close">
     <i class="ph ph-x"></i>
   </button>
-  <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=200&fit=crop" alt="Mountain landscape" style="max-width: 100%; max-height: 220px; border-radius: var(--space-2); object-fit: cover;">
+  <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=200&fit=crop" alt="Mountain landscape" style="max-width: 100%; max-height: 220px; border-radius: var(--r-m); object-fit: cover;">
   <button class="Button Button--icon Button--ghost" style="position: absolute; left: var(--space-3); color: white;" aria-label="Previous">
     <i class="ph ph-caret-left"></i>
   </button>
@@ -262,11 +262,11 @@ Display images in a focused, centered view with minimal chrome.
 Embed video content with playback controls.
 
 <Preview>
-<div style="position: relative; width: 100%; height: 280px; background: oklch(0% 0 0 / 0.85); border-radius: var(--space-2); display: flex; align-items: center; justify-content: center; padding: var(--space-6);">
+<div style="position: relative; width: 100%; height: 280px; background: oklch(0% 0 0 / 0.85); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center; padding: var(--space-6);">
   <button class="Button Button--icon Button--ghost" style="position: absolute; top: var(--space-3); right: var(--space-3); color: white;" aria-label="Close">
     <i class="ph ph-x"></i>
   </button>
-  <div style="width: 100%; max-width: 480px; aspect-ratio: 16/9; background: oklch(10% 0 0); border-radius: var(--space-2); display: flex; align-items: center; justify-content: center;">
+  <div style="width: 100%; max-width: 480px; aspect-ratio: 16/9; background: oklch(10% 0 0); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center;">
     <button class="Button Button--icon Button--primary Button--large" aria-label="Play video">
       <i class="ph ph-play-fill"></i>
     </button>

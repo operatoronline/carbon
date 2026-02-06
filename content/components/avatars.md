@@ -327,7 +327,7 @@ Avatars that respond to user interaction.
         <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=comment" class="Avatar" alt="Sarah Chen">
         <div style="flex: 1;">
             <div style="font-weight: 500;">Sarah Chen</div>
-            <div style="font-size: 0.8rem; color: var(--text-secondary);">2 hours ago</div>
+            <div style="font-size: 0.8rem; color: var(--fg-3);">2 hours ago</div>
         </div>
         <button class="Button Button--icon Button--ghost Button--small" aria-label="More options">
             <i class="ph ph-dots-three"></i>
@@ -352,7 +352,7 @@ Avatars that respond to user interaction.
                     </div>
                     <div style="flex: 1;">
                         <div style="font-weight: 500; font-size: 0.9rem;">Sarah Chen</div>
-                        <div style="font-size: 0.75rem; color: var(--text-secondary);">Lead Designer</div>
+                        <div style="font-size: 0.75rem; color: var(--fg-3);">Lead Designer</div>
                     </div>
                 </div>
                 <div style="display: flex; align-items: center; gap: var(--space-3);">
@@ -362,7 +362,7 @@ Avatars that respond to user interaction.
                     </div>
                     <div style="flex: 1;">
                         <div style="font-weight: 500; font-size: 0.9rem;">John Smith</div>
-                        <div style="font-size: 0.75rem; color: var(--text-secondary);">Developer</div>
+                        <div style="font-size: 0.75rem; color: var(--fg-3);">Developer</div>
                     </div>
                 </div>
                 <div style="display: flex; align-items: center; gap: var(--space-3);">
@@ -372,7 +372,7 @@ Avatars that respond to user interaction.
                     </div>
                     <div style="flex: 1;">
                         <div style="font-weight: 500; font-size: 0.9rem;">Mike Johnson</div>
-                        <div style="font-size: 0.75rem; color: var(--text-secondary);">Product Manager</div>
+                        <div style="font-size: 0.75rem; color: var(--fg-3);">Product Manager</div>
                     </div>
                 </div>
             </div>
@@ -389,8 +389,8 @@ Avatars that respond to user interaction.
 ### Assignees Selector
 
 <Preview title="Assignees Display">
-    <div style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3); background: var(--bg-secondary); border-radius: var(--space-2); max-width: 360px;">
-        <span style="font-size: 0.875rem; color: var(--text-secondary);">Assignees:</span>
+    <div style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-m); max-width: 360px;">
+        <span style="font-size: 0.875rem; color: var(--fg-3);">Assignees:</span>
         <div class="AvatarGroup">
             <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=assign1" class="Avatar Avatar--small" alt="User 1">
             <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=assign2" class="Avatar Avatar--small" alt="User 2">
@@ -413,7 +413,7 @@ Avatars that respond to user interaction.
             </button>
         </div>
         <h3 style="margin: 0 0 var(--space-1);">Sarah Chen</h3>
-        <p style="color: var(--text-secondary); margin: 0 0 var(--space-4); font-size: 0.9rem;">Senior Product Designer at Carbon</p>
+        <p style="color: var(--fg-3); margin: 0 0 var(--space-4); font-size: 0.9rem;">Senior Product Designer at Carbon</p>
         <div style="display: flex; justify-content: center; gap: var(--space-3);">
             <button class="Button Button--primary Button--small">Follow</button>
             <button class="Button Button--secondary Button--small">Message</button>
@@ -540,8 +540,8 @@ Avatars require attention to ensure they're accessible:
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
-  background-color: var(--bg-secondary);
-  color: var(--text-primary);
+  background-color: var(--bg-s);
+  color: var(--fg);
   font-weight: 600;
   font-size: 0.875rem;
   flex-shrink: 0;
@@ -574,13 +574,13 @@ Avatars require attention to ensure they're accessible:
 
 /* Shapes */
 .Avatar--rounded {
-  border-radius: var(--space-2);
+  border-radius: var(--r-m);
 }
 
 /* Initials */
 .Avatar--initials {
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border-subtle);
+  background-color: var(--bg-s);
+  border: 1px solid var(--bd);
 }
 
 .Avatar--initials.Avatar--primary {
@@ -603,8 +603,8 @@ Avatars require attention to ensure they're accessible:
 
 /* Icon Avatar */
 .Avatar--icon {
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border-subtle);
+  background-color: var(--bg-s);
+  border: 1px solid var(--bd);
 }
 
 .Avatar--icon.Avatar--primary {
@@ -625,8 +625,8 @@ Avatars require attention to ensure they're accessible:
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  border: 2px solid var(--bg-primary);
-  background-color: var(--text-secondary);
+  border: 2px solid var(--bg);
+  background-color: var(--fg-3);
 }
 
 .Avatar-status--online {
@@ -642,7 +642,7 @@ Avatars require attention to ensure they're accessible:
 }
 
 .Avatar-status--offline {
-  background-color: var(--text-secondary);
+  background-color: var(--fg-3);
 }
 
 .Avatar-status--small {
@@ -664,7 +664,7 @@ Avatars require attention to ensure they're accessible:
 
 .AvatarGroup .Avatar {
   margin-left: -12px;
-  border: 2px solid var(--bg-primary);
+  border: 2px solid var(--bg);
   transition: transform 0.15s;
 }
 
@@ -686,8 +686,8 @@ Avatars require attention to ensure they're accessible:
 }
 
 .AvatarGroup-overflow {
-  background-color: var(--bg-secondary);
-  border-color: var(--border-subtle);
+  background-color: var(--bg-s);
+  border-color: var(--bd);
   font-size: 0.7rem;
 }
 
@@ -724,7 +724,7 @@ Avatars require attention to ensure they're accessible:
 }
 
 .Avatar-button:focus-visible {
-  outline: 2px solid var(--accent-primary);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
@@ -751,9 +751,9 @@ Avatars require attention to ensure they're accessible:
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  border: 2px solid var(--bg-primary);
-  background-color: var(--bg-secondary);
-  color: var(--text-primary);
+  border: 2px solid var(--bg);
+  background-color: var(--bg-s);
+  color: var(--fg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -762,11 +762,11 @@ Avatars require attention to ensure they're accessible:
 }
 
 .Avatar-edit:hover {
-  background-color: var(--border-subtle);
+  background-color: var(--bd);
 }
 
 .Avatar-edit:focus-visible {
-  outline: 2px solid var(--accent-primary);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
