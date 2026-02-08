@@ -318,7 +318,7 @@ Avatars that respond to user interaction.
 
 ---
 
-## Real-World Examples
+## Common Patterns
 
 ### Comment Header
 
@@ -423,108 +423,130 @@ Avatars that respond to user interaction.
 
 ---
 
-## API Reference
+## Customization
 
-### Classes
+Override avatar styles using CSS custom properties:
 
-| Class | Description |
-|-------|-------------|
-| `.Avatar` | Base avatar styling (40px circle) |
-| `.Avatar--xs` | Extra small (24px) |
-| `.Avatar--small` | Small size (32px) |
-| `.Avatar--large` | Large size (56px) |
-| `.Avatar--xl` | Extra large (80px) |
-| `.Avatar--rounded` | Rounded square shape |
-| `.Avatar--initials` | Text initials variant |
-| `.Avatar--icon` | Icon placeholder variant |
-| `.Avatar--primary` | Primary color initials |
-| `.Avatar--success` | Success color initials |
-| `.Avatar--warning` | Warning color initials |
-| `.Avatar-status` | Status indicator dot |
-| `.Avatar-status--online` | Online status (green) |
-| `.Avatar-status--away` | Away status (yellow) |
-| `.Avatar-status--busy` | Busy status (red) |
-| `.Avatar-status--offline` | Offline status (gray) |
-| `.Avatar-status--small` | Smaller status dot |
-| `.Avatar-status--large` | Larger status dot |
-| `.AvatarGroup` | Stacked avatar container |
-| `.AvatarGroup--small` | Small group spacing |
-| `.AvatarGroup--large` | Large group spacing |
-| `.AvatarGroup-overflow` | Overflow count indicator |
-| `.AvatarStack` | Vertical list container |
-| `.AvatarStack-item` | Single item in stack |
-| `.AvatarStack-name` | Name label in stack |
-| `.Avatar-button` | Clickable avatar wrapper |
-| `.Avatar-editable` | Container for edit overlay |
-| `.Avatar-edit` | Edit button overlay |
+```css
+/* Custom avatar sizes */
+.Avatar--xxl {
+  width: 120px;
+  height: 120px;
+  font-size: 2rem;
+}
 
-### CSS Custom Properties
+/* Custom initials colors */
+.Avatar--initials.Avatar--brand {
+  background-color: oklch(60% 0.15 280 / 0.15);
+  color: oklch(50% 0.15 280);
+  border-color: transparent;
+}
 
-| Property | Default | Description |
-|----------|---------|-------------|
-| `--space-2` | `0.5rem` | Border radius for rounded variant |
-| `--bg-secondary` | — | Background for initials/icons |
-| `--bg-primary` | — | Border color for groups |
-| `--text-primary` | — | Text color for initials |
-| `--accent-primary` | — | Focus outline color |
+/* Square avatars */
+.Avatar--square {
+  border-radius: var(--r-s);
+}
 
-### Attributes
+/* Bordered avatars for light backgrounds */
+.Avatar--bordered {
+  border: 2px solid var(--bd);
+}
 
-| Attribute | Description |
-|-----------|-------------|
-| `alt` | Required for image avatars; describe the person |
-| `aria-label` | Required for status indicators and interactive avatars |
-| `role="group"` | Use on AvatarGroup with aria-label for count |
+/* Custom group overlap */
+.AvatarGroup--tight .Avatar {
+  margin-left: -16px;
+}
+
+/* Ring style for selected state */
+.Avatar--selected {
+  box-shadow: 0 0 0 3px var(--accent);
+}
+```
 
 ---
 
-## Accessibility
+## API Reference
 
-Avatars require attention to ensure they're accessible:
+### Base Classes
 
-### Alt Text
-```html
-<!-- Always provide meaningful alt text -->
-<img src="..." class="Avatar" alt="Sarah Chen's profile photo">
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">.Avatar</code></td><td class="ApiTable-desc">Base avatar styling (40px circle)</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar--xs</code></td><td class="ApiTable-desc">Extra small (24px)</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar--small</code></td><td class="ApiTable-desc">Small size (32px)</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar--large</code></td><td class="ApiTable-desc">Large size (56px)</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar--xl</code></td><td class="ApiTable-desc">Extra large (80px)</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar--rounded</code></td><td class="ApiTable-desc">Rounded square shape</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar--initials</code></td><td class="ApiTable-desc">Text initials variant</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar--icon</code></td><td class="ApiTable-desc">Icon placeholder variant</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar--primary</code></td><td class="ApiTable-desc">Primary color initials</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar--success</code></td><td class="ApiTable-desc">Success color initials</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar--warning</code></td><td class="ApiTable-desc">Warning color initials</td></tr>
+</tbody>
+</table>
 
-<!-- For decorative avatars in context -->
-<img src="..." class="Avatar" alt="" role="presentation">
-```
+### Status Classes
 
-### Interactive Avatars
-```html
-<!-- Clickable avatar needs accessible label -->
-<button class="Avatar-button" aria-label="View Sarah Chen's profile">
-    <img src="..." class="Avatar" alt="">
-</button>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">.Avatar-status</code></td><td class="ApiTable-desc">Status indicator dot</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar-status--online</code></td><td class="ApiTable-desc">Online status (green)</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar-status--away</code></td><td class="ApiTable-desc">Away status (yellow)</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar-status--busy</code></td><td class="ApiTable-desc">Busy status (red)</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar-status--offline</code></td><td class="ApiTable-desc">Offline status (gray)</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar-status--small</code></td><td class="ApiTable-desc">Smaller status dot</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar-status--large</code></td><td class="ApiTable-desc">Larger status dot</td></tr>
+</tbody>
+</table>
 
-<!-- Edit avatar with clear action -->
-<button class="Avatar-edit" aria-label="Change profile photo">
-    <i class="ph ph-camera"></i>
-</button>
-```
+### Group & Stack Classes
 
-### Status Indicators
-```html
-<!-- Status should be announced -->
-<div style="position: relative;">
-    <img src="..." class="Avatar" alt="Sarah Chen">
-    <span class="Avatar-status Avatar-status--online" aria-label="Online"></span>
-</div>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">.AvatarGroup</code></td><td class="ApiTable-desc">Stacked avatar container</td></tr>
+<tr><td><code class="ApiTable-prop">.AvatarGroup--small</code></td><td class="ApiTable-desc">Small group spacing</td></tr>
+<tr><td><code class="ApiTable-prop">.AvatarGroup--large</code></td><td class="ApiTable-desc">Large group spacing</td></tr>
+<tr><td><code class="ApiTable-prop">.AvatarGroup-overflow</code></td><td class="ApiTable-desc">Overflow count indicator</td></tr>
+<tr><td><code class="ApiTable-prop">.AvatarStack</code></td><td class="ApiTable-desc">Vertical list container</td></tr>
+<tr><td><code class="ApiTable-prop">.AvatarStack-item</code></td><td class="ApiTable-desc">Single item in stack</td></tr>
+<tr><td><code class="ApiTable-prop">.AvatarStack-name</code></td><td class="ApiTable-desc">Name label in stack</td></tr>
+</tbody>
+</table>
 
-<!-- Or include in alt text -->
-<img src="..." class="Avatar" alt="Sarah Chen (online)">
-```
+### Interactive Classes
 
-### Avatar Groups
-```html
-<!-- Provide group context -->
-<div class="AvatarGroup" role="group" aria-label="5 team members">
-    <img src="..." class="Avatar" alt="Sarah Chen">
-    <img src="..." class="Avatar" alt="John Smith">
-    <span class="Avatar Avatar--initials" aria-label="3 more members">+3</span>
-</div>
-```
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">.Avatar-button</code></td><td class="ApiTable-desc">Clickable avatar wrapper</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar-editable</code></td><td class="ApiTable-desc">Container for edit overlay</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar-edit</code></td><td class="ApiTable-desc">Edit button overlay</td></tr>
+</tbody>
+</table>
+
+### Attributes
+
+<table class="ApiTable">
+<thead>
+<tr><th>Attribute</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">alt</code></td><td class="ApiTable-desc">Required for image avatars; describe the person</td></tr>
+<tr><td><code class="ApiTable-prop">aria-label</code></td><td class="ApiTable-desc">Required for status indicators and interactive avatars</td></tr>
+<tr><td><code class="ApiTable-prop">role="group"</code></td><td class="ApiTable-desc">Use on AvatarGroup with aria-label for count</td></tr>
+</tbody>
+</table>
 
 ---
 
@@ -774,6 +796,56 @@ Avatars require attention to ensure they're accessible:
   width: 32px;
   height: 32px;
 }
+```
+
+---
+
+## Accessibility
+
+Avatars require attention to ensure they're accessible:
+
+### Alt Text
+```html
+<!-- Always provide meaningful alt text -->
+<img src="..." class="Avatar" alt="Sarah Chen's profile photo">
+
+<!-- For decorative avatars in context -->
+<img src="..." class="Avatar" alt="" role="presentation">
+```
+
+### Interactive Avatars
+```html
+<!-- Clickable avatar needs accessible label -->
+<button class="Avatar-button" aria-label="View Sarah Chen's profile">
+    <img src="..." class="Avatar" alt="">
+</button>
+
+<!-- Edit avatar with clear action -->
+<button class="Avatar-edit" aria-label="Change profile photo">
+    <i class="ph ph-camera"></i>
+</button>
+```
+
+### Status Indicators
+```html
+<!-- Status should be announced -->
+<div style="position: relative;">
+    <img src="..." class="Avatar" alt="Sarah Chen">
+    <span class="Avatar-status Avatar-status--online" aria-label="Online"></span>
+</div>
+
+<!-- Or include in alt text -->
+<img src="..." class="Avatar" alt="Sarah Chen (online)">
+```
+
+### Avatar Groups
+```html
+<!-- Provide group context -->
+<div class="AvatarGroup" role="group" aria-label="5 team members">
+    <img src="..." class="Avatar" alt="Sarah Chen">
+    <img src="..." class="Avatar" alt="John Smith">
+    <span class="Avatar Avatar--initials" aria-label="3 more members">+3</span>
+</div>
 ```
 
 ---

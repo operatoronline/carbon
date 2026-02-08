@@ -343,6 +343,108 @@ Menu items that are not currently available.
 
 ---
 
+## Common Patterns
+
+### User Account Menu
+
+<Preview title="Account Menu">
+    <div style="display: flex; justify-content: flex-end;">
+        <div style="position: relative;">
+            <button class="Button Button--ghost" style="display: flex; align-items: center; gap: var(--space-2);">
+                <div style="width: 28px; height: 28px; border-radius: 50%; background: oklch(65% 0.15 250); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 600;">SC</div>
+                <span>Sarah Chen</span>
+                <i class="ph ph-caret-down"></i>
+            </button>
+            <div class="Menu Menu--open" style="position: relative; top: var(--space-2); min-width: 200px;">
+                <button class="Menu-item">
+                    <i class="Menu-item-icon ph ph-user"></i>
+                    Profile
+                </button>
+                <button class="Menu-item">
+                    <i class="Menu-item-icon ph ph-gear"></i>
+                    Settings
+                </button>
+                <button class="Menu-item">
+                    <i class="Menu-item-icon ph ph-credit-card"></i>
+                    Billing
+                </button>
+                <div class="Menu-divider"></div>
+                <button class="Menu-item Menu-item--danger">
+                    <i class="Menu-item-icon ph ph-sign-out"></i>
+                    Sign Out
+                </button>
+            </div>
+        </div>
+    </div>
+</Preview>
+
+### Toolbar Actions Menu
+
+<Preview title="Toolbar Actions">
+    <div style="display: flex; gap: var(--space-2); align-items: flex-start;">
+        <button class="Button Button--secondary Button--small">
+            <i class="ph ph-pencil"></i> Edit
+        </button>
+        <div style="position: relative;">
+            <button class="Button Button--secondary Button--small">
+                <i class="ph ph-dots-three"></i>
+            </button>
+            <div class="Menu Menu--open Menu--compact" style="position: relative; top: var(--space-1); min-width: 160px;">
+                <button class="Menu-item">
+                    <i class="Menu-item-icon ph ph-copy"></i>
+                    Duplicate
+                </button>
+                <button class="Menu-item">
+                    <i class="Menu-item-icon ph ph-archive"></i>
+                    Archive
+                </button>
+                <button class="Menu-item">
+                    <i class="Menu-item-icon ph ph-share"></i>
+                    Share
+                </button>
+                <div class="Menu-divider"></div>
+                <button class="Menu-item Menu-item--danger">
+                    <i class="Menu-item-icon ph ph-trash"></i>
+                    Delete
+                </button>
+            </div>
+        </div>
+    </div>
+</Preview>
+
+### Table Row Actions
+
+<Preview title="Row Action Menu">
+    <div style="display: flex; align-items: center; justify-content: space-between; padding: var(--space-3); border: 1px solid var(--bd); border-radius: var(--r-m); max-width: 480px;">
+        <div style="display: flex; align-items: center; gap: var(--space-3);">
+            <i class="ph ph-file-text" style="color: var(--fg-3);"></i>
+            <div>
+                <div style="font-weight: 500; font-size: 0.9rem;">Project Proposal.pdf</div>
+                <div style="font-size: 0.8rem; color: var(--fg-3);">2.4 MB · Jan 15, 2026</div>
+            </div>
+        </div>
+        <div style="position: relative;">
+            <div class="Menu Menu--open Menu--compact" style="position: relative; min-width: 140px;">
+                <button class="Menu-item">
+                    <i class="Menu-item-icon ph ph-download"></i>
+                    Download
+                </button>
+                <button class="Menu-item">
+                    <i class="Menu-item-icon ph ph-share"></i>
+                    Share
+                </button>
+                <div class="Menu-divider"></div>
+                <button class="Menu-item Menu-item--danger">
+                    <i class="Menu-item-icon ph ph-trash"></i>
+                    Delete
+                </button>
+            </div>
+        </div>
+    </div>
+</Preview>
+
+---
+
 ## Customization
 
 Override menu styles using CSS custom properties:
@@ -527,6 +629,159 @@ Override menu styles using CSS custom properties:
 </tr>
 </tbody>
 </table>
+
+---
+
+## CSS Reference
+
+```css
+/* Menu Container */
+.Menu {
+  display: none;
+  flex-direction: column;
+  background: var(--bg);
+  border: 1px solid var(--bd);
+  border-radius: var(--r-m);
+  padding: var(--space-1);
+  box-shadow: 0 4px 12px oklch(0% 0 0 / 0.1);
+  min-width: 160px;
+  z-index: 100;
+}
+
+.Menu--open {
+  display: flex;
+}
+
+/* Menu Item */
+.Menu-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--fg);
+  border-radius: var(--r-s);
+  width: 100%;
+  text-align: left;
+  transition: background-color 0.1s;
+}
+
+.Menu-item:hover {
+  background-color: var(--bg-s);
+}
+
+.Menu-item:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+/* Danger Item */
+.Menu-item--danger {
+  color: oklch(55% 0.2 25);
+}
+
+.Menu-item--danger:hover {
+  background-color: oklch(55% 0.2 25 / 0.1);
+}
+
+/* Disabled Item */
+.Menu-item:disabled,
+.Menu-item[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.Menu-item:disabled:hover {
+  background: none;
+}
+
+/* Item Icon */
+.Menu-item-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  color: var(--fg-3);
+}
+
+.Menu-item--danger .Menu-item-icon {
+  color: oklch(55% 0.2 25);
+}
+
+/* Item Text & Shortcut */
+.Menu-item-text {
+  flex: 1;
+}
+
+.Menu-item-shortcut {
+  font-size: 0.75rem;
+  color: var(--fg-3);
+  margin-left: auto;
+}
+
+/* Submenu */
+.Menu-item-chevron {
+  font-size: 0.8rem;
+  color: var(--fg-3);
+  margin-left: auto;
+}
+
+/* Multiline Item */
+.Menu-item--multiline {
+  align-items: flex-start;
+  padding: var(--space-3);
+}
+
+.Menu-item-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.Menu-item-title {
+  font-weight: 500;
+}
+
+.Menu-item-description {
+  font-size: 0.8rem;
+  color: var(--fg-3);
+}
+
+/* Checkbox / Radio Items */
+.Menu-item--checkbox,
+.Menu-item--radio {
+  gap: var(--space-2);
+}
+
+/* Divider */
+.Menu-divider {
+  height: 1px;
+  background: var(--bd);
+  margin: var(--space-1) 0;
+}
+
+/* Header */
+.Menu-header {
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--fg-3);
+}
+
+/* Compact Variant */
+.Menu--compact .Menu-item {
+  padding: var(--space-1) var(--space-2);
+  font-size: 0.85rem;
+}
+
+/* Context Menu */
+.Menu--context {
+  position: absolute;
+}
+```
 
 ---
 

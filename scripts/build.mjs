@@ -225,7 +225,13 @@ async function build() {
         }
         const tocHtml = `<ul>${tocEntries.map(e => `<li class="toc-l${e.level}"><a href="#${e.id}">${e.text}</a></li>`).join('')}</ul>`;
 
-        const htmlContent = md.renderer.render(tokens, md.options, {});
+        let htmlContent = md.renderer.render(tokens, md.options, {});
+        // Wrap markdown-rendered <table> (bare, no class attr) in scrollable container with Table class
+        // Use a marker to only close wrappers we opened
+        htmlContent = htmlContent.replace(/<table>\n/g, '<div class="Table-container"><table class="Table">\n');
+        // Close </div> only after tables we wrapped (Table class without further class attrs)
+        htmlContent = htmlContent.replace(/<div class="Table-container"><table class="Table">([\s\S]*?)<\/table>/g, 
+            '<div class="Table-container"><table class="Table">$1</table></div>');
         const baseName = path.basename(file, '.md');
         const title = baseName === 'index' 
             ? 'Introduction' 

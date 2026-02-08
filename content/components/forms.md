@@ -572,7 +572,7 @@ Side-by-side fields for related data.
 
 ---
 
-## Examples
+## Common Patterns
 
 ### Login Form
 
@@ -1210,6 +1210,450 @@ Override form styles using CSS custom properties:
 </tr>
 </tbody>
 </table>
+
+---
+
+## CSS Reference
+
+```css
+/* Form Field */
+.FormField {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.FormField-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--fg);
+}
+
+.FormField-label--required::after {
+  content: " *";
+  color: oklch(55% 0.2 25);
+}
+
+.FormField-helper {
+  font-size: 0.8rem;
+  color: var(--fg-3);
+}
+
+.FormField-message {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: 0.8rem;
+}
+
+.FormField-message--error {
+  color: oklch(55% 0.2 25);
+}
+
+.FormField-message--success {
+  color: oklch(55% 0.15 150);
+}
+
+.FormField-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.FormField-count {
+  font-size: 0.8rem;
+  color: var(--fg-3);
+}
+
+/* Input */
+.Input {
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.9rem;
+  border: 1px solid var(--bd-s);
+  border-radius: var(--r-s);
+  background: var(--bg);
+  color: var(--fg);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.Input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px oklch(60% 0.15 250 / 0.15);
+}
+
+.Input::placeholder {
+  color: var(--fg-3);
+}
+
+.Input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: var(--bg-s);
+}
+
+/* Input Sizes */
+.Input--small {
+  padding: var(--space-1) var(--space-2);
+  font-size: 0.8rem;
+}
+
+.Input--large {
+  padding: var(--space-3) var(--space-4);
+  font-size: 1rem;
+}
+
+/* Input States */
+.Input--error {
+  border-color: oklch(55% 0.2 25);
+}
+
+.Input--error:focus {
+  box-shadow: 0 0 0 2px oklch(55% 0.2 25 / 0.15);
+}
+
+.Input--success {
+  border-color: oklch(55% 0.15 150);
+}
+
+.Input--success:focus {
+  box-shadow: 0 0 0 2px oklch(55% 0.15 150 / 0.15);
+}
+
+/* Input with Icons */
+.Input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.Input-icon {
+  position: absolute;
+  left: var(--space-3);
+  color: var(--fg-3);
+  pointer-events: none;
+}
+
+.Input-icon--trailing {
+  left: auto;
+  right: var(--space-3);
+}
+
+.Input--withIcon {
+  padding-left: calc(var(--space-3) + 1.25rem + var(--space-2));
+}
+
+.Input--withIconTrailing {
+  padding-right: calc(var(--space-3) + 1.25rem + var(--space-2));
+}
+
+.Input-toggle {
+  position: absolute;
+  right: var(--space-2);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--fg-3);
+  padding: var(--space-1);
+}
+
+/* Input Group */
+.Input-group {
+  display: flex;
+}
+
+.Input--grouped {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: none;
+}
+
+.Input-group .Button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* Textarea */
+.Textarea {
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.9rem;
+  border: 1px solid var(--bd-s);
+  border-radius: var(--r-s);
+  background: var(--bg);
+  color: var(--fg);
+  resize: vertical;
+  min-height: 80px;
+  font-family: inherit;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.Textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px oklch(60% 0.15 250 / 0.15);
+}
+
+/* Select */
+.Select {
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.9rem;
+  border: 1px solid var(--bd-s);
+  border-radius: var(--r-s);
+  background: var(--bg);
+  color: var(--fg);
+  appearance: none;
+  background-image: url("data:image/svg+xml,...");
+  background-repeat: no-repeat;
+  background-position: right var(--space-3) center;
+  cursor: pointer;
+}
+
+/* Checkbox */
+.Checkbox {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  cursor: pointer;
+}
+
+.Checkbox-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.Checkbox-box {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--bd-s);
+  border-radius: var(--r-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s, border-color 0.15s;
+  flex-shrink: 0;
+}
+
+.Checkbox-input:checked + .Checkbox-box {
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+.Checkbox-input:focus-visible + .Checkbox-box {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.Checkbox--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.Checkbox-label {
+  font-size: 0.9rem;
+}
+
+/* Radio */
+.Radio {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  cursor: pointer;
+}
+
+.Radio-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.Radio-circle {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--bd-s);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.15s;
+  flex-shrink: 0;
+}
+
+.Radio-input:checked + .Radio-circle {
+  border-color: var(--accent);
+}
+
+.Radio-input:checked + .Radio-circle::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.RadioGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+/* Radio Card */
+.RadioCardGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.RadioCard {
+  display: flex;
+  padding: var(--space-4);
+  border: 1px solid var(--bd);
+  border-radius: var(--r-m);
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.RadioCard--selected {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+/* Switch */
+.Switch {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  cursor: pointer;
+}
+
+.Switch-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.Switch-track {
+  width: 40px;
+  height: 22px;
+  background: var(--bg-s);
+  border: 1px solid var(--bd-s);
+  border-radius: 11px;
+  position: relative;
+  transition: background-color 0.2s, border-color 0.2s;
+  flex-shrink: 0;
+}
+
+.Switch-track::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.2s;
+}
+
+.Switch-input:checked + .Switch-track {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.Switch-input:checked + .Switch-track::after {
+  transform: translateX(18px);
+}
+
+.Switch--small .Switch-track { width: 32px; height: 18px; }
+.Switch--large .Switch-track { width: 48px; height: 26px; }
+
+.Switch--disabled { opacity: 0.5; cursor: not-allowed; }
+
+.Switch--block {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-3);
+  border: 1px solid var(--bd);
+  border-radius: var(--r-m);
+}
+
+.Switch-content { display: flex; flex-direction: column; gap: var(--space-1); }
+.Switch-description { font-size: 0.8rem; color: var(--fg-3); }
+
+/* File Input */
+.FileInput {
+  position: relative;
+}
+
+.FileInput-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.FileInput-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-6);
+  border: 2px dashed var(--bd);
+  border-radius: var(--r-m);
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.FileInput-label:hover {
+  border-color: var(--accent);
+  background: oklch(60% 0.15 250 / 0.05);
+}
+
+.FileInput-icon { font-size: 1.5rem; color: var(--fg-3); }
+.FileInput-text { font-weight: 500; }
+.FileInput-hint { font-size: 0.8rem; color: var(--fg-3); }
+
+.FileInput-list { display: flex; flex-direction: column; gap: var(--space-2); }
+.FileInput-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  border: 1px solid var(--bd);
+  border-radius: var(--r-s);
+}
+
+/* Form Layouts */
+.FormInline {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-end;
+}
+
+.FormRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.FormFieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.FormFieldset-legend {
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+}
+```
 
 ---
 

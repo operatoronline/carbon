@@ -333,76 +333,160 @@ Common pattern for tag inputs in forms.
 
 ---
 
+## Common Patterns
+
+### Status Badges in Tables
+
+<Preview title="Status Chips in a Data Row">
+<div style="display: flex; align-items: center; gap: var(--space-4); padding: var(--space-3); border: 1px solid var(--bd); border-radius: var(--r-s);">
+    <span style="flex: 1; font-weight: 500;">Order #4281</span>
+    <span class="Chip Chip--small Chip--success">Shipped</span>
+    <span class="Chip Chip--small Chip--outlined">Express</span>
+</div>
+</Preview>
+
+### Skill Tags on a Profile
+
+<Preview title="Profile Skills">
+<div style="max-width: 360px;">
+    <p style="font-weight: 600; margin-bottom: var(--space-2);">Skills</p>
+    <div class="Layout-cluster">
+        <span class="Chip Chip--outlined">JavaScript</span>
+        <span class="Chip Chip--outlined">React</span>
+        <span class="Chip Chip--outlined">CSS</span>
+        <span class="Chip Chip--outlined">Node.js</span>
+        <span class="Chip Chip--outlined">Figma</span>
+    </div>
+</div>
+</Preview>
+
+### Multi-select Chip Group
+
+<Preview title="Interest Selector">
+<div style="max-width: 400px;">
+    <p style="font-weight: 500; margin-bottom: var(--space-2);">Select your interests:</p>
+    <div class="Layout-cluster">
+        <button class="Chip Chip--selectable Chip--selected"><i class="ph ph-check"></i> Design</button>
+        <button class="Chip Chip--selectable">Engineering</button>
+        <button class="Chip Chip--selectable Chip--selected"><i class="ph ph-check"></i> Product</button>
+        <button class="Chip Chip--selectable">Marketing</button>
+        <button class="Chip Chip--selectable">Data Science</button>
+    </div>
+</div>
+</Preview>
+
+### Notification Badges
+
+<Preview title="Chips with Counts">
+<div class="Layout-cluster">
+    <span class="Chip Chip--primary">
+        <i class="ph ph-envelope"></i>
+        Inbox
+        <span style="background: var(--accent); color: white; border-radius: 50%; width: 18px; height: 18px; display: inline-flex; align-items: center; justify-content: center; font-size: 0.7rem;">3</span>
+    </span>
+    <span class="Chip">
+        <i class="ph ph-bell"></i>
+        Alerts
+        <span style="background: oklch(55% 0.2 25); color: white; border-radius: 50%; width: 18px; height: 18px; display: inline-flex; align-items: center; justify-content: center; font-size: 0.7rem;">7</span>
+    </span>
+</div>
+</Preview>
+
+---
+
+## Customization
+
+Override chip styles using CSS custom properties:
+
+```css
+/* Custom chip colors */
+.Chip--brand {
+  background-color: oklch(60% 0.18 280 / 0.15);
+  border-color: oklch(60% 0.18 280 / 0.3);
+  color: oklch(50% 0.18 280);
+}
+
+/* Pill shape (more rounded) */
+.Chip--pill {
+  border-radius: 999px;
+  padding: var(--space-1) var(--space-3);
+}
+
+/* Square chips */
+.Chip--square {
+  border-radius: var(--r-s);
+}
+
+/* Custom size */
+.Chip--xl {
+  padding: var(--space-2) var(--space-4);
+  font-size: 1rem;
+  gap: var(--space-2);
+}
+
+/* Filled selected state with custom color */
+.Chip--selectable.Chip--selected {
+  background-color: oklch(50% 0.15 250);
+  border-color: oklch(50% 0.15 250);
+}
+```
+
+### Theme Overrides
+
+```css
+/* Dark theme adjustments */
+[data-theme="dark"] .Chip {
+  background-color: oklch(25% 0 0);
+  border-color: oklch(35% 0 0);
+  color: oklch(85% 0 0);
+}
+
+[data-theme="dark"] .Chip--primary {
+  background-color: oklch(60% 0.15 250 / 0.25);
+  color: oklch(75% 0.1 250);
+}
+```
+
+---
+
 ## API Reference
 
 ### Classes
 
-| Class | Description |
-|-------|-------------|
-| `.Chip` | Base chip styling |
-| `.Chip--primary` | Primary color variant |
-| `.Chip--success` | Success color variant |
-| `.Chip--warning` | Warning color variant |
-| `.Chip--error` | Error color variant |
-| `.Chip--outlined` | Transparent background with border |
-| `.Chip--small` | Smaller chip size |
-| `.Chip--large` | Larger chip size |
-| `.Chip--removable` | Chip with dismiss button |
-| `.Chip--selectable` | Interactive toggle chip |
-| `.Chip--selected` | Active selected state |
-| `.Chip--avatar` | Chip with leading avatar |
-| `.Chip-remove` | Dismiss button element |
-| `.Chip-avatar` | Avatar element inside chip |
-
-### CSS Custom Properties
-
-| Property | Default | Description |
-|----------|---------|-------------|
-| `--space-1` | `0.25rem` | Gap between elements |
-| `--space-2` | `0.5rem` | Horizontal padding |
-| `--space-4` | `1rem` | Border radius |
-| `--bg-secondary` | — | Default background |
-| `--border-subtle` | — | Default border color |
-| `--text-primary` | — | Text color |
-| `--text-secondary` | — | Icon color |
-| `--accent-primary` | — | Selected state background |
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">.Chip</code></td><td class="ApiTable-desc">Base chip styling</td></tr>
+<tr><td><code class="ApiTable-prop">.Chip--primary</code></td><td class="ApiTable-desc">Primary color variant</td></tr>
+<tr><td><code class="ApiTable-prop">.Chip--success</code></td><td class="ApiTable-desc">Success color variant</td></tr>
+<tr><td><code class="ApiTable-prop">.Chip--warning</code></td><td class="ApiTable-desc">Warning color variant</td></tr>
+<tr><td><code class="ApiTable-prop">.Chip--error</code></td><td class="ApiTable-desc">Error color variant</td></tr>
+<tr><td><code class="ApiTable-prop">.Chip--outlined</code></td><td class="ApiTable-desc">Transparent background with border</td></tr>
+<tr><td><code class="ApiTable-prop">.Chip--small</code></td><td class="ApiTable-desc">Smaller chip size</td></tr>
+<tr><td><code class="ApiTable-prop">.Chip--large</code></td><td class="ApiTable-desc">Larger chip size</td></tr>
+<tr><td><code class="ApiTable-prop">.Chip--removable</code></td><td class="ApiTable-desc">Chip with dismiss button</td></tr>
+<tr><td><code class="ApiTable-prop">.Chip--selectable</code></td><td class="ApiTable-desc">Interactive toggle chip</td></tr>
+<tr><td><code class="ApiTable-prop">.Chip--selected</code></td><td class="ApiTable-desc">Active selected state</td></tr>
+<tr><td><code class="ApiTable-prop">.Chip--avatar</code></td><td class="ApiTable-desc">Chip with leading avatar</td></tr>
+<tr><td><code class="ApiTable-prop">.Chip-remove</code></td><td class="ApiTable-desc">Dismiss button element</td></tr>
+<tr><td><code class="ApiTable-prop">.Chip-avatar</code></td><td class="ApiTable-desc">Avatar element inside chip</td></tr>
+</tbody>
+</table>
 
 ### Attributes
 
-| Attribute | Description |
-|-----------|-------------|
-| `aria-label` | Required on `.Chip-remove` to describe what is removed |
-| `role="listitem"` | Use when chips are in a list context |
-| `aria-pressed` | Use on selectable chips to indicate state |
-
----
-
-## Accessibility
-
-- **Use `<button>` for interactive chips** — Ensures keyboard accessibility
-- **Provide aria-labels for remove buttons** — Screen readers need context
-- **Announce changes** — Use aria-live regions when chips are added/removed
-- **Ensure sufficient contrast** — Especially for colored variants
-
-```html
-<!-- Removable chip with proper labels -->
-<span class="Chip Chip--removable" role="listitem">
-    React
-    <button class="Chip-remove" 
-            aria-label="Remove React from selection">
-        <i class="ph ph-x" aria-hidden="true"></i>
-    </button>
-</span>
-
-<!-- Chip group with live region -->
-<div role="list" aria-label="Selected filters">
-    <span class="Chip" role="listitem">Filter 1</span>
-    <span class="Chip" role="listitem">Filter 2</span>
-</div>
-<div aria-live="polite" class="sr-only">
-    <!-- Announce changes here -->
-</div>
-```
+<table class="ApiTable">
+<thead>
+<tr><th>Attribute</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">aria-label</code></td><td class="ApiTable-desc">Required on <code>.Chip-remove</code> to describe what is removed</td></tr>
+<tr><td><code class="ApiTable-prop">role="listitem"</code></td><td class="ApiTable-desc">Use when chips are in a list context</td></tr>
+<tr><td><code class="ApiTable-prop">aria-pressed</code></td><td class="ApiTable-desc">Use on selectable chips to indicate state</td></tr>
+</tbody>
+</table>
 
 ---
 
@@ -530,3 +614,64 @@ Common pattern for tag inputs in forms.
   object-fit: cover;
 }
 ```
+
+---
+
+## Accessibility
+
+- **Use `<button>` for interactive chips** — Ensures keyboard accessibility
+- **Provide aria-labels for remove buttons** — Screen readers need context
+- **Announce changes** — Use aria-live regions when chips are added/removed
+- **Ensure sufficient contrast** — Especially for colored variants
+
+### Keyboard Support
+
+| Key | Action |
+|-----|--------|
+| Tab | Move focus between chips |
+| Enter / Space | Toggle selectable chip or activate remove button |
+| Backspace / Delete | Remove focused removable chip |
+
+### Screen Reader Guidance
+
+```html
+<!-- Removable chip with proper labels -->
+<span class="Chip Chip--removable" role="listitem">
+    React
+    <button class="Chip-remove" 
+            aria-label="Remove React from selection">
+        <i class="ph ph-x" aria-hidden="true"></i>
+    </button>
+</span>
+
+<!-- Chip group with live region -->
+<div role="list" aria-label="Selected filters">
+    <span class="Chip" role="listitem">Filter 1</span>
+    <span class="Chip" role="listitem">Filter 2</span>
+</div>
+<div aria-live="polite" class="sr-only">
+    <!-- Announce changes here -->
+</div>
+```
+
+---
+
+## Best Practices
+
+### Do
+
+- ✓ **Use `<button>` for interactive chips** — Ensures keyboard and screen reader support
+- ✓ **Provide descriptive aria-labels** — "Remove React" not just "Remove"
+- ✓ **Use color + icon together** — Don't rely on color alone to convey meaning
+- ✓ **Keep chip text short** — One or two words maximum
+- ✓ **Group related chips** — Use `role="list"` with `role="listitem"` children
+- ✓ **Announce dynamic changes** — Use `aria-live` when chips are added or removed
+
+### Don't
+
+- ✗ **Use chips for primary actions** — Chips are for metadata, filters, and selections
+- ✗ **Nest interactive elements** — Don't put a link inside a selectable chip
+- ✗ **Overload with too many chips** — More than 8-10 becomes overwhelming
+- ✗ **Mix sizes in the same group** — Keep chip sizes consistent within a cluster
+- ✗ **Use vague labels** — "Tag 1" tells users nothing
+- ✗ **Forget hover/focus states** — Interactive chips need clear visual feedback

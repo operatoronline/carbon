@@ -1,8 +1,12 @@
 # Typography
 
-Carbon uses a refined type system with **three font families**: **Instrument Serif** for display headings, **Outfit** for body text and UI, and **JetBrains Mono** for code.
+Carbon's type system is built on a deliberate tension: **three fonts, each chosen for a specific emotional register**. Instrument Serif carries the weight of tradition — gravitas, authority, the feeling that words matter. Outfit is the geometric sans-serif that says clarity and modernity without trying too hard. JetBrains Mono is precision itself — every character the same width, every symbol unambiguous.
 
-## Font Stack
+Together, they create a visual language where hierarchy isn't just size — it's *voice*.
+
+---
+
+## The Three Voices
 
 ```css
 --ff-d: 'Instrument Serif', Georgia, serif;     /* Display */
@@ -27,11 +31,60 @@ Carbon uses a refined type system with **three font families**: **Instrument Ser
     </div>
 </Preview>
 
+### Why These Three?
+
+Most design systems pick one sans-serif and call it done. Carbon uses three because each serves a fundamentally different purpose:
+
+<Preview title="Design Philosophy">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); width: 100%;">
+        <div style="background: var(--bg-s); border-radius: var(--r-m); padding: var(--space-5); border: 1px solid var(--bd-w);">
+            <div style="font-family: var(--ff-d); font-size: 1.75rem; letter-spacing: -0.02em; margin-bottom: var(--space-3);">Aa</div>
+            <div style="font-family: var(--ff-m); font-size: .5625rem; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; color: var(--fg-4); margin-bottom: var(--space-2);">Instrument Serif</div>
+            <div style="font-size: .85rem; color: var(--fg-2); line-height: 1.6;">Gravitas. The serifs anchor words to the page, giving headlines the permanence of something <em>worth reading</em>. Used only at display sizes where the details sing.</div>
+        </div>
+        <div style="background: var(--bg-s); border-radius: var(--r-m); padding: var(--space-5); border: 1px solid var(--bd-w);">
+            <div style="font-family: var(--ff-b); font-size: 1.75rem; font-weight: 500; margin-bottom: var(--space-3);">Aa</div>
+            <div style="font-family: var(--ff-m); font-size: .5625rem; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; color: var(--fg-4); margin-bottom: var(--space-2);">Outfit</div>
+            <div style="font-size: .85rem; color: var(--fg-2); line-height: 1.6;">Clarity. Geometric proportions with just enough warmth. No distracting personality — it disappears into the content, which is exactly what body text should do.</div>
+        </div>
+        <div style="background: var(--bg-s); border-radius: var(--r-m); padding: var(--space-5); border: 1px solid var(--bd-w);">
+            <div style="font-family: var(--ff-m); font-size: 1.75rem; margin-bottom: var(--space-3);">Aa</div>
+            <div style="font-family: var(--ff-m); font-size: .5625rem; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; color: var(--fg-4); margin-bottom: var(--space-2);">JetBrains Mono</div>
+            <div style="font-size: .85rem; color: var(--fg-2); line-height: 1.6;">Precision. Monospaced for code, data, and technical labels. Every character occupies the same width — alignment is automatic, scanning is instant.</div>
+        </div>
+    </div>
+</Preview>
+
+---
+
+## Font Pairing in Context
+
+The three fonts don't just coexist — they create a visual hierarchy that guides the eye from headline to body to detail without conscious effort.
+
+<Preview title="Fonts Working Together">
+    <div style="max-width: 480px; border: 1px solid var(--bd); border-radius: var(--r-l); overflow: hidden;">
+        <div style="padding: var(--space-6);">
+            <div style="font-family: var(--ff-m); font-size: .5625rem; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); margin-bottom: var(--space-3);">Featured Article</div>
+            <div style="font-family: var(--ff-d); font-size: 1.75rem; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: var(--space-3);">Design tokens are the <em style="color: var(--accent);">atoms</em> of visual consistency</div>
+            <div style="font-family: var(--ff-b); font-size: .9rem; color: var(--fg-2); line-height: 1.6; margin-bottom: var(--space-4);">A design token is a named value — a single source of truth for a visual decision. Change the token, and every component that references it updates in concert.</div>
+            <div style="display: flex; align-items: center; gap: var(--space-3);">
+                <div style="width: 28px; height: 28px; border-radius: 50%; background: var(--accent);"></div>
+                <div>
+                    <div style="font-family: var(--ff-b); font-size: .8rem; font-weight: 600;">Sarah Chen</div>
+                    <div style="font-family: var(--ff-m); font-size: .65rem; color: var(--fg-3);">2026-02-08 · 4 min read</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</Preview>
+
+Notice the layering: **mono** for the category label (small, precise), **serif** for the headline (large, commanding), **sans** for the body (medium, readable), then **mono** again for metadata (small, data-like). Three fonts, four levels of hierarchy.
+
 ---
 
 ## Type Scale
 
-Based on a **1.25 ratio** (Major Third), creating harmonious size progression.
+Based on a **1.25 ratio** (Major Third), creating harmonious size progression where each step feels like a natural next-louder voice.
 
 | Level | Size | Usage | Font |
 |-------|------|-------|------|
@@ -54,6 +107,57 @@ Based on a **1.25 ratio** (Major Third), creating harmonious size progression.
         <div style="font-family: var(--ff-m); font-size: 0.8125rem; color: var(--accent); line-height: 1.7; background: var(--bg-s); padding: var(--space-2) var(--space-3); border-radius: var(--r-s);">const code = "monospace";</div>
     </div>
 </Preview>
+
+### Why 1.25?
+
+A modular scale creates sizes that feel *related* rather than arbitrary. Here's what happens when you don't use one:
+
+<Preview title="Random Sizes vs Modular Scale">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); width: 100%;">
+        <div>
+            <div style="font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: oklch(55% 0.2 25); margin-bottom: var(--space-3);">❌ Arbitrary sizes</div>
+            <div style="background: var(--bg-s); padding: var(--space-4); border-radius: var(--r-m);">
+                <div style="font-family: var(--ff-b); font-size: 2.3rem; font-weight: 600; line-height: 1.1; margin-bottom: var(--space-2);">Too big?</div>
+                <div style="font-family: var(--ff-b); font-size: 1.4rem; font-weight: 600; line-height: 1.3; margin-bottom: var(--space-2);">Awkward gap</div>
+                <div style="font-family: var(--ff-b); font-size: 1.05rem; color: var(--fg-2); line-height: 1.5;">Body text sits oddly beneath headings that don't relate to each other mathematically.</div>
+            </div>
+        </div>
+        <div>
+            <div style="font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: oklch(55% 0.15 150); margin-bottom: var(--space-3);">✓ Major Third (1.25)</div>
+            <div style="background: var(--bg-s); padding: var(--space-4); border-radius: var(--r-m);">
+                <div style="font-family: var(--ff-d); font-size: 1.953rem; font-weight: 400; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: var(--space-2);">Proportional</div>
+                <div style="font-family: var(--ff-d); font-size: 1.563rem; font-weight: 400; line-height: 1.25; letter-spacing: -0.02em; margin-bottom: var(--space-2);">Each step × 1.25</div>
+                <div style="font-family: var(--ff-b); font-size: 1rem; color: var(--fg-2); line-height: 1.6;">Body text relates harmonically to every heading above it. The eye perceives order.</div>
+            </div>
+        </div>
+    </div>
+</Preview>
+
+The 1.25 ratio (Major Third) is deliberate — assertive enough to create clear hierarchy, restrained enough to avoid jarring jumps. Larger ratios (like 1.414 Augmented Fourth) work for dramatic editorial design; smaller ratios (like 1.125 Major Second) suit dense data UIs. Carbon's 1.25 sits in the sweet spot for documentation and product interfaces.
+
+---
+
+## Vertical Rhythm
+
+When line heights and spacing share a common unit, text across adjacent columns aligns to the same invisible grid. Carbon's type system uses a **4px baseline** — every line height resolves to a multiple of 4px.
+
+<Preview title="Baseline Rhythm">
+    <div style="position: relative; width: 100%;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; background: repeating-linear-gradient(to bottom, transparent 0, transparent 23px, oklch(from var(--accent) l c h / .08) 23px, oklch(from var(--accent) l c h / .08) 24px); z-index: 1;"></div>
+        <div style="position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); padding: var(--space-4) 0;">
+            <div>
+                <div style="font-family: var(--ff-d); font-size: 1.75rem; line-height: 48px; letter-spacing: -0.02em;">Heading aligns</div>
+                <div style="font-family: var(--ff-b); font-size: 1rem; line-height: 24px; color: var(--fg-2);">Body text snaps to the same 24px baseline grid. Each line sits on an invisible shelf, creating a calm, orderly rhythm even across columns.</div>
+            </div>
+            <div>
+                <div style="font-family: var(--ff-b); font-size: 1rem; line-height: 24px; color: var(--fg-2);">Adjacent columns share the same grid. Notice how these lines align horizontally with the text on the left — that's the power of consistent vertical rhythm.</div>
+                <div style="font-family: var(--ff-m); font-size: .8125rem; line-height: 24px; color: var(--fg-3); margin-top: 24px;">code.also.aligns()</div>
+            </div>
+        </div>
+    </div>
+</Preview>
+
+The striped background reveals the 24px baseline grid. Headings, body text, and code all land on it. This isn't about rigid rules — it's about the subtle sense of *order* that makes a page feel polished.
 
 ---
 
@@ -100,6 +204,89 @@ h1, h2 { font-family: var(--ff-d); font-weight: 400; }
 
 ---
 
+## Responsive Typography
+
+The display heading uses `clamp()` for smooth scaling — no breakpoint jumps, just a continuous curve from mobile to desktop.
+
+<Preview title="Responsive clamp() Behavior">
+    <div style="display: flex; flex-direction: column; gap: var(--space-4); width: 100%;">
+        <div style="font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--fg-4); margin-bottom: var(--space-1);">Simulated viewport widths</div>
+        <div style="width: 320px; border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-4); overflow: hidden;">
+            <div style="font-family: var(--ff-m); font-size: .5625rem; color: var(--fg-4); margin-bottom: var(--space-2);">320px — Mobile</div>
+            <div style="font-family: var(--ff-d); font-size: 2.5rem; line-height: 1; letter-spacing: -0.035em;">Design</div>
+        </div>
+        <div style="width: 480px; border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-4); overflow: hidden;">
+            <div style="font-family: var(--ff-m); font-size: .5625rem; color: var(--fg-4); margin-bottom: var(--space-2);">480px — Large mobile</div>
+            <div style="font-family: var(--ff-d); font-size: 3rem; line-height: 1; letter-spacing: -0.035em;">Design</div>
+        </div>
+        <div style="width: 100%; border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-4); overflow: hidden;">
+            <div style="font-family: var(--ff-m); font-size: .5625rem; color: var(--fg-4); margin-bottom: var(--space-2);">Full width — Desktop</div>
+            <div style="font-family: var(--ff-d); font-size: 4rem; line-height: 1; letter-spacing: -0.035em;">Design</div>
+        </div>
+    </div>
+</Preview>
+
+```css
+/* Scales from 2.5rem (40px) to 4rem (64px) based on viewport */
+font-size: clamp(2.5rem, 8vw, 4rem);
+
+/* Base (Mobile) */
+.page-header h1 { 
+  font-size: clamp(2.5rem, 8vw, 4rem); 
+}
+
+/* Prose scales naturally with rem */
+.prose { font-size: 1rem; }
+
+/* Breakpoint-specific adjustments */
+@media (min-width: 768px) {
+  .prose h2 { font-size: 1.75rem; }
+}
+
+@media (min-width: 1024px) {
+  .prose h2 { font-size: 2rem; }
+}
+```
+
+---
+
+## When to Use Which Font
+
+Choosing the right font isn't about preference — it's about matching the *role* of the text to the *character* of the typeface.
+
+<Preview title="Font Decision Guide">
+    <div style="display: flex; flex-direction: column; gap: var(--space-3); width: 100%;">
+        <div style="display: grid; grid-template-columns: auto 1fr auto; gap: var(--space-3); align-items: center; background: var(--bg-s); padding: var(--space-4); border-radius: 0 var(--r-m) var(--r-m) 0; border-left: 3px solid var(--accent);">
+            <div style="font-family: var(--ff-d); font-size: 1.5rem; width: 48px; text-align: center;">Aa</div>
+            <div>
+                <div style="font-weight: 600; font-size: .9rem; margin-bottom: var(--space-1);">Instrument Serif</div>
+                <div style="font-size: .8rem; color: var(--fg-3);">Page titles, hero text, section headings (H1, H2). Anywhere you need to <em>stop the eye</em>.</div>
+            </div>
+            <div style="font-family: var(--ff-m); font-size: .65rem; color: var(--fg-4); writing-mode: vertical-lr; transform: rotate(180deg);">DISPLAY</div>
+        </div>
+        <div style="display: grid; grid-template-columns: auto 1fr auto; gap: var(--space-3); align-items: center; background: var(--bg-s); padding: var(--space-4); border-radius: 0 var(--r-m) var(--r-m) 0; border-left: 3px solid var(--ok);">
+            <div style="font-family: var(--ff-b); font-size: 1.5rem; font-weight: 500; width: 48px; text-align: center;">Aa</div>
+            <div>
+                <div style="font-weight: 600; font-size: .9rem; margin-bottom: var(--space-1);">Outfit</div>
+                <div style="font-size: .8rem; color: var(--fg-3);">Body copy, buttons, labels, form fields, navigation, H3+. Anything the user <em>reads through</em>.</div>
+            </div>
+            <div style="font-family: var(--ff-m); font-size: .65rem; color: var(--fg-4); writing-mode: vertical-lr; transform: rotate(180deg);">BODY & UI</div>
+        </div>
+        <div style="display: grid; grid-template-columns: auto 1fr auto; gap: var(--space-3); align-items: center; background: var(--bg-s); padding: var(--space-4); border-radius: 0 var(--r-m) var(--r-m) 0; border-left: 3px solid var(--warn);">
+            <div style="font-family: var(--ff-m); font-size: 1.5rem; width: 48px; text-align: center;">Aa</div>
+            <div>
+                <div style="font-weight: 600; font-size: .9rem; margin-bottom: var(--space-1);">JetBrains Mono</div>
+                <div style="font-size: .8rem; color: var(--fg-3);">Code, data, timestamps, nav labels, technical metadata. Anything that benefits from <em>fixed-width precision</em>.</div>
+            </div>
+            <div style="font-family: var(--ff-m); font-size: .65rem; color: var(--fg-4); writing-mode: vertical-lr; transform: rotate(180deg);">CODE & DATA</div>
+        </div>
+    </div>
+</Preview>
+
+**The rule of thumb:** If it's a *statement*, use serif. If it's *communication*, use sans. If it's *data*, use mono.
+
+---
+
 ## Line Height
 
 Proper leading improves readability. Tighter for headings, looser for body text.
@@ -142,7 +329,7 @@ body, p { line-height: 1.6; }
 
 ## Letter Spacing
 
-Subtle tracking adjustments improve legibility at extreme sizes.
+Subtle tracking adjustments improve legibility at extreme sizes. Large text needs tightening (characters drift apart optically); small uppercase text needs loosening (characters crowd).
 
 | Context | Letter Spacing | When |
 |---------|----------------|------|
@@ -339,40 +526,6 @@ pre[class*="language-"] {
   border-radius: var(--r-l);
   padding: var(--space-4);
 }
-```
-
----
-
-## Responsive Typography
-
-Scale type sizes at different breakpoints for optimal reading.
-
-```css
-/* Base (Mobile) */
-.page-header h1 { 
-  font-size: clamp(2.5rem, 8vw, 4rem); 
-}
-
-/* Prose scales naturally with rem */
-.prose { font-size: 1rem; }
-
-/* Breakpoint-specific adjustments */
-@media (min-width: 768px) {
-  .prose h2 { font-size: 1.75rem; }
-}
-
-@media (min-width: 1024px) {
-  .prose h2 { font-size: 2rem; }
-}
-```
-
-### Fluid Typography
-
-The display heading uses `clamp()` for smooth scaling:
-
-```css
-/* Scales from 2.5rem (40px) to 4rem (64px) based on viewport */
-font-size: clamp(2.5rem, 8vw, 4rem);
 ```
 
 ---

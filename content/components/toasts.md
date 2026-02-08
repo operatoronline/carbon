@@ -153,25 +153,292 @@ function showToast(message, variant = 'default', duration = 4000) {
 
 ---
 
+## Common Patterns
+
+### Save Confirmation
+
+<Preview title="Save Confirmation Toast">
+    <div class="Toast Toast--success">
+        <i class="ph ph-check-circle Toast-icon"></i>
+        <span class="Toast-message">Changes saved successfully.</span>
+    </div>
+</Preview>
+
+### Undo Action
+
+<Preview title="Undo Toast">
+    <div class="Toast">
+        <span class="Toast-message">3 messages moved to trash.</span>
+        <button class="Toast-action">Undo</button>
+        <button class="Toast-close" aria-label="Dismiss"><i class="ph ph-x"></i></button>
+    </div>
+</Preview>
+
+### Stacked Notifications
+
+<Preview title="Toast Stack">
+    <div style="display: flex; flex-direction: column; gap: var(--space-3); align-items: flex-end;">
+        <div class="Toast Toast--success">
+            <i class="ph ph-check-circle Toast-icon"></i>
+            <span class="Toast-message">File uploaded.</span>
+        </div>
+        <div class="Toast Toast--info">
+            <i class="ph ph-info Toast-icon"></i>
+            <span class="Toast-message">2 new comments on your post.</span>
+            <button class="Toast-action">View</button>
+        </div>
+        <div class="Toast Toast--warning">
+            <i class="ph ph-warning Toast-icon"></i>
+            <span class="Toast-message">Session expires in 5 minutes.</span>
+        </div>
+    </div>
+</Preview>
+
+### Error with Retry
+
+<Preview title="Error Toast with Retry">
+    <div class="Toast Toast--error">
+        <i class="ph ph-x-circle Toast-icon"></i>
+        <span class="Toast-message">Failed to send message.</span>
+        <button class="Toast-action">Retry</button>
+        <button class="Toast-close" aria-label="Dismiss"><i class="ph ph-x"></i></button>
+    </div>
+</Preview>
+
+---
+
+## Customization
+
+Override toast styles using CSS custom properties:
+
+```css
+/* Custom toast width */
+.Toast {
+  --toast-max-width: 480px;
+  max-width: var(--toast-max-width);
+}
+
+/* Custom success color */
+.Toast--success {
+  --toast-accent: oklch(55% 0.2 150);
+  border-left: 3px solid var(--toast-accent);
+}
+
+/* Dark toast style */
+.Toast--dark {
+  background: var(--fg);
+  color: var(--bg);
+}
+.Toast--dark .Toast-action {
+  color: var(--accent);
+}
+
+/* Toast slide-in animation */
+@keyframes toast-in {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+.Toast.active {
+  animation: toast-in 0.3s ease;
+}
+```
+
+---
+
 ## API Reference
 
-<div class="ApiTable">
+### Base Classes
 
-| Class | Description |
-|-------|-------------|
-| `.Toast` | Base toast container |
-| `.Toast--success` | Green success variant |
-| `.Toast--error` | Red error variant |
-| `.Toast--warning` | Yellow warning variant |
-| `.Toast--info` | Blue informational variant |
-| `.Toast-icon` | Leading icon |
-| `.Toast-message` | Message text content |
-| `.Toast-action` | Optional action button |
-| `.Toast-close` | Dismiss button |
-| `.Toast-container` | Fixed positioning wrapper |
-| `.Toast.active` | Visible/animated state |
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Toast</code></td>
+<td class="ApiTable-desc">Base toast container</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Toast-icon</code></td>
+<td class="ApiTable-desc">Leading icon</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Toast-message</code></td>
+<td class="ApiTable-desc">Message text content</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Toast-action</code></td>
+<td class="ApiTable-desc">Optional action button</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Toast-close</code></td>
+<td class="ApiTable-desc">Dismiss button</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Toast-container</code></td>
+<td class="ApiTable-desc">Fixed positioning wrapper for stacking toasts</td>
+</tr>
+</tbody>
+</table>
 
-</div>
+### Variant Classes
+
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Toast--success</code></td>
+<td class="ApiTable-desc">Green success variant</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Toast--error</code></td>
+<td class="ApiTable-desc">Red error variant</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Toast--warning</code></td>
+<td class="ApiTable-desc">Yellow warning variant</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Toast--info</code></td>
+<td class="ApiTable-desc">Blue informational variant</td>
+</tr>
+</tbody>
+</table>
+
+### Modifier Classes
+
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Toast.active</code></td>
+<td class="ApiTable-desc">Visible/animated state</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+## CSS Reference
+
+```css
+/* Base toast */
+.Toast {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg);
+  border: 1px solid var(--bd);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  font-size: var(--text-sm);
+  min-width: 280px;
+  max-width: 420px;
+}
+
+/* Icon */
+.Toast-icon {
+  flex-shrink: 0;
+  font-size: 1.25rem;
+}
+
+/* Message */
+.Toast-message {
+  flex: 1;
+  color: var(--fg);
+}
+
+/* Action button */
+.Toast-action {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  cursor: pointer;
+  padding: var(--space-1) var(--space-2);
+}
+.Toast-action:hover {
+  text-decoration: underline;
+}
+
+/* Close button */
+.Toast-close {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  color: var(--fg-3);
+  cursor: pointer;
+  padding: var(--space-1);
+  display: flex;
+  align-items: center;
+}
+.Toast-close:hover {
+  color: var(--fg);
+}
+
+/* Variants */
+.Toast--success {
+  border-left: 3px solid oklch(55% 0.15 150);
+}
+.Toast--success .Toast-icon {
+  color: oklch(55% 0.15 150);
+}
+
+.Toast--error {
+  border-left: 3px solid oklch(55% 0.2 25);
+}
+.Toast--error .Toast-icon {
+  color: oklch(55% 0.2 25);
+}
+
+.Toast--warning {
+  border-left: 3px solid oklch(70% 0.15 80);
+}
+.Toast--warning .Toast-icon {
+  color: oklch(70% 0.15 80);
+}
+
+.Toast--info {
+  border-left: 3px solid var(--accent);
+}
+.Toast--info .Toast-icon {
+  color: var(--accent);
+}
+
+/* Container */
+.Toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1100;
+}
+
+/* Animation */
+.Toast.active {
+  animation: toast-slide-in 0.3s ease;
+}
+
+@keyframes toast-slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+```
 
 ---
 
@@ -198,33 +465,28 @@ function showToast(message, variant = 'default', duration = 4000) {
 
 | Key | Action |
 |-----|--------|
-| `Tab` | Move focus to action/close button |
-| `Enter` / `Space` | Activate focused button |
-| `Escape` | Dismiss toast (when focused) |
+| Tab | Move focus to action/close button |
+| Enter / Space | Activate focused button |
+| Escape | Dismiss toast (when focused) |
 
 ---
 
 ## Best Practices
 
-<div class="DoDont">
-  <div class="Do">
-    <h4>✓ Do</h4>
-    <ul>
-      <li>Keep messages brief and scannable</li>
-      <li>Use appropriate variants for message types</li>
-      <li>Provide undo actions for destructive operations</li>
-      <li>Stack multiple toasts vertically</li>
-      <li>Allow enough time to read before auto-dismiss</li>
-    </ul>
-  </div>
-  <div class="Dont">
-    <h4>✗ Don't</h4>
-    <ul>
-      <li>Show more than 3 toasts at once</li>
-      <li>Use toasts for critical errors requiring action</li>
-      <li>Auto-dismiss error messages too quickly</li>
-      <li>Include lengthy text or multiple paragraphs</li>
-      <li>Use toasts for confirmations requiring decisions</li>
-    </ul>
-  </div>
-</div>
+### Do
+
+- ✓ **Keep messages brief** — One line, scannable at a glance
+- ✓ **Use appropriate variants** — Match color to message severity
+- ✓ **Provide undo actions** — Especially for destructive operations
+- ✓ **Stack vertically** — Multiple toasts should stack, newest on top
+- ✓ **Allow enough read time** — 4-7 seconds minimum before auto-dismiss
+- ✓ **Include close buttons** — Let users dismiss manually
+
+### Don't
+
+- ✗ **Show more than 3 at once** — Queue excess toasts
+- ✗ **Use for critical errors** — Use modals or inline alerts instead
+- ✗ **Auto-dismiss errors** — Error toasts should persist until dismissed
+- ✗ **Include lengthy text** — Keep to one sentence, two max
+- ✗ **Use for confirmations** — Decisions need modals, not toasts
+- ✗ **Block interaction** — Toasts should never cover important UI

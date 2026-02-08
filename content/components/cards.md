@@ -456,6 +456,87 @@ Responsive grid layout for multiple cards.
 
 ---
 
+## Common Patterns
+
+### Dashboard Cards
+
+<Preview title="Dashboard Layout">
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); max-width: 700px;">
+    <div class="Card">
+        <div class="Card-body" style="text-align: center;">
+            <span class="Card-stat">1,284</span>
+            <span class="Card-stat-label">Active Users</span>
+            <span class="Card-stat-change Card-stat-change--positive">+5.2%</span>
+        </div>
+    </div>
+    <div class="Card">
+        <div class="Card-body" style="text-align: center;">
+            <span class="Card-stat">$32.1k</span>
+            <span class="Card-stat-label">Monthly Revenue</span>
+            <span class="Card-stat-change Card-stat-change--positive">+11%</span>
+        </div>
+    </div>
+    <div class="Card">
+        <div class="Card-body" style="text-align: center;">
+            <span class="Card-stat">98.7%</span>
+            <span class="Card-stat-label">Uptime</span>
+            <span class="Card-stat-change Card-stat-change--negative">-0.1%</span>
+        </div>
+    </div>
+</div>
+</Preview>
+
+### Card in a Settings Page
+
+<Preview title="Settings Section">
+<div class="Card Card--outlined" style="max-width: 480px;">
+    <div class="Card-header">
+        <h3 class="Card-title">Notifications</h3>
+    </div>
+    <div class="Card-body">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-3);">
+            <span>Email notifications</span>
+            <label class="Toggle"><input type="checkbox" checked><span class="Toggle-slider"></span></label>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span>Push notifications</span>
+            <label class="Toggle"><input type="checkbox"><span class="Toggle-slider"></span></label>
+        </div>
+    </div>
+</div>
+</Preview>
+
+### Card with Media Gallery
+
+<Preview title="Media Gallery Card">
+<div class="Card" style="max-width: 360px;">
+    <div class="Card-body">
+        <h3 class="Card-title">Trip Photos</h3>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-2); margin-top: var(--space-3);">
+            <div style="aspect-ratio: 1; background: linear-gradient(135deg, oklch(60% 0.15 30), oklch(50% 0.18 10)); border-radius: var(--r-s);"></div>
+            <div style="aspect-ratio: 1; background: linear-gradient(135deg, oklch(60% 0.15 150), oklch(50% 0.18 170)); border-radius: var(--r-s);"></div>
+            <div style="aspect-ratio: 1; background: linear-gradient(135deg, oklch(60% 0.15 250), oklch(50% 0.18 270)); border-radius: var(--r-s);"></div>
+        </div>
+        <p class="Card-meta" style="margin-top: var(--space-2);">12 photos · June 2025</p>
+    </div>
+</div>
+</Preview>
+
+### Card as Empty State
+
+<Preview title="Empty State Card">
+<div class="Card Card--outlined" style="max-width: 400px; text-align: center;">
+    <div class="Card-body" style="padding: var(--space-8);">
+        <i class="ph ph-folder-open" style="font-size: 2.5rem; color: var(--fg-3); margin-bottom: var(--space-3);"></i>
+        <h3 class="Card-title">No projects yet</h3>
+        <p class="Card-text">Create your first project to get started.</p>
+        <button class="Button Button--primary Button--small" style="margin-top: var(--space-4);">Create Project</button>
+    </div>
+</div>
+</Preview>
+
+---
+
 ## Customization
 
 Override card styles using CSS custom properties:
@@ -863,6 +944,302 @@ Override card styles using CSS custom properties:
 </tr>
 </tbody>
 </table>
+
+---
+
+## CSS Reference
+
+```css
+/* Base card */
+.Card {
+  background: var(--bg);
+  border: 1px solid var(--bd);
+  border-radius: var(--r-m);
+  box-shadow: 0 1px 3px oklch(0% 0 0 / 0.08);
+  overflow: hidden;
+}
+
+/* Structure */
+.Card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--bd);
+}
+
+.Card-body {
+  padding: var(--space-4);
+}
+
+.Card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border-top: 1px solid var(--bd);
+}
+
+.Card-image {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Typography */
+.Card-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--fg);
+  margin-bottom: var(--space-1);
+}
+
+.Card-subtitle {
+  font-size: 0.85rem;
+  color: var(--fg-3);
+}
+
+.Card-text {
+  font-size: 0.9rem;
+  color: var(--fg-2);
+  line-height: 1.5;
+}
+
+.Card-meta {
+  font-size: 0.8rem;
+  color: var(--fg-3);
+}
+
+.Card-tag {
+  display: inline-block;
+  padding: 2px var(--space-2);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: var(--r-s);
+  background: var(--accent);
+  color: white;
+}
+
+/* Variants */
+.Card--outlined {
+  box-shadow: none;
+}
+
+.Card--flat {
+  border: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+.Card--filled {
+  box-shadow: none;
+  background: var(--bg-s);
+}
+
+.Card--interactive {
+  cursor: pointer;
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+
+.Card--interactive:hover {
+  box-shadow: 0 4px 12px oklch(0% 0 0 / 0.12);
+  transform: translateY(-2px);
+}
+
+.Card--horizontal {
+  display: flex;
+}
+
+.Card--horizontal .Card-image {
+  width: auto;
+  min-width: 140px;
+}
+
+/* Overlay */
+.Card--overlay {
+  position: relative;
+}
+
+.Card--overlay .Card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-4);
+  background: linear-gradient(to top, oklch(0% 0 0 / 0.7), transparent);
+  color: white;
+}
+
+.Card--overlay .Card-title,
+.Card--overlay .Card-text {
+  color: white;
+}
+
+/* Sizes */
+.Card--compact .Card-body,
+.Card--compact .Card-header,
+.Card--compact .Card-footer {
+  padding: var(--space-2) var(--space-3);
+}
+
+.Card--spacious .Card-body,
+.Card--spacious .Card-header,
+.Card--spacious .Card-footer {
+  padding: var(--space-6);
+}
+
+/* Stats */
+.Card-stat {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--fg);
+}
+
+.Card-stat-label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--fg-3);
+  margin-top: var(--space-1);
+}
+
+.Card-stat-change {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: var(--space-1);
+}
+
+.Card-stat-change--positive { color: oklch(55% 0.15 150); }
+.Card-stat-change--negative { color: oklch(55% 0.2 25); }
+
+/* Pricing */
+.Card-price-amount {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.Card-price-period {
+  font-size: 0.85rem;
+  color: var(--fg-3);
+}
+
+.Card-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Card-feature {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) 0;
+}
+
+.Card-feature--disabled {
+  color: var(--fg-3);
+  text-decoration: line-through;
+}
+
+/* Product */
+.Card-wishlist {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 1px 3px oklch(0% 0 0 / 0.15);
+}
+
+.Card-rating {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: oklch(70% 0.15 80);
+  margin: var(--space-2) 0;
+}
+
+.Card-rating-count {
+  font-size: 0.8rem;
+  color: var(--fg-3);
+  margin-left: var(--space-1);
+}
+
+.Card-price-current {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.Card-price-original {
+  text-decoration: line-through;
+  color: var(--fg-3);
+  font-size: 0.9rem;
+  margin-left: var(--space-2);
+}
+
+/* Notification */
+.Card--notification {
+  border-left: 4px solid var(--bd);
+}
+
+.Card--notification-info { border-left-color: oklch(60% 0.15 250); }
+.Card--notification-success { border-left-color: oklch(55% 0.15 150); }
+.Card--notification-warning { border-left-color: oklch(70% 0.15 80); }
+.Card--notification-error { border-left-color: oklch(55% 0.2 25); }
+
+/* List */
+.Card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Card-list-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-top: 1px solid var(--bd);
+}
+
+.Card-list-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--r-s);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.Card-list-title {
+  display: block;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.Card-list-meta {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--fg-3);
+}
+
+/* Grid */
+.CardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-4);
+}
+```
 
 ---
 

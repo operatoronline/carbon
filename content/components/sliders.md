@@ -242,82 +242,172 @@ Common slider use cases in forms.
 
 ---
 
-## API Reference
+## Common Patterns
 
-### Classes
+### Audio Player Volume
 
-| Class | Description |
-|-------|-------------|
-| `.Slider` | Base range input styling |
-| `.Slider--small` | Smaller track and thumb |
-| `.Slider--large` | Larger track and thumb |
-| `.Slider--success` | Green thumb color |
-| `.Slider--warning` | Yellow thumb color |
-| `.Slider--error` | Red thumb color |
-| `.Slider-container` | Wrapper for slider + labels |
-| `.Slider-labels` | Min/max label container |
-| `.Slider-ticks` | Discrete step labels |
-| `.Slider-value` | Current value display |
+<Preview title="Audio Volume Control">
+    <div style="display: flex; align-items: center; gap: var(--space-3); max-width: 280px; padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-m);">
+        <i class="ph ph-speaker-low" style="color: var(--fg-3);"></i>
+        <input type="range" class="Slider Slider--small" min="0" max="100" value="65">
+        <i class="ph ph-speaker-high" style="color: var(--fg-3);"></i>
+    </div>
+</Preview>
 
-### HTML Attributes
+### Filter Panel Price Range
 
-| Attribute | Description |
-|-----------|-------------|
-| `min` | Minimum value |
-| `max` | Maximum value |
-| `value` | Current value |
-| `step` | Increment amount (for discrete steps) |
-| `disabled` | Non-interactive state |
+<Preview title="Price Range Filter">
+    <div style="max-width: 280px; padding: var(--space-4); border: 1px solid var(--bd); border-radius: var(--r-m);">
+        <div style="font-weight: 600; margin-bottom: var(--space-3);">Price Range</div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-2); font-size: 0.9rem;">
+            <span>$25</span>
+            <span>$150</span>
+        </div>
+        <input type="range" class="Slider" min="0" max="200" value="150">
+        <div class="Slider-labels" style="margin-top: var(--space-1);">
+            <span style="font-size: 0.75rem; color: var(--fg-3);">$0</span>
+            <span style="font-size: 0.75rem; color: var(--fg-3);">$200</span>
+        </div>
+    </div>
+</Preview>
 
-### ARIA Attributes
+### Settings Panel
 
-| Attribute | Description |
-|-----------|-------------|
-| `aria-valuemin` | Minimum value (auto from `min`) |
-| `aria-valuemax` | Maximum value (auto from `max`) |
-| `aria-valuenow` | Current value (auto from `value`) |
-| `aria-valuetext` | Human-readable value (e.g., "50 percent") |
+<Preview title="Display Settings">
+    <div style="max-width: 360px; padding: var(--space-4); background: var(--bg-s); border-radius: var(--r-m); display: flex; flex-direction: column; gap: var(--space-4);">
+        <div class="Slider-container">
+            <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-2);">
+                <label style="font-weight: 500;">Brightness</label>
+                <span style="color: var(--fg-3);">75%</span>
+            </div>
+            <input type="range" class="Slider" min="0" max="100" value="75">
+        </div>
+        <div class="Slider-container">
+            <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-2);">
+                <label style="font-weight: 500;">Font Size</label>
+                <span style="color: var(--fg-3);">16px</span>
+            </div>
+            <input type="range" class="Slider" min="12" max="24" step="1" value="16">
+        </div>
+    </div>
+</Preview>
 
-### CSS Custom Properties
+### Image Editor Toolbar
 
-| Property | Default | Description |
-|----------|---------|-------------|
-| `--border-subtle` | — | Track background color |
-| `--accent-primary` | — | Thumb color |
-| `--space-2` | `0.5rem` | Label spacing |
+<Preview title="Image Adjustment">
+    <div style="max-width: 300px; display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3); border: 1px solid var(--bd); border-radius: var(--r-m);">
+        <i class="ph ph-sun-dim" style="color: var(--fg-3);"></i>
+        <input type="range" class="Slider Slider--small" min="0" max="100" value="50">
+        <i class="ph ph-sun" style="color: var(--fg-3);"></i>
+        <span style="font-size: 0.8rem; font-weight: 600; min-width: 3ch; text-align: right;">50</span>
+    </div>
+</Preview>
 
 ---
 
-## Accessibility
+## Customization
 
-Native range inputs are accessible by default:
+Override slider styling with CSS custom properties:
 
-- **Keyboard support** — Arrow keys adjust value
-- **Screen readers** — Value is announced
-- **Focus visible** — Clear focus indicator
+```css
+/* Custom thumb color */
+.Slider--brand::-webkit-slider-thumb {
+  background: oklch(55% 0.25 280);
+}
 
-Enhance with ARIA when needed:
-
-```html
-<label for="volume-slider">Volume</label>
-<input 
-    type="range" 
-    id="volume-slider"
-    class="Slider" 
-    min="0" 
-    max="100" 
-    value="50"
-    aria-valuemin="0"
-    aria-valuemax="100"
-    aria-valuenow="50"
-    aria-valuetext="50 percent"
->
+.Slider--brand::-moz-range-thumb {
+  background: oklch(55% 0.25 280);
+}
 ```
 
-For custom implementations, ensure:
-- Focusable thumb element
-- Arrow key navigation
-- Value announcement on change
+### Filled Track
+
+```css
+/* Show filled portion of track (requires JS to update) */
+.Slider--filled {
+  background: linear-gradient(
+    to right,
+    var(--accent) 0%,
+    var(--accent) var(--fill, 50%),
+    var(--bd) var(--fill, 50%),
+    var(--bd) 100%
+  );
+}
+```
+
+### Larger Touch Target
+
+```css
+.Slider--touch::-webkit-slider-thumb {
+  width: 28px;
+  height: 28px;
+  margin-top: -11px;
+}
+```
+
+### Theming
+
+```css
+[data-theme="dark"] .Slider {
+  background: oklch(30% 0 0);
+}
+
+[data-theme="dark"] .Slider::-webkit-slider-thumb {
+  background: oklch(70% 0.15 260);
+  box-shadow: 0 2px 4px oklch(0% 0 0 / 0.4);
+}
+```
+
+---
+
+## API Reference
+
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">.Slider</code></td><td class="ApiTable-desc">Base range input styling</td></tr>
+<tr><td><code class="ApiTable-prop">.Slider--small</code></td><td class="ApiTable-desc">Smaller track and thumb</td></tr>
+<tr><td><code class="ApiTable-prop">.Slider--large</code></td><td class="ApiTable-desc">Larger track and thumb</td></tr>
+<tr><td><code class="ApiTable-prop">.Slider--success</code></td><td class="ApiTable-desc">Green thumb color</td></tr>
+<tr><td><code class="ApiTable-prop">.Slider--warning</code></td><td class="ApiTable-desc">Yellow thumb color</td></tr>
+<tr><td><code class="ApiTable-prop">.Slider--error</code></td><td class="ApiTable-desc">Red thumb color</td></tr>
+<tr><td><code class="ApiTable-prop">.Slider-container</code></td><td class="ApiTable-desc">Wrapper for slider + labels</td></tr>
+<tr><td><code class="ApiTable-prop">.Slider-labels</code></td><td class="ApiTable-desc">Min/max label container</td></tr>
+<tr><td><code class="ApiTable-prop">.Slider-ticks</code></td><td class="ApiTable-desc">Discrete step labels</td></tr>
+<tr><td><code class="ApiTable-prop">.Slider-value</code></td><td class="ApiTable-desc">Current value display</td></tr>
+</tbody>
+</table>
+
+### HTML Attributes
+
+<table class="ApiTable">
+<thead>
+<tr><th>Attribute</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">min</code></td><td class="ApiTable-desc">Minimum value</td></tr>
+<tr><td><code class="ApiTable-prop">max</code></td><td class="ApiTable-desc">Maximum value</td></tr>
+<tr><td><code class="ApiTable-prop">value</code></td><td class="ApiTable-desc">Current value</td></tr>
+<tr><td><code class="ApiTable-prop">step</code></td><td class="ApiTable-desc">Increment amount (for discrete steps)</td></tr>
+<tr><td><code class="ApiTable-prop">disabled</code></td><td class="ApiTable-desc">Non-interactive state</td></tr>
+</tbody>
+</table>
+
+### ARIA Attributes
+
+<table class="ApiTable">
+<thead>
+<tr><th>Attribute</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">aria-valuemin</code></td><td class="ApiTable-desc">Minimum value (auto from <code>min</code>)</td></tr>
+<tr><td><code class="ApiTable-prop">aria-valuemax</code></td><td class="ApiTable-desc">Maximum value (auto from <code>max</code>)</td></tr>
+<tr><td><code class="ApiTable-prop">aria-valuenow</code></td><td class="ApiTable-desc">Current value (auto from <code>value</code>)</td></tr>
+<tr><td><code class="ApiTable-prop">aria-valuetext</code></td><td class="ApiTable-desc">Human-readable value (e.g., "50 percent")</td></tr>
+</tbody>
+</table>
 
 ---
 
@@ -431,18 +521,60 @@ For custom implementations, ensure:
 
 ---
 
+## Accessibility
+
+### Keyboard Support
+
+| Key | Action |
+|-----|--------|
+| `Arrow Left` / `Arrow Down` | Decrease value by one step |
+| `Arrow Right` / `Arrow Up` | Increase value by one step |
+| `Home` | Set to minimum value |
+| `End` | Set to maximum value |
+| `Page Up` / `Page Down` | Increase/decrease by larger step |
+
+### Screen Reader Guidance
+
+Native `<input type="range">` is accessible by default. Enhance with `aria-valuetext` for human-readable values (e.g., "50 percent" instead of "50"). Always associate a `<label>` with the slider.
+
+```html
+<label for="volume-slider">Volume</label>
+<input
+    type="range"
+    id="volume-slider"
+    class="Slider"
+    min="0"
+    max="100"
+    value="50"
+    aria-valuetext="50 percent"
+>
+```
+
+### ARIA Attributes
+
+- `aria-valuemin`, `aria-valuemax`, `aria-valuenow` are automatic for native range inputs
+- `aria-valuetext` for human-readable value descriptions
+- Always use `<label>` to describe the slider's purpose
+- Ensure visible focus indicators on the thumb
+
+---
+
 ## Best Practices
 
 ### Do
 
-- ✓ **Show the current value** — Users need feedback
-- ✓ **Use appropriate ranges** — Match real-world constraints
-- ✓ **Add labels** — Context helps users understand the scale
-- ✓ **Consider steps** — Discrete values are often easier to use
+- ✓ **Show the current value** — Display the number alongside the slider for clarity
+- ✓ **Use appropriate ranges** — Match real-world constraints (0–100 for percentages)
+- ✓ **Add labels** — Min/max labels help users understand the scale
+- ✓ **Consider discrete steps** — Snapping to values is often easier than continuous
+- ✓ **Associate a label element** — Screen readers need to know what the slider controls
+- ✓ **Provide adequate thumb size** — At least 44px touch target on mobile
 
 ### Don't
 
-- ✗ **Use for precise input** — Text inputs are better for exact values
-- ✗ **Hide the scale** — Users need to understand the range
-- ✗ **Make the thumb too small** — Touch targets need adequate size
-- ✗ **Forget keyboard users** — Native inputs handle this automatically
+- ✗ **Use for precise numeric input** — A text field is better when exact values matter
+- ✗ **Hide the scale** — Users need to understand the range boundaries
+- ✗ **Make the thumb too small** — Tiny thumbs are frustrating on touch devices
+- ✗ **Forget keyboard users** — Native range inputs handle this; custom sliders must too
+- ✗ **Use sliders for binary choices** — A toggle switch is more appropriate
+- ✗ **Skip the value display** — Sliders without visible values feel imprecise

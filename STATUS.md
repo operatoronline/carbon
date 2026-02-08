@@ -1,79 +1,118 @@
 # Carbon Status
 
 ## Metadata
-- **Version:** v0.3
+- **Version:** v0.4
 - **Last Updated:** 2026-02-08
 - **Host:** carbon.operator.onl
 - **Repo:** https://github.com/operatoronline/carbon
 
 ## Current Status
-**v0.3 Complete** ✅
+**v0.4 In Progress** — Structural consistency pass across all pages.
 
-Full aesthetic reskin to match the Library design system.
+---
 
-## v0.3 Highlights — Library Aesthetic Reskin
+## v0.4 Goal: Structural Consistency
 
-### Typography
-- **Display fonts:** `Instrument Serif` for hero titles, page headers
-- **UI fonts:** `Outfit` for navigation, body copy, component labels
-- **Mono:** `JetBrains Mono` for code blocks, micro-labels, technical text
-- **Hero treatment:** Serif titles with italic accent word pattern (`<em>Buttons</em>`)
+Every page must follow a canonical section structure. Content quality should match the token pages (rich previews, educational depth, visual demos).
 
-### Color System
-- OKLCH color tokens ported from Library
-- Purple accent (270° hue) with full scale (pri-50 to pri-600)
-- Grayscale scale (g50 to g950) for semantic colors
-- Status colors: ok (green), warn (yellow), err (red)
-- Full dark mode support
+### Canonical Structure — Components
 
-### Shell Architecture
-- **Floating pill nav** — bottom on mobile, top on desktop
-- **Glassmorphism toolbar** — desktop search bar with blur effect
-- **Sidebar removed** — clean, focused reading experience
-- **Safe area insets** — mobile viewport-fit support
+All component pages must end with these sections **in this exact order**:
 
-### Design Tokens
-- Radii: r-s (6px) → r-f (9999px pill)
-- Shadows: sh-s → sh-xl with OKLCH transparency
-- Animation: ease (expo), spring, durations (f/n/s)
-- Spacing: 4px base scale
+1. **Common Patterns** — Real-world usage examples in context
+2. **Customization** — CSS custom properties, overrides, extending
+3. **API Reference** — HTML classes, attributes, data-attributes (using `<table class="ApiTable">` format). This is the *interface* — what classes exist and what they do.
+4. **CSS Reference** — Full CSS source code for the component. This is the *implementation* — copy-paste ready CSS.
+5. **Accessibility** — Keyboard support, screen readers, ARIA patterns
+6. **Best Practices** — Do/Don't guidelines
 
-### Components
-All 38 components updated with new tokens:
-- Buttons, Cards, Tables, Forms, Modals
-- Toasts, Tooltips, Alerts, Accordions
-- Tabs, Dropdowns, Menus, Pagination
-- Progress, Skeletons, Steppers, Timeline
-- And more...
+**API Reference vs CSS Reference:**
+- **API Reference** = The contract. Class names, attributes, expected markup, custom properties. Presented in ApiTable HTML tables.
+- **CSS Reference** = The implementation. Actual CSS rules. Presented in fenced code blocks.
 
-## Components (38 total)
+### Canonical Structure — Tokens
 
-### Tokens
-- Colors (OKLCH system, semantic palette, dark mode)
-- Typography (Instrument Serif, Outfit, JetBrains Mono)
-- Spacing (4px scale, usage guidelines)
+Token pages end with:
+1. **Best Practices** — Do/Don't guidelines
+2. **Quick Reference** — Cheat sheet of all token values
 
-### Layout
-- Layouts (Container, Grid, Stack, Cluster, Split, Center)
+### Canonical Structure — Patterns
 
-### Components
-Accordions, Alerts, Avatars, Badges, Breadcrumbs, Buttons, Cards, Chips/Tags, Dividers, Drawer, Dropdowns, Empty States, File Upload, Forms, Icons, Links, Lists, Menus, Modals, Pagination, Progress, Rating, Skeletons, Sliders, Steppers, Switches, Tables, Tabs, Textarea, Timeline, Toasts, Toolbar, Tooltips
+Pattern pages end with:
+1. **Best Practices** — Do/Don't guidelines
+2. **CSS Reference** — Full CSS source code
 
-## Automation
-- **Hourly Health Check** — Verify site status
-- **Daily Summary** — 9 AM UTC recap
+---
 
-## Backlog (v0.4 candidates)
-- [ ] Date Picker component
-- [ ] Tree View component
-- [ ] Data Grid component
-- [ ] Rich Text Editor patterns
-- [ ] Mobile bottom sheet navigation
+## Component Audit
 
-## Known Issues
-None.
+### Tokens (3 pages)
+| Page | Structure | Quality | Status |
+|------|-----------|---------|--------|
+| colors.md | ✅ Correct | ✅ Rich | Done |
+| typography.md | ✅ Correct | ✅ Rich | Done |
+| spacing.md | ✅ Correct | ✅ Rich | Done |
+
+### Components (33 pages)
+| Page | Structure | Quality | Status |
+|------|-----------|---------|--------|
+| accordions.md | ⚠️ Missing CSS Ref | ⚠️ Needs refresh | Pending |
+| alerts.md | ⚠️ Missing Common Patterns, Customization, CSS Ref | ⚠️ Needs refresh | Pending |
+| avatars.md | ⚠️ Wrong order (CSS Ref before Best Practices) | ⚠️ Needs refresh | Pending |
+| badges.md | ⚠️ Wrong order (CSS Ref before Best Practices) | ⚠️ Needs refresh | Pending |
+| breadcrumbs.md | ⚠️ Missing CSS Ref | ⚠️ Needs refresh | Pending |
+| buttons.md | ⚠️ Missing CSS Ref | ✅ Recently updated | Pending |
+| cards.md | ⚠️ Missing CSS Ref | ⚠️ Needs refresh | Pending |
+| chips.md | ⚠️ Wrong order, missing Best Practices | ⚠️ Needs refresh | Pending |
+| dividers.md | ⚠️ Wrong order (CSS Ref after Best Practices) | ⚠️ Needs refresh | Pending |
+| drawer.md | ⚠️ Wrong order throughout | ⚠️ Needs refresh | Pending |
+| dropdowns.md | ⚠️ JavaScript section, missing CSS Ref | ⚠️ Needs refresh | Pending |
+| file-upload.md | ⚠️ Missing CSS Ref | ⚠️ Needs refresh | Pending |
+| forms.md | ⚠️ Missing CSS Ref | ⚠️ Needs refresh | Pending |
+| icons.md | ⚠️ Wrong order (CSS Ref before Best Practices) | ⚠️ Needs refresh | Pending |
+| links.md | ⚠️ Missing CSS Ref (merged into Customization) | ✅ Recently updated | Pending |
+| lists.md | ⚠️ Missing Customization, CSS Ref | ⚠️ Needs refresh | Pending |
+| menus.md | ⚠️ Missing CSS Ref | ⚠️ Needs refresh | Pending |
+| modals.md | ⚠️ Missing CSS Ref | ⚠️ Needs refresh | Pending |
+| pagination.md | ⚠️ Missing Common Patterns, Customization, CSS Ref | ⚠️ Needs refresh | Pending |
+| progress.md | ⚠️ Missing Common Patterns, Customization, CSS Ref | ⚠️ Needs refresh | Pending |
+| rating.md | ⚠️ Wrong order, missing Best Practices | ⚠️ Needs refresh | Pending |
+| skeletons.md | ⚠️ Missing Common Patterns, Customization, CSS Ref | ⚠️ Needs refresh | Pending |
+| sliders.md | ⚠️ Wrong order (CSS Ref before Best Practices) | ⚠️ Needs refresh | Pending |
+| steppers.md | ⚠️ Missing Best Practices, Customization, CSS Ref | ⚠️ Needs refresh | Pending |
+| switches.md | ⚠️ Missing Common Patterns, Customization, CSS Ref | ⚠️ Needs refresh | Pending |
+| tables.md | ⚠️ Missing CSS Ref | ⚠️ Needs refresh | Pending |
+| tabs.md | ⚠️ JavaScript section, missing CSS Ref | ⚠️ Needs refresh | Pending |
+| textarea.md | ⚠️ Missing Best Practices, Customization, CSS Ref | ⚠️ Needs refresh | Pending |
+| timeline.md | ⚠️ Wrong order, missing Best Practices | ⚠️ Needs refresh | Pending |
+| toasts.md | ⚠️ JavaScript section, missing CSS Ref | ⚠️ Needs refresh | Pending |
+| toolbar.md | ⚠️ Wrong order, missing Best Practices | ⚠️ Needs refresh | Pending |
+| tooltips.md | ⚠️ Missing Common Patterns, Customization, CSS Ref | ⚠️ Needs refresh | Pending |
+
+### Patterns (2 pages)
+| Page | Structure | Status |
+|------|-----------|--------|
+| layouts.md | ⚠️ Needs tail structure | Pending |
+| empty-states.md | ⚠️ Needs tail structure | Pending |
+
+---
+
+## Batches
+
+| Batch | Components | Agent | Status |
+|-------|------------|-------|--------|
+| 1 | tokens (colors, typography, spacing) | — | ✅ Structure verified |
+| 2 | accordions, alerts, avatars, badges, breadcrumbs, buttons | Sub-agent | ✅ Complete |
+| 3 | cards, chips, dividers, drawer, dropdowns, file-upload | Sub-agent | Pending |
+| 4 | forms, icons, links, lists, menus, modals | Sub-agent | ✅ Complete |
+| 5 | pagination, progress, rating, skeletons, sliders, steppers | Sub-agent | Pending |
+| 6 | switches, tables, tabs, textarea, timeline, toasts, toolbar, tooltips | Sub-agent | Pending |
+| 7 | patterns (layouts, empty-states) | Sub-agent | ✅ Complete |
+
+---
 
 ## Change Log
-- **v0.1** (2026-02-02): Project initialization. Scaffolding complete.
-- **v0.2** (2026-02-04): Full documentation overhaul. Enhanced previews, API Reference, Accessibility for all 38 components. File Upload added.
-- **v0.3** (2026-02-05): Library aesthetic reskin. New typography (Instrument Serif/Outfit/JetBrains Mono), OKLCH color system with purple accent, floating pill nav, glassmorphism effects, removed sidebar.
+- **v0.1** (2026-02-02): Project initialization
+- **v0.2** (2026-02-04): Full documentation overhaul
+- **v0.3** (2026-02-05): Library aesthetic reskin
+- **v0.4** (2026-02-08): Structural consistency pass — canonical section order, content quality refresh

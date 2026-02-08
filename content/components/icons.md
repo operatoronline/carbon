@@ -541,7 +541,7 @@ Icons with loading or state animations.
 
 ---
 
-## Real-World Examples
+## Common Patterns
 
 ### Empty State
 
@@ -624,93 +624,109 @@ Icons with loading or state animations.
 
 ---
 
+## Customization
+
+Override icon styles using CSS custom properties:
+
+```css
+/* Custom icon color scheme */
+.Icon--brand {
+  color: oklch(55% 0.2 280);
+}
+
+/* Custom icon background */
+.IconBg--brand {
+  background-color: oklch(55% 0.2 280 / 0.15);
+  color: oklch(45% 0.2 280);
+}
+
+/* Square icon backgrounds */
+.IconBg--square {
+  border-radius: var(--r-s);
+}
+
+/* Custom animation speed */
+.Icon--spin-slow {
+  animation: spin 2s linear infinite;
+}
+
+/* Custom size scale */
+.Icon--xxl {
+  font-size: 3rem;
+}
+```
+
+---
+
 ## API Reference
 
 ### Classes
 
-| Class | Description |
-|-------|-------------|
-| `.Icon` | Base icon styling |
-| `.Icon--xs` | Extra small (12px) |
-| `.Icon--small` | Small (16px) |
-| `.Icon--large` | Large (24px) |
-| `.Icon--xl` | Extra large (32px) |
-| `.Icon--success` | Success/green color |
-| `.Icon--warning` | Warning/yellow color |
-| `.Icon--error` | Error/red color |
-| `.Icon--info` | Info/primary color |
-| `.Icon--spin` | Spinning animation |
-| `.Icon--pulse` | Pulsing animation |
-| `.IconBg` | Icon with circular background |
-| `.IconBg--small` | Small background (28px) |
-| `.IconBg--large` | Large background (56px) |
-| `.IconBg--primary` | Primary color background |
-| `.IconBg--success` | Success color background |
-| `.IconBg--warning` | Warning color background |
-| `.IconBg--error` | Error color background |
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">.Icon</code></td><td class="ApiTable-desc">Base icon styling</td></tr>
+<tr><td><code class="ApiTable-prop">.Icon--xs</code></td><td class="ApiTable-desc">Extra small (12px)</td></tr>
+<tr><td><code class="ApiTable-prop">.Icon--small</code></td><td class="ApiTable-desc">Small (16px)</td></tr>
+<tr><td><code class="ApiTable-prop">.Icon--large</code></td><td class="ApiTable-desc">Large (24px)</td></tr>
+<tr><td><code class="ApiTable-prop">.Icon--xl</code></td><td class="ApiTable-desc">Extra large (32px)</td></tr>
+<tr><td><code class="ApiTable-prop">.Icon--success</code></td><td class="ApiTable-desc">Success/green color</td></tr>
+<tr><td><code class="ApiTable-prop">.Icon--warning</code></td><td class="ApiTable-desc">Warning/yellow color</td></tr>
+<tr><td><code class="ApiTable-prop">.Icon--error</code></td><td class="ApiTable-desc">Error/red color</td></tr>
+<tr><td><code class="ApiTable-prop">.Icon--info</code></td><td class="ApiTable-desc">Info/primary color</td></tr>
+<tr><td><code class="ApiTable-prop">.Icon--spin</code></td><td class="ApiTable-desc">Spinning animation</td></tr>
+<tr><td><code class="ApiTable-prop">.Icon--pulse</code></td><td class="ApiTable-desc">Pulsing animation</td></tr>
+<tr><td><code class="ApiTable-prop">.IconBg</code></td><td class="ApiTable-desc">Icon with circular background</td></tr>
+<tr><td><code class="ApiTable-prop">.IconBg--small</code></td><td class="ApiTable-desc">Small background (28px)</td></tr>
+<tr><td><code class="ApiTable-prop">.IconBg--large</code></td><td class="ApiTable-desc">Large background (56px)</td></tr>
+<tr><td><code class="ApiTable-prop">.IconBg--primary</code></td><td class="ApiTable-desc">Primary color background</td></tr>
+<tr><td><code class="ApiTable-prop">.IconBg--success</code></td><td class="ApiTable-desc">Success color background</td></tr>
+<tr><td><code class="ApiTable-prop">.IconBg--warning</code></td><td class="ApiTable-desc">Warning color background</td></tr>
+<tr><td><code class="ApiTable-prop">.IconBg--error</code></td><td class="ApiTable-desc">Error color background</td></tr>
+</tbody>
+</table>
 
 ### Phosphor Icon Styles
 
-| Class Prefix | Description |
-|--------------|-------------|
-| `ph` | Regular weight |
-| `ph-bold` | Bold weight |
-| `ph-fill` | Filled style |
-| `ph-duotone` | Two-tone style |
+<table class="ApiTable">
+<thead>
+<tr><th>Class Prefix</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">ph</code></td><td class="ApiTable-desc">Regular weight</td></tr>
+<tr><td><code class="ApiTable-prop">ph-bold</code></td><td class="ApiTable-desc">Bold weight</td></tr>
+<tr><td><code class="ApiTable-prop">ph-fill</code></td><td class="ApiTable-desc">Filled style</td></tr>
+<tr><td><code class="ApiTable-prop">ph-duotone</code></td><td class="ApiTable-desc">Two-tone style</td></tr>
+</tbody>
+</table>
 
 ### Attributes
 
-| Attribute | Description |
-|-----------|-------------|
-| `aria-hidden="true"` | For decorative icons (text provides meaning) |
-| `aria-label` | For meaningful icons without visible text |
-| `role="img"` | When icon conveys meaning |
+<table class="ApiTable">
+<thead>
+<tr><th>Attribute</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">aria-hidden="true"</code></td><td class="ApiTable-desc">For decorative icons (text provides meaning)</td></tr>
+<tr><td><code class="ApiTable-prop">aria-label</code></td><td class="ApiTable-desc">For meaningful icons without visible text</td></tr>
+<tr><td><code class="ApiTable-prop">role="img"</code></td><td class="ApiTable-desc">When icon conveys meaning</td></tr>
+</tbody>
+</table>
 
 ### CSS Custom Properties
 
-| Property | Default | Description |
-|----------|---------|-------------|
-| `--text-secondary` | — | Default icon color |
-| `--bg-secondary` | — | IconBg background |
-| `--accent-primary` | — | Info color |
-
----
-
-## Accessibility
-
-Icons require attention to ensure they're accessible:
-
-### Decorative Icons
-```html
-<!-- Icon is purely decorative, text provides meaning -->
-<button class="Button Button--primary">
-    <i class="ph ph-plus" aria-hidden="true"></i>
-    Add Item
-</button>
-```
-
-### Meaningful Icons
-```html
-<!-- Icon-only button needs aria-label -->
-<button class="Button Button--icon" aria-label="Search">
-    <i class="ph ph-magnifying-glass"></i>
-</button>
-
-<!-- Or use visually-hidden text -->
-<button class="Button Button--icon">
-    <i class="ph ph-magnifying-glass"></i>
-    <span class="sr-only">Search</span>
-</button>
-```
-
-### Status Icons
-```html
-<!-- Provide text alternative for status -->
-<span>
-    <i class="ph ph-check-circle Icon Icon--success" aria-hidden="true"></i>
-    <span>Complete</span>
-</span>
-```
+<table class="ApiTable">
+<thead>
+<tr><th>Property</th><th>Default</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">--text-secondary</code></td><td class="ApiTable-desc">—</td><td class="ApiTable-desc">Default icon color</td></tr>
+<tr><td><code class="ApiTable-prop">--bg-secondary</code></td><td class="ApiTable-desc">—</td><td class="ApiTable-desc">IconBg background</td></tr>
+<tr><td><code class="ApiTable-prop">--accent-primary</code></td><td class="ApiTable-desc">—</td><td class="ApiTable-desc">Info color</td></tr>
+</tbody>
+</table>
 
 ---
 
@@ -817,6 +833,44 @@ Icons require attention to ensure they're accessible:
 
 ---
 
+## Accessibility
+
+Icons require attention to ensure they're accessible:
+
+### Decorative Icons
+```html
+<!-- Icon is purely decorative, text provides meaning -->
+<button class="Button Button--primary">
+    <i class="ph ph-plus" aria-hidden="true"></i>
+    Add Item
+</button>
+```
+
+### Meaningful Icons
+```html
+<!-- Icon-only button needs aria-label -->
+<button class="Button Button--icon" aria-label="Search">
+    <i class="ph ph-magnifying-glass"></i>
+</button>
+
+<!-- Or use visually-hidden text -->
+<button class="Button Button--icon">
+    <i class="ph ph-magnifying-glass"></i>
+    <span class="sr-only">Search</span>
+</button>
+```
+
+### Status Icons
+```html
+<!-- Provide text alternative for status -->
+<span>
+    <i class="ph ph-check-circle Icon Icon--success" aria-hidden="true"></i>
+    <span>Complete</span>
+</span>
+```
+
+---
+
 ## Best Practices
 
 ### Do
@@ -826,6 +880,7 @@ Icons require attention to ensure they're accessible:
 - ✓ **Use recognizable icons** — Stick to common conventions
 - ✓ **Provide aria-labels** — Required for icon-only buttons
 - ✓ **Match icon style** — Use the same weight throughout
+- ✓ **Use semantic color classes** — `.Icon--success` for positive states
 
 ### Don't
 
@@ -834,3 +889,4 @@ Icons require attention to ensure they're accessible:
 - ✗ **Use ambiguous icons** — A hamburger menu isn't a hamburger
 - ✗ **Forget color contrast** — Icons need sufficient contrast
 - ✗ **Mix icon libraries** — Stick to Phosphor for consistency
+- ✗ **Use icons without accessible names** — Icon-only elements need aria-label

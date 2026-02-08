@@ -4,22 +4,6 @@ Buttons allow users to take actions and make choices with a single tap. They com
 
 ---
 
-## Installation
-
-Copy the button CSS from `styles/docs.css` or include the Carbon stylesheet:
-
-```html
-<link rel="stylesheet" href="carbon.min.css">
-```
-
-Then use button classes in your HTML:
-
-```html
-<button class="Button Button--primary">Get Started</button>
-```
-
----
-
 ## Usage
 
 The base `.Button` class provides core button styling. Add variant classes to change appearance.
@@ -466,6 +450,203 @@ Override button styles using CSS custom properties:
 </tr>
 </tbody>
 </table>
+
+---
+
+## CSS Reference
+
+```css
+/* Base Button */
+.Button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid transparent;
+  border-radius: var(--r-s);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s, border-color 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  text-decoration: none;
+  background-color: var(--bg-s);
+  color: var(--fg);
+}
+
+.Button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Variants */
+.Button--primary {
+  background-color: var(--accent);
+  color: var(--fg-on-accent);
+  border-color: transparent;
+}
+
+.Button--primary:hover {
+  filter: brightness(1.1);
+}
+
+.Button--secondary {
+  background-color: var(--bg-s);
+  color: var(--fg);
+  border-color: var(--bd);
+}
+
+.Button--secondary:hover {
+  background-color: var(--bd);
+}
+
+.Button--tertiary {
+  background-color: transparent;
+  color: var(--fg-3);
+  border-color: transparent;
+}
+
+.Button--tertiary:hover {
+  background-color: var(--bg-s);
+  color: var(--fg);
+}
+
+.Button--ghost {
+  background-color: transparent;
+  color: var(--fg);
+  border-color: transparent;
+}
+
+.Button--ghost:hover {
+  background-color: var(--bg-s);
+}
+
+.Button--outline {
+  background-color: transparent;
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.Button--outline:hover {
+  background-color: oklch(from var(--accent) l c h / 0.1);
+}
+
+.Button--danger {
+  background-color: oklch(55% 0.2 25);
+  color: white;
+  border-color: transparent;
+}
+
+.Button--danger:hover {
+  background-color: oklch(50% 0.2 25);
+}
+
+/* Sizes */
+.Button--small {
+  padding: var(--space-1) var(--space-3);
+  font-size: 0.75rem;
+  height: 28px;
+}
+
+.Button--large {
+  padding: var(--space-3) var(--space-6);
+  font-size: 1rem;
+  height: 44px;
+}
+
+/* Icon-Only */
+.Button--icon {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+}
+
+.Button--icon.Button--small {
+  width: 28px;
+  height: 28px;
+}
+
+.Button--icon.Button--large {
+  width: 44px;
+  height: 44px;
+}
+
+/* Full Width */
+.Button--block {
+  display: flex;
+  width: 100%;
+}
+
+/* Loading */
+.Button--loading {
+  position: relative;
+  color: transparent;
+  pointer-events: none;
+}
+
+.Button-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: button-spin 0.6s linear infinite;
+}
+
+@keyframes button-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Disabled */
+.Button:disabled,
+.Button[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Icon inside button */
+.Button-icon {
+  font-size: 1.1em;
+  flex-shrink: 0;
+}
+
+.Button-icon--trailing {
+  order: 1;
+}
+
+/* Button Group */
+.ButtonGroup {
+  display: inline-flex;
+  gap: 0;
+}
+
+.ButtonGroup .Button {
+  border-radius: 0;
+}
+
+.ButtonGroup .Button:first-child {
+  border-radius: var(--r-s) 0 0 var(--r-s);
+}
+
+.ButtonGroup .Button:last-child {
+  border-radius: 0 var(--r-s) var(--r-s) 0;
+}
+
+.ButtonGroup .Button + .Button {
+  margin-left: -1px;
+}
+
+.ButtonGroup-item--active {
+  background-color: var(--accent);
+  color: var(--fg-on-accent);
+  border-color: var(--accent);
+  z-index: 1;
+}
+```
 
 ---
 

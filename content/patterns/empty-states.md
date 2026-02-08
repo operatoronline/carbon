@@ -267,6 +267,8 @@ Empty state for table components.
 - ✓ **Provide a clear action** — Give them something to do
 - ✓ **Use appropriate visuals** — Icons or illustrations that match context
 - ✓ **Keep it simple** — One primary action, maybe a secondary
+- ✓ **Match the context** — Use compact variant in small containers like cards or sidebars
+- ✓ **Differentiate error from empty** — Use the error variant when content failed to load vs. simply not existing yet
 
 ### Don't
 
@@ -274,6 +276,8 @@ Empty state for table components.
 - ✗ **Be overly verbose** — Keep copy short and scannable
 - ✗ **Use generic messages** — "No data" doesn't help anyone
 - ✗ **Hide the state** — Make it visible so users understand
+- ✗ **Stack multiple empty states** — If a page has several empty sections, consolidate into one page-level message
+- ✗ **Blame the user** — Say "No results found" not "You didn't search correctly"
 
 ---
 

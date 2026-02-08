@@ -315,7 +315,7 @@ Style for downloadable resources.
 
 ---
 
-## Real-World Examples
+## Common Patterns
 
 ### Card with Link
 
@@ -423,100 +423,181 @@ Style for downloadable resources.
 
 ---
 
+## Customization
+
+Override link styles using CSS custom properties:
+
+```css
+/* Custom link color */
+.Link {
+  --link-color: oklch(55% 0.2 250);
+  --link-hover: oklch(50% 0.2 250);
+  color: var(--link-color);
+}
+
+.Link:hover {
+  color: var(--link-hover);
+}
+
+/* Custom underline style */
+.Link--fancy {
+  text-decoration: underline wavy;
+  text-underline-offset: 4px;
+}
+
+/* Custom nav link */
+.Link--nav {
+  --nav-active-color: oklch(55% 0.2 150);
+}
+
+.Link--nav.Link--active {
+  color: var(--nav-active-color);
+}
+```
+
+---
+
 ## API Reference
 
 ### Classes
 
-| Class | Description |
-|-------|-------------|
-| `.Link` | Base link styling |
-| `.Link--subtle` | Inherits text color, accent on hover |
-| `.Link--muted` | Secondary text color |
-| `.Link--underline` | Always shows underline |
-| `.Link--standalone` | Standalone navigation link (bolder) |
-| `.Link--external` | External link (with icon styling) |
-| `.Link--small` | Smaller font size |
-| `.Link--large` | Larger font size |
-| `.Link--disabled` | Disabled/unavailable state |
-| `.Link--nav` | Navigation link (for menus) |
-| `.Link--active` | Active/current navigation state |
-| `.Link--skip` | Skip-to-content accessibility link |
-| `.Link--visited` | Explicit visited styling (CSS handles this automatically) |
-| `.Link-icon` | Icon inside link |
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Link</code></td>
+<td class="ApiTable-desc">Base link styling</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Link--subtle</code></td>
+<td class="ApiTable-desc">Inherits text color, accent on hover</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Link--muted</code></td>
+<td class="ApiTable-desc">Secondary text color</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Link--underline</code></td>
+<td class="ApiTable-desc">Always shows underline</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Link--standalone</code></td>
+<td class="ApiTable-desc">Standalone navigation link (bolder)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Link--external</code></td>
+<td class="ApiTable-desc">External link (with icon styling)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Link--small</code></td>
+<td class="ApiTable-desc">Smaller font size</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Link--large</code></td>
+<td class="ApiTable-desc">Larger font size</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Link--disabled</code></td>
+<td class="ApiTable-desc">Disabled/unavailable state</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Link--nav</code></td>
+<td class="ApiTable-desc">Navigation link (for menus)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Link--active</code></td>
+<td class="ApiTable-desc">Active/current navigation state</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Link--skip</code></td>
+<td class="ApiTable-desc">Skip-to-content accessibility link</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Link--visited</code></td>
+<td class="ApiTable-desc">Explicit visited styling (CSS handles this automatically)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Link-icon</code></td>
+<td class="ApiTable-desc">Icon inside link</td>
+</tr>
+</tbody>
+</table>
 
 ### Attributes
 
-| Attribute | Description |
-|-----------|-------------|
-| `href` | Required. The link destination |
-| `target="_blank"` | Open in new tab (use with rel="noopener") |
-| `rel="noopener noreferrer"` | Security attributes for external links |
-| `download` | Trigger file download |
-| `aria-label` | Accessible name when text isn't descriptive |
-| `aria-disabled="true"` | For disabled links (use with span) |
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">href</code></td>
+<td class="ApiTable-desc">Required. The link destination</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">target="_blank"</code></td>
+<td class="ApiTable-desc">Open in new tab (use with rel="noopener")</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">rel="noopener noreferrer"</code></td>
+<td class="ApiTable-desc">Security attributes for external links</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">download</code></td>
+<td class="ApiTable-desc">Trigger file download</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">aria-label</code></td>
+<td class="ApiTable-desc">Accessible name when text isn't descriptive</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">aria-disabled="true"</code></td>
+<td class="ApiTable-desc">For disabled links (use with span)</td>
+</tr>
+</tbody>
+</table>
 
 ### CSS Custom Properties
 
-| Property | Default | Description |
-|----------|---------|-------------|
-| `--accent-primary` | — | Default link color |
-| `--text-primary` | — | Subtle variant color |
-| `--text-secondary` | — | Muted variant color |
-| `--space-1` | `0.25rem` | Icon gap |
-
----
-
-## Accessibility
-
-Links require careful attention to accessibility:
-
-### Descriptive Text
-```html
-<!-- Good: Descriptive link text -->
-<a href="/pricing" class="Link">View pricing plans</a>
-
-<!-- Bad: Vague link text -->
-<a href="/pricing" class="Link">Click here</a>
-```
-
-### External Links
-```html
-<!-- Indicate external links open in new tab -->
-<a href="https://example.com" 
-   class="Link" 
-   target="_blank" 
-   rel="noopener noreferrer"
-   aria-label="Example website (opens in new tab)">
-    Example website
-    <i class="ph ph-arrow-square-out" aria-hidden="true"></i>
-</a>
-```
-
-### Skip Links
-```html
-<!-- Provide skip navigation for keyboard users -->
-<a href="#main-content" class="Link Link--skip">
-    Skip to main content
-</a>
-```
-
-### Download Links
-```html
-<!-- Indicate file type and size for downloads -->
-<a href="/report.pdf" class="Link" download>
-    <i class="ph ph-file-pdf" aria-hidden="true"></i>
-    Annual Report (PDF, 2.4 MB)
-</a>
-```
-
-### Links vs Buttons
-```html
-<!-- Link: Navigation to new page/resource -->
-<a href="/about" class="Link">About Us</a>
-
-<!-- Button: Triggers an action on the current page -->
-<button class="Button Button--primary">Submit Form</button>
-```
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Property</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">--accent-primary</code></td>
+<td class="ApiTable-desc">—</td>
+<td class="ApiTable-desc">Default link color</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">--text-primary</code></td>
+<td class="ApiTable-desc">—</td>
+<td class="ApiTable-desc">Subtle variant color</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">--text-secondary</code></td>
+<td class="ApiTable-desc">—</td>
+<td class="ApiTable-desc">Muted variant color</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">--space-1</code></td>
+<td class="ApiTable-desc">0.25rem</td>
+<td class="ApiTable-desc">Icon gap</td>
+</tr>
+</tbody>
+</table>
 
 ---
 
@@ -651,6 +732,60 @@ p .Link,
 .FormField-helper .Link {
   font-weight: 500;
 }
+```
+
+---
+
+## Accessibility
+
+Links require careful attention to accessibility:
+
+### Descriptive Text
+```html
+<!-- Good: Descriptive link text -->
+<a href="/pricing" class="Link">View pricing plans</a>
+
+<!-- Bad: Vague link text -->
+<a href="/pricing" class="Link">Click here</a>
+```
+
+### External Links
+```html
+<!-- Indicate external links open in new tab -->
+<a href="https://example.com" 
+   class="Link" 
+   target="_blank" 
+   rel="noopener noreferrer"
+   aria-label="Example website (opens in new tab)">
+    Example website
+    <i class="ph ph-arrow-square-out" aria-hidden="true"></i>
+</a>
+```
+
+### Skip Links
+```html
+<!-- Provide skip navigation for keyboard users -->
+<a href="#main-content" class="Link Link--skip">
+    Skip to main content
+</a>
+```
+
+### Download Links
+```html
+<!-- Indicate file type and size for downloads -->
+<a href="/report.pdf" class="Link" download>
+    <i class="ph ph-file-pdf" aria-hidden="true"></i>
+    Annual Report (PDF, 2.4 MB)
+</a>
+```
+
+### Links vs Buttons
+```html
+<!-- Link: Navigation to new page/resource -->
+<a href="/about" class="Link">About Us</a>
+
+<!-- Button: Triggers an action on the current page -->
+<button class="Button Button--primary">Submit Form</button>
 ```
 
 ---

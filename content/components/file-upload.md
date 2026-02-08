@@ -294,6 +294,83 @@ Active state when files are dragged over the drop zone.
 
 ---
 
+## Common Patterns
+
+### Profile Avatar Upload
+
+<Preview title="Avatar Upload">
+<div style="display: flex; align-items: center; gap: var(--space-4); max-width: 400px;">
+    <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, oklch(60% 0.15 250), oklch(50% 0.2 280)); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: 600;">JD</div>
+    <div>
+        <p style="font-weight: 500; margin-bottom: var(--space-2);">Profile Photo</p>
+        <div style="display: flex; gap: var(--space-2);">
+            <button class="Button Button--secondary Button--small">Upload</button>
+            <button class="Button Button--ghost Button--small" style="color: oklch(55% 0.2 25);">Remove</button>
+        </div>
+        <p style="font-size: 0.8rem; color: var(--fg-3); margin-top: var(--space-1);">JPG or PNG, max 2MB</p>
+    </div>
+</div>
+</Preview>
+
+### Form with File Attachment
+
+<Preview title="Support Ticket Form">
+<div style="max-width: 400px;">
+    <div style="margin-bottom: var(--space-4);">
+        <label style="display: block; font-weight: 500; margin-bottom: var(--space-1);">Subject</label>
+        <input type="text" class="Input" placeholder="Brief description" style="width: 100%;">
+    </div>
+    <div style="margin-bottom: var(--space-4);">
+        <label style="display: block; font-weight: 500; margin-bottom: var(--space-1);">Attachments</label>
+        <div class="FileUpload FileUpload--compact">
+            <div class="FileUpload-dropzone">
+                <svg class="FileUpload-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/>
+                </svg>
+                <span class="FileUpload-text"><span class="FileUpload-link">Attach files</span></span>
+                <input type="file" class="FileUpload-input" multiple />
+            </div>
+        </div>
+    </div>
+    <button class="Button Button--primary">Submit Ticket</button>
+</div>
+</Preview>
+
+### Multi-file Upload with Progress
+
+<Preview title="Bulk Upload">
+<div style="max-width: 450px;">
+    <div class="FileUpload">
+        <div class="FileUpload-dropzone" style="padding: var(--space-4);">
+            <svg class="FileUpload-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/>
+            </svg>
+            <p class="FileUpload-text"><span class="FileUpload-link">Upload files</span> or drag and drop</p>
+            <input type="file" class="FileUpload-input" multiple />
+        </div>
+        <ul class="FileUpload-list">
+            <li class="FileUpload-item FileUpload-item--complete">
+                <svg class="FileUpload-itemIcon FileUpload-itemIcon--success" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <div class="FileUpload-itemInfo">
+                    <span class="FileUpload-itemName">design-v2.fig</span>
+                    <span class="FileUpload-itemSize">Complete · 8.1 MB</span>
+                </div>
+            </li>
+            <li class="FileUpload-item FileUpload-item--uploading">
+                <svg class="FileUpload-itemIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                <div class="FileUpload-itemInfo">
+                    <span class="FileUpload-itemName">assets.zip</span>
+                    <div class="FileUpload-progress"><div class="FileUpload-progressBar" style="width: 40%"></div></div>
+                    <span class="FileUpload-itemSize">40% · 3.2 MB of 8 MB</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</Preview>
+
+---
+
 ## Customization
 
 ### CSS Variables
@@ -345,40 +422,233 @@ Active state when files are dragged over the drop zone.
 
 ## API Reference
 
-<div class="ApiTable">
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">.FileUpload</code></td><td class="ApiTable-desc">Base container</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload--compact</code></td><td class="ApiTable-desc">Smaller, inline variant</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload--bordered</code></td><td class="ApiTable-desc">Solid border style</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload--preview</code></td><td class="ApiTable-desc">Image preview layout</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload--disabled</code></td><td class="ApiTable-desc">Disabled state</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload--error</code></td><td class="ApiTable-desc">Error state</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-dropzone</code></td><td class="ApiTable-desc">Drop target area</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-dropzone.is-dragover</code></td><td class="ApiTable-desc">Active drag state</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-input</code></td><td class="ApiTable-desc">Hidden file input</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-icon</code></td><td class="ApiTable-desc">Upload icon</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-text</code></td><td class="ApiTable-desc">Main instruction text</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-link</code></td><td class="ApiTable-desc">Clickable upload trigger</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-hint</code></td><td class="ApiTable-desc">Help text (file types, size)</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-preview</code></td><td class="ApiTable-desc">Image thumbnail container</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-thumbnail</code></td><td class="ApiTable-desc">Preview image</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-list</code></td><td class="ApiTable-desc">File list container</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-item</code></td><td class="ApiTable-desc">Individual file row</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-item--uploading</code></td><td class="ApiTable-desc">Upload in progress</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-item--complete</code></td><td class="ApiTable-desc">Upload complete</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-item--error</code></td><td class="ApiTable-desc">Upload failed</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-itemIcon</code></td><td class="ApiTable-desc">File type icon</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-itemInfo</code></td><td class="ApiTable-desc">File name and size container</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-itemName</code></td><td class="ApiTable-desc">File name</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-itemSize</code></td><td class="ApiTable-desc">File size / status</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-progress</code></td><td class="ApiTable-desc">Progress bar container</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-progressBar</code></td><td class="ApiTable-desc">Progress bar fill</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-itemRemove</code></td><td class="ApiTable-desc">Remove/cancel button</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-itemRetry</code></td><td class="ApiTable-desc">Retry button</td></tr>
+</tbody>
+</table>
 
-| Class | Description |
-|-------|-------------|
-| `.FileUpload` | Base container |
-| `.FileUpload--compact` | Smaller, inline variant |
-| `.FileUpload--bordered` | Solid border style |
-| `.FileUpload--preview` | Image preview layout |
-| `.FileUpload--disabled` | Disabled state |
-| `.FileUpload--error` | Error state |
-| `.FileUpload-dropzone` | Drop target area |
-| `.FileUpload-dropzone.is-dragover` | Active drag state |
-| `.FileUpload-input` | Hidden file input |
-| `.FileUpload-icon` | Upload icon |
-| `.FileUpload-text` | Main instruction text |
-| `.FileUpload-link` | Clickable upload trigger |
-| `.FileUpload-hint` | Help text (file types, size) |
-| `.FileUpload-preview` | Image thumbnail container |
-| `.FileUpload-thumbnail` | Preview image |
-| `.FileUpload-list` | File list container |
-| `.FileUpload-item` | Individual file row |
-| `.FileUpload-item--uploading` | Upload in progress |
-| `.FileUpload-item--complete` | Upload complete |
-| `.FileUpload-item--error` | Upload failed |
-| `.FileUpload-itemIcon` | File type icon |
-| `.FileUpload-itemInfo` | File name and size container |
-| `.FileUpload-itemName` | File name |
-| `.FileUpload-itemSize` | File size / status |
-| `.FileUpload-progress` | Progress bar container |
-| `.FileUpload-progressBar` | Progress bar fill |
-| `.FileUpload-itemRemove` | Remove/cancel button |
-| `.FileUpload-itemRetry` | Retry button |
+---
 
-</div>
+## CSS Reference
+
+```css
+/* Base container */
+.FileUpload {
+  width: 100%;
+}
+
+/* Dropzone */
+.FileUpload-dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-8);
+  border: 2px dashed var(--bd);
+  border-radius: var(--r-m);
+  background: var(--bg);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  position: relative;
+  text-align: center;
+}
+
+.FileUpload-dropzone:hover {
+  border-color: var(--bd-s);
+  background: var(--bg-s);
+}
+
+.FileUpload-dropzone.is-dragover {
+  border-color: var(--accent);
+  background: oklch(60% 0.15 250 / 0.05);
+}
+
+/* Hidden input */
+.FileUpload-input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Icon */
+.FileUpload-icon {
+  color: var(--fg-3);
+}
+
+/* Text */
+.FileUpload-text {
+  font-size: 0.9rem;
+  color: var(--fg-2);
+  margin: 0;
+}
+
+.FileUpload-link {
+  color: var(--accent);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.FileUpload-hint {
+  font-size: 0.8rem;
+  color: var(--fg-3);
+  margin: 0;
+}
+
+/* Compact variant */
+.FileUpload--compact .FileUpload-dropzone {
+  flex-direction: row;
+  padding: var(--space-3) var(--space-4);
+  gap: var(--space-3);
+}
+
+/* Bordered variant */
+.FileUpload--bordered .FileUpload-dropzone {
+  border-style: solid;
+}
+
+/* File list */
+.FileUpload-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-3) 0 0;
+}
+
+.FileUpload-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border: 1px solid var(--bd);
+  border-radius: var(--r-s);
+  margin-bottom: var(--space-2);
+}
+
+.FileUpload-itemIcon {
+  flex-shrink: 0;
+  color: var(--fg-3);
+}
+
+.FileUpload-itemIcon--success { color: oklch(55% 0.15 150); }
+.FileUpload-itemIcon--error { color: oklch(55% 0.2 25); }
+
+.FileUpload-itemInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.FileUpload-itemName {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.FileUpload-itemSize {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--fg-3);
+}
+
+.FileUpload-itemSize--error {
+  color: oklch(55% 0.2 25);
+}
+
+/* Progress bar */
+.FileUpload-progress {
+  height: 4px;
+  background: var(--bg-s);
+  border-radius: 2px;
+  margin: var(--space-1) 0;
+  overflow: hidden;
+}
+
+.FileUpload-progressBar {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: width 0.3s;
+}
+
+/* Remove / Retry buttons */
+.FileUpload-itemRemove,
+.FileUpload-itemRetry {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: var(--space-1);
+  cursor: pointer;
+  color: var(--fg-3);
+  border-radius: var(--r-s);
+  transition: background 0.15s;
+}
+
+.FileUpload-itemRemove:hover,
+.FileUpload-itemRetry:hover {
+  background: var(--bg-s);
+  color: var(--fg);
+}
+
+/* States */
+.FileUpload--disabled .FileUpload-dropzone {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.FileUpload--error .FileUpload-dropzone {
+  border-color: oklch(55% 0.2 25);
+  background: oklch(55% 0.2 25 / 0.05);
+}
+
+/* Preview variant */
+.FileUpload--preview .FileUpload-dropzone {
+  flex-direction: row;
+  text-align: left;
+}
+
+.FileUpload-thumbnail {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: var(--r-s);
+}
+```
 
 ---
 
@@ -394,33 +664,47 @@ Active state when files are dragged over the drop zone.
 
 | Key | Action |
 |-----|--------|
-| `Enter` / `Space` | Open file browser (when focused) |
-| `Delete` | Remove focused file from list |
-| `Tab` | Navigate between files and actions |
+| Enter / Space | Open file browser (when focused) |
+| Delete | Remove focused file from list |
+| Tab | Navigate between files and actions |
+
+### Screen Reader Guidance
+
+```html
+<div class="FileUpload">
+    <div class="FileUpload-dropzone">
+        <p class="FileUpload-text" id="upload-desc">
+            <span class="FileUpload-link">Click to upload</span> or drag and drop
+        </p>
+        <p class="FileUpload-hint" id="upload-hint">PNG, JPG up to 10MB</p>
+        <input type="file" class="FileUpload-input"
+               aria-describedby="upload-desc upload-hint"
+               aria-label="Upload file" />
+    </div>
+    <div aria-live="polite" class="sr-only">
+        <!-- Announce upload progress and completion -->
+    </div>
+</div>
+```
 
 ---
 
 ## Best Practices
 
-<div class="DoDont">
-  <div class="Do">
-    <h4>✓ Do</h4>
-    <ul>
-      <li>Show accepted file types and size limits</li>
-      <li>Display upload progress for large files</li>
-      <li>Allow retry for failed uploads</li>
-      <li>Show image previews when appropriate</li>
-      <li>Provide clear error messages</li>
-    </ul>
-  </div>
-  <div class="Dont">
-    <h4>✗ Don't</h4>
-    <ul>
-      <li>Allow uploads without size limits</li>
-      <li>Remove files without confirmation</li>
-      <li>Hide the file list when processing</li>
-      <li>Use vague error messages like "Upload failed"</li>
-      <li>Auto-upload on selection without user control</li>
-    </ul>
-  </div>
-</div>
+### Do
+
+- ✓ **Show accepted file types and size limits** — Users need to know constraints before uploading
+- ✓ **Display upload progress for large files** — Visual feedback prevents uncertainty
+- ✓ **Allow retry for failed uploads** — Network errors happen; let users recover gracefully
+- ✓ **Show image previews when appropriate** — Helps users confirm they selected the right file
+- ✓ **Provide clear error messages** — "File exceeds 10MB limit" not just "Error"
+- ✓ **Support drag-and-drop and click** — Both interaction patterns are expected
+
+### Don't
+
+- ✗ **Allow uploads without size limits** — Unbounded uploads risk server issues and poor UX
+- ✗ **Remove files without confirmation** — Accidental clicks shouldn't lose uploaded work
+- ✗ **Hide the file list when processing** — Users need to see what's happening
+- ✗ **Use vague error messages** — "Upload failed" tells users nothing actionable
+- ✗ **Auto-upload on selection without user control** — Let users review before submitting
+- ✗ **Forget mobile touch targets** — Drop zones and buttons must be at least 44px

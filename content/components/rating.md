@@ -1,7 +1,3 @@
----
-title: Rating
----
-
 # Rating
 
 Ratings allow users to view or provide feedback using a visual scale, typically stars.
@@ -392,6 +388,222 @@ Include a text label.
 <span class="Rating-helper">4 out of 5 stars</span>
 ```
 
+## JavaScript
+
+```js
+// Interactive rating
+document.querySelectorAll('.Rating--interactive').forEach(rating => {
+  const stars = rating.querySelectorAll('.Rating-star');
+  let currentRating = 0;
+
+  stars.forEach((star, index) => {
+    star.addEventListener('click', () => {
+      currentRating = index + 1;
+      updateStars();
+    });
+
+    star.addEventListener('mouseenter', () => {
+      highlightStars(index + 1);
+    });
+  });
+
+  rating.addEventListener('mouseleave', () => {
+    highlightStars(currentRating);
+  });
+
+  function updateStars() {
+    stars.forEach((star, i) => {
+      const icon = star.querySelector('i');
+      star.setAttribute('aria-checked', i < currentRating);
+      star.classList.toggle('Rating-star--filled', i < currentRating);
+      icon.className = i < currentRating ? 'ph-fill ph-star' : 'ph ph-star';
+    });
+  }
+
+  function highlightStars(count) {
+    stars.forEach((star, i) => {
+      const icon = star.querySelector('i');
+      icon.className = i < count ? 'ph-fill ph-star' : 'ph ph-star';
+    });
+  }
+});
+```
+
+---
+
+## Common Patterns
+
+### Product Review Card
+
+<Preview title="Product Review">
+    <div style="max-width: 400px; padding: var(--space-4); border: 1px solid var(--bd); border-radius: var(--r-m);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-3);">
+            <div style="font-weight: 600; font-size: 1.1rem;">Customer Reviews</div>
+            <div class="Rating-display">
+                <div class="Rating Rating--sm">
+                    <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+                    <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+                    <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+                    <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+                    <i class="ph ph-star Rating-star"></i>
+                </div>
+                <span class="Rating-value Rating-value--sm">4.2</span>
+            </div>
+        </div>
+        <div style="font-size: 0.85rem; color: var(--fg-3);">Based on 1,247 reviews</div>
+    </div>
+</Preview>
+
+### Feedback Form
+
+<Preview title="Feedback Form Rating">
+    <div style="max-width: 400px; padding: var(--space-4); background: var(--bg-s); border-radius: var(--r-m);">
+        <div style="font-weight: 600; margin-bottom: var(--space-3);">How was your experience?</div>
+        <div class="Rating Rating--interactive" role="radiogroup" aria-label="Experience rating" style="margin-bottom: var(--space-3);">
+            <button class="Rating-star Rating-star--filled" role="radio" aria-checked="true"><i class="ph-fill ph-star"></i></button>
+            <button class="Rating-star Rating-star--filled" role="radio" aria-checked="true"><i class="ph-fill ph-star"></i></button>
+            <button class="Rating-star Rating-star--filled" role="radio" aria-checked="true"><i class="ph-fill ph-star"></i></button>
+            <button class="Rating-star Rating-star--filled" role="radio" aria-checked="true"><i class="ph-fill ph-star"></i></button>
+            <button class="Rating-star" role="radio" aria-checked="false"><i class="ph ph-star"></i></button>
+        </div>
+        <span class="Rating-helper">4 out of 5 stars</span>
+    </div>
+</Preview>
+
+### Compact List Item Rating
+
+<Preview title="List Item with Rating">
+    <div style="display: flex; flex-direction: column; gap: var(--space-3); max-width: 350px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: var(--space-2) 0; border-bottom: 1px solid var(--bd);">
+            <span style="font-weight: 500;">Wireless Headphones</span>
+            <div class="Rating Rating--sm">
+                <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+                <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+                <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+                <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+                <i class="ph-fill ph-star-half Rating-star Rating-star--half"></i>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: var(--space-2) 0; border-bottom: 1px solid var(--bd);">
+            <span style="font-weight: 500;">USB-C Hub</span>
+            <div class="Rating Rating--sm">
+                <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+                <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+                <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+                <i class="ph ph-star Rating-star"></i>
+                <i class="ph ph-star Rating-star"></i>
+            </div>
+        </div>
+    </div>
+</Preview>
+
+### Quick Satisfaction Survey
+
+<Preview title="Emoji Survey">
+    <div style="text-align: center; padding: var(--space-4); background: var(--bg-s); border-radius: var(--r-m); max-width: 320px;">
+        <div style="font-weight: 500; margin-bottom: var(--space-3);">How helpful was this article?</div>
+        <div class="Rating Rating--emoji">
+            <button class="Rating-emoji">😞</button>
+            <button class="Rating-emoji">😐</button>
+            <button class="Rating-emoji Rating-emoji--selected">🙂</button>
+            <button class="Rating-emoji">😊</button>
+            <button class="Rating-emoji">🤩</button>
+        </div>
+    </div>
+</Preview>
+
+---
+
+## Customization
+
+Override rating styling with CSS custom properties:
+
+```css
+/* Custom star colors */
+.Rating {
+  --rating-color-empty: oklch(80% 0.02 0);
+  --rating-color-filled: oklch(65% 0.2 45);
+}
+
+.Rating-star { color: var(--rating-color-empty); }
+.Rating-star--filled { color: var(--rating-color-filled); }
+```
+
+### Custom Icon Size
+
+```css
+.Rating--xl .Rating-star {
+  font-size: 2.5rem;
+}
+```
+
+### Brand Colors
+
+```css
+/* Use brand blue instead of gold */
+.Rating--brand .Rating-star--filled {
+  color: oklch(55% 0.2 260);
+}
+
+.Rating--brand .Rating--hearts .Rating-star--filled {
+  color: oklch(55% 0.25 350);
+}
+```
+
+### Theming
+
+```css
+[data-theme="dark"] .Rating-star {
+  color: oklch(40% 0.02 0);
+}
+
+[data-theme="dark"] .Rating-star--filled {
+  color: oklch(80% 0.15 80);
+}
+```
+
+---
+
+## API Reference
+
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">.Rating</code></td><td class="ApiTable-desc">Base rating container</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating--sm</code></td><td class="ApiTable-desc">Small size variant</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating--lg</code></td><td class="ApiTable-desc">Large size variant</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating--interactive</code></td><td class="ApiTable-desc">Enables click/hover interactions</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating--readonly</code></td><td class="ApiTable-desc">Display-only (no pointer events)</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating--disabled</code></td><td class="ApiTable-desc">Dimmed, non-interactive state</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating--hearts</code></td><td class="ApiTable-desc">Heart icon variant (red)</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating--thumbs</code></td><td class="ApiTable-desc">Thumbs up/down variant</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating--emoji</code></td><td class="ApiTable-desc">Emoji-based rating variant</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-star</code></td><td class="ApiTable-desc">Individual star element</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-star--filled</code></td><td class="ApiTable-desc">Filled/active star</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-star--half</code></td><td class="ApiTable-desc">Half-filled star</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-display</code></td><td class="ApiTable-desc">Container for rating + value + count</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-value</code></td><td class="ApiTable-desc">Numeric rating value</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-value--sm</code></td><td class="ApiTable-desc">Small value text</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-count</code></td><td class="ApiTable-desc">Review count text</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-thumb</code></td><td class="ApiTable-desc">Thumbs button container</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-thumb--up</code></td><td class="ApiTable-desc">Thumbs up button</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-thumb--down</code></td><td class="ApiTable-desc">Thumbs down button</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-emoji</code></td><td class="ApiTable-desc">Emoji button</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-emoji--selected</code></td><td class="ApiTable-desc">Selected emoji</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-breakdown</code></td><td class="ApiTable-desc">Rating distribution container</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-breakdownRow</code></td><td class="ApiTable-desc">Single breakdown row</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-breakdownBar</code></td><td class="ApiTable-desc">Progress bar track</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-breakdownFill</code></td><td class="ApiTable-desc">Progress bar fill</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-label</code></td><td class="ApiTable-desc">Label for rating input</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-required</code></td><td class="ApiTable-desc">Required field indicator</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-helper</code></td><td class="ApiTable-desc">Helper text below rating</td></tr>
+</tbody>
+</table>
+
+---
+
 ## CSS Reference
 
 ```css
@@ -411,7 +623,7 @@ Include a text label.
 
 .Rating-star--filled,
 .Rating-star--half {
-  color: oklch(75% 0.15 80); /* Gold/amber */
+  color: oklch(75% 0.15 80);
 }
 
 /* Sizes */
@@ -451,7 +663,7 @@ Include a text label.
 
 /* Hearts variant */
 .Rating--hearts .Rating-star--filled {
-  color: oklch(60% 0.25 15); /* Red */
+  color: oklch(60% 0.25 15);
 }
 
 /* Thumbs variant */
@@ -553,92 +765,59 @@ Include a text label.
 }
 ```
 
-## JavaScript
-
-```js
-// Interactive rating
-document.querySelectorAll('.Rating--interactive').forEach(rating => {
-  const stars = rating.querySelectorAll('.Rating-star');
-  let currentRating = 0;
-
-  stars.forEach((star, index) => {
-    star.addEventListener('click', () => {
-      currentRating = index + 1;
-      updateStars();
-    });
-
-    star.addEventListener('mouseenter', () => {
-      highlightStars(index + 1);
-    });
-  });
-
-  rating.addEventListener('mouseleave', () => {
-    highlightStars(currentRating);
-  });
-
-  function updateStars() {
-    stars.forEach((star, i) => {
-      const icon = star.querySelector('i');
-      star.setAttribute('aria-checked', i < currentRating);
-      star.classList.toggle('Rating-star--filled', i < currentRating);
-      icon.className = i < currentRating ? 'ph-fill ph-star' : 'ph ph-star';
-    });
-  }
-
-  function highlightStars(count) {
-    stars.forEach((star, i) => {
-      const icon = star.querySelector('i');
-      icon.className = i < count ? 'ph-fill ph-star' : 'ph ph-star';
-    });
-  }
-});
-```
-
-## API Reference
-
-<div class="ApiTable">
-
-| Class | Description |
-|-------|-------------|
-| `.Rating` | Base rating container |
-| `.Rating--sm` | Small size variant |
-| `.Rating--lg` | Large size variant |
-| `.Rating--interactive` | Enables click/hover interactions |
-| `.Rating--readonly` | Display-only (no pointer events) |
-| `.Rating--disabled` | Dimmed, non-interactive state |
-| `.Rating--hearts` | Heart icon variant (red) |
-| `.Rating--thumbs` | Thumbs up/down variant |
-| `.Rating--emoji` | Emoji-based rating variant |
-| `.Rating-star` | Individual star element |
-| `.Rating-star--filled` | Filled/active star |
-| `.Rating-star--half` | Half-filled star |
-| `.Rating-display` | Container for rating + value + count |
-| `.Rating-value` | Numeric rating value |
-| `.Rating-value--sm` | Small value text |
-| `.Rating-count` | Review count text |
-| `.Rating-thumb` | Thumbs button container |
-| `.Rating-thumb--up` | Thumbs up button |
-| `.Rating-thumb--down` | Thumbs down button |
-| `.Rating-emoji` | Emoji button |
-| `.Rating-emoji--selected` | Selected emoji |
-| `.Rating-breakdown` | Rating distribution container |
-| `.Rating-breakdownRow` | Single breakdown row |
-| `.Rating-breakdownBar` | Progress bar track |
-| `.Rating-breakdownFill` | Progress bar fill |
-| `.Rating-label` | Label for rating input |
-| `.Rating-required` | Required field indicator |
-| `.Rating-helper` | Helper text below rating |
-
-</div>
+---
 
 ## Accessibility
 
-- Use `role="radiogroup"` on interactive rating containers
-- Add `role="radio"` and `aria-checked` to each star button
-- Include `aria-label` with star count (e.g., "3 stars")
-- Use `aria-label` on the container (e.g., "Rating")
-- Support keyboard navigation (arrow keys to change, Enter/Space to select)
+### Keyboard Support
+
+| Key | Action |
+|-----|--------|
+| `Arrow Left` / `Arrow Right` | Navigate between stars |
+| `Enter` / `Space` | Select the focused star |
+| `Tab` | Move focus to/from the rating group |
+
+### Screen Reader Guidance
+
+Use `role="radiogroup"` on the interactive container and `role="radio"` with `aria-checked` on each star button. Provide `aria-label` with the star count on each button (e.g., "3 stars").
+
+```html
+<div class="Rating Rating--interactive" role="radiogroup" aria-label="Product rating">
+    <button class="Rating-star" role="radio" aria-checked="false" aria-label="1 star">
+        <i class="ph ph-star"></i>
+    </button>
+    <!-- ... -->
+</div>
+```
+
+### ARIA Attributes
+
+- `role="radiogroup"` on the rating container
+- `role="radio"` and `aria-checked` on each star button
+- `aria-label` with star count on each button
+- `aria-label` on the container to describe the rating purpose
+- For read-only displays, use `aria-label` to convey the value (e.g., "Rated 4 out of 5 stars")
 - Ensure visible focus indicators on interactive elements
-- Announce rating changes to screen readers
-- For read-only displays, use `aria-label` to convey the rating value
 - Provide sufficient color contrast for filled vs empty states
+
+---
+
+## Best Practices
+
+### Do
+
+- ✓ **Use labels with interactive ratings** — Tell users what they're rating
+- ✓ **Show the numeric value** — "4.5 out of 5" alongside stars adds clarity
+- ✓ **Support keyboard navigation** — Arrow keys should move between stars
+- ✓ **Provide helper text** — Confirm the selection ("You rated 4 stars")
+- ✓ **Use half-stars for display** — More precise representation of averages
+- ✓ **Show review count** — "(128 reviews)" adds social proof and credibility
+
+### Don't
+
+- ✗ **Use ratings without context** — Stars alone don't communicate what's being rated
+- ✗ **Allow accidental submissions** — Require confirmation for important ratings
+- ✗ **Mix rating scales** — Don't use 5-star and 10-point in the same interface
+- ✗ **Hide empty stars** — Always show the full scale for reference
+- ✗ **Use color alone to convey state** — Filled vs empty needs shape or icon change too
+- ✗ **Make stars too small on touch devices** — Minimum 44px tap targets for mobile

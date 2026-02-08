@@ -291,7 +291,7 @@ Badges that can be clicked or dismissed.
 
 ---
 
-## Real-World Examples
+## Common Patterns
 
 ### Table Row Status
 
@@ -387,90 +387,113 @@ Badges that can be clicked or dismissed.
 
 ---
 
-## API Reference
+## Customization
 
-### Classes
+Override badge styles using CSS custom properties:
 
-| Class | Description |
-|-------|-------------|
-| `.Badge` | Base badge styling |
-| `.Badge--primary` | Primary color variant |
-| `.Badge--secondary` | Secondary/neutral color variant |
-| `.Badge--success` | Success/positive state |
-| `.Badge--warning` | Warning/caution state |
-| `.Badge--error` | Error/danger state |
-| `.Badge--info` | Informational state |
-| `.Badge--small` | Smaller badge size |
-| `.Badge--large` | Larger badge size |
-| `.Badge--pill` | Fully rounded pill shape |
-| `.Badge--outline` | Transparent background with border |
-| `.Badge--dot` | Minimal dot indicator (no text) |
-| `.Badge--count` | Circular count badge |
-| `.Badge--positioned` | Absolute positioning for overlays |
-| `.Badge--avatar` | Positioning for avatar overlays |
-| `.Badge--dismissible` | Badge with remove button |
-| `.Badge--clickable` | Interactive link/button badge |
-| `.Badge-icon` | Leading icon styling |
-| `.Badge-icon--trailing` | Trailing icon positioning |
-| `.Badge-dismiss` | Dismiss button inside badge |
+```css
+/* Custom brand badge */
+.Badge--brand {
+  background-color: oklch(60% 0.15 280 / 0.15);
+  color: oklch(50% 0.15 280);
+}
 
-### CSS Custom Properties
+/* Larger count badge */
+.Badge--count-lg {
+  min-width: 28px;
+  height: 28px;
+  font-size: 0.8rem;
+  padding: 0 var(--space-2);
+}
 
-| Property | Default | Description |
-|----------|---------|-------------|
-| `--space-1` | `0.25rem` | Internal padding unit |
-| `--space-2` | `0.5rem` | Padding and gaps |
-| `--bg-secondary` | — | Default background |
-| `--text-primary` | — | Default text color |
-| `--accent-primary` | — | Primary accent color |
+/* Animated dot (pulsing) */
+.Badge--dot.Badge--pulse {
+  animation: badge-pulse 2s infinite;
+}
 
-### Attributes
+@keyframes badge-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
 
-| Attribute | Description |
-|-----------|-------------|
-| `aria-label` | Required for dot indicators without visible text |
-| `aria-hidden` | Use on count badges when count is announced via parent |
+/* Bordered badge */
+.Badge--bordered {
+  border: 1.5px solid currentColor;
+  background-color: transparent;
+}
+
+/* Custom spacing for tight layouts */
+.Badge--tight {
+  padding: 0 var(--space-1);
+  font-size: 0.65rem;
+}
+```
 
 ---
 
-## Accessibility
+## API Reference
 
-Badges require attention to ensure they're accessible:
+### Base & Variant Classes
 
-### Color Independence
-```html
-<!-- Don't rely on color alone — include text or icons -->
-<span class="Badge Badge--success">
-    <i class="ph ph-check-circle Badge-icon"></i>
-    Complete
-</span>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">.Badge</code></td><td class="ApiTable-desc">Base badge styling</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge--primary</code></td><td class="ApiTable-desc">Primary color variant</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge--secondary</code></td><td class="ApiTable-desc">Secondary/neutral color variant</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge--success</code></td><td class="ApiTable-desc">Success/positive state</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge--warning</code></td><td class="ApiTable-desc">Warning/caution state</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge--error</code></td><td class="ApiTable-desc">Error/danger state</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge--info</code></td><td class="ApiTable-desc">Informational state</td></tr>
+</tbody>
+</table>
 
-<!-- Not just color -->
-<span class="Badge Badge--error">Error</span>
-```
+### Size & Shape Classes
 
-### Screen Reader Context
-```html
-<!-- Provide context for count badges -->
-<button class="Button Button--icon" aria-label="Notifications, 3 unread">
-    <i class="ph ph-bell"></i>
-    <span class="Badge Badge--count" aria-hidden="true">3</span>
-</button>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">.Badge--small</code></td><td class="ApiTable-desc">Smaller badge size</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge--large</code></td><td class="ApiTable-desc">Larger badge size</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge--pill</code></td><td class="ApiTable-desc">Fully rounded pill shape</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge--outline</code></td><td class="ApiTable-desc">Transparent background with border</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge--dot</code></td><td class="ApiTable-desc">Minimal dot indicator (no text)</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge--count</code></td><td class="ApiTable-desc">Circular count badge</td></tr>
+</tbody>
+</table>
 
-<!-- For status dots, use aria-label -->
-<span class="Badge Badge--dot Badge--success" aria-label="Online"></span>
-```
+### Positioning & Interactive Classes
 
-### Dismissible Badges
-```html
-<!-- Always provide accessible dismiss button -->
-<span class="Badge Badge--dismissible">
-    Filter: Active
-    <button class="Badge-dismiss" aria-label="Remove Active filter">
-        <i class="ph ph-x"></i>
-    </button>
-</span>
-```
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">.Badge--positioned</code></td><td class="ApiTable-desc">Absolute positioning for overlays</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge--avatar</code></td><td class="ApiTable-desc">Positioning for avatar overlays</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge--dismissible</code></td><td class="ApiTable-desc">Badge with remove button</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge--clickable</code></td><td class="ApiTable-desc">Interactive link/button badge</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge-icon</code></td><td class="ApiTable-desc">Leading icon styling</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge-icon--trailing</code></td><td class="ApiTable-desc">Trailing icon positioning</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge-dismiss</code></td><td class="ApiTable-desc">Dismiss button inside badge</td></tr>
+</tbody>
+</table>
+
+### Attributes
+
+<table class="ApiTable">
+<thead>
+<tr><th>Attribute</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">aria-label</code></td><td class="ApiTable-desc">Required for dot indicators without visible text</td></tr>
+<tr><td><code class="ApiTable-prop">aria-hidden</code></td><td class="ApiTable-desc">Use on count badges when count is announced via parent</td></tr>
+</tbody>
+</table>
 
 ---
 
@@ -665,6 +688,45 @@ Badges require attention to ensure they're accessible:
 .Badge--clickable:hover {
   filter: brightness(0.95);
 }
+```
+
+---
+
+## Accessibility
+
+### Color Independence
+```html
+<!-- Don't rely on color alone — include text or icons -->
+<span class="Badge Badge--success">
+    <i class="ph ph-check-circle Badge-icon"></i>
+    Complete
+</span>
+
+<!-- Not just color -->
+<span class="Badge Badge--error">Error</span>
+```
+
+### Screen Reader Context
+```html
+<!-- Provide context for count badges -->
+<button class="Button Button--icon" aria-label="Notifications, 3 unread">
+    <i class="ph ph-bell"></i>
+    <span class="Badge Badge--count" aria-hidden="true">3</span>
+</button>
+
+<!-- For status dots, use aria-label -->
+<span class="Badge Badge--dot Badge--success" aria-label="Online"></span>
+```
+
+### Dismissible Badges
+```html
+<!-- Always provide accessible dismiss button -->
+<span class="Badge Badge--dismissible">
+    Filter: Active
+    <button class="Badge-dismiss" aria-label="Remove Active filter">
+        <i class="ph ph-x"></i>
+    </button>
+</span>
 ```
 
 ---

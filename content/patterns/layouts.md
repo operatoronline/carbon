@@ -1,102 +1,64 @@
 # Layouts
 
-Layout patterns for structuring content with responsive grids, stacks, and containers. These primitives compose into any page structure.
+Composable primitives for page structure. Container, Grid, Stack, Cluster, Split, Sidebar, and Center — combine them to build any layout without writing custom CSS.
 
 ---
 
 ## Container
 
-Centers content with a max-width and consistent padding.
+Centers content with a max-width and horizontal padding.
 
-<Preview title="Container">
-    <div class="Layout-container" style="background: var(--bg-s); padding: var(--space-4); border-radius: var(--r-s);">
-        <p>Content is centered with max-width and horizontal padding.</p>
+<Preview title="Container Sizes">
+    <div style="display: flex; flex-direction: column; gap: var(--space-3); width: 100%;">
+        <div class="Layout-container Layout-container--narrow" style="background: var(--accent-s); padding: var(--space-3); border-radius: var(--r-s); border: 1px dashed var(--accent);">
+            <code style="font-size: .75rem; color: var(--accent);">--narrow</code> <span style="color: var(--fg-3); font-size: .8rem;">640px</span>
+        </div>
+        <div class="Layout-container" style="background: var(--bg-s); padding: var(--space-3); border-radius: var(--r-s); border: 1px dashed var(--bd-s);">
+            <code style="font-size: .75rem;">default</code> <span style="color: var(--fg-3); font-size: .8rem;">960px</span>
+        </div>
+        <div class="Layout-container Layout-container--wide" style="background: var(--bg-s); padding: var(--space-3); border-radius: var(--r-s); border: 1px dashed var(--bd-s);">
+            <code style="font-size: .75rem;">--wide</code> <span style="color: var(--fg-3); font-size: .8rem;">1280px</span>
+        </div>
     </div>
 </Preview>
 
 ```html
-<div class="Layout-container">
-    <!-- Content here -->
-</div>
-```
-
-### Container Sizes
-
-| Modifier | Max Width | Use Case |
-|----------|-----------|----------|
-| `--narrow` | 640px | Articles, forms, focused content |
-| (default) | 960px | General content pages |
-| `--wide` | 1280px | Dashboards, data-heavy pages |
-
-<Preview title="Container Sizes">
-    <div style="display: flex; flex-direction: column; gap: var(--space-4); width: 100%;">
-        <div class="Layout-container Layout-container--narrow" style="background: var(--bg-s); padding: var(--space-3); border-radius: var(--r-s);">
-            <small>Narrow (640px) — Articles, forms</small>
-        </div>
-        <div class="Layout-container" style="background: var(--bg-s); padding: var(--space-3); border-radius: var(--r-s);">
-            <small>Default (960px) — General pages</small>
-        </div>
-        <div class="Layout-container Layout-container--wide" style="background: var(--bg-s); padding: var(--space-3); border-radius: var(--r-s);">
-            <small>Wide (1280px) — Dashboards</small>
-        </div>
-    </div>
-</Preview>
-
-```css
-.Layout-container { max-width: 960px; }
-.Layout-container--narrow { max-width: 640px; }
-.Layout-container--wide { max-width: 1280px; }
+<div class="Layout-container">...</div>
+<div class="Layout-container Layout-container--narrow">...</div>
+<div class="Layout-container Layout-container--wide">...</div>
 ```
 
 ---
 
 ## Grid
 
-A responsive 12-column grid. Columns stack on mobile (<768px).
+A 12-column grid. All columns collapse to full-width below 768px. Use `Layout-col-{n}@md` for responsive spans.
 
-<Preview title="12-Column Grid">
+<Preview title="Equal Columns">
     <div class="Layout-grid" style="width: 100%;">
-        <div class="Layout-col-4" style="background: var(--accent); color: white; padding: var(--space-3); border-radius: var(--r-s); text-align: center;">4</div>
-        <div class="Layout-col-4" style="background: var(--accent); color: white; padding: var(--space-3); border-radius: var(--r-s); text-align: center;">4</div>
-        <div class="Layout-col-4" style="background: var(--accent); color: white; padding: var(--space-3); border-radius: var(--r-s); text-align: center;">4</div>
+        <div class="Layout-col-4" style="background: var(--accent); color: white; padding: var(--space-3); border-radius: var(--r-s); text-align: center; font-weight: 600;">4</div>
+        <div class="Layout-col-4" style="background: var(--accent); color: white; padding: var(--space-3); border-radius: var(--r-s); text-align: center; font-weight: 600;">4</div>
+        <div class="Layout-col-4" style="background: var(--accent); color: white; padding: var(--space-3); border-radius: var(--r-s); text-align: center; font-weight: 600;">4</div>
+    </div>
+</Preview>
+
+<Preview title="Asymmetric (Main + Sidebar)">
+    <div class="Layout-grid" style="width: 100%;">
+        <div class="Layout-col-8" style="background: oklch(55% 0.15 270); color: white; padding: var(--space-4); border-radius: var(--r-s); font-weight: 600;">8 — Main</div>
+        <div class="Layout-col-4" style="background: oklch(75% 0.08 270); padding: var(--space-4); border-radius: var(--r-s);">4 — Side</div>
     </div>
 </Preview>
 
 ```html
 <div class="Layout-grid">
-    <div class="Layout-col-4">...</div>
-    <div class="Layout-col-4">...</div>
-    <div class="Layout-col-4">...</div>
+    <div class="Layout-col-8">Main content</div>
+    <div class="Layout-col-4">Sidebar</div>
 </div>
-```
 
-### Column Spans
-
-Use `Layout-col-{1-12}` to control column width.
-
-<Preview title="Mixed Columns">
-    <div class="Layout-grid" style="width: 100%;">
-        <div class="Layout-col-8" style="background: oklch(55% 0.12 250); color: white; padding: var(--space-3); border-radius: var(--r-s);">8 columns (Main)</div>
-        <div class="Layout-col-4" style="background: oklch(70% 0.08 250); padding: var(--space-3); border-radius: var(--r-s);">4 columns (Sidebar)</div>
-    </div>
-</Preview>
-
-### Responsive Columns
-
-Use `Layout-col-{n}@md` for tablet+ breakpoints.
-
-<Preview title="Responsive Grid">
-    <div class="Layout-grid" style="width: 100%;">
-        <div class="Layout-col-12 Layout-col-6@md" style="background: oklch(55% 0.12 150); color: white; padding: var(--space-3); border-radius: var(--r-s);">Full → Half</div>
-        <div class="Layout-col-12 Layout-col-6@md" style="background: oklch(55% 0.12 150); color: white; padding: var(--space-3); border-radius: var(--r-s);">Full → Half</div>
-    </div>
-</Preview>
-
-```html
-<!-- Full width on mobile, half on tablet+ -->
+<!-- Responsive: full on mobile, halves on tablet+ -->
 <div class="Layout-grid">
-    <div class="Layout-col-12 Layout-col-6@md">...</div>
-    <div class="Layout-col-12 Layout-col-6@md">...</div>
+    <div class="Layout-col-12 Layout-col-6@md">Left</div>
+    <div class="Layout-col-12 Layout-col-6@md">Right</div>
 </div>
 ```
 
@@ -104,78 +66,64 @@ Use `Layout-col-{n}@md` for tablet+ breakpoints.
 
 ## Stack
 
-Vertical stacking with consistent spacing. The foundation of most layouts.
+Vertical flow with consistent gap. The most-used layout primitive.
 
-<Preview title="Stack">
-    <div class="Layout-stack" style="max-width: 280px;">
-        <div style="background: var(--bg-s); padding: var(--space-3); border-radius: var(--r-s);">Item 1</div>
-        <div style="background: var(--bg-s); padding: var(--space-3); border-radius: var(--r-s);">Item 2</div>
-        <div style="background: var(--bg-s); padding: var(--space-3); border-radius: var(--r-s);">Item 3</div>
+<Preview title="Stack Variants">
+    <div style="display: flex; gap: var(--space-8); align-items: flex-start;">
+        <div style="text-align: center;">
+            <div style="font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--fg-4); margin-bottom: var(--space-2);">Tight · 8px</div>
+            <div class="Layout-stack Layout-stack--tight" style="width: 80px;">
+                <div style="background: var(--accent); height: 24px; border-radius: var(--r-s);"></div>
+                <div style="background: var(--accent); height: 24px; border-radius: var(--r-s);"></div>
+                <div style="background: var(--accent); height: 24px; border-radius: var(--r-s);"></div>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <div style="font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--fg-4); margin-bottom: var(--space-2);">Default · 16px</div>
+            <div class="Layout-stack" style="width: 80px;">
+                <div style="background: var(--accent); height: 24px; border-radius: var(--r-s);"></div>
+                <div style="background: var(--accent); height: 24px; border-radius: var(--r-s);"></div>
+                <div style="background: var(--accent); height: 24px; border-radius: var(--r-s);"></div>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <div style="font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--fg-4); margin-bottom: var(--space-2);">Loose · 32px</div>
+            <div class="Layout-stack Layout-stack--loose" style="width: 80px;">
+                <div style="background: var(--accent); height: 24px; border-radius: var(--r-s);"></div>
+                <div style="background: var(--accent); height: 24px; border-radius: var(--r-s);"></div>
+                <div style="background: var(--accent); height: 24px; border-radius: var(--r-s);"></div>
+            </div>
+        </div>
     </div>
 </Preview>
 
 ```html
-<div class="Layout-stack">
-    <div>Item 1</div>
-    <div>Item 2</div>
-    <div>Item 3</div>
-</div>
-```
-
-### Stack Spacing Variants
-
-<Preview title="Stack Sizes">
-    <div style="display: flex; gap: var(--space-8);">
-        <div>
-            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Tight (8px)</small>
-            <div class="Layout-stack Layout-stack--tight" style="width: 100px;">
-                <div style="background: var(--bg-s); padding: var(--space-2); border-radius: var(--r-s); text-align: center;">A</div>
-                <div style="background: var(--bg-s); padding: var(--space-2); border-radius: var(--r-s); text-align: center;">B</div>
-            </div>
-        </div>
-        <div>
-            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Default (16px)</small>
-            <div class="Layout-stack" style="width: 100px;">
-                <div style="background: var(--bg-s); padding: var(--space-2); border-radius: var(--r-s); text-align: center;">A</div>
-                <div style="background: var(--bg-s); padding: var(--space-2); border-radius: var(--r-s); text-align: center;">B</div>
-            </div>
-        </div>
-        <div>
-            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Loose (32px)</small>
-            <div class="Layout-stack Layout-stack--loose" style="width: 100px;">
-                <div style="background: var(--bg-s); padding: var(--space-2); border-radius: var(--r-s); text-align: center;">A</div>
-                <div style="background: var(--bg-s); padding: var(--space-2); border-radius: var(--r-s); text-align: center;">B</div>
-            </div>
-        </div>
-    </div>
-</Preview>
-
-```css
-.Layout-stack { gap: var(--space-4); }       /* 16px */
-.Layout-stack--tight { gap: var(--space-2); } /* 8px */
-.Layout-stack--loose { gap: var(--space-8); } /* 32px */
+<div class="Layout-stack">...</div>
+<div class="Layout-stack Layout-stack--tight">...</div>
+<div class="Layout-stack Layout-stack--loose">...</div>
 ```
 
 ---
 
 ## Cluster
 
-Horizontal grouping with wrapping. Perfect for tags, buttons, and inline elements.
+Horizontal grouping with wrapping. For tags, buttons, inline elements.
 
 <Preview title="Cluster">
     <div class="Layout-cluster">
-        <span class="Badge">Design</span>
+        <span class="Badge Badge--primary">Design</span>
         <span class="Badge">Development</span>
         <span class="Badge">Product</span>
         <span class="Badge">Research</span>
         <span class="Badge">Strategy</span>
+        <span class="Badge">Engineering</span>
     </div>
 </Preview>
 
 ```html
 <div class="Layout-cluster">
-    <span class="Badge">Tag 1</span>
-    <span class="Badge">Tag 2</span>
+    <span class="Badge">Tag</span>
+    <span class="Badge">Tag</span>
     ...
 </div>
 ```
@@ -184,65 +132,51 @@ Horizontal grouping with wrapping. Perfect for tags, buttons, and inline element
 
 ## Split
 
-Push items to opposite ends of a row. Common for headers and footers.
+Push items to opposite ends of a row. Headers, footers, toolbars.
 
 <Preview title="Split">
-    <div class="Layout-split" style="width: 100%; background: var(--bg-s); padding: var(--space-3); border-radius: var(--r-s);">
-        <span style="font-weight: 600;">Left Content</span>
-        <span style="color: var(--fg-3);">Right Content</span>
+    <div class="Layout-split" style="width: 100%; background: var(--bg-s); padding: var(--space-3) var(--space-4); border-radius: var(--r-s);">
+        <span style="font-weight: 600;">Page Title</span>
+        <button class="Button Button--primary Button--small">Action</button>
     </div>
 </Preview>
 
 ```html
 <div class="Layout-split">
-    <span>Left content</span>
-    <span>Right content</span>
+    <h1>Title</h1>
+    <button class="Button">Action</button>
 </div>
 ```
 
 ---
 
-## Sidebar Layout
+## Sidebar
 
-Fixed-width sidebar with fluid main area. Stacks on mobile.
+Fixed-width sidebar with fluid main area. Stacks on mobile. Use `--right` to flip.
 
 <Preview title="Sidebar Layout">
     <div class="Layout-sidebar" style="width: 100%;">
-        <aside style="background: var(--bg-s); padding: var(--space-4); border-radius: var(--r-s);">
-            <strong style="display: block; margin-bottom: var(--space-2);">Sidebar</strong>
-            <small style="color: var(--fg-3);">240px fixed</small>
+        <aside style="background: var(--bg-m); padding: var(--space-4); border-radius: var(--r-s);">
+            <strong style="font-size: .85rem;">Sidebar</strong>
+            <div style="color: var(--fg-3); font-size: .75rem; margin-top: var(--space-1);">240px fixed</div>
         </aside>
         <main style="background: var(--bg-s); padding: var(--space-4); border-radius: var(--r-s);">
-            <strong style="display: block; margin-bottom: var(--space-2);">Main Content</strong>
-            <small style="color: var(--fg-3);">Fluid width</small>
+            <strong style="font-size: .85rem;">Main Content</strong>
+            <div style="color: var(--fg-3); font-size: .75rem; margin-top: var(--space-1);">Fluid width, fills remaining space</div>
         </main>
     </div>
 </Preview>
 
 ```html
 <div class="Layout-sidebar">
-    <aside>Sidebar content</aside>
-    <main>Main content</main>
+    <aside>Navigation</aside>
+    <main>Content</main>
 </div>
-```
 
-### Sidebar on Right
-
-<Preview title="Sidebar Right">
-    <div class="Layout-sidebar Layout-sidebar--right" style="width: 100%;">
-        <main style="background: var(--bg-s); padding: var(--space-4); border-radius: var(--r-s);">
-            <strong>Main Content</strong>
-        </main>
-        <aside style="background: var(--bg-s); padding: var(--space-4); border-radius: var(--r-s);">
-            <strong>Sidebar</strong>
-        </aside>
-    </div>
-</Preview>
-
-```html
+<!-- Sidebar on right -->
 <div class="Layout-sidebar Layout-sidebar--right">
-    <main>Main content</main>
-    <aside>Sidebar content</aside>
+    <main>Content</main>
+    <aside>Sidebar</aside>
 </div>
 ```
 
@@ -250,281 +184,268 @@ Fixed-width sidebar with fluid main area. Stacks on mobile.
 
 ## Center
 
-Vertically and horizontally center content. Useful for empty states and loading screens.
+Vertical and horizontal centering. Empty states, loading screens.
 
 <Preview title="Center">
-    <div class="Layout-center" style="height: 150px; background: var(--bg-s); border-radius: var(--r-s);">
+    <div class="Layout-center" style="height: 160px; width: 100%; background: var(--bg-s); border-radius: var(--r-s);">
         <div style="text-align: center;">
-            <div style="font-size: 2rem; margin-bottom: var(--space-2);">📭</div>
-            <div style="font-weight: 600;">No items yet</div>
-            <div style="color: var(--fg-3); font-size: 0.9rem;">Add your first item to get started</div>
+            <div style="font-size: 1.5rem; margin-bottom: var(--space-2);">📭</div>
+            <div style="font-weight: 600; font-size: .9rem;">Nothing here yet</div>
+            <div style="color: var(--fg-3); font-size: .8rem;">Create your first item to get started.</div>
         </div>
     </div>
 </Preview>
 
 ```html
-<div class="Layout-center" style="height: 300px;">
+<div class="Layout-center" style="min-height: 300px;">
     <div>Centered content</div>
 </div>
 ```
 
 ---
 
-## Real-World Patterns
+## Composition
 
-### Marketing Page
-
-<Preview title="Marketing Layout">
-    <div style="width: 100%; border: 1px solid var(--bd); border-radius: var(--r-m); overflow: hidden;">
-        <header style="padding: var(--space-4) var(--space-6); border-bottom: 1px solid var(--bd);">
-            <div class="Layout-split">
-                <strong>Logo</strong>
-                <nav class="Layout-cluster">
-                    <a href="#" class="Link">Features</a>
-                    <a href="#" class="Link">Pricing</a>
-                    <a href="#" class="Link">Docs</a>
-                </nav>
-            </div>
-        </header>
-        <main style="padding: var(--space-8);">
-            <div class="Layout-container Layout-container--narrow" style="text-align: center;">
-                <h2 style="margin-bottom: var(--space-4);">Hero Headline</h2>
-                <p style="color: var(--fg-3); margin-bottom: var(--space-6);">Supporting text that explains the value proposition.</p>
-                <div class="Layout-cluster" style="justify-content: center;">
-                    <button class="Button Button--primary">Get Started</button>
-                    <button class="Button">Learn More</button>
-                </div>
-            </div>
-        </main>
-    </div>
-</Preview>
+These primitives are designed to nest. A typical page:
 
 ```html
-<header>
-    <div class="Layout-split">
-        <Logo />
-        <nav class="Layout-cluster">...</nav>
-    </div>
-</header>
-<main>
-    <div class="Layout-container Layout-container--narrow">
-        <h1>Hero Headline</h1>
-        <p>...</p>
-        <div class="Layout-cluster">
-            <Button>Get Started</Button>
-        </div>
-    </div>
-</main>
-```
-
-### Dashboard
-
-<Preview title="Dashboard Layout">
-    <div style="width: 100%; border: 1px solid var(--bd); border-radius: var(--r-m); overflow: hidden; height: 280px;">
-        <div style="display: flex; height: 100%;">
-            <aside style="width: 200px; background: var(--bg-s); padding: var(--space-4); border-right: 1px solid var(--bd);">
-                <div class="Layout-stack Layout-stack--tight">
-                    <small style="font-weight: 600; color: var(--fg-3); text-transform: uppercase; letter-spacing: 0.05em;">Menu</small>
-                    <a href="#" style="padding: var(--space-2); background: var(--accent); color: white; border-radius: var(--r-s); text-decoration: none;">Dashboard</a>
-                    <a href="#" style="padding: var(--space-2); color: var(--fg-3); text-decoration: none;">Projects</a>
-                    <a href="#" style="padding: var(--space-2); color: var(--fg-3); text-decoration: none;">Settings</a>
-                </div>
-            </aside>
-            <main style="flex: 1; padding: var(--space-4); overflow: auto;">
-                <div class="Layout-stack">
-                    <div class="Layout-split">
-                        <h3 style="margin: 0;">Dashboard</h3>
-                        <button class="Button Button--primary" style="font-size: 0.85rem;">New Project</button>
-                    </div>
-                    <div class="Layout-grid">
-                        <div class="Layout-col-4" style="background: var(--bg-s); padding: var(--space-4); border-radius: var(--r-s);">
-                            <small style="color: var(--fg-3);">Total Users</small>
-                            <div style="font-size: 1.5rem; font-weight: 700;">1,234</div>
-                        </div>
-                        <div class="Layout-col-4" style="background: var(--bg-s); padding: var(--space-4); border-radius: var(--r-s);">
-                            <small style="color: var(--fg-3);">Revenue</small>
-                            <div style="font-size: 1.5rem; font-weight: 700;">$12.4k</div>
-                        </div>
-                        <div class="Layout-col-4" style="background: var(--bg-s); padding: var(--space-4); border-radius: var(--r-s);">
-                            <small style="color: var(--fg-3);">Active Now</small>
-                            <div style="font-size: 1.5rem; font-weight: 700;">89</div>
-                        </div>
-                    </div>
-                </div>
-            </main>
-        </div>
-    </div>
-</Preview>
-
-### Card Grid
-
-<Preview title="Card Grid">
-    <div class="Layout-grid" style="width: 100%;">
-        <div class="Layout-col-12 Layout-col-4@md">
-            <div class="Card">
-                <div style="height: 80px; background: linear-gradient(135deg, oklch(60% 0.15 250), oklch(60% 0.15 280));"></div>
-                <div class="Card-body">
-                    <div class="Card-title">Card Title</div>
-                    <div class="Card-description">Brief description of this card's content.</div>
-                </div>
-            </div>
-        </div>
-        <div class="Layout-col-12 Layout-col-4@md">
-            <div class="Card">
-                <div style="height: 80px; background: linear-gradient(135deg, oklch(55% 0.15 150), oklch(55% 0.15 180));"></div>
-                <div class="Card-body">
-                    <div class="Card-title">Card Title</div>
-                    <div class="Card-description">Brief description of this card's content.</div>
-                </div>
-            </div>
-        </div>
-        <div class="Layout-col-12 Layout-col-4@md">
-            <div class="Card">
-                <div style="height: 80px; background: linear-gradient(135deg, oklch(65% 0.15 30), oklch(65% 0.15 60));"></div>
-                <div class="Card-body">
-                    <div class="Card-title">Card Title</div>
-                    <div class="Card-description">Brief description of this card's content.</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</Preview>
-
-```html
-<div class="Layout-grid">
-    <div class="Layout-col-12 Layout-col-4@md">
-        <Card />
-    </div>
-    <div class="Layout-col-12 Layout-col-4@md">
-        <Card />
-    </div>
-    <div class="Layout-col-12 Layout-col-4@md">
-        <Card />
-    </div>
-</div>
-```
-
-### Form Layout
-
-<Preview title="Form Layout">
-    <div class="Layout-container Layout-container--narrow" style="padding: var(--space-6); background: var(--bg-s); border-radius: var(--r-m);">
-        <div class="Layout-stack">
-            <h3 style="margin: 0;">Create Account</h3>
-            <div class="Layout-grid">
-                <div class="Layout-col-6">
-                    <label style="display: block; margin-bottom: var(--space-1); font-size: 0.9rem; font-weight: 500;">First Name</label>
-                    <input type="text" class="Input" placeholder="John">
-                </div>
-                <div class="Layout-col-6">
-                    <label style="display: block; margin-bottom: var(--space-1); font-size: 0.9rem; font-weight: 500;">Last Name</label>
-                    <input type="text" class="Input" placeholder="Doe">
-                </div>
-            </div>
-            <div>
-                <label style="display: block; margin-bottom: var(--space-1); font-size: 0.9rem; font-weight: 500;">Email</label>
-                <input type="email" class="Input" placeholder="john@example.com">
-            </div>
-            <div class="Layout-split" style="padding-top: var(--space-2);">
-                <label class="Switch-label" style="gap: var(--space-2);">
-                    <label class="Switch">
-                        <input type="checkbox">
-                        <span class="Switch-slider"></span>
-                    </label>
-                    <span style="font-size: 0.9rem;">Remember me</span>
-                </label>
-                <button class="Button Button--primary">Sign Up</button>
-            </div>
-        </div>
-    </div>
-</Preview>
-
-### Article Layout
-
-<Preview title="Article Layout">
-    <div style="width: 100%; max-width: 700px;">
-        <article>
-            <header style="margin-bottom: var(--space-6);">
-                <div class="Layout-cluster" style="margin-bottom: var(--space-3);">
-                    <span class="Badge Badge--primary">Design</span>
-                    <span style="color: var(--fg-3); font-size: 0.85rem;">5 min read</span>
-                </div>
-                <h2 style="margin: 0 0 var(--space-2);">Article Headline Goes Here</h2>
-                <p style="color: var(--fg-3); margin: 0;">A brief summary or subtitle that gives context to the article.</p>
-            </header>
-            <div style="line-height: 1.7;">
-                <p>Article body text with optimal line height for comfortable reading. The measure is kept between 45-75 characters per line.</p>
-            </div>
-        </article>
-    </div>
-</Preview>
-
----
-
-## Combining Patterns
-
-The power of these primitives comes from composition:
-
-```html
-<!-- Common page structure -->
 <div class="Layout-container">
     <div class="Layout-stack Layout-stack--loose">
-        
-        <!-- Page header -->
+
         <header class="Layout-split">
-            <h1>Page Title</h1>
-            <Button>Action</Button>
+            <h1>Dashboard</h1>
+            <button class="Button Button--primary">New</button>
         </header>
-        
-        <!-- Main content with sidebar -->
+
         <div class="Layout-sidebar">
-            <main class="Layout-stack">
-                <!-- Content sections -->
-            </main>
             <aside class="Layout-stack">
-                <!-- Sidebar widgets -->
+                <!-- Nav links -->
             </aside>
+            <main class="Layout-stack">
+                <div class="Layout-grid">
+                    <div class="Layout-col-4">Stat card</div>
+                    <div class="Layout-col-4">Stat card</div>
+                    <div class="Layout-col-4">Stat card</div>
+                </div>
+                <!-- Content -->
+            </main>
         </div>
-        
-        <!-- Footer -->
-        <footer class="Layout-split">
-            <span>© 2026</span>
-            <nav class="Layout-cluster">...</nav>
-        </footer>
-        
+
     </div>
 </div>
 ```
 
 ---
 
-## Quick Reference
+## API Reference
+
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Layout-container</code></td>
+<td class="ApiTable-desc">Centered container, 960px max-width</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Layout-container--narrow</code></td>
+<td class="ApiTable-desc">640px max-width</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Layout-container--wide</code></td>
+<td class="ApiTable-desc">1280px max-width</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Layout-grid</code></td>
+<td class="ApiTable-desc">12-column grid</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Layout-col-{1-12}</code></td>
+<td class="ApiTable-desc">Column span</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Layout-col-{1-12}@md</code></td>
+<td class="ApiTable-desc">Column span at 768px+</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Layout-stack</code></td>
+<td class="ApiTable-desc">Vertical flow, 16px gap</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Layout-stack--tight</code></td>
+<td class="ApiTable-desc">8px gap</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Layout-stack--loose</code></td>
+<td class="ApiTable-desc">32px gap</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Layout-cluster</code></td>
+<td class="ApiTable-desc">Horizontal wrapping group</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Layout-split</code></td>
+<td class="ApiTable-desc">Space-between row</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Layout-sidebar</code></td>
+<td class="ApiTable-desc">Sidebar (240px) + fluid main</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Layout-sidebar--right</code></td>
+<td class="ApiTable-desc">Sidebar on the right</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Layout-center</code></td>
+<td class="ApiTable-desc">Vertical + horizontal centering</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+## Best Practices
+
+### Do
+
+- ✓ **Start with Container** — Wrap page content in `Layout-container` to constrain width and center the layout
+- ✓ **Use Stack as your default** — Most vertical arrangements should use `Layout-stack` rather than custom margins
+- ✓ **Compose primitives** — Nest Grid inside Stack inside Container; these are building blocks, not standalone solutions
+- ✓ **Use responsive column classes** — Apply `Layout-col-12 Layout-col-6@md` so layouts collapse gracefully on mobile
+- ✓ **Choose the right gap** — Use `--tight` for related items (form fields), default for sections, `--loose` for page-level spacing
+
+### Don't
+
+- ✗ **Add custom margins between layout children** — Let the layout primitive's gap handle spacing
+- ✗ **Use Grid for simple vertical stacking** — A 1-column grid is just a Stack; use the simpler primitive
+- ✗ **Hardcode widths on grid columns** — Use `Layout-col-{n}` classes instead of inline width styles
+- ✗ **Nest grids deeply** — More than two levels of Grid nesting becomes hard to maintain; flatten with Stack or Split
+- ✗ **Forget the Container** — Without it, content stretches edge-to-edge on wide screens and becomes unreadable
+
+---
+
+## CSS Reference
 
 ```css
-/* Container */
-.Layout-container              /* 960px max */
-.Layout-container--narrow      /* 640px max */
-.Layout-container--wide        /* 1280px max */
+/* ── Container ── */
+.Layout-container {
+  width: 100%;
+  max-width: 960px;
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+}
 
-/* Grid */
-.Layout-grid                   /* 12-column grid */
-.Layout-col-{1-12}            /* Column span */
-.Layout-col-{1-12}@md         /* Tablet+ column span */
+.Layout-container--narrow {
+  max-width: 640px;
+}
 
-/* Stack */
-.Layout-stack                  /* Vertical, 16px gap */
-.Layout-stack--tight          /* 8px gap */
-.Layout-stack--loose          /* 32px gap */
+.Layout-container--wide {
+  max-width: 1280px;
+}
 
-/* Cluster */
-.Layout-cluster               /* Horizontal with wrap */
+/* ── Grid ── */
+.Layout-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-4);
+}
 
-/* Split */
-.Layout-split                 /* Space between */
+.Layout-col-1  { grid-column: span 1; }
+.Layout-col-2  { grid-column: span 2; }
+.Layout-col-3  { grid-column: span 3; }
+.Layout-col-4  { grid-column: span 4; }
+.Layout-col-5  { grid-column: span 5; }
+.Layout-col-6  { grid-column: span 6; }
+.Layout-col-7  { grid-column: span 7; }
+.Layout-col-8  { grid-column: span 8; }
+.Layout-col-9  { grid-column: span 9; }
+.Layout-col-10 { grid-column: span 10; }
+.Layout-col-11 { grid-column: span 11; }
+.Layout-col-12 { grid-column: span 12; }
 
-/* Sidebar */
-.Layout-sidebar               /* Sidebar left */
-.Layout-sidebar--right        /* Sidebar right */
+@media (min-width: 768px) {
+  .Layout-col-1\@md  { grid-column: span 1; }
+  .Layout-col-2\@md  { grid-column: span 2; }
+  .Layout-col-3\@md  { grid-column: span 3; }
+  .Layout-col-4\@md  { grid-column: span 4; }
+  .Layout-col-5\@md  { grid-column: span 5; }
+  .Layout-col-6\@md  { grid-column: span 6; }
+  .Layout-col-7\@md  { grid-column: span 7; }
+  .Layout-col-8\@md  { grid-column: span 8; }
+  .Layout-col-9\@md  { grid-column: span 9; }
+  .Layout-col-10\@md { grid-column: span 10; }
+  .Layout-col-11\@md { grid-column: span 11; }
+  .Layout-col-12\@md { grid-column: span 12; }
+}
 
-/* Center */
-.Layout-center                /* Center content */
+/* ── Stack ── */
+.Layout-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.Layout-stack--tight {
+  gap: var(--space-2);
+}
+
+.Layout-stack--loose {
+  gap: var(--space-8);
+}
+
+/* ── Cluster ── */
+.Layout-cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+/* ── Split ── */
+.Layout-split {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+/* ── Sidebar ── */
+.Layout-sidebar {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.Layout-sidebar > aside {
+  flex: 0 0 240px;
+}
+
+.Layout-sidebar > main {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+.Layout-sidebar--right {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 767px) {
+  .Layout-sidebar {
+    flex-direction: column;
+  }
+
+  .Layout-sidebar > aside {
+    flex: none;
+  }
+}
+
+/* ── Center ── */
+.Layout-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 ```

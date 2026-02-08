@@ -379,6 +379,104 @@ Override breadcrumb styles using CSS custom properties:
 
 ---
 
+## CSS Reference
+
+```css
+/* Base Breadcrumb */
+.Breadcrumb {
+  font-size: 0.875rem;
+  color: var(--fg-3);
+}
+
+.Breadcrumb-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: var(--space-1);
+}
+
+.Breadcrumb-item {
+  display: inline-flex;
+  align-items: center;
+}
+
+.Breadcrumb-item + .Breadcrumb-item::before {
+  content: "/";
+  margin-right: var(--space-1);
+  color: var(--fg-3);
+  opacity: 0.5;
+}
+
+.Breadcrumb-item a {
+  color: var(--fg-3);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.Breadcrumb-item a:hover {
+  color: var(--fg);
+  text-decoration: underline;
+}
+
+.Breadcrumb-item a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: var(--r-s);
+}
+
+.Breadcrumb-item[aria-current="page"] {
+  color: var(--fg);
+  font-weight: 500;
+}
+
+/* Separator Variants */
+.Breadcrumb--arrows .Breadcrumb-item + .Breadcrumb-item::before {
+  content: "›";
+}
+
+.Breadcrumb--dots .Breadcrumb-item + .Breadcrumb-item::before {
+  content: "•";
+}
+
+/* Sizes */
+.Breadcrumb--small {
+  font-size: 0.75rem;
+}
+
+.Breadcrumb--large {
+  font-size: 1rem;
+}
+
+/* Ellipsis */
+.Breadcrumb-ellipsis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-1);
+  background: none;
+  border: none;
+  color: var(--fg-3);
+  cursor: pointer;
+  border-radius: var(--r-s);
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.Breadcrumb-ellipsis:hover {
+  background-color: var(--bg-s);
+  color: var(--fg);
+}
+
+.Breadcrumb-ellipsis:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+```
+
+---
+
 ## Accessibility
 
 ### Keyboard Support

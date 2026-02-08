@@ -369,6 +369,215 @@ Collapsed sidebar showing only icons, expands on hover.
 </div>
 ```
 
+## JavaScript
+
+```js
+// Toggle drawer
+function toggleDrawer(drawerId) {
+  const drawer = document.getElementById(drawerId);
+  const backdrop = document.querySelector('.Drawer-backdrop');
+  
+  drawer.classList.toggle('Drawer--open');
+  backdrop?.classList.toggle('Drawer-backdrop--visible');
+  
+  // Prevent body scroll when open
+  document.body.style.overflow = drawer.classList.contains('Drawer--open') ? 'hidden' : '';
+}
+
+// Close on backdrop click
+document.querySelector('.Drawer-backdrop')?.addEventListener('click', () => {
+  document.querySelectorAll('.Drawer--open').forEach(d => d.classList.remove('Drawer--open'));
+  document.querySelector('.Drawer-backdrop')?.classList.remove('Drawer-backdrop--visible');
+  document.body.style.overflow = '';
+});
+
+// Close on Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.Drawer--open').forEach(d => d.classList.remove('Drawer--open'));
+    document.querySelector('.Drawer-backdrop')?.classList.remove('Drawer-backdrop--visible');
+    document.body.style.overflow = '';
+  }
+});
+```
+
+---
+
+## Common Patterns
+
+### Shopping Cart Drawer
+
+<Preview title="Cart Sidebar">
+<div style="position: relative; height: 350px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--r-m);">
+    <div class="Drawer-backdrop Drawer-backdrop--visible"></div>
+    <div class="Drawer Drawer--right Drawer--open Drawer--sm" style="position: absolute;">
+        <div class="Drawer-header">
+            <h3 class="Drawer-title">Cart (3)</h3>
+            <button class="Button Button--ghost Button--icon"><i class="ph ph-x"></i></button>
+        </div>
+        <div class="Drawer-body">
+            <div style="display: flex; gap: var(--space-3); margin-bottom: var(--space-4);">
+                <div style="width: 60px; height: 60px; background: var(--bg-s); border-radius: var(--r-s);"></div>
+                <div style="flex: 1;">
+                    <div style="font-weight: 500;">Wireless Mouse</div>
+                    <div style="font-size: 0.85rem; color: var(--fg-3);">Qty: 1</div>
+                    <div style="font-weight: 600;">$49.99</div>
+                </div>
+            </div>
+            <div style="display: flex; gap: var(--space-3); margin-bottom: var(--space-4);">
+                <div style="width: 60px; height: 60px; background: var(--bg-s); border-radius: var(--r-s);"></div>
+                <div style="flex: 1;">
+                    <div style="font-weight: 500;">USB-C Hub</div>
+                    <div style="font-size: 0.85rem; color: var(--fg-3);">Qty: 2</div>
+                    <div style="font-weight: 600;">$35.00</div>
+                </div>
+            </div>
+        </div>
+        <div class="Drawer-footer" style="flex-direction: column; gap: var(--space-2);">
+            <div style="display: flex; justify-content: space-between; width: 100%; font-weight: 600;">
+                <span>Total</span><span>$119.99</span>
+            </div>
+            <button class="Button Button--primary" style="width: 100%;">Checkout</button>
+        </div>
+    </div>
+</div>
+</Preview>
+
+### Notification Panel
+
+<Preview title="Notifications Drawer">
+<div style="position: relative; height: 300px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--r-m);">
+    <div class="Drawer Drawer--right Drawer--open Drawer--sm" style="position: absolute;">
+        <div class="Drawer-header">
+            <h3 class="Drawer-title">Notifications</h3>
+            <button class="Button Button--ghost Button--small">Mark all read</button>
+        </div>
+        <div class="Drawer-body" style="padding: 0;">
+            <div style="padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--bd); background: oklch(60% 0.15 250 / 0.05);">
+                <div style="font-weight: 500;">New comment on your PR</div>
+                <div style="font-size: 0.8rem; color: var(--fg-3);">2 minutes ago</div>
+            </div>
+            <div style="padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--bd);">
+                <div style="font-weight: 500;">Build succeeded</div>
+                <div style="font-size: 0.8rem; color: var(--fg-3);">1 hour ago</div>
+            </div>
+        </div>
+    </div>
+</div>
+</Preview>
+
+### Mobile Navigation Drawer
+
+<Preview title="Mobile Nav">
+<div style="position: relative; height: 350px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--r-m);">
+    <div class="Drawer-backdrop Drawer-backdrop--visible"></div>
+    <div class="Drawer Drawer--left Drawer--open Drawer--sm" style="position: absolute;">
+        <div class="Drawer-header">
+            <span style="font-weight: 700; font-size: 1.1rem;">Menu</span>
+            <button class="Button Button--ghost Button--icon"><i class="ph ph-x"></i></button>
+        </div>
+        <nav class="Drawer-nav">
+            <a href="#" class="Drawer-navItem Drawer-navItem--active"><i class="ph ph-house"></i><span>Home</span></a>
+            <a href="#" class="Drawer-navItem"><i class="ph ph-package"></i><span>Products</span></a>
+            <a href="#" class="Drawer-navItem"><i class="ph ph-info"></i><span>About</span></a>
+            <a href="#" class="Drawer-navItem"><i class="ph ph-phone"></i><span>Contact</span></a>
+        </nav>
+    </div>
+</div>
+</Preview>
+
+---
+
+## Customization
+
+Override drawer styles using CSS custom properties:
+
+```css
+/* Custom drawer width */
+.Drawer--custom {
+  width: 480px;
+}
+
+/* Custom backdrop opacity */
+.Drawer-backdrop--light {
+  background: oklch(0% 0 0 / 0.25);
+}
+
+/* Custom transition speed */
+.Drawer--slow {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Drawer with border instead of shadow */
+.Drawer--bordered {
+  box-shadow: none;
+  border-left: 1px solid var(--bd);
+}
+
+/* Custom nav item style */
+.Drawer-navItem--rounded {
+  border-radius: var(--r-m);
+  margin: 0 var(--space-2);
+}
+```
+
+### Theme Variants
+
+```css
+/* Dark drawer */
+.Drawer--dark {
+  background: oklch(15% 0 0);
+  color: oklch(90% 0 0);
+}
+
+.Drawer--dark .Drawer-header {
+  border-bottom-color: oklch(25% 0 0);
+}
+
+.Drawer--dark .Drawer-navItem:hover {
+  background: oklch(20% 0 0);
+}
+```
+
+---
+
+## API Reference
+
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">.Drawer</code></td><td class="ApiTable-desc">Base drawer container</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer--left</code></td><td class="ApiTable-desc">Slides in from the left edge</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer--right</code></td><td class="ApiTable-desc">Slides in from the right edge (default)</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer--top</code></td><td class="ApiTable-desc">Slides in from the top edge</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer--bottom</code></td><td class="ApiTable-desc">Slides in from the bottom edge</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer--open</code></td><td class="ApiTable-desc">Shows the drawer (applies transform)</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer--xs</code></td><td class="ApiTable-desc">Extra small width (240px)</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer--sm</code></td><td class="ApiTable-desc">Small width (320px)</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer--lg</code></td><td class="ApiTable-desc">Large width (560px)</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer--xl</code></td><td class="ApiTable-desc">Extra large width (720px)</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer--full</code></td><td class="ApiTable-desc">Full width (100%)</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer--persistent</code></td><td class="ApiTable-desc">In-page sidebar (no overlay)</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer--mini</code></td><td class="ApiTable-desc">Collapsed sidebar, expands on hover</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer-backdrop</code></td><td class="ApiTable-desc">Overlay behind the drawer</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer-backdrop--visible</code></td><td class="ApiTable-desc">Shows the backdrop</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer-header</code></td><td class="ApiTable-desc">Header with title and close button</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer-title</code></td><td class="ApiTable-desc">Title text in header</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer-body</code></td><td class="ApiTable-desc">Scrollable content area</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer-footer</code></td><td class="ApiTable-desc">Footer with actions</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer-nav</code></td><td class="ApiTable-desc">Navigation container</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer-navItem</code></td><td class="ApiTable-desc">Navigation link item</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer-navItem--active</code></td><td class="ApiTable-desc">Active navigation item</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer-navDivider</code></td><td class="ApiTable-desc">Divider between nav groups</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer-section</code></td><td class="ApiTable-desc">Content section (e.g., filters)</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer-sectionTitle</code></td><td class="ApiTable-desc">Section heading</td></tr>
+</tbody>
+</table>
+
+---
+
 ## CSS Reference
 
 ```css
@@ -537,72 +746,6 @@ Collapsed sidebar showing only icons, expands on hover.
 }
 ```
 
-## JavaScript
-
-```js
-// Toggle drawer
-function toggleDrawer(drawerId) {
-  const drawer = document.getElementById(drawerId);
-  const backdrop = document.querySelector('.Drawer-backdrop');
-  
-  drawer.classList.toggle('Drawer--open');
-  backdrop?.classList.toggle('Drawer-backdrop--visible');
-  
-  // Prevent body scroll when open
-  document.body.style.overflow = drawer.classList.contains('Drawer--open') ? 'hidden' : '';
-}
-
-// Close on backdrop click
-document.querySelector('.Drawer-backdrop')?.addEventListener('click', () => {
-  document.querySelectorAll('.Drawer--open').forEach(d => d.classList.remove('Drawer--open'));
-  document.querySelector('.Drawer-backdrop')?.classList.remove('Drawer-backdrop--visible');
-  document.body.style.overflow = '';
-});
-
-// Close on Escape key
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    document.querySelectorAll('.Drawer--open').forEach(d => d.classList.remove('Drawer--open'));
-    document.querySelector('.Drawer-backdrop')?.classList.remove('Drawer-backdrop--visible');
-    document.body.style.overflow = '';
-  }
-});
-```
-
-## API Reference
-
-<div class="ApiTable">
-
-| Class | Description |
-|-------|-------------|
-| `.Drawer` | Base drawer container |
-| `.Drawer--left` | Slides in from the left edge |
-| `.Drawer--right` | Slides in from the right edge (default) |
-| `.Drawer--top` | Slides in from the top edge |
-| `.Drawer--bottom` | Slides in from the bottom edge |
-| `.Drawer--open` | Shows the drawer (applies transform) |
-| `.Drawer--xs` | Extra small width (240px) |
-| `.Drawer--sm` | Small width (320px) |
-| `.Drawer--lg` | Large width (560px) |
-| `.Drawer--xl` | Extra large width (720px) |
-| `.Drawer--full` | Full width (100%) |
-| `.Drawer--persistent` | In-page sidebar (no overlay) |
-| `.Drawer--mini` | Collapsed sidebar, expands on hover |
-| `.Drawer-backdrop` | Overlay behind the drawer |
-| `.Drawer-backdrop--visible` | Shows the backdrop |
-| `.Drawer-header` | Header with title and close button |
-| `.Drawer-title` | Title text in header |
-| `.Drawer-body` | Scrollable content area |
-| `.Drawer-footer` | Footer with actions |
-| `.Drawer-nav` | Navigation container |
-| `.Drawer-navItem` | Navigation link item |
-| `.Drawer-navItem--active` | Active navigation item |
-| `.Drawer-navDivider` | Divider between nav groups |
-| `.Drawer-section` | Content section (e.g., filters) |
-| `.Drawer-sectionTitle` | Section heading |
-
-</div>
-
 ## Accessibility
 
 - Use `role="dialog"` and `aria-modal="true"` for modal drawers
@@ -614,3 +757,48 @@ document.addEventListener('keydown', (e) => {
 - Use `aria-hidden="true"` on main content when drawer is open
 - Provide a visible close button with `aria-label="Close"`
 - For navigation drawers, use `nav` element with `aria-label`
+
+### Keyboard Support
+
+| Key | Action |
+|-----|--------|
+| Escape | Close the drawer |
+| Tab | Navigate between interactive elements within the drawer |
+| Shift+Tab | Navigate backwards through drawer elements |
+| Enter | Activate focused button or link |
+
+### ARIA Example
+
+```html
+<div class="Drawer Drawer--right" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+    <div class="Drawer-header">
+        <h3 class="Drawer-title" id="drawer-title">Settings</h3>
+        <button class="Button Button--ghost Button--icon" aria-label="Close drawer">
+            <i class="ph ph-x"></i>
+        </button>
+    </div>
+    <div class="Drawer-body">...</div>
+</div>
+```
+
+---
+
+## Best Practices
+
+### Do
+
+- ✓ **Include a visible close button** — Never rely solely on backdrop click or Escape
+- ✓ **Trap focus within modal drawers** — Prevent tabbing to hidden content behind
+- ✓ **Use backdrop for modal drawers** — Clearly indicates overlay context
+- ✓ **Return focus to trigger** — When the drawer closes, focus returns to the button that opened it
+- ✓ **Keep drawer content focused** — One task per drawer (filters, nav, or details)
+- ✓ **Use persistent drawers for primary nav** — Sidebar navigation should not require reopening
+
+### Don't
+
+- ✗ **Stack multiple drawers** — One drawer at a time; close before opening another
+- ✗ **Put critical content only in drawers** — Users may miss it; use inline for essential info
+- ✗ **Use drawers for simple confirmations** — A dialog or toast is more appropriate
+- ✗ **Forget body scroll lock** — Background should not scroll when a modal drawer is open
+- ✗ **Auto-open drawers on page load** — Let users trigger drawers intentionally
+- ✗ **Omit ARIA attributes** — `role="dialog"` and `aria-modal="true"` are essential for accessibility

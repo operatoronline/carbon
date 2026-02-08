@@ -211,6 +211,42 @@ Display keyboard shortcuts alongside actions.
 
 ---
 
+## JavaScript
+
+Basic toggle logic for dropdown interaction:
+
+```js
+document.querySelectorAll('.Dropdown').forEach(dropdown => {
+    const trigger = dropdown.querySelector('.Dropdown-trigger');
+    const menu = dropdown.querySelector('.Dropdown-menu');
+    
+    trigger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        // Close other dropdowns
+        document.querySelectorAll('.Dropdown-menu.is-open').forEach(m => {
+            if (m !== menu) m.classList.remove('is-open');
+        });
+        menu.classList.toggle('is-open');
+    });
+});
+
+// Close on outside click
+document.addEventListener('click', () => {
+    document.querySelectorAll('.Dropdown-menu.is-open')
+        .forEach(m => m.classList.remove('is-open'));
+});
+
+// Close on Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.querySelectorAll('.Dropdown-menu.is-open')
+            .forEach(m => m.classList.remove('is-open'));
+    }
+});
+```
+
+---
+
 ## Common Patterns
 
 ### User Account Menu
@@ -300,42 +336,6 @@ Override dropdown styles using CSS custom properties:
 .Dropdown-menu--rounded {
   border-radius: var(--space-3);
 }
-```
-
----
-
-## JavaScript
-
-Basic toggle logic for dropdown interaction:
-
-```js
-document.querySelectorAll('.Dropdown').forEach(dropdown => {
-    const trigger = dropdown.querySelector('.Dropdown-trigger');
-    const menu = dropdown.querySelector('.Dropdown-menu');
-    
-    trigger.addEventListener('click', (e) => {
-        e.stopPropagation();
-        // Close other dropdowns
-        document.querySelectorAll('.Dropdown-menu.is-open').forEach(m => {
-            if (m !== menu) m.classList.remove('is-open');
-        });
-        menu.classList.toggle('is-open');
-    });
-});
-
-// Close on outside click
-document.addEventListener('click', () => {
-    document.querySelectorAll('.Dropdown-menu.is-open')
-        .forEach(m => m.classList.remove('is-open'));
-});
-
-// Close on Escape key
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-        document.querySelectorAll('.Dropdown-menu.is-open')
-            .forEach(m => m.classList.remove('is-open'));
-    }
-});
 ```
 
 ---
@@ -437,6 +437,126 @@ document.addEventListener('keydown', (e) => {
 </tr>
 </tbody>
 </table>
+
+---
+
+## CSS Reference
+
+```css
+/* Container */
+.Dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Menu */
+.Dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+  min-width: 180px;
+  padding: var(--space-1) 0;
+  background: var(--bg);
+  border: 1px solid var(--bd);
+  border-radius: var(--r-m);
+  box-shadow: 0 4px 12px oklch(0% 0 0 / 0.12);
+  display: none;
+  margin-top: var(--space-1);
+}
+
+.Dropdown-menu.is-open {
+  display: block;
+}
+
+/* Items */
+.Dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  color: var(--fg);
+  text-decoration: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.Dropdown-item:hover {
+  background: var(--bg-s);
+}
+
+.Dropdown-item--danger {
+  color: oklch(55% 0.2 25);
+}
+
+.Dropdown-item--danger:hover {
+  background: oklch(55% 0.2 25 / 0.08);
+}
+
+/* Checkable items */
+.Dropdown-item--check {
+  cursor: pointer;
+}
+
+.Dropdown-item--check input {
+  margin: 0;
+}
+
+/* Descriptive items */
+.Dropdown-item--descriptive {
+  padding: var(--space-2) var(--space-3);
+}
+
+.Dropdown-item-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.Dropdown-item-label {
+  font-weight: 500;
+}
+
+.Dropdown-item-description {
+  font-size: 0.8rem;
+  color: var(--fg-3);
+}
+
+/* Divider */
+.Dropdown-divider {
+  border: none;
+  border-top: 1px solid var(--bd);
+  margin: var(--space-1) 0;
+}
+
+/* Header */
+.Dropdown-header {
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--fg-3);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Keyboard shortcut */
+.Dropdown-shortcut {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: var(--fg-3);
+  font-family: var(--font-sans);
+}
+
+/* Trigger caret */
+.Dropdown-trigger i.ph-caret-down {
+  font-size: 0.8rem;
+  transition: transform 0.15s;
+}
+
+.Dropdown-trigger[aria-expanded="true"] i.ph-caret-down {
+  transform: rotate(180deg);
+}
+```
 
 ---
 

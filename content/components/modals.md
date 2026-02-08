@@ -311,6 +311,70 @@ Modals come in three sizes: small, medium (default), and large. Fullscreen is al
 
 ---
 
+## Common Patterns
+
+### Confirmation Before Delete
+
+<Preview title="Delete Confirmation">
+    <div style="position: relative; width: 100%; height: 220px; background: oklch(0% 0 0 / 0.5); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center; padding: var(--space-4);">
+        <div class="Modal Modal--small" style="position: relative; transform: none;">
+            <header class="Modal-header">
+                <h2 class="Modal-title">
+                    <i class="ph ph-warning" style="color: oklch(55% 0.2 25); margin-right: var(--space-2);"></i>
+                    Delete 3 items?
+                </h2>
+            </header>
+            <div class="Modal-body">
+                <p>This will permanently remove the selected items. This action cannot be undone.</p>
+            </div>
+            <footer class="Modal-footer">
+                <button class="Button Button--secondary">Cancel</button>
+                <button class="Button Button--danger">Delete Items</button>
+            </footer>
+        </div>
+    </div>
+</Preview>
+
+### Success Feedback Modal
+
+<Preview title="Success Modal">
+    <div style="position: relative; width: 100%; height: 220px; background: oklch(0% 0 0 / 0.5); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center; padding: var(--space-4);">
+        <div class="Modal Modal--small" style="position: relative; transform: none; text-align: center;">
+            <div class="Modal-body" style="padding-top: var(--space-6);">
+                <i class="ph ph-check-circle" style="font-size: 3rem; color: oklch(55% 0.15 150); margin-bottom: var(--space-3);"></i>
+                <h3 style="margin: 0 0 var(--space-2);">Payment Successful</h3>
+                <p style="color: var(--fg-3);">Your order has been confirmed and will ship within 2 business days.</p>
+            </div>
+            <footer class="Modal-footer" style="justify-content: center;">
+                <button class="Button Button--primary">View Order</button>
+            </footer>
+        </div>
+    </div>
+</Preview>
+
+### Modal with Scrollable Content
+
+<Preview title="Terms & Conditions Modal">
+    <div style="position: relative; width: 100%; height: 280px; background: oklch(0% 0 0 / 0.5); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center; padding: var(--space-4);">
+        <div class="Modal" style="position: relative; transform: none; max-height: 250px; display: flex; flex-direction: column;">
+            <header class="Modal-header">
+                <h2 class="Modal-title">Terms of Service</h2>
+                <button class="Button Button--icon Button--ghost" aria-label="Close"><i class="ph ph-x"></i></button>
+            </header>
+            <div class="Modal-body" style="overflow-y: auto; flex: 1; font-size: 0.85rem; color: var(--fg-3);">
+                <p>By using this service you agree to the following terms and conditions. Please read carefully before proceeding.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <footer class="Modal-footer">
+                <button class="Button Button--secondary">Decline</button>
+                <button class="Button Button--primary">I Agree</button>
+            </footer>
+        </div>
+    </div>
+</Preview>
+
+---
+
 ## Customization
 
 Override modal styles using CSS custom properties:
@@ -460,6 +524,112 @@ Override modal styles using CSS custom properties:
 </tr>
 </tbody>
 </table>
+
+---
+
+## CSS Reference
+
+```css
+/* Modal Overlay */
+.Modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: oklch(0% 0 0 / 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.Modal-overlay.active,
+.Modal-overlay--active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.Modal-overlay--nested {
+  z-index: 1001;
+}
+
+/* Modal Container */
+.Modal {
+  background: var(--bg);
+  border: 1px solid var(--bd);
+  border-radius: var(--r-l);
+  box-shadow: 0 8px 32px oklch(0% 0 0 / 0.15);
+  max-width: 480px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-8px);
+  transition: transform 0.2s;
+}
+
+.Modal-overlay.active .Modal {
+  transform: translateY(0);
+}
+
+/* Sizes */
+.Modal--small { max-width: 360px; }
+.Modal--large { max-width: 720px; }
+.Modal--fullscreen {
+  max-width: 100%;
+  max-height: 100%;
+  height: 100vh;
+  border-radius: 0;
+}
+
+/* Header */
+.Modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid var(--bd);
+}
+
+.Modal-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Body */
+.Modal-body {
+  padding: var(--space-4) var(--space-5);
+  flex: 1;
+  overflow-y: auto;
+}
+
+.Modal-body p {
+  margin: 0 0 var(--space-3);
+  line-height: 1.5;
+  color: var(--fg-3);
+}
+
+.Modal-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Footer */
+.Modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  border-top: 1px solid var(--bd);
+}
+
+/* Centered variant */
+.Modal--centered .Modal-header { text-align: center; justify-content: center; }
+.Modal--centered .Modal-body { text-align: center; }
+.Modal--centered .Modal-footer { justify-content: center; }
+```
 
 ---
 

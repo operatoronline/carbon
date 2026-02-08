@@ -289,6 +289,123 @@ Accordions can contain any content, including other components.
 
 ---
 
+## Common Patterns
+
+### FAQ Section
+
+<Preview title="FAQ Page">
+<div style="max-width: 600px;">
+    <h3 style="margin: 0 0 var(--space-4); font-size: 1.25rem;">Frequently Asked Questions</h3>
+    <div class="Accordion Accordion--bordered">
+        <details class="Accordion-item">
+            <summary class="Accordion-header">
+                <span>What payment methods do you accept?</span>
+                <i class="ph ph-caret-down Accordion-icon"></i>
+            </summary>
+            <div class="Accordion-content">
+                <p>We accept Visa, Mastercard, American Express, and PayPal. All transactions are encrypted and secure.</p>
+            </div>
+        </details>
+        <details class="Accordion-item">
+            <summary class="Accordion-header">
+                <span>How do I cancel my subscription?</span>
+                <i class="ph ph-caret-down Accordion-icon"></i>
+            </summary>
+            <div class="Accordion-content">
+                <p>Go to Settings → Billing → Cancel Subscription. Your access continues until the end of the billing period.</p>
+            </div>
+        </details>
+        <details class="Accordion-item">
+            <summary class="Accordion-header">
+                <span>Do you offer refunds?</span>
+                <i class="ph ph-caret-down Accordion-icon"></i>
+            </summary>
+            <div class="Accordion-content">
+                <p>Yes, we offer a 30-day money-back guarantee for all plans. Contact support to request a refund.</p>
+            </div>
+        </details>
+    </div>
+</div>
+</Preview>
+
+### Settings Panel
+
+<Preview title="Settings Accordion">
+<div style="max-width: 480px; background: var(--bg-s); padding: var(--space-4); border-radius: var(--r-m);">
+    <div class="Accordion Accordion--flush">
+        <details class="Accordion-item" open>
+            <summary class="Accordion-header">
+                <div style="display: flex; align-items: center; gap: var(--space-2);">
+                    <i class="ph ph-user" style="font-size: 1.1rem;"></i>
+                    <span>Profile Settings</span>
+                </div>
+                <i class="ph ph-caret-down Accordion-icon"></i>
+            </summary>
+            <div class="Accordion-content">
+                <p style="color: var(--fg-3); font-size: 0.875rem;">Manage your display name, bio, and profile picture.</p>
+            </div>
+        </details>
+        <details class="Accordion-item">
+            <summary class="Accordion-header">
+                <div style="display: flex; align-items: center; gap: var(--space-2);">
+                    <i class="ph ph-bell" style="font-size: 1.1rem;"></i>
+                    <span>Notifications</span>
+                </div>
+                <i class="ph ph-caret-down Accordion-icon"></i>
+            </summary>
+            <div class="Accordion-content">
+                <p style="color: var(--fg-3); font-size: 0.875rem;">Configure email, push, and in-app notification preferences.</p>
+            </div>
+        </details>
+        <details class="Accordion-item">
+            <summary class="Accordion-header">
+                <div style="display: flex; align-items: center; gap: var(--space-2);">
+                    <i class="ph ph-shield-check" style="font-size: 1.1rem;"></i>
+                    <span>Security</span>
+                </div>
+                <i class="ph ph-caret-down Accordion-icon"></i>
+            </summary>
+            <div class="Accordion-content">
+                <p style="color: var(--fg-3); font-size: 0.875rem;">Two-factor authentication, password changes, and active sessions.</p>
+            </div>
+        </details>
+    </div>
+</div>
+</Preview>
+
+### Sidebar Filter
+
+<Preview title="Filter Accordion">
+<div style="max-width: 260px; border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-3);">
+    <div class="Accordion Accordion--flush Accordion--icons">
+        <details class="Accordion-item" open>
+            <summary class="Accordion-header" style="font-size: 0.875rem; font-weight: 600;">
+                <span>Category</span>
+                <i class="ph ph-caret-down Accordion-icon"></i>
+            </summary>
+            <div class="Accordion-content" style="font-size: 0.85rem;">
+                <label style="display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-2);"><input type="checkbox" checked> Electronics</label>
+                <label style="display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-2);"><input type="checkbox"> Clothing</label>
+                <label style="display: flex; align-items: center; gap: var(--space-2);"><input type="checkbox"> Books</label>
+            </div>
+        </details>
+        <details class="Accordion-item">
+            <summary class="Accordion-header" style="font-size: 0.875rem; font-weight: 600;">
+                <span>Price Range</span>
+                <i class="ph ph-caret-down Accordion-icon"></i>
+            </summary>
+            <div class="Accordion-content" style="font-size: 0.85rem;">
+                <label style="display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-2);"><input type="radio" name="price"> Under $25</label>
+                <label style="display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-2);"><input type="radio" name="price"> $25 – $100</label>
+                <label style="display: flex; align-items: center; gap: var(--space-2);"><input type="radio" name="price"> Over $100</label>
+            </div>
+        </details>
+    </div>
+</div>
+</Preview>
+
+---
+
 ## Customization
 
 Override accordion styles using CSS custom properties:
@@ -418,6 +535,104 @@ details[open] .Accordion-icon {
 </tr>
 </tbody>
 </table>
+
+---
+
+## CSS Reference
+
+```css
+/* Base Accordion */
+.Accordion {
+  width: 100%;
+}
+
+.Accordion-item {
+  border: none;
+}
+
+.Accordion-item + .Accordion-item {
+  border-top: 1px solid var(--bd);
+}
+
+.Accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  color: var(--fg);
+  list-style: none;
+  transition: background-color 0.15s;
+}
+
+.Accordion-header::-webkit-details-marker {
+  display: none;
+}
+
+.Accordion-header::marker {
+  display: none;
+  content: "";
+}
+
+.Accordion-header:hover {
+  background-color: var(--bg-s);
+}
+
+.Accordion-header:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.Accordion-content {
+  padding: 0 var(--space-4) var(--space-4);
+  color: var(--fg-3);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/* Icon rotation */
+.Accordion-icon {
+  font-size: 1rem;
+  color: var(--fg-3);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+details[open] > .Accordion-header .Accordion-icon {
+  transform: rotate(180deg);
+}
+
+/* Bordered variant */
+.Accordion--bordered {
+  border: 1px solid var(--bd);
+  border-radius: var(--r-m);
+  overflow: hidden;
+}
+
+.Accordion--bordered .Accordion-item + .Accordion-item {
+  border-top: 1px solid var(--bd);
+}
+
+/* Flush variant */
+.Accordion--flush .Accordion-header {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.Accordion--flush .Accordion-content {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.Accordion--flush .Accordion-item:first-child .Accordion-header {
+  padding-top: 0;
+}
+```
 
 ---
 
