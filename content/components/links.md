@@ -4,17 +4,15 @@ Links are used for navigation and to reference external resources. They provide 
 
 ---
 
-## Standard Link
+## Usage
 
-The default link style uses the primary accent color with an underline on hover.
+The base `.Link` class provides core link styling. Add variant classes to change appearance.
 
-<Preview title="Standard Link">
-    <a href="#" class="Link">Click here to learn more</a>
+<Preview>
+<a href="#" class="Link">Default Link</a>
+<a href="#" class="Link Link--subtle">Subtle</a>
+<a href="#" class="Link Link--muted">Muted</a>
 </Preview>
-
-```html
-<a href="#" class="Link">Click here to learn more</a>
-```
 
 ---
 
@@ -459,7 +457,7 @@ Override link styles using CSS custom properties:
 
 ## API Reference
 
-### Classes
+### Base Classes
 
 <table class="ApiTable">
 <thead>
@@ -471,8 +469,21 @@ Override link styles using CSS custom properties:
 <tbody>
 <tr>
 <td><code class="ApiTable-prop">.Link</code></td>
-<td class="ApiTable-desc">Base link styling</td>
+<td class="ApiTable-desc">Base link styles (required)</td>
 </tr>
+</tbody>
+</table>
+
+### Variant Classes
+
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td><code class="ApiTable-prop">.Link--subtle</code></td>
 <td class="ApiTable-desc">Inherits text color, accent on hover</td>
@@ -493,18 +504,61 @@ Override link styles using CSS custom properties:
 <td><code class="ApiTable-prop">.Link--external</code></td>
 <td class="ApiTable-desc">External link (with icon styling)</td>
 </tr>
+</tbody>
+</table>
+
+### Size Classes
+
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td><code class="ApiTable-prop">.Link--small</code></td>
-<td class="ApiTable-desc">Smaller font size</td>
+<td class="ApiTable-desc">Smaller font size (0.875rem)</td>
 </tr>
 <tr>
 <td><code class="ApiTable-prop">.Link--large</code></td>
-<td class="ApiTable-desc">Larger font size</td>
+<td class="ApiTable-desc">Larger font size (1.125rem)</td>
 </tr>
+</tbody>
+</table>
+
+### Modifier Classes
+
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td><code class="ApiTable-prop">.Link--disabled</code></td>
 <td class="ApiTable-desc">Disabled/unavailable state</td>
 </tr>
+<tr>
+<td><code class="ApiTable-prop">.Link--visited</code></td>
+<td class="ApiTable-desc">Explicit visited styling</td>
+</tr>
+</tbody>
+</table>
+
+### Navigation Classes
+
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td><code class="ApiTable-prop">.Link--nav</code></td>
 <td class="ApiTable-desc">Navigation link (for menus)</td>
@@ -517,10 +571,19 @@ Override link styles using CSS custom properties:
 <td><code class="ApiTable-prop">.Link--skip</code></td>
 <td class="ApiTable-desc">Skip-to-content accessibility link</td>
 </tr>
+</tbody>
+</table>
+
+### Icon Classes
+
+<table class="ApiTable">
+<thead>
 <tr>
-<td><code class="ApiTable-prop">.Link--visited</code></td>
-<td class="ApiTable-desc">Explicit visited styling (CSS handles this automatically)</td>
+<th>Class</th>
+<th>Description</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td><code class="ApiTable-prop">.Link-icon</code></td>
 <td class="ApiTable-desc">Icon inside link</td>
@@ -738,7 +801,13 @@ p .Link,
 
 ## Accessibility
 
-Links require careful attention to accessibility:
+### Keyboard Support
+
+| Key | Action |
+|-----|--------|
+| Enter | Activates the link |
+| Tab | Moves focus to the next link |
+| Shift + Tab | Moves focus to the previous link |
 
 ### Descriptive Text
 ```html
