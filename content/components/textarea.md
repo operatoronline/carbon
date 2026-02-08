@@ -308,34 +308,414 @@ Mark textarea as required with visual indicator.
 </div>
 ```
 
+## Common Patterns
+
+### Comment Box
+
+<Preview title="Comment Input">
+    <div class="Textarea-wrapper" style="max-width: 500px;">
+        <textarea class="Textarea Textarea--no-bottom-radius" rows="3" placeholder="Write a comment..."></textarea>
+        <div class="Textarea-actions">
+            <div class="Textarea-actions-left">
+                <button type="button" class="Textarea-action-btn" title="Attach file"><i class="ph ph-paperclip"></i></button>
+                <button type="button" class="Textarea-action-btn" title="Emoji"><i class="ph ph-smiley"></i></button>
+            </div>
+            <button type="submit" class="Button Button--primary Button--sm">Comment</button>
+        </div>
+    </div>
+</Preview>
+
+### Feedback Form
+
+<Preview title="Feedback Form">
+    <div style="max-width: 450px; display: flex; flex-direction: column; gap: var(--space-4);">
+        <div class="Form-group">
+            <label class="Form-label">How can we improve?</label>
+            <textarea class="Textarea" rows="4" placeholder="Tell us what you think..."></textarea>
+            <div class="Textarea-footer">
+                <span class="Form-hint">Your feedback is anonymous</span>
+                <span class="Textarea-counter">0 / 500</span>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: flex-end; gap: var(--space-2);">
+            <button class="Button Button--secondary">Cancel</button>
+            <button class="Button Button--primary">Submit</button>
+        </div>
+    </div>
+</Preview>
+
+### Rich Text Editor
+
+<Preview title="Rich Text Editor">
+    <div class="Textarea-wrapper" style="max-width: 550px;">
+        <div class="Textarea-toolbar">
+            <button type="button" class="Textarea-toolbar-btn" title="Bold"><i class="ph ph-text-bolder"></i></button>
+            <button type="button" class="Textarea-toolbar-btn" title="Italic"><i class="ph ph-text-italic"></i></button>
+            <button type="button" class="Textarea-toolbar-btn" title="Underline"><i class="ph ph-text-underline"></i></button>
+            <div class="Textarea-toolbar-divider"></div>
+            <button type="button" class="Textarea-toolbar-btn" title="Link"><i class="ph ph-link"></i></button>
+            <button type="button" class="Textarea-toolbar-btn" title="Code"><i class="ph ph-code"></i></button>
+            <div class="Textarea-toolbar-divider"></div>
+            <button type="button" class="Textarea-toolbar-btn" title="List"><i class="ph ph-list-bullets"></i></button>
+            <button type="button" class="Textarea-toolbar-btn" title="Quote"><i class="ph ph-quotes"></i></button>
+        </div>
+        <textarea class="Textarea Textarea--no-top-radius" rows="8" placeholder="Write your content here..."></textarea>
+    </div>
+</Preview>
+
+### Bio / Profile Description
+
+<Preview title="Profile Bio">
+    <div class="Form-group" style="max-width: 400px;">
+        <label class="Form-label">Bio</label>
+        <textarea class="Textarea" rows="3" maxlength="160" placeholder="Write a short bio...">Product designer crafting thoughtful interfaces.</textarea>
+        <div class="Textarea-footer">
+            <span class="Form-hint">Displayed on your public profile</span>
+            <span class="Textarea-counter">49 / 160</span>
+        </div>
+    </div>
+</Preview>
+
+---
+
+## Customization
+
+Override textarea styles using CSS custom properties:
+
+```css
+/* Custom border color on focus */
+.Textarea:focus {
+  border-color: oklch(55% 0.2 150);
+  box-shadow: 0 0 0 3px oklch(55% 0.2 150 / 0.15);
+}
+
+/* Monospace textarea for code */
+.Textarea--code {
+  font-family: var(--ff-m);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  tab-size: 2;
+}
+
+/* Dark toolbar */
+.Textarea-toolbar--dark {
+  background: var(--fg);
+  color: var(--bg);
+}
+.Textarea-toolbar--dark .Textarea-toolbar-btn {
+  color: var(--bg);
+}
+
+/* Minimal textarea (no border until focus) */
+.Textarea--minimal {
+  border-color: transparent;
+  background: transparent;
+}
+.Textarea--minimal:focus {
+  border-color: var(--bd);
+  background: var(--bg);
+}
+```
+
+---
+
 ## API Reference
 
-<div class="ApiTable">
+### Base Classes
 
-| Class | Description |
-|-------|-------------|
-| `.Textarea` | Base textarea styling |
-| `.Textarea--sm` | Small size variant |
-| `.Textarea--lg` | Large size variant |
-| `.Textarea--focus` | Forced focus state (for demos) |
-| `.Textarea--error` | Error state styling |
-| `.Textarea--success` | Success/valid state styling |
-| `.Textarea--autoresize` | Auto-growing textarea |
-| `.Textarea--no-resize` | Disables user resizing |
-| `.Textarea--resize-horizontal` | Horizontal resize only |
-| `.Textarea--no-top-radius` | Removes top border radius (for toolbar) |
-| `.Textarea--no-bottom-radius` | Removes bottom border radius (for action bar) |
-| `.Textarea-wrapper` | Container for textarea + toolbar/actions |
-| `.Textarea-toolbar` | Formatting toolbar above textarea |
-| `.Textarea-toolbar-btn` | Toolbar button |
-| `.Textarea-toolbar-divider` | Divider between toolbar groups |
-| `.Textarea-actions` | Action bar below textarea |
-| `.Textarea-actions-left` | Left-aligned actions |
-| `.Textarea-action-btn` | Action bar button |
-| `.Textarea-footer` | Footer with counter/hint |
-| `.Textarea-counter` | Character counter |
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Textarea</code></td>
+<td class="ApiTable-desc">Base textarea styling (required)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Textarea-wrapper</code></td>
+<td class="ApiTable-desc">Container for textarea + toolbar/actions</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Textarea-footer</code></td>
+<td class="ApiTable-desc">Footer with counter/hint</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Textarea-counter</code></td>
+<td class="ApiTable-desc">Character counter display</td>
+</tr>
+</tbody>
+</table>
 
-</div>
+### Size Classes
+
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Textarea--sm</code></td>
+<td class="ApiTable-desc">Small size variant</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Textarea--lg</code></td>
+<td class="ApiTable-desc">Large size variant</td>
+</tr>
+</tbody>
+</table>
+
+### State Classes
+
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Textarea--focus</code></td>
+<td class="ApiTable-desc">Forced focus state (for demos)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Textarea--error</code></td>
+<td class="ApiTable-desc">Error state styling</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Textarea--success</code></td>
+<td class="ApiTable-desc">Success/valid state styling</td>
+</tr>
+</tbody>
+</table>
+
+### Modifier Classes
+
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Textarea--autoresize</code></td>
+<td class="ApiTable-desc">Auto-growing textarea</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Textarea--no-resize</code></td>
+<td class="ApiTable-desc">Disables user resizing</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Textarea--resize-horizontal</code></td>
+<td class="ApiTable-desc">Horizontal resize only</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Textarea--no-top-radius</code></td>
+<td class="ApiTable-desc">Removes top border radius (for toolbar)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Textarea--no-bottom-radius</code></td>
+<td class="ApiTable-desc">Removes bottom border radius (for action bar)</td>
+</tr>
+</tbody>
+</table>
+
+### Toolbar Classes
+
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Textarea-toolbar</code></td>
+<td class="ApiTable-desc">Formatting toolbar above textarea</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Textarea-toolbar-btn</code></td>
+<td class="ApiTable-desc">Toolbar button</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Textarea-toolbar-divider</code></td>
+<td class="ApiTable-desc">Divider between toolbar groups</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Textarea-actions</code></td>
+<td class="ApiTable-desc">Action bar below textarea</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Textarea-actions-left</code></td>
+<td class="ApiTable-desc">Left-aligned actions</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Textarea-action-btn</code></td>
+<td class="ApiTable-desc">Action bar button</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+## CSS Reference
+
+```css
+/* Base textarea */
+.Textarea {
+  display: block;
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  font-family: var(--ff-b);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  color: var(--fg);
+  background: var(--bg);
+  border: 1px solid var(--bd);
+  border-radius: var(--radius-md);
+  resize: vertical;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.Textarea::placeholder {
+  color: var(--fg-3);
+}
+
+.Textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px oklch(60% 0.15 250 / 0.15);
+}
+
+/* Sizes */
+.Textarea--sm {
+  padding: var(--space-1) var(--space-2);
+  font-size: var(--text-xs);
+}
+
+.Textarea--lg {
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-base);
+}
+
+/* States */
+.Textarea--error {
+  border-color: oklch(55% 0.2 25);
+}
+.Textarea--error:focus {
+  box-shadow: 0 0 0 3px oklch(55% 0.2 25 / 0.15);
+}
+
+.Textarea--success {
+  border-color: oklch(55% 0.15 150);
+}
+.Textarea--success:focus {
+  box-shadow: 0 0 0 3px oklch(55% 0.15 150 / 0.15);
+}
+
+.Textarea:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: var(--bg-s);
+}
+
+.Textarea[readonly] {
+  background: var(--bg-s);
+}
+
+/* Resize modifiers */
+.Textarea--no-resize { resize: none; }
+.Textarea--resize-horizontal { resize: horizontal; }
+.Textarea--autoresize { resize: none; overflow: hidden; }
+
+/* Border radius modifiers */
+.Textarea--no-top-radius { border-top-left-radius: 0; border-top-right-radius: 0; }
+.Textarea--no-bottom-radius { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+
+/* Wrapper */
+.Textarea-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Toolbar */
+.Textarea-toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  background: var(--bg-s);
+  border: 1px solid var(--bd);
+  border-bottom: none;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.Textarea-toolbar-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: none;
+  color: var(--fg-3);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+}
+.Textarea-toolbar-btn:hover {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.Textarea-toolbar-divider {
+  width: 1px;
+  height: 1rem;
+  background: var(--bd);
+  margin: 0 var(--space-1);
+}
+
+/* Actions bar */
+.Textarea-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2) var(--space-3);
+  background: var(--bg-s);
+  border: 1px solid var(--bd);
+  border-top: none;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+}
+
+.Textarea-actions-left {
+  display: flex;
+  gap: var(--space-1);
+}
+
+.Textarea-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: none;
+  color: var(--fg-3);
+  cursor: pointer;
+}
+.Textarea-action-btn:hover {
+  color: var(--fg);
+}
+
+/* Footer */
+.Textarea-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--space-1);
+}
+
+.Textarea-counter {
+  font-size: var(--text-xs);
+  color: var(--fg-3);
+}
+```
+
+---
 
 ## Accessibility
 
@@ -348,3 +728,33 @@ Mark textarea as required with visual indicator.
 - Include `maxlength` attribute when character limits apply
 - Announce character count updates to screen readers with `aria-live="polite"`
 - Ensure toolbar buttons have descriptive `title` or `aria-label` attributes
+
+### Keyboard Support
+
+| Key | Action |
+|-----|--------|
+| Tab | Move focus to/from the textarea |
+| Shift + Tab | Move focus to previous element |
+| Escape | Remove focus from textarea (when appropriate) |
+
+---
+
+## Best Practices
+
+### Do
+
+- ✓ **Always include a label** — Every textarea needs an associated label
+- ✓ **Set appropriate rows** — Match initial height to expected input length
+- ✓ **Show character limits** — Display counter when maxlength is set
+- ✓ **Provide helper text** — Explain what input is expected
+- ✓ **Use auto-resize for chat** — Reduces unnecessary whitespace
+- ✓ **Include error messages** — Specific, actionable validation feedback
+
+### Don't
+
+- ✗ **Disable resize without reason** — Users may need more space
+- ✗ **Use for single-line input** — Use `<input>` instead
+- ✗ **Set tiny max heights** — Cramped textareas frustrate users
+- ✗ **Rely on placeholder as label** — Placeholders disappear on input
+- ✗ **Skip validation feedback** — Show errors inline, not just on submit
+- ✗ **Use for read-only content** — Use `<div>` or `<pre>` instead

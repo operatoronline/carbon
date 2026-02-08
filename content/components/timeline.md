@@ -393,6 +393,266 @@ Include actions within timeline items.
 </div>
 ```
 
+## Common Patterns
+
+### Order Tracking
+
+<Preview title="Order Tracking">
+    <div class="Timeline">
+        <div class="Timeline-item">
+            <div class="Timeline-marker Timeline-marker--icon Timeline-marker--success"><i class="ph ph-check"></i></div>
+            <div class="Timeline-content">
+                <div class="Timeline-title">Order placed</div>
+                <div class="Timeline-time">Jan 28, 2:30 PM</div>
+            </div>
+        </div>
+        <div class="Timeline-item">
+            <div class="Timeline-marker Timeline-marker--icon Timeline-marker--success"><i class="ph ph-check"></i></div>
+            <div class="Timeline-content">
+                <div class="Timeline-title">Payment confirmed</div>
+                <div class="Timeline-time">Jan 28, 2:32 PM</div>
+            </div>
+        </div>
+        <div class="Timeline-item">
+            <div class="Timeline-marker Timeline-marker--active"></div>
+            <div class="Timeline-content">
+                <div class="Timeline-title">In transit</div>
+                <div class="Timeline-description">Package is on its way — expected Feb 2</div>
+                <div class="Timeline-time">Jan 30, 8:00 AM</div>
+            </div>
+        </div>
+        <div class="Timeline-item">
+            <div class="Timeline-marker"></div>
+            <div class="Timeline-content">
+                <div class="Timeline-title" style="color: var(--fg-3);">Delivered</div>
+            </div>
+        </div>
+    </div>
+</Preview>
+
+### Activity Feed
+
+<Preview title="Activity Feed">
+    <div class="Timeline Timeline--compact">
+        <div class="Timeline-item">
+            <div class="Timeline-marker" style="background: var(--accent); border-color: var(--accent);"></div>
+            <div class="Timeline-content">
+                <span class="Timeline-actor">Alice</span> pushed 3 commits to <span class="Timeline-link">main</span>
+                <span class="Timeline-time">2m ago</span>
+            </div>
+        </div>
+        <div class="Timeline-item">
+            <div class="Timeline-marker" style="background: oklch(55% 0.15 150); border-color: oklch(55% 0.15 150);"></div>
+            <div class="Timeline-content">
+                <span class="Timeline-actor">Bob</span> merged <span class="Timeline-link">PR #42</span>
+                <span class="Timeline-time">15m ago</span>
+            </div>
+        </div>
+        <div class="Timeline-item">
+            <div class="Timeline-marker" style="background: oklch(55% 0.2 25); border-color: oklch(55% 0.2 25);"></div>
+            <div class="Timeline-content">
+                <span class="Timeline-actor">CI</span> failed on <span class="Timeline-link">feature/auth</span>
+                <span class="Timeline-time">30m ago</span>
+            </div>
+        </div>
+    </div>
+</Preview>
+
+### Project Milestones
+
+<Preview title="Company Milestones">
+    <div class="Timeline Timeline--alternating">
+        <div class="Timeline-item">
+            <div class="Timeline-marker Timeline-marker--icon"><i class="ph ph-rocket"></i></div>
+            <div class="Timeline-content">
+                <div class="Timeline-title">Founded</div>
+                <div class="Timeline-description">Started with a vision and a small team.</div>
+                <div class="Timeline-time">2020</div>
+            </div>
+        </div>
+        <div class="Timeline-item">
+            <div class="Timeline-marker Timeline-marker--icon Timeline-marker--success"><i class="ph ph-chart-line-up"></i></div>
+            <div class="Timeline-content">
+                <div class="Timeline-title">Series A</div>
+                <div class="Timeline-description">Raised $12M to scale operations.</div>
+                <div class="Timeline-time">2022</div>
+            </div>
+        </div>
+        <div class="Timeline-item">
+            <div class="Timeline-marker Timeline-marker--icon Timeline-marker--info"><i class="ph ph-globe"></i></div>
+            <div class="Timeline-content">
+                <div class="Timeline-title">Global Launch</div>
+                <div class="Timeline-description">Expanded to 15 countries.</div>
+                <div class="Timeline-time">2024</div>
+            </div>
+        </div>
+    </div>
+</Preview>
+
+---
+
+## Customization
+
+Override timeline styles using CSS custom properties:
+
+```css
+/* Custom line color */
+.Timeline::before {
+  background: var(--accent);
+  opacity: 0.3;
+}
+
+/* Larger markers */
+.Timeline--large .Timeline-marker {
+  width: 16px;
+  height: 16px;
+}
+
+/* Custom status colors */
+.Timeline-marker--purple {
+  background: oklch(55% 0.2 300);
+  border-color: oklch(55% 0.2 300);
+}
+
+/* Card-style timeline items */
+.Timeline--cards .Timeline-content {
+  background: var(--bg-s);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--bd);
+}
+```
+
+---
+
+## API Reference
+
+### Base Classes
+
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Timeline</code></td>
+<td class="ApiTable-desc">Base timeline container</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-item</code></td>
+<td class="ApiTable-desc">Individual timeline entry</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-marker</code></td>
+<td class="ApiTable-desc">Dot/icon marker on the timeline</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-content</code></td>
+<td class="ApiTable-desc">Content container for an item</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-title</code></td>
+<td class="ApiTable-desc">Event title</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-description</code></td>
+<td class="ApiTable-desc">Event description</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-time</code></td>
+<td class="ApiTable-desc">Timestamp</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-header</code></td>
+<td class="ApiTable-desc">Header with title and time</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-body</code></td>
+<td class="ApiTable-desc">Extended content area</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-actions</code></td>
+<td class="ApiTable-desc">Action buttons for an item</td>
+</tr>
+</tbody>
+</table>
+
+### Variant Classes
+
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Timeline--compact</code></td>
+<td class="ApiTable-desc">Dense layout for activity feeds</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline--horizontal</code></td>
+<td class="ApiTable-desc">Horizontal layout variant</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline--alternating</code></td>
+<td class="ApiTable-desc">Alternating left/right layout</td>
+</tr>
+</tbody>
+</table>
+
+### Marker Modifiers
+
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-marker--icon</code></td>
+<td class="ApiTable-desc">Marker with icon inside</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-marker--success</code></td>
+<td class="ApiTable-desc">Green success marker</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-marker--warning</code></td>
+<td class="ApiTable-desc">Yellow warning marker</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-marker--error</code></td>
+<td class="ApiTable-desc">Red error marker</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-marker--info</code></td>
+<td class="ApiTable-desc">Blue info marker</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-marker--active</code></td>
+<td class="ApiTable-desc">Active/current marker with glow</td>
+</tr>
+</tbody>
+</table>
+
+### Compact-specific Classes
+
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-actor</code></td>
+<td class="ApiTable-desc">Person/entity name (compact variant)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-link</code></td>
+<td class="ApiTable-desc">Linked reference (compact variant)</td>
+</tr>
+</tbody>
+</table>
+
+---
+
 ## CSS Reference
 
 ```css
@@ -531,35 +791,7 @@ Include actions within timeline items.
 }
 ```
 
-## API Reference
-
-<div class="ApiTable">
-
-| Class | Description |
-|-------|-------------|
-| `.Timeline` | Base timeline container |
-| `.Timeline--compact` | Dense layout for activity feeds |
-| `.Timeline--horizontal` | Horizontal layout variant |
-| `.Timeline--alternating` | Alternating left/right layout |
-| `.Timeline-item` | Individual timeline entry |
-| `.Timeline-marker` | Dot/icon marker on the timeline |
-| `.Timeline-marker--icon` | Marker with icon inside |
-| `.Timeline-marker--success` | Green success marker |
-| `.Timeline-marker--warning` | Yellow warning marker |
-| `.Timeline-marker--error` | Red error marker |
-| `.Timeline-marker--info` | Blue info marker |
-| `.Timeline-marker--active` | Active/current marker with glow |
-| `.Timeline-content` | Content container for an item |
-| `.Timeline-header` | Header with title and time |
-| `.Timeline-title` | Event title |
-| `.Timeline-description` | Event description |
-| `.Timeline-time` | Timestamp |
-| `.Timeline-body` | Extended content area |
-| `.Timeline-actions` | Action buttons for an item |
-| `.Timeline-actor` | Person/entity name (compact) |
-| `.Timeline-link` | Linked reference (compact) |
-
-</div>
+---
 
 ## Accessibility
 
@@ -571,3 +803,32 @@ Include actions within timeline items.
 - For interactive timelines, ensure focusable elements are keyboard-accessible
 - Use `aria-label` to describe timeline purpose (e.g., "Order history")
 - Announce new items with `aria-live` for dynamically updating timelines
+
+### Keyboard Support
+
+| Key | Action |
+|-----|--------|
+| Tab | Move focus between interactive timeline items |
+| Enter / Space | Activate action buttons within items |
+
+---
+
+## Best Practices
+
+### Do
+
+- ✓ **Order chronologically** — Most recent first or last, be consistent
+- ✓ **Use status colors meaningfully** — Green for complete, red for errors
+- ✓ **Include timestamps** — Always provide temporal context
+- ✓ **Use icons for clarity** — Reinforce status with visual markers
+- ✓ **Keep entries scannable** — Short titles, optional descriptions
+- ✓ **Use compact for feeds** — Dense layout for high-frequency updates
+
+### Don't
+
+- ✗ **Mix chronological orders** — Pick newest-first or oldest-first
+- ✗ **Rely only on color** — Colorblind users need icons or text
+- ✗ **Overload with content** — Keep timeline items brief
+- ✗ **Skip the connecting line** — It provides visual continuity
+- ✗ **Use horizontal for many items** — More than 5 items should be vertical
+- ✗ **Forget loading states** — Show skeleton items for async data

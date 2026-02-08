@@ -279,6 +279,68 @@ Tabs can stretch to fill their container width. Useful for mobile layouts.
 
 ---
 
+## JavaScript
+
+Tabs require minimal JavaScript for interactivity:
+
+```js
+document.querySelectorAll('.Tabs').forEach(tabs => {
+    const tabList = tabs.querySelector('.Tabs-list');
+    const tabButtons = tabs.querySelectorAll('.Tabs-tab');
+    const panels = tabs.querySelectorAll('.Tabs-panel');
+    
+    tabList.addEventListener('click', (e) => {
+        const tab = e.target.closest('.Tabs-tab');
+        if (!tab || tab.disabled) return;
+        
+        // Update tab states
+        tabButtons.forEach(t => {
+            t.classList.remove('active');
+            t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+        
+        // Update panel visibility
+        const index = Array.from(tabButtons).indexOf(tab);
+        panels.forEach((panel, i) => {
+            panel.classList.toggle('active', i === index);
+        });
+    });
+    
+    // Keyboard navigation
+    tabList.addEventListener('keydown', (e) => {
+        const tabs = Array.from(tabButtons).filter(t => !t.disabled);
+        const current = tabs.findIndex(t => t.classList.contains('active'));
+        let next;
+        
+        switch(e.key) {
+            case 'ArrowRight':
+            case 'ArrowDown':
+                next = (current + 1) % tabs.length;
+                break;
+            case 'ArrowLeft':
+            case 'ArrowUp':
+                next = (current - 1 + tabs.length) % tabs.length;
+                break;
+            case 'Home':
+                next = 0;
+                break;
+            case 'End':
+                next = tabs.length - 1;
+                break;
+            default:
+                return;
+        }
+        
+        e.preventDefault();
+        tabs[next].click();
+        tabs[next].focus();
+    });
+});
+```
+
+
 ## Common Patterns
 
 ### Settings Page
@@ -366,69 +428,6 @@ Tabs can stretch to fill their container width. Useful for mobile layouts.
     </div>
 </div>
 </Preview>
-
----
-
-## JavaScript
-
-Tabs require minimal JavaScript for interactivity:
-
-```js
-document.querySelectorAll('.Tabs').forEach(tabs => {
-    const tabList = tabs.querySelector('.Tabs-list');
-    const tabButtons = tabs.querySelectorAll('.Tabs-tab');
-    const panels = tabs.querySelectorAll('.Tabs-panel');
-    
-    tabList.addEventListener('click', (e) => {
-        const tab = e.target.closest('.Tabs-tab');
-        if (!tab || tab.disabled) return;
-        
-        // Update tab states
-        tabButtons.forEach(t => {
-            t.classList.remove('active');
-            t.setAttribute('aria-selected', 'false');
-        });
-        tab.classList.add('active');
-        tab.setAttribute('aria-selected', 'true');
-        
-        // Update panel visibility
-        const index = Array.from(tabButtons).indexOf(tab);
-        panels.forEach((panel, i) => {
-            panel.classList.toggle('active', i === index);
-        });
-    });
-    
-    // Keyboard navigation
-    tabList.addEventListener('keydown', (e) => {
-        const tabs = Array.from(tabButtons).filter(t => !t.disabled);
-        const current = tabs.findIndex(t => t.classList.contains('active'));
-        let next;
-        
-        switch(e.key) {
-            case 'ArrowRight':
-            case 'ArrowDown':
-                next = (current + 1) % tabs.length;
-                break;
-            case 'ArrowLeft':
-            case 'ArrowUp':
-                next = (current - 1 + tabs.length) % tabs.length;
-                break;
-            case 'Home':
-                next = 0;
-                break;
-            case 'End':
-                next = tabs.length - 1;
-                break;
-            default:
-                return;
-        }
-        
-        e.preventDefault();
-        tabs[next].click();
-        tabs[next].focus();
-    });
-});
-```
 
 ---
 
@@ -631,6 +630,134 @@ Override tab styles using CSS custom properties:
 </tr>
 </tbody>
 </table>
+
+---
+
+## CSS Reference
+
+```css
+/* Base tabs */
+.Tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tab list */
+.Tabs-list {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--bd);
+}
+
+/* Individual tab */
+.Tabs-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--fg-3);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+
+.Tabs-tab:hover {
+  color: var(--fg);
+}
+
+.Tabs-tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.Tabs-tab:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Tab panel */
+.Tabs-panel {
+  display: none;
+  padding: var(--space-4) 0;
+}
+
+.Tabs-panel.active {
+  display: block;
+}
+
+/* Contained variant */
+.Tabs--contained {
+  border: 1px solid var(--bd);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.Tabs--contained .Tabs-list {
+  background: var(--bg-s);
+}
+.Tabs--contained .Tabs-tab.active {
+  background: var(--bg);
+  border-bottom-color: var(--bg);
+}
+.Tabs--contained .Tabs-panel {
+  padding: var(--space-4);
+}
+
+/* Pills variant */
+.Tabs--pills .Tabs-list {
+  border-bottom: none;
+  gap: var(--space-1);
+}
+.Tabs--pills .Tabs-tab {
+  border-bottom: none;
+  border-radius: var(--radius-md);
+  padding: var(--space-1) var(--space-3);
+}
+.Tabs--pills .Tabs-tab.active {
+  background: var(--accent);
+  color: white;
+}
+
+/* Size variants */
+.Tabs--small .Tabs-tab {
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--text-xs);
+}
+.Tabs--large .Tabs-tab {
+  padding: var(--space-3) var(--space-5);
+  font-size: var(--text-base);
+}
+
+/* Full width */
+.Tabs--fullWidth .Tabs-list {
+  width: 100%;
+}
+.Tabs--fullWidth .Tabs-tab {
+  flex: 1;
+  justify-content: center;
+}
+
+/* Vertical */
+.Tabs--vertical {
+  flex-direction: row;
+}
+.Tabs--vertical .Tabs-list {
+  flex-direction: column;
+  border-bottom: none;
+  border-right: 1px solid var(--bd);
+}
+.Tabs--vertical .Tabs-tab {
+  border-bottom: none;
+  border-right: 2px solid transparent;
+}
+.Tabs--vertical .Tabs-tab.active {
+  border-right-color: var(--accent);
+}
+```
 
 ---
 

@@ -729,6 +729,119 @@ Combine tables with pagination controls for large datasets.
 
 ---
 
+## Common Patterns
+
+### Data Dashboard
+
+<Preview title="Dashboard Table">
+<div class="Table-container">
+  <div class="Toolbar Toolbar--bordered" style="border-bottom: none; border-radius: var(--radius-md) var(--radius-md) 0 0;">
+    <span class="Toolbar-label">Recent Orders</span>
+    <div class="Toolbar-spacer"></div>
+    <button class="Button Button--ghost Button--sm"><i class="ph ph-funnel"></i> Filter</button>
+    <button class="Button Button--primary Button--sm"><i class="ph ph-plus"></i> New</button>
+  </div>
+  <table class="Table Table--hoverable">
+    <thead>
+      <tr>
+        <th>Order</th>
+        <th>Customer</th>
+        <th>Amount</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>#ORD-001</td>
+        <td>Acme Corp</td>
+        <td>$1,250.00</td>
+        <td><span class="Badge Badge--success">Paid</span></td>
+      </tr>
+      <tr>
+        <td>#ORD-002</td>
+        <td>Tech Solutions</td>
+        <td>$890.00</td>
+        <td><span class="Badge Badge--warning">Pending</span></td>
+      </tr>
+      <tr>
+        <td>#ORD-003</td>
+        <td>Design Co</td>
+        <td>$2,100.00</td>
+        <td><span class="Badge Badge--danger">Overdue</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</Preview>
+
+### Settings Key-Value Table
+
+<Preview title="Configuration Table">
+<table class="Table Table--compact Table--striped" style="max-width: 500px;">
+  <thead>
+    <tr>
+      <th>Setting</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Language</td>
+      <td>English (US)</td>
+    </tr>
+    <tr>
+      <td>Timezone</td>
+      <td>UTC-8 (Pacific)</td>
+    </tr>
+    <tr>
+      <td>Date Format</td>
+      <td>MM/DD/YYYY</td>
+    </tr>
+    <tr>
+      <td>Currency</td>
+      <td>USD ($)</td>
+    </tr>
+  </tbody>
+</table>
+</Preview>
+
+### Comparison Table
+
+<Preview title="Plan Comparison">
+<table class="Table Table--bordered" style="text-align: center;">
+  <thead>
+    <tr>
+      <th style="text-align: left;">Feature</th>
+      <th>Free</th>
+      <th style="background: oklch(95% 0.05 250);">Pro</th>
+      <th>Enterprise</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left;">Users</td>
+      <td>1</td>
+      <td style="background: oklch(97% 0.02 250);">10</td>
+      <td>Unlimited</td>
+    </tr>
+    <tr>
+      <td style="text-align: left;">Storage</td>
+      <td>1 GB</td>
+      <td style="background: oklch(97% 0.02 250);">100 GB</td>
+      <td>1 TB</td>
+    </tr>
+    <tr>
+      <td style="text-align: left;">Support</td>
+      <td>Community</td>
+      <td style="background: oklch(97% 0.02 250);">Email</td>
+      <td>24/7 Phone</td>
+    </tr>
+  </tbody>
+</table>
+</Preview>
+
+---
+
 ## Customization
 
 Override table styles using CSS custom properties:
@@ -993,6 +1106,195 @@ Override table styles using CSS custom properties:
 </tbody>
 </table>
 
+
+## CSS Reference
+
+```css
+/* Base table */
+.Table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+  color: var(--fg);
+}
+
+.Table th,
+.Table td {
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  border-bottom: 1px solid var(--bd);
+}
+
+.Table th {
+  font-weight: 600;
+  color: var(--fg);
+  background: var(--bg-s);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Striped variant */
+.Table--striped tbody tr:nth-child(even) {
+  background: var(--bg-s);
+}
+
+/* Hoverable variant */
+.Table--hoverable tbody tr:hover {
+  background: oklch(95% 0.02 250 / 0.5);
+}
+
+/* Bordered variant */
+.Table--bordered th,
+.Table--bordered td {
+  border: 1px solid var(--bd);
+}
+
+/* Compact variant */
+.Table--compact th,
+.Table--compact td {
+  padding: var(--space-1) var(--space-2);
+  font-size: var(--text-xs);
+}
+
+/* Sticky header */
+.Table--stickyHeader thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--bg);
+}
+
+/* Scrollable wrapper */
+.Table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.Table-wrapper--scrollable {
+  overflow-y: auto;
+}
+
+/* Selected rows */
+.Table-row--selected {
+  background: oklch(95% 0.05 250);
+}
+
+/* Checkbox column */
+.Table--selectable .Table-checkbox {
+  width: 40px;
+  padding: var(--space-2);
+}
+
+/* Sort buttons */
+.Table-sort {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  font-weight: 600;
+  color: var(--fg);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: var(--text-xs);
+}
+
+.Table-sort:hover {
+  color: var(--accent);
+}
+
+.Table-sort--active {
+  color: var(--accent);
+}
+
+.Table-sortIcon {
+  font-size: 0.875rem;
+  opacity: 0.5;
+}
+
+.Table-sort--active .Table-sortIcon {
+  opacity: 1;
+}
+
+/* Expand/collapse */
+.Table-expandCol {
+  width: 40px;
+  padding: var(--space-2);
+}
+
+.Table-expandBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--fg-3);
+}
+
+.Table-expandBtn:hover {
+  color: var(--fg);
+}
+
+.Table-expandPanel {
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-s);
+}
+
+.Table-expandDetail {
+  padding: var(--space-1) 0;
+  font-size: var(--text-sm);
+}
+
+/* Actions column */
+.Table-actions {
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* User cell */
+.Table-user {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* Pagination */
+.Table-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  border-top: 1px solid var(--bd);
+}
+
+.Table-pageInfo {
+  font-size: var(--text-sm);
+  color: var(--fg-3);
+}
+
+.Table-pageControls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.Table-pageBtn--active {
+  font-weight: 600;
+}
+
+.Table-pageEllipsis {
+  padding: 0 var(--space-1);
+  color: var(--fg-3);
+}
+```
+
 ---
 
 ## Accessibility
@@ -1020,17 +1322,8 @@ Override table styles using CSS custom properties:
 
 <!-- Select all checkbox -->
 <th class="Table-checkbox">
-  <input type="checkbox" 
-         class="Checkbox" 
-         aria-label="Select all rows">
+  <input type="checkbox" class="Checkbox" aria-label="Select all rows">
 </th>
-
-<!-- Row selection checkbox -->
-<td class="Table-checkbox">
-  <input type="checkbox" 
-         class="Checkbox" 
-         aria-label="Select John Doe">
-</td>
 
 <!-- Expandable row -->
 <button class="Table-expandBtn" 
@@ -1039,31 +1332,15 @@ Override table styles using CSS custom properties:
         aria-label="Show details for Order #1234">
   <i class="ph ph-caret-right" aria-hidden="true"></i>
 </button>
-
-<!-- Action buttons with labels -->
-<button class="Button Button--icon Button--ghost" 
-        aria-label="Edit Alice Chen">
-  <i class="ph ph-pencil"></i>
-</button>
 ```
 
 ### Caption and Summary
 
 ```html
-<!-- Table caption for context -->
 <table class="Table">
   <caption class="sr-only">
-    User accounts showing name, email, role, and status. 
-    Sortable by name column.
+    User accounts showing name, email, role, and status.
   </caption>
-  <!-- ... -->
-</table>
-
-<!-- Or use aria-describedby -->
-<p id="table-desc" class="sr-only">
-  Monthly revenue data for Q4 2025
-</p>
-<table class="Table" aria-describedby="table-desc">
   <!-- ... -->
 </table>
 ```
@@ -1071,7 +1348,6 @@ Override table styles using CSS custom properties:
 ### Row Headers
 
 ```html
-<!-- Use th for row headers in data tables -->
 <table class="Table">
   <thead>
     <tr>
