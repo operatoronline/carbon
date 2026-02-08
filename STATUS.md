@@ -2,7 +2,7 @@
 
 ## Metadata
 - **Version:** v0.3
-- **Last Updated:** 2026-02-05
+- **Last Updated:** 2026-02-08
 - **Host:** carbon.operator.onl
 - **Repo:** https://github.com/operatoronline/carbon
 
@@ -71,7 +71,7 @@ Accordions, Alerts, Avatars, Badges, Breadcrumbs, Buttons, Cards, Chips/Tags, Di
 - [ ] Mobile bottom sheet navigation
 
 ## Known Issues
-- None currently
+None.
 
 ## Change Log
 - **v0.1** (2026-02-02): Project initialization. Scaffolding complete.
