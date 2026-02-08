@@ -29,13 +29,6 @@ Links within body text should be clearly distinguishable but not disruptive.
         for beginners.
     </p>
 </Preview>
-
-```html
-<p>
-    For more information, visit our <a href="#" class="Link">documentation</a>.
-</p>
-```
-
 ---
 
 ## Link Variants
@@ -50,14 +43,6 @@ Different visual styles for various contexts.
         <a href="#" class="Link Link--underline">Always Underlined</a>
     </div>
 </Preview>
-
-```html
-<a href="#" class="Link">Default Link</a>
-<a href="#" class="Link Link--subtle">Subtle Link</a>
-<a href="#" class="Link Link--muted">Muted Link</a>
-<a href="#" class="Link Link--underline">Always Underlined</a>
-```
-
 ---
 
 ## Standalone Links
@@ -69,25 +54,12 @@ Links that stand alone as navigation elements.
         View all products
     </a>
 </Preview>
-
-```html
-<a href="#" class="Link Link--standalone">View all products</a>
-```
-
 <Preview title="Standalone Link with Arrow">
     <a href="#" class="Link Link--standalone">
         Read the full article
         <i class="ph ph-arrow-right Link-icon"></i>
     </a>
 </Preview>
-
-```html
-<a href="#" class="Link Link--standalone">
-    Read the full article
-    <i class="ph ph-arrow-right Link-icon"></i>
-</a>
-```
-
 ---
 
 ## Links with Icons
@@ -100,28 +72,12 @@ Add icons for visual context or to indicate behavior.
         View Documentation
     </a>
 </Preview>
-
-```html
-<a href="#" class="Link">
-    <i class="ph ph-file-text Link-icon"></i>
-    View Documentation
-</a>
-```
-
 <Preview title="Link with Trailing Icon">
     <a href="#" class="Link" target="_blank">
         Open in new tab
         <i class="ph ph-arrow-square-out Link-icon"></i>
     </a>
 </Preview>
-
-```html
-<a href="#" class="Link" target="_blank">
-    Open in new tab
-    <i class="ph ph-arrow-square-out Link-icon"></i>
-</a>
-```
-
 <Preview title="External Link Indicator">
     <p style="max-width: 480px; line-height: 1.6;">
         Learn more on the 
@@ -132,14 +88,6 @@ Add icons for visual context or to indicate behavior.
         for complete details.
     </p>
 </Preview>
-
-```html
-<a href="#" class="Link Link--external" target="_blank" rel="noopener">
-    official website
-    <i class="ph ph-arrow-square-out Link-icon"></i>
-</a>
-```
-
 ---
 
 ## Link Sizes
@@ -153,13 +101,6 @@ Control link size for different contexts.
         <a href="#" class="Link Link--large">Large Link</a>
     </div>
 </Preview>
-
-```html
-<a href="#" class="Link Link--small">Small Link</a>
-<a href="#" class="Link">Default Link</a>
-<a href="#" class="Link Link--large">Large Link</a>
-```
-
 ---
 
 ## Visited State
@@ -172,13 +113,6 @@ Indicate links that have been visited.
         <a href="#" class="Link Link--visited">Visited Link</a>
     </div>
 </Preview>
-
-```html
-<a href="#" class="Link">Unvisited Link</a>
-<!-- Visited state is typically browser-controlled, 
-     but can be styled with CSS :visited pseudo-class -->
-```
-
 ### CSS for Visited State
 ```css
 .Link:visited {
@@ -197,14 +131,6 @@ Style for links that are temporarily unavailable.
         Currently unavailable
     </span>
 </Preview>
-
-```html
-<!-- Use span instead of anchor for truly disabled links -->
-<span class="Link Link--disabled" aria-disabled="true">
-    Currently unavailable
-</span>
-```
-
 ---
 
 ## Link Groups
@@ -219,15 +145,6 @@ Common patterns for grouping related links.
         <a href="#" class="Link Link--nav">Contact</a>
     </nav>
 </Preview>
-
-```html
-<nav>
-    <a href="#" class="Link Link--nav">Home</a>
-    <a href="#" class="Link Link--nav Link--active">Products</a>
-    <a href="#" class="Link Link--nav">About Us</a>
-</nav>
-```
-
 <Preview title="Horizontal Link List">
     <nav style="display: flex; gap: var(--space-6);">
         <a href="#" class="Link Link--nav">Features</a>
@@ -236,14 +153,6 @@ Common patterns for grouping related links.
         <a href="#" class="Link Link--nav">Support</a>
     </nav>
 </Preview>
-
-```html
-<nav style="display: flex; gap: var(--space-6);">
-    <a href="#" class="Link Link--nav">Features</a>
-    <a href="#" class="Link Link--nav">Pricing</a>
-</nav>
-```
-
 <Preview title="Footer Links">
     <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
         <a href="#" class="Link Link--muted Link--small">Privacy Policy</a>
@@ -253,13 +162,6 @@ Common patterns for grouping related links.
         <a href="#" class="Link Link--muted Link--small">Cookie Settings</a>
     </div>
 </Preview>
-
-```html
-<a href="#" class="Link Link--muted Link--small">Privacy Policy</a>
-<span>·</span>
-<a href="#" class="Link Link--muted Link--small">Terms of Service</a>
-```
-
 ---
 
 ## Skip Link
@@ -272,15 +174,6 @@ Accessibility pattern for keyboard navigation.
         (Tab to this preview to see the skip link appear)
     </p>
 </Preview>
-
-```html
-<a href="#main-content" class="Link Link--skip">Skip to main content</a>
-
-<main id="main-content">
-    <!-- Main content here -->
-</main>
-```
-
 ---
 
 ## Download Links
@@ -303,14 +196,6 @@ Style for downloadable resources.
         </a>
     </div>
 </Preview>
-
-```html
-<a href="/files/report.pdf" class="Link" download>
-    <i class="ph ph-file-pdf Link-icon"></i>
-    Annual Report 2025.pdf
-</a>
-```
-
 ---
 
 ## Common Patterns
@@ -341,17 +226,6 @@ Style for downloadable resources.
         <span style="color: var(--fg);">Widget Pro</span>
     </nav>
 </Preview>
-
-```html
-<nav aria-label="Breadcrumb">
-    <a href="#" class="Link Link--muted">Home</a>
-    <i class="ph ph-caret-right"></i>
-    <a href="#" class="Link Link--muted">Products</a>
-    <i class="ph ph-caret-right"></i>
-    <span>Widget Pro</span>
-</nav>
-```
-
 ### Help Text with Link
 
 <Preview title="Help Text">
