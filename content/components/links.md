@@ -54,6 +54,7 @@ Links that stand alone as navigation elements.
         View all products
     </a>
 </Preview>
+
 <Preview title="Standalone Link with Arrow">
     <a href="#" class="Link Link--standalone">
         Read the full article
@@ -72,12 +73,14 @@ Add icons for visual context or to indicate behavior.
         View Documentation
     </a>
 </Preview>
+
 <Preview title="Link with Trailing Icon">
     <a href="#" class="Link" target="_blank">
         Open in new tab
         <i class="ph ph-arrow-square-out Link-icon"></i>
     </a>
 </Preview>
+
 <Preview title="External Link Indicator">
     <p style="max-width: 480px; line-height: 1.6;">
         Learn more on the 
@@ -145,6 +148,7 @@ Common patterns for grouping related links.
         <a href="#" class="Link Link--nav">Contact</a>
     </nav>
 </Preview>
+
 <Preview title="Horizontal Link List">
     <nav style="display: flex; gap: var(--space-6);">
         <a href="#" class="Link Link--nav">Features</a>
@@ -153,6 +157,7 @@ Common patterns for grouping related links.
         <a href="#" class="Link Link--nav">Support</a>
     </nav>
 </Preview>
+
 <Preview title="Footer Links">
     <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
         <a href="#" class="Link Link--muted Link--small">Privacy Policy</a>
