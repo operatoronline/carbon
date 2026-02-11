@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Breadcrumbs | Carbon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/bold/style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Floating Pill Nav (Mobile: bottom, Desktop: top) -->
+        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation">
+            <a href="../index.html" class="fnav-btn" data-section="home" aria-label="Home">
+                <i class="ph-bold ph-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="../tokens/colors.html" class="fnav-btn" data-section="tokens" aria-label="Tokens">
+                <i class="ph-bold ph-palette"></i>
+                <span>Tokens</span>
+            </a>
+            <a href="../components/buttons.html" class="fnav-btn" data-section="components" aria-label="Components">
+                <i class="ph-bold ph-stack"></i>
+                <span>Components</span>
+            </a>
+            <a href="../patterns/layouts.html" class="fnav-btn" data-section="patterns" aria-label="Patterns">
+                <i class="ph-bold ph-grid-four"></i>
+                <span>Patterns</span>
+            </a>
+            <div class="fnav-sep"></div>
+            <button class="fnav-btn" id="search-toggle" aria-label="Search">
+                <i class="ph ph-magnifying-glass"></i>
+            </button>
+            <button class="fnav-btn" id="theme-btn" aria-label="Toggle theme">
+                <i class="ph ph-moon"></i>
+            </button>
+        </nav>
+
+        <!-- Glassmorphism Top Bar (Desktop only) -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <a href="../index.html" class="logo">
+                    <i class="ph ph-intersect"></i>
+                    <span>Carbon</span>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <div class="search-container" id="search-container">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search components..." aria-label="Search" autocomplete="off">
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <main class="main-content">
+                <header class="page-header">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="../index.html">Carbon</a> <span class="sep">/</span> <span>Components</span> <span class="sep">/</span> <span>Breadcrumbs</span>
+                    </nav>
+                    <h1><em>Breadcrumbs</em></h1>
+                </header>
+                
+                <article class="prose">
+                    <h1>Breadcrumbs</h1>
+<p>Breadcrumbs show the user’s location within a site hierarchy and provide quick navigation to parent pages. They help users understand where they are and navigate back through the site structure.</p>
+<hr>
+<h2 id="installation">Installation</h2>
+<p>Copy the breadcrumb CSS from <code>styles/docs.css</code> or include the Carbon stylesheet:</p>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;carbon.min.css&quot;&gt;
+</code></pre>
+<p>Then use breadcrumb classes in your HTML:</p>
+<pre><code class="language-html">&lt;nav class=&quot;Breadcrumb&quot; aria-label=&quot;Breadcrumb&quot;&gt;
+    &lt;ol class=&quot;Breadcrumb-list&quot;&gt;
+        &lt;li class=&quot;Breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;Breadcrumb-item&quot; aria-current=&quot;page&quot;&gt;Current Page&lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/nav&gt;
+</code></pre>
+<hr>
+<h2 id="usage">Usage</h2>
+<p>The breadcrumb component uses semantic HTML with a <code>&lt;nav&gt;</code> landmark and an ordered list to convey hierarchy. The last item represents the current page and should not be a link.</p>
+
+<div class="Preview" id="preview-pftvuv4hg">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><nav class="Breadcrumb" aria-label="Breadcrumb">
+    <ol class="Breadcrumb-list">
+        <li class="Breadcrumb-item"><a href="#">Home</a></li>
+        <li class="Breadcrumb-item"><a href="#">Products</a></li>
+        <li class="Breadcrumb-item" aria-current="page">Widget</li>
+    </ol>
+</nav></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;nav class=&quot;Breadcrumb&quot; aria-label=&quot;Breadcrumb&quot;&gt;
+&lt;ol class=&quot;Breadcrumb-list&quot;&gt;
+&lt;li class=&quot;Breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;Breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;Breadcrumb-item&quot; aria-current=&quot;page&quot;&gt;Widget&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/nav&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="examples">Examples</h2>
+<h3 id="basic-breadcrumb">Basic Breadcrumb</h3>
+<p>A simple trail of links separated by slashes.</p>
+
+<div class="Preview" id="preview-zssnf5ree">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><nav class="Breadcrumb" aria-label="Breadcrumb">
+    <ol class="Breadcrumb-list">
+        <li class="Breadcrumb-item"><a href="#">Home</a></li>
+        <li class="Breadcrumb-item"><a href="#">Products</a></li>
+        <li class="Breadcrumb-item"><a href="#">Category</a></li>
+        <li class="Breadcrumb-item" aria-current="page">Current Page</li>
+    </ol>
+</nav></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;nav class=&quot;Breadcrumb&quot; aria-label=&quot;Breadcrumb&quot;&gt;
+&lt;ol class=&quot;Breadcrumb-list&quot;&gt;
+&lt;li class=&quot;Breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;Breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;Breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Category&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;Breadcrumb-item&quot; aria-current=&quot;page&quot;&gt;Current Page&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/nav&gt;</code></pre>
+    </div>
+</div><h3 id="with-home-icon">With Home Icon</h3>
+<p>Add a home icon to the first item for visual clarity. Use <code>aria-label</code> when replacing text with an icon.</p>
+
+<div class="Preview" id="preview-n8e0reh2h">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><nav class="Breadcrumb" aria-label="Breadcrumb">
+    <ol class="Breadcrumb-list">
+        <li class="Breadcrumb-item">
+            <a href="#" aria-label="Home">
+                <i class="ph ph-house"></i>
+            </a>
+        </li>
+        <li class="Breadcrumb-item"><a href="#">Settings</a></li>
+        <li class="Breadcrumb-item" aria-current="page">Profile</li>
+    </ol>
+</nav></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;nav class=&quot;Breadcrumb&quot; aria-label=&quot;Breadcrumb&quot;&gt;
+&lt;ol class=&quot;Breadcrumb-list&quot;&gt;
+&lt;li class=&quot;Breadcrumb-item&quot;&gt;
+&lt;a href=&quot;#&quot; aria-label=&quot;Home&quot;&gt;
+&lt;i class=&quot;ph ph-house&quot;&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class=&quot;Breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Settings&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;Breadcrumb-item&quot; aria-current=&quot;page&quot;&gt;Profile&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/nav&gt;</code></pre>
+    </div>
+</div><h3 id="separator-styles">Separator Styles</h3>
+<p>Use modifier classes to change the separator character.</p>
+
+<div class="Preview" id="preview-nh6z1huw8">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Layout-stack">
+    <nav class="Breadcrumb" aria-label="Breadcrumb with slash">
+        <ol class="Breadcrumb-list">
+            <li class="Breadcrumb-item"><a href="#">Home</a></li>
+            <li class="Breadcrumb-item"><a href="#">Section</a></li>
+            <li class="Breadcrumb-item" aria-current="page">Page</li>
+        </ol>
+    </nav>
+    <nav class="Breadcrumb Breadcrumb--arrows" aria-label="Breadcrumb with arrows">
+        <ol class="Breadcrumb-list">
+            <li class="Breadcrumb-item"><a href="#">Home</a></li>
+            <li class="Breadcrumb-item"><a href="#">Section</a></li>
+            <li class="Breadcrumb-item" aria-current="page">Page</li>
+        </ol>
+    </nav>
+    <nav class="Breadcrumb Breadcrumb--dots" aria-label="Breadcrumb with dots">
+        <ol class="Breadcrumb-list">
+            <li class="Breadcrumb-item"><a href="#">Home</a></li>
+            <li class="Breadcrumb-item"><a href="#">Section</a></li>
+            <li class="Breadcrumb-item" aria-current="page">Page</li>
+        </ol>
+    </nav>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Layout-stack&quot;&gt;
+&lt;nav class=&quot;Breadcrumb&quot; aria-label=&quot;Breadcrumb with slash&quot;&gt;
+&lt;ol class=&quot;Breadcrumb-list&quot;&gt;
+&lt;li class=&quot;Breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;Breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Section&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;Breadcrumb-item&quot; aria-current=&quot;page&quot;&gt;Page&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/nav&gt;
+&lt;nav class=&quot;Breadcrumb Breadcrumb--arrows&quot; aria-label=&quot;Breadcrumb with arrows&quot;&gt;
+&lt;ol class=&quot;Breadcrumb-list&quot;&gt;
+&lt;li class=&quot;Breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;Breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Section&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;Breadcrumb-item&quot; aria-current=&quot;page&quot;&gt;Page&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/nav&gt;
+&lt;nav class=&quot;Breadcrumb Breadcrumb--dots&quot; aria-label=&quot;Breadcrumb with dots&quot;&gt;
+&lt;ol class=&quot;Breadcrumb-list&quot;&gt;
+&lt;li class=&quot;Breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;Breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Section&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;Breadcrumb-item&quot; aria-current=&quot;page&quot;&gt;Page&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/nav&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="truncated-breadcrumb">Truncated Breadcrumb</h3>
+<p>For deep hierarchies, collapse middle items with an ellipsis button that can reveal hidden levels.</p>
+
+<div class="Preview" id="preview-wruieehra">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><nav class="Breadcrumb" aria-label="Breadcrumb">
+    <ol class="Breadcrumb-list">
+        <li class="Breadcrumb-item"><a href="#">Home</a></li>
+        <li class="Breadcrumb-item">
+            <button class="Breadcrumb-ellipsis" aria-label="Show 3 more levels">
+                <i class="ph ph-dots-three"></i>
+            </button>
+        </li>
+        <li class="Breadcrumb-item"><a href="#">Parent</a></li>
+        <li class="Breadcrumb-item" aria-current="page">Current</li>
+    </ol>
+</nav></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;nav class=&quot;Breadcrumb&quot; aria-label=&quot;Breadcrumb&quot;&gt;
+&lt;ol class=&quot;Breadcrumb-list&quot;&gt;
+&lt;li class=&quot;Breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;Breadcrumb-item&quot;&gt;
+&lt;button class=&quot;Breadcrumb-ellipsis&quot; aria-label=&quot;Show 3 more levels&quot;&gt;
+&lt;i class=&quot;ph ph-dots-three&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/li&gt;
+&lt;li class=&quot;Breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Parent&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;Breadcrumb-item&quot; aria-current=&quot;page&quot;&gt;Current&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/nav&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="sizes">Sizes</h2>
+<p>Breadcrumbs come in three sizes: small, medium (default), and large.</p>
+
+<div class="Preview" id="preview-efgu5ibup">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Layout-stack">
+    <div>
+        <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Small</small>
+        <nav class="Breadcrumb Breadcrumb--small" aria-label="Small breadcrumb">
+            <ol class="Breadcrumb-list">
+                <li class="Breadcrumb-item"><a href="#">Home</a></li>
+                <li class="Breadcrumb-item"><a href="#">Section</a></li>
+                <li class="Breadcrumb-item" aria-current="page">Page</li>
+            </ol>
+        </nav>
+    </div>
+    <div>
+        <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Default</small>
+        <nav class="Breadcrumb" aria-label="Default breadcrumb">
+            <ol class="Breadcrumb-list">
+                <li class="Breadcrumb-item"><a href="#">Home</a></li>
+                <li class="Breadcrumb-item"><a href="#">Section</a></li>
+                <li class="Breadcrumb-item" aria-current="page">Page</li>
+            </ol>
+        </nav>
+    </div>
+    <div>
+        <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Large</small>
+        <nav class="Breadcrumb Breadcrumb--large" aria-label="Large breadcrumb">
+            <ol class="Breadcrumb-list">
+                <li class="Breadcrumb-item"><a href="#">Home</a></li>
+                <li class="Breadcrumb-item"><a href="#">Section</a></li>
+                <li class="Breadcrumb-item" aria-current="page">Page</li>
+            </ol>
+        </nav>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Layout-stack&quot;&gt;
+&lt;div&gt;
+&lt;small style=&quot;color: var(--fg-3); display: block; margin-bottom: var(--space-2);&quot;&gt;Small&lt;/small&gt;
+&lt;nav class=&quot;Breadcrumb Breadcrumb--small&quot; aria-label=&quot;Small breadcrumb&quot;&gt;
+&lt;ol class=&quot;Breadcrumb-list&quot;&gt;
+&lt;li class=&quot;Breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;Breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Section&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;Breadcrumb-item&quot; aria-current=&quot;page&quot;&gt;Page&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/nav&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;small style=&quot;color: var(--fg-3); display: block; margin-bottom: var(--space-2);&quot;&gt;Default&lt;/small&gt;
+&lt;nav class=&quot;Breadcrumb&quot; aria-label=&quot;Default breadcrumb&quot;&gt;
+&lt;ol class=&quot;Breadcrumb-list&quot;&gt;
+&lt;li class=&quot;Breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;Breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Section&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;Breadcrumb-item&quot; aria-current=&quot;page&quot;&gt;Page&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/nav&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;small style=&quot;color: var(--fg-3); display: block; margin-bottom: var(--space-2);&quot;&gt;Large&lt;/small&gt;
+&lt;nav class=&quot;Breadcrumb Breadcrumb--large&quot; aria-label=&quot;Large breadcrumb&quot;&gt;
+&lt;ol class=&quot;Breadcrumb-list&quot;&gt;
+&lt;li class=&quot;Breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;Breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Section&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;Breadcrumb-item&quot; aria-current=&quot;page&quot;&gt;Page&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/nav&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="common-patterns">Common Patterns</h2>
+<h3 id="page-header">Page Header</h3>
+<p>Breadcrumbs typically appear above the page title.</p>
+
+<div class="Preview" id="preview-up4pgunpi">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div>
+    <nav class="Breadcrumb Breadcrumb--small" aria-label="Breadcrumb" style="margin-bottom: var(--space-2);">
+        <ol class="Breadcrumb-list">
+            <li class="Breadcrumb-item"><a href="#">Dashboard</a></li>
+            <li class="Breadcrumb-item"><a href="#">Projects</a></li>
+            <li class="Breadcrumb-item" aria-current="page">Carbon Design System</li>
+        </ol>
+    </nav>
+    <h1 style="font-size: 1.5rem; font-weight: 600; margin: 0;">Carbon Design System</h1>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div&gt;
+&lt;nav class=&quot;Breadcrumb Breadcrumb--small&quot; aria-label=&quot;Breadcrumb&quot; style=&quot;margin-bottom: var(--space-2);&quot;&gt;
+&lt;ol class=&quot;Breadcrumb-list&quot;&gt;
+&lt;li class=&quot;Breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Dashboard&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;Breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Projects&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;Breadcrumb-item&quot; aria-current=&quot;page&quot;&gt;Carbon Design System&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/nav&gt;
+&lt;h1 style=&quot;font-size: 1.5rem; font-weight: 600; margin: 0;&quot;&gt;Carbon Design System&lt;/h1&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="e-commerce-category">E-commerce Category</h3>
+<p>Show the product category hierarchy for shopping sites.</p>
+
+<div class="Preview" id="preview-zd4e7q8b1">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><nav class="Breadcrumb" aria-label="Breadcrumb">
+    <ol class="Breadcrumb-list">
+        <li class="Breadcrumb-item">
+            <a href="#" aria-label="Home">
+                <i class="ph ph-house"></i>
+            </a>
+        </li>
+        <li class="Breadcrumb-item"><a href="#">Electronics</a></li>
+        <li class="Breadcrumb-item"><a href="#">Computers</a></li>
+        <li class="Breadcrumb-item"><a href="#">Laptops</a></li>
+        <li class="Breadcrumb-item" aria-current="page">MacBook Pro 16"</li>
+    </ol>
+</nav></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;nav class=&quot;Breadcrumb&quot; aria-label=&quot;Breadcrumb&quot;&gt;
+&lt;ol class=&quot;Breadcrumb-list&quot;&gt;
+&lt;li class=&quot;Breadcrumb-item&quot;&gt;
+&lt;a href=&quot;#&quot; aria-label=&quot;Home&quot;&gt;
+&lt;i class=&quot;ph ph-house&quot;&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class=&quot;Breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Electronics&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;Breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Computers&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;Breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Laptops&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;Breadcrumb-item&quot; aria-current=&quot;page&quot;&gt;MacBook Pro 16&quot;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/nav&gt;</code></pre>
+    </div>
+</div><h3 id="documentation-site">Documentation Site</h3>
+<p>Breadcrumbs in documentation help users navigate sections.</p>
+
+<div class="Preview" id="preview-ysrrz913w">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><nav class="Breadcrumb Breadcrumb--arrows" aria-label="Breadcrumb">
+    <ol class="Breadcrumb-list">
+        <li class="Breadcrumb-item"><a href="#">Docs</a></li>
+        <li class="Breadcrumb-item"><a href="#">Components</a></li>
+        <li class="Breadcrumb-item" aria-current="page">Breadcrumbs</li>
+    </ol>
+</nav></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;nav class=&quot;Breadcrumb Breadcrumb--arrows&quot; aria-label=&quot;Breadcrumb&quot;&gt;
+&lt;ol class=&quot;Breadcrumb-list&quot;&gt;
+&lt;li class=&quot;Breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Docs&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;Breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Components&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;Breadcrumb-item&quot; aria-current=&quot;page&quot;&gt;Breadcrumbs&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/nav&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="customization">Customization</h2>
+<p>Override breadcrumb styles using CSS custom properties:</p>
+<pre><code class="language-css">/* Custom separator */
+.Breadcrumb--custom .Breadcrumb-item + .Breadcrumb-item::before {
+    content: &quot;→&quot;;
+    color: var(--accent);
+}
+
+/* Custom link colors */
+.Breadcrumb--brand .Breadcrumb-item a {
+    color: var(--accent);
+}
+
+.Breadcrumb--brand .Breadcrumb-item a:hover {
+    color: var(--accent-secondary);
+    text-decoration: underline;
+}
+
+/* Pill-style breadcrumb */
+.Breadcrumb--pills .Breadcrumb-item a {
+    background: var(--bg-s);
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--space-4);
+}
+
+.Breadcrumb--pills .Breadcrumb-item a:hover {
+    background: var(--bg-tertiary);
+}
+
+/* Custom separator icon */
+.Breadcrumb--chevron .Breadcrumb-item + .Breadcrumb-item::before {
+    content: &quot;&quot;;
+    width: 16px;
+    height: 16px;
+    background-image: url(&quot;data:image/svg+xml,...&quot;);
+    background-size: contain;
+}
+</code></pre>
+<hr>
+<h2 id="api-reference">API Reference</h2>
+<h3 id="base-classes">Base Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Breadcrumb</code></td>
+<td class="ApiTable-desc">Container element (use on <code>&lt;nav&gt;</code>)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Breadcrumb-list</code></td>
+<td class="ApiTable-desc">Ordered list wrapper (use on <code>&lt;ol&gt;</code>)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Breadcrumb-item</code></td>
+<td class="ApiTable-desc">Individual breadcrumb item (use on <code>&lt;li&gt;</code>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="separator-variants">Separator Variants</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Breadcrumb--arrows</code></td>
+<td class="ApiTable-desc">Uses <code>›</code> as separator</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Breadcrumb--dots</code></td>
+<td class="ApiTable-desc">Uses <code>•</code> as separator</td>
+</tr>
+</tbody>
+</table>
+<h3 id="size-classes">Size Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Breadcrumb--small</code></td>
+<td class="ApiTable-desc">Small text size (0.75rem)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Breadcrumb--large</code></td>
+<td class="ApiTable-desc">Large text size (1rem)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="utility-classes">Utility Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Breadcrumb-ellipsis</code></td>
+<td class="ApiTable-desc">Ellipsis button for truncated breadcrumbs</td>
+</tr>
+</tbody>
+</table>
+<h3 id="aria-attributes">ARIA Attributes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Element</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">aria-label="Breadcrumb"</code></td>
+<td class="ApiTable-desc"><code>&lt;nav&gt;</code></td>
+<td class="ApiTable-desc">Identifies the navigation landmark</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">aria-current="page"</code></td>
+<td class="ApiTable-desc"><code>&lt;li&gt;</code></td>
+<td class="ApiTable-desc">Marks the current page item</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="css-reference">CSS Reference</h2>
+<pre><code class="language-css">/* Base Breadcrumb */
+.Breadcrumb {
+  font-size: 0.875rem;
+  color: var(--fg-3);
+}
+
+.Breadcrumb-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: var(--space-1);
+}
+
+.Breadcrumb-item {
+  display: inline-flex;
+  align-items: center;
+}
+
+.Breadcrumb-item + .Breadcrumb-item::before {
+  content: &quot;/&quot;;
+  margin-right: var(--space-1);
+  color: var(--fg-3);
+  opacity: 0.5;
+}
+
+.Breadcrumb-item a {
+  color: var(--fg-3);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.Breadcrumb-item a:hover {
+  color: var(--fg);
+  text-decoration: underline;
+}
+
+.Breadcrumb-item a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: var(--r-s);
+}
+
+.Breadcrumb-item[aria-current=&quot;page&quot;] {
+  color: var(--fg);
+  font-weight: 500;
+}
+
+/* Separator Variants */
+.Breadcrumb--arrows .Breadcrumb-item + .Breadcrumb-item::before {
+  content: &quot;›&quot;;
+}
+
+.Breadcrumb--dots .Breadcrumb-item + .Breadcrumb-item::before {
+  content: &quot;•&quot;;
+}
+
+/* Sizes */
+.Breadcrumb--small {
+  font-size: 0.75rem;
+}
+
+.Breadcrumb--large {
+  font-size: 1rem;
+}
+
+/* Ellipsis */
+.Breadcrumb-ellipsis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-1);
+  background: none;
+  border: none;
+  color: var(--fg-3);
+  cursor: pointer;
+  border-radius: var(--r-s);
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.Breadcrumb-ellipsis:hover {
+  background-color: var(--bg-s);
+  color: var(--fg);
+}
+
+.Breadcrumb-ellipsis:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+</code></pre>
+<hr>
+<h2 id="accessibility">Accessibility</h2>
+<h3 id="keyboard-support">Keyboard Support</h3>
+<div class="Table-container"><table class="Table">
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tab</td>
+<td>Moves focus through breadcrumb links</td>
+</tr>
+<tr>
+<td>Enter</td>
+<td>Activates the focused link</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>Activates the focused link or ellipsis button</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="screen-readers">Screen Readers</h3>
+<pre><code class="language-html">&lt;!-- ✓ Proper landmark and labeling --&gt;
+&lt;nav class=&quot;Breadcrumb&quot; aria-label=&quot;Breadcrumb&quot;&gt;
+    &lt;ol class=&quot;Breadcrumb-list&quot;&gt;
+        &lt;li class=&quot;Breadcrumb-item&quot;&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;Breadcrumb-item&quot;&gt;&lt;a href=&quot;/products&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;Breadcrumb-item&quot; aria-current=&quot;page&quot;&gt;Widget&lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/nav&gt;
+
+&lt;!-- ✓ Icon-only home link with aria-label --&gt;
+&lt;li class=&quot;Breadcrumb-item&quot;&gt;
+    &lt;a href=&quot;/&quot; aria-label=&quot;Home&quot;&gt;
+        &lt;i class=&quot;ph ph-house&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+&lt;/li&gt;
+
+&lt;!-- ✓ Ellipsis button with descriptive label --&gt;
+&lt;button class=&quot;Breadcrumb-ellipsis&quot; aria-label=&quot;Show 3 more navigation levels&quot;&gt;
+    &lt;i class=&quot;ph ph-dots-three&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+</code></pre>
+<h3 id="important-guidelines">Important Guidelines</h3>
+<ol>
+<li><strong>Use <code>&lt;nav&gt;</code> with <code>aria-label</code></strong> — Creates a navigation landmark for screen readers</li>
+<li><strong>Use <code>&lt;ol&gt;</code> for the list</strong> — Conveys the ordered hierarchical structure</li>
+<li><strong>Mark the current page</strong> — Use <code>aria-current=&quot;page&quot;</code> on the last item</li>
+<li><strong>Don’t link the current page</strong> — It’s redundant and confusing</li>
+<li><strong>Label icon-only items</strong> — Use <code>aria-label</code> when text is replaced by icons</li>
+</ol>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="do">Do</h3>
+<ul>
+<li>✓ <strong>Start with Home or root</strong> — Provide full navigational context</li>
+<li>✓ <strong>Keep labels short</strong> — Use concise, recognizable page names</li>
+<li>✓ <strong>Show hierarchy, not history</strong> — Breadcrumbs reflect site structure, not browsing path</li>
+<li>✓ <strong>Place consistently</strong> — Usually below the header, above the page title</li>
+<li>✓ <strong>Truncate deep hierarchies</strong> — Use ellipsis for paths deeper than 4-5 levels</li>
+</ul>
+<h3 id="don-t">Don’t</h3>
+<ul>
+<li>✗ <strong>Link to the current page</strong> — It’s redundant and potentially confusing</li>
+<li>✗ <strong>Use on single-level sites</strong> — Breadcrumbs only make sense for hierarchies</li>
+<li>✗ <strong>Replace primary navigation</strong> — Breadcrumbs supplement, not replace, main nav</li>
+<li>✗ <strong>Use as browser history</strong> — Breadcrumbs are structural, not temporal</li>
+<li>✗ <strong>Skip accessibility attributes</strong> — Always include <code>aria-label</code> and <code>aria-current</code></li>
+</ul>
+
+                </article>
+
+                <footer class="page-footer">
+                    <p>Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

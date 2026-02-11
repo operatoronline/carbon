@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Menus | Carbon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/bold/style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Floating Pill Nav (Mobile: bottom, Desktop: top) -->
+        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation">
+            <a href="../index.html" class="fnav-btn" data-section="home" aria-label="Home">
+                <i class="ph-bold ph-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="../tokens/colors.html" class="fnav-btn" data-section="tokens" aria-label="Tokens">
+                <i class="ph-bold ph-palette"></i>
+                <span>Tokens</span>
+            </a>
+            <a href="../components/buttons.html" class="fnav-btn" data-section="components" aria-label="Components">
+                <i class="ph-bold ph-stack"></i>
+                <span>Components</span>
+            </a>
+            <a href="../patterns/layouts.html" class="fnav-btn" data-section="patterns" aria-label="Patterns">
+                <i class="ph-bold ph-grid-four"></i>
+                <span>Patterns</span>
+            </a>
+            <div class="fnav-sep"></div>
+            <button class="fnav-btn" id="search-toggle" aria-label="Search">
+                <i class="ph ph-magnifying-glass"></i>
+            </button>
+            <button class="fnav-btn" id="theme-btn" aria-label="Toggle theme">
+                <i class="ph ph-moon"></i>
+            </button>
+        </nav>
+
+        <!-- Glassmorphism Top Bar (Desktop only) -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <a href="../index.html" class="logo">
+                    <i class="ph ph-intersect"></i>
+                    <span>Carbon</span>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <div class="search-container" id="search-container">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search components..." aria-label="Search" autocomplete="off">
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <main class="main-content">
+                <header class="page-header">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="../index.html">Carbon</a> <span class="sep">/</span> <span>Components</span> <span class="sep">/</span> <span>Menus</span>
+                    </nav>
+                    <h1><em>Menus</em></h1>
+                </header>
+                
+                <article class="prose">
+                    <h1>Menus</h1>
+<p>Menus display a list of choices on temporary surfaces, typically triggered by buttons or context actions. They allow users to select from a set of options without cluttering the interface.</p>
+<hr>
+<h2 id="installation">Installation</h2>
+<p>Copy the menu CSS from <code>styles/docs.css</code> or include the Carbon stylesheet:</p>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;carbon.min.css&quot;&gt;
+</code></pre>
+<p>Then use menu classes in your HTML:</p>
+<pre><code class="language-html">&lt;div class=&quot;Menu&quot;&gt;
+    &lt;button class=&quot;Menu-item&quot;&gt;Edit&lt;/button&gt;
+    &lt;button class=&quot;Menu-item&quot;&gt;Delete&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="usage">Usage</h2>
+<p>The base <code>.Menu</code> class provides the menu container styling. Add <code>.Menu--open</code> to show the menu, and use <code>.Menu-item</code> for each action.</p>
+
+<div class="Preview" id="preview-pwpda6i77">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Menu Menu--open" style="position: relative; max-width: 180px;">
+    <button class="Menu-item">Edit</button>
+    <button class="Menu-item">Duplicate</button>
+    <button class="Menu-item">Archive</button>
+    <button class="Menu-item">Delete</button>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Menu Menu--open&quot; style=&quot;position: relative; max-width: 180px;&quot;&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;Edit&lt;/button&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;Duplicate&lt;/button&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;Archive&lt;/button&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;Delete&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="examples">Examples</h2>
+<h3 id="basic-menu">Basic Menu</h3>
+<p>A simple dropdown menu with clickable items.</p>
+
+<div class="Preview" id="preview-aw29m1voo">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Menu-demo">
+    <button class="Button Button--secondary" onclick="this.nextElementSibling.classList.toggle('Menu--open')">
+        Options
+        <i class="ph ph-caret-down"></i>
+    </button>
+    <div class="Menu Menu--open" style="position: relative; top: var(--space-2);">
+        <button class="Menu-item">Edit</button>
+        <button class="Menu-item">Duplicate</button>
+        <button class="Menu-item">Archive</button>
+        <button class="Menu-item">Delete</button>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Menu-demo&quot;&gt;
+&lt;button class=&quot;Button Button--secondary&quot; onclick=&quot;this.nextElementSibling.classList.toggle(&#039;Menu--open&#039;)&quot;&gt;
+Options
+&lt;i class=&quot;ph ph-caret-down&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;div class=&quot;Menu Menu--open&quot; style=&quot;position: relative; top: var(--space-2);&quot;&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;Edit&lt;/button&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;Duplicate&lt;/button&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;Archive&lt;/button&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;Delete&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="menu-with-icons">Menu with Icons</h3>
+<p>Add leading icons to menu items for visual recognition.</p>
+
+<div class="Preview" id="preview-mikspllca">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Menu Menu--open" style="max-width: 200px;">
+    <button class="Menu-item">
+        <i class="Menu-item-icon ph ph-pencil"></i>
+        Edit
+    </button>
+    <button class="Menu-item">
+        <i class="Menu-item-icon ph ph-copy"></i>
+        Duplicate
+    </button>
+    <button class="Menu-item">
+        <i class="Menu-item-icon ph ph-archive"></i>
+        Archive
+    </button>
+    <div class="Menu-divider"></div>
+    <button class="Menu-item Menu-item--danger">
+        <i class="Menu-item-icon ph ph-trash"></i>
+        Delete
+    </button>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Menu Menu--open&quot; style=&quot;max-width: 200px;&quot;&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-pencil&quot;&gt;&lt;/i&gt;
+Edit
+&lt;/button&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-copy&quot;&gt;&lt;/i&gt;
+Duplicate
+&lt;/button&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-archive&quot;&gt;&lt;/i&gt;
+Archive
+&lt;/button&gt;
+&lt;div class=&quot;Menu-divider&quot;&gt;&lt;/div&gt;
+&lt;button class=&quot;Menu-item Menu-item--danger&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-trash&quot;&gt;&lt;/i&gt;
+Delete
+&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="menu-with-shortcuts">Menu with Shortcuts</h3>
+<p>Display keyboard shortcuts alongside menu items.</p>
+
+<div class="Preview" id="preview-9e3yd14uq">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Menu Menu--open" style="max-width: 240px;">
+    <button class="Menu-item">
+        <span class="Menu-item-text">Undo</span>
+        <span class="Menu-item-shortcut">⌘Z</span>
+    </button>
+    <button class="Menu-item">
+        <span class="Menu-item-text">Redo</span>
+        <span class="Menu-item-shortcut">⇧⌘Z</span>
+    </button>
+    <div class="Menu-divider"></div>
+    <button class="Menu-item">
+        <span class="Menu-item-text">Cut</span>
+        <span class="Menu-item-shortcut">⌘X</span>
+    </button>
+    <button class="Menu-item">
+        <span class="Menu-item-text">Copy</span>
+        <span class="Menu-item-shortcut">⌘C</span>
+    </button>
+    <button class="Menu-item">
+        <span class="Menu-item-text">Paste</span>
+        <span class="Menu-item-shortcut">⌘V</span>
+    </button>
+    <div class="Menu-divider"></div>
+    <button class="Menu-item">
+        <span class="Menu-item-text">Select All</span>
+        <span class="Menu-item-shortcut">⌘A</span>
+    </button>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Menu Menu--open&quot; style=&quot;max-width: 240px;&quot;&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;span class=&quot;Menu-item-text&quot;&gt;Undo&lt;/span&gt;
+&lt;span class=&quot;Menu-item-shortcut&quot;&gt;⌘Z&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;span class=&quot;Menu-item-text&quot;&gt;Redo&lt;/span&gt;
+&lt;span class=&quot;Menu-item-shortcut&quot;&gt;⇧⌘Z&lt;/span&gt;
+&lt;/button&gt;
+&lt;div class=&quot;Menu-divider&quot;&gt;&lt;/div&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;span class=&quot;Menu-item-text&quot;&gt;Cut&lt;/span&gt;
+&lt;span class=&quot;Menu-item-shortcut&quot;&gt;⌘X&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;span class=&quot;Menu-item-text&quot;&gt;Copy&lt;/span&gt;
+&lt;span class=&quot;Menu-item-shortcut&quot;&gt;⌘C&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;span class=&quot;Menu-item-text&quot;&gt;Paste&lt;/span&gt;
+&lt;span class=&quot;Menu-item-shortcut&quot;&gt;⌘V&lt;/span&gt;
+&lt;/button&gt;
+&lt;div class=&quot;Menu-divider&quot;&gt;&lt;/div&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;span class=&quot;Menu-item-text&quot;&gt;Select All&lt;/span&gt;
+&lt;span class=&quot;Menu-item-shortcut&quot;&gt;⌘A&lt;/span&gt;
+&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="menu-with-sections">Menu with Sections</h3>
+<p>Group related items with headers.</p>
+
+<div class="Preview" id="preview-gmspzuniq">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Menu Menu--open" style="max-width: 220px;">
+    <div class="Menu-header">View</div>
+    <button class="Menu-item">
+        <i class="Menu-item-icon ph ph-squares-four"></i>
+        Grid View
+    </button>
+    <button class="Menu-item">
+        <i class="Menu-item-icon ph ph-list"></i>
+        List View
+    </button>
+    <button class="Menu-item">
+        <i class="Menu-item-icon ph ph-columns"></i>
+        Column View
+    </button>
+    <div class="Menu-header">Sort By</div>
+    <button class="Menu-item">
+        <i class="Menu-item-icon ph ph-calendar"></i>
+        Date Modified
+    </button>
+    <button class="Menu-item">
+        <i class="Menu-item-icon ph ph-text-aa"></i>
+        Name
+    </button>
+    <button class="Menu-item">
+        <i class="Menu-item-icon ph ph-file"></i>
+        Size
+    </button>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Menu Menu--open&quot; style=&quot;max-width: 220px;&quot;&gt;
+&lt;div class=&quot;Menu-header&quot;&gt;View&lt;/div&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-squares-four&quot;&gt;&lt;/i&gt;
+Grid View
+&lt;/button&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-list&quot;&gt;&lt;/i&gt;
+List View
+&lt;/button&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-columns&quot;&gt;&lt;/i&gt;
+Column View
+&lt;/button&gt;
+&lt;div class=&quot;Menu-header&quot;&gt;Sort By&lt;/div&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-calendar&quot;&gt;&lt;/i&gt;
+Date Modified
+&lt;/button&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-text-aa&quot;&gt;&lt;/i&gt;
+Name
+&lt;/button&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-file&quot;&gt;&lt;/i&gt;
+Size
+&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="checkable-menu">Checkable Menu</h3>
+<p>Menu items with checkboxes or radio buttons for toggling options.</p>
+
+<div class="Preview" id="preview-g62rajo8m">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; gap: var(--space-6);">
+    <div class="Menu Menu--open" style="min-width: 180px;">
+        <div class="Menu-header">Options</div>
+        <label class="Menu-item Menu-item--checkbox">
+            <input type="checkbox" checked>
+            <span class="Menu-item-text">Show Hidden Files</span>
+        </label>
+        <label class="Menu-item Menu-item--checkbox">
+            <input type="checkbox">
+            <span class="Menu-item-text">Show Extensions</span>
+        </label>
+        <label class="Menu-item Menu-item--checkbox">
+            <input type="checkbox" checked>
+            <span class="Menu-item-text">Show Preview</span>
+        </label>
+    </div>
+    <div class="Menu Menu--open" style="min-width: 160px;">
+        <div class="Menu-header">Sort Order</div>
+        <label class="Menu-item Menu-item--radio">
+            <input type="radio" name="sort" checked>
+            <span class="Menu-item-text">Ascending</span>
+        </label>
+        <label class="Menu-item Menu-item--radio">
+            <input type="radio" name="sort">
+            <span class="Menu-item-text">Descending</span>
+        </label>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; gap: var(--space-6);&quot;&gt;
+&lt;div class=&quot;Menu Menu--open&quot; style=&quot;min-width: 180px;&quot;&gt;
+&lt;div class=&quot;Menu-header&quot;&gt;Options&lt;/div&gt;
+&lt;label class=&quot;Menu-item Menu-item--checkbox&quot;&gt;
+&lt;input type=&quot;checkbox&quot; checked&gt;
+&lt;span class=&quot;Menu-item-text&quot;&gt;Show Hidden Files&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;Menu-item Menu-item--checkbox&quot;&gt;
+&lt;input type=&quot;checkbox&quot;&gt;
+&lt;span class=&quot;Menu-item-text&quot;&gt;Show Extensions&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;Menu-item Menu-item--checkbox&quot;&gt;
+&lt;input type=&quot;checkbox&quot; checked&gt;
+&lt;span class=&quot;Menu-item-text&quot;&gt;Show Preview&lt;/span&gt;
+&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Menu Menu--open&quot; style=&quot;min-width: 160px;&quot;&gt;
+&lt;div class=&quot;Menu-header&quot;&gt;Sort Order&lt;/div&gt;
+&lt;label class=&quot;Menu-item Menu-item--radio&quot;&gt;
+&lt;input type=&quot;radio&quot; name=&quot;sort&quot; checked&gt;
+&lt;span class=&quot;Menu-item-text&quot;&gt;Ascending&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;Menu-item Menu-item--radio&quot;&gt;
+&lt;input type=&quot;radio&quot; name=&quot;sort&quot;&gt;
+&lt;span class=&quot;Menu-item-text&quot;&gt;Descending&lt;/span&gt;
+&lt;/label&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="submenu">Submenu</h3>
+<p>Menu items that expand to show nested options.</p>
+
+<div class="Preview" id="preview-sohte08ga">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Menu Menu--open" style="max-width: 200px;">
+    <button class="Menu-item">
+        <i class="Menu-item-icon ph ph-file-plus"></i>
+        New
+    </button>
+    <button class="Menu-item">
+        <i class="Menu-item-icon ph ph-folder-open"></i>
+        Open
+    </button>
+    <button class="Menu-item Menu-item--submenu">
+        <i class="Menu-item-icon ph ph-clock-counter-clockwise"></i>
+        <span class="Menu-item-text">Recent</span>
+        <i class="Menu-item-chevron ph ph-caret-right"></i>
+    </button>
+    <div class="Menu-divider"></div>
+    <button class="Menu-item">
+        <i class="Menu-item-icon ph ph-floppy-disk"></i>
+        Save
+    </button>
+    <button class="Menu-item Menu-item--submenu">
+        <i class="Menu-item-icon ph ph-export"></i>
+        <span class="Menu-item-text">Export As</span>
+        <i class="Menu-item-chevron ph ph-caret-right"></i>
+    </button>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Menu Menu--open&quot; style=&quot;max-width: 200px;&quot;&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-file-plus&quot;&gt;&lt;/i&gt;
+New
+&lt;/button&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-folder-open&quot;&gt;&lt;/i&gt;
+Open
+&lt;/button&gt;
+&lt;button class=&quot;Menu-item Menu-item--submenu&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-clock-counter-clockwise&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;Menu-item-text&quot;&gt;Recent&lt;/span&gt;
+&lt;i class=&quot;Menu-item-chevron ph ph-caret-right&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;div class=&quot;Menu-divider&quot;&gt;&lt;/div&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-floppy-disk&quot;&gt;&lt;/i&gt;
+Save
+&lt;/button&gt;
+&lt;button class=&quot;Menu-item Menu-item--submenu&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-export&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;Menu-item-text&quot;&gt;Export As&lt;/span&gt;
+&lt;i class=&quot;Menu-item-chevron ph ph-caret-right&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="compact-menu">Compact Menu</h3>
+<p>A denser menu variant for space-constrained areas or toolbars.</p>
+
+<div class="Preview" id="preview-44cjkn75o">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Menu Menu--open Menu--compact" style="max-width: 160px;">
+    <button class="Menu-item">
+        <i class="Menu-item-icon ph ph-pencil"></i>
+        Edit
+    </button>
+    <button class="Menu-item">
+        <i class="Menu-item-icon ph ph-copy"></i>
+        Copy
+    </button>
+    <button class="Menu-item">
+        <i class="Menu-item-icon ph ph-share"></i>
+        Share
+    </button>
+    <div class="Menu-divider"></div>
+    <button class="Menu-item Menu-item--danger">
+        <i class="Menu-item-icon ph ph-trash"></i>
+        Delete
+    </button>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Menu Menu--open Menu--compact&quot; style=&quot;max-width: 160px;&quot;&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-pencil&quot;&gt;&lt;/i&gt;
+Edit
+&lt;/button&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-copy&quot;&gt;&lt;/i&gt;
+Copy
+&lt;/button&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-share&quot;&gt;&lt;/i&gt;
+Share
+&lt;/button&gt;
+&lt;div class=&quot;Menu-divider&quot;&gt;&lt;/div&gt;
+&lt;button class=&quot;Menu-item Menu-item--danger&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-trash&quot;&gt;&lt;/i&gt;
+Delete
+&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="menu-with-descriptions">Menu with Descriptions</h3>
+<p>Add secondary text for more context on complex actions.</p>
+
+<div class="Preview" id="preview-5ze71mcyk">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Menu Menu--open" style="max-width: 280px;">
+    <button class="Menu-item Menu-item--multiline">
+        <i class="Menu-item-icon ph ph-user-circle"></i>
+        <div class="Menu-item-content">
+            <span class="Menu-item-title">Profile</span>
+            <span class="Menu-item-description">View and edit your profile</span>
+        </div>
+    </button>
+    <button class="Menu-item Menu-item--multiline">
+        <i class="Menu-item-icon ph ph-gear"></i>
+        <div class="Menu-item-content">
+            <span class="Menu-item-title">Settings</span>
+            <span class="Menu-item-description">Manage preferences</span>
+        </div>
+    </button>
+    <button class="Menu-item Menu-item--multiline">
+        <i class="Menu-item-icon ph ph-bell"></i>
+        <div class="Menu-item-content">
+            <span class="Menu-item-title">Notifications</span>
+            <span class="Menu-item-description">Configure alerts</span>
+        </div>
+    </button>
+    <div class="Menu-divider"></div>
+    <button class="Menu-item Menu-item--danger">
+        <i class="Menu-item-icon ph ph-sign-out"></i>
+        Sign Out
+    </button>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Menu Menu--open&quot; style=&quot;max-width: 280px;&quot;&gt;
+&lt;button class=&quot;Menu-item Menu-item--multiline&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-user-circle&quot;&gt;&lt;/i&gt;
+&lt;div class=&quot;Menu-item-content&quot;&gt;
+&lt;span class=&quot;Menu-item-title&quot;&gt;Profile&lt;/span&gt;
+&lt;span class=&quot;Menu-item-description&quot;&gt;View and edit your profile&lt;/span&gt;
+&lt;/div&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Menu-item Menu-item--multiline&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-gear&quot;&gt;&lt;/i&gt;
+&lt;div class=&quot;Menu-item-content&quot;&gt;
+&lt;span class=&quot;Menu-item-title&quot;&gt;Settings&lt;/span&gt;
+&lt;span class=&quot;Menu-item-description&quot;&gt;Manage preferences&lt;/span&gt;
+&lt;/div&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Menu-item Menu-item--multiline&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-bell&quot;&gt;&lt;/i&gt;
+&lt;div class=&quot;Menu-item-content&quot;&gt;
+&lt;span class=&quot;Menu-item-title&quot;&gt;Notifications&lt;/span&gt;
+&lt;span class=&quot;Menu-item-description&quot;&gt;Configure alerts&lt;/span&gt;
+&lt;/div&gt;
+&lt;/button&gt;
+&lt;div class=&quot;Menu-divider&quot;&gt;&lt;/div&gt;
+&lt;button class=&quot;Menu-item Menu-item--danger&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-sign-out&quot;&gt;&lt;/i&gt;
+Sign Out
+&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="context-menu">Context Menu</h3>
+<p>Right-click style context menu for in-place actions.</p>
+
+<div class="Preview" id="preview-3no2hzbmc">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="position: relative; padding: var(--space-8); background: var(--bg-s); border-radius: var(--r-m); text-align: center; color: var(--fg-3);">
+    <span>Right-click area (simulated)</span>
+    <div class="Menu Menu--open Menu--context" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <button class="Menu-item">
+            <i class="Menu-item-icon ph ph-arrow-left"></i>
+            Back
+        </button>
+        <button class="Menu-item" disabled>
+            <i class="Menu-item-icon ph ph-arrow-right"></i>
+            Forward
+        </button>
+        <button class="Menu-item">
+            <i class="Menu-item-icon ph ph-arrow-clockwise"></i>
+            Reload
+        </button>
+        <div class="Menu-divider"></div>
+        <button class="Menu-item">
+            <i class="Menu-item-icon ph ph-code"></i>
+            View Source
+        </button>
+        <button class="Menu-item">
+            <i class="Menu-item-icon ph ph-magnifying-glass"></i>
+            Inspect
+        </button>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;position: relative; padding: var(--space-8); background: var(--bg-s); border-radius: var(--r-m); text-align: center; color: var(--fg-3);&quot;&gt;
+&lt;span&gt;Right-click area (simulated)&lt;/span&gt;
+&lt;div class=&quot;Menu Menu--open Menu--context&quot; style=&quot;position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);&quot;&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-arrow-left&quot;&gt;&lt;/i&gt;
+Back
+&lt;/button&gt;
+&lt;button class=&quot;Menu-item&quot; disabled&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-arrow-right&quot;&gt;&lt;/i&gt;
+Forward
+&lt;/button&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-arrow-clockwise&quot;&gt;&lt;/i&gt;
+Reload
+&lt;/button&gt;
+&lt;div class=&quot;Menu-divider&quot;&gt;&lt;/div&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-code&quot;&gt;&lt;/i&gt;
+View Source
+&lt;/button&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-magnifying-glass&quot;&gt;&lt;/i&gt;
+Inspect
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="disabled-items">Disabled Items</h3>
+<p>Menu items that are not currently available.</p>
+
+<div class="Preview" id="preview-fzrxh8k94">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Menu Menu--open" style="max-width: 200px;">
+    <button class="Menu-item">
+        <i class="Menu-item-icon ph ph-pencil"></i>
+        Edit
+    </button>
+    <button class="Menu-item" disabled>
+        <i class="Menu-item-icon ph ph-scissors"></i>
+        Cut
+    </button>
+    <button class="Menu-item">
+        <i class="Menu-item-icon ph ph-copy"></i>
+        Copy
+    </button>
+    <button class="Menu-item" disabled>
+        <i class="Menu-item-icon ph ph-clipboard"></i>
+        Paste
+    </button>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Menu Menu--open&quot; style=&quot;max-width: 200px;&quot;&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-pencil&quot;&gt;&lt;/i&gt;
+Edit
+&lt;/button&gt;
+&lt;button class=&quot;Menu-item&quot; disabled&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-scissors&quot;&gt;&lt;/i&gt;
+Cut
+&lt;/button&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-copy&quot;&gt;&lt;/i&gt;
+Copy
+&lt;/button&gt;
+&lt;button class=&quot;Menu-item&quot; disabled&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-clipboard&quot;&gt;&lt;/i&gt;
+Paste
+&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="common-patterns">Common Patterns</h2>
+<h3 id="user-account-menu">User Account Menu</h3>
+
+<div class="Preview" id="preview-kr9vi7pap">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; justify-content: flex-end;">
+        <div style="position: relative;">
+            <button class="Button Button--ghost" style="display: flex; align-items: center; gap: var(--space-2);">
+                <div style="width: 28px; height: 28px; border-radius: 50%; background: oklch(65% 0.15 250); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 600;">SC</div>
+                <span>Sarah Chen</span>
+                <i class="ph ph-caret-down"></i>
+            </button>
+            <div class="Menu Menu--open" style="position: relative; top: var(--space-2); min-width: 200px;">
+                <button class="Menu-item">
+                    <i class="Menu-item-icon ph ph-user"></i>
+                    Profile
+                </button>
+                <button class="Menu-item">
+                    <i class="Menu-item-icon ph ph-gear"></i>
+                    Settings
+                </button>
+                <button class="Menu-item">
+                    <i class="Menu-item-icon ph ph-credit-card"></i>
+                    Billing
+                </button>
+                <div class="Menu-divider"></div>
+                <button class="Menu-item Menu-item--danger">
+                    <i class="Menu-item-icon ph ph-sign-out"></i>
+                    Sign Out
+                </button>
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; justify-content: flex-end;&quot;&gt;
+&lt;div style=&quot;position: relative;&quot;&gt;
+&lt;button class=&quot;Button Button--ghost&quot; style=&quot;display: flex; align-items: center; gap: var(--space-2);&quot;&gt;
+&lt;div style=&quot;width: 28px; height: 28px; border-radius: 50%; background: oklch(65% 0.15 250); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 600;&quot;&gt;SC&lt;/div&gt;
+&lt;span&gt;Sarah Chen&lt;/span&gt;
+&lt;i class=&quot;ph ph-caret-down&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;div class=&quot;Menu Menu--open&quot; style=&quot;position: relative; top: var(--space-2); min-width: 200px;&quot;&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-user&quot;&gt;&lt;/i&gt;
+Profile
+&lt;/button&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-gear&quot;&gt;&lt;/i&gt;
+Settings
+&lt;/button&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-credit-card&quot;&gt;&lt;/i&gt;
+Billing
+&lt;/button&gt;
+&lt;div class=&quot;Menu-divider&quot;&gt;&lt;/div&gt;
+&lt;button class=&quot;Menu-item Menu-item--danger&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-sign-out&quot;&gt;&lt;/i&gt;
+Sign Out
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="toolbar-actions-menu">Toolbar Actions Menu</h3>
+
+<div class="Preview" id="preview-umu0w2bez">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; gap: var(--space-2); align-items: flex-start;">
+        <button class="Button Button--secondary Button--small">
+            <i class="ph ph-pencil"></i> Edit
+        </button>
+        <div style="position: relative;">
+            <button class="Button Button--secondary Button--small">
+                <i class="ph ph-dots-three"></i>
+            </button>
+            <div class="Menu Menu--open Menu--compact" style="position: relative; top: var(--space-1); min-width: 160px;">
+                <button class="Menu-item">
+                    <i class="Menu-item-icon ph ph-copy"></i>
+                    Duplicate
+                </button>
+                <button class="Menu-item">
+                    <i class="Menu-item-icon ph ph-archive"></i>
+                    Archive
+                </button>
+                <button class="Menu-item">
+                    <i class="Menu-item-icon ph ph-share"></i>
+                    Share
+                </button>
+                <div class="Menu-divider"></div>
+                <button class="Menu-item Menu-item--danger">
+                    <i class="Menu-item-icon ph ph-trash"></i>
+                    Delete
+                </button>
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; gap: var(--space-2); align-items: flex-start;&quot;&gt;
+&lt;button class=&quot;Button Button--secondary Button--small&quot;&gt;
+&lt;i class=&quot;ph ph-pencil&quot;&gt;&lt;/i&gt; Edit
+&lt;/button&gt;
+&lt;div style=&quot;position: relative;&quot;&gt;
+&lt;button class=&quot;Button Button--secondary Button--small&quot;&gt;
+&lt;i class=&quot;ph ph-dots-three&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;div class=&quot;Menu Menu--open Menu--compact&quot; style=&quot;position: relative; top: var(--space-1); min-width: 160px;&quot;&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-copy&quot;&gt;&lt;/i&gt;
+Duplicate
+&lt;/button&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-archive&quot;&gt;&lt;/i&gt;
+Archive
+&lt;/button&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-share&quot;&gt;&lt;/i&gt;
+Share
+&lt;/button&gt;
+&lt;div class=&quot;Menu-divider&quot;&gt;&lt;/div&gt;
+&lt;button class=&quot;Menu-item Menu-item--danger&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-trash&quot;&gt;&lt;/i&gt;
+Delete
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="table-row-actions">Table Row Actions</h3>
+
+<div class="Preview" id="preview-2kfldppkt">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; align-items: center; justify-content: space-between; padding: var(--space-3); border: 1px solid var(--bd); border-radius: var(--r-m); max-width: 480px;">
+        <div style="display: flex; align-items: center; gap: var(--space-3);">
+            <i class="ph ph-file-text" style="color: var(--fg-3);"></i>
+            <div>
+                <div style="font-weight: 500; font-size: 0.9rem;">Project Proposal.pdf</div>
+                <div style="font-size: 0.8rem; color: var(--fg-3);">2.4 MB · Jan 15, 2026</div>
+            </div>
+        </div>
+        <div style="position: relative;">
+            <div class="Menu Menu--open Menu--compact" style="position: relative; min-width: 140px;">
+                <button class="Menu-item">
+                    <i class="Menu-item-icon ph ph-download"></i>
+                    Download
+                </button>
+                <button class="Menu-item">
+                    <i class="Menu-item-icon ph ph-share"></i>
+                    Share
+                </button>
+                <div class="Menu-divider"></div>
+                <button class="Menu-item Menu-item--danger">
+                    <i class="Menu-item-icon ph ph-trash"></i>
+                    Delete
+                </button>
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; align-items: center; justify-content: space-between; padding: var(--space-3); border: 1px solid var(--bd); border-radius: var(--r-m); max-width: 480px;&quot;&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-3);&quot;&gt;
+&lt;i class=&quot;ph ph-file-text&quot; style=&quot;color: var(--fg-3);&quot;&gt;&lt;/i&gt;
+&lt;div&gt;
+&lt;div style=&quot;font-weight: 500; font-size: 0.9rem;&quot;&gt;Project Proposal.pdf&lt;/div&gt;
+&lt;div style=&quot;font-size: 0.8rem; color: var(--fg-3);&quot;&gt;2.4 MB · Jan 15, 2026&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;position: relative;&quot;&gt;
+&lt;div class=&quot;Menu Menu--open Menu--compact&quot; style=&quot;position: relative; min-width: 140px;&quot;&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-download&quot;&gt;&lt;/i&gt;
+Download
+&lt;/button&gt;
+&lt;button class=&quot;Menu-item&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-share&quot;&gt;&lt;/i&gt;
+Share
+&lt;/button&gt;
+&lt;div class=&quot;Menu-divider&quot;&gt;&lt;/div&gt;
+&lt;button class=&quot;Menu-item Menu-item--danger&quot;&gt;
+&lt;i class=&quot;Menu-item-icon ph ph-trash&quot;&gt;&lt;/i&gt;
+Delete
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="customization">Customization</h2>
+<p>Override menu styles using CSS custom properties:</p>
+<pre><code class="language-css">/* Custom menu appearance */
+.Menu {
+  --menu-bg: var(--bg);
+  --menu-border: var(--border-primary);
+  --menu-shadow: var(--shadow-lg);
+  --menu-radius: var(--radius-lg);
+}
+
+/* Custom item styling */
+.Menu-item {
+  --menu-item-padding: var(--space-2) var(--space-3);
+  --menu-item-hover: var(--bg-s);
+}
+
+/* Danger variant color */
+.Menu-item--danger {
+  --menu-item-color: var(--color-danger);
+}
+
+/* Custom compact variant */
+.Menu--compact .Menu-item {
+  --menu-item-padding: var(--space-1) var(--space-2);
+  font-size: var(--text-sm);
+}
+
+/* Wider menu */
+.Menu--wide {
+  min-width: 280px;
+}
+</code></pre>
+<hr>
+<h2 id="api-reference">API Reference</h2>
+<h3 id="container-classes">Container Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Menu</code></td>
+<td class="ApiTable-desc">Base menu container (hidden by default)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Menu--open</code></td>
+<td class="ApiTable-desc">Shows the menu (display: block)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Menu--compact</code></td>
+<td class="ApiTable-desc">Denser padding for compact layouts</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Menu--context</code></td>
+<td class="ApiTable-desc">Context menu styling (absolute positioning)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="item-classes">Item Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Menu-item</code></td>
+<td class="ApiTable-desc">Clickable menu item (use on button/a/label)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Menu-item--danger</code></td>
+<td class="ApiTable-desc">Destructive action styling (red text)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Menu-item--checkbox</code></td>
+<td class="ApiTable-desc">Checkbox item (use on label)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Menu-item--radio</code></td>
+<td class="ApiTable-desc">Radio item (use on label)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Menu-item--submenu</code></td>
+<td class="ApiTable-desc">Item with nested submenu indicator</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Menu-item--multiline</code></td>
+<td class="ApiTable-desc">Item with title and description</td>
+</tr>
+</tbody>
+</table>
+<h3 id="item-content-classes">Item Content Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Menu-item-icon</code></td>
+<td class="ApiTable-desc">Leading icon in menu item</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Menu-item-text</code></td>
+<td class="ApiTable-desc">Main text label (required with shortcuts)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Menu-item-shortcut</code></td>
+<td class="ApiTable-desc">Keyboard shortcut display (right-aligned)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Menu-item-chevron</code></td>
+<td class="ApiTable-desc">Submenu indicator arrow</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Menu-item-content</code></td>
+<td class="ApiTable-desc">Wrapper for multiline items</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Menu-item-title</code></td>
+<td class="ApiTable-desc">Primary text in multiline item</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Menu-item-description</code></td>
+<td class="ApiTable-desc">Secondary text in multiline item</td>
+</tr>
+</tbody>
+</table>
+<h3 id="structural-classes">Structural Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Menu-header</code></td>
+<td class="ApiTable-desc">Section header (non-interactive)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Menu-divider</code></td>
+<td class="ApiTable-desc">Visual separator between groups</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data-attributes">Data Attributes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">disabled</code></td>
+<td class="ApiTable-desc">Disables the menu item (grayed out, not clickable)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="css-reference">CSS Reference</h2>
+<pre><code class="language-css">/* Menu Container */
+.Menu {
+  display: none;
+  flex-direction: column;
+  background: var(--bg);
+  border: 1px solid var(--bd);
+  border-radius: var(--r-m);
+  padding: var(--space-1);
+  box-shadow: 0 4px 12px oklch(0% 0 0 / 0.1);
+  min-width: 160px;
+  z-index: 100;
+}
+
+.Menu--open {
+  display: flex;
+}
+
+/* Menu Item */
+.Menu-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--fg);
+  border-radius: var(--r-s);
+  width: 100%;
+  text-align: left;
+  transition: background-color 0.1s;
+}
+
+.Menu-item:hover {
+  background-color: var(--bg-s);
+}
+
+.Menu-item:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+/* Danger Item */
+.Menu-item--danger {
+  color: oklch(55% 0.2 25);
+}
+
+.Menu-item--danger:hover {
+  background-color: oklch(55% 0.2 25 / 0.1);
+}
+
+/* Disabled Item */
+.Menu-item:disabled,
+.Menu-item[aria-disabled=&quot;true&quot;] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.Menu-item:disabled:hover {
+  background: none;
+}
+
+/* Item Icon */
+.Menu-item-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  color: var(--fg-3);
+}
+
+.Menu-item--danger .Menu-item-icon {
+  color: oklch(55% 0.2 25);
+}
+
+/* Item Text &amp; Shortcut */
+.Menu-item-text {
+  flex: 1;
+}
+
+.Menu-item-shortcut {
+  font-size: 0.75rem;
+  color: var(--fg-3);
+  margin-left: auto;
+}
+
+/* Submenu */
+.Menu-item-chevron {
+  font-size: 0.8rem;
+  color: var(--fg-3);
+  margin-left: auto;
+}
+
+/* Multiline Item */
+.Menu-item--multiline {
+  align-items: flex-start;
+  padding: var(--space-3);
+}
+
+.Menu-item-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.Menu-item-title {
+  font-weight: 500;
+}
+
+.Menu-item-description {
+  font-size: 0.8rem;
+  color: var(--fg-3);
+}
+
+/* Checkbox / Radio Items */
+.Menu-item--checkbox,
+.Menu-item--radio {
+  gap: var(--space-2);
+}
+
+/* Divider */
+.Menu-divider {
+  height: 1px;
+  background: var(--bd);
+  margin: var(--space-1) 0;
+}
+
+/* Header */
+.Menu-header {
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--fg-3);
+}
+
+/* Compact Variant */
+.Menu--compact .Menu-item {
+  padding: var(--space-1) var(--space-2);
+  font-size: 0.85rem;
+}
+
+/* Context Menu */
+.Menu--context {
+  position: absolute;
+}
+</code></pre>
+<hr>
+<h2 id="accessibility">Accessibility</h2>
+<h3 id="keyboard-support">Keyboard Support</h3>
+<div class="Table-container"><table class="Table">
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enter / Space</td>
+<td>Activates focused menu item</td>
+</tr>
+<tr>
+<td>Escape</td>
+<td>Closes the menu</td>
+</tr>
+<tr>
+<td>Arrow Down</td>
+<td>Moves focus to next item</td>
+</tr>
+<tr>
+<td>Arrow Up</td>
+<td>Moves focus to previous item</td>
+</tr>
+<tr>
+<td>Arrow Right</td>
+<td>Opens submenu (if present)</td>
+</tr>
+<tr>
+<td>Arrow Left</td>
+<td>Closes submenu, returns to parent</td>
+</tr>
+<tr>
+<td>Home</td>
+<td>Moves focus to first item</td>
+</tr>
+<tr>
+<td>End</td>
+<td>Moves focus to last item</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="screen-readers">Screen Readers</h3>
+<pre><code class="language-html">&lt;!-- Menu trigger with aria-expanded --&gt;
+&lt;button class=&quot;Button Button--secondary&quot; 
+        aria-haspopup=&quot;menu&quot; 
+        aria-expanded=&quot;false&quot;
+        aria-controls=&quot;options-menu&quot;&gt;
+    Options
+    &lt;i class=&quot;ph ph-caret-down&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+
+&lt;!-- Menu container with role --&gt;
+&lt;div class=&quot;Menu&quot; role=&quot;menu&quot; id=&quot;options-menu&quot; aria-label=&quot;Options&quot;&gt;
+    &lt;button class=&quot;Menu-item&quot; role=&quot;menuitem&quot;&gt;Edit&lt;/button&gt;
+    &lt;button class=&quot;Menu-item&quot; role=&quot;menuitem&quot;&gt;Duplicate&lt;/button&gt;
+    &lt;div class=&quot;Menu-divider&quot; role=&quot;separator&quot;&gt;&lt;/div&gt;
+    &lt;button class=&quot;Menu-item&quot; role=&quot;menuitem&quot;&gt;Delete&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Disabled item --&gt;
+&lt;button class=&quot;Menu-item&quot; role=&quot;menuitem&quot; aria-disabled=&quot;true&quot;&gt;
+    Paste
+&lt;/button&gt;
+
+&lt;!-- Checkbox item --&gt;
+&lt;div class=&quot;Menu-item&quot; role=&quot;menuitemcheckbox&quot; aria-checked=&quot;true&quot;&gt;
+    &lt;span class=&quot;Menu-item-text&quot;&gt;Show Hidden Files&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- Radio group --&gt;
+&lt;div role=&quot;group&quot; aria-label=&quot;Sort order&quot;&gt;
+    &lt;div class=&quot;Menu-item&quot; role=&quot;menuitemradio&quot; aria-checked=&quot;true&quot;&gt;
+        Ascending
+    &lt;/div&gt;
+    &lt;div class=&quot;Menu-item&quot; role=&quot;menuitemradio&quot; aria-checked=&quot;false&quot;&gt;
+        Descending
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Submenu trigger --&gt;
+&lt;button class=&quot;Menu-item&quot; role=&quot;menuitem&quot; aria-haspopup=&quot;menu&quot; aria-expanded=&quot;false&quot;&gt;
+    &lt;span class=&quot;Menu-item-text&quot;&gt;Recent&lt;/span&gt;
+    &lt;i class=&quot;Menu-item-chevron ph ph-caret-right&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+</code></pre>
+<h3 id="focus-management">Focus Management</h3>
+<pre><code class="language-html">&lt;!-- When menu opens: --&gt;
+&lt;!-- 1. Set aria-expanded=&quot;true&quot; on trigger --&gt;
+&lt;!-- 2. Move focus to first menu item --&gt;
+&lt;!-- 3. Trap focus within menu --&gt;
+
+&lt;!-- When menu closes: --&gt;
+&lt;!-- 1. Set aria-expanded=&quot;false&quot; on trigger --&gt;
+&lt;!-- 2. Return focus to trigger button --&gt;
+</code></pre>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="do">Do</h3>
+<ul>
+<li>✓ <strong>Use clear, concise labels</strong> — “Delete” not “Remove this item from the list”</li>
+<li>✓ <strong>Group related items</strong> — Use headers and dividers to organize</li>
+<li>✓ <strong>Show keyboard shortcuts</strong> — Help power users work faster</li>
+<li>✓ <strong>Use icons consistently</strong> — All items with icons, or none</li>
+<li>✓ <strong>Put destructive actions last</strong> — Separated by a divider</li>
+<li>✓ <strong>Close on selection</strong> — Menu should dismiss after an action</li>
+<li>✓ <strong>Manage focus properly</strong> — Return focus to trigger on close</li>
+</ul>
+<h3 id="don-t">Don’t</h3>
+<ul>
+<li>✗ <strong>Nest too deeply</strong> — More than 2 levels becomes confusing</li>
+<li>✗ <strong>Use menus for navigation</strong> — Use proper nav components instead</li>
+<li>✗ <strong>Mix icons and no-icons</strong> — Be consistent within a menu</li>
+<li>✗ <strong>Forget disabled states</strong> — Explain why items are unavailable</li>
+<li>✗ <strong>Make menus too wide</strong> — Keep them scannable (max ~300px)</li>
+<li>✗ <strong>Put too many items</strong> — Consider breaking into sections or submenus</li>
+<li>✗ <strong>Ignore touch targets</strong> — Minimum 44px height on mobile</li>
+</ul>
+
+                </article>
+
+                <footer class="page-footer">
+                    <p>Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

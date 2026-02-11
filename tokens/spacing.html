@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Spacing | Carbon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/bold/style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Floating Pill Nav (Mobile: bottom, Desktop: top) -->
+        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation">
+            <a href="../index.html" class="fnav-btn" data-section="home" aria-label="Home">
+                <i class="ph-bold ph-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="../tokens/colors.html" class="fnav-btn" data-section="tokens" aria-label="Tokens">
+                <i class="ph-bold ph-palette"></i>
+                <span>Tokens</span>
+            </a>
+            <a href="../components/buttons.html" class="fnav-btn" data-section="components" aria-label="Components">
+                <i class="ph-bold ph-stack"></i>
+                <span>Components</span>
+            </a>
+            <a href="../patterns/layouts.html" class="fnav-btn" data-section="patterns" aria-label="Patterns">
+                <i class="ph-bold ph-grid-four"></i>
+                <span>Patterns</span>
+            </a>
+            <div class="fnav-sep"></div>
+            <button class="fnav-btn" id="search-toggle" aria-label="Search">
+                <i class="ph ph-magnifying-glass"></i>
+            </button>
+            <button class="fnav-btn" id="theme-btn" aria-label="Toggle theme">
+                <i class="ph ph-moon"></i>
+            </button>
+        </nav>
+
+        <!-- Glassmorphism Top Bar (Desktop only) -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <a href="../index.html" class="logo">
+                    <i class="ph ph-intersect"></i>
+                    <span>Carbon</span>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <div class="search-container" id="search-container">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search components..." aria-label="Search" autocomplete="off">
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <main class="main-content">
+                <header class="page-header">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="../index.html">Carbon</a> <span class="sep">/</span> <span>Tokens</span> <span class="sep">/</span> <span>Spacing</span>
+                    </nav>
+                    <h1><em>Spacing</em></h1>
+                </header>
+                
+                <article class="prose">
+                    <h1>Spacing</h1>
+<p>Carbon uses a <strong>4px base unit</strong> for all spacing. This isn’t arbitrary — it’s the smallest value that remains visible at 1x density, divides evenly at 2x and 3x screen densities, and aligns to the pixel grid at every common resolution. Every spacing decision in the system is a multiple of 4.</p>
+<p>The result: components breathe consistently, layouts feel unified, and the invisible grid that holds everything together stays invisible — which is exactly how you know it’s working.</p>
+<hr>
+<h2 id="why-4px-">Why 4px?</h2>
+<p>Four pixels sits at the intersection of three constraints:</p>
+
+<div class="Preview" id="preview-9xgle0ffe">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); width: 100%;">
+        <div style="background: var(--bg-s); border-radius: var(--r-m); padding: var(--space-5); border: 1px solid var(--bd-w);">
+            <div style="font-family: var(--ff-m); font-size: .5625rem; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); margin-bottom: var(--space-2);">Pixel Grids</div>
+            <div style="font-size: .85rem; color: var(--fg-2); line-height: 1.6;">4 divides cleanly into every common screen density. At 1x: 4px. At 1.5x: 6px. At 2x: 8px. At 3x: 12px. No sub-pixel rendering, no blurry edges.</div>
+        </div>
+        <div style="background: var(--bg-s); border-radius: var(--r-m); padding: var(--space-5); border: 1px solid var(--bd-w);">
+            <div style="font-family: var(--ff-m); font-size: .5625rem; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); margin-bottom: var(--space-2);">Touch Targets</div>
+            <div style="font-size: .85rem; color: var(--fg-2); line-height: 1.6;">The minimum touch target (44–48px) is exactly 11–12 base units. Comfortable targets build naturally from the scale without awkward math.</div>
+        </div>
+        <div style="background: var(--bg-s); border-radius: var(--r-m); padding: var(--space-5); border: 1px solid var(--bd-w);">
+            <div style="font-family: var(--ff-m); font-size: .5625rem; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); margin-bottom: var(--space-2);">Optical Alignment</div>
+            <div style="font-size: .85rem; color: var(--fg-2); line-height: 1.6;">4px is small enough for fine optical adjustments (icon-to-text gaps) yet large enough that each step creates a <em>visible</em> difference.</div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); width: 100%;&quot;&gt;
+&lt;div style=&quot;background: var(--bg-s); border-radius: var(--r-m); padding: var(--space-5); border: 1px solid var(--bd-w);&quot;&gt;
+&lt;div style=&quot;font-family: var(--ff-m); font-size: .5625rem; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); margin-bottom: var(--space-2);&quot;&gt;Pixel Grids&lt;/div&gt;
+&lt;div style=&quot;font-size: .85rem; color: var(--fg-2); line-height: 1.6;&quot;&gt;4 divides cleanly into every common screen density. At 1x: 4px. At 1.5x: 6px. At 2x: 8px. At 3x: 12px. No sub-pixel rendering, no blurry edges.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;background: var(--bg-s); border-radius: var(--r-m); padding: var(--space-5); border: 1px solid var(--bd-w);&quot;&gt;
+&lt;div style=&quot;font-family: var(--ff-m); font-size: .5625rem; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); margin-bottom: var(--space-2);&quot;&gt;Touch Targets&lt;/div&gt;
+&lt;div style=&quot;font-size: .85rem; color: var(--fg-2); line-height: 1.6;&quot;&gt;The minimum touch target (44–48px) is exactly 11–12 base units. Comfortable targets build naturally from the scale without awkward math.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;background: var(--bg-s); border-radius: var(--r-m); padding: var(--space-5); border: 1px solid var(--bd-w);&quot;&gt;
+&lt;div style=&quot;font-family: var(--ff-m); font-size: .5625rem; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); margin-bottom: var(--space-2);&quot;&gt;Optical Alignment&lt;/div&gt;
+&lt;div style=&quot;font-size: .85rem; color: var(--fg-2); line-height: 1.6;&quot;&gt;4px is small enough for fine optical adjustments (icon-to-text gaps) yet large enough that each step creates a &lt;em&gt;visible&lt;/em&gt; difference.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="the-scale">The Scale</h2>
+<div class="Table-container"><table class="Table">
+<thead>
+<tr>
+<th>Token</th>
+<th>Value</th>
+<th>Pixels</th>
+<th>Common Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--space-1</code></td>
+<td>0.25rem</td>
+<td>4px</td>
+<td>Icon gaps, tight padding</td>
+</tr>
+<tr>
+<td><code>--space-2</code></td>
+<td>0.5rem</td>
+<td>8px</td>
+<td>Button padding, small gaps</td>
+</tr>
+<tr>
+<td><code>--space-3</code></td>
+<td>0.75rem</td>
+<td>12px</td>
+<td>Input padding, list spacing</td>
+</tr>
+<tr>
+<td><code>--space-4</code></td>
+<td>1rem</td>
+<td>16px</td>
+<td>Card padding, standard gaps</td>
+</tr>
+<tr>
+<td><code>--space-5</code></td>
+<td>1.25rem</td>
+<td>20px</td>
+<td>Section spacing</td>
+</tr>
+<tr>
+<td><code>--space-6</code></td>
+<td>1.5rem</td>
+<td>24px</td>
+<td>Component margins</td>
+</tr>
+<tr>
+<td><code>--space-8</code></td>
+<td>2rem</td>
+<td>32px</td>
+<td>Large gaps, section breaks</td>
+</tr>
+<tr>
+<td><code>--space-12</code></td>
+<td>3rem</td>
+<td>48px</td>
+<td>Page sections, hero spacing</td>
+</tr>
+</tbody>
+</table></div>
+
+<div class="Preview" id="preview-hrp3n2ae1">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-3); width: 100%;">
+        <div style="display: flex; align-items: center; gap: var(--space-4);">
+            <code style="width: 100px; font-size: .8rem;">--space-1</code>
+            <div style="width: 4px; height: 24px; background: var(--accent);"></div>
+            <span style="color: var(--fg-3); font-family: var(--ff-m); font-size: .75rem;">4px</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: var(--space-4);">
+            <code style="width: 100px; font-size: .8rem;">--space-2</code>
+            <div style="width: 8px; height: 24px; background: var(--accent);"></div>
+            <span style="color: var(--fg-3); font-family: var(--ff-m); font-size: .75rem;">8px</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: var(--space-4);">
+            <code style="width: 100px; font-size: .8rem;">--space-3</code>
+            <div style="width: 12px; height: 24px; background: var(--accent);"></div>
+            <span style="color: var(--fg-3); font-family: var(--ff-m); font-size: .75rem;">12px</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: var(--space-4);">
+            <code style="width: 100px; font-size: .8rem;">--space-4</code>
+            <div style="width: 16px; height: 24px; background: var(--accent);"></div>
+            <span style="color: var(--fg-3); font-family: var(--ff-m); font-size: .75rem;">16px</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: var(--space-4);">
+            <code style="width: 100px; font-size: .8rem;">--space-5</code>
+            <div style="width: 20px; height: 24px; background: var(--accent);"></div>
+            <span style="color: var(--fg-3); font-family: var(--ff-m); font-size: .75rem;">20px</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: var(--space-4);">
+            <code style="width: 100px; font-size: .8rem;">--space-6</code>
+            <div style="width: 24px; height: 24px; background: var(--accent);"></div>
+            <span style="color: var(--fg-3); font-family: var(--ff-m); font-size: .75rem;">24px</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: var(--space-4);">
+            <code style="width: 100px; font-size: .8rem;">--space-8</code>
+            <div style="width: 32px; height: 24px; background: var(--accent);"></div>
+            <span style="color: var(--fg-3); font-family: var(--ff-m); font-size: .75rem;">32px</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: var(--space-4);">
+            <code style="width: 100px; font-size: .8rem;">--space-12</code>
+            <div style="width: 48px; height: 24px; background: var(--accent);"></div>
+            <span style="color: var(--fg-3); font-family: var(--ff-m); font-size: .75rem;">48px</span>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-3); width: 100%;&quot;&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-4);&quot;&gt;
+&lt;code style=&quot;width: 100px; font-size: .8rem;&quot;&gt;--space-1&lt;/code&gt;
+&lt;div style=&quot;width: 4px; height: 24px; background: var(--accent);&quot;&gt;&lt;/div&gt;
+&lt;span style=&quot;color: var(--fg-3); font-family: var(--ff-m); font-size: .75rem;&quot;&gt;4px&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-4);&quot;&gt;
+&lt;code style=&quot;width: 100px; font-size: .8rem;&quot;&gt;--space-2&lt;/code&gt;
+&lt;div style=&quot;width: 8px; height: 24px; background: var(--accent);&quot;&gt;&lt;/div&gt;
+&lt;span style=&quot;color: var(--fg-3); font-family: var(--ff-m); font-size: .75rem;&quot;&gt;8px&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-4);&quot;&gt;
+&lt;code style=&quot;width: 100px; font-size: .8rem;&quot;&gt;--space-3&lt;/code&gt;
+&lt;div style=&quot;width: 12px; height: 24px; background: var(--accent);&quot;&gt;&lt;/div&gt;
+&lt;span style=&quot;color: var(--fg-3); font-family: var(--ff-m); font-size: .75rem;&quot;&gt;12px&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-4);&quot;&gt;
+&lt;code style=&quot;width: 100px; font-size: .8rem;&quot;&gt;--space-4&lt;/code&gt;
+&lt;div style=&quot;width: 16px; height: 24px; background: var(--accent);&quot;&gt;&lt;/div&gt;
+&lt;span style=&quot;color: var(--fg-3); font-family: var(--ff-m); font-size: .75rem;&quot;&gt;16px&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-4);&quot;&gt;
+&lt;code style=&quot;width: 100px; font-size: .8rem;&quot;&gt;--space-5&lt;/code&gt;
+&lt;div style=&quot;width: 20px; height: 24px; background: var(--accent);&quot;&gt;&lt;/div&gt;
+&lt;span style=&quot;color: var(--fg-3); font-family: var(--ff-m); font-size: .75rem;&quot;&gt;20px&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-4);&quot;&gt;
+&lt;code style=&quot;width: 100px; font-size: .8rem;&quot;&gt;--space-6&lt;/code&gt;
+&lt;div style=&quot;width: 24px; height: 24px; background: var(--accent);&quot;&gt;&lt;/div&gt;
+&lt;span style=&quot;color: var(--fg-3); font-family: var(--ff-m); font-size: .75rem;&quot;&gt;24px&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-4);&quot;&gt;
+&lt;code style=&quot;width: 100px; font-size: .8rem;&quot;&gt;--space-8&lt;/code&gt;
+&lt;div style=&quot;width: 32px; height: 24px; background: var(--accent);&quot;&gt;&lt;/div&gt;
+&lt;span style=&quot;color: var(--fg-3); font-family: var(--ff-m); font-size: .75rem;&quot;&gt;32px&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-4);&quot;&gt;
+&lt;code style=&quot;width: 100px; font-size: .8rem;&quot;&gt;--space-12&lt;/code&gt;
+&lt;div style=&quot;width: 48px; height: 24px; background: var(--accent);&quot;&gt;&lt;/div&gt;
+&lt;span style=&quot;color: var(--fg-3); font-family: var(--ff-m); font-size: .75rem;&quot;&gt;48px&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="the-math-why-these-steps-">The Math — Why These Steps?</h3>
+<p>The scale isn’t a linear progression (1, 2, 3, 4, 5, 6, 7, 8…). It’s <strong>curated</strong> — some steps are skipped deliberately:</p>
+
+<div class="Preview" id="preview-n4lsrk6sc">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="width: 100%;">
+        <div style="display: flex; align-items: flex-end; gap: 2px; height: 120px; margin-bottom: var(--space-3);">
+            <div style="flex: 1; background: var(--accent); height: 10%;"></div>
+            <div style="flex: 1; background: var(--accent); height: 17%;"></div>
+            <div style="flex: 1; background: var(--accent); height: 25%;"></div>
+            <div style="flex: 1; background: var(--accent); height: 33%;"></div>
+            <div style="flex: 1; background: var(--accent); height: 42%;"></div>
+            <div style="flex: 1; background: var(--accent); height: 50%;"></div>
+            <div style="flex: 1; background: var(--bg-m); height: 58%; opacity: .4;"></div>
+            <div style="flex: 1; background: var(--accent); height: 67%;"></div>
+            <div style="flex: 1; background: var(--bg-m); height: 75%; opacity: .4;"></div>
+            <div style="flex: 1; background: var(--bg-m); height: 83%; opacity: .4;"></div>
+            <div style="flex: 1; background: var(--bg-m); height: 92%; opacity: .4;"></div>
+            <div style="flex: 1; background: var(--accent); height: 100%;"></div>
+        </div>
+        <div style="display: flex; gap: 2px;">
+            <div style="flex: 1; text-align: center; font-family: var(--ff-m); font-size: .5rem; color: var(--fg-3);">1</div>
+            <div style="flex: 1; text-align: center; font-family: var(--ff-m); font-size: .5rem; color: var(--fg-3);">2</div>
+            <div style="flex: 1; text-align: center; font-family: var(--ff-m); font-size: .5rem; color: var(--fg-3);">3</div>
+            <div style="flex: 1; text-align: center; font-family: var(--ff-m); font-size: .5rem; color: var(--fg-3);">4</div>
+            <div style="flex: 1; text-align: center; font-family: var(--ff-m); font-size: .5rem; color: var(--fg-3);">5</div>
+            <div style="flex: 1; text-align: center; font-family: var(--ff-m); font-size: .5rem; color: var(--fg-3);">6</div>
+            <div style="flex: 1; text-align: center; font-family: var(--ff-m); font-size: .5rem; color: var(--fg-4);">7</div>
+            <div style="flex: 1; text-align: center; font-family: var(--ff-m); font-size: .5rem; color: var(--fg-3);">8</div>
+            <div style="flex: 1; text-align: center; font-family: var(--ff-m); font-size: .5rem; color: var(--fg-4);">9</div>
+            <div style="flex: 1; text-align: center; font-family: var(--ff-m); font-size: .5rem; color: var(--fg-4);">10</div>
+            <div style="flex: 1; text-align: center; font-family: var(--ff-m); font-size: .5rem; color: var(--fg-4);">11</div>
+            <div style="flex: 1; text-align: center; font-family: var(--ff-m); font-size: .5rem; color: var(--fg-3);">12</div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;width: 100%;&quot;&gt;
+&lt;div style=&quot;display: flex; align-items: flex-end; gap: 2px; height: 120px; margin-bottom: var(--space-3);&quot;&gt;
+&lt;div style=&quot;flex: 1; background: var(--accent); height: 10%;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;flex: 1; background: var(--accent); height: 17%;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;flex: 1; background: var(--accent); height: 25%;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;flex: 1; background: var(--accent); height: 33%;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;flex: 1; background: var(--accent); height: 42%;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;flex: 1; background: var(--accent); height: 50%;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;flex: 1; background: var(--bg-m); height: 58%; opacity: .4;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;flex: 1; background: var(--accent); height: 67%;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;flex: 1; background: var(--bg-m); height: 75%; opacity: .4;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;flex: 1; background: var(--bg-m); height: 83%; opacity: .4;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;flex: 1; background: var(--bg-m); height: 92%; opacity: .4;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;flex: 1; background: var(--accent); height: 100%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: flex; gap: 2px;&quot;&gt;
+&lt;div style=&quot;flex: 1; text-align: center; font-family: var(--ff-m); font-size: .5rem; color: var(--fg-3);&quot;&gt;1&lt;/div&gt;
+&lt;div style=&quot;flex: 1; text-align: center; font-family: var(--ff-m); font-size: .5rem; color: var(--fg-3);&quot;&gt;2&lt;/div&gt;
+&lt;div style=&quot;flex: 1; text-align: center; font-family: var(--ff-m); font-size: .5rem; color: var(--fg-3);&quot;&gt;3&lt;/div&gt;
+&lt;div style=&quot;flex: 1; text-align: center; font-family: var(--ff-m); font-size: .5rem; color: var(--fg-3);&quot;&gt;4&lt;/div&gt;
+&lt;div style=&quot;flex: 1; text-align: center; font-family: var(--ff-m); font-size: .5rem; color: var(--fg-3);&quot;&gt;5&lt;/div&gt;
+&lt;div style=&quot;flex: 1; text-align: center; font-family: var(--ff-m); font-size: .5rem; color: var(--fg-3);&quot;&gt;6&lt;/div&gt;
+&lt;div style=&quot;flex: 1; text-align: center; font-family: var(--ff-m); font-size: .5rem; color: var(--fg-4);&quot;&gt;7&lt;/div&gt;
+&lt;div style=&quot;flex: 1; text-align: center; font-family: var(--ff-m); font-size: .5rem; color: var(--fg-3);&quot;&gt;8&lt;/div&gt;
+&lt;div style=&quot;flex: 1; text-align: center; font-family: var(--ff-m); font-size: .5rem; color: var(--fg-4);&quot;&gt;9&lt;/div&gt;
+&lt;div style=&quot;flex: 1; text-align: center; font-family: var(--ff-m); font-size: .5rem; color: var(--fg-4);&quot;&gt;10&lt;/div&gt;
+&lt;div style=&quot;flex: 1; text-align: center; font-family: var(--ff-m); font-size: .5rem; color: var(--fg-4);&quot;&gt;11&lt;/div&gt;
+&lt;div style=&quot;flex: 1; text-align: center; font-family: var(--ff-m); font-size: .5rem; color: var(--fg-3);&quot;&gt;12&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><p>The faded bars are <strong>skipped steps</strong> (7, 9, 10, 11). Why?</p>
+<ul>
+<li><strong>Steps 1–6</strong> cover micro to meso spacing. At small sizes, every 4px matters — the difference between 16px and 20px padding is meaningful.</li>
+<li><strong>Steps 7, 9, 10, 11</strong> are skipped because at larger sizes the perceptual difference between adjacent steps shrinks. 28px vs 32px? Barely noticeable. The eye groups them together.</li>
+<li><strong>Steps 8 and 12</strong> are kept as landmark values — doubling points that create clear jumps for section-level spacing.</li>
+</ul>
+<p>This follows <strong>Weber’s Law</strong>: the just-noticeable difference in spacing is proportional to the base size. At small sizes you need fine control; at large sizes you need bigger jumps.</p>
+<hr>
+<h2 id="spatial-hierarchy">Spatial Hierarchy</h2>
+<p>Spacing isn’t just “how much room” — it communicates <em>relationships</em>. Closer things are related; farther things are separate. Carbon’s scale maps to three spatial levels:</p>
+
+<div class="Preview" id="preview-mzx4379ev">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="width: 100%; border: 1px solid var(--bd); border-radius: var(--r-l); padding: var(--space-8); background: var(--bg);">
+        <div style="font-family: var(--ff-m); font-size: .5rem; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); margin-bottom: var(--space-1);">Macro · space-8 to space-12</div>
+        <div style="font-family: var(--ff-d); font-size: 1.5rem; letter-spacing: -0.02em; margin-bottom: var(--space-8);">Page Section</div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6);">
+            <div style="border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-4);">
+                <div style="font-family: var(--ff-m); font-size: .5rem; text-transform: uppercase; letter-spacing: .06em; color: var(--ok); margin-bottom: var(--space-1);">Meso · space-4 to space-6</div>
+                <div style="font-weight: 600; margin-bottom: var(--space-2);">Card Title</div>
+                <div style="font-size: .85rem; color: var(--fg-2); margin-bottom: var(--space-3);">Description text with comfortable spacing between elements.</div>
+                <div style="display: flex; gap: var(--space-2); align-items: center;">
+                    <div style="font-family: var(--ff-m); font-size: .5rem; text-transform: uppercase; letter-spacing: .06em; color: var(--warn); margin-right: var(--space-1);">Micro · space-1 to space-3</div>
+                    <div style="width: 16px; height: 16px; border-radius: 50%; background: var(--accent);"></div>
+                    <span style="font-size: .8rem;">Icon + text</span>
+                </div>
+            </div>
+            <div style="border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-4);">
+                <div style="font-weight: 600; margin-bottom: var(--space-2);">Another Card</div>
+                <div style="font-size: .85rem; color: var(--fg-2); margin-bottom: var(--space-3);">The gap between cards (space-6) is larger than the gap within cards (space-2 to space-4).</div>
+                <div style="display: flex; gap: var(--space-2);">
+                    <span style="padding: var(--space-1) var(--space-3); background: var(--accent-s); color: var(--accent); border-radius: var(--r-s); font-size: .75rem;">Tag</span>
+                    <span style="padding: var(--space-1) var(--space-3); background: var(--accent-s); color: var(--accent); border-radius: var(--r-s); font-size: .75rem;">Tag</span>
+                </div>
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;width: 100%; border: 1px solid var(--bd); border-radius: var(--r-l); padding: var(--space-8); background: var(--bg);&quot;&gt;
+&lt;div style=&quot;font-family: var(--ff-m); font-size: .5rem; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); margin-bottom: var(--space-1);&quot;&gt;Macro · space-8 to space-12&lt;/div&gt;
+&lt;div style=&quot;font-family: var(--ff-d); font-size: 1.5rem; letter-spacing: -0.02em; margin-bottom: var(--space-8);&quot;&gt;Page Section&lt;/div&gt;
+&lt;div style=&quot;display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6);&quot;&gt;
+&lt;div style=&quot;border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-4);&quot;&gt;
+&lt;div style=&quot;font-family: var(--ff-m); font-size: .5rem; text-transform: uppercase; letter-spacing: .06em; color: var(--ok); margin-bottom: var(--space-1);&quot;&gt;Meso · space-4 to space-6&lt;/div&gt;
+&lt;div style=&quot;font-weight: 600; margin-bottom: var(--space-2);&quot;&gt;Card Title&lt;/div&gt;
+&lt;div style=&quot;font-size: .85rem; color: var(--fg-2); margin-bottom: var(--space-3);&quot;&gt;Description text with comfortable spacing between elements.&lt;/div&gt;
+&lt;div style=&quot;display: flex; gap: var(--space-2); align-items: center;&quot;&gt;
+&lt;div style=&quot;font-family: var(--ff-m); font-size: .5rem; text-transform: uppercase; letter-spacing: .06em; color: var(--warn); margin-right: var(--space-1);&quot;&gt;Micro · space-1 to space-3&lt;/div&gt;
+&lt;div style=&quot;width: 16px; height: 16px; border-radius: 50%; background: var(--accent);&quot;&gt;&lt;/div&gt;
+&lt;span style=&quot;font-size: .8rem;&quot;&gt;Icon + text&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-4);&quot;&gt;
+&lt;div style=&quot;font-weight: 600; margin-bottom: var(--space-2);&quot;&gt;Another Card&lt;/div&gt;
+&lt;div style=&quot;font-size: .85rem; color: var(--fg-2); margin-bottom: var(--space-3);&quot;&gt;The gap between cards (space-6) is larger than the gap within cards (space-2 to space-4).&lt;/div&gt;
+&lt;div style=&quot;display: flex; gap: var(--space-2);&quot;&gt;
+&lt;span style=&quot;padding: var(--space-1) var(--space-3); background: var(--accent-s); color: var(--accent); border-radius: var(--r-s); font-size: .75rem;&quot;&gt;Tag&lt;/span&gt;
+&lt;span style=&quot;padding: var(--space-1) var(--space-3); background: var(--accent-s); color: var(--accent); border-radius: var(--r-s); font-size: .75rem;&quot;&gt;Tag&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><div class="Table-container"><table class="Table">
+<thead>
+<tr>
+<th>Level</th>
+<th>Tokens</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Micro</strong></td>
+<td>space-1, space-2, space-3</td>
+<td>Within components: icon gaps, text-to-icon, internal padding</td>
+</tr>
+<tr>
+<td><strong>Meso</strong></td>
+<td>space-4, space-5, space-6</td>
+<td>Between components: card padding, form rows, button groups</td>
+</tr>
+<tr>
+<td><strong>Macro</strong></td>
+<td>space-8, space-12</td>
+<td>Page structure: section breaks, hero areas, major separations</td>
+</tr>
+</tbody>
+</table></div>
+<hr>
+<h2 id="anatomy-of-a-component">Anatomy of a Component</h2>
+<p>Every well-spaced component is built from the same tokens. Here’s a card with its spacing made visible:</p>
+
+<div class="Preview" id="preview-k903bly0r">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="max-width: 360px; position: relative;">
+        <div style="border: 1px solid var(--bd); border-radius: var(--r-l); overflow: hidden;">
+            <div style="padding: var(--space-5); position: relative;">
+                <div style="position: absolute; top: 0; left: 0; right: 0; height: var(--space-5); background: oklch(from var(--accent) l c h / .06); border-bottom: 1px dashed oklch(from var(--accent) l c h / .2);"></div>
+                <div style="position: absolute; top: 0; left: 0; bottom: 0; width: var(--space-5); background: oklch(from var(--accent) l c h / .06); border-right: 1px dashed oklch(from var(--accent) l c h / .2);"></div>
+                <div style="position: relative;">
+                    <div style="font-family: var(--ff-m); font-size: .5625rem; color: var(--accent); text-transform: uppercase; letter-spacing: .06em; margin-bottom: var(--space-2);">Category</div>
+                    <div style="display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-1);">
+                        <div style="font-family: var(--ff-m); font-size: .5rem; color: var(--fg-4); background: oklch(from var(--ok) l c h / .1); padding: 1px 4px; border-radius: 2px;">space-2</div>
+                    </div>
+                    <div style="font-family: var(--ff-d); font-size: 1.25rem; letter-spacing: -0.02em; margin-bottom: var(--space-3);">Component Title</div>
+                    <div style="display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-1);">
+                        <div style="font-family: var(--ff-m); font-size: .5rem; color: var(--fg-4); background: oklch(from var(--ok) l c h / .1); padding: 1px 4px; border-radius: 2px;">space-3</div>
+                    </div>
+                    <div style="font-size: .875rem; color: var(--fg-2); line-height: 1.6; margin-bottom: var(--space-4);">Body text with enough room to breathe. The spacing between title and body is smaller than body to actions.</div>
+                    <div style="display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-1);">
+                        <div style="font-family: var(--ff-m); font-size: .5rem; color: var(--fg-4); background: oklch(from var(--ok) l c h / .1); padding: 1px 4px; border-radius: 2px;">space-4</div>
+                    </div>
+                    <div style="display: flex; gap: var(--space-3);">
+                        <button class="Button Button--primary" style="font-size: .85rem;">Primary</button>
+                        <button class="Button" style="font-size: .85rem;">Secondary</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="font-family: var(--ff-m); font-size: .6rem; color: var(--fg-3); margin-top: var(--space-2); text-align: center;">Padding: space-5 (20px) · Internal gaps: space-2 to space-4</div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;max-width: 360px; position: relative;&quot;&gt;
+&lt;div style=&quot;border: 1px solid var(--bd); border-radius: var(--r-l); overflow: hidden;&quot;&gt;
+&lt;div style=&quot;padding: var(--space-5); position: relative;&quot;&gt;
+&lt;div style=&quot;position: absolute; top: 0; left: 0; right: 0; height: var(--space-5); background: oklch(from var(--accent) l c h / .06); border-bottom: 1px dashed oklch(from var(--accent) l c h / .2);&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;position: absolute; top: 0; left: 0; bottom: 0; width: var(--space-5); background: oklch(from var(--accent) l c h / .06); border-right: 1px dashed oklch(from var(--accent) l c h / .2);&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;position: relative;&quot;&gt;
+&lt;div style=&quot;font-family: var(--ff-m); font-size: .5625rem; color: var(--accent); text-transform: uppercase; letter-spacing: .06em; margin-bottom: var(--space-2);&quot;&gt;Category&lt;/div&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-1);&quot;&gt;
+&lt;div style=&quot;font-family: var(--ff-m); font-size: .5rem; color: var(--fg-4); background: oklch(from var(--ok) l c h / .1); padding: 1px 4px; border-radius: 2px;&quot;&gt;space-2&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;font-family: var(--ff-d); font-size: 1.25rem; letter-spacing: -0.02em; margin-bottom: var(--space-3);&quot;&gt;Component Title&lt;/div&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-1);&quot;&gt;
+&lt;div style=&quot;font-family: var(--ff-m); font-size: .5rem; color: var(--fg-4); background: oklch(from var(--ok) l c h / .1); padding: 1px 4px; border-radius: 2px;&quot;&gt;space-3&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;font-size: .875rem; color: var(--fg-2); line-height: 1.6; margin-bottom: var(--space-4);&quot;&gt;Body text with enough room to breathe. The spacing between title and body is smaller than body to actions.&lt;/div&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-1);&quot;&gt;
+&lt;div style=&quot;font-family: var(--ff-m); font-size: .5rem; color: var(--fg-4); background: oklch(from var(--ok) l c h / .1); padding: 1px 4px; border-radius: 2px;&quot;&gt;space-4&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: flex; gap: var(--space-3);&quot;&gt;
+&lt;button class=&quot;Button Button--primary&quot; style=&quot;font-size: .85rem;&quot;&gt;Primary&lt;/button&gt;
+&lt;button class=&quot;Button&quot; style=&quot;font-size: .85rem;&quot;&gt;Secondary&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;font-family: var(--ff-m); font-size: .6rem; color: var(--fg-3); margin-top: var(--space-2); text-align: center;&quot;&gt;Padding: space-5 (20px) · Internal gaps: space-2 to space-4&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><p>The principle: <strong>proximity encodes relationship</strong>. Title-to-body (space-3) is tighter than body-to-actions (space-4), because the title <em>describes</em> the body, while the actions are a separate concern.</p>
+<hr>
+<h2 id="density-modes">Density Modes</h2>
+<p>The same component structure at different spacing densities. Same tokens, different context.</p>
+
+<div class="Preview" id="preview-jcn3g255g">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); width: 100%;">
+        <div>
+            <div style="font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--fg-4); margin-bottom: var(--space-2);">Compact</div>
+            <div style="border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-2);">
+                <div style="font-weight: 600; font-size: .85rem; margin-bottom: var(--space-1);">Card Title</div>
+                <div style="font-size: .75rem; color: var(--fg-3); margin-bottom: var(--space-2);">Dense data UI</div>
+                <button class="Button Button--primary" style="padding: var(--space-1) var(--space-2); font-size: .75rem; width: 100%;">Action</button>
+            </div>
+        </div>
+        <div>
+            <div style="font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); margin-bottom: var(--space-2);">Comfortable ✓</div>
+            <div style="border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-4);">
+                <div style="font-weight: 600; margin-bottom: var(--space-2);">Card Title</div>
+                <div style="font-size: .875rem; color: var(--fg-3); margin-bottom: var(--space-3);">Default density</div>
+                <button class="Button Button--primary" style="width: 100%;">Action</button>
+            </div>
+        </div>
+        <div>
+            <div style="font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--fg-4); margin-bottom: var(--space-2);">Spacious</div>
+            <div style="border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-6);">
+                <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: var(--space-3);">Card Title</div>
+                <div style="color: var(--fg-3); margin-bottom: var(--space-5);">Marketing layout</div>
+                <button class="Button Button--primary" style="padding: var(--space-3) var(--space-6); width: 100%;">Action</button>
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); width: 100%;&quot;&gt;
+&lt;div&gt;
+&lt;div style=&quot;font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--fg-4); margin-bottom: var(--space-2);&quot;&gt;Compact&lt;/div&gt;
+&lt;div style=&quot;border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-2);&quot;&gt;
+&lt;div style=&quot;font-weight: 600; font-size: .85rem; margin-bottom: var(--space-1);&quot;&gt;Card Title&lt;/div&gt;
+&lt;div style=&quot;font-size: .75rem; color: var(--fg-3); margin-bottom: var(--space-2);&quot;&gt;Dense data UI&lt;/div&gt;
+&lt;button class=&quot;Button Button--primary&quot; style=&quot;padding: var(--space-1) var(--space-2); font-size: .75rem; width: 100%;&quot;&gt;Action&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;div style=&quot;font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); margin-bottom: var(--space-2);&quot;&gt;Comfortable ✓&lt;/div&gt;
+&lt;div style=&quot;border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-4);&quot;&gt;
+&lt;div style=&quot;font-weight: 600; margin-bottom: var(--space-2);&quot;&gt;Card Title&lt;/div&gt;
+&lt;div style=&quot;font-size: .875rem; color: var(--fg-3); margin-bottom: var(--space-3);&quot;&gt;Default density&lt;/div&gt;
+&lt;button class=&quot;Button Button--primary&quot; style=&quot;width: 100%;&quot;&gt;Action&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;div style=&quot;font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--fg-4); margin-bottom: var(--space-2);&quot;&gt;Spacious&lt;/div&gt;
+&lt;div style=&quot;border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-6);&quot;&gt;
+&lt;div style=&quot;font-weight: 600; font-size: 1.1rem; margin-bottom: var(--space-3);&quot;&gt;Card Title&lt;/div&gt;
+&lt;div style=&quot;color: var(--fg-3); margin-bottom: var(--space-5);&quot;&gt;Marketing layout&lt;/div&gt;
+&lt;button class=&quot;Button Button--primary&quot; style=&quot;padding: var(--space-3) var(--space-6); width: 100%;&quot;&gt;Action&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><p><strong>Compact</strong> (space-1 to space-3): Data tables, admin panels, dashboards — where information density matters more than breathing room.</p>
+<p><strong>Comfortable</strong> (space-3 to space-5): The default. Product UIs, documentation, forms — the right balance of density and clarity.</p>
+<p><strong>Spacious</strong> (space-5 to space-8): Marketing pages, landing pages, editorial layouts — where every element gets room to be appreciated.</p>
+<hr>
+<h2 id="touch-targets">Touch Targets</h2>
+<p>Mobile interfaces need minimum tap areas of <strong>44×44px</strong> (Apple HIG) or <strong>48×48px</strong> (Material). Here’s how spacing tokens build compliant touch targets:</p>
+
+<div class="Preview" id="preview-s3ydrzdi9">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-4); width: 100%;">
+        <div style="display: flex; align-items: center; gap: var(--space-4);">
+            <div style="width: 44px; height: 44px; border: 2px dashed var(--warn); border-radius: var(--r-s); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <div style="font-family: var(--ff-m); font-size: .5rem; color: var(--warn);">44px</div>
+            </div>
+            <div>
+                <div style="font-size: .85rem; font-weight: 600;">Apple minimum</div>
+                <div style="font-size: .75rem; color: var(--fg-3); font-family: var(--ff-m);">space-2 padding + ~28px content = 44px</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: var(--space-4);">
+            <div style="width: 48px; height: 48px; border: 2px dashed var(--accent); border-radius: var(--r-s); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <div style="font-family: var(--ff-m); font-size: .5rem; color: var(--accent);">48px</div>
+            </div>
+            <div>
+                <div style="font-size: .85rem; font-weight: 600;">Material minimum (space-12)</div>
+                <div style="font-size: .75rem; color: var(--fg-3); font-family: var(--ff-m);">space-3 padding + ~24px content = 48px</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: var(--space-4);">
+            <button class="Button Button--primary" style="height: 48px; display: flex; align-items: center; flex-shrink: 0;">Tap Target</button>
+            <div>
+                <div style="font-size: .85rem; font-weight: 600;">Carbon default button</div>
+                <div style="font-size: .75rem; color: var(--fg-3); font-family: var(--ff-m);">padding: space-2 space-4 → 40×48px ✓</div>
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-4); width: 100%;&quot;&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-4);&quot;&gt;
+&lt;div style=&quot;width: 44px; height: 44px; border: 2px dashed var(--warn); border-radius: var(--r-s); display: flex; align-items: center; justify-content: center; flex-shrink: 0;&quot;&gt;
+&lt;div style=&quot;font-family: var(--ff-m); font-size: .5rem; color: var(--warn);&quot;&gt;44px&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;div style=&quot;font-size: .85rem; font-weight: 600;&quot;&gt;Apple minimum&lt;/div&gt;
+&lt;div style=&quot;font-size: .75rem; color: var(--fg-3); font-family: var(--ff-m);&quot;&gt;space-2 padding + ~28px content = 44px&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-4);&quot;&gt;
+&lt;div style=&quot;width: 48px; height: 48px; border: 2px dashed var(--accent); border-radius: var(--r-s); display: flex; align-items: center; justify-content: center; flex-shrink: 0;&quot;&gt;
+&lt;div style=&quot;font-family: var(--ff-m); font-size: .5rem; color: var(--accent);&quot;&gt;48px&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;div style=&quot;font-size: .85rem; font-weight: 600;&quot;&gt;Material minimum (space-12)&lt;/div&gt;
+&lt;div style=&quot;font-size: .75rem; color: var(--fg-3); font-family: var(--ff-m);&quot;&gt;space-3 padding + ~24px content = 48px&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-4);&quot;&gt;
+&lt;button class=&quot;Button Button--primary&quot; style=&quot;height: 48px; display: flex; align-items: center; flex-shrink: 0;&quot;&gt;Tap Target&lt;/button&gt;
+&lt;div&gt;
+&lt;div style=&quot;font-size: .85rem; font-weight: 600;&quot;&gt;Carbon default button&lt;/div&gt;
+&lt;div style=&quot;font-size: .75rem; color: var(--fg-3); font-family: var(--ff-m);&quot;&gt;padding: space-2 space-4 → 40×48px ✓&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><p>The key insight: you don’t need a special “touch target” token. Standard button padding (<code>space-2</code> vertical, <code>space-4</code> horizontal) with 1rem font size naturally produces targets that meet accessibility guidelines.</p>
+<hr>
+<h2 id="usage-guidelines">Usage Guidelines</h2>
+<h3 id="component-internal-spacing">Component Internal Spacing</h3>
+<p>Use smaller values (1-4) for padding and gaps within components.</p>
+
+<div class="Preview" id="preview-asercoayc">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-4);">
+        <div>
+            <button class="Button Button--primary">
+                Standard Button
+            </button>
+            <code style="margin-left: var(--space-3); font-size: 0.85em;">padding: var(--space-2) var(--space-4)</code>
+        </div>
+        <div>
+            <button class="Button Button--primary" style="padding: var(--space-1) var(--space-2); font-size: 0.85rem;">
+                Small Button
+            </button>
+            <code style="margin-left: var(--space-3); font-size: 0.85em;">padding: var(--space-1) var(--space-2)</code>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-4);&quot;&gt;
+&lt;div&gt;
+&lt;button class=&quot;Button Button--primary&quot;&gt;
+Standard Button
+&lt;/button&gt;
+&lt;code style=&quot;margin-left: var(--space-3); font-size: 0.85em;&quot;&gt;padding: var(--space-2) var(--space-4)&lt;/code&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;button class=&quot;Button Button--primary&quot; style=&quot;padding: var(--space-1) var(--space-2); font-size: 0.85rem;&quot;&gt;
+Small Button
+&lt;/button&gt;
+&lt;code style=&quot;margin-left: var(--space-3); font-size: 0.85em;&quot;&gt;padding: var(--space-1) var(--space-2)&lt;/code&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-css">/* Buttons */
+.Button { padding: var(--space-2) var(--space-4); }
+.Button--small { padding: var(--space-1) var(--space-2); }
+.Button--large { padding: var(--space-3) var(--space-6); }
+
+/* Inputs */
+.Input { padding: var(--space-2) var(--space-3); }
+
+/* Cards */
+.Card-body { padding: var(--space-4); }
+</code></pre>
+<h3 id="component-gaps">Component Gaps</h3>
+<p>Use consistent gaps between related elements.</p>
+
+<div class="Preview" id="preview-7gfs4rzqd">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-6); width: 100%;">
+        <div>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Tight (--space-2)</small>
+            <div style="display: flex; gap: var(--space-2);">
+                <span class="Badge">Tag</span>
+                <span class="Badge">Tag</span>
+                <span class="Badge">Tag</span>
+            </div>
+        </div>
+        <div>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Standard (--space-4)</small>
+            <div style="display: flex; gap: var(--space-4);">
+                <button class="Button Button--primary">Save</button>
+                <button class="Button">Cancel</button>
+            </div>
+        </div>
+        <div>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Loose (--space-6)</small>
+            <div style="display: flex; gap: var(--space-6);">
+                <div style="padding: var(--space-4); background: var(--bg-s); border-radius: var(--r-m);">Card A</div>
+                <div style="padding: var(--space-4); background: var(--bg-s); border-radius: var(--r-m);">Card B</div>
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-6); width: 100%;&quot;&gt;
+&lt;div&gt;
+&lt;small style=&quot;color: var(--fg-3); display: block; margin-bottom: var(--space-2);&quot;&gt;Tight (--space-2)&lt;/small&gt;
+&lt;div style=&quot;display: flex; gap: var(--space-2);&quot;&gt;
+&lt;span class=&quot;Badge&quot;&gt;Tag&lt;/span&gt;
+&lt;span class=&quot;Badge&quot;&gt;Tag&lt;/span&gt;
+&lt;span class=&quot;Badge&quot;&gt;Tag&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;small style=&quot;color: var(--fg-3); display: block; margin-bottom: var(--space-2);&quot;&gt;Standard (--space-4)&lt;/small&gt;
+&lt;div style=&quot;display: flex; gap: var(--space-4);&quot;&gt;
+&lt;button class=&quot;Button Button--primary&quot;&gt;Save&lt;/button&gt;
+&lt;button class=&quot;Button&quot;&gt;Cancel&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;small style=&quot;color: var(--fg-3); display: block; margin-bottom: var(--space-2);&quot;&gt;Loose (--space-6)&lt;/small&gt;
+&lt;div style=&quot;display: flex; gap: var(--space-6);&quot;&gt;
+&lt;div style=&quot;padding: var(--space-4); background: var(--bg-s); border-radius: var(--r-m);&quot;&gt;Card A&lt;/div&gt;
+&lt;div style=&quot;padding: var(--space-4); background: var(--bg-s); border-radius: var(--r-m);&quot;&gt;Card B&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-css">/* Tight - inline elements */
+gap: var(--space-2);
+
+/* Standard - buttons, form rows */
+gap: var(--space-4);
+
+/* Loose - cards, sections */
+gap: var(--space-6);
+</code></pre>
+<h3 id="layout-spacing">Layout Spacing</h3>
+<p>Use larger values (6-12) for page-level spacing.</p>
+
+<div class="Preview" id="preview-d86f9vuf0">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; width: 100%; border: 1px solid var(--bd); border-radius: var(--r-m); overflow: hidden;">
+        <div style="padding: var(--space-6); background: var(--bg-s); border-bottom: 1px solid var(--bd);">
+            <strong>Header</strong>
+            <code style="float: right; font-size: 0.8em;">padding: var(--space-6)</code>
+        </div>
+        <div style="padding: var(--space-8);">
+            <strong>Main Content</strong>
+            <code style="float: right; font-size: 0.8em;">padding: var(--space-8)</code>
+            <div style="margin-top: var(--space-6); padding: var(--space-4); background: var(--bg-s); border-radius: var(--r-s);">
+                <small>Nested section with margin-top: var(--space-6)</small>
+            </div>
+        </div>
+        <div style="padding: var(--space-4); background: var(--bg-s); border-top: 1px solid var(--bd);">
+            <strong>Footer</strong>
+            <code style="float: right; font-size: 0.8em;">padding: var(--space-4)</code>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; width: 100%; border: 1px solid var(--bd); border-radius: var(--r-m); overflow: hidden;&quot;&gt;
+&lt;div style=&quot;padding: var(--space-6); background: var(--bg-s); border-bottom: 1px solid var(--bd);&quot;&gt;
+&lt;strong&gt;Header&lt;/strong&gt;
+&lt;code style=&quot;float: right; font-size: 0.8em;&quot;&gt;padding: var(--space-6)&lt;/code&gt;
+&lt;/div&gt;
+&lt;div style=&quot;padding: var(--space-8);&quot;&gt;
+&lt;strong&gt;Main Content&lt;/strong&gt;
+&lt;code style=&quot;float: right; font-size: 0.8em;&quot;&gt;padding: var(--space-8)&lt;/code&gt;
+&lt;div style=&quot;margin-top: var(--space-6); padding: var(--space-4); background: var(--bg-s); border-radius: var(--r-s);&quot;&gt;
+&lt;small&gt;Nested section with margin-top: var(--space-6)&lt;/small&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;padding: var(--space-4); background: var(--bg-s); border-top: 1px solid var(--bd);&quot;&gt;
+&lt;strong&gt;Footer&lt;/strong&gt;
+&lt;code style=&quot;float: right; font-size: 0.8em;&quot;&gt;padding: var(--space-4)&lt;/code&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-css">/* Page container */
+.container { padding: 0 var(--space-6); }
+
+/* Section margins */
+.section { margin-bottom: var(--space-12); }
+
+/* Content blocks */
+.content &gt; * + * { margin-top: var(--space-6); }
+</code></pre>
+<hr>
+<h2 id="spacing-patterns">Spacing Patterns</h2>
+<h3 id="stack-pattern">Stack Pattern</h3>
+<p>Vertical spacing between block elements.</p>
+
+<div class="Preview" id="preview-wo31thik1">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Layout-stack" style="max-width: 300px;">
+        <div style="padding: var(--space-4); background: var(--bg-s); border-radius: var(--r-s);">First item</div>
+        <div style="padding: var(--space-4); background: var(--bg-s); border-radius: var(--r-s);">Second item</div>
+        <div style="padding: var(--space-4); background: var(--bg-s); border-radius: var(--r-s);">Third item</div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Layout-stack&quot; style=&quot;max-width: 300px;&quot;&gt;
+&lt;div style=&quot;padding: var(--space-4); background: var(--bg-s); border-radius: var(--r-s);&quot;&gt;First item&lt;/div&gt;
+&lt;div style=&quot;padding: var(--space-4); background: var(--bg-s); border-radius: var(--r-s);&quot;&gt;Second item&lt;/div&gt;
+&lt;div style=&quot;padding: var(--space-4); background: var(--bg-s); border-radius: var(--r-s);&quot;&gt;Third item&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-css">.Layout-stack { gap: var(--space-4); }
+.Layout-stack--tight { gap: var(--space-2); }
+.Layout-stack--loose { gap: var(--space-8); }
+</code></pre>
+<h3 id="inset-pattern">Inset Pattern</h3>
+<p>Equal padding on all sides.</p>
+
+<div class="Preview" id="preview-0iwg65bdx">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; gap: var(--space-4);">
+        <div style="padding: var(--space-2); background: var(--bg-s); border: 1px dashed var(--bd-s); border-radius: var(--r-s);">
+            <div style="background: var(--accent); color: white; padding: var(--space-2); border-radius: var(--r-s); font-size: 0.8em;">space-2</div>
+        </div>
+        <div style="padding: var(--space-4); background: var(--bg-s); border: 1px dashed var(--bd-s); border-radius: var(--r-s);">
+            <div style="background: var(--accent); color: white; padding: var(--space-2); border-radius: var(--r-s); font-size: 0.8em;">space-4</div>
+        </div>
+        <div style="padding: var(--space-6); background: var(--bg-s); border: 1px dashed var(--bd-s); border-radius: var(--r-s);">
+            <div style="background: var(--accent); color: white; padding: var(--space-2); border-radius: var(--r-s); font-size: 0.8em;">space-6</div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; gap: var(--space-4);&quot;&gt;
+&lt;div style=&quot;padding: var(--space-2); background: var(--bg-s); border: 1px dashed var(--bd-s); border-radius: var(--r-s);&quot;&gt;
+&lt;div style=&quot;background: var(--accent); color: white; padding: var(--space-2); border-radius: var(--r-s); font-size: 0.8em;&quot;&gt;space-2&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;padding: var(--space-4); background: var(--bg-s); border: 1px dashed var(--bd-s); border-radius: var(--r-s);&quot;&gt;
+&lt;div style=&quot;background: var(--accent); color: white; padding: var(--space-2); border-radius: var(--r-s); font-size: 0.8em;&quot;&gt;space-4&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;padding: var(--space-6); background: var(--bg-s); border: 1px dashed var(--bd-s); border-radius: var(--r-s);&quot;&gt;
+&lt;div style=&quot;background: var(--accent); color: white; padding: var(--space-2); border-radius: var(--r-s); font-size: 0.8em;&quot;&gt;space-6&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="squish-pattern">Squish Pattern</h3>
+<p>Reduced vertical padding (common for buttons and pills).</p>
+
+<div class="Preview" id="preview-p41hqdxly">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; gap: var(--space-4); align-items: center;">
+        <div style="padding: var(--space-1) var(--space-3); background: var(--accent); color: white; border-radius: var(--r-s); font-size: 0.85em;">
+            Squish: 1 × 3
+        </div>
+        <div style="padding: var(--space-2) var(--space-4); background: var(--accent); color: white; border-radius: var(--r-s);">
+            Squish: 2 × 4
+        </div>
+        <div style="padding: var(--space-3) var(--space-6); background: var(--accent); color: white; border-radius: var(--r-s);">
+            Squish: 3 × 6
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; gap: var(--space-4); align-items: center;&quot;&gt;
+&lt;div style=&quot;padding: var(--space-1) var(--space-3); background: var(--accent); color: white; border-radius: var(--r-s); font-size: 0.85em;&quot;&gt;
+Squish: 1 × 3
+&lt;/div&gt;
+&lt;div style=&quot;padding: var(--space-2) var(--space-4); background: var(--accent); color: white; border-radius: var(--r-s);&quot;&gt;
+Squish: 2 × 4
+&lt;/div&gt;
+&lt;div style=&quot;padding: var(--space-3) var(--space-6); background: var(--accent); color: white; border-radius: var(--r-s);&quot;&gt;
+Squish: 3 × 6
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-css">/* Squish ratios (vertical × horizontal) */
+padding: var(--space-1) var(--space-3); /* 1:3 - pills, small tags */
+padding: var(--space-2) var(--space-4); /* 1:2 - buttons */
+padding: var(--space-3) var(--space-6); /* 1:2 - large buttons */
+</code></pre>
+<hr>
+<h2 id="responsive-spacing">Responsive Spacing</h2>
+<p>Adjust spacing at different breakpoints for optimal density.</p>
+<pre><code class="language-css">/* Base mobile spacing */
+.container {
+  padding: 0 var(--space-4);
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .container {
+    padding: 0 var(--space-6);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 var(--space-8);
+  }
+}
+</code></pre>
+<h3 id="spacing-scale-by-context">Spacing Scale by Context</h3>
+<div class="Table-container"><table class="Table">
+<thead>
+<tr>
+<th>Context</th>
+<th>Mobile</th>
+<th>Tablet</th>
+<th>Desktop</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Page padding</td>
+<td>space-4</td>
+<td>space-6</td>
+<td>space-8</td>
+</tr>
+<tr>
+<td>Section gap</td>
+<td>space-6</td>
+<td>space-8</td>
+<td>space-12</td>
+</tr>
+<tr>
+<td>Card padding</td>
+<td>space-3</td>
+<td>space-4</td>
+<td>space-4</td>
+</tr>
+<tr>
+<td>Component gap</td>
+<td>space-2</td>
+<td>space-3</td>
+<td>space-4</td>
+</tr>
+</tbody>
+</table></div>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="do">Do</h3>
+<ul>
+<li>✓ <strong>Use tokens, not arbitrary values</strong> — <code>var(--space-4)</code> not <code>15px</code></li>
+<li>✓ <strong>Be consistent</strong> — Same spacing for same relationships</li>
+<li>✓ <strong>Create hierarchy</strong> — More space = more separation</li>
+<li>✓ <strong>Use the scale</strong> — Jump by meaningful increments (2→4→6, not 2→3→4)</li>
+</ul>
+<h3 id="don-t">Don’t</h3>
+<ul>
+<li>✗ <strong>Mix units</strong> — Don’t combine px and rem arbitrarily</li>
+<li>✗ <strong>Invent values</strong> — Stick to the scale</li>
+<li>✗ <strong>Overspace</strong> — Dense UIs can feel more professional</li>
+<li>✗ <strong>Underspace</strong> — Cramped layouts hurt readability</li>
+</ul>
+
+<div class="Preview" id="preview-liptnoe6g">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; gap: var(--space-8); width: 100%;">
+        <div style="flex: 1;">
+            <small style="color: oklch(55% 0.2 25); font-weight: 600; display: block; margin-bottom: var(--space-2);">❌ Inconsistent</small>
+            <div style="border: 1px solid var(--bd); border-radius: var(--r-m); padding: 15px;">
+                <div style="margin-bottom: 10px; font-weight: 600;">Title</div>
+                <div style="margin-bottom: 18px; color: var(--fg-3);">Description text</div>
+                <button class="Button Button--primary" style="margin-top: 12px;">Action</button>
+            </div>
+        </div>
+        <div style="flex: 1;">
+            <small style="color: oklch(55% 0.15 150); font-weight: 600; display: block; margin-bottom: var(--space-2);">✓ Consistent</small>
+            <div style="border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-4);">
+                <div style="margin-bottom: var(--space-2); font-weight: 600;">Title</div>
+                <div style="margin-bottom: var(--space-4); color: var(--fg-3);">Description text</div>
+                <button class="Button Button--primary">Action</button>
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; gap: var(--space-8); width: 100%;&quot;&gt;
+&lt;div style=&quot;flex: 1;&quot;&gt;
+&lt;small style=&quot;color: oklch(55% 0.2 25); font-weight: 600; display: block; margin-bottom: var(--space-2);&quot;&gt;❌ Inconsistent&lt;/small&gt;
+&lt;div style=&quot;border: 1px solid var(--bd); border-radius: var(--r-m); padding: 15px;&quot;&gt;
+&lt;div style=&quot;margin-bottom: 10px; font-weight: 600;&quot;&gt;Title&lt;/div&gt;
+&lt;div style=&quot;margin-bottom: 18px; color: var(--fg-3);&quot;&gt;Description text&lt;/div&gt;
+&lt;button class=&quot;Button Button--primary&quot; style=&quot;margin-top: 12px;&quot;&gt;Action&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;flex: 1;&quot;&gt;
+&lt;small style=&quot;color: oklch(55% 0.15 150); font-weight: 600; display: block; margin-bottom: var(--space-2);&quot;&gt;✓ Consistent&lt;/small&gt;
+&lt;div style=&quot;border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-4);&quot;&gt;
+&lt;div style=&quot;margin-bottom: var(--space-2); font-weight: 600;&quot;&gt;Title&lt;/div&gt;
+&lt;div style=&quot;margin-bottom: var(--space-4); color: var(--fg-3);&quot;&gt;Description text&lt;/div&gt;
+&lt;button class=&quot;Button Button--primary&quot;&gt;Action&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="quick-reference">Quick Reference</h2>
+<pre><code class="language-css">/* Micro */
+var(--space-1)  /* 4px  - Icon gaps, borders */
+var(--space-2)  /* 8px  - Button padding, small gaps */
+
+/* Standard */
+var(--space-3)  /* 12px - Input padding */
+var(--space-4)  /* 16px - Card padding, default gap */
+
+/* Comfortable */
+var(--space-5)  /* 20px - Section spacing */
+var(--space-6)  /* 24px - Component margins */
+
+/* Spacious */
+var(--space-8)  /* 32px - Section breaks */
+var(--space-12) /* 48px - Page sections */
+</code></pre>
+
+                </article>
+
+                <footer class="page-footer">
+                    <p>Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

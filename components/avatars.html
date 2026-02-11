@@ -1,0 +1,1647 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Avatars | Carbon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/bold/style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Floating Pill Nav (Mobile: bottom, Desktop: top) -->
+        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation">
+            <a href="../index.html" class="fnav-btn" data-section="home" aria-label="Home">
+                <i class="ph-bold ph-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="../tokens/colors.html" class="fnav-btn" data-section="tokens" aria-label="Tokens">
+                <i class="ph-bold ph-palette"></i>
+                <span>Tokens</span>
+            </a>
+            <a href="../components/buttons.html" class="fnav-btn" data-section="components" aria-label="Components">
+                <i class="ph-bold ph-stack"></i>
+                <span>Components</span>
+            </a>
+            <a href="../patterns/layouts.html" class="fnav-btn" data-section="patterns" aria-label="Patterns">
+                <i class="ph-bold ph-grid-four"></i>
+                <span>Patterns</span>
+            </a>
+            <div class="fnav-sep"></div>
+            <button class="fnav-btn" id="search-toggle" aria-label="Search">
+                <i class="ph ph-magnifying-glass"></i>
+            </button>
+            <button class="fnav-btn" id="theme-btn" aria-label="Toggle theme">
+                <i class="ph ph-moon"></i>
+            </button>
+        </nav>
+
+        <!-- Glassmorphism Top Bar (Desktop only) -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <a href="../index.html" class="logo">
+                    <i class="ph ph-intersect"></i>
+                    <span>Carbon</span>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <div class="search-container" id="search-container">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search components..." aria-label="Search" autocomplete="off">
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <main class="main-content">
+                <header class="page-header">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="../index.html">Carbon</a> <span class="sep">/</span> <span>Components</span> <span class="sep">/</span> <span>Avatars</span>
+                    </nav>
+                    <h1><em>Avatars</em></h1>
+                </header>
+                
+                <article class="prose">
+                    <h1>Avatars</h1>
+<p>Avatars are visual representations of users, entities, or brands. They provide identity and personalization throughout the interface.</p>
+<hr>
+<h2 id="basic-avatar">Basic Avatar</h2>
+<p>A simple image avatar.</p>
+
+<div class="Preview" id="preview-pmcxxk79p">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=basic" class="Avatar" alt="User Avatar"></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=basic&quot; class=&quot;Avatar&quot; alt=&quot;User Avatar&quot;&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;img src=&quot;...&quot; class=&quot;Avatar&quot; alt=&quot;User Avatar&quot;&gt;
+</code></pre>
+<hr>
+<h2 id="avatar-sizes">Avatar Sizes</h2>
+<p>Avatars come in five sizes: xs, small, medium (default), large, and xl.</p>
+
+<div class="Preview" id="preview-suvlcajdt">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=size1" class="Avatar Avatar--xs" alt="User">
+    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=size2" class="Avatar Avatar--small" alt="User">
+    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=size3" class="Avatar" alt="User">
+    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=size4" class="Avatar Avatar--large" alt="User">
+    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=size5" class="Avatar Avatar--xl" alt="User"></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=size1&quot; class=&quot;Avatar Avatar--xs&quot; alt=&quot;User&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=size2&quot; class=&quot;Avatar Avatar--small&quot; alt=&quot;User&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=size3&quot; class=&quot;Avatar&quot; alt=&quot;User&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=size4&quot; class=&quot;Avatar Avatar--large&quot; alt=&quot;User&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=size5&quot; class=&quot;Avatar Avatar--xl&quot; alt=&quot;User&quot;&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;img src=&quot;...&quot; class=&quot;Avatar Avatar--xs&quot; alt=&quot;User&quot;&gt;
+&lt;img src=&quot;...&quot; class=&quot;Avatar Avatar--small&quot; alt=&quot;User&quot;&gt;
+&lt;img src=&quot;...&quot; class=&quot;Avatar&quot; alt=&quot;User&quot;&gt;
+&lt;img src=&quot;...&quot; class=&quot;Avatar Avatar--large&quot; alt=&quot;User&quot;&gt;
+&lt;img src=&quot;...&quot; class=&quot;Avatar Avatar--xl&quot; alt=&quot;User&quot;&gt;
+</code></pre>
+<hr>
+<h2 id="avatar-with-initials">Avatar with Initials</h2>
+<p>When no image is available, use initials as a fallback.</p>
+
+<div class="Preview" id="preview-iz7o9qjnx">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><span class="Avatar Avatar--initials">JD</span>
+    <span class="Avatar Avatar--initials Avatar--primary">SC</span>
+    <span class="Avatar Avatar--initials Avatar--success">MK</span>
+    <span class="Avatar Avatar--initials Avatar--warning">RB</span></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;span class=&quot;Avatar Avatar--initials&quot;&gt;JD&lt;/span&gt;
+&lt;span class=&quot;Avatar Avatar--initials Avatar--primary&quot;&gt;SC&lt;/span&gt;
+&lt;span class=&quot;Avatar Avatar--initials Avatar--success&quot;&gt;MK&lt;/span&gt;
+&lt;span class=&quot;Avatar Avatar--initials Avatar--warning&quot;&gt;RB&lt;/span&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;span class=&quot;Avatar Avatar--initials&quot;&gt;JD&lt;/span&gt;
+&lt;span class=&quot;Avatar Avatar--initials Avatar--primary&quot;&gt;SC&lt;/span&gt;
+</code></pre>
+
+<div class="Preview" id="preview-wxh6klq1x">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><span class="Avatar Avatar--initials Avatar--xs">JD</span>
+    <span class="Avatar Avatar--initials Avatar--small">JD</span>
+    <span class="Avatar Avatar--initials">JD</span>
+    <span class="Avatar Avatar--initials Avatar--large">JD</span>
+    <span class="Avatar Avatar--initials Avatar--xl">JD</span></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;span class=&quot;Avatar Avatar--initials Avatar--xs&quot;&gt;JD&lt;/span&gt;
+&lt;span class=&quot;Avatar Avatar--initials Avatar--small&quot;&gt;JD&lt;/span&gt;
+&lt;span class=&quot;Avatar Avatar--initials&quot;&gt;JD&lt;/span&gt;
+&lt;span class=&quot;Avatar Avatar--initials Avatar--large&quot;&gt;JD&lt;/span&gt;
+&lt;span class=&quot;Avatar Avatar--initials Avatar--xl&quot;&gt;JD&lt;/span&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;span class=&quot;Avatar Avatar--initials Avatar--small&quot;&gt;JD&lt;/span&gt;
+&lt;span class=&quot;Avatar Avatar--initials Avatar--large&quot;&gt;JD&lt;/span&gt;
+</code></pre>
+<hr>
+<h2 id="avatar-with-icon">Avatar with Icon</h2>
+<p>Use an icon when no image or initials are available.</p>
+
+<div class="Preview" id="preview-t7xmkhugw">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><span class="Avatar Avatar--icon">
+        <i class="ph ph-user"></i>
+    </span>
+    <span class="Avatar Avatar--icon Avatar--primary">
+        <i class="ph ph-user"></i>
+    </span>
+    <span class="Avatar Avatar--icon Avatar--large">
+        <i class="ph ph-user"></i>
+    </span></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;span class=&quot;Avatar Avatar--icon&quot;&gt;
+&lt;i class=&quot;ph ph-user&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;
+&lt;span class=&quot;Avatar Avatar--icon Avatar--primary&quot;&gt;
+&lt;i class=&quot;ph ph-user&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;
+&lt;span class=&quot;Avatar Avatar--icon Avatar--large&quot;&gt;
+&lt;i class=&quot;ph ph-user&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;span class=&quot;Avatar Avatar--icon&quot;&gt;
+    &lt;i class=&quot;ph ph-user&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;
+</code></pre>
+<hr>
+<h2 id="avatar-shapes">Avatar Shapes</h2>
+<p>Avatars can be circular (default) or rounded square.</p>
+
+<div class="Preview" id="preview-j0p3d9dul">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=shape1" class="Avatar" alt="User">
+    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=shape2" class="Avatar Avatar--rounded" alt="User">
+    <span class="Avatar Avatar--initials">JD</span>
+    <span class="Avatar Avatar--initials Avatar--rounded">SC</span></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=shape1&quot; class=&quot;Avatar&quot; alt=&quot;User&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=shape2&quot; class=&quot;Avatar Avatar--rounded&quot; alt=&quot;User&quot;&gt;
+&lt;span class=&quot;Avatar Avatar--initials&quot;&gt;JD&lt;/span&gt;
+&lt;span class=&quot;Avatar Avatar--initials Avatar--rounded&quot;&gt;SC&lt;/span&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;img src=&quot;...&quot; class=&quot;Avatar&quot; alt=&quot;User&quot;&gt;
+&lt;img src=&quot;...&quot; class=&quot;Avatar Avatar--rounded&quot; alt=&quot;User&quot;&gt;
+</code></pre>
+<hr>
+<h2 id="avatar-with-status">Avatar with Status</h2>
+<p>Show online, away, busy, or offline status with an indicator.</p>
+
+<div class="Preview" id="preview-gr3omdolb">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="position: relative; display: inline-block;">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=status1" class="Avatar" alt="User">
+        <span class="Avatar-status Avatar-status--online"></span>
+    </div>
+    <div style="position: relative; display: inline-block;">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=status2" class="Avatar" alt="User">
+        <span class="Avatar-status Avatar-status--away"></span>
+    </div>
+    <div style="position: relative; display: inline-block;">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=status3" class="Avatar" alt="User">
+        <span class="Avatar-status Avatar-status--busy"></span>
+    </div>
+    <div style="position: relative; display: inline-block;">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=status4" class="Avatar" alt="User">
+        <span class="Avatar-status Avatar-status--offline"></span>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;position: relative; display: inline-block;&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=status1&quot; class=&quot;Avatar&quot; alt=&quot;User&quot;&gt;
+&lt;span class=&quot;Avatar-status Avatar-status--online&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;position: relative; display: inline-block;&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=status2&quot; class=&quot;Avatar&quot; alt=&quot;User&quot;&gt;
+&lt;span class=&quot;Avatar-status Avatar-status--away&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;position: relative; display: inline-block;&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=status3&quot; class=&quot;Avatar&quot; alt=&quot;User&quot;&gt;
+&lt;span class=&quot;Avatar-status Avatar-status--busy&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;position: relative; display: inline-block;&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=status4&quot; class=&quot;Avatar&quot; alt=&quot;User&quot;&gt;
+&lt;span class=&quot;Avatar-status Avatar-status--offline&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div style=&quot;position: relative; display: inline-block;&quot;&gt;
+    &lt;img src=&quot;...&quot; class=&quot;Avatar&quot; alt=&quot;User&quot;&gt;
+    &lt;span class=&quot;Avatar-status Avatar-status--online&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
+<div class="Preview" id="preview-b5f1ww93c">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="position: relative; display: inline-block;">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=sizes1" class="Avatar Avatar--small" alt="User">
+        <span class="Avatar-status Avatar-status--online Avatar-status--small"></span>
+    </div>
+    <div style="position: relative; display: inline-block;">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=sizes2" class="Avatar" alt="User">
+        <span class="Avatar-status Avatar-status--online"></span>
+    </div>
+    <div style="position: relative; display: inline-block;">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=sizes3" class="Avatar Avatar--large" alt="User">
+        <span class="Avatar-status Avatar-status--online Avatar-status--large"></span>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;position: relative; display: inline-block;&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=sizes1&quot; class=&quot;Avatar Avatar--small&quot; alt=&quot;User&quot;&gt;
+&lt;span class=&quot;Avatar-status Avatar-status--online Avatar-status--small&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;position: relative; display: inline-block;&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=sizes2&quot; class=&quot;Avatar&quot; alt=&quot;User&quot;&gt;
+&lt;span class=&quot;Avatar-status Avatar-status--online&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;position: relative; display: inline-block;&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=sizes3&quot; class=&quot;Avatar Avatar--large&quot; alt=&quot;User&quot;&gt;
+&lt;span class=&quot;Avatar-status Avatar-status--online Avatar-status--large&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="avatar-with-badge">Avatar with Badge</h2>
+<p>Display a notification badge on an avatar.</p>
+
+<div class="Preview" id="preview-jki6c1yi7">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="position: relative; display: inline-block;">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=badged1" class="Avatar" alt="User">
+        <span class="Badge Badge--count Badge--error Badge--avatar">3</span>
+    </div>
+    <div style="position: relative; display: inline-block;">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=badged2" class="Avatar Avatar--large" alt="User">
+        <span class="Badge Badge--count Badge--primary Badge--avatar">12</span>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;position: relative; display: inline-block;&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=badged1&quot; class=&quot;Avatar&quot; alt=&quot;User&quot;&gt;
+&lt;span class=&quot;Badge Badge--count Badge--error Badge--avatar&quot;&gt;3&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;position: relative; display: inline-block;&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=badged2&quot; class=&quot;Avatar Avatar--large&quot; alt=&quot;User&quot;&gt;
+&lt;span class=&quot;Badge Badge--count Badge--primary Badge--avatar&quot;&gt;12&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div style=&quot;position: relative; display: inline-block;&quot;&gt;
+    &lt;img src=&quot;...&quot; class=&quot;Avatar&quot; alt=&quot;User&quot;&gt;
+    &lt;span class=&quot;Badge Badge--count Badge--error Badge--avatar&quot;&gt;3&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="avatar-groups">Avatar Groups</h2>
+<p>Stack multiple avatars to represent a group.</p>
+
+<div class="Preview" id="preview-zr1ok3lfq">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="AvatarGroup">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=group1" class="Avatar" alt="User 1">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=group2" class="Avatar" alt="User 2">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=group3" class="Avatar" alt="User 3">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=group4" class="Avatar" alt="User 4">
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;AvatarGroup&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=group1&quot; class=&quot;Avatar&quot; alt=&quot;User 1&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=group2&quot; class=&quot;Avatar&quot; alt=&quot;User 2&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=group3&quot; class=&quot;Avatar&quot; alt=&quot;User 3&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=group4&quot; class=&quot;Avatar&quot; alt=&quot;User 4&quot;&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;AvatarGroup&quot;&gt;
+    &lt;img src=&quot;...&quot; class=&quot;Avatar&quot; alt=&quot;User 1&quot;&gt;
+    &lt;img src=&quot;...&quot; class=&quot;Avatar&quot; alt=&quot;User 2&quot;&gt;
+    &lt;img src=&quot;...&quot; class=&quot;Avatar&quot; alt=&quot;User 3&quot;&gt;
+    &lt;img src=&quot;...&quot; class=&quot;Avatar&quot; alt=&quot;User 4&quot;&gt;
+&lt;/div&gt;
+</code></pre>
+
+<div class="Preview" id="preview-6003m1ecs">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="AvatarGroup">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=over1" class="Avatar" alt="User 1">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=over2" class="Avatar" alt="User 2">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=over3" class="Avatar" alt="User 3">
+        <span class="Avatar Avatar--initials AvatarGroup-overflow">+5</span>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;AvatarGroup&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=over1&quot; class=&quot;Avatar&quot; alt=&quot;User 1&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=over2&quot; class=&quot;Avatar&quot; alt=&quot;User 2&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=over3&quot; class=&quot;Avatar&quot; alt=&quot;User 3&quot;&gt;
+&lt;span class=&quot;Avatar Avatar--initials AvatarGroup-overflow&quot;&gt;+5&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;AvatarGroup&quot;&gt;
+    &lt;img src=&quot;...&quot; class=&quot;Avatar&quot; alt=&quot;User 1&quot;&gt;
+    &lt;img src=&quot;...&quot; class=&quot;Avatar&quot; alt=&quot;User 2&quot;&gt;
+    &lt;img src=&quot;...&quot; class=&quot;Avatar&quot; alt=&quot;User 3&quot;&gt;
+    &lt;span class=&quot;Avatar Avatar--initials AvatarGroup-overflow&quot;&gt;+5&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
+<div class="Preview" id="preview-z8nu9x69s">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-4);">
+        <div class="AvatarGroup AvatarGroup--small">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=sm1" class="Avatar Avatar--small" alt="User">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=sm2" class="Avatar Avatar--small" alt="User">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=sm3" class="Avatar Avatar--small" alt="User">
+        </div>
+        <div class="AvatarGroup">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=md1" class="Avatar" alt="User">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=md2" class="Avatar" alt="User">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=md3" class="Avatar" alt="User">
+        </div>
+        <div class="AvatarGroup AvatarGroup--large">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=lg1" class="Avatar Avatar--large" alt="User">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=lg2" class="Avatar Avatar--large" alt="User">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=lg3" class="Avatar Avatar--large" alt="User">
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-4);&quot;&gt;
+&lt;div class=&quot;AvatarGroup AvatarGroup--small&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=sm1&quot; class=&quot;Avatar Avatar--small&quot; alt=&quot;User&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=sm2&quot; class=&quot;Avatar Avatar--small&quot; alt=&quot;User&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=sm3&quot; class=&quot;Avatar Avatar--small&quot; alt=&quot;User&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;AvatarGroup&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=md1&quot; class=&quot;Avatar&quot; alt=&quot;User&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=md2&quot; class=&quot;Avatar&quot; alt=&quot;User&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=md3&quot; class=&quot;Avatar&quot; alt=&quot;User&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;AvatarGroup AvatarGroup--large&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=lg1&quot; class=&quot;Avatar Avatar--large&quot; alt=&quot;User&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=lg2&quot; class=&quot;Avatar Avatar--large&quot; alt=&quot;User&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=lg3&quot; class=&quot;Avatar Avatar--large&quot; alt=&quot;User&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="avatar-stack-vertical-">Avatar Stack (Vertical)</h2>
+<p>Stack avatars vertically for lists.</p>
+
+<div class="Preview" id="preview-qb2d8innl">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="AvatarStack">
+        <div class="AvatarStack-item">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=stack1" class="Avatar Avatar--small" alt="User">
+            <span class="AvatarStack-name">Sarah Chen</span>
+        </div>
+        <div class="AvatarStack-item">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=stack2" class="Avatar Avatar--small" alt="User">
+            <span class="AvatarStack-name">John Smith</span>
+        </div>
+        <div class="AvatarStack-item">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=stack3" class="Avatar Avatar--small" alt="User">
+            <span class="AvatarStack-name">Mike Johnson</span>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;AvatarStack&quot;&gt;
+&lt;div class=&quot;AvatarStack-item&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=stack1&quot; class=&quot;Avatar Avatar--small&quot; alt=&quot;User&quot;&gt;
+&lt;span class=&quot;AvatarStack-name&quot;&gt;Sarah Chen&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;AvatarStack-item&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=stack2&quot; class=&quot;Avatar Avatar--small&quot; alt=&quot;User&quot;&gt;
+&lt;span class=&quot;AvatarStack-name&quot;&gt;John Smith&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;AvatarStack-item&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=stack3&quot; class=&quot;Avatar Avatar--small&quot; alt=&quot;User&quot;&gt;
+&lt;span class=&quot;AvatarStack-name&quot;&gt;Mike Johnson&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;AvatarStack&quot;&gt;
+    &lt;div class=&quot;AvatarStack-item&quot;&gt;
+        &lt;img src=&quot;...&quot; class=&quot;Avatar Avatar--small&quot; alt=&quot;User&quot;&gt;
+        &lt;span class=&quot;AvatarStack-name&quot;&gt;Sarah Chen&lt;/span&gt;
+    &lt;/div&gt;
+    ...
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="interactive-avatar">Interactive Avatar</h2>
+<p>Avatars that respond to user interaction.</p>
+
+<div class="Preview" id="preview-5358l6lak">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><button class="Avatar-button" aria-label="View profile">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=click1" class="Avatar" alt="User">
+    </button>
+    <button class="Avatar-button" aria-label="View profile">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=click2" class="Avatar Avatar--large" alt="User">
+    </button></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;button class=&quot;Avatar-button&quot; aria-label=&quot;View profile&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=click1&quot; class=&quot;Avatar&quot; alt=&quot;User&quot;&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Avatar-button&quot; aria-label=&quot;View profile&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=click2&quot; class=&quot;Avatar Avatar--large&quot; alt=&quot;User&quot;&gt;
+&lt;/button&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;button class=&quot;Avatar-button&quot; aria-label=&quot;View profile&quot;&gt;
+    &lt;img src=&quot;...&quot; class=&quot;Avatar&quot; alt=&quot;User&quot;&gt;
+&lt;/button&gt;
+</code></pre>
+
+<div class="Preview" id="preview-wptiqvcbl">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Avatar-editable Avatar-editable--large">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=edit1" class="Avatar Avatar--large" alt="User">
+        <button class="Avatar-edit" aria-label="Change photo">
+            <i class="ph ph-camera"></i>
+        </button>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Avatar-editable Avatar-editable--large&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=edit1&quot; class=&quot;Avatar Avatar--large&quot; alt=&quot;User&quot;&gt;
+&lt;button class=&quot;Avatar-edit&quot; aria-label=&quot;Change photo&quot;&gt;
+&lt;i class=&quot;ph ph-camera&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Avatar-editable Avatar-editable--large&quot;&gt;
+    &lt;img src=&quot;...&quot; class=&quot;Avatar Avatar--large&quot; alt=&quot;User&quot;&gt;
+    &lt;button class=&quot;Avatar-edit&quot; aria-label=&quot;Change photo&quot;&gt;
+        &lt;i class=&quot;ph ph-camera&quot;&gt;&lt;/i&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="common-patterns">Common Patterns</h2>
+<h3 id="comment-header">Comment Header</h3>
+
+<div class="Preview" id="preview-b2st1ezxn">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; align-items: center; gap: var(--space-3); max-width: 400px;">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=comment" class="Avatar" alt="Sarah Chen">
+        <div style="flex: 1;">
+            <div style="font-weight: 500;">Sarah Chen</div>
+            <div style="font-size: 0.8rem; color: var(--fg-3);">2 hours ago</div>
+        </div>
+        <button class="Button Button--icon Button--ghost Button--small" aria-label="More options">
+            <i class="ph ph-dots-three"></i>
+        </button>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-3); max-width: 400px;&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=comment&quot; class=&quot;Avatar&quot; alt=&quot;Sarah Chen&quot;&gt;
+&lt;div style=&quot;flex: 1;&quot;&gt;
+&lt;div style=&quot;font-weight: 500;&quot;&gt;Sarah Chen&lt;/div&gt;
+&lt;div style=&quot;font-size: 0.8rem; color: var(--fg-3);&quot;&gt;2 hours ago&lt;/div&gt;
+&lt;/div&gt;
+&lt;button class=&quot;Button Button--icon Button--ghost Button--small&quot; aria-label=&quot;More options&quot;&gt;
+&lt;i class=&quot;ph ph-dots-three&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="team-members">Team Members</h3>
+
+<div class="Preview" id="preview-2a0ofjigu">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Card" style="max-width: 320px;">
+        <div class="Card-header">
+            <h4 class="Card-title">Team Members</h4>
+            <span class="Badge">5</span>
+        </div>
+        <div class="Card-body" style="padding-top: 0;">
+            <div style="display: flex; flex-direction: column; gap: var(--space-3);">
+                <div style="display: flex; align-items: center; gap: var(--space-3);">
+                    <div style="position: relative;">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=team1" class="Avatar Avatar--small" alt="User">
+                        <span class="Avatar-status Avatar-status--online Avatar-status--small"></span>
+                    </div>
+                    <div style="flex: 1;">
+                        <div style="font-weight: 500; font-size: 0.9rem;">Sarah Chen</div>
+                        <div style="font-size: 0.75rem; color: var(--fg-3);">Lead Designer</div>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: var(--space-3);">
+                    <div style="position: relative;">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=team2" class="Avatar Avatar--small" alt="User">
+                        <span class="Avatar-status Avatar-status--online Avatar-status--small"></span>
+                    </div>
+                    <div style="flex: 1;">
+                        <div style="font-weight: 500; font-size: 0.9rem;">John Smith</div>
+                        <div style="font-size: 0.75rem; color: var(--fg-3);">Developer</div>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: var(--space-3);">
+                    <div style="position: relative;">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=team3" class="Avatar Avatar--small" alt="User">
+                        <span class="Avatar-status Avatar-status--away Avatar-status--small"></span>
+                    </div>
+                    <div style="flex: 1;">
+                        <div style="font-weight: 500; font-size: 0.9rem;">Mike Johnson</div>
+                        <div style="font-size: 0.75rem; color: var(--fg-3);">Product Manager</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Card-footer">
+            <button class="Button Button--secondary Button--small Button--block">
+                <i class="ph ph-plus Button-icon"></i>
+                Invite Member
+            </button>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Card&quot; style=&quot;max-width: 320px;&quot;&gt;
+&lt;div class=&quot;Card-header&quot;&gt;
+&lt;h4 class=&quot;Card-title&quot;&gt;Team Members&lt;/h4&gt;
+&lt;span class=&quot;Badge&quot;&gt;5&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Card-body&quot; style=&quot;padding-top: 0;&quot;&gt;
+&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-3);&quot;&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-3);&quot;&gt;
+&lt;div style=&quot;position: relative;&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=team1&quot; class=&quot;Avatar Avatar--small&quot; alt=&quot;User&quot;&gt;
+&lt;span class=&quot;Avatar-status Avatar-status--online Avatar-status--small&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;flex: 1;&quot;&gt;
+&lt;div style=&quot;font-weight: 500; font-size: 0.9rem;&quot;&gt;Sarah Chen&lt;/div&gt;
+&lt;div style=&quot;font-size: 0.75rem; color: var(--fg-3);&quot;&gt;Lead Designer&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-3);&quot;&gt;
+&lt;div style=&quot;position: relative;&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=team2&quot; class=&quot;Avatar Avatar--small&quot; alt=&quot;User&quot;&gt;
+&lt;span class=&quot;Avatar-status Avatar-status--online Avatar-status--small&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;flex: 1;&quot;&gt;
+&lt;div style=&quot;font-weight: 500; font-size: 0.9rem;&quot;&gt;John Smith&lt;/div&gt;
+&lt;div style=&quot;font-size: 0.75rem; color: var(--fg-3);&quot;&gt;Developer&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-3);&quot;&gt;
+&lt;div style=&quot;position: relative;&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=team3&quot; class=&quot;Avatar Avatar--small&quot; alt=&quot;User&quot;&gt;
+&lt;span class=&quot;Avatar-status Avatar-status--away Avatar-status--small&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;flex: 1;&quot;&gt;
+&lt;div style=&quot;font-weight: 500; font-size: 0.9rem;&quot;&gt;Mike Johnson&lt;/div&gt;
+&lt;div style=&quot;font-size: 0.75rem; color: var(--fg-3);&quot;&gt;Product Manager&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Card-footer&quot;&gt;
+&lt;button class=&quot;Button Button--secondary Button--small Button--block&quot;&gt;
+&lt;i class=&quot;ph ph-plus Button-icon&quot;&gt;&lt;/i&gt;
+Invite Member
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="assignees-selector">Assignees Selector</h3>
+
+<div class="Preview" id="preview-5c7vo1mya">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-m); max-width: 360px;">
+        <span style="font-size: 0.875rem; color: var(--fg-3);">Assignees:</span>
+        <div class="AvatarGroup">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=assign1" class="Avatar Avatar--small" alt="User 1">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=assign2" class="Avatar Avatar--small" alt="User 2">
+            <span class="Avatar Avatar--small Avatar--initials AvatarGroup-overflow">+3</span>
+        </div>
+        <button class="Button Button--icon Button--ghost Button--small" aria-label="Add assignee" style="margin-left: auto;">
+            <i class="ph ph-plus"></i>
+        </button>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-m); max-width: 360px;&quot;&gt;
+&lt;span style=&quot;font-size: 0.875rem; color: var(--fg-3);&quot;&gt;Assignees:&lt;/span&gt;
+&lt;div class=&quot;AvatarGroup&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=assign1&quot; class=&quot;Avatar Avatar--small&quot; alt=&quot;User 1&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=assign2&quot; class=&quot;Avatar Avatar--small&quot; alt=&quot;User 2&quot;&gt;
+&lt;span class=&quot;Avatar Avatar--small Avatar--initials AvatarGroup-overflow&quot;&gt;+3&lt;/span&gt;
+&lt;/div&gt;
+&lt;button class=&quot;Button Button--icon Button--ghost Button--small&quot; aria-label=&quot;Add assignee&quot; style=&quot;margin-left: auto;&quot;&gt;
+&lt;i class=&quot;ph ph-plus&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="profile-header">Profile Header</h3>
+
+<div class="Preview" id="preview-ri22dy618">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="text-align: center; padding: var(--space-6); max-width: 320px; margin: 0 auto;">
+        <div class="Avatar-editable" style="margin: 0 auto var(--space-4);">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=profile" class="Avatar Avatar--xl" alt="Sarah Chen">
+            <button class="Avatar-edit" aria-label="Change photo">
+                <i class="ph ph-camera"></i>
+            </button>
+        </div>
+        <h3 style="margin: 0 0 var(--space-1);">Sarah Chen</h3>
+        <p style="color: var(--fg-3); margin: 0 0 var(--space-4); font-size: 0.9rem;">Senior Product Designer at Carbon</p>
+        <div style="display: flex; justify-content: center; gap: var(--space-3);">
+            <button class="Button Button--primary Button--small">Follow</button>
+            <button class="Button Button--secondary Button--small">Message</button>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;text-align: center; padding: var(--space-6); max-width: 320px; margin: 0 auto;&quot;&gt;
+&lt;div class=&quot;Avatar-editable&quot; style=&quot;margin: 0 auto var(--space-4);&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=profile&quot; class=&quot;Avatar Avatar--xl&quot; alt=&quot;Sarah Chen&quot;&gt;
+&lt;button class=&quot;Avatar-edit&quot; aria-label=&quot;Change photo&quot;&gt;
+&lt;i class=&quot;ph ph-camera&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;h3 style=&quot;margin: 0 0 var(--space-1);&quot;&gt;Sarah Chen&lt;/h3&gt;
+&lt;p style=&quot;color: var(--fg-3); margin: 0 0 var(--space-4); font-size: 0.9rem;&quot;&gt;Senior Product Designer at Carbon&lt;/p&gt;
+&lt;div style=&quot;display: flex; justify-content: center; gap: var(--space-3);&quot;&gt;
+&lt;button class=&quot;Button Button--primary Button--small&quot;&gt;Follow&lt;/button&gt;
+&lt;button class=&quot;Button Button--secondary Button--small&quot;&gt;Message&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="customization">Customization</h2>
+<p>Override avatar styles using CSS custom properties:</p>
+<pre><code class="language-css">/* Custom avatar sizes */
+.Avatar--xxl {
+  width: 120px;
+  height: 120px;
+  font-size: 2rem;
+}
+
+/* Custom initials colors */
+.Avatar--initials.Avatar--brand {
+  background-color: oklch(60% 0.15 280 / 0.15);
+  color: oklch(50% 0.15 280);
+  border-color: transparent;
+}
+
+/* Square avatars */
+.Avatar--square {
+  border-radius: var(--r-s);
+}
+
+/* Bordered avatars for light backgrounds */
+.Avatar--bordered {
+  border: 2px solid var(--bd);
+}
+
+/* Custom group overlap */
+.AvatarGroup--tight .Avatar {
+  margin-left: -16px;
+}
+
+/* Ring style for selected state */
+.Avatar--selected {
+  box-shadow: 0 0 0 3px var(--accent);
+}
+</code></pre>
+<hr>
+<h2 id="api-reference">API Reference</h2>
+<h3 id="base-classes">Base Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">.Avatar</code></td><td class="ApiTable-desc">Base avatar styling (40px circle)</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar--xs</code></td><td class="ApiTable-desc">Extra small (24px)</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar--small</code></td><td class="ApiTable-desc">Small size (32px)</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar--large</code></td><td class="ApiTable-desc">Large size (56px)</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar--xl</code></td><td class="ApiTable-desc">Extra large (80px)</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar--rounded</code></td><td class="ApiTable-desc">Rounded square shape</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar--initials</code></td><td class="ApiTable-desc">Text initials variant</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar--icon</code></td><td class="ApiTable-desc">Icon placeholder variant</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar--primary</code></td><td class="ApiTable-desc">Primary color initials</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar--success</code></td><td class="ApiTable-desc">Success color initials</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar--warning</code></td><td class="ApiTable-desc">Warning color initials</td></tr>
+</tbody>
+</table>
+<h3 id="status-classes">Status Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">.Avatar-status</code></td><td class="ApiTable-desc">Status indicator dot</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar-status--online</code></td><td class="ApiTable-desc">Online status (green)</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar-status--away</code></td><td class="ApiTable-desc">Away status (yellow)</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar-status--busy</code></td><td class="ApiTable-desc">Busy status (red)</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar-status--offline</code></td><td class="ApiTable-desc">Offline status (gray)</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar-status--small</code></td><td class="ApiTable-desc">Smaller status dot</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar-status--large</code></td><td class="ApiTable-desc">Larger status dot</td></tr>
+</tbody>
+</table>
+<h3 id="group-stack-classes">Group &amp; Stack Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">.AvatarGroup</code></td><td class="ApiTable-desc">Stacked avatar container</td></tr>
+<tr><td><code class="ApiTable-prop">.AvatarGroup--small</code></td><td class="ApiTable-desc">Small group spacing</td></tr>
+<tr><td><code class="ApiTable-prop">.AvatarGroup--large</code></td><td class="ApiTable-desc">Large group spacing</td></tr>
+<tr><td><code class="ApiTable-prop">.AvatarGroup-overflow</code></td><td class="ApiTable-desc">Overflow count indicator</td></tr>
+<tr><td><code class="ApiTable-prop">.AvatarStack</code></td><td class="ApiTable-desc">Vertical list container</td></tr>
+<tr><td><code class="ApiTable-prop">.AvatarStack-item</code></td><td class="ApiTable-desc">Single item in stack</td></tr>
+<tr><td><code class="ApiTable-prop">.AvatarStack-name</code></td><td class="ApiTable-desc">Name label in stack</td></tr>
+</tbody>
+</table>
+<h3 id="interactive-classes">Interactive Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">.Avatar-button</code></td><td class="ApiTable-desc">Clickable avatar wrapper</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar-editable</code></td><td class="ApiTable-desc">Container for edit overlay</td></tr>
+<tr><td><code class="ApiTable-prop">.Avatar-edit</code></td><td class="ApiTable-desc">Edit button overlay</td></tr>
+</tbody>
+</table>
+<h3 id="attributes">Attributes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Attribute</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">alt</code></td><td class="ApiTable-desc">Required for image avatars; describe the person</td></tr>
+<tr><td><code class="ApiTable-prop">aria-label</code></td><td class="ApiTable-desc">Required for status indicators and interactive avatars</td></tr>
+<tr><td><code class="ApiTable-prop">role="group"</code></td><td class="ApiTable-desc">Use on AvatarGroup with aria-label for count</td></tr>
+</tbody>
+</table>
+<hr>
+<h2 id="css-reference">CSS Reference</h2>
+<pre><code class="language-css">/* Base Avatar */
+.Avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: var(--bg-s);
+  color: var(--fg);
+  font-weight: 600;
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
+
+/* Sizes */
+.Avatar--xs {
+  width: 24px;
+  height: 24px;
+  font-size: 0.65rem;
+}
+
+.Avatar--small {
+  width: 32px;
+  height: 32px;
+  font-size: 0.75rem;
+}
+
+.Avatar--large {
+  width: 56px;
+  height: 56px;
+  font-size: 1.125rem;
+}
+
+.Avatar--xl {
+  width: 80px;
+  height: 80px;
+  font-size: 1.5rem;
+}
+
+/* Shapes */
+.Avatar--rounded {
+  border-radius: var(--r-m);
+}
+
+/* Initials */
+.Avatar--initials {
+  background-color: var(--bg-s);
+  border: 1px solid var(--bd);
+}
+
+.Avatar--initials.Avatar--primary {
+  background-color: oklch(60% 0.15 250 / 0.15);
+  color: oklch(50% 0.15 250);
+  border-color: transparent;
+}
+
+.Avatar--initials.Avatar--success {
+  background-color: oklch(65% 0.15 150 / 0.15);
+  color: oklch(45% 0.15 150);
+  border-color: transparent;
+}
+
+.Avatar--initials.Avatar--warning {
+  background-color: oklch(75% 0.15 80 / 0.15);
+  color: oklch(50% 0.15 80);
+  border-color: transparent;
+}
+
+/* Icon Avatar */
+.Avatar--icon {
+  background-color: var(--bg-s);
+  border: 1px solid var(--bd);
+}
+
+.Avatar--icon.Avatar--primary {
+  background-color: oklch(60% 0.15 250 / 0.15);
+  color: oklch(50% 0.15 250);
+  border-color: transparent;
+}
+
+.Avatar--icon i {
+  font-size: 1.2em;
+}
+
+/* Status Indicator */
+.Avatar-status {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--bg);
+  background-color: var(--fg-3);
+}
+
+.Avatar-status--online {
+  background-color: oklch(55% 0.15 150);
+}
+
+.Avatar-status--away {
+  background-color: oklch(70% 0.15 80);
+}
+
+.Avatar-status--busy {
+  background-color: oklch(55% 0.2 25);
+}
+
+.Avatar-status--offline {
+  background-color: var(--fg-3);
+}
+
+.Avatar-status--small {
+  width: 10px;
+  height: 10px;
+}
+
+.Avatar-status--large {
+  width: 16px;
+  height: 16px;
+}
+
+/* Avatar Group */
+.AvatarGroup {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.AvatarGroup .Avatar {
+  margin-left: -12px;
+  border: 2px solid var(--bg);
+  transition: transform 0.15s;
+}
+
+.AvatarGroup .Avatar:last-child {
+  margin-left: 0;
+}
+
+.AvatarGroup .Avatar:hover {
+  transform: translateY(-2px);
+  z-index: 1;
+}
+
+.AvatarGroup--small .Avatar {
+  margin-left: -10px;
+}
+
+.AvatarGroup--large .Avatar {
+  margin-left: -16px;
+}
+
+.AvatarGroup-overflow {
+  background-color: var(--bg-s);
+  border-color: var(--bd);
+  font-size: 0.7rem;
+}
+
+/* Avatar Stack (Vertical) */
+.AvatarStack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.AvatarStack-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.AvatarStack-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Interactive Avatar */
+.Avatar-button {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: transform 0.15s;
+}
+
+.Avatar-button:hover {
+  transform: scale(1.05);
+}
+
+.Avatar-button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Editable Avatar */
+.Avatar-editable {
+  position: relative;
+  display: inline-block;
+}
+
+.Avatar-editable .Avatar {
+  width: 56px;
+  height: 56px;
+}
+
+.Avatar-editable--large .Avatar {
+  width: 80px;
+  height: 80px;
+}
+
+.Avatar-edit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--bg);
+  background-color: var(--bg-s);
+  color: var(--fg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.Avatar-edit:hover {
+  background-color: var(--bd);
+}
+
+.Avatar-edit:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.Avatar-editable--large .Avatar-edit {
+  width: 32px;
+  height: 32px;
+}
+</code></pre>
+<hr>
+<h2 id="accessibility">Accessibility</h2>
+<p>Avatars require attention to ensure they’re accessible:</p>
+<h3 id="alt-text">Alt Text</h3>
+<pre><code class="language-html">&lt;!-- Always provide meaningful alt text --&gt;
+&lt;img src=&quot;...&quot; class=&quot;Avatar&quot; alt=&quot;Sarah Chen's profile photo&quot;&gt;
+
+&lt;!-- For decorative avatars in context --&gt;
+&lt;img src=&quot;...&quot; class=&quot;Avatar&quot; alt=&quot;&quot; role=&quot;presentation&quot;&gt;
+</code></pre>
+<h3 id="interactive-avatars">Interactive Avatars</h3>
+<pre><code class="language-html">&lt;!-- Clickable avatar needs accessible label --&gt;
+&lt;button class=&quot;Avatar-button&quot; aria-label=&quot;View Sarah Chen's profile&quot;&gt;
+    &lt;img src=&quot;...&quot; class=&quot;Avatar&quot; alt=&quot;&quot;&gt;
+&lt;/button&gt;
+
+&lt;!-- Edit avatar with clear action --&gt;
+&lt;button class=&quot;Avatar-edit&quot; aria-label=&quot;Change profile photo&quot;&gt;
+    &lt;i class=&quot;ph ph-camera&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+</code></pre>
+<h3 id="status-indicators">Status Indicators</h3>
+<pre><code class="language-html">&lt;!-- Status should be announced --&gt;
+&lt;div style=&quot;position: relative;&quot;&gt;
+    &lt;img src=&quot;...&quot; class=&quot;Avatar&quot; alt=&quot;Sarah Chen&quot;&gt;
+    &lt;span class=&quot;Avatar-status Avatar-status--online&quot; aria-label=&quot;Online&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- Or include in alt text --&gt;
+&lt;img src=&quot;...&quot; class=&quot;Avatar&quot; alt=&quot;Sarah Chen (online)&quot;&gt;
+</code></pre>
+<h3 id="avatar-groups">Avatar Groups</h3>
+<pre><code class="language-html">&lt;!-- Provide group context --&gt;
+&lt;div class=&quot;AvatarGroup&quot; role=&quot;group&quot; aria-label=&quot;5 team members&quot;&gt;
+    &lt;img src=&quot;...&quot; class=&quot;Avatar&quot; alt=&quot;Sarah Chen&quot;&gt;
+    &lt;img src=&quot;...&quot; class=&quot;Avatar&quot; alt=&quot;John Smith&quot;&gt;
+    &lt;span class=&quot;Avatar Avatar--initials&quot; aria-label=&quot;3 more members&quot;&gt;+3&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="do">Do</h3>
+<ul>
+<li>✓ <strong>Always provide alt text</strong> — Describe who the avatar represents</li>
+<li>✓ <strong>Use consistent sizing</strong> — Match avatar sizes within a context</li>
+<li>✓ <strong>Show fallbacks</strong> — Use initials or icons when images fail</li>
+<li>✓ <strong>Indicate status clearly</strong> — Use recognizable colors for status</li>
+<li>✓ <strong>Keep groups reasonable</strong> — Show 3-5 avatars, then overflow</li>
+</ul>
+<h3 id="don-t">Don’t</h3>
+<ul>
+<li>✗ <strong>Use low-quality images</strong> — Ensure images are sharp at 2x</li>
+<li>✗ <strong>Crop faces poorly</strong> — Faces should be centered and visible</li>
+<li>✗ <strong>Mix sizes randomly</strong> — Be intentional about size hierarchy</li>
+<li>✗ <strong>Forget loading states</strong> — Show placeholder during load</li>
+<li>✗ <strong>Rely on color alone</strong> — Status needs more than just color</li>
+</ul>
+
+                </article>
+
+                <footer class="page-footer">
+                    <p>Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Dropdowns | Carbon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/bold/style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Floating Pill Nav (Mobile: bottom, Desktop: top) -->
+        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation">
+            <a href="../index.html" class="fnav-btn" data-section="home" aria-label="Home">
+                <i class="ph-bold ph-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="../tokens/colors.html" class="fnav-btn" data-section="tokens" aria-label="Tokens">
+                <i class="ph-bold ph-palette"></i>
+                <span>Tokens</span>
+            </a>
+            <a href="../components/buttons.html" class="fnav-btn" data-section="components" aria-label="Components">
+                <i class="ph-bold ph-stack"></i>
+                <span>Components</span>
+            </a>
+            <a href="../patterns/layouts.html" class="fnav-btn" data-section="patterns" aria-label="Patterns">
+                <i class="ph-bold ph-grid-four"></i>
+                <span>Patterns</span>
+            </a>
+            <div class="fnav-sep"></div>
+            <button class="fnav-btn" id="search-toggle" aria-label="Search">
+                <i class="ph ph-magnifying-glass"></i>
+            </button>
+            <button class="fnav-btn" id="theme-btn" aria-label="Toggle theme">
+                <i class="ph ph-moon"></i>
+            </button>
+        </nav>
+
+        <!-- Glassmorphism Top Bar (Desktop only) -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <a href="../index.html" class="logo">
+                    <i class="ph ph-intersect"></i>
+                    <span>Carbon</span>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <div class="search-container" id="search-container">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search components..." aria-label="Search" autocomplete="off">
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <main class="main-content">
+                <header class="page-header">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="../index.html">Carbon</a> <span class="sep">/</span> <span>Components</span> <span class="sep">/</span> <span>Dropdowns</span>
+                    </nav>
+                    <h1><em>Dropdowns</em></h1>
+                </header>
+                
+                <article class="prose">
+                    <h1>Dropdowns</h1>
+<p>Dropdowns display a list of actions or options when triggered. They help declutter interfaces by hiding secondary actions until needed.</p>
+<hr>
+<h2 id="installation">Installation</h2>
+<p>Copy the dropdown CSS from <code>styles/docs.css</code> or include the Carbon stylesheet:</p>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;carbon.min.css&quot;&gt;
+</code></pre>
+<p>Then use dropdown classes in your HTML:</p>
+<pre><code class="language-html">&lt;div class=&quot;Dropdown&quot;&gt;
+    &lt;button class=&quot;Button Dropdown-trigger&quot;&gt;Options &lt;i class=&quot;ph ph-caret-down&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;div class=&quot;Dropdown-menu&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;Dropdown-item&quot;&gt;Edit&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;Dropdown-item&quot;&gt;Delete&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="usage">Usage</h2>
+<p>Wrap a trigger and menu in <code>.Dropdown</code>. The trigger toggles the <code>.Dropdown-menu</code> visibility.</p>
+
+<div class="Preview" id="preview-pv46divo5">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Dropdown">
+    <button class="Button Button--secondary Dropdown-trigger">
+        Options
+        <i class="ph ph-caret-down"></i>
+    </button>
+    <div class="Dropdown-menu" style="position: relative; display: block; margin-top: var(--space-2);">
+        <a href="#" class="Dropdown-item">Edit</a>
+        <a href="#" class="Dropdown-item">Duplicate</a>
+        <a href="#" class="Dropdown-item">Archive</a>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Dropdown&quot;&gt;
+&lt;button class=&quot;Button Button--secondary Dropdown-trigger&quot;&gt;
+Options
+&lt;i class=&quot;ph ph-caret-down&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;div class=&quot;Dropdown-menu&quot; style=&quot;position: relative; display: block; margin-top: var(--space-2);&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;Dropdown-item&quot;&gt;Edit&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Dropdown-item&quot;&gt;Duplicate&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Dropdown-item&quot;&gt;Archive&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="examples">Examples</h2>
+<h3 id="basic-dropdown">Basic Dropdown</h3>
+<p>A simple dropdown with action items and a divider.</p>
+
+<div class="Preview" id="preview-2ecm3n3y5">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Dropdown">
+    <button class="Button Button--secondary Dropdown-trigger">
+        Actions
+        <i class="ph ph-caret-down"></i>
+    </button>
+    <div class="Dropdown-menu" style="position: relative; display: block; margin-top: var(--space-2);">
+        <a href="#" class="Dropdown-item">Edit</a>
+        <a href="#" class="Dropdown-item">Duplicate</a>
+        <a href="#" class="Dropdown-item">Archive</a>
+        <hr class="Dropdown-divider">
+        <a href="#" class="Dropdown-item Dropdown-item--danger">Delete</a>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Dropdown&quot;&gt;
+&lt;button class=&quot;Button Button--secondary Dropdown-trigger&quot;&gt;
+Actions
+&lt;i class=&quot;ph ph-caret-down&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;div class=&quot;Dropdown-menu&quot; style=&quot;position: relative; display: block; margin-top: var(--space-2);&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;Dropdown-item&quot;&gt;Edit&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Dropdown-item&quot;&gt;Duplicate&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Dropdown-item&quot;&gt;Archive&lt;/a&gt;
+&lt;hr class=&quot;Dropdown-divider&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;Dropdown-item Dropdown-item--danger&quot;&gt;Delete&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="with-icons">With Icons</h3>
+<p>Add icons to dropdown items for visual reinforcement.</p>
+
+<div class="Preview" id="preview-htsj3fdlp">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Dropdown-menu" style="position: relative; display: block; width: 200px;">
+    <a href="#" class="Dropdown-item">
+        <i class="ph ph-pencil"></i>
+        <span>Edit</span>
+    </a>
+    <a href="#" class="Dropdown-item">
+        <i class="ph ph-copy"></i>
+        <span>Duplicate</span>
+    </a>
+    <a href="#" class="Dropdown-item">
+        <i class="ph ph-archive"></i>
+        <span>Archive</span>
+    </a>
+    <hr class="Dropdown-divider">
+    <a href="#" class="Dropdown-item Dropdown-item--danger">
+        <i class="ph ph-trash"></i>
+        <span>Delete</span>
+    </a>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Dropdown-menu&quot; style=&quot;position: relative; display: block; width: 200px;&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;Dropdown-item&quot;&gt;
+&lt;i class=&quot;ph ph-pencil&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Edit&lt;/span&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Dropdown-item&quot;&gt;
+&lt;i class=&quot;ph ph-copy&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Duplicate&lt;/span&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Dropdown-item&quot;&gt;
+&lt;i class=&quot;ph ph-archive&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Archive&lt;/span&gt;
+&lt;/a&gt;
+&lt;hr class=&quot;Dropdown-divider&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;Dropdown-item Dropdown-item--danger&quot;&gt;
+&lt;i class=&quot;ph ph-trash&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Delete&lt;/span&gt;
+&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="with-sections">With Sections</h3>
+<p>Group related items using headers and dividers.</p>
+
+<div class="Preview" id="preview-o51w2ljje">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Dropdown-menu" style="position: relative; display: block; width: 220px;">
+    <div class="Dropdown-header">Actions</div>
+    <a href="#" class="Dropdown-item">Edit profile</a>
+    <a href="#" class="Dropdown-item">Preferences</a>
+    <hr class="Dropdown-divider">
+    <div class="Dropdown-header">Account</div>
+    <a href="#" class="Dropdown-item">Billing</a>
+    <a href="#" class="Dropdown-item">Team members</a>
+    <hr class="Dropdown-divider">
+    <a href="#" class="Dropdown-item Dropdown-item--danger">Sign out</a>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Dropdown-menu&quot; style=&quot;position: relative; display: block; width: 220px;&quot;&gt;
+&lt;div class=&quot;Dropdown-header&quot;&gt;Actions&lt;/div&gt;
+&lt;a href=&quot;#&quot; class=&quot;Dropdown-item&quot;&gt;Edit profile&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Dropdown-item&quot;&gt;Preferences&lt;/a&gt;
+&lt;hr class=&quot;Dropdown-divider&quot;&gt;
+&lt;div class=&quot;Dropdown-header&quot;&gt;Account&lt;/div&gt;
+&lt;a href=&quot;#&quot; class=&quot;Dropdown-item&quot;&gt;Billing&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Dropdown-item&quot;&gt;Team members&lt;/a&gt;
+&lt;hr class=&quot;Dropdown-divider&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;Dropdown-item Dropdown-item--danger&quot;&gt;Sign out&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="checkable-items">Checkable Items</h3>
+<p>Use for multi-select or toggle options within a dropdown.</p>
+
+<div class="Preview" id="preview-qac8s202r">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Dropdown-menu" style="position: relative; display: block; width: 180px;">
+    <label class="Dropdown-item Dropdown-item--check">
+        <input type="checkbox" checked>
+        <span>Show sidebar</span>
+    </label>
+    <label class="Dropdown-item Dropdown-item--check">
+        <input type="checkbox" checked>
+        <span>Show toolbar</span>
+    </label>
+    <label class="Dropdown-item Dropdown-item--check">
+        <input type="checkbox">
+        <span>Compact mode</span>
+    </label>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Dropdown-menu&quot; style=&quot;position: relative; display: block; width: 180px;&quot;&gt;
+&lt;label class=&quot;Dropdown-item Dropdown-item--check&quot;&gt;
+&lt;input type=&quot;checkbox&quot; checked&gt;
+&lt;span&gt;Show sidebar&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;Dropdown-item Dropdown-item--check&quot;&gt;
+&lt;input type=&quot;checkbox&quot; checked&gt;
+&lt;span&gt;Show toolbar&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;Dropdown-item Dropdown-item--check&quot;&gt;
+&lt;input type=&quot;checkbox&quot;&gt;
+&lt;span&gt;Compact mode&lt;/span&gt;
+&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="icon-button-trigger">Icon Button Trigger</h3>
+<p>Common pattern for contextual action menus.</p>
+
+<div class="Preview" id="preview-r2afidiy6">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; gap: var(--space-4); align-items: flex-start;">
+    <div class="Dropdown">
+        <button class="Button Button--icon Button--secondary Dropdown-trigger" aria-label="More options">
+            <i class="ph ph-dots-three"></i>
+        </button>
+    </div>
+    <div class="Dropdown">
+        <button class="Button Button--icon Button--secondary Dropdown-trigger" aria-label="More options">
+            <i class="ph ph-dots-three-vertical"></i>
+        </button>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; gap: var(--space-4); align-items: flex-start;&quot;&gt;
+&lt;div class=&quot;Dropdown&quot;&gt;
+&lt;button class=&quot;Button Button--icon Button--secondary Dropdown-trigger&quot; aria-label=&quot;More options&quot;&gt;
+&lt;i class=&quot;ph ph-dots-three&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Dropdown&quot;&gt;
+&lt;button class=&quot;Button Button--icon Button--secondary Dropdown-trigger&quot; aria-label=&quot;More options&quot;&gt;
+&lt;i class=&quot;ph ph-dots-three-vertical&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="with-descriptions">With Descriptions</h3>
+<p>Add helper text to clarify actions.</p>
+
+<div class="Preview" id="preview-l8ngaqp1r">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Dropdown-menu" style="position: relative; display: block; width: 260px;">
+    <a href="#" class="Dropdown-item Dropdown-item--descriptive">
+        <div class="Dropdown-item-content">
+            <span class="Dropdown-item-label">Public</span>
+            <span class="Dropdown-item-description">Anyone can view this item</span>
+        </div>
+    </a>
+    <a href="#" class="Dropdown-item Dropdown-item--descriptive">
+        <div class="Dropdown-item-content">
+            <span class="Dropdown-item-label">Private</span>
+            <span class="Dropdown-item-description">Only you can view this item</span>
+        </div>
+    </a>
+    <a href="#" class="Dropdown-item Dropdown-item--descriptive">
+        <div class="Dropdown-item-content">
+            <span class="Dropdown-item-label">Team only</span>
+            <span class="Dropdown-item-description">Only team members can view</span>
+        </div>
+    </a>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Dropdown-menu&quot; style=&quot;position: relative; display: block; width: 260px;&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;Dropdown-item Dropdown-item--descriptive&quot;&gt;
+&lt;div class=&quot;Dropdown-item-content&quot;&gt;
+&lt;span class=&quot;Dropdown-item-label&quot;&gt;Public&lt;/span&gt;
+&lt;span class=&quot;Dropdown-item-description&quot;&gt;Anyone can view this item&lt;/span&gt;
+&lt;/div&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Dropdown-item Dropdown-item--descriptive&quot;&gt;
+&lt;div class=&quot;Dropdown-item-content&quot;&gt;
+&lt;span class=&quot;Dropdown-item-label&quot;&gt;Private&lt;/span&gt;
+&lt;span class=&quot;Dropdown-item-description&quot;&gt;Only you can view this item&lt;/span&gt;
+&lt;/div&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Dropdown-item Dropdown-item--descriptive&quot;&gt;
+&lt;div class=&quot;Dropdown-item-content&quot;&gt;
+&lt;span class=&quot;Dropdown-item-label&quot;&gt;Team only&lt;/span&gt;
+&lt;span class=&quot;Dropdown-item-description&quot;&gt;Only team members can view&lt;/span&gt;
+&lt;/div&gt;
+&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="with-keyboard-shortcuts">With Keyboard Shortcuts</h3>
+<p>Display keyboard shortcuts alongside actions.</p>
+
+<div class="Preview" id="preview-et41balq3">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Dropdown-menu" style="position: relative; display: block; width: 220px;">
+    <a href="#" class="Dropdown-item">
+        <span>Undo</span>
+        <kbd class="Dropdown-shortcut">⌘Z</kbd>
+    </a>
+    <a href="#" class="Dropdown-item">
+        <span>Redo</span>
+        <kbd class="Dropdown-shortcut">⌘⇧Z</kbd>
+    </a>
+    <hr class="Dropdown-divider">
+    <a href="#" class="Dropdown-item">
+        <span>Cut</span>
+        <kbd class="Dropdown-shortcut">⌘X</kbd>
+    </a>
+    <a href="#" class="Dropdown-item">
+        <span>Copy</span>
+        <kbd class="Dropdown-shortcut">⌘C</kbd>
+    </a>
+    <a href="#" class="Dropdown-item">
+        <span>Paste</span>
+        <kbd class="Dropdown-shortcut">⌘V</kbd>
+    </a>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Dropdown-menu&quot; style=&quot;position: relative; display: block; width: 220px;&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;Dropdown-item&quot;&gt;
+&lt;span&gt;Undo&lt;/span&gt;
+&lt;kbd class=&quot;Dropdown-shortcut&quot;&gt;⌘Z&lt;/kbd&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Dropdown-item&quot;&gt;
+&lt;span&gt;Redo&lt;/span&gt;
+&lt;kbd class=&quot;Dropdown-shortcut&quot;&gt;⌘⇧Z&lt;/kbd&gt;
+&lt;/a&gt;
+&lt;hr class=&quot;Dropdown-divider&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;Dropdown-item&quot;&gt;
+&lt;span&gt;Cut&lt;/span&gt;
+&lt;kbd class=&quot;Dropdown-shortcut&quot;&gt;⌘X&lt;/kbd&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Dropdown-item&quot;&gt;
+&lt;span&gt;Copy&lt;/span&gt;
+&lt;kbd class=&quot;Dropdown-shortcut&quot;&gt;⌘C&lt;/kbd&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Dropdown-item&quot;&gt;
+&lt;span&gt;Paste&lt;/span&gt;
+&lt;kbd class=&quot;Dropdown-shortcut&quot;&gt;⌘V&lt;/kbd&gt;
+&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="javascript">JavaScript</h2>
+<p>Basic toggle logic for dropdown interaction:</p>
+<pre><code class="language-js">document.querySelectorAll('.Dropdown').forEach(dropdown =&gt; {
+    const trigger = dropdown.querySelector('.Dropdown-trigger');
+    const menu = dropdown.querySelector('.Dropdown-menu');
+    
+    trigger.addEventListener('click', (e) =&gt; {
+        e.stopPropagation();
+        // Close other dropdowns
+        document.querySelectorAll('.Dropdown-menu.is-open').forEach(m =&gt; {
+            if (m !== menu) m.classList.remove('is-open');
+        });
+        menu.classList.toggle('is-open');
+    });
+});
+
+// Close on outside click
+document.addEventListener('click', () =&gt; {
+    document.querySelectorAll('.Dropdown-menu.is-open')
+        .forEach(m =&gt; m.classList.remove('is-open'));
+});
+
+// Close on Escape key
+document.addEventListener('keydown', (e) =&gt; {
+    if (e.key === 'Escape') {
+        document.querySelectorAll('.Dropdown-menu.is-open')
+            .forEach(m =&gt; m.classList.remove('is-open'));
+    }
+});
+</code></pre>
+<hr>
+<h2 id="common-patterns">Common Patterns</h2>
+<h3 id="user-account-menu">User Account Menu</h3>
+
+<div class="Preview" id="preview-q0zjh5nnr">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Dropdown-menu" style="position: relative; display: block; width: 240px;">
+    <div style="padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--border-color);">
+        <div style="font-weight: 500;">John Doe</div>
+        <div style="font-size: 0.875rem; color: var(--fg-3);">john@example.com</div>
+    </div>
+    <a href="#" class="Dropdown-item">
+        <i class="ph ph-user"></i>
+        <span>Profile</span>
+    </a>
+    <a href="#" class="Dropdown-item">
+        <i class="ph ph-gear"></i>
+        <span>Settings</span>
+    </a>
+    <a href="#" class="Dropdown-item">
+        <i class="ph ph-credit-card"></i>
+        <span>Billing</span>
+    </a>
+    <hr class="Dropdown-divider">
+    <a href="#" class="Dropdown-item Dropdown-item--danger">
+        <i class="ph ph-sign-out"></i>
+        <span>Sign out</span>
+    </a>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Dropdown-menu&quot; style=&quot;position: relative; display: block; width: 240px;&quot;&gt;
+&lt;div style=&quot;padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--border-color);&quot;&gt;
+&lt;div style=&quot;font-weight: 500;&quot;&gt;John Doe&lt;/div&gt;
+&lt;div style=&quot;font-size: 0.875rem; color: var(--fg-3);&quot;&gt;john@example.com&lt;/div&gt;
+&lt;/div&gt;
+&lt;a href=&quot;#&quot; class=&quot;Dropdown-item&quot;&gt;
+&lt;i class=&quot;ph ph-user&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Profile&lt;/span&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Dropdown-item&quot;&gt;
+&lt;i class=&quot;ph ph-gear&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Settings&lt;/span&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Dropdown-item&quot;&gt;
+&lt;i class=&quot;ph ph-credit-card&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Billing&lt;/span&gt;
+&lt;/a&gt;
+&lt;hr class=&quot;Dropdown-divider&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;Dropdown-item Dropdown-item--danger&quot;&gt;
+&lt;i class=&quot;ph ph-sign-out&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Sign out&lt;/span&gt;
+&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="table-row-actions">Table Row Actions</h3>
+
+<div class="Preview" id="preview-vxanecfn5">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; gap: var(--space-4);">
+    <div class="Dropdown">
+        <button class="Button Button--icon Button--ghost Button--small Dropdown-trigger" aria-label="Row actions">
+            <i class="ph ph-dots-three"></i>
+        </button>
+    </div>
+    <div class="Dropdown-menu" style="position: relative; display: block; width: 160px;">
+        <a href="#" class="Dropdown-item">
+            <i class="ph ph-eye"></i>
+            <span>View</span>
+        </a>
+        <a href="#" class="Dropdown-item">
+            <i class="ph ph-pencil"></i>
+            <span>Edit</span>
+        </a>
+        <hr class="Dropdown-divider">
+        <a href="#" class="Dropdown-item Dropdown-item--danger">
+            <i class="ph ph-trash"></i>
+            <span>Delete</span>
+        </a>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; gap: var(--space-4);&quot;&gt;
+&lt;div class=&quot;Dropdown&quot;&gt;
+&lt;button class=&quot;Button Button--icon Button--ghost Button--small Dropdown-trigger&quot; aria-label=&quot;Row actions&quot;&gt;
+&lt;i class=&quot;ph ph-dots-three&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Dropdown-menu&quot; style=&quot;position: relative; display: block; width: 160px;&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;Dropdown-item&quot;&gt;
+&lt;i class=&quot;ph ph-eye&quot;&gt;&lt;/i&gt;
+&lt;span&gt;View&lt;/span&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Dropdown-item&quot;&gt;
+&lt;i class=&quot;ph ph-pencil&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Edit&lt;/span&gt;
+&lt;/a&gt;
+&lt;hr class=&quot;Dropdown-divider&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;Dropdown-item Dropdown-item--danger&quot;&gt;
+&lt;i class=&quot;ph ph-trash&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Delete&lt;/span&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="customization">Customization</h2>
+<p>Override dropdown styles using CSS custom properties:</p>
+<pre><code class="language-css">/* Custom dropdown menu width */
+.Dropdown-menu {
+  --dropdown-min-width: 280px;
+  min-width: var(--dropdown-min-width);
+}
+
+/* Custom item colors */
+.Dropdown-item {
+  --dropdown-item-hover: oklch(95% 0.02 250);
+}
+
+.Dropdown-item:hover {
+  background: var(--dropdown-item-hover);
+}
+
+/* Custom danger color */
+.Dropdown-item--danger {
+  --dropdown-danger: oklch(55% 0.2 25);
+  color: var(--dropdown-danger);
+}
+
+/* Rounded menu */
+.Dropdown-menu--rounded {
+  border-radius: var(--space-3);
+}
+</code></pre>
+<hr>
+<h2 id="api-reference">API Reference</h2>
+<h3 id="container-classes">Container Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Dropdown</code></td>
+<td class="ApiTable-desc">Container for dropdown trigger and menu</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Dropdown-trigger</code></td>
+<td class="ApiTable-desc">Element that toggles the dropdown (add to button)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Dropdown-menu</code></td>
+<td class="ApiTable-desc">The dropdown menu panel</td>
+</tr>
+</tbody>
+</table>
+<h3 id="menu-item-classes">Menu Item Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Dropdown-item</code></td>
+<td class="ApiTable-desc">Individual menu item (link or button)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Dropdown-item--danger</code></td>
+<td class="ApiTable-desc">Destructive action styling (red)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Dropdown-item--check</code></td>
+<td class="ApiTable-desc">Checkable item with checkbox input</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Dropdown-item--descriptive</code></td>
+<td class="ApiTable-desc">Item with description text</td>
+</tr>
+</tbody>
+</table>
+<h3 id="structure-classes">Structure Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Dropdown-header</code></td>
+<td class="ApiTable-desc">Section header label</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Dropdown-divider</code></td>
+<td class="ApiTable-desc">Horizontal separator between items</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Dropdown-shortcut</code></td>
+<td class="ApiTable-desc">Keyboard shortcut display (use with <code>&lt;kbd&gt;</code>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="state-classes">State Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.is-open</code></td>
+<td class="ApiTable-desc">Shows the dropdown menu (add via JS)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="css-reference">CSS Reference</h2>
+<pre><code class="language-css">/* Container */
+.Dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Menu */
+.Dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+  min-width: 180px;
+  padding: var(--space-1) 0;
+  background: var(--bg);
+  border: 1px solid var(--bd);
+  border-radius: var(--r-m);
+  box-shadow: 0 4px 12px oklch(0% 0 0 / 0.12);
+  display: none;
+  margin-top: var(--space-1);
+}
+
+.Dropdown-menu.is-open {
+  display: block;
+}
+
+/* Items */
+.Dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  color: var(--fg);
+  text-decoration: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.Dropdown-item:hover {
+  background: var(--bg-s);
+}
+
+.Dropdown-item--danger {
+  color: oklch(55% 0.2 25);
+}
+
+.Dropdown-item--danger:hover {
+  background: oklch(55% 0.2 25 / 0.08);
+}
+
+/* Checkable items */
+.Dropdown-item--check {
+  cursor: pointer;
+}
+
+.Dropdown-item--check input {
+  margin: 0;
+}
+
+/* Descriptive items */
+.Dropdown-item--descriptive {
+  padding: var(--space-2) var(--space-3);
+}
+
+.Dropdown-item-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.Dropdown-item-label {
+  font-weight: 500;
+}
+
+.Dropdown-item-description {
+  font-size: 0.8rem;
+  color: var(--fg-3);
+}
+
+/* Divider */
+.Dropdown-divider {
+  border: none;
+  border-top: 1px solid var(--bd);
+  margin: var(--space-1) 0;
+}
+
+/* Header */
+.Dropdown-header {
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--fg-3);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Keyboard shortcut */
+.Dropdown-shortcut {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: var(--fg-3);
+  font-family: var(--font-sans);
+}
+
+/* Trigger caret */
+.Dropdown-trigger i.ph-caret-down {
+  font-size: 0.8rem;
+  transition: transform 0.15s;
+}
+
+.Dropdown-trigger[aria-expanded=&quot;true&quot;] i.ph-caret-down {
+  transform: rotate(180deg);
+}
+</code></pre>
+<hr>
+<h2 id="accessibility">Accessibility</h2>
+<h3 id="keyboard-support">Keyboard Support</h3>
+<div class="Table-container"><table class="Table">
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enter / Space</td>
+<td>Opens dropdown, activates focused item</td>
+</tr>
+<tr>
+<td>Escape</td>
+<td>Closes dropdown</td>
+</tr>
+<tr>
+<td>Arrow Down</td>
+<td>Moves focus to next item</td>
+</tr>
+<tr>
+<td>Arrow Up</td>
+<td>Moves focus to previous item</td>
+</tr>
+<tr>
+<td>Home</td>
+<td>Moves focus to first item</td>
+</tr>
+<tr>
+<td>End</td>
+<td>Moves focus to last item</td>
+</tr>
+<tr>
+<td>Tab</td>
+<td>Closes dropdown, moves to next element</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="aria-attributes">ARIA Attributes</h3>
+<pre><code class="language-html">&lt;!-- Proper dropdown markup --&gt;
+&lt;div class=&quot;Dropdown&quot;&gt;
+    &lt;button 
+        class=&quot;Button Dropdown-trigger&quot;
+        aria-haspopup=&quot;true&quot;
+        aria-expanded=&quot;false&quot;
+        aria-controls=&quot;dropdown-menu-1&quot;
+    &gt;
+        Options
+        &lt;i class=&quot;ph ph-caret-down&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+    &lt;/button&gt;
+    &lt;div 
+        class=&quot;Dropdown-menu&quot; 
+        id=&quot;dropdown-menu-1&quot;
+        role=&quot;menu&quot;
+        aria-labelledby=&quot;dropdown-trigger-1&quot;
+    &gt;
+        &lt;a href=&quot;#&quot; class=&quot;Dropdown-item&quot; role=&quot;menuitem&quot;&gt;Edit&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;Dropdown-item&quot; role=&quot;menuitem&quot;&gt;Duplicate&lt;/a&gt;
+        &lt;hr class=&quot;Dropdown-divider&quot; role=&quot;separator&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;Dropdown-item Dropdown-item--danger&quot; role=&quot;menuitem&quot;&gt;Delete&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- When open, update aria-expanded --&gt;
+&lt;button aria-expanded=&quot;true&quot;&gt;...&lt;/button&gt;
+
+&lt;!-- Checkable items use menuitemcheckbox --&gt;
+&lt;label class=&quot;Dropdown-item Dropdown-item--check&quot; role=&quot;menuitemcheckbox&quot; aria-checked=&quot;true&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; checked&gt;
+    &lt;span&gt;Show sidebar&lt;/span&gt;
+&lt;/label&gt;
+</code></pre>
+<h3 id="focus-management">Focus Management</h3>
+<pre><code class="language-js">// Move focus into menu when opened
+menu.classList.add('is-open');
+menu.querySelector('.Dropdown-item')?.focus();
+
+// Return focus to trigger when closed
+menu.classList.remove('is-open');
+trigger.focus();
+</code></pre>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="do">Do</h3>
+<ul>
+<li>✓ <strong>Group related actions</strong> — Use headers and dividers to organize</li>
+<li>✓ <strong>Put destructive actions last</strong> — Separate with a divider</li>
+<li>✓ <strong>Use clear action labels</strong> — “Delete project” not just “Delete”</li>
+<li>✓ <strong>Add keyboard shortcuts</strong> — For frequently used actions</li>
+<li>✓ <strong>Keep menus focused</strong> — 5-7 items max before grouping</li>
+<li>✓ <strong>Close on action</strong> — Dismiss dropdown after user selects</li>
+</ul>
+<h3 id="don-t">Don’t</h3>
+<ul>
+<li>✗ <strong>Nest dropdowns</strong> — Use a different pattern for sub-menus</li>
+<li>✗ <strong>Use for navigation</strong> — Dropdowns are for actions, not nav links</li>
+<li>✗ <strong>Hide primary actions</strong> — Important actions should be visible</li>
+<li>✗ <strong>Overload with options</strong> — Too many items overwhelm users</li>
+<li>✗ <strong>Forget mobile</strong> — Ensure touch targets are large enough (44px min)</li>
+<li>✗ <strong>Skip the caret icon</strong> — Visual affordance helps discoverability</li>
+</ul>
+
+                </article>
+
+                <footer class="page-footer">
+                    <p>Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

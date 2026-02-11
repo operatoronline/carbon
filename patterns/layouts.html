@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Layouts | Carbon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/bold/style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Floating Pill Nav (Mobile: bottom, Desktop: top) -->
+        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation">
+            <a href="../index.html" class="fnav-btn" data-section="home" aria-label="Home">
+                <i class="ph-bold ph-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="../tokens/colors.html" class="fnav-btn" data-section="tokens" aria-label="Tokens">
+                <i class="ph-bold ph-palette"></i>
+                <span>Tokens</span>
+            </a>
+            <a href="../components/buttons.html" class="fnav-btn" data-section="components" aria-label="Components">
+                <i class="ph-bold ph-stack"></i>
+                <span>Components</span>
+            </a>
+            <a href="../patterns/layouts.html" class="fnav-btn" data-section="patterns" aria-label="Patterns">
+                <i class="ph-bold ph-grid-four"></i>
+                <span>Patterns</span>
+            </a>
+            <div class="fnav-sep"></div>
+            <button class="fnav-btn" id="search-toggle" aria-label="Search">
+                <i class="ph ph-magnifying-glass"></i>
+            </button>
+            <button class="fnav-btn" id="theme-btn" aria-label="Toggle theme">
+                <i class="ph ph-moon"></i>
+            </button>
+        </nav>
+
+        <!-- Glassmorphism Top Bar (Desktop only) -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <a href="../index.html" class="logo">
+                    <i class="ph ph-intersect"></i>
+                    <span>Carbon</span>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <div class="search-container" id="search-container">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search components..." aria-label="Search" autocomplete="off">
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <main class="main-content">
+                <header class="page-header">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="../index.html">Carbon</a> <span class="sep">/</span> <span>Patterns</span> <span class="sep">/</span> <span>Layouts</span>
+                    </nav>
+                    <h1><em>Layouts</em></h1>
+                </header>
+                
+                <article class="prose">
+                    <h1>Layouts</h1>
+<p>Composable primitives for page structure. Container, Grid, Stack, Cluster, Split, Sidebar, and Center — combine them to build any layout without writing custom CSS.</p>
+<hr>
+<h2 id="container">Container</h2>
+<p>Centers content with a max-width and horizontal padding.</p>
+
+<div class="Preview" id="preview-hggzycms0">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-3); width: 100%;">
+        <div class="Layout-container Layout-container--narrow" style="background: var(--accent-s); padding: var(--space-3); border-radius: var(--r-s); border: 1px dashed var(--accent);">
+            <code style="font-size: .75rem; color: var(--accent);">--narrow</code> <span style="color: var(--fg-3); font-size: .8rem;">640px</span>
+        </div>
+        <div class="Layout-container" style="background: var(--bg-s); padding: var(--space-3); border-radius: var(--r-s); border: 1px dashed var(--bd-s);">
+            <code style="font-size: .75rem;">default</code> <span style="color: var(--fg-3); font-size: .8rem;">960px</span>
+        </div>
+        <div class="Layout-container Layout-container--wide" style="background: var(--bg-s); padding: var(--space-3); border-radius: var(--r-s); border: 1px dashed var(--bd-s);">
+            <code style="font-size: .75rem;">--wide</code> <span style="color: var(--fg-3); font-size: .8rem;">1280px</span>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-3); width: 100%;&quot;&gt;
+&lt;div class=&quot;Layout-container Layout-container--narrow&quot; style=&quot;background: var(--accent-s); padding: var(--space-3); border-radius: var(--r-s); border: 1px dashed var(--accent);&quot;&gt;
+&lt;code style=&quot;font-size: .75rem; color: var(--accent);&quot;&gt;--narrow&lt;/code&gt; &lt;span style=&quot;color: var(--fg-3); font-size: .8rem;&quot;&gt;640px&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Layout-container&quot; style=&quot;background: var(--bg-s); padding: var(--space-3); border-radius: var(--r-s); border: 1px dashed var(--bd-s);&quot;&gt;
+&lt;code style=&quot;font-size: .75rem;&quot;&gt;default&lt;/code&gt; &lt;span style=&quot;color: var(--fg-3); font-size: .8rem;&quot;&gt;960px&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Layout-container Layout-container--wide&quot; style=&quot;background: var(--bg-s); padding: var(--space-3); border-radius: var(--r-s); border: 1px dashed var(--bd-s);&quot;&gt;
+&lt;code style=&quot;font-size: .75rem;&quot;&gt;--wide&lt;/code&gt; &lt;span style=&quot;color: var(--fg-3); font-size: .8rem;&quot;&gt;1280px&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Layout-container&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;Layout-container Layout-container--narrow&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;Layout-container Layout-container--wide&quot;&gt;...&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="grid">Grid</h2>
+<p>A 12-column grid. All columns collapse to full-width below 768px. Use <code>Layout-col-{n}@md</code> for responsive spans.</p>
+
+<div class="Preview" id="preview-849v9gd54">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Layout-grid" style="width: 100%;">
+        <div class="Layout-col-4" style="background: var(--accent); color: white; padding: var(--space-3); border-radius: var(--r-s); text-align: center; font-weight: 600;">4</div>
+        <div class="Layout-col-4" style="background: var(--accent); color: white; padding: var(--space-3); border-radius: var(--r-s); text-align: center; font-weight: 600;">4</div>
+        <div class="Layout-col-4" style="background: var(--accent); color: white; padding: var(--space-3); border-radius: var(--r-s); text-align: center; font-weight: 600;">4</div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Layout-grid&quot; style=&quot;width: 100%;&quot;&gt;
+&lt;div class=&quot;Layout-col-4&quot; style=&quot;background: var(--accent); color: white; padding: var(--space-3); border-radius: var(--r-s); text-align: center; font-weight: 600;&quot;&gt;4&lt;/div&gt;
+&lt;div class=&quot;Layout-col-4&quot; style=&quot;background: var(--accent); color: white; padding: var(--space-3); border-radius: var(--r-s); text-align: center; font-weight: 600;&quot;&gt;4&lt;/div&gt;
+&lt;div class=&quot;Layout-col-4&quot; style=&quot;background: var(--accent); color: white; padding: var(--space-3); border-radius: var(--r-s); text-align: center; font-weight: 600;&quot;&gt;4&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+<div class="Preview" id="preview-vy70ehpgc">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Layout-grid" style="width: 100%;">
+        <div class="Layout-col-8" style="background: oklch(55% 0.15 270); color: white; padding: var(--space-4); border-radius: var(--r-s); font-weight: 600;">8 — Main</div>
+        <div class="Layout-col-4" style="background: oklch(75% 0.08 270); padding: var(--space-4); border-radius: var(--r-s);">4 — Side</div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Layout-grid&quot; style=&quot;width: 100%;&quot;&gt;
+&lt;div class=&quot;Layout-col-8&quot; style=&quot;background: oklch(55% 0.15 270); color: white; padding: var(--space-4); border-radius: var(--r-s); font-weight: 600;&quot;&gt;8 — Main&lt;/div&gt;
+&lt;div class=&quot;Layout-col-4&quot; style=&quot;background: oklch(75% 0.08 270); padding: var(--space-4); border-radius: var(--r-s);&quot;&gt;4 — Side&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Layout-grid&quot;&gt;
+    &lt;div class=&quot;Layout-col-8&quot;&gt;Main content&lt;/div&gt;
+    &lt;div class=&quot;Layout-col-4&quot;&gt;Sidebar&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Responsive: full on mobile, halves on tablet+ --&gt;
+&lt;div class=&quot;Layout-grid&quot;&gt;
+    &lt;div class=&quot;Layout-col-12 Layout-col-6@md&quot;&gt;Left&lt;/div&gt;
+    &lt;div class=&quot;Layout-col-12 Layout-col-6@md&quot;&gt;Right&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="stack">Stack</h2>
+<p>Vertical flow with consistent gap. The most-used layout primitive.</p>
+
+<div class="Preview" id="preview-o1ypoyg6z">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; gap: var(--space-8); align-items: flex-start;">
+        <div style="text-align: center;">
+            <div style="font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--fg-4); margin-bottom: var(--space-2);">Tight · 8px</div>
+            <div class="Layout-stack Layout-stack--tight" style="width: 80px;">
+                <div style="background: var(--accent); height: 24px; border-radius: var(--r-s);"></div>
+                <div style="background: var(--accent); height: 24px; border-radius: var(--r-s);"></div>
+                <div style="background: var(--accent); height: 24px; border-radius: var(--r-s);"></div>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <div style="font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--fg-4); margin-bottom: var(--space-2);">Default · 16px</div>
+            <div class="Layout-stack" style="width: 80px;">
+                <div style="background: var(--accent); height: 24px; border-radius: var(--r-s);"></div>
+                <div style="background: var(--accent); height: 24px; border-radius: var(--r-s);"></div>
+                <div style="background: var(--accent); height: 24px; border-radius: var(--r-s);"></div>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <div style="font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--fg-4); margin-bottom: var(--space-2);">Loose · 32px</div>
+            <div class="Layout-stack Layout-stack--loose" style="width: 80px;">
+                <div style="background: var(--accent); height: 24px; border-radius: var(--r-s);"></div>
+                <div style="background: var(--accent); height: 24px; border-radius: var(--r-s);"></div>
+                <div style="background: var(--accent); height: 24px; border-radius: var(--r-s);"></div>
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; gap: var(--space-8); align-items: flex-start;&quot;&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;div style=&quot;font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--fg-4); margin-bottom: var(--space-2);&quot;&gt;Tight · 8px&lt;/div&gt;
+&lt;div class=&quot;Layout-stack Layout-stack--tight&quot; style=&quot;width: 80px;&quot;&gt;
+&lt;div style=&quot;background: var(--accent); height: 24px; border-radius: var(--r-s);&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background: var(--accent); height: 24px; border-radius: var(--r-s);&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background: var(--accent); height: 24px; border-radius: var(--r-s);&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;div style=&quot;font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--fg-4); margin-bottom: var(--space-2);&quot;&gt;Default · 16px&lt;/div&gt;
+&lt;div class=&quot;Layout-stack&quot; style=&quot;width: 80px;&quot;&gt;
+&lt;div style=&quot;background: var(--accent); height: 24px; border-radius: var(--r-s);&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background: var(--accent); height: 24px; border-radius: var(--r-s);&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background: var(--accent); height: 24px; border-radius: var(--r-s);&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;div style=&quot;font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--fg-4); margin-bottom: var(--space-2);&quot;&gt;Loose · 32px&lt;/div&gt;
+&lt;div class=&quot;Layout-stack Layout-stack--loose&quot; style=&quot;width: 80px;&quot;&gt;
+&lt;div style=&quot;background: var(--accent); height: 24px; border-radius: var(--r-s);&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background: var(--accent); height: 24px; border-radius: var(--r-s);&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background: var(--accent); height: 24px; border-radius: var(--r-s);&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Layout-stack&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;Layout-stack Layout-stack--tight&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;Layout-stack Layout-stack--loose&quot;&gt;...&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="cluster">Cluster</h2>
+<p>Horizontal grouping with wrapping. For tags, buttons, inline elements.</p>
+
+<div class="Preview" id="preview-uvdzv3occ">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Layout-cluster">
+        <span class="Badge Badge--primary">Design</span>
+        <span class="Badge">Development</span>
+        <span class="Badge">Product</span>
+        <span class="Badge">Research</span>
+        <span class="Badge">Strategy</span>
+        <span class="Badge">Engineering</span>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Layout-cluster&quot;&gt;
+&lt;span class=&quot;Badge Badge--primary&quot;&gt;Design&lt;/span&gt;
+&lt;span class=&quot;Badge&quot;&gt;Development&lt;/span&gt;
+&lt;span class=&quot;Badge&quot;&gt;Product&lt;/span&gt;
+&lt;span class=&quot;Badge&quot;&gt;Research&lt;/span&gt;
+&lt;span class=&quot;Badge&quot;&gt;Strategy&lt;/span&gt;
+&lt;span class=&quot;Badge&quot;&gt;Engineering&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Layout-cluster&quot;&gt;
+    &lt;span class=&quot;Badge&quot;&gt;Tag&lt;/span&gt;
+    &lt;span class=&quot;Badge&quot;&gt;Tag&lt;/span&gt;
+    ...
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="split">Split</h2>
+<p>Push items to opposite ends of a row. Headers, footers, toolbars.</p>
+
+<div class="Preview" id="preview-5hzbv3192">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Layout-split" style="width: 100%; background: var(--bg-s); padding: var(--space-3) var(--space-4); border-radius: var(--r-s);">
+        <span style="font-weight: 600;">Page Title</span>
+        <button class="Button Button--primary Button--small">Action</button>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Layout-split&quot; style=&quot;width: 100%; background: var(--bg-s); padding: var(--space-3) var(--space-4); border-radius: var(--r-s);&quot;&gt;
+&lt;span style=&quot;font-weight: 600;&quot;&gt;Page Title&lt;/span&gt;
+&lt;button class=&quot;Button Button--primary Button--small&quot;&gt;Action&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Layout-split&quot;&gt;
+    &lt;h1&gt;Title&lt;/h1&gt;
+    &lt;button class=&quot;Button&quot;&gt;Action&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="sidebar">Sidebar</h2>
+<p>Fixed-width sidebar with fluid main area. Stacks on mobile. Use <code>--right</code> to flip.</p>
+
+<div class="Preview" id="preview-s0i97k95s">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Layout-sidebar" style="width: 100%;">
+        <aside style="background: var(--bg-m); padding: var(--space-4); border-radius: var(--r-s);">
+            <strong style="font-size: .85rem;">Sidebar</strong>
+            <div style="color: var(--fg-3); font-size: .75rem; margin-top: var(--space-1);">240px fixed</div>
+        </aside>
+        <main style="background: var(--bg-s); padding: var(--space-4); border-radius: var(--r-s);">
+            <strong style="font-size: .85rem;">Main Content</strong>
+            <div style="color: var(--fg-3); font-size: .75rem; margin-top: var(--space-1);">Fluid width, fills remaining space</div>
+        </main>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Layout-sidebar&quot; style=&quot;width: 100%;&quot;&gt;
+&lt;aside style=&quot;background: var(--bg-m); padding: var(--space-4); border-radius: var(--r-s);&quot;&gt;
+&lt;strong style=&quot;font-size: .85rem;&quot;&gt;Sidebar&lt;/strong&gt;
+&lt;div style=&quot;color: var(--fg-3); font-size: .75rem; margin-top: var(--space-1);&quot;&gt;240px fixed&lt;/div&gt;
+&lt;/aside&gt;
+&lt;main style=&quot;background: var(--bg-s); padding: var(--space-4); border-radius: var(--r-s);&quot;&gt;
+&lt;strong style=&quot;font-size: .85rem;&quot;&gt;Main Content&lt;/strong&gt;
+&lt;div style=&quot;color: var(--fg-3); font-size: .75rem; margin-top: var(--space-1);&quot;&gt;Fluid width, fills remaining space&lt;/div&gt;
+&lt;/main&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Layout-sidebar&quot;&gt;
+    &lt;aside&gt;Navigation&lt;/aside&gt;
+    &lt;main&gt;Content&lt;/main&gt;
+&lt;/div&gt;
+
+&lt;!-- Sidebar on right --&gt;
+&lt;div class=&quot;Layout-sidebar Layout-sidebar--right&quot;&gt;
+    &lt;main&gt;Content&lt;/main&gt;
+    &lt;aside&gt;Sidebar&lt;/aside&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="center">Center</h2>
+<p>Vertical and horizontal centering. Empty states, loading screens.</p>
+
+<div class="Preview" id="preview-99wgllnbo">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Layout-center" style="height: 160px; width: 100%; background: var(--bg-s); border-radius: var(--r-s);">
+        <div style="text-align: center;">
+            <div style="font-size: 1.5rem; margin-bottom: var(--space-2);">📭</div>
+            <div style="font-weight: 600; font-size: .9rem;">Nothing here yet</div>
+            <div style="color: var(--fg-3); font-size: .8rem;">Create your first item to get started.</div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Layout-center&quot; style=&quot;height: 160px; width: 100%; background: var(--bg-s); border-radius: var(--r-s);&quot;&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;div style=&quot;font-size: 1.5rem; margin-bottom: var(--space-2);&quot;&gt;📭&lt;/div&gt;
+&lt;div style=&quot;font-weight: 600; font-size: .9rem;&quot;&gt;Nothing here yet&lt;/div&gt;
+&lt;div style=&quot;color: var(--fg-3); font-size: .8rem;&quot;&gt;Create your first item to get started.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Layout-center&quot; style=&quot;min-height: 300px;&quot;&gt;
+    &lt;div&gt;Centered content&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="composition">Composition</h2>
+<p>These primitives are designed to nest. A typical page:</p>
+<pre><code class="language-html">&lt;div class=&quot;Layout-container&quot;&gt;
+    &lt;div class=&quot;Layout-stack Layout-stack--loose&quot;&gt;
+
+        &lt;header class=&quot;Layout-split&quot;&gt;
+            &lt;h1&gt;Dashboard&lt;/h1&gt;
+            &lt;button class=&quot;Button Button--primary&quot;&gt;New&lt;/button&gt;
+        &lt;/header&gt;
+
+        &lt;div class=&quot;Layout-sidebar&quot;&gt;
+            &lt;aside class=&quot;Layout-stack&quot;&gt;
+                &lt;!-- Nav links --&gt;
+            &lt;/aside&gt;
+            &lt;main class=&quot;Layout-stack&quot;&gt;
+                &lt;div class=&quot;Layout-grid&quot;&gt;
+                    &lt;div class=&quot;Layout-col-4&quot;&gt;Stat card&lt;/div&gt;
+                    &lt;div class=&quot;Layout-col-4&quot;&gt;Stat card&lt;/div&gt;
+                    &lt;div class=&quot;Layout-col-4&quot;&gt;Stat card&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- Content --&gt;
+            &lt;/main&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="api-reference">API Reference</h2>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Layout-container</code></td>
+<td class="ApiTable-desc">Centered container, 960px max-width</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Layout-container--narrow</code></td>
+<td class="ApiTable-desc">640px max-width</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Layout-container--wide</code></td>
+<td class="ApiTable-desc">1280px max-width</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Layout-grid</code></td>
+<td class="ApiTable-desc">12-column grid</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Layout-col-{1-12}</code></td>
+<td class="ApiTable-desc">Column span</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Layout-col-{1-12}@md</code></td>
+<td class="ApiTable-desc">Column span at 768px+</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Layout-stack</code></td>
+<td class="ApiTable-desc">Vertical flow, 16px gap</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Layout-stack--tight</code></td>
+<td class="ApiTable-desc">8px gap</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Layout-stack--loose</code></td>
+<td class="ApiTable-desc">32px gap</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Layout-cluster</code></td>
+<td class="ApiTable-desc">Horizontal wrapping group</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Layout-split</code></td>
+<td class="ApiTable-desc">Space-between row</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Layout-sidebar</code></td>
+<td class="ApiTable-desc">Sidebar (240px) + fluid main</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Layout-sidebar--right</code></td>
+<td class="ApiTable-desc">Sidebar on the right</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Layout-center</code></td>
+<td class="ApiTable-desc">Vertical + horizontal centering</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="do">Do</h3>
+<ul>
+<li>✓ <strong>Start with Container</strong> — Wrap page content in <code>Layout-container</code> to constrain width and center the layout</li>
+<li>✓ <strong>Use Stack as your default</strong> — Most vertical arrangements should use <code>Layout-stack</code> rather than custom margins</li>
+<li>✓ <strong>Compose primitives</strong> — Nest Grid inside Stack inside Container; these are building blocks, not standalone solutions</li>
+<li>✓ <strong>Use responsive column classes</strong> — Apply <code>Layout-col-12 Layout-col-6@md</code> so layouts collapse gracefully on mobile</li>
+<li>✓ <strong>Choose the right gap</strong> — Use <code>--tight</code> for related items (form fields), default for sections, <code>--loose</code> for page-level spacing</li>
+</ul>
+<h3 id="don-t">Don’t</h3>
+<ul>
+<li>✗ <strong>Add custom margins between layout children</strong> — Let the layout primitive’s gap handle spacing</li>
+<li>✗ <strong>Use Grid for simple vertical stacking</strong> — A 1-column grid is just a Stack; use the simpler primitive</li>
+<li>✗ <strong>Hardcode widths on grid columns</strong> — Use <code>Layout-col-{n}</code> classes instead of inline width styles</li>
+<li>✗ <strong>Nest grids deeply</strong> — More than two levels of Grid nesting becomes hard to maintain; flatten with Stack or Split</li>
+<li>✗ <strong>Forget the Container</strong> — Without it, content stretches edge-to-edge on wide screens and becomes unreadable</li>
+</ul>
+<hr>
+<h2 id="css-reference">CSS Reference</h2>
+<pre><code class="language-css">/* ── Container ── */
+.Layout-container {
+  width: 100%;
+  max-width: 960px;
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+}
+
+.Layout-container--narrow {
+  max-width: 640px;
+}
+
+.Layout-container--wide {
+  max-width: 1280px;
+}
+
+/* ── Grid ── */
+.Layout-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-4);
+}
+
+.Layout-col-1  { grid-column: span 1; }
+.Layout-col-2  { grid-column: span 2; }
+.Layout-col-3  { grid-column: span 3; }
+.Layout-col-4  { grid-column: span 4; }
+.Layout-col-5  { grid-column: span 5; }
+.Layout-col-6  { grid-column: span 6; }
+.Layout-col-7  { grid-column: span 7; }
+.Layout-col-8  { grid-column: span 8; }
+.Layout-col-9  { grid-column: span 9; }
+.Layout-col-10 { grid-column: span 10; }
+.Layout-col-11 { grid-column: span 11; }
+.Layout-col-12 { grid-column: span 12; }
+
+@media (min-width: 768px) {
+  .Layout-col-1\@md  { grid-column: span 1; }
+  .Layout-col-2\@md  { grid-column: span 2; }
+  .Layout-col-3\@md  { grid-column: span 3; }
+  .Layout-col-4\@md  { grid-column: span 4; }
+  .Layout-col-5\@md  { grid-column: span 5; }
+  .Layout-col-6\@md  { grid-column: span 6; }
+  .Layout-col-7\@md  { grid-column: span 7; }
+  .Layout-col-8\@md  { grid-column: span 8; }
+  .Layout-col-9\@md  { grid-column: span 9; }
+  .Layout-col-10\@md { grid-column: span 10; }
+  .Layout-col-11\@md { grid-column: span 11; }
+  .Layout-col-12\@md { grid-column: span 12; }
+}
+
+/* ── Stack ── */
+.Layout-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.Layout-stack--tight {
+  gap: var(--space-2);
+}
+
+.Layout-stack--loose {
+  gap: var(--space-8);
+}
+
+/* ── Cluster ── */
+.Layout-cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+/* ── Split ── */
+.Layout-split {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+/* ── Sidebar ── */
+.Layout-sidebar {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.Layout-sidebar &gt; aside {
+  flex: 0 0 240px;
+}
+
+.Layout-sidebar &gt; main {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+.Layout-sidebar--right {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 767px) {
+  .Layout-sidebar {
+    flex-direction: column;
+  }
+
+  .Layout-sidebar &gt; aside {
+    flex: none;
+  }
+}
+
+/* ── Center ── */
+.Layout-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</code></pre>
+
+                </article>
+
+                <footer class="page-footer">
+                    <p>Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

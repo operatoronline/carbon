@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Typography | Carbon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/bold/style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Floating Pill Nav (Mobile: bottom, Desktop: top) -->
+        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation">
+            <a href="../index.html" class="fnav-btn" data-section="home" aria-label="Home">
+                <i class="ph-bold ph-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="../tokens/colors.html" class="fnav-btn" data-section="tokens" aria-label="Tokens">
+                <i class="ph-bold ph-palette"></i>
+                <span>Tokens</span>
+            </a>
+            <a href="../components/buttons.html" class="fnav-btn" data-section="components" aria-label="Components">
+                <i class="ph-bold ph-stack"></i>
+                <span>Components</span>
+            </a>
+            <a href="../patterns/layouts.html" class="fnav-btn" data-section="patterns" aria-label="Patterns">
+                <i class="ph-bold ph-grid-four"></i>
+                <span>Patterns</span>
+            </a>
+            <div class="fnav-sep"></div>
+            <button class="fnav-btn" id="search-toggle" aria-label="Search">
+                <i class="ph ph-magnifying-glass"></i>
+            </button>
+            <button class="fnav-btn" id="theme-btn" aria-label="Toggle theme">
+                <i class="ph ph-moon"></i>
+            </button>
+        </nav>
+
+        <!-- Glassmorphism Top Bar (Desktop only) -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <a href="../index.html" class="logo">
+                    <i class="ph ph-intersect"></i>
+                    <span>Carbon</span>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <div class="search-container" id="search-container">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search components..." aria-label="Search" autocomplete="off">
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <main class="main-content">
+                <header class="page-header">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="../index.html">Carbon</a> <span class="sep">/</span> <span>Tokens</span> <span class="sep">/</span> <span>Typography</span>
+                    </nav>
+                    <h1><em>Typography</em></h1>
+                </header>
+                
+                <article class="prose">
+                    <h1>Typography</h1>
+<p>Carbon’s type system is built on a deliberate tension: <strong>three fonts, each chosen for a specific emotional register</strong>. Instrument Serif carries the weight of tradition — gravitas, authority, the feeling that words matter. Outfit is the geometric sans-serif that says clarity and modernity without trying too hard. JetBrains Mono is precision itself — every character the same width, every symbol unambiguous.</p>
+<p>Together, they create a visual language where hierarchy isn’t just size — it’s <em>voice</em>.</p>
+<hr>
+<h2 id="the-three-voices">The Three Voices</h2>
+<pre><code class="language-css">--ff-d: 'Instrument Serif', Georgia, serif;     /* Display */
+--ff-b: 'Outfit', system-ui, sans-serif;        /* Body */
+--ff-m: 'JetBrains Mono', ui-monospace, monospace; /* Mono */
+</code></pre>
+
+<div class="Preview" id="preview-dy6y3fzpj">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-6);">
+        <div>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Instrument Serif (Display)</small>
+            <div style="font-family: var(--ff-d); font-size: 2rem; letter-spacing: -0.02em;">The quick brown fox jumps over the lazy dog.</div>
+        </div>
+        <div>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Outfit (Body & UI)</small>
+            <div style="font-family: var(--ff-b); font-size: 1rem;">The quick brown fox jumps over the lazy dog. Perfect for readable body text and clean UI elements.</div>
+        </div>
+        <div>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">JetBrains Mono (Code)</small>
+            <div style="font-family: var(--ff-m); font-size: 0.9rem; color: var(--accent);">const greeting = "Hello, World!";</div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-6);&quot;&gt;
+&lt;div&gt;
+&lt;small style=&quot;color: var(--fg-3); display: block; margin-bottom: var(--space-2);&quot;&gt;Instrument Serif (Display)&lt;/small&gt;
+&lt;div style=&quot;font-family: var(--ff-d); font-size: 2rem; letter-spacing: -0.02em;&quot;&gt;The quick brown fox jumps over the lazy dog.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;small style=&quot;color: var(--fg-3); display: block; margin-bottom: var(--space-2);&quot;&gt;Outfit (Body &amp; UI)&lt;/small&gt;
+&lt;div style=&quot;font-family: var(--ff-b); font-size: 1rem;&quot;&gt;The quick brown fox jumps over the lazy dog. Perfect for readable body text and clean UI elements.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;small style=&quot;color: var(--fg-3); display: block; margin-bottom: var(--space-2);&quot;&gt;JetBrains Mono (Code)&lt;/small&gt;
+&lt;div style=&quot;font-family: var(--ff-m); font-size: 0.9rem; color: var(--accent);&quot;&gt;const greeting = &quot;Hello, World!&quot;;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="why-these-three-">Why These Three?</h3>
+<p>Most design systems pick one sans-serif and call it done. Carbon uses three because each serves a fundamentally different purpose:</p>
+
+<div class="Preview" id="preview-18kh93bpk">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); width: 100%;">
+        <div style="background: var(--bg-s); border-radius: var(--r-m); padding: var(--space-5); border: 1px solid var(--bd-w);">
+            <div style="font-family: var(--ff-d); font-size: 1.75rem; letter-spacing: -0.02em; margin-bottom: var(--space-3);">Aa</div>
+            <div style="font-family: var(--ff-m); font-size: .5625rem; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; color: var(--fg-4); margin-bottom: var(--space-2);">Instrument Serif</div>
+            <div style="font-size: .85rem; color: var(--fg-2); line-height: 1.6;">Gravitas. The serifs anchor words to the page, giving headlines the permanence of something <em>worth reading</em>. Used only at display sizes where the details sing.</div>
+        </div>
+        <div style="background: var(--bg-s); border-radius: var(--r-m); padding: var(--space-5); border: 1px solid var(--bd-w);">
+            <div style="font-family: var(--ff-b); font-size: 1.75rem; font-weight: 500; margin-bottom: var(--space-3);">Aa</div>
+            <div style="font-family: var(--ff-m); font-size: .5625rem; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; color: var(--fg-4); margin-bottom: var(--space-2);">Outfit</div>
+            <div style="font-size: .85rem; color: var(--fg-2); line-height: 1.6;">Clarity. Geometric proportions with just enough warmth. No distracting personality — it disappears into the content, which is exactly what body text should do.</div>
+        </div>
+        <div style="background: var(--bg-s); border-radius: var(--r-m); padding: var(--space-5); border: 1px solid var(--bd-w);">
+            <div style="font-family: var(--ff-m); font-size: 1.75rem; margin-bottom: var(--space-3);">Aa</div>
+            <div style="font-family: var(--ff-m); font-size: .5625rem; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; color: var(--fg-4); margin-bottom: var(--space-2);">JetBrains Mono</div>
+            <div style="font-size: .85rem; color: var(--fg-2); line-height: 1.6;">Precision. Monospaced for code, data, and technical labels. Every character occupies the same width — alignment is automatic, scanning is instant.</div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); width: 100%;&quot;&gt;
+&lt;div style=&quot;background: var(--bg-s); border-radius: var(--r-m); padding: var(--space-5); border: 1px solid var(--bd-w);&quot;&gt;
+&lt;div style=&quot;font-family: var(--ff-d); font-size: 1.75rem; letter-spacing: -0.02em; margin-bottom: var(--space-3);&quot;&gt;Aa&lt;/div&gt;
+&lt;div style=&quot;font-family: var(--ff-m); font-size: .5625rem; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; color: var(--fg-4); margin-bottom: var(--space-2);&quot;&gt;Instrument Serif&lt;/div&gt;
+&lt;div style=&quot;font-size: .85rem; color: var(--fg-2); line-height: 1.6;&quot;&gt;Gravitas. The serifs anchor words to the page, giving headlines the permanence of something &lt;em&gt;worth reading&lt;/em&gt;. Used only at display sizes where the details sing.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;background: var(--bg-s); border-radius: var(--r-m); padding: var(--space-5); border: 1px solid var(--bd-w);&quot;&gt;
+&lt;div style=&quot;font-family: var(--ff-b); font-size: 1.75rem; font-weight: 500; margin-bottom: var(--space-3);&quot;&gt;Aa&lt;/div&gt;
+&lt;div style=&quot;font-family: var(--ff-m); font-size: .5625rem; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; color: var(--fg-4); margin-bottom: var(--space-2);&quot;&gt;Outfit&lt;/div&gt;
+&lt;div style=&quot;font-size: .85rem; color: var(--fg-2); line-height: 1.6;&quot;&gt;Clarity. Geometric proportions with just enough warmth. No distracting personality — it disappears into the content, which is exactly what body text should do.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;background: var(--bg-s); border-radius: var(--r-m); padding: var(--space-5); border: 1px solid var(--bd-w);&quot;&gt;
+&lt;div style=&quot;font-family: var(--ff-m); font-size: 1.75rem; margin-bottom: var(--space-3);&quot;&gt;Aa&lt;/div&gt;
+&lt;div style=&quot;font-family: var(--ff-m); font-size: .5625rem; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; color: var(--fg-4); margin-bottom: var(--space-2);&quot;&gt;JetBrains Mono&lt;/div&gt;
+&lt;div style=&quot;font-size: .85rem; color: var(--fg-2); line-height: 1.6;&quot;&gt;Precision. Monospaced for code, data, and technical labels. Every character occupies the same width — alignment is automatic, scanning is instant.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="font-pairing-in-context">Font Pairing in Context</h2>
+<p>The three fonts don’t just coexist — they create a visual hierarchy that guides the eye from headline to body to detail without conscious effort.</p>
+
+<div class="Preview" id="preview-lxvqdw4ri">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="max-width: 480px; border: 1px solid var(--bd); border-radius: var(--r-l); overflow: hidden;">
+        <div style="padding: var(--space-6);">
+            <div style="font-family: var(--ff-m); font-size: .5625rem; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); margin-bottom: var(--space-3);">Featured Article</div>
+            <div style="font-family: var(--ff-d); font-size: 1.75rem; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: var(--space-3);">Design tokens are the <em style="color: var(--accent);">atoms</em> of visual consistency</div>
+            <div style="font-family: var(--ff-b); font-size: .9rem; color: var(--fg-2); line-height: 1.6; margin-bottom: var(--space-4);">A design token is a named value — a single source of truth for a visual decision. Change the token, and every component that references it updates in concert.</div>
+            <div style="display: flex; align-items: center; gap: var(--space-3);">
+                <div style="width: 28px; height: 28px; border-radius: 50%; background: var(--accent);"></div>
+                <div>
+                    <div style="font-family: var(--ff-b); font-size: .8rem; font-weight: 600;">Sarah Chen</div>
+                    <div style="font-family: var(--ff-m); font-size: .65rem; color: var(--fg-3);">2026-02-08 · 4 min read</div>
+                </div>
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;max-width: 480px; border: 1px solid var(--bd); border-radius: var(--r-l); overflow: hidden;&quot;&gt;
+&lt;div style=&quot;padding: var(--space-6);&quot;&gt;
+&lt;div style=&quot;font-family: var(--ff-m); font-size: .5625rem; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); margin-bottom: var(--space-3);&quot;&gt;Featured Article&lt;/div&gt;
+&lt;div style=&quot;font-family: var(--ff-d); font-size: 1.75rem; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: var(--space-3);&quot;&gt;Design tokens are the &lt;em style=&quot;color: var(--accent);&quot;&gt;atoms&lt;/em&gt; of visual consistency&lt;/div&gt;
+&lt;div style=&quot;font-family: var(--ff-b); font-size: .9rem; color: var(--fg-2); line-height: 1.6; margin-bottom: var(--space-4);&quot;&gt;A design token is a named value — a single source of truth for a visual decision. Change the token, and every component that references it updates in concert.&lt;/div&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-3);&quot;&gt;
+&lt;div style=&quot;width: 28px; height: 28px; border-radius: 50%; background: var(--accent);&quot;&gt;&lt;/div&gt;
+&lt;div&gt;
+&lt;div style=&quot;font-family: var(--ff-b); font-size: .8rem; font-weight: 600;&quot;&gt;Sarah Chen&lt;/div&gt;
+&lt;div style=&quot;font-family: var(--ff-m); font-size: .65rem; color: var(--fg-3);&quot;&gt;2026-02-08 · 4 min read&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><p>Notice the layering: <strong>mono</strong> for the category label (small, precise), <strong>serif</strong> for the headline (large, commanding), <strong>sans</strong> for the body (medium, readable), then <strong>mono</strong> again for metadata (small, data-like). Three fonts, four levels of hierarchy.</p>
+<hr>
+<h2 id="type-scale">Type Scale</h2>
+<p>Based on a <strong>1.25 ratio</strong> (Major Third), creating harmonious size progression where each step feels like a natural next-louder voice.</p>
+<div class="Table-container"><table class="Table">
+<thead>
+<tr>
+<th>Level</th>
+<th>Size</th>
+<th>Usage</th>
+<th>Font</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Display</td>
+<td>clamp(2.5rem, 8vw, 4rem)</td>
+<td>Hero headlines</td>
+<td>Instrument Serif</td>
+</tr>
+<tr>
+<td>H1</td>
+<td>2.5rem</td>
+<td>Page titles</td>
+<td>Instrument Serif</td>
+</tr>
+<tr>
+<td>H2</td>
+<td>1.75rem</td>
+<td>Section headers</td>
+<td>Instrument Serif</td>
+</tr>
+<tr>
+<td>H3</td>
+<td>1.125rem</td>
+<td>Subsections</td>
+<td>Outfit</td>
+</tr>
+<tr>
+<td>Body</td>
+<td>1rem</td>
+<td>Paragraphs</td>
+<td>Outfit</td>
+</tr>
+<tr>
+<td>Small</td>
+<td>0.875rem</td>
+<td>Captions, labels</td>
+<td>Outfit</td>
+</tr>
+<tr>
+<td>XSmall</td>
+<td>0.75rem</td>
+<td>Fine print</td>
+<td>Outfit</td>
+</tr>
+<tr>
+<td>Mono</td>
+<td>0.8125rem</td>
+<td>Code blocks</td>
+<td>JetBrains Mono</td>
+</tr>
+</tbody>
+</table></div>
+
+<div class="Preview" id="preview-uphwsqvxm">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-4);">
+        <div style="font-family: var(--ff-d); font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 400; line-height: 1; letter-spacing: -0.035em;">Display</div>
+        <div style="font-family: var(--ff-d); font-size: 1.75rem; font-weight: 400; line-height: 1.25; letter-spacing: -0.02em;">Heading 2</div>
+        <div style="font-family: var(--ff-b); font-size: 1.125rem; font-weight: 600; line-height: 1.4;">Heading 3</div>
+        <div style="font-family: var(--ff-b); font-size: 1rem; line-height: 1.6; color: var(--fg-2);">Body text — the quick brown fox jumps over the lazy dog. This is readable body copy.</div>
+        <div style="font-family: var(--ff-b); font-size: 0.875rem; color: var(--fg-3); line-height: 1.5;">Small text for captions and supporting content.</div>
+        <div style="font-family: var(--ff-m); font-size: 0.8125rem; color: var(--accent); line-height: 1.7; background: var(--bg-s); padding: var(--space-2) var(--space-3); border-radius: var(--r-s);">const code = "monospace";</div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-4);&quot;&gt;
+&lt;div style=&quot;font-family: var(--ff-d); font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 400; line-height: 1; letter-spacing: -0.035em;&quot;&gt;Display&lt;/div&gt;
+&lt;div style=&quot;font-family: var(--ff-d); font-size: 1.75rem; font-weight: 400; line-height: 1.25; letter-spacing: -0.02em;&quot;&gt;Heading 2&lt;/div&gt;
+&lt;div style=&quot;font-family: var(--ff-b); font-size: 1.125rem; font-weight: 600; line-height: 1.4;&quot;&gt;Heading 3&lt;/div&gt;
+&lt;div style=&quot;font-family: var(--ff-b); font-size: 1rem; line-height: 1.6; color: var(--fg-2);&quot;&gt;Body text — the quick brown fox jumps over the lazy dog. This is readable body copy.&lt;/div&gt;
+&lt;div style=&quot;font-family: var(--ff-b); font-size: 0.875rem; color: var(--fg-3); line-height: 1.5;&quot;&gt;Small text for captions and supporting content.&lt;/div&gt;
+&lt;div style=&quot;font-family: var(--ff-m); font-size: 0.8125rem; color: var(--accent); line-height: 1.7; background: var(--bg-s); padding: var(--space-2) var(--space-3); border-radius: var(--r-s);&quot;&gt;const code = &quot;monospace&quot;;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="why-1-25-">Why 1.25?</h3>
+<p>A modular scale creates sizes that feel <em>related</em> rather than arbitrary. Here’s what happens when you don’t use one:</p>
+
+<div class="Preview" id="preview-r5ccbcwa2">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); width: 100%;">
+        <div>
+            <div style="font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: oklch(55% 0.2 25); margin-bottom: var(--space-3);">❌ Arbitrary sizes</div>
+            <div style="background: var(--bg-s); padding: var(--space-4); border-radius: var(--r-m);">
+                <div style="font-family: var(--ff-b); font-size: 2.3rem; font-weight: 600; line-height: 1.1; margin-bottom: var(--space-2);">Too big?</div>
+                <div style="font-family: var(--ff-b); font-size: 1.4rem; font-weight: 600; line-height: 1.3; margin-bottom: var(--space-2);">Awkward gap</div>
+                <div style="font-family: var(--ff-b); font-size: 1.05rem; color: var(--fg-2); line-height: 1.5;">Body text sits oddly beneath headings that don't relate to each other mathematically.</div>
+            </div>
+        </div>
+        <div>
+            <div style="font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: oklch(55% 0.15 150); margin-bottom: var(--space-3);">✓ Major Third (1.25)</div>
+            <div style="background: var(--bg-s); padding: var(--space-4); border-radius: var(--r-m);">
+                <div style="font-family: var(--ff-d); font-size: 1.953rem; font-weight: 400; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: var(--space-2);">Proportional</div>
+                <div style="font-family: var(--ff-d); font-size: 1.563rem; font-weight: 400; line-height: 1.25; letter-spacing: -0.02em; margin-bottom: var(--space-2);">Each step × 1.25</div>
+                <div style="font-family: var(--ff-b); font-size: 1rem; color: var(--fg-2); line-height: 1.6;">Body text relates harmonically to every heading above it. The eye perceives order.</div>
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); width: 100%;&quot;&gt;
+&lt;div&gt;
+&lt;div style=&quot;font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: oklch(55% 0.2 25); margin-bottom: var(--space-3);&quot;&gt;❌ Arbitrary sizes&lt;/div&gt;
+&lt;div style=&quot;background: var(--bg-s); padding: var(--space-4); border-radius: var(--r-m);&quot;&gt;
+&lt;div style=&quot;font-family: var(--ff-b); font-size: 2.3rem; font-weight: 600; line-height: 1.1; margin-bottom: var(--space-2);&quot;&gt;Too big?&lt;/div&gt;
+&lt;div style=&quot;font-family: var(--ff-b); font-size: 1.4rem; font-weight: 600; line-height: 1.3; margin-bottom: var(--space-2);&quot;&gt;Awkward gap&lt;/div&gt;
+&lt;div style=&quot;font-family: var(--ff-b); font-size: 1.05rem; color: var(--fg-2); line-height: 1.5;&quot;&gt;Body text sits oddly beneath headings that don&#039;t relate to each other mathematically.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;div style=&quot;font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: oklch(55% 0.15 150); margin-bottom: var(--space-3);&quot;&gt;✓ Major Third (1.25)&lt;/div&gt;
+&lt;div style=&quot;background: var(--bg-s); padding: var(--space-4); border-radius: var(--r-m);&quot;&gt;
+&lt;div style=&quot;font-family: var(--ff-d); font-size: 1.953rem; font-weight: 400; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: var(--space-2);&quot;&gt;Proportional&lt;/div&gt;
+&lt;div style=&quot;font-family: var(--ff-d); font-size: 1.563rem; font-weight: 400; line-height: 1.25; letter-spacing: -0.02em; margin-bottom: var(--space-2);&quot;&gt;Each step × 1.25&lt;/div&gt;
+&lt;div style=&quot;font-family: var(--ff-b); font-size: 1rem; color: var(--fg-2); line-height: 1.6;&quot;&gt;Body text relates harmonically to every heading above it. The eye perceives order.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><p>The 1.25 ratio (Major Third) is deliberate — assertive enough to create clear hierarchy, restrained enough to avoid jarring jumps. Larger ratios (like 1.414 Augmented Fourth) work for dramatic editorial design; smaller ratios (like 1.125 Major Second) suit dense data UIs. Carbon’s 1.25 sits in the sweet spot for documentation and product interfaces.</p>
+<hr>
+<h2 id="vertical-rhythm">Vertical Rhythm</h2>
+<p>When line heights and spacing share a common unit, text across adjacent columns aligns to the same invisible grid. Carbon’s type system uses a <strong>4px baseline</strong> — every line height resolves to a multiple of 4px.</p>
+
+<div class="Preview" id="preview-2nd2sw8bh">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="position: relative; width: 100%;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; background: repeating-linear-gradient(to bottom, transparent 0, transparent 23px, oklch(from var(--accent) l c h / .08) 23px, oklch(from var(--accent) l c h / .08) 24px); z-index: 1;"></div>
+        <div style="position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); padding: var(--space-4) 0;">
+            <div>
+                <div style="font-family: var(--ff-d); font-size: 1.75rem; line-height: 48px; letter-spacing: -0.02em;">Heading aligns</div>
+                <div style="font-family: var(--ff-b); font-size: 1rem; line-height: 24px; color: var(--fg-2);">Body text snaps to the same 24px baseline grid. Each line sits on an invisible shelf, creating a calm, orderly rhythm even across columns.</div>
+            </div>
+            <div>
+                <div style="font-family: var(--ff-b); font-size: 1rem; line-height: 24px; color: var(--fg-2);">Adjacent columns share the same grid. Notice how these lines align horizontally with the text on the left — that's the power of consistent vertical rhythm.</div>
+                <div style="font-family: var(--ff-m); font-size: .8125rem; line-height: 24px; color: var(--fg-3); margin-top: 24px;">code.also.aligns()</div>
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;position: relative; width: 100%;&quot;&gt;
+&lt;div style=&quot;position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; background: repeating-linear-gradient(to bottom, transparent 0, transparent 23px, oklch(from var(--accent) l c h / .08) 23px, oklch(from var(--accent) l c h / .08) 24px); z-index: 1;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); padding: var(--space-4) 0;&quot;&gt;
+&lt;div&gt;
+&lt;div style=&quot;font-family: var(--ff-d); font-size: 1.75rem; line-height: 48px; letter-spacing: -0.02em;&quot;&gt;Heading aligns&lt;/div&gt;
+&lt;div style=&quot;font-family: var(--ff-b); font-size: 1rem; line-height: 24px; color: var(--fg-2);&quot;&gt;Body text snaps to the same 24px baseline grid. Each line sits on an invisible shelf, creating a calm, orderly rhythm even across columns.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;div style=&quot;font-family: var(--ff-b); font-size: 1rem; line-height: 24px; color: var(--fg-2);&quot;&gt;Adjacent columns share the same grid. Notice how these lines align horizontally with the text on the left — that&#039;s the power of consistent vertical rhythm.&lt;/div&gt;
+&lt;div style=&quot;font-family: var(--ff-m); font-size: .8125rem; line-height: 24px; color: var(--fg-3); margin-top: 24px;&quot;&gt;code.also.aligns()&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><p>The striped background reveals the 24px baseline grid. Headings, body text, and code all land on it. This isn’t about rigid rules — it’s about the subtle sense of <em>order</em> that makes a page feel polished.</p>
+<hr>
+<h2 id="font-weights">Font Weights</h2>
+<p>Outfit provides a range of weights. Use them intentionally to create hierarchy.</p>
+<div class="Table-container"><table class="Table">
+<thead>
+<tr>
+<th>Weight</th>
+<th>Value</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Light</td>
+<td>300</td>
+<td>Large display text only</td>
+</tr>
+<tr>
+<td>Regular</td>
+<td>400</td>
+<td>Body text, descriptions</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>500</td>
+<td>UI labels, buttons</td>
+</tr>
+<tr>
+<td>Semi-Bold</td>
+<td>600</td>
+<td>Subheadings, emphasis</td>
+</tr>
+<tr>
+<td>Bold</td>
+<td>700</td>
+<td>Strong emphasis</td>
+</tr>
+</tbody>
+</table></div>
+
+<div class="Preview" id="preview-kwqgcl6c8">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-3); font-size: 1.125rem; font-family: var(--ff-b);">
+        <div style="font-weight: 300;">Light (300) — Large display only</div>
+        <div style="font-weight: 400;">Regular (400) — Default body weight</div>
+        <div style="font-weight: 500;">Medium (500) — Buttons and labels</div>
+        <div style="font-weight: 600;">Semi-Bold (600) — Subheadings</div>
+        <div style="font-weight: 700;">Bold (700) — Strong emphasis</div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-3); font-size: 1.125rem; font-family: var(--ff-b);&quot;&gt;
+&lt;div style=&quot;font-weight: 300;&quot;&gt;Light (300) — Large display only&lt;/div&gt;
+&lt;div style=&quot;font-weight: 400;&quot;&gt;Regular (400) — Default body weight&lt;/div&gt;
+&lt;div style=&quot;font-weight: 500;&quot;&gt;Medium (500) — Buttons and labels&lt;/div&gt;
+&lt;div style=&quot;font-weight: 600;&quot;&gt;Semi-Bold (600) — Subheadings&lt;/div&gt;
+&lt;div style=&quot;font-weight: 700;&quot;&gt;Bold (700) — Strong emphasis&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="instrument-serif">Instrument Serif</h3>
+<p>Instrument Serif works best at regular weight (400), with italics for emphasis.</p>
+
+<div class="Preview" id="preview-iwueer1ac">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-3); font-size: 1.5rem; font-family: var(--ff-d);">
+        <div style="font-weight: 400;">Regular — Elegant display headings</div>
+        <div style="font-style: italic;">Italic — <em>Beautiful</em> emphasis</div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-3); font-size: 1.5rem; font-family: var(--ff-d);&quot;&gt;
+&lt;div style=&quot;font-weight: 400;&quot;&gt;Regular — Elegant display headings&lt;/div&gt;
+&lt;div style=&quot;font-style: italic;&quot;&gt;Italic — &lt;em&gt;Beautiful&lt;/em&gt; emphasis&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-css">/* Weight usage */
+body { font-family: var(--ff-b); font-weight: 400; }
+.Button { font-weight: 500; }
+h3 { font-weight: 600; }
+h1, h2 { font-family: var(--ff-d); font-weight: 400; }
+</code></pre>
+<hr>
+<h2 id="responsive-typography">Responsive Typography</h2>
+<p>The display heading uses <code>clamp()</code> for smooth scaling — no breakpoint jumps, just a continuous curve from mobile to desktop.</p>
+
+<div class="Preview" id="preview-66ywdb8ik">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-4); width: 100%;">
+        <div style="font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--fg-4); margin-bottom: var(--space-1);">Simulated viewport widths</div>
+        <div style="width: 320px; border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-4); overflow: hidden;">
+            <div style="font-family: var(--ff-m); font-size: .5625rem; color: var(--fg-4); margin-bottom: var(--space-2);">320px — Mobile</div>
+            <div style="font-family: var(--ff-d); font-size: 2.5rem; line-height: 1; letter-spacing: -0.035em;">Design</div>
+        </div>
+        <div style="width: 480px; border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-4); overflow: hidden;">
+            <div style="font-family: var(--ff-m); font-size: .5625rem; color: var(--fg-4); margin-bottom: var(--space-2);">480px — Large mobile</div>
+            <div style="font-family: var(--ff-d); font-size: 3rem; line-height: 1; letter-spacing: -0.035em;">Design</div>
+        </div>
+        <div style="width: 100%; border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-4); overflow: hidden;">
+            <div style="font-family: var(--ff-m); font-size: .5625rem; color: var(--fg-4); margin-bottom: var(--space-2);">Full width — Desktop</div>
+            <div style="font-family: var(--ff-d); font-size: 4rem; line-height: 1; letter-spacing: -0.035em;">Design</div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-4); width: 100%;&quot;&gt;
+&lt;div style=&quot;font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--fg-4); margin-bottom: var(--space-1);&quot;&gt;Simulated viewport widths&lt;/div&gt;
+&lt;div style=&quot;width: 320px; border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-4); overflow: hidden;&quot;&gt;
+&lt;div style=&quot;font-family: var(--ff-m); font-size: .5625rem; color: var(--fg-4); margin-bottom: var(--space-2);&quot;&gt;320px — Mobile&lt;/div&gt;
+&lt;div style=&quot;font-family: var(--ff-d); font-size: 2.5rem; line-height: 1; letter-spacing: -0.035em;&quot;&gt;Design&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;width: 480px; border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-4); overflow: hidden;&quot;&gt;
+&lt;div style=&quot;font-family: var(--ff-m); font-size: .5625rem; color: var(--fg-4); margin-bottom: var(--space-2);&quot;&gt;480px — Large mobile&lt;/div&gt;
+&lt;div style=&quot;font-family: var(--ff-d); font-size: 3rem; line-height: 1; letter-spacing: -0.035em;&quot;&gt;Design&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;width: 100%; border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-4); overflow: hidden;&quot;&gt;
+&lt;div style=&quot;font-family: var(--ff-m); font-size: .5625rem; color: var(--fg-4); margin-bottom: var(--space-2);&quot;&gt;Full width — Desktop&lt;/div&gt;
+&lt;div style=&quot;font-family: var(--ff-d); font-size: 4rem; line-height: 1; letter-spacing: -0.035em;&quot;&gt;Design&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-css">/* Scales from 2.5rem (40px) to 4rem (64px) based on viewport */
+font-size: clamp(2.5rem, 8vw, 4rem);
+
+/* Base (Mobile) */
+.page-header h1 { 
+  font-size: clamp(2.5rem, 8vw, 4rem); 
+}
+
+/* Prose scales naturally with rem */
+.prose { font-size: 1rem; }
+
+/* Breakpoint-specific adjustments */
+@media (min-width: 768px) {
+  .prose h2 { font-size: 1.75rem; }
+}
+
+@media (min-width: 1024px) {
+  .prose h2 { font-size: 2rem; }
+}
+</code></pre>
+<hr>
+<h2 id="when-to-use-which-font">When to Use Which Font</h2>
+<p>Choosing the right font isn’t about preference — it’s about matching the <em>role</em> of the text to the <em>character</em> of the typeface.</p>
+
+<div class="Preview" id="preview-82u0u2cgz">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-3); width: 100%;">
+        <div style="display: grid; grid-template-columns: auto 1fr auto; gap: var(--space-3); align-items: center; background: var(--bg-s); padding: var(--space-4); border-radius: 0 var(--r-m) var(--r-m) 0; border-left: 3px solid var(--accent);">
+            <div style="font-family: var(--ff-d); font-size: 1.5rem; width: 48px; text-align: center;">Aa</div>
+            <div>
+                <div style="font-weight: 600; font-size: .9rem; margin-bottom: var(--space-1);">Instrument Serif</div>
+                <div style="font-size: .8rem; color: var(--fg-3);">Page titles, hero text, section headings (H1, H2). Anywhere you need to <em>stop the eye</em>.</div>
+            </div>
+            <div style="font-family: var(--ff-m); font-size: .65rem; color: var(--fg-4); writing-mode: vertical-lr; transform: rotate(180deg);">DISPLAY</div>
+        </div>
+        <div style="display: grid; grid-template-columns: auto 1fr auto; gap: var(--space-3); align-items: center; background: var(--bg-s); padding: var(--space-4); border-radius: 0 var(--r-m) var(--r-m) 0; border-left: 3px solid var(--ok);">
+            <div style="font-family: var(--ff-b); font-size: 1.5rem; font-weight: 500; width: 48px; text-align: center;">Aa</div>
+            <div>
+                <div style="font-weight: 600; font-size: .9rem; margin-bottom: var(--space-1);">Outfit</div>
+                <div style="font-size: .8rem; color: var(--fg-3);">Body copy, buttons, labels, form fields, navigation, H3+. Anything the user <em>reads through</em>.</div>
+            </div>
+            <div style="font-family: var(--ff-m); font-size: .65rem; color: var(--fg-4); writing-mode: vertical-lr; transform: rotate(180deg);">BODY & UI</div>
+        </div>
+        <div style="display: grid; grid-template-columns: auto 1fr auto; gap: var(--space-3); align-items: center; background: var(--bg-s); padding: var(--space-4); border-radius: 0 var(--r-m) var(--r-m) 0; border-left: 3px solid var(--warn);">
+            <div style="font-family: var(--ff-m); font-size: 1.5rem; width: 48px; text-align: center;">Aa</div>
+            <div>
+                <div style="font-weight: 600; font-size: .9rem; margin-bottom: var(--space-1);">JetBrains Mono</div>
+                <div style="font-size: .8rem; color: var(--fg-3);">Code, data, timestamps, nav labels, technical metadata. Anything that benefits from <em>fixed-width precision</em>.</div>
+            </div>
+            <div style="font-family: var(--ff-m); font-size: .65rem; color: var(--fg-4); writing-mode: vertical-lr; transform: rotate(180deg);">CODE & DATA</div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-3); width: 100%;&quot;&gt;
+&lt;div style=&quot;display: grid; grid-template-columns: auto 1fr auto; gap: var(--space-3); align-items: center; background: var(--bg-s); padding: var(--space-4); border-radius: 0 var(--r-m) var(--r-m) 0; border-left: 3px solid var(--accent);&quot;&gt;
+&lt;div style=&quot;font-family: var(--ff-d); font-size: 1.5rem; width: 48px; text-align: center;&quot;&gt;Aa&lt;/div&gt;
+&lt;div&gt;
+&lt;div style=&quot;font-weight: 600; font-size: .9rem; margin-bottom: var(--space-1);&quot;&gt;Instrument Serif&lt;/div&gt;
+&lt;div style=&quot;font-size: .8rem; color: var(--fg-3);&quot;&gt;Page titles, hero text, section headings (H1, H2). Anywhere you need to &lt;em&gt;stop the eye&lt;/em&gt;.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;font-family: var(--ff-m); font-size: .65rem; color: var(--fg-4); writing-mode: vertical-lr; transform: rotate(180deg);&quot;&gt;DISPLAY&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: grid; grid-template-columns: auto 1fr auto; gap: var(--space-3); align-items: center; background: var(--bg-s); padding: var(--space-4); border-radius: 0 var(--r-m) var(--r-m) 0; border-left: 3px solid var(--ok);&quot;&gt;
+&lt;div style=&quot;font-family: var(--ff-b); font-size: 1.5rem; font-weight: 500; width: 48px; text-align: center;&quot;&gt;Aa&lt;/div&gt;
+&lt;div&gt;
+&lt;div style=&quot;font-weight: 600; font-size: .9rem; margin-bottom: var(--space-1);&quot;&gt;Outfit&lt;/div&gt;
+&lt;div style=&quot;font-size: .8rem; color: var(--fg-3);&quot;&gt;Body copy, buttons, labels, form fields, navigation, H3+. Anything the user &lt;em&gt;reads through&lt;/em&gt;.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;font-family: var(--ff-m); font-size: .65rem; color: var(--fg-4); writing-mode: vertical-lr; transform: rotate(180deg);&quot;&gt;BODY &amp; UI&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: grid; grid-template-columns: auto 1fr auto; gap: var(--space-3); align-items: center; background: var(--bg-s); padding: var(--space-4); border-radius: 0 var(--r-m) var(--r-m) 0; border-left: 3px solid var(--warn);&quot;&gt;
+&lt;div style=&quot;font-family: var(--ff-m); font-size: 1.5rem; width: 48px; text-align: center;&quot;&gt;Aa&lt;/div&gt;
+&lt;div&gt;
+&lt;div style=&quot;font-weight: 600; font-size: .9rem; margin-bottom: var(--space-1);&quot;&gt;JetBrains Mono&lt;/div&gt;
+&lt;div style=&quot;font-size: .8rem; color: var(--fg-3);&quot;&gt;Code, data, timestamps, nav labels, technical metadata. Anything that benefits from &lt;em&gt;fixed-width precision&lt;/em&gt;.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;font-family: var(--ff-m); font-size: .65rem; color: var(--fg-4); writing-mode: vertical-lr; transform: rotate(180deg);&quot;&gt;CODE &amp; DATA&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><p><strong>The rule of thumb:</strong> If it’s a <em>statement</em>, use serif. If it’s <em>communication</em>, use sans. If it’s <em>data</em>, use mono.</p>
+<hr>
+<h2 id="line-height">Line Height</h2>
+<p>Proper leading improves readability. Tighter for headings, looser for body text.</p>
+<div class="Table-container"><table class="Table">
+<thead>
+<tr>
+<th>Context</th>
+<th>Line Height</th>
+<th>Ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Display/H1</td>
+<td>1.0 – 1.1</td>
+<td>Tight</td>
+</tr>
+<tr>
+<td>H2</td>
+<td>1.25</td>
+<td>Snug</td>
+</tr>
+<tr>
+<td>H3/UI</td>
+<td>1.4</td>
+<td>Normal</td>
+</tr>
+<tr>
+<td>Body</td>
+<td>1.6 – 1.7</td>
+<td>Relaxed</td>
+</tr>
+<tr>
+<td>Long-form</td>
+<td>1.7</td>
+<td>Loose</td>
+</tr>
+</tbody>
+</table></div>
+
+<div class="Preview" id="preview-zef6ufhrz">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); width: 100%;">
+        <div>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">line-height: 1.1 (Display)</small>
+            <div style="font-family: var(--ff-d); font-size: 1.5rem; line-height: 1.1; padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-m);">
+                Tight leading for serif headlines keeps them compact and impactful
+            </div>
+        </div>
+        <div>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">line-height: 1.6 (Body)</small>
+            <div style="font-family: var(--ff-b); font-size: 1rem; line-height: 1.6; padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-m);">
+                Relaxed leading for body text improves readability over multiple lines of content
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); width: 100%;&quot;&gt;
+&lt;div&gt;
+&lt;small style=&quot;color: var(--fg-3); display: block; margin-bottom: var(--space-2);&quot;&gt;line-height: 1.1 (Display)&lt;/small&gt;
+&lt;div style=&quot;font-family: var(--ff-d); font-size: 1.5rem; line-height: 1.1; padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-m);&quot;&gt;
+Tight leading for serif headlines keeps them compact and impactful
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;small style=&quot;color: var(--fg-3); display: block; margin-bottom: var(--space-2);&quot;&gt;line-height: 1.6 (Body)&lt;/small&gt;
+&lt;div style=&quot;font-family: var(--ff-b); font-size: 1rem; line-height: 1.6; padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-m);&quot;&gt;
+Relaxed leading for body text improves readability over multiple lines of content
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-css">/* Line heights */
+.page-header h1 { line-height: 1; }
+.prose h2 { line-height: 1.25; }
+h3 { line-height: 1.4; }
+body, p { line-height: 1.6; }
+.prose { line-height: 1.7; }
+</code></pre>
+<hr>
+<h2 id="letter-spacing">Letter Spacing</h2>
+<p>Subtle tracking adjustments improve legibility at extreme sizes. Large text needs tightening (characters drift apart optically); small uppercase text needs loosening (characters crowd).</p>
+<div class="Table-container"><table class="Table">
+<thead>
+<tr>
+<th>Context</th>
+<th>Letter Spacing</th>
+<th>When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Display</td>
+<td>-0.035em</td>
+<td>Large serif headings</td>
+</tr>
+<tr>
+<td>Headings</td>
+<td>-0.02em</td>
+<td>Section titles</td>
+</tr>
+<tr>
+<td>Normal</td>
+<td>0</td>
+<td>Body text</td>
+</tr>
+<tr>
+<td>Labels</td>
+<td>0.03em – 0.06em</td>
+<td>Uppercase, monospace labels</td>
+</tr>
+</tbody>
+</table></div>
+
+<div class="Preview" id="preview-1hkpo386a">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-4);">
+        <div>
+            <small style="color: var(--fg-3);">-0.035em (Display)</small>
+            <div style="font-family: var(--ff-d); font-size: 2.5rem; letter-spacing: -0.035em;">Tight Serif Tracking</div>
+        </div>
+        <div>
+            <small style="color: var(--fg-3);">0 (Default)</small>
+            <div style="font-family: var(--ff-b); font-size: 1rem;">Normal body text with default letter spacing.</div>
+        </div>
+        <div>
+            <small style="color: var(--fg-3);">0.06em (Labels)</small>
+            <div style="font-family: var(--ff-m); font-size: 0.625rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; color: var(--fg-3);">Section Label</div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-4);&quot;&gt;
+&lt;div&gt;
+&lt;small style=&quot;color: var(--fg-3);&quot;&gt;-0.035em (Display)&lt;/small&gt;
+&lt;div style=&quot;font-family: var(--ff-d); font-size: 2.5rem; letter-spacing: -0.035em;&quot;&gt;Tight Serif Tracking&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;small style=&quot;color: var(--fg-3);&quot;&gt;0 (Default)&lt;/small&gt;
+&lt;div style=&quot;font-family: var(--ff-b); font-size: 1rem;&quot;&gt;Normal body text with default letter spacing.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;small style=&quot;color: var(--fg-3);&quot;&gt;0.06em (Labels)&lt;/small&gt;
+&lt;div style=&quot;font-family: var(--ff-m); font-size: 0.625rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; color: var(--fg-3);&quot;&gt;Section Label&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-css">/* Letter spacing */
+.page-header h1 { letter-spacing: -0.035em; }
+.prose h2 { letter-spacing: -0.02em; }
+.fnav-btn { letter-spacing: 0.06em; text-transform: uppercase; }
+</code></pre>
+<hr>
+<h2 id="text-colors">Text Colors</h2>
+<p>Use semantic color tokens for consistent hierarchy.</p>
+
+<div class="Preview" id="preview-x8znp4j4v">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-3);">
+        <div style="color: var(--fg); font-size: 1.25rem; font-weight: 600;">--fg — Headlines & primary text</div>
+        <div style="color: var(--fg-2);">--fg-2 — Body text, descriptions</div>
+        <div style="color: var(--fg-3);">--fg-3 — Captions, placeholders</div>
+        <div style="color: var(--fg-4);">--fg-4 — Disabled, decorative</div>
+        <div style="color: var(--accent);">--accent — Links and interactive elements</div>
+        <div style="color: var(--ok);">--ok — Success messages</div>
+        <div style="color: var(--err);">--err — Error messages</div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-3);&quot;&gt;
+&lt;div style=&quot;color: var(--fg); font-size: 1.25rem; font-weight: 600;&quot;&gt;--fg — Headlines &amp; primary text&lt;/div&gt;
+&lt;div style=&quot;color: var(--fg-2);&quot;&gt;--fg-2 — Body text, descriptions&lt;/div&gt;
+&lt;div style=&quot;color: var(--fg-3);&quot;&gt;--fg-3 — Captions, placeholders&lt;/div&gt;
+&lt;div style=&quot;color: var(--fg-4);&quot;&gt;--fg-4 — Disabled, decorative&lt;/div&gt;
+&lt;div style=&quot;color: var(--accent);&quot;&gt;--accent — Links and interactive elements&lt;/div&gt;
+&lt;div style=&quot;color: var(--ok);&quot;&gt;--ok — Success messages&lt;/div&gt;
+&lt;div style=&quot;color: var(--err);&quot;&gt;--err — Error messages&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-css">/* Text colors */
+.text-primary { color: var(--fg); }
+.text-secondary { color: var(--fg-2); }
+.text-muted { color: var(--fg-3); }
+.text-accent { color: var(--accent); }
+.text-success { color: var(--ok); }
+.text-error { color: var(--err); }
+</code></pre>
+<hr>
+<h2 id="heading-styles">Heading Styles</h2>
+<p>Complete heading definitions matching the Library aesthetic.</p>
+
+<div class="Preview" id="preview-dbq162qll">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-6);">
+        <div>
+            <div style="font-family: var(--ff-d); font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 400; line-height: 1; letter-spacing: -0.035em;">Page Title</div>
+            <code style="font-size: 0.75em; color: var(--fg-3);">Display: ff-d / clamp(2.5rem, 8vw, 4rem) / 400 / 1 / -0.035em</code>
+        </div>
+        <div>
+            <h2 style="font-family: var(--ff-d); font-size: 1.75rem; font-weight: 400; line-height: 1.25; letter-spacing: -0.02em; margin: 0;">Section Header</h2>
+            <code style="font-size: 0.75em; color: var(--fg-3);">H2: ff-d / 1.75rem / 400 / 1.25 / -0.02em</code>
+        </div>
+        <div>
+            <h3 style="font-family: var(--ff-b); font-size: 1.125rem; font-weight: 600; line-height: 1.4; margin: 0;">Subsection</h3>
+            <code style="font-size: 0.75em; color: var(--fg-3);">H3: ff-b / 1.125rem / 600 / 1.4 / 0</code>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-6);&quot;&gt;
+&lt;div&gt;
+&lt;div style=&quot;font-family: var(--ff-d); font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 400; line-height: 1; letter-spacing: -0.035em;&quot;&gt;Page Title&lt;/div&gt;
+&lt;code style=&quot;font-size: 0.75em; color: var(--fg-3);&quot;&gt;Display: ff-d / clamp(2.5rem, 8vw, 4rem) / 400 / 1 / -0.035em&lt;/code&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;h2 style=&quot;font-family: var(--ff-d); font-size: 1.75rem; font-weight: 400; line-height: 1.25; letter-spacing: -0.02em; margin: 0;&quot;&gt;Section Header&lt;/h2&gt;
+&lt;code style=&quot;font-size: 0.75em; color: var(--fg-3);&quot;&gt;H2: ff-d / 1.75rem / 400 / 1.25 / -0.02em&lt;/code&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;h3 style=&quot;font-family: var(--ff-b); font-size: 1.125rem; font-weight: 600; line-height: 1.4; margin: 0;&quot;&gt;Subsection&lt;/h3&gt;
+&lt;code style=&quot;font-size: 0.75em; color: var(--fg-3);&quot;&gt;H3: ff-b / 1.125rem / 600 / 1.4 / 0&lt;/code&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-css">.page-header h1 {
+  font-family: var(--ff-d);
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.035em;
+}
+
+.page-header h1 em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.prose h2 {
+  font-family: var(--ff-d);
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin: var(--space-10) 0 var(--space-4);
+}
+
+.prose h3 {
+  font-family: var(--ff-b);
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: var(--space-8) 0 var(--space-3);
+}
+</code></pre>
+<hr>
+<h2 id="prose-styles">Prose Styles</h2>
+<p>Optimized typography for long-form reading.</p>
+
+<div class="Preview" id="preview-xm6wg0h7n">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="prose" style="max-width: 65ch;">
+        <p style="margin-bottom: var(--space-4); line-height: 1.7; color: var(--fg-2);">Good typography is invisible. When type is well-set, the reader doesn't notice the mechanics — they simply absorb the content. This is the goal of Carbon's typography system.</p>
+        <p style="margin-bottom: var(--space-4); line-height: 1.7; color: var(--fg-2);">The <strong style="font-weight: 600; color: var(--fg);">measure</strong> (line length) is kept between 45-75 characters for optimal readability. Combined with generous <em>line-height</em> and proper spacing between paragraphs, long-form content becomes effortless to read.</p>
+        <p style="line-height: 1.7; color: var(--fg-2);">Notice how your eye flows naturally from line to line without strain.</p>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;prose&quot; style=&quot;max-width: 65ch;&quot;&gt;
+&lt;p style=&quot;margin-bottom: var(--space-4); line-height: 1.7; color: var(--fg-2);&quot;&gt;Good typography is invisible. When type is well-set, the reader doesn&#039;t notice the mechanics — they simply absorb the content. This is the goal of Carbon&#039;s typography system.&lt;/p&gt;
+&lt;p style=&quot;margin-bottom: var(--space-4); line-height: 1.7; color: var(--fg-2);&quot;&gt;The &lt;strong style=&quot;font-weight: 600; color: var(--fg);&quot;&gt;measure&lt;/strong&gt; (line length) is kept between 45-75 characters for optimal readability. Combined with generous &lt;em&gt;line-height&lt;/em&gt; and proper spacing between paragraphs, long-form content becomes effortless to read.&lt;/p&gt;
+&lt;p style=&quot;line-height: 1.7; color: var(--fg-2);&quot;&gt;Notice how your eye flows naturally from line to line without strain.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-css">.prose {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--fg-2);
+  max-width: 65ch; /* Optimal line length */
+}
+
+.prose p {
+  margin-bottom: var(--space-4);
+}
+
+.prose strong {
+  font-weight: 600;
+  color: var(--fg);
+}
+
+.prose code:not([class*=&quot;language-&quot;]) {
+  font-family: var(--ff-m);
+  font-size: 0.875em;
+  padding: 2px 6px;
+  background: var(--bg-m);
+  border-radius: var(--r-s);
+  color: var(--accent);
+}
+</code></pre>
+<hr>
+<h2 id="code-typography">Code Typography</h2>
+<p>JetBrains Mono styles for code blocks and inline code.</p>
+
+<div class="Preview" id="preview-yye5aaprk">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-4);">
+        <div>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Inline Code</small>
+            <p style="font-family: var(--ff-b);">Use the <code style="font-family: var(--ff-m); font-size: 0.875em; padding: 2px 6px; background: var(--bg-m); border-radius: var(--r-s); color: var(--accent);">var(--space-4)</code> token for standard spacing.</p>
+        </div>
+        <div>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Code Block</small>
+            <pre style="font-family: var(--ff-m); font-size: 0.8125rem; line-height: 1.7; background: var(--g950); color: var(--g100); padding: var(--space-4); border-radius: var(--r-l); overflow-x: auto;"><code>function greet(name) {
+  return `Hello, ${name}!`;
+}</code></pre>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-4);&quot;&gt;
+&lt;div&gt;
+&lt;small style=&quot;color: var(--fg-3); display: block; margin-bottom: var(--space-2);&quot;&gt;Inline Code&lt;/small&gt;
+&lt;p style=&quot;font-family: var(--ff-b);&quot;&gt;Use the &lt;code style=&quot;font-family: var(--ff-m); font-size: 0.875em; padding: 2px 6px; background: var(--bg-m); border-radius: var(--r-s); color: var(--accent);&quot;&gt;var(--space-4)&lt;/code&gt; token for standard spacing.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;small style=&quot;color: var(--fg-3); display: block; margin-bottom: var(--space-2);&quot;&gt;Code Block&lt;/small&gt;
+&lt;pre style=&quot;font-family: var(--ff-m); font-size: 0.8125rem; line-height: 1.7; background: var(--g950); color: var(--g100); padding: var(--space-4); border-radius: var(--r-l); overflow-x: auto;&quot;&gt;&lt;code&gt;function greet(name) {
+return `Hello, ${name}!`;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-css">code:not([class*=&quot;language-&quot;]) {
+  font-family: var(--ff-m);
+  font-size: 0.875em;
+  padding: 2px 6px;
+  background: var(--bg-m);
+  border-radius: var(--r-s);
+  color: var(--accent);
+}
+
+pre[class*=&quot;language-&quot;] {
+  font-family: var(--ff-m);
+  font-size: 0.8125rem;
+  line-height: 1.7;
+  background: var(--g950);
+  border: 1px solid var(--g800);
+  border-radius: var(--r-l);
+  padding: var(--space-4);
+}
+</code></pre>
+<hr>
+<h2 id="navigation-typography">Navigation Typography</h2>
+<p>The floating pill nav uses monospace labels with wide tracking.</p>
+
+<div class="Preview" id="preview-upaee583n">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; gap: var(--space-4); align-items: center;">
+        <span style="font-family: var(--ff-m); font-size: 0.5625rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; color: var(--fg-3);">Components</span>
+        <span style="font-family: var(--ff-m); font-size: 0.5625rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; color: var(--fg-3);">Tokens</span>
+        <span style="font-family: var(--ff-m); font-size: 0.5625rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; background: var(--accent); color: white; padding: var(--space-2) var(--space-4); border-radius: var(--r-f);">Guides</span>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; gap: var(--space-4); align-items: center;&quot;&gt;
+&lt;span style=&quot;font-family: var(--ff-m); font-size: 0.5625rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; color: var(--fg-3);&quot;&gt;Components&lt;/span&gt;
+&lt;span style=&quot;font-family: var(--ff-m); font-size: 0.5625rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; color: var(--fg-3);&quot;&gt;Tokens&lt;/span&gt;
+&lt;span style=&quot;font-family: var(--ff-m); font-size: 0.5625rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; background: var(--accent); color: white; padding: var(--space-2) var(--space-4); border-radius: var(--r-f);&quot;&gt;Guides&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-css">.fnav-btn {
+  font-family: var(--ff-m);
+  font-size: 0.5625rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+</code></pre>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="do">Do</h3>
+<ul>
+<li>✓ <strong>Use Instrument Serif for display</strong> — Large headlines, hero text</li>
+<li>✓ <strong>Use Outfit for body and UI</strong> — Readable and clean</li>
+<li>✓ <strong>Use JetBrains Mono for code</strong> — Clear differentiation</li>
+<li>✓ <strong>Establish clear hierarchy</strong> — Size + font + weight guides the eye</li>
+<li>✓ <strong>Use appropriate measure</strong> — 45-75 characters per line</li>
+<li>✓ <strong>Add breathing room</strong> — Generous line-height for body text</li>
+</ul>
+<h3 id="don-t">Don’t</h3>
+<ul>
+<li>✗ <strong>Mix too many sizes</strong> — Stick to the scale</li>
+<li>✗ <strong>Use pure black text</strong> — Use --fg (oklch-based)</li>
+<li>✗ <strong>Justify body text</strong> — Left-align for better readability</li>
+<li>✗ <strong>Use Instrument Serif for body</strong> — Save it for headlines</li>
+<li>✗ <strong>Forget mobile</strong> — Test typography at small viewports</li>
+<li>✗ <strong>Over-style code</strong> — Keep it clean and readable</li>
+</ul>
+<hr>
+<h2 id="quick-reference">Quick Reference</h2>
+<pre><code class="language-css">/* Font Families */
+font-family: var(--ff-d);  /* Instrument Serif - Display */
+font-family: var(--ff-b);  /* Outfit - Body &amp; UI */
+font-family: var(--ff-m);  /* JetBrains Mono - Code */
+
+/* Display Sizes */
+font-size: clamp(2.5rem, 8vw, 4rem);  /* Hero */
+font-size: 1.75rem;                    /* H2 */
+font-size: 1.125rem;                   /* H3 */
+font-size: 1rem;                       /* Body */
+font-size: 0.875rem;                   /* Small */
+font-size: 0.8125rem;                  /* Code */
+font-size: 0.5625rem;                  /* Nav labels */
+
+/* Weights */
+font-weight: 400;  /* Regular (body, serif) */
+font-weight: 500;  /* Medium (buttons) */
+font-weight: 600;  /* Semi-Bold (subheads) */
+font-weight: 700;  /* Bold (emphasis) */
+
+/* Line Heights */
+line-height: 1;    /* Display */
+line-height: 1.25; /* Headings */
+line-height: 1.4;  /* UI */
+line-height: 1.6;  /* Body */
+line-height: 1.7;  /* Prose/Code */
+
+/* Letter Spacing */
+letter-spacing: -0.035em; /* Display */
+letter-spacing: -0.02em;  /* H2 */
+letter-spacing: 0.06em;   /* Labels */
+</code></pre>
+
+                </article>
+
+                <footer class="page-footer">
+                    <p>Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

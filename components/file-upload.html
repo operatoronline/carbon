@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>File upload | Carbon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/bold/style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Floating Pill Nav (Mobile: bottom, Desktop: top) -->
+        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation">
+            <a href="../index.html" class="fnav-btn" data-section="home" aria-label="Home">
+                <i class="ph-bold ph-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="../tokens/colors.html" class="fnav-btn" data-section="tokens" aria-label="Tokens">
+                <i class="ph-bold ph-palette"></i>
+                <span>Tokens</span>
+            </a>
+            <a href="../components/buttons.html" class="fnav-btn" data-section="components" aria-label="Components">
+                <i class="ph-bold ph-stack"></i>
+                <span>Components</span>
+            </a>
+            <a href="../patterns/layouts.html" class="fnav-btn" data-section="patterns" aria-label="Patterns">
+                <i class="ph-bold ph-grid-four"></i>
+                <span>Patterns</span>
+            </a>
+            <div class="fnav-sep"></div>
+            <button class="fnav-btn" id="search-toggle" aria-label="Search">
+                <i class="ph ph-magnifying-glass"></i>
+            </button>
+            <button class="fnav-btn" id="theme-btn" aria-label="Toggle theme">
+                <i class="ph ph-moon"></i>
+            </button>
+        </nav>
+
+        <!-- Glassmorphism Top Bar (Desktop only) -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <a href="../index.html" class="logo">
+                    <i class="ph ph-intersect"></i>
+                    <span>Carbon</span>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <div class="search-container" id="search-container">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search components..." aria-label="Search" autocomplete="off">
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <main class="main-content">
+                <header class="page-header">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="../index.html">Carbon</a> <span class="sep">/</span> <span>Components</span> <span class="sep">/</span> <span>File upload</span>
+                    </nav>
+                    <h1><em>File</em> upload</h1>
+                </header>
+                
+                <article class="prose">
+                    <h1>File Upload</h1>
+<p>Upload files via drag-and-drop or file browser. Supports single and multiple files with progress indicators, previews, and validation.</p>
+<hr>
+<h2 id="installation">Installation</h2>
+<p>File Upload uses Carbon’s base styles and JavaScript for drag-and-drop interactions.</p>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/carbon.css&quot;&gt;
+&lt;script src=&quot;/js/carbon.js&quot; defer&gt;&lt;/script&gt;
+</code></pre>
+<hr>
+<h2 id="usage">Usage</h2>
+<h3 id="basic-drop-zone">Basic Drop Zone</h3>
+
+<div class="Preview" id="preview-20xlwyj0g">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="FileUpload">
+    <div class="FileUpload-dropzone">
+      <svg class="FileUpload-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="17 8 12 3 7 8"/>
+        <line x1="12" y1="3" x2="12" y2="15"/>
+      </svg>
+      <p class="FileUpload-text">
+        <span class="FileUpload-link">Click to upload</span> or drag and drop
+      </p>
+      <p class="FileUpload-hint">PNG, JPG, GIF up to 10MB</p>
+      <input type="file" class="FileUpload-input" />
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;FileUpload&quot;&gt;
+&lt;div class=&quot;FileUpload-dropzone&quot;&gt;
+&lt;svg class=&quot;FileUpload-icon&quot; width=&quot;48&quot; height=&quot;48&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.5&quot;&gt;
+&lt;path d=&quot;M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4&quot;/&gt;
+&lt;polyline points=&quot;17 8 12 3 7 8&quot;/&gt;
+&lt;line x1=&quot;12&quot; y1=&quot;3&quot; x2=&quot;12&quot; y2=&quot;15&quot;/&gt;
+&lt;/svg&gt;
+&lt;p class=&quot;FileUpload-text&quot;&gt;
+&lt;span class=&quot;FileUpload-link&quot;&gt;Click to upload&lt;/span&gt; or drag and drop
+&lt;/p&gt;
+&lt;p class=&quot;FileUpload-hint&quot;&gt;PNG, JPG, GIF up to 10MB&lt;/p&gt;
+&lt;input type=&quot;file&quot; class=&quot;FileUpload-input&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="multiple-files">Multiple Files</h3>
+<p>Add <code>multiple</code> to accept multiple files.</p>
+
+<div class="Preview" id="preview-t6mu90k0x">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="FileUpload">
+    <div class="FileUpload-dropzone">
+      <svg class="FileUpload-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="17 8 12 3 7 8"/>
+        <line x1="12" y1="3" x2="12" y2="15"/>
+      </svg>
+      <p class="FileUpload-text">
+        <span class="FileUpload-link">Click to upload</span> or drag and drop
+      </p>
+      <p class="FileUpload-hint">Up to 5 files, 10MB each</p>
+      <input type="file" class="FileUpload-input" multiple />
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;FileUpload&quot;&gt;
+&lt;div class=&quot;FileUpload-dropzone&quot;&gt;
+&lt;svg class=&quot;FileUpload-icon&quot; width=&quot;48&quot; height=&quot;48&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.5&quot;&gt;
+&lt;path d=&quot;M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4&quot;/&gt;
+&lt;polyline points=&quot;17 8 12 3 7 8&quot;/&gt;
+&lt;line x1=&quot;12&quot; y1=&quot;3&quot; x2=&quot;12&quot; y2=&quot;15&quot;/&gt;
+&lt;/svg&gt;
+&lt;p class=&quot;FileUpload-text&quot;&gt;
+&lt;span class=&quot;FileUpload-link&quot;&gt;Click to upload&lt;/span&gt; or drag and drop
+&lt;/p&gt;
+&lt;p class=&quot;FileUpload-hint&quot;&gt;Up to 5 files, 10MB each&lt;/p&gt;
+&lt;input type=&quot;file&quot; class=&quot;FileUpload-input&quot; multiple /&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="variants">Variants</h2>
+<h3 id="compact">Compact</h3>
+<p>Smaller drop zone for inline usage.</p>
+
+<div class="Preview" id="preview-p014ot1c7">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="FileUpload FileUpload--compact">
+    <div class="FileUpload-dropzone">
+      <svg class="FileUpload-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="17 8 12 3 7 8"/>
+        <line x1="12" y1="3" x2="12" y2="15"/>
+      </svg>
+      <span class="FileUpload-text">
+        <span class="FileUpload-link">Upload file</span>
+      </span>
+      <input type="file" class="FileUpload-input" />
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;FileUpload FileUpload--compact&quot;&gt;
+&lt;div class=&quot;FileUpload-dropzone&quot;&gt;
+&lt;svg class=&quot;FileUpload-icon&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot;&gt;
+&lt;path d=&quot;M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4&quot;/&gt;
+&lt;polyline points=&quot;17 8 12 3 7 8&quot;/&gt;
+&lt;line x1=&quot;12&quot; y1=&quot;3&quot; x2=&quot;12&quot; y2=&quot;15&quot;/&gt;
+&lt;/svg&gt;
+&lt;span class=&quot;FileUpload-text&quot;&gt;
+&lt;span class=&quot;FileUpload-link&quot;&gt;Upload file&lt;/span&gt;
+&lt;/span&gt;
+&lt;input type=&quot;file&quot; class=&quot;FileUpload-input&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="with-border">With Border</h3>
+<p>More prominent border style.</p>
+
+<div class="Preview" id="preview-fb5q24upi">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="FileUpload FileUpload--bordered">
+    <div class="FileUpload-dropzone">
+      <svg class="FileUpload-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="17 8 12 3 7 8"/>
+        <line x1="12" y1="3" x2="12" y2="15"/>
+      </svg>
+      <p class="FileUpload-text">
+        <span class="FileUpload-link">Click to upload</span> or drag and drop
+      </p>
+      <p class="FileUpload-hint">SVG, PNG, JPG or GIF (max. 800x400px)</p>
+      <input type="file" class="FileUpload-input" accept="image/*" />
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;FileUpload FileUpload--bordered&quot;&gt;
+&lt;div class=&quot;FileUpload-dropzone&quot;&gt;
+&lt;svg class=&quot;FileUpload-icon&quot; width=&quot;48&quot; height=&quot;48&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.5&quot;&gt;
+&lt;path d=&quot;M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4&quot;/&gt;
+&lt;polyline points=&quot;17 8 12 3 7 8&quot;/&gt;
+&lt;line x1=&quot;12&quot; y1=&quot;3&quot; x2=&quot;12&quot; y2=&quot;15&quot;/&gt;
+&lt;/svg&gt;
+&lt;p class=&quot;FileUpload-text&quot;&gt;
+&lt;span class=&quot;FileUpload-link&quot;&gt;Click to upload&lt;/span&gt; or drag and drop
+&lt;/p&gt;
+&lt;p class=&quot;FileUpload-hint&quot;&gt;SVG, PNG, JPG or GIF (max. 800x400px)&lt;/p&gt;
+&lt;input type=&quot;file&quot; class=&quot;FileUpload-input&quot; accept=&quot;image/*&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="image-preview">Image Preview</h3>
+<p>Shows thumbnail preview for uploaded images.</p>
+
+<div class="Preview" id="preview-dnhyl1vrd">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="FileUpload FileUpload--preview">
+    <div class="FileUpload-dropzone">
+      <div class="FileUpload-preview">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Crect fill='%23e5e7eb' width='120' height='120'/%3E%3Cpath fill='%239ca3af' d='M45 50h30v20H45z'/%3E%3Ccircle fill='%239ca3af' cx='52' cy='45' r='5'/%3E%3C/svg%3E" alt="Preview" class="FileUpload-thumbnail" />
+      </div>
+      <div class="FileUpload-content">
+        <p class="FileUpload-text">
+          <span class="FileUpload-link">Change image</span>
+        </p>
+        <p class="FileUpload-hint">PNG, JPG up to 5MB</p>
+      </div>
+      <input type="file" class="FileUpload-input" accept="image/*" />
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;FileUpload FileUpload--preview&quot;&gt;
+&lt;div class=&quot;FileUpload-dropzone&quot;&gt;
+&lt;div class=&quot;FileUpload-preview&quot;&gt;
+&lt;img src=&quot;data:image/svg+xml,%3Csvg xmlns=&#039;http://www.w3.org/2000/svg&#039; width=&#039;120&#039; height=&#039;120&#039; viewBox=&#039;0 0 120 120&#039;%3E%3Crect fill=&#039;%23e5e7eb&#039; width=&#039;120&#039; height=&#039;120&#039;/%3E%3Cpath fill=&#039;%239ca3af&#039; d=&#039;M45 50h30v20H45z&#039;/%3E%3Ccircle fill=&#039;%239ca3af&#039; cx=&#039;52&#039; cy=&#039;45&#039; r=&#039;5&#039;/%3E%3C/svg%3E&quot; alt=&quot;Preview&quot; class=&quot;FileUpload-thumbnail&quot; /&gt;
+&lt;/div&gt;
+&lt;div class=&quot;FileUpload-content&quot;&gt;
+&lt;p class=&quot;FileUpload-text&quot;&gt;
+&lt;span class=&quot;FileUpload-link&quot;&gt;Change image&lt;/span&gt;
+&lt;/p&gt;
+&lt;p class=&quot;FileUpload-hint&quot;&gt;PNG, JPG up to 5MB&lt;/p&gt;
+&lt;/div&gt;
+&lt;input type=&quot;file&quot; class=&quot;FileUpload-input&quot; accept=&quot;image/*&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="file-list">File List</h2>
+<p>Display uploaded files with actions.</p>
+<h3 id="basic-file-list">Basic File List</h3>
+
+<div class="Preview" id="preview-2pyeep60q">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="FileUpload">
+    <div class="FileUpload-dropzone">
+      <svg class="FileUpload-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="17 8 12 3 7 8"/>
+        <line x1="12" y1="3" x2="12" y2="15"/>
+      </svg>
+      <p class="FileUpload-text"><span class="FileUpload-link">Add more files</span></p>
+      <input type="file" class="FileUpload-input" multiple />
+    </div>
+    <ul class="FileUpload-list">
+      <li class="FileUpload-item">
+        <svg class="FileUpload-itemIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+        </svg>
+        <div class="FileUpload-itemInfo">
+          <span class="FileUpload-itemName">document.pdf</span>
+          <span class="FileUpload-itemSize">2.4 MB</span>
+        </div>
+        <button class="FileUpload-itemRemove" aria-label="Remove file">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </li>
+      <li class="FileUpload-item">
+        <svg class="FileUpload-itemIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+          <circle cx="8.5" cy="8.5" r="1.5"/>
+          <polyline points="21 15 16 10 5 21"/>
+        </svg>
+        <div class="FileUpload-itemInfo">
+          <span class="FileUpload-itemName">photo.jpg</span>
+          <span class="FileUpload-itemSize">1.2 MB</span>
+        </div>
+        <button class="FileUpload-itemRemove" aria-label="Remove file">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;FileUpload&quot;&gt;
+&lt;div class=&quot;FileUpload-dropzone&quot;&gt;
+&lt;svg class=&quot;FileUpload-icon&quot; width=&quot;32&quot; height=&quot;32&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.5&quot;&gt;
+&lt;path d=&quot;M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4&quot;/&gt;
+&lt;polyline points=&quot;17 8 12 3 7 8&quot;/&gt;
+&lt;line x1=&quot;12&quot; y1=&quot;3&quot; x2=&quot;12&quot; y2=&quot;15&quot;/&gt;
+&lt;/svg&gt;
+&lt;p class=&quot;FileUpload-text&quot;&gt;&lt;span class=&quot;FileUpload-link&quot;&gt;Add more files&lt;/span&gt;&lt;/p&gt;
+&lt;input type=&quot;file&quot; class=&quot;FileUpload-input&quot; multiple /&gt;
+&lt;/div&gt;
+&lt;ul class=&quot;FileUpload-list&quot;&gt;
+&lt;li class=&quot;FileUpload-item&quot;&gt;
+&lt;svg class=&quot;FileUpload-itemIcon&quot; width=&quot;20&quot; height=&quot;20&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot;&gt;
+&lt;path d=&quot;M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z&quot;/&gt;
+&lt;polyline points=&quot;14 2 14 8 20 8&quot;/&gt;
+&lt;/svg&gt;
+&lt;div class=&quot;FileUpload-itemInfo&quot;&gt;
+&lt;span class=&quot;FileUpload-itemName&quot;&gt;document.pdf&lt;/span&gt;
+&lt;span class=&quot;FileUpload-itemSize&quot;&gt;2.4 MB&lt;/span&gt;
+&lt;/div&gt;
+&lt;button class=&quot;FileUpload-itemRemove&quot; aria-label=&quot;Remove file&quot;&gt;
+&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot;&gt;
+&lt;line x1=&quot;18&quot; y1=&quot;6&quot; x2=&quot;6&quot; y2=&quot;18&quot;/&gt;&lt;line x1=&quot;6&quot; y1=&quot;6&quot; x2=&quot;18&quot; y2=&quot;18&quot;/&gt;
+&lt;/svg&gt;
+&lt;/button&gt;
+&lt;/li&gt;
+&lt;li class=&quot;FileUpload-item&quot;&gt;
+&lt;svg class=&quot;FileUpload-itemIcon&quot; width=&quot;20&quot; height=&quot;20&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot;&gt;
+&lt;rect x=&quot;3&quot; y=&quot;3&quot; width=&quot;18&quot; height=&quot;18&quot; rx=&quot;2&quot; ry=&quot;2&quot;/&gt;
+&lt;circle cx=&quot;8.5&quot; cy=&quot;8.5&quot; r=&quot;1.5&quot;/&gt;
+&lt;polyline points=&quot;21 15 16 10 5 21&quot;/&gt;
+&lt;/svg&gt;
+&lt;div class=&quot;FileUpload-itemInfo&quot;&gt;
+&lt;span class=&quot;FileUpload-itemName&quot;&gt;photo.jpg&lt;/span&gt;
+&lt;span class=&quot;FileUpload-itemSize&quot;&gt;1.2 MB&lt;/span&gt;
+&lt;/div&gt;
+&lt;button class=&quot;FileUpload-itemRemove&quot; aria-label=&quot;Remove file&quot;&gt;
+&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot;&gt;
+&lt;line x1=&quot;18&quot; y1=&quot;6&quot; x2=&quot;6&quot; y2=&quot;18&quot;/&gt;&lt;line x1=&quot;6&quot; y1=&quot;6&quot; x2=&quot;18&quot; y2=&quot;18&quot;/&gt;
+&lt;/svg&gt;
+&lt;/button&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="with-progress">With Progress</h3>
+<p>Show upload progress for each file.</p>
+
+<div class="Preview" id="preview-bc94kznn3">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><ul class="FileUpload-list">
+    <li class="FileUpload-item FileUpload-item--uploading">
+      <svg class="FileUpload-itemIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+      </svg>
+      <div class="FileUpload-itemInfo">
+        <span class="FileUpload-itemName">large-video.mp4</span>
+        <div class="FileUpload-progress">
+          <div class="FileUpload-progressBar" style="width: 65%"></div>
+        </div>
+        <span class="FileUpload-itemSize">65% · 12.4 MB of 19.1 MB</span>
+      </div>
+      <button class="FileUpload-itemRemove" aria-label="Cancel upload">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </li>
+    <li class="FileUpload-item FileUpload-item--complete">
+      <svg class="FileUpload-itemIcon FileUpload-itemIcon--success" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="20 6 9 17 4 12"/>
+      </svg>
+      <div class="FileUpload-itemInfo">
+        <span class="FileUpload-itemName">report.pdf</span>
+        <span class="FileUpload-itemSize">Complete · 4.2 MB</span>
+      </div>
+      <button class="FileUpload-itemRemove" aria-label="Remove file">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </li>
+    <li class="FileUpload-item FileUpload-item--error">
+      <svg class="FileUpload-itemIcon FileUpload-itemIcon--error" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="12" y1="8" x2="12" y2="12"/>
+        <line x1="12" y1="16" x2="12.01" y2="16"/>
+      </svg>
+      <div class="FileUpload-itemInfo">
+        <span class="FileUpload-itemName">corrupted.zip</span>
+        <span class="FileUpload-itemSize FileUpload-itemSize--error">Upload failed · File corrupted</span>
+      </div>
+      <button class="FileUpload-itemRetry" aria-label="Retry upload">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="23 4 23 10 17 10"/>
+          <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+        </svg>
+      </button>
+    </li>
+  </ul></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;ul class=&quot;FileUpload-list&quot;&gt;
+&lt;li class=&quot;FileUpload-item FileUpload-item--uploading&quot;&gt;
+&lt;svg class=&quot;FileUpload-itemIcon&quot; width=&quot;20&quot; height=&quot;20&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot;&gt;
+&lt;path d=&quot;M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z&quot;/&gt;
+&lt;polyline points=&quot;14 2 14 8 20 8&quot;/&gt;
+&lt;/svg&gt;
+&lt;div class=&quot;FileUpload-itemInfo&quot;&gt;
+&lt;span class=&quot;FileUpload-itemName&quot;&gt;large-video.mp4&lt;/span&gt;
+&lt;div class=&quot;FileUpload-progress&quot;&gt;
+&lt;div class=&quot;FileUpload-progressBar&quot; style=&quot;width: 65%&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;span class=&quot;FileUpload-itemSize&quot;&gt;65% · 12.4 MB of 19.1 MB&lt;/span&gt;
+&lt;/div&gt;
+&lt;button class=&quot;FileUpload-itemRemove&quot; aria-label=&quot;Cancel upload&quot;&gt;
+&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot;&gt;
+&lt;line x1=&quot;18&quot; y1=&quot;6&quot; x2=&quot;6&quot; y2=&quot;18&quot;/&gt;&lt;line x1=&quot;6&quot; y1=&quot;6&quot; x2=&quot;18&quot; y2=&quot;18&quot;/&gt;
+&lt;/svg&gt;
+&lt;/button&gt;
+&lt;/li&gt;
+&lt;li class=&quot;FileUpload-item FileUpload-item--complete&quot;&gt;
+&lt;svg class=&quot;FileUpload-itemIcon FileUpload-itemIcon--success&quot; width=&quot;20&quot; height=&quot;20&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot;&gt;
+&lt;polyline points=&quot;20 6 9 17 4 12&quot;/&gt;
+&lt;/svg&gt;
+&lt;div class=&quot;FileUpload-itemInfo&quot;&gt;
+&lt;span class=&quot;FileUpload-itemName&quot;&gt;report.pdf&lt;/span&gt;
+&lt;span class=&quot;FileUpload-itemSize&quot;&gt;Complete · 4.2 MB&lt;/span&gt;
+&lt;/div&gt;
+&lt;button class=&quot;FileUpload-itemRemove&quot; aria-label=&quot;Remove file&quot;&gt;
+&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot;&gt;
+&lt;line x1=&quot;18&quot; y1=&quot;6&quot; x2=&quot;6&quot; y2=&quot;18&quot;/&gt;&lt;line x1=&quot;6&quot; y1=&quot;6&quot; x2=&quot;18&quot; y2=&quot;18&quot;/&gt;
+&lt;/svg&gt;
+&lt;/button&gt;
+&lt;/li&gt;
+&lt;li class=&quot;FileUpload-item FileUpload-item--error&quot;&gt;
+&lt;svg class=&quot;FileUpload-itemIcon FileUpload-itemIcon--error&quot; width=&quot;20&quot; height=&quot;20&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot;&gt;
+&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot;/&gt;
+&lt;line x1=&quot;12&quot; y1=&quot;8&quot; x2=&quot;12&quot; y2=&quot;12&quot;/&gt;
+&lt;line x1=&quot;12&quot; y1=&quot;16&quot; x2=&quot;12.01&quot; y2=&quot;16&quot;/&gt;
+&lt;/svg&gt;
+&lt;div class=&quot;FileUpload-itemInfo&quot;&gt;
+&lt;span class=&quot;FileUpload-itemName&quot;&gt;corrupted.zip&lt;/span&gt;
+&lt;span class=&quot;FileUpload-itemSize FileUpload-itemSize--error&quot;&gt;Upload failed · File corrupted&lt;/span&gt;
+&lt;/div&gt;
+&lt;button class=&quot;FileUpload-itemRetry&quot; aria-label=&quot;Retry upload&quot;&gt;
+&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot;&gt;
+&lt;polyline points=&quot;23 4 23 10 17 10&quot;/&gt;
+&lt;path d=&quot;M20.49 15a9 9 0 1 1-2.12-9.36L23 10&quot;/&gt;
+&lt;/svg&gt;
+&lt;/button&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="states">States</h2>
+<h3 id="drag-over">Drag Over</h3>
+<p>Active state when files are dragged over the drop zone.</p>
+
+<div class="Preview" id="preview-gm5ez4bvj">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="FileUpload">
+    <div class="FileUpload-dropzone is-dragover">
+      <svg class="FileUpload-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="17 8 12 3 7 8"/>
+        <line x1="12" y1="3" x2="12" y2="15"/>
+      </svg>
+      <p class="FileUpload-text">Drop files here</p>
+      <input type="file" class="FileUpload-input" />
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;FileUpload&quot;&gt;
+&lt;div class=&quot;FileUpload-dropzone is-dragover&quot;&gt;
+&lt;svg class=&quot;FileUpload-icon&quot; width=&quot;48&quot; height=&quot;48&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.5&quot;&gt;
+&lt;path d=&quot;M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4&quot;/&gt;
+&lt;polyline points=&quot;17 8 12 3 7 8&quot;/&gt;
+&lt;line x1=&quot;12&quot; y1=&quot;3&quot; x2=&quot;12&quot; y2=&quot;15&quot;/&gt;
+&lt;/svg&gt;
+&lt;p class=&quot;FileUpload-text&quot;&gt;Drop files here&lt;/p&gt;
+&lt;input type=&quot;file&quot; class=&quot;FileUpload-input&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="disabled">Disabled</h3>
+
+<div class="Preview" id="preview-bq4mj1z3o">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="FileUpload FileUpload--disabled">
+    <div class="FileUpload-dropzone">
+      <svg class="FileUpload-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="17 8 12 3 7 8"/>
+        <line x1="12" y1="3" x2="12" y2="15"/>
+      </svg>
+      <p class="FileUpload-text">Upload disabled</p>
+      <p class="FileUpload-hint">Contact admin for access</p>
+      <input type="file" class="FileUpload-input" disabled />
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;FileUpload FileUpload--disabled&quot;&gt;
+&lt;div class=&quot;FileUpload-dropzone&quot;&gt;
+&lt;svg class=&quot;FileUpload-icon&quot; width=&quot;48&quot; height=&quot;48&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.5&quot;&gt;
+&lt;path d=&quot;M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4&quot;/&gt;
+&lt;polyline points=&quot;17 8 12 3 7 8&quot;/&gt;
+&lt;line x1=&quot;12&quot; y1=&quot;3&quot; x2=&quot;12&quot; y2=&quot;15&quot;/&gt;
+&lt;/svg&gt;
+&lt;p class=&quot;FileUpload-text&quot;&gt;Upload disabled&lt;/p&gt;
+&lt;p class=&quot;FileUpload-hint&quot;&gt;Contact admin for access&lt;/p&gt;
+&lt;input type=&quot;file&quot; class=&quot;FileUpload-input&quot; disabled /&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="error">Error</h3>
+
+<div class="Preview" id="preview-n8fmjfksj">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="FileUpload FileUpload--error">
+    <div class="FileUpload-dropzone">
+      <svg class="FileUpload-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="12" y1="8" x2="12" y2="12"/>
+        <line x1="12" y1="16" x2="12.01" y2="16"/>
+      </svg>
+      <p class="FileUpload-text">File too large</p>
+      <p class="FileUpload-hint">Maximum file size is 10MB</p>
+      <input type="file" class="FileUpload-input" />
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;FileUpload FileUpload--error&quot;&gt;
+&lt;div class=&quot;FileUpload-dropzone&quot;&gt;
+&lt;svg class=&quot;FileUpload-icon&quot; width=&quot;48&quot; height=&quot;48&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.5&quot;&gt;
+&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot;/&gt;
+&lt;line x1=&quot;12&quot; y1=&quot;8&quot; x2=&quot;12&quot; y2=&quot;12&quot;/&gt;
+&lt;line x1=&quot;12&quot; y1=&quot;16&quot; x2=&quot;12.01&quot; y2=&quot;16&quot;/&gt;
+&lt;/svg&gt;
+&lt;p class=&quot;FileUpload-text&quot;&gt;File too large&lt;/p&gt;
+&lt;p class=&quot;FileUpload-hint&quot;&gt;Maximum file size is 10MB&lt;/p&gt;
+&lt;input type=&quot;file&quot; class=&quot;FileUpload-input&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="common-patterns">Common Patterns</h2>
+<h3 id="profile-avatar-upload">Profile Avatar Upload</h3>
+
+<div class="Preview" id="preview-9v3ztaisu">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; align-items: center; gap: var(--space-4); max-width: 400px;">
+    <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, oklch(60% 0.15 250), oklch(50% 0.2 280)); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: 600;">JD</div>
+    <div>
+        <p style="font-weight: 500; margin-bottom: var(--space-2);">Profile Photo</p>
+        <div style="display: flex; gap: var(--space-2);">
+            <button class="Button Button--secondary Button--small">Upload</button>
+            <button class="Button Button--ghost Button--small" style="color: oklch(55% 0.2 25);">Remove</button>
+        </div>
+        <p style="font-size: 0.8rem; color: var(--fg-3); margin-top: var(--space-1);">JPG or PNG, max 2MB</p>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-4); max-width: 400px;&quot;&gt;
+&lt;div style=&quot;width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, oklch(60% 0.15 250), oklch(50% 0.2 280)); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: 600;&quot;&gt;JD&lt;/div&gt;
+&lt;div&gt;
+&lt;p style=&quot;font-weight: 500; margin-bottom: var(--space-2);&quot;&gt;Profile Photo&lt;/p&gt;
+&lt;div style=&quot;display: flex; gap: var(--space-2);&quot;&gt;
+&lt;button class=&quot;Button Button--secondary Button--small&quot;&gt;Upload&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--small&quot; style=&quot;color: oklch(55% 0.2 25);&quot;&gt;Remove&lt;/button&gt;
+&lt;/div&gt;
+&lt;p style=&quot;font-size: 0.8rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;JPG or PNG, max 2MB&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="form-with-file-attachment">Form with File Attachment</h3>
+
+<div class="Preview" id="preview-ugcvf8w9j">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="max-width: 400px;">
+    <div style="margin-bottom: var(--space-4);">
+        <label style="display: block; font-weight: 500; margin-bottom: var(--space-1);">Subject</label>
+        <input type="text" class="Input" placeholder="Brief description" style="width: 100%;">
+    </div>
+    <div style="margin-bottom: var(--space-4);">
+        <label style="display: block; font-weight: 500; margin-bottom: var(--space-1);">Attachments</label>
+        <div class="FileUpload FileUpload--compact">
+            <div class="FileUpload-dropzone">
+                <svg class="FileUpload-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/>
+                </svg>
+                <span class="FileUpload-text"><span class="FileUpload-link">Attach files</span></span>
+                <input type="file" class="FileUpload-input" multiple />
+            </div>
+        </div>
+    </div>
+    <button class="Button Button--primary">Submit Ticket</button>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;max-width: 400px;&quot;&gt;
+&lt;div style=&quot;margin-bottom: var(--space-4);&quot;&gt;
+&lt;label style=&quot;display: block; font-weight: 500; margin-bottom: var(--space-1);&quot;&gt;Subject&lt;/label&gt;
+&lt;input type=&quot;text&quot; class=&quot;Input&quot; placeholder=&quot;Brief description&quot; style=&quot;width: 100%;&quot;&gt;
+&lt;/div&gt;
+&lt;div style=&quot;margin-bottom: var(--space-4);&quot;&gt;
+&lt;label style=&quot;display: block; font-weight: 500; margin-bottom: var(--space-1);&quot;&gt;Attachments&lt;/label&gt;
+&lt;div class=&quot;FileUpload FileUpload--compact&quot;&gt;
+&lt;div class=&quot;FileUpload-dropzone&quot;&gt;
+&lt;svg class=&quot;FileUpload-icon&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot;&gt;
+&lt;path d=&quot;M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4&quot;/&gt;&lt;polyline points=&quot;17 8 12 3 7 8&quot;/&gt;&lt;line x1=&quot;12&quot; y1=&quot;3&quot; x2=&quot;12&quot; y2=&quot;15&quot;/&gt;
+&lt;/svg&gt;
+&lt;span class=&quot;FileUpload-text&quot;&gt;&lt;span class=&quot;FileUpload-link&quot;&gt;Attach files&lt;/span&gt;&lt;/span&gt;
+&lt;input type=&quot;file&quot; class=&quot;FileUpload-input&quot; multiple /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;button class=&quot;Button Button--primary&quot;&gt;Submit Ticket&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="multi-file-upload-with-progress">Multi-file Upload with Progress</h3>
+
+<div class="Preview" id="preview-r16m058ft">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="max-width: 450px;">
+    <div class="FileUpload">
+        <div class="FileUpload-dropzone" style="padding: var(--space-4);">
+            <svg class="FileUpload-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/>
+            </svg>
+            <p class="FileUpload-text"><span class="FileUpload-link">Upload files</span> or drag and drop</p>
+            <input type="file" class="FileUpload-input" multiple />
+        </div>
+        <ul class="FileUpload-list">
+            <li class="FileUpload-item FileUpload-item--complete">
+                <svg class="FileUpload-itemIcon FileUpload-itemIcon--success" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <div class="FileUpload-itemInfo">
+                    <span class="FileUpload-itemName">design-v2.fig</span>
+                    <span class="FileUpload-itemSize">Complete · 8.1 MB</span>
+                </div>
+            </li>
+            <li class="FileUpload-item FileUpload-item--uploading">
+                <svg class="FileUpload-itemIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                <div class="FileUpload-itemInfo">
+                    <span class="FileUpload-itemName">assets.zip</span>
+                    <div class="FileUpload-progress"><div class="FileUpload-progressBar" style="width: 40%"></div></div>
+                    <span class="FileUpload-itemSize">40% · 3.2 MB of 8 MB</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;max-width: 450px;&quot;&gt;
+&lt;div class=&quot;FileUpload&quot;&gt;
+&lt;div class=&quot;FileUpload-dropzone&quot; style=&quot;padding: var(--space-4);&quot;&gt;
+&lt;svg class=&quot;FileUpload-icon&quot; width=&quot;32&quot; height=&quot;32&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.5&quot;&gt;
+&lt;path d=&quot;M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4&quot;/&gt;&lt;polyline points=&quot;17 8 12 3 7 8&quot;/&gt;&lt;line x1=&quot;12&quot; y1=&quot;3&quot; x2=&quot;12&quot; y2=&quot;15&quot;/&gt;
+&lt;/svg&gt;
+&lt;p class=&quot;FileUpload-text&quot;&gt;&lt;span class=&quot;FileUpload-link&quot;&gt;Upload files&lt;/span&gt; or drag and drop&lt;/p&gt;
+&lt;input type=&quot;file&quot; class=&quot;FileUpload-input&quot; multiple /&gt;
+&lt;/div&gt;
+&lt;ul class=&quot;FileUpload-list&quot;&gt;
+&lt;li class=&quot;FileUpload-item FileUpload-item--complete&quot;&gt;
+&lt;svg class=&quot;FileUpload-itemIcon FileUpload-itemIcon--success&quot; width=&quot;20&quot; height=&quot;20&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot;&gt;&lt;polyline points=&quot;20 6 9 17 4 12&quot;/&gt;&lt;/svg&gt;
+&lt;div class=&quot;FileUpload-itemInfo&quot;&gt;
+&lt;span class=&quot;FileUpload-itemName&quot;&gt;design-v2.fig&lt;/span&gt;
+&lt;span class=&quot;FileUpload-itemSize&quot;&gt;Complete · 8.1 MB&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class=&quot;FileUpload-item FileUpload-item--uploading&quot;&gt;
+&lt;svg class=&quot;FileUpload-itemIcon&quot; width=&quot;20&quot; height=&quot;20&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot;&gt;&lt;path d=&quot;M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z&quot;/&gt;&lt;polyline points=&quot;14 2 14 8 20 8&quot;/&gt;&lt;/svg&gt;
+&lt;div class=&quot;FileUpload-itemInfo&quot;&gt;
+&lt;span class=&quot;FileUpload-itemName&quot;&gt;assets.zip&lt;/span&gt;
+&lt;div class=&quot;FileUpload-progress&quot;&gt;&lt;div class=&quot;FileUpload-progressBar&quot; style=&quot;width: 40%&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;span class=&quot;FileUpload-itemSize&quot;&gt;40% · 3.2 MB of 8 MB&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="customization">Customization</h2>
+<h3 id="css-variables">CSS Variables</h3>
+<pre><code class="language-css">.FileUpload {
+  /* Dropzone */
+  --file-upload-bg: var(--surface-1);
+  --file-upload-border: var(--border-default);
+  --file-upload-border-hover: var(--bd-s);
+  --file-upload-border-active: var(--color-primary);
+  --file-upload-radius: var(--radius-lg);
+  --file-upload-padding: var(--space-8);
+
+  /* Colors */
+  --file-upload-icon-color: var(--text-muted);
+  --file-upload-text-color: var(--text-default);
+  --file-upload-hint-color: var(--text-muted);
+  --file-upload-link-color: var(--color-primary);
+
+  /* Progress */
+  --file-upload-progress-bg: var(--surface-2);
+  --file-upload-progress-fill: var(--color-primary);
+
+  /* States */
+  --file-upload-error-color: var(--color-error);
+  --file-upload-success-color: var(--color-success);
+}
+</code></pre>
+<h3 id="custom-styling-example">Custom Styling Example</h3>
+<pre><code class="language-css">/* Circular avatar upload */
+.FileUpload--avatar .FileUpload-dropzone {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  padding: var(--space-4);
+}
+
+.FileUpload--avatar .FileUpload-preview {
+  border-radius: 50%;
+  overflow: hidden;
+}
+</code></pre>
+<hr>
+<h2 id="api-reference">API Reference</h2>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">.FileUpload</code></td><td class="ApiTable-desc">Base container</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload--compact</code></td><td class="ApiTable-desc">Smaller, inline variant</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload--bordered</code></td><td class="ApiTable-desc">Solid border style</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload--preview</code></td><td class="ApiTable-desc">Image preview layout</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload--disabled</code></td><td class="ApiTable-desc">Disabled state</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload--error</code></td><td class="ApiTable-desc">Error state</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-dropzone</code></td><td class="ApiTable-desc">Drop target area</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-dropzone.is-dragover</code></td><td class="ApiTable-desc">Active drag state</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-input</code></td><td class="ApiTable-desc">Hidden file input</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-icon</code></td><td class="ApiTable-desc">Upload icon</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-text</code></td><td class="ApiTable-desc">Main instruction text</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-link</code></td><td class="ApiTable-desc">Clickable upload trigger</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-hint</code></td><td class="ApiTable-desc">Help text (file types, size)</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-preview</code></td><td class="ApiTable-desc">Image thumbnail container</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-thumbnail</code></td><td class="ApiTable-desc">Preview image</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-list</code></td><td class="ApiTable-desc">File list container</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-item</code></td><td class="ApiTable-desc">Individual file row</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-item--uploading</code></td><td class="ApiTable-desc">Upload in progress</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-item--complete</code></td><td class="ApiTable-desc">Upload complete</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-item--error</code></td><td class="ApiTable-desc">Upload failed</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-itemIcon</code></td><td class="ApiTable-desc">File type icon</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-itemInfo</code></td><td class="ApiTable-desc">File name and size container</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-itemName</code></td><td class="ApiTable-desc">File name</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-itemSize</code></td><td class="ApiTable-desc">File size / status</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-progress</code></td><td class="ApiTable-desc">Progress bar container</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-progressBar</code></td><td class="ApiTable-desc">Progress bar fill</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-itemRemove</code></td><td class="ApiTable-desc">Remove/cancel button</td></tr>
+<tr><td><code class="ApiTable-prop">.FileUpload-itemRetry</code></td><td class="ApiTable-desc">Retry button</td></tr>
+</tbody>
+</table>
+<hr>
+<h2 id="css-reference">CSS Reference</h2>
+<pre><code class="language-css">/* Base container */
+.FileUpload {
+  width: 100%;
+}
+
+/* Dropzone */
+.FileUpload-dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-8);
+  border: 2px dashed var(--bd);
+  border-radius: var(--r-m);
+  background: var(--bg);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  position: relative;
+  text-align: center;
+}
+
+.FileUpload-dropzone:hover {
+  border-color: var(--bd-s);
+  background: var(--bg-s);
+}
+
+.FileUpload-dropzone.is-dragover {
+  border-color: var(--accent);
+  background: oklch(60% 0.15 250 / 0.05);
+}
+
+/* Hidden input */
+.FileUpload-input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Icon */
+.FileUpload-icon {
+  color: var(--fg-3);
+}
+
+/* Text */
+.FileUpload-text {
+  font-size: 0.9rem;
+  color: var(--fg-2);
+  margin: 0;
+}
+
+.FileUpload-link {
+  color: var(--accent);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.FileUpload-hint {
+  font-size: 0.8rem;
+  color: var(--fg-3);
+  margin: 0;
+}
+
+/* Compact variant */
+.FileUpload--compact .FileUpload-dropzone {
+  flex-direction: row;
+  padding: var(--space-3) var(--space-4);
+  gap: var(--space-3);
+}
+
+/* Bordered variant */
+.FileUpload--bordered .FileUpload-dropzone {
+  border-style: solid;
+}
+
+/* File list */
+.FileUpload-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-3) 0 0;
+}
+
+.FileUpload-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border: 1px solid var(--bd);
+  border-radius: var(--r-s);
+  margin-bottom: var(--space-2);
+}
+
+.FileUpload-itemIcon {
+  flex-shrink: 0;
+  color: var(--fg-3);
+}
+
+.FileUpload-itemIcon--success { color: oklch(55% 0.15 150); }
+.FileUpload-itemIcon--error { color: oklch(55% 0.2 25); }
+
+.FileUpload-itemInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.FileUpload-itemName {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.FileUpload-itemSize {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--fg-3);
+}
+
+.FileUpload-itemSize--error {
+  color: oklch(55% 0.2 25);
+}
+
+/* Progress bar */
+.FileUpload-progress {
+  height: 4px;
+  background: var(--bg-s);
+  border-radius: 2px;
+  margin: var(--space-1) 0;
+  overflow: hidden;
+}
+
+.FileUpload-progressBar {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: width 0.3s;
+}
+
+/* Remove / Retry buttons */
+.FileUpload-itemRemove,
+.FileUpload-itemRetry {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: var(--space-1);
+  cursor: pointer;
+  color: var(--fg-3);
+  border-radius: var(--r-s);
+  transition: background 0.15s;
+}
+
+.FileUpload-itemRemove:hover,
+.FileUpload-itemRetry:hover {
+  background: var(--bg-s);
+  color: var(--fg);
+}
+
+/* States */
+.FileUpload--disabled .FileUpload-dropzone {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.FileUpload--error .FileUpload-dropzone {
+  border-color: oklch(55% 0.2 25);
+  background: oklch(55% 0.2 25 / 0.05);
+}
+
+/* Preview variant */
+.FileUpload--preview .FileUpload-dropzone {
+  flex-direction: row;
+  text-align: left;
+}
+
+.FileUpload-thumbnail {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: var(--r-s);
+}
+</code></pre>
+<hr>
+<h2 id="accessibility">Accessibility</h2>
+<ul>
+<li>Use <code>aria-label</code> on remove/retry buttons</li>
+<li>Add <code>aria-describedby</code> linking to hint text</li>
+<li>Announce upload progress to screen readers via <code>aria-live</code></li>
+<li>Ensure keyboard access to drop zone via the file input</li>
+<li>Provide clear error messages for validation failures</li>
+</ul>
+<h3 id="keyboard-support">Keyboard Support</h3>
+<div class="Table-container"><table class="Table">
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enter / Space</td>
+<td>Open file browser (when focused)</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Remove focused file from list</td>
+</tr>
+<tr>
+<td>Tab</td>
+<td>Navigate between files and actions</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="screen-reader-guidance">Screen Reader Guidance</h3>
+<pre><code class="language-html">&lt;div class=&quot;FileUpload&quot;&gt;
+    &lt;div class=&quot;FileUpload-dropzone&quot;&gt;
+        &lt;p class=&quot;FileUpload-text&quot; id=&quot;upload-desc&quot;&gt;
+            &lt;span class=&quot;FileUpload-link&quot;&gt;Click to upload&lt;/span&gt; or drag and drop
+        &lt;/p&gt;
+        &lt;p class=&quot;FileUpload-hint&quot; id=&quot;upload-hint&quot;&gt;PNG, JPG up to 10MB&lt;/p&gt;
+        &lt;input type=&quot;file&quot; class=&quot;FileUpload-input&quot;
+               aria-describedby=&quot;upload-desc upload-hint&quot;
+               aria-label=&quot;Upload file&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div aria-live=&quot;polite&quot; class=&quot;sr-only&quot;&gt;
+        &lt;!-- Announce upload progress and completion --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="do">Do</h3>
+<ul>
+<li>✓ <strong>Show accepted file types and size limits</strong> — Users need to know constraints before uploading</li>
+<li>✓ <strong>Display upload progress for large files</strong> — Visual feedback prevents uncertainty</li>
+<li>✓ <strong>Allow retry for failed uploads</strong> — Network errors happen; let users recover gracefully</li>
+<li>✓ <strong>Show image previews when appropriate</strong> — Helps users confirm they selected the right file</li>
+<li>✓ <strong>Provide clear error messages</strong> — “File exceeds 10MB limit” not just “Error”</li>
+<li>✓ <strong>Support drag-and-drop and click</strong> — Both interaction patterns are expected</li>
+</ul>
+<h3 id="don-t">Don’t</h3>
+<ul>
+<li>✗ <strong>Allow uploads without size limits</strong> — Unbounded uploads risk server issues and poor UX</li>
+<li>✗ <strong>Remove files without confirmation</strong> — Accidental clicks shouldn’t lose uploaded work</li>
+<li>✗ <strong>Hide the file list when processing</strong> — Users need to see what’s happening</li>
+<li>✗ <strong>Use vague error messages</strong> — “Upload failed” tells users nothing actionable</li>
+<li>✗ <strong>Auto-upload on selection without user control</strong> — Let users review before submitting</li>
+<li>✗ <strong>Forget mobile touch targets</strong> — Drop zones and buttons must be at least 44px</li>
+</ul>
+
+                </article>
+
+                <footer class="page-footer">
+                    <p>Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

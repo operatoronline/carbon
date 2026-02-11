@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Switches | Carbon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/bold/style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Floating Pill Nav (Mobile: bottom, Desktop: top) -->
+        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation">
+            <a href="../index.html" class="fnav-btn" data-section="home" aria-label="Home">
+                <i class="ph-bold ph-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="../tokens/colors.html" class="fnav-btn" data-section="tokens" aria-label="Tokens">
+                <i class="ph-bold ph-palette"></i>
+                <span>Tokens</span>
+            </a>
+            <a href="../components/buttons.html" class="fnav-btn" data-section="components" aria-label="Components">
+                <i class="ph-bold ph-stack"></i>
+                <span>Components</span>
+            </a>
+            <a href="../patterns/layouts.html" class="fnav-btn" data-section="patterns" aria-label="Patterns">
+                <i class="ph-bold ph-grid-four"></i>
+                <span>Patterns</span>
+            </a>
+            <div class="fnav-sep"></div>
+            <button class="fnav-btn" id="search-toggle" aria-label="Search">
+                <i class="ph ph-magnifying-glass"></i>
+            </button>
+            <button class="fnav-btn" id="theme-btn" aria-label="Toggle theme">
+                <i class="ph ph-moon"></i>
+            </button>
+        </nav>
+
+        <!-- Glassmorphism Top Bar (Desktop only) -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <a href="../index.html" class="logo">
+                    <i class="ph ph-intersect"></i>
+                    <span>Carbon</span>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <div class="search-container" id="search-container">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search components..." aria-label="Search" autocomplete="off">
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <main class="main-content">
+                <header class="page-header">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="../index.html">Carbon</a> <span class="sep">/</span> <span>Components</span> <span class="sep">/</span> <span>Switches</span>
+                    </nav>
+                    <h1><em>Switches</em></h1>
+                </header>
+                
+                <article class="prose">
+                    <h1>Switches</h1>
+<p>Switches toggle a single option on or off.</p>
+<h2 id="basic-switch">Basic Switch</h2>
+
+<div class="Preview" id="preview-2ymqi2ffr">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><label class="Switch">
+        <input type="checkbox">
+        <span class="Switch-slider"></span>
+    </label></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;label class=&quot;Switch&quot;&gt;
+&lt;input type=&quot;checkbox&quot;&gt;
+&lt;span class=&quot;Switch-slider&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;label class=&quot;Switch&quot;&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+    &lt;span class=&quot;Switch-slider&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+</code></pre>
+<h2 id="states">States</h2>
+
+<div class="Preview" id="preview-gisozlxtj">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; gap: var(--space-6); align-items: center;">
+        <label class="Switch">
+            <input type="checkbox">
+            <span class="Switch-slider"></span>
+        </label>
+        <label class="Switch">
+            <input type="checkbox" checked>
+            <span class="Switch-slider"></span>
+        </label>
+        <label class="Switch">
+            <input type="checkbox" disabled>
+            <span class="Switch-slider"></span>
+        </label>
+        <label class="Switch">
+            <input type="checkbox" checked disabled>
+            <span class="Switch-slider"></span>
+        </label>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; gap: var(--space-6); align-items: center;&quot;&gt;
+&lt;label class=&quot;Switch&quot;&gt;
+&lt;input type=&quot;checkbox&quot;&gt;
+&lt;span class=&quot;Switch-slider&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;Switch&quot;&gt;
+&lt;input type=&quot;checkbox&quot; checked&gt;
+&lt;span class=&quot;Switch-slider&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;Switch&quot;&gt;
+&lt;input type=&quot;checkbox&quot; disabled&gt;
+&lt;span class=&quot;Switch-slider&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;Switch&quot;&gt;
+&lt;input type=&quot;checkbox&quot; checked disabled&gt;
+&lt;span class=&quot;Switch-slider&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;input type=&quot;checkbox&quot;&gt;           &lt;!-- Off --&gt;
+&lt;input type=&quot;checkbox&quot; checked&gt;   &lt;!-- On --&gt;
+&lt;input type=&quot;checkbox&quot; disabled&gt;  &lt;!-- Disabled off --&gt;
+&lt;input type=&quot;checkbox&quot; checked disabled&gt;  &lt;!-- Disabled on --&gt;
+</code></pre>
+<h2 id="sizes">Sizes</h2>
+
+<div class="Preview" id="preview-9ucredk8g">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; gap: var(--space-6); align-items: center;">
+        <label class="Switch Switch--small">
+            <input type="checkbox" checked>
+            <span class="Switch-slider"></span>
+        </label>
+        <label class="Switch">
+            <input type="checkbox" checked>
+            <span class="Switch-slider"></span>
+        </label>
+        <label class="Switch Switch--large">
+            <input type="checkbox" checked>
+            <span class="Switch-slider"></span>
+        </label>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; gap: var(--space-6); align-items: center;&quot;&gt;
+&lt;label class=&quot;Switch Switch--small&quot;&gt;
+&lt;input type=&quot;checkbox&quot; checked&gt;
+&lt;span class=&quot;Switch-slider&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;Switch&quot;&gt;
+&lt;input type=&quot;checkbox&quot; checked&gt;
+&lt;span class=&quot;Switch-slider&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;Switch Switch--large&quot;&gt;
+&lt;input type=&quot;checkbox&quot; checked&gt;
+&lt;span class=&quot;Switch-slider&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;label class=&quot;Switch Switch--small&quot;&gt;...&lt;/label&gt;
+&lt;label class=&quot;Switch&quot;&gt;...&lt;/label&gt;
+&lt;label class=&quot;Switch Switch--large&quot;&gt;...&lt;/label&gt;
+</code></pre>
+<h2 id="with-label">With Label</h2>
+
+<div class="Preview" id="preview-kvfuxic2h">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-4);">
+        <label class="Switch-label">
+            <span class="Switch-label-text">
+                <span>Dark mode</span>
+                <small style="color: var(--fg-3);">Use dark theme across the app</small>
+            </span>
+            <span class="Switch">
+                <input type="checkbox">
+                <span class="Switch-slider"></span>
+            </span>
+        </label>
+        <label class="Switch-label">
+            <span class="Switch-label-text">
+                <span>Notifications</span>
+                <small style="color: var(--fg-3);">Receive push notifications</small>
+            </span>
+            <span class="Switch">
+                <input type="checkbox" checked>
+                <span class="Switch-slider"></span>
+            </span>
+        </label>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-4);&quot;&gt;
+&lt;label class=&quot;Switch-label&quot;&gt;
+&lt;span class=&quot;Switch-label-text&quot;&gt;
+&lt;span&gt;Dark mode&lt;/span&gt;
+&lt;small style=&quot;color: var(--fg-3);&quot;&gt;Use dark theme across the app&lt;/small&gt;
+&lt;/span&gt;
+&lt;span class=&quot;Switch&quot;&gt;
+&lt;input type=&quot;checkbox&quot;&gt;
+&lt;span class=&quot;Switch-slider&quot;&gt;&lt;/span&gt;
+&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;Switch-label&quot;&gt;
+&lt;span class=&quot;Switch-label-text&quot;&gt;
+&lt;span&gt;Notifications&lt;/span&gt;
+&lt;small style=&quot;color: var(--fg-3);&quot;&gt;Receive push notifications&lt;/small&gt;
+&lt;/span&gt;
+&lt;span class=&quot;Switch&quot;&gt;
+&lt;input type=&quot;checkbox&quot; checked&gt;
+&lt;span class=&quot;Switch-slider&quot;&gt;&lt;/span&gt;
+&lt;/span&gt;
+&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;label class=&quot;Switch-label&quot;&gt;
+    &lt;span class=&quot;Switch-label-text&quot;&gt;
+        &lt;span&gt;Dark mode&lt;/span&gt;
+        &lt;small&gt;Use dark theme across the app&lt;/small&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;Switch&quot;&gt;
+        &lt;input type=&quot;checkbox&quot;&gt;
+        &lt;span class=&quot;Switch-slider&quot;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/label&gt;
+</code></pre>
+<h2 id="in-a-form">In a Form</h2>
+
+<div class="Preview" id="preview-8ypvpooaa">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="width: 320px; display: flex; flex-direction: column; gap: var(--space-3);">
+        <label class="Switch-label" style="padding: var(--space-3) 0; border-bottom: 1px solid var(--bd);">
+            <span>Email notifications</span>
+            <span class="Switch Switch--small">
+                <input type="checkbox" checked>
+                <span class="Switch-slider"></span>
+            </span>
+        </label>
+        <label class="Switch-label" style="padding: var(--space-3) 0; border-bottom: 1px solid var(--bd);">
+            <span>SMS alerts</span>
+            <span class="Switch Switch--small">
+                <input type="checkbox">
+                <span class="Switch-slider"></span>
+            </span>
+        </label>
+        <label class="Switch-label" style="padding: var(--space-3) 0; border-bottom: 1px solid var(--bd);">
+            <span>Marketing emails</span>
+            <span class="Switch Switch--small">
+                <input type="checkbox">
+                <span class="Switch-slider"></span>
+            </span>
+        </label>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;width: 320px; display: flex; flex-direction: column; gap: var(--space-3);&quot;&gt;
+&lt;label class=&quot;Switch-label&quot; style=&quot;padding: var(--space-3) 0; border-bottom: 1px solid var(--bd);&quot;&gt;
+&lt;span&gt;Email notifications&lt;/span&gt;
+&lt;span class=&quot;Switch Switch--small&quot;&gt;
+&lt;input type=&quot;checkbox&quot; checked&gt;
+&lt;span class=&quot;Switch-slider&quot;&gt;&lt;/span&gt;
+&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;Switch-label&quot; style=&quot;padding: var(--space-3) 0; border-bottom: 1px solid var(--bd);&quot;&gt;
+&lt;span&gt;SMS alerts&lt;/span&gt;
+&lt;span class=&quot;Switch Switch--small&quot;&gt;
+&lt;input type=&quot;checkbox&quot;&gt;
+&lt;span class=&quot;Switch-slider&quot;&gt;&lt;/span&gt;
+&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;Switch-label&quot; style=&quot;padding: var(--space-3) 0; border-bottom: 1px solid var(--bd);&quot;&gt;
+&lt;span&gt;Marketing emails&lt;/span&gt;
+&lt;span class=&quot;Switch Switch--small&quot;&gt;
+&lt;input type=&quot;checkbox&quot;&gt;
+&lt;span class=&quot;Switch-slider&quot;&gt;&lt;/span&gt;
+&lt;/span&gt;
+&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="common-patterns">Common Patterns</h2>
+<h3 id="settings-panel">Settings Panel</h3>
+
+<div class="Preview" id="preview-99hcfxqza">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="width: 360px; border: 1px solid var(--bd); border-radius: var(--radius-md); overflow: hidden;">
+        <div style="padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--bd); font-weight: 600;">Preferences</div>
+        <div style="display: flex; flex-direction: column;">
+            <label class="Switch-label" style="padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--bd);">
+                <span class="Switch-label-text"><span>Dark mode</span><small style="color: var(--fg-3);">Use dark theme across the app</small></span>
+                <span class="Switch"><input type="checkbox" checked><span class="Switch-slider"></span></span>
+            </label>
+            <label class="Switch-label" style="padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--bd);">
+                <span class="Switch-label-text"><span>Compact view</span><small style="color: var(--fg-3);">Reduce spacing in lists</small></span>
+                <span class="Switch"><input type="checkbox"><span class="Switch-slider"></span></span>
+            </label>
+            <label class="Switch-label" style="padding: var(--space-3) var(--space-4);">
+                <span class="Switch-label-text"><span>Sounds</span><small style="color: var(--fg-3);">Play notification sounds</small></span>
+                <span class="Switch"><input type="checkbox" checked><span class="Switch-slider"></span></span>
+            </label>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;width: 360px; border: 1px solid var(--bd); border-radius: var(--radius-md); overflow: hidden;&quot;&gt;
+&lt;div style=&quot;padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--bd); font-weight: 600;&quot;&gt;Preferences&lt;/div&gt;
+&lt;div style=&quot;display: flex; flex-direction: column;&quot;&gt;
+&lt;label class=&quot;Switch-label&quot; style=&quot;padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--bd);&quot;&gt;
+&lt;span class=&quot;Switch-label-text&quot;&gt;&lt;span&gt;Dark mode&lt;/span&gt;&lt;small style=&quot;color: var(--fg-3);&quot;&gt;Use dark theme across the app&lt;/small&gt;&lt;/span&gt;
+&lt;span class=&quot;Switch&quot;&gt;&lt;input type=&quot;checkbox&quot; checked&gt;&lt;span class=&quot;Switch-slider&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;Switch-label&quot; style=&quot;padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--bd);&quot;&gt;
+&lt;span class=&quot;Switch-label-text&quot;&gt;&lt;span&gt;Compact view&lt;/span&gt;&lt;small style=&quot;color: var(--fg-3);&quot;&gt;Reduce spacing in lists&lt;/small&gt;&lt;/span&gt;
+&lt;span class=&quot;Switch&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt;&lt;span class=&quot;Switch-slider&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;Switch-label&quot; style=&quot;padding: var(--space-3) var(--space-4);&quot;&gt;
+&lt;span class=&quot;Switch-label-text&quot;&gt;&lt;span&gt;Sounds&lt;/span&gt;&lt;small style=&quot;color: var(--fg-3);&quot;&gt;Play notification sounds&lt;/small&gt;&lt;/span&gt;
+&lt;span class=&quot;Switch&quot;&gt;&lt;input type=&quot;checkbox&quot; checked&gt;&lt;span class=&quot;Switch-slider&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="feature-flags">Feature Flags</h3>
+
+<div class="Preview" id="preview-8gwxjyji9">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="width: 400px; display: flex; flex-direction: column; gap: var(--space-2);">
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: var(--space-2) var(--space-3); background: var(--bg-s); border-radius: var(--radius-sm);">
+            <div style="display: flex; align-items: center; gap: var(--space-2);">
+                <code style="font-size: 0.8rem;">BETA_EDITOR</code>
+                <span class="Badge Badge--warning" style="font-size: 0.65rem;">Beta</span>
+            </div>
+            <label class="Switch Switch--small"><input type="checkbox" checked><span class="Switch-slider"></span></label>
+        </div>
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: var(--space-2) var(--space-3); background: var(--bg-s); border-radius: var(--radius-sm);">
+            <div style="display: flex; align-items: center; gap: var(--space-2);">
+                <code style="font-size: 0.8rem;">AI_ASSIST</code>
+                <span class="Badge Badge--info" style="font-size: 0.65rem;">New</span>
+            </div>
+            <label class="Switch Switch--small"><input type="checkbox"><span class="Switch-slider"></span></label>
+        </div>
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: var(--space-2) var(--space-3); background: var(--bg-s); border-radius: var(--radius-sm);">
+            <div style="display: flex; align-items: center; gap: var(--space-2);">
+                <code style="font-size: 0.8rem;">DARK_MODE</code>
+            </div>
+            <label class="Switch Switch--small"><input type="checkbox" checked><span class="Switch-slider"></span></label>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;width: 400px; display: flex; flex-direction: column; gap: var(--space-2);&quot;&gt;
+&lt;div style=&quot;display: flex; align-items: center; justify-content: space-between; padding: var(--space-2) var(--space-3); background: var(--bg-s); border-radius: var(--radius-sm);&quot;&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-2);&quot;&gt;
+&lt;code style=&quot;font-size: 0.8rem;&quot;&gt;BETA_EDITOR&lt;/code&gt;
+&lt;span class=&quot;Badge Badge--warning&quot; style=&quot;font-size: 0.65rem;&quot;&gt;Beta&lt;/span&gt;
+&lt;/div&gt;
+&lt;label class=&quot;Switch Switch--small&quot;&gt;&lt;input type=&quot;checkbox&quot; checked&gt;&lt;span class=&quot;Switch-slider&quot;&gt;&lt;/span&gt;&lt;/label&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: flex; align-items: center; justify-content: space-between; padding: var(--space-2) var(--space-3); background: var(--bg-s); border-radius: var(--radius-sm);&quot;&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-2);&quot;&gt;
+&lt;code style=&quot;font-size: 0.8rem;&quot;&gt;AI_ASSIST&lt;/code&gt;
+&lt;span class=&quot;Badge Badge--info&quot; style=&quot;font-size: 0.65rem;&quot;&gt;New&lt;/span&gt;
+&lt;/div&gt;
+&lt;label class=&quot;Switch Switch--small&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt;&lt;span class=&quot;Switch-slider&quot;&gt;&lt;/span&gt;&lt;/label&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: flex; align-items: center; justify-content: space-between; padding: var(--space-2) var(--space-3); background: var(--bg-s); border-radius: var(--radius-sm);&quot;&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-2);&quot;&gt;
+&lt;code style=&quot;font-size: 0.8rem;&quot;&gt;DARK_MODE&lt;/code&gt;
+&lt;/div&gt;
+&lt;label class=&quot;Switch Switch--small&quot;&gt;&lt;input type=&quot;checkbox&quot; checked&gt;&lt;span class=&quot;Switch-slider&quot;&gt;&lt;/span&gt;&lt;/label&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="notification-preferences">Notification Preferences</h3>
+
+<div class="Preview" id="preview-wqdz77c3a">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="width: 340px;">
+        <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+                <tr style="border-bottom: 1px solid var(--bd);">
+                    <th style="text-align: left; padding: var(--space-2) 0; font-size: 0.8rem; color: var(--fg-3);">Channel</th>
+                    <th style="text-align: center; padding: var(--space-2); font-size: 0.8rem; color: var(--fg-3);">Email</th>
+                    <th style="text-align: center; padding: var(--space-2); font-size: 0.8rem; color: var(--fg-3);">Push</th>
+                    <th style="text-align: center; padding: var(--space-2); font-size: 0.8rem; color: var(--fg-3);">SMS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid var(--bd);">
+                    <td style="padding: var(--space-2) 0; font-size: 0.875rem;">Comments</td>
+                    <td style="text-align: center;"><label class="Switch Switch--small"><input type="checkbox" checked><span class="Switch-slider"></span></label></td>
+                    <td style="text-align: center;"><label class="Switch Switch--small"><input type="checkbox" checked><span class="Switch-slider"></span></label></td>
+                    <td style="text-align: center;"><label class="Switch Switch--small"><input type="checkbox"><span class="Switch-slider"></span></label></td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--bd);">
+                    <td style="padding: var(--space-2) 0; font-size: 0.875rem;">Mentions</td>
+                    <td style="text-align: center;"><label class="Switch Switch--small"><input type="checkbox" checked><span class="Switch-slider"></span></label></td>
+                    <td style="text-align: center;"><label class="Switch Switch--small"><input type="checkbox" checked><span class="Switch-slider"></span></label></td>
+                    <td style="text-align: center;"><label class="Switch Switch--small"><input type="checkbox" checked><span class="Switch-slider"></span></label></td>
+                </tr>
+                <tr>
+                    <td style="padding: var(--space-2) 0; font-size: 0.875rem;">Updates</td>
+                    <td style="text-align: center;"><label class="Switch Switch--small"><input type="checkbox" checked><span class="Switch-slider"></span></label></td>
+                    <td style="text-align: center;"><label class="Switch Switch--small"><input type="checkbox"><span class="Switch-slider"></span></label></td>
+                    <td style="text-align: center;"><label class="Switch Switch--small"><input type="checkbox"><span class="Switch-slider"></span></label></td>
+                </tr>
+            </tbody>
+        </table>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;width: 340px;&quot;&gt;
+&lt;table style=&quot;width: 100%; border-collapse: collapse;&quot;&gt;
+&lt;thead&gt;
+&lt;tr style=&quot;border-bottom: 1px solid var(--bd);&quot;&gt;
+&lt;th style=&quot;text-align: left; padding: var(--space-2) 0; font-size: 0.8rem; color: var(--fg-3);&quot;&gt;Channel&lt;/th&gt;
+&lt;th style=&quot;text-align: center; padding: var(--space-2); font-size: 0.8rem; color: var(--fg-3);&quot;&gt;Email&lt;/th&gt;
+&lt;th style=&quot;text-align: center; padding: var(--space-2); font-size: 0.8rem; color: var(--fg-3);&quot;&gt;Push&lt;/th&gt;
+&lt;th style=&quot;text-align: center; padding: var(--space-2); font-size: 0.8rem; color: var(--fg-3);&quot;&gt;SMS&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr style=&quot;border-bottom: 1px solid var(--bd);&quot;&gt;
+&lt;td style=&quot;padding: var(--space-2) 0; font-size: 0.875rem;&quot;&gt;Comments&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&lt;label class=&quot;Switch Switch--small&quot;&gt;&lt;input type=&quot;checkbox&quot; checked&gt;&lt;span class=&quot;Switch-slider&quot;&gt;&lt;/span&gt;&lt;/label&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&lt;label class=&quot;Switch Switch--small&quot;&gt;&lt;input type=&quot;checkbox&quot; checked&gt;&lt;span class=&quot;Switch-slider&quot;&gt;&lt;/span&gt;&lt;/label&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&lt;label class=&quot;Switch Switch--small&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt;&lt;span class=&quot;Switch-slider&quot;&gt;&lt;/span&gt;&lt;/label&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;border-bottom: 1px solid var(--bd);&quot;&gt;
+&lt;td style=&quot;padding: var(--space-2) 0; font-size: 0.875rem;&quot;&gt;Mentions&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&lt;label class=&quot;Switch Switch--small&quot;&gt;&lt;input type=&quot;checkbox&quot; checked&gt;&lt;span class=&quot;Switch-slider&quot;&gt;&lt;/span&gt;&lt;/label&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&lt;label class=&quot;Switch Switch--small&quot;&gt;&lt;input type=&quot;checkbox&quot; checked&gt;&lt;span class=&quot;Switch-slider&quot;&gt;&lt;/span&gt;&lt;/label&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&lt;label class=&quot;Switch Switch--small&quot;&gt;&lt;input type=&quot;checkbox&quot; checked&gt;&lt;span class=&quot;Switch-slider&quot;&gt;&lt;/span&gt;&lt;/label&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: var(--space-2) 0; font-size: 0.875rem;&quot;&gt;Updates&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&lt;label class=&quot;Switch Switch--small&quot;&gt;&lt;input type=&quot;checkbox&quot; checked&gt;&lt;span class=&quot;Switch-slider&quot;&gt;&lt;/span&gt;&lt;/label&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&lt;label class=&quot;Switch Switch--small&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt;&lt;span class=&quot;Switch-slider&quot;&gt;&lt;/span&gt;&lt;/label&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&lt;label class=&quot;Switch Switch--small&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt;&lt;span class=&quot;Switch-slider&quot;&gt;&lt;/span&gt;&lt;/label&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="customization">Customization</h2>
+<p>Override switch styles using CSS custom properties:</p>
+<pre><code class="language-css">/* Custom accent color */
+.Switch input:checked + .Switch-slider {
+  background: oklch(55% 0.2 150);
+  border-color: oklch(55% 0.2 150);
+}
+
+/* Larger thumb */
+.Switch--xl .Switch-slider::before {
+  width: 24px;
+  height: 24px;
+}
+
+/* Square switch (no rounded corners) */
+.Switch--square .Switch-slider {
+  border-radius: var(--radius-sm);
+}
+.Switch--square .Switch-slider::before {
+  border-radius: var(--radius-xs);
+}
+
+/* Custom track colors */
+.Switch--danger input:checked + .Switch-slider {
+  background: oklch(55% 0.2 25);
+  border-color: oklch(55% 0.2 25);
+}
+</code></pre>
+<hr>
+<h2 id="api-reference">API Reference</h2>
+<h3 id="base-classes">Base Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Switch</code></td>
+<td class="ApiTable-desc">Base switch wrapper (label element, required)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Switch-slider</code></td>
+<td class="ApiTable-desc">Visual slider/track element</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Switch-label</code></td>
+<td class="ApiTable-desc">Container for switch with text label</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Switch-label-text</code></td>
+<td class="ApiTable-desc">Text wrapper (supports title + description)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="size-classes">Size Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Switch--small</code></td>
+<td class="ApiTable-desc">Smaller switch size</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Switch--large</code></td>
+<td class="ApiTable-desc">Larger switch size</td>
+</tr>
+</tbody>
+</table>
+<h3 id="attributes">Attributes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Attribute</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">checked</code></td>
+<td class="ApiTable-desc">Checked/active state (on)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">disabled</code></td>
+<td class="ApiTable-desc">Non-interactive state</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="css-reference">CSS Reference</h2>
+<pre><code class="language-css">/* Base switch */
+.Switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.Switch input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Track */
+.Switch-slider {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  background: var(--bg-s);
+  border: 1px solid var(--bd-s);
+  border-radius: 999px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+/* Thumb */
+.Switch-slider::before {
+  content: &quot;&quot;;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.2s;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Checked state */
+.Switch input:checked + .Switch-slider {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.Switch input:checked + .Switch-slider::before {
+  transform: translateX(20px);
+}
+
+/* Focus ring */
+.Switch input:focus-visible + .Switch-slider {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Disabled */
+.Switch input:disabled + .Switch-slider {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Small */
+.Switch--small .Switch-slider {
+  width: 34px;
+  height: 18px;
+}
+.Switch--small .Switch-slider::before {
+  width: 12px;
+  height: 12px;
+}
+.Switch--small input:checked + .Switch-slider::before {
+  transform: translateX(16px);
+}
+
+/* Large */
+.Switch--large .Switch-slider {
+  width: 54px;
+  height: 30px;
+}
+.Switch--large .Switch-slider::before {
+  width: 24px;
+  height: 24px;
+}
+.Switch--large input:checked + .Switch-slider::before {
+  transform: translateX(24px);
+}
+
+/* Label layout */
+.Switch-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  cursor: pointer;
+}
+
+.Switch-label-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+</code></pre>
+<hr>
+<h2 id="accessibility">Accessibility</h2>
+<ul>
+<li>Switches use native <code>&lt;input type=&quot;checkbox&quot;&gt;</code> for full accessibility</li>
+<li>Labels are clickable to toggle the switch</li>
+<li>Keyboard accessible (Space to toggle when focused)</li>
+<li>Screen readers announce the checked state</li>
+<li>Use <code>aria-describedby</code> to associate helper text with the switch</li>
+</ul>
+<h3 id="keyboard-support">Keyboard Support</h3>
+<div class="Table-container"><table class="Table">
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Space</td>
+<td>Toggle the switch on/off</td>
+</tr>
+<tr>
+<td>Tab</td>
+<td>Move focus to/from the switch</td>
+</tr>
+</tbody>
+</table></div>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="do">Do</h3>
+<ul>
+<li>✓ <strong>Use for binary settings</strong> — On/off, enabled/disabled</li>
+<li>✓ <strong>Show immediate effect</strong> — Changes apply instantly, no submit button</li>
+<li>✓ <strong>Provide clear labels</strong> — Describe what the switch controls</li>
+<li>✓ <strong>Keep labels positive</strong> — “Enable notifications” not “Disable notifications”</li>
+<li>✓ <strong>Group related switches</strong> — Settings panels with logical grouping</li>
+<li>✓ <strong>Use appropriate sizes</strong> — Small for dense UIs, large for touch targets</li>
+</ul>
+<h3 id="don-t">Don’t</h3>
+<ul>
+<li>✗ <strong>Use for forms requiring submission</strong> — Use checkboxes instead</li>
+<li>✗ <strong>Hide the current state</strong> — Always make it clear what on/off means</li>
+<li>✗ <strong>Use for multiple selections</strong> — Switches are single binary choices</li>
+<li>✗ <strong>Use without labels</strong> — Every switch needs a text label</li>
+<li>✗ <strong>Mix sizes in a group</strong> — Keep sizes consistent within a section</li>
+<li>✗ <strong>Use negative labels</strong> — Avoid “Disable dark mode” phrasing</li>
+</ul>
+
+                </article>
+
+                <footer class="page-footer">
+                    <p>Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Progress | Carbon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/bold/style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Floating Pill Nav (Mobile: bottom, Desktop: top) -->
+        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation">
+            <a href="../index.html" class="fnav-btn" data-section="home" aria-label="Home">
+                <i class="ph-bold ph-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="../tokens/colors.html" class="fnav-btn" data-section="tokens" aria-label="Tokens">
+                <i class="ph-bold ph-palette"></i>
+                <span>Tokens</span>
+            </a>
+            <a href="../components/buttons.html" class="fnav-btn" data-section="components" aria-label="Components">
+                <i class="ph-bold ph-stack"></i>
+                <span>Components</span>
+            </a>
+            <a href="../patterns/layouts.html" class="fnav-btn" data-section="patterns" aria-label="Patterns">
+                <i class="ph-bold ph-grid-four"></i>
+                <span>Patterns</span>
+            </a>
+            <div class="fnav-sep"></div>
+            <button class="fnav-btn" id="search-toggle" aria-label="Search">
+                <i class="ph ph-magnifying-glass"></i>
+            </button>
+            <button class="fnav-btn" id="theme-btn" aria-label="Toggle theme">
+                <i class="ph ph-moon"></i>
+            </button>
+        </nav>
+
+        <!-- Glassmorphism Top Bar (Desktop only) -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <a href="../index.html" class="logo">
+                    <i class="ph ph-intersect"></i>
+                    <span>Carbon</span>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <div class="search-container" id="search-container">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search components..." aria-label="Search" autocomplete="off">
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <main class="main-content">
+                <header class="page-header">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="../index.html">Carbon</a> <span class="sep">/</span> <span>Components</span> <span class="sep">/</span> <span>Progress</span>
+                    </nav>
+                    <h1><em>Progress</em></h1>
+                </header>
+                
+                <article class="prose">
+                    <h1>Progress</h1>
+<p>Progress indicators show the status of ongoing processes.</p>
+<h2 id="progress-bar">Progress Bar</h2>
+
+<div class="Preview" id="preview-berclrpa4">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-4); width: 100%;">
+        <div class="Progress">
+            <div class="Progress-bar" style="width: 25%;"></div>
+        </div>
+        <div class="Progress">
+            <div class="Progress-bar" style="width: 50%;"></div>
+        </div>
+        <div class="Progress">
+            <div class="Progress-bar" style="width: 75%;"></div>
+        </div>
+        <div class="Progress">
+            <div class="Progress-bar" style="width: 100%;"></div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-4); width: 100%;&quot;&gt;
+&lt;div class=&quot;Progress&quot;&gt;
+&lt;div class=&quot;Progress-bar&quot; style=&quot;width: 25%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Progress&quot;&gt;
+&lt;div class=&quot;Progress-bar&quot; style=&quot;width: 50%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Progress&quot;&gt;
+&lt;div class=&quot;Progress-bar&quot; style=&quot;width: 75%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Progress&quot;&gt;
+&lt;div class=&quot;Progress-bar&quot; style=&quot;width: 100%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Progress&quot;&gt;
+    &lt;div class=&quot;Progress-bar&quot; style=&quot;width: 50%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="with-label">With Label</h2>
+
+<div class="Preview" id="preview-w39ju9oyl">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="width: 100%;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-2); font-size: 0.9rem;">
+            <span>Uploading...</span>
+            <span>67%</span>
+        </div>
+        <div class="Progress">
+            <div class="Progress-bar" style="width: 67%;"></div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;width: 100%;&quot;&gt;
+&lt;div style=&quot;display: flex; justify-content: space-between; margin-bottom: var(--space-2); font-size: 0.9rem;&quot;&gt;
+&lt;span&gt;Uploading...&lt;/span&gt;
+&lt;span&gt;67%&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Progress&quot;&gt;
+&lt;div class=&quot;Progress-bar&quot; style=&quot;width: 67%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div style=&quot;display: flex; justify-content: space-between;&quot;&gt;
+    &lt;span&gt;Uploading...&lt;/span&gt;
+    &lt;span&gt;67%&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Progress&quot;&gt;
+    &lt;div class=&quot;Progress-bar&quot; style=&quot;width: 67%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="sizes">Sizes</h2>
+
+<div class="Preview" id="preview-1neckncf9">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-4); width: 100%;">
+        <div>
+            <small style="color: var(--fg-3);">Small</small>
+            <div class="Progress Progress--small" style="margin-top: var(--space-1);">
+                <div class="Progress-bar" style="width: 60%;"></div>
+            </div>
+        </div>
+        <div>
+            <small style="color: var(--fg-3);">Default</small>
+            <div class="Progress" style="margin-top: var(--space-1);">
+                <div class="Progress-bar" style="width: 60%;"></div>
+            </div>
+        </div>
+        <div>
+            <small style="color: var(--fg-3);">Large</small>
+            <div class="Progress Progress--large" style="margin-top: var(--space-1);">
+                <div class="Progress-bar" style="width: 60%;"></div>
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-4); width: 100%;&quot;&gt;
+&lt;div&gt;
+&lt;small style=&quot;color: var(--fg-3);&quot;&gt;Small&lt;/small&gt;
+&lt;div class=&quot;Progress Progress--small&quot; style=&quot;margin-top: var(--space-1);&quot;&gt;
+&lt;div class=&quot;Progress-bar&quot; style=&quot;width: 60%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;small style=&quot;color: var(--fg-3);&quot;&gt;Default&lt;/small&gt;
+&lt;div class=&quot;Progress&quot; style=&quot;margin-top: var(--space-1);&quot;&gt;
+&lt;div class=&quot;Progress-bar&quot; style=&quot;width: 60%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;small style=&quot;color: var(--fg-3);&quot;&gt;Large&lt;/small&gt;
+&lt;div class=&quot;Progress Progress--large&quot; style=&quot;margin-top: var(--space-1);&quot;&gt;
+&lt;div class=&quot;Progress-bar&quot; style=&quot;width: 60%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Progress Progress--small&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;Progress&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;Progress Progress--large&quot;&gt;...&lt;/div&gt;
+</code></pre>
+<h2 id="variants">Variants</h2>
+
+<div class="Preview" id="preview-zmkc6cho7">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-3); width: 100%;">
+        <div class="Progress">
+            <div class="Progress-bar" style="width: 60%;"></div>
+        </div>
+        <div class="Progress">
+            <div class="Progress-bar Progress-bar--success" style="width: 100%;"></div>
+        </div>
+        <div class="Progress">
+            <div class="Progress-bar Progress-bar--warning" style="width: 45%;"></div>
+        </div>
+        <div class="Progress">
+            <div class="Progress-bar Progress-bar--error" style="width: 30%;"></div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-3); width: 100%;&quot;&gt;
+&lt;div class=&quot;Progress&quot;&gt;
+&lt;div class=&quot;Progress-bar&quot; style=&quot;width: 60%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Progress&quot;&gt;
+&lt;div class=&quot;Progress-bar Progress-bar--success&quot; style=&quot;width: 100%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Progress&quot;&gt;
+&lt;div class=&quot;Progress-bar Progress-bar--warning&quot; style=&quot;width: 45%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Progress&quot;&gt;
+&lt;div class=&quot;Progress-bar Progress-bar--error&quot; style=&quot;width: 30%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Progress-bar Progress-bar--success&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Progress-bar Progress-bar--warning&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Progress-bar Progress-bar--error&quot;&gt;&lt;/div&gt;
+</code></pre>
+<h2 id="indeterminate">Indeterminate</h2>
+<p>For unknown duration processes.</p>
+
+<div class="Preview" id="preview-lwu6r3wf3">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Progress">
+        <div class="Progress-bar Progress-bar--indeterminate"></div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Progress&quot;&gt;
+&lt;div class=&quot;Progress-bar Progress-bar--indeterminate&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Progress&quot;&gt;
+    &lt;div class=&quot;Progress-bar Progress-bar--indeterminate&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="spinner">Spinner</h2>
+<p>For inline loading states.</p>
+
+<div class="Preview" id="preview-gltn2glh6">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; gap: var(--space-6); align-items: center;">
+        <div class="Spinner Spinner--small"></div>
+        <div class="Spinner"></div>
+        <div class="Spinner Spinner--large"></div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; gap: var(--space-6); align-items: center;&quot;&gt;
+&lt;div class=&quot;Spinner Spinner--small&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Spinner&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Spinner Spinner--large&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Spinner Spinner--small&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Spinner&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Spinner Spinner--large&quot;&gt;&lt;/div&gt;
+</code></pre>
+<h2 id="button-with-spinner">Button with Spinner</h2>
+
+<div class="Preview" id="preview-8p296axcs">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; gap: var(--space-4);">
+        <button class="Button Button--primary" disabled>
+            <div class="Spinner Spinner--small Spinner--light"></div>
+            <span>Saving...</span>
+        </button>
+        <button class="Button" disabled>
+            <div class="Spinner Spinner--small"></div>
+            <span>Loading...</span>
+        </button>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; gap: var(--space-4);&quot;&gt;
+&lt;button class=&quot;Button Button--primary&quot; disabled&gt;
+&lt;div class=&quot;Spinner Spinner--small Spinner--light&quot;&gt;&lt;/div&gt;
+&lt;span&gt;Saving...&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Button&quot; disabled&gt;
+&lt;div class=&quot;Spinner Spinner--small&quot;&gt;&lt;/div&gt;
+&lt;span&gt;Loading...&lt;/span&gt;
+&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;button class=&quot;Button Button--primary&quot; disabled&gt;
+    &lt;div class=&quot;Spinner Spinner--small Spinner--light&quot;&gt;&lt;/div&gt;
+    &lt;span&gt;Saving...&lt;/span&gt;
+&lt;/button&gt;
+</code></pre>
+<h2 id="full-page-loader">Full Page Loader</h2>
+
+<div class="Preview" id="preview-05iuxkzp5">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="height: 200px; display: flex; align-items: center; justify-content: center; background: var(--bg-s); border-radius: var(--r-m);">
+        <div style="text-align: center;">
+            <div class="Spinner Spinner--large"></div>
+            <p style="margin-top: var(--space-3); color: var(--fg-3); font-size: 0.9rem;">Loading...</p>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;height: 200px; display: flex; align-items: center; justify-content: center; background: var(--bg-s); border-radius: var(--r-m);&quot;&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;div class=&quot;Spinner Spinner--large&quot;&gt;&lt;/div&gt;
+&lt;p style=&quot;margin-top: var(--space-3); color: var(--fg-3); font-size: 0.9rem;&quot;&gt;Loading...&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;page-loader&quot;&gt;
+    &lt;div class=&quot;Spinner Spinner--large&quot;&gt;&lt;/div&gt;
+    &lt;p&gt;Loading...&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="common-patterns">Common Patterns</h2>
+<h3 id="file-upload-progress">File Upload Progress</h3>
+
+<div class="Preview" id="preview-tpnxcgsi8">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="width: 100%; max-width: 400px; padding: var(--space-4); border: 1px solid var(--bd); border-radius: var(--r-m);">
+        <div style="display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-3);">
+            <i class="ph ph-file-arrow-up" style="font-size: 1.5rem; color: var(--accent);"></i>
+            <div style="flex: 1;">
+                <div style="font-weight: 500; font-size: 0.9rem;">report-2024.pdf</div>
+                <div style="font-size: 0.8rem; color: var(--fg-3);">2.4 MB of 5.1 MB</div>
+            </div>
+            <span style="font-weight: 600; font-size: 0.9rem;">47%</span>
+        </div>
+        <div class="Progress">
+            <div class="Progress-bar" style="width: 47%;"></div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;width: 100%; max-width: 400px; padding: var(--space-4); border: 1px solid var(--bd); border-radius: var(--r-m);&quot;&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-3);&quot;&gt;
+&lt;i class=&quot;ph ph-file-arrow-up&quot; style=&quot;font-size: 1.5rem; color: var(--accent);&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;flex: 1;&quot;&gt;
+&lt;div style=&quot;font-weight: 500; font-size: 0.9rem;&quot;&gt;report-2024.pdf&lt;/div&gt;
+&lt;div style=&quot;font-size: 0.8rem; color: var(--fg-3);&quot;&gt;2.4 MB of 5.1 MB&lt;/div&gt;
+&lt;/div&gt;
+&lt;span style=&quot;font-weight: 600; font-size: 0.9rem;&quot;&gt;47%&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Progress&quot;&gt;
+&lt;div class=&quot;Progress-bar&quot; style=&quot;width: 47%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="multi-step-form-progress">Multi-step Form Progress</h3>
+
+<div class="Preview" id="preview-shs5u1f29">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="width: 100%; max-width: 500px;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-2); font-size: 0.85rem;">
+            <span style="font-weight: 500;">Step 2 of 4</span>
+            <span style="color: var(--fg-3);">50% complete</span>
+        </div>
+        <div class="Progress Progress--small">
+            <div class="Progress-bar" style="width: 50%;"></div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;width: 100%; max-width: 500px;&quot;&gt;
+&lt;div style=&quot;display: flex; justify-content: space-between; margin-bottom: var(--space-2); font-size: 0.85rem;&quot;&gt;
+&lt;span style=&quot;font-weight: 500;&quot;&gt;Step 2 of 4&lt;/span&gt;
+&lt;span style=&quot;color: var(--fg-3);&quot;&gt;50% complete&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Progress Progress--small&quot;&gt;
+&lt;div class=&quot;Progress-bar&quot; style=&quot;width: 50%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="inline-loading-button">Inline Loading Button</h3>
+
+<div class="Preview" id="preview-n1o8wi3by">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; gap: var(--space-3); flex-wrap: wrap;">
+        <button class="Button Button--primary" disabled>
+            <div class="Spinner Spinner--small Spinner--light"></div>
+            <span>Saving...</span>
+        </button>
+        <button class="Button" disabled>
+            <div class="Spinner Spinner--small"></div>
+            <span>Loading...</span>
+        </button>
+        <button class="Button Button--primary">
+            <span>Save Changes</span>
+        </button>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; gap: var(--space-3); flex-wrap: wrap;&quot;&gt;
+&lt;button class=&quot;Button Button--primary&quot; disabled&gt;
+&lt;div class=&quot;Spinner Spinner--small Spinner--light&quot;&gt;&lt;/div&gt;
+&lt;span&gt;Saving...&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Button&quot; disabled&gt;
+&lt;div class=&quot;Spinner Spinner--small&quot;&gt;&lt;/div&gt;
+&lt;span&gt;Loading...&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Button Button--primary&quot;&gt;
+&lt;span&gt;Save Changes&lt;/span&gt;
+&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="dashboard-metric">Dashboard Metric</h3>
+
+<div class="Preview" id="preview-frx3ypkkz">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="width: 100%; max-width: 300px; padding: var(--space-4); background: var(--bg-s); border-radius: var(--r-m);">
+        <div style="font-weight: 600; margin-bottom: var(--space-1);">Storage</div>
+        <div style="font-size: 0.85rem; color: var(--fg-3); margin-bottom: var(--space-3);">7.2 GB of 10 GB used</div>
+        <div class="Progress">
+            <div class="Progress-bar Progress-bar--warning" style="width: 72%;"></div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;width: 100%; max-width: 300px; padding: var(--space-4); background: var(--bg-s); border-radius: var(--r-m);&quot;&gt;
+&lt;div style=&quot;font-weight: 600; margin-bottom: var(--space-1);&quot;&gt;Storage&lt;/div&gt;
+&lt;div style=&quot;font-size: 0.85rem; color: var(--fg-3); margin-bottom: var(--space-3);&quot;&gt;7.2 GB of 10 GB used&lt;/div&gt;
+&lt;div class=&quot;Progress&quot;&gt;
+&lt;div class=&quot;Progress-bar Progress-bar--warning&quot; style=&quot;width: 72%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="full-page-loading">Full Page Loading</h3>
+
+<div class="Preview" id="preview-w3axdtald">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="height: 180px; display: flex; align-items: center; justify-content: center; background: var(--bg-s); border-radius: var(--r-m);">
+        <div style="text-align: center;">
+            <div class="Spinner Spinner--large"></div>
+            <p style="margin-top: var(--space-3); color: var(--fg-3); font-size: 0.9rem;">Loading your dashboard...</p>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;height: 180px; display: flex; align-items: center; justify-content: center; background: var(--bg-s); border-radius: var(--r-m);&quot;&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;div class=&quot;Spinner Spinner--large&quot;&gt;&lt;/div&gt;
+&lt;p style=&quot;margin-top: var(--space-3); color: var(--fg-3); font-size: 0.9rem;&quot;&gt;Loading your dashboard...&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="customization">Customization</h2>
+<p>Override progress styling with CSS custom properties:</p>
+<pre><code class="language-css">/* Custom progress bar color */
+.Progress {
+  --progress-bg: oklch(90% 0 0);
+  --progress-fill: oklch(55% 0.2 260);
+}
+
+.Progress {
+  background: var(--progress-bg);
+}
+
+.Progress-bar {
+  background: var(--progress-fill);
+}
+</code></pre>
+<h3 id="striped-progress">Striped Progress</h3>
+<pre><code class="language-css">.Progress-bar--striped {
+  background-image: linear-gradient(
+    45deg,
+    rgba(255,255,255,.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255,255,255,.15) 50%,
+    rgba(255,255,255,.15) 75%,
+    transparent 75%
+  );
+  background-size: 1rem 1rem;
+}
+</code></pre>
+<h3 id="custom-spinner-color">Custom Spinner Color</h3>
+<pre><code class="language-css">.Spinner--branded {
+  border-color: oklch(80% 0.05 260);
+  border-top-color: oklch(55% 0.2 260);
+}
+</code></pre>
+<h3 id="theming">Theming</h3>
+<pre><code class="language-css">[data-theme=&quot;dark&quot;] .Progress {
+  background: oklch(25% 0 0);
+}
+
+[data-theme=&quot;dark&quot;] .Progress-bar {
+  background: oklch(65% 0.18 260);
+}
+</code></pre>
+<hr>
+<h2 id="api-reference">API Reference</h2>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">.Progress</code></td><td class="ApiTable-desc">Base progress bar container</td></tr>
+<tr><td><code class="ApiTable-prop">.Progress--small</code></td><td class="ApiTable-desc">Smaller height track (4px)</td></tr>
+<tr><td><code class="ApiTable-prop">.Progress--large</code></td><td class="ApiTable-desc">Larger height track (12px)</td></tr>
+<tr><td><code class="ApiTable-prop">.Progress-bar</code></td><td class="ApiTable-desc">Fill indicator element</td></tr>
+<tr><td><code class="ApiTable-prop">.Progress-bar--success</code></td><td class="ApiTable-desc">Green completion variant</td></tr>
+<tr><td><code class="ApiTable-prop">.Progress-bar--warning</code></td><td class="ApiTable-desc">Yellow warning variant</td></tr>
+<tr><td><code class="ApiTable-prop">.Progress-bar--error</code></td><td class="ApiTable-desc">Red error variant</td></tr>
+<tr><td><code class="ApiTable-prop">.Progress-bar--indeterminate</code></td><td class="ApiTable-desc">Animated unknown-duration progress</td></tr>
+<tr><td><code class="ApiTable-prop">.Spinner</code></td><td class="ApiTable-desc">Base spinner element</td></tr>
+<tr><td><code class="ApiTable-prop">.Spinner--small</code></td><td class="ApiTable-desc">Small spinner (16px)</td></tr>
+<tr><td><code class="ApiTable-prop">.Spinner--large</code></td><td class="ApiTable-desc">Large spinner (32px)</td></tr>
+<tr><td><code class="ApiTable-prop">.Spinner--light</code></td><td class="ApiTable-desc">Light color for dark backgrounds</td></tr>
+</tbody>
+</table>
+<h3 id="attributes">Attributes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Attribute</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">role="progressbar"</code></td><td class="ApiTable-desc">Identifies the element as a progress bar</td></tr>
+<tr><td><code class="ApiTable-prop">aria-valuenow</code></td><td class="ApiTable-desc">Current progress value</td></tr>
+<tr><td><code class="ApiTable-prop">aria-valuemin</code></td><td class="ApiTable-desc">Minimum value (typically 0)</td></tr>
+<tr><td><code class="ApiTable-prop">aria-valuemax</code></td><td class="ApiTable-desc">Maximum value (typically 100)</td></tr>
+<tr><td><code class="ApiTable-prop">aria-label</code></td><td class="ApiTable-desc">Describes what the progress represents</td></tr>
+</tbody>
+</table>
+<hr>
+<h2 id="css-reference">CSS Reference</h2>
+<pre><code class="language-css">/* Base progress bar */
+.Progress {
+  width: 100%;
+  height: 8px;
+  background: var(--bd);
+  border-radius: var(--r-full);
+  overflow: hidden;
+}
+
+.Progress-bar {
+  height: 100%;
+  background: var(--accent);
+  border-radius: var(--r-full);
+  transition: width 0.3s ease;
+}
+
+/* Sizes */
+.Progress--small { height: 4px; }
+.Progress--large { height: 12px; }
+
+/* Variants */
+.Progress-bar--success { background: oklch(55% 0.15 150); }
+.Progress-bar--warning { background: oklch(70% 0.15 80); }
+.Progress-bar--error { background: oklch(55% 0.2 25); }
+
+/* Indeterminate */
+.Progress-bar--indeterminate {
+  width: 30% !important;
+  animation: progress-indeterminate 1.5s ease-in-out infinite;
+}
+
+@keyframes progress-indeterminate {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(400%); }
+}
+
+/* Spinner */
+.Spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--bd);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spinner-rotate 0.8s linear infinite;
+}
+
+.Spinner--small { width: 16px; height: 16px; border-width: 2px; }
+.Spinner--large { width: 32px; height: 32px; border-width: 4px; }
+.Spinner--light { border-color: rgba(255,255,255,0.3); border-top-color: white; }
+
+@keyframes spinner-rotate {
+  to { transform: rotate(360deg); }
+}
+</code></pre>
+<hr>
+<h2 id="accessibility">Accessibility</h2>
+<h3 id="screen-reader-guidance">Screen Reader Guidance</h3>
+<p>Use <code>role=&quot;progressbar&quot;</code> with <code>aria-valuenow</code>, <code>aria-valuemin</code>, and <code>aria-valuemax</code> for determinate progress. For indeterminate progress, omit <code>aria-valuenow</code>. Always provide <code>aria-label</code> or visible text to describe what is loading.</p>
+<pre><code class="language-html">&lt;div class=&quot;Progress&quot; role=&quot;progressbar&quot;
+     aria-valuenow=&quot;67&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;
+     aria-label=&quot;Upload progress&quot;&gt;
+    &lt;div class=&quot;Progress-bar&quot; style=&quot;width: 67%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="spinner-accessibility">Spinner Accessibility</h3>
+<p>Spinners should have <code>aria-label=&quot;Loading&quot;</code> or be associated with visible text. Use <code>aria-busy=&quot;true&quot;</code> on the container being loaded.</p>
+<pre><code class="language-html">&lt;div aria-busy=&quot;true&quot;&gt;
+    &lt;div class=&quot;Spinner&quot; role=&quot;status&quot; aria-label=&quot;Loading&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="aria-attributes">ARIA Attributes</h3>
+<ul>
+<li><code>role=&quot;progressbar&quot;</code> on the progress container</li>
+<li><code>aria-valuenow</code> / <code>aria-valuemin</code> / <code>aria-valuemax</code> for determinate bars</li>
+<li><code>aria-label</code> to describe the process</li>
+<li><code>aria-busy=&quot;true&quot;</code> on content regions while loading</li>
+<li>Announce completion to screen readers via <code>aria-live</code> region</li>
+</ul>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="do">Do</h3>
+<ul>
+<li>✓ <strong>Show percentage when known</strong> — Users want to estimate remaining time</li>
+<li>✓ <strong>Use indeterminate for unknown durations</strong> — Communicates activity without misleading</li>
+<li>✓ <strong>Provide descriptive labels</strong> — “Uploading report.pdf…” beats a bare progress bar</li>
+<li>✓ <strong>Use color variants for status</strong> — Green for success, red for errors, yellow for warnings</li>
+<li>✓ <strong>Keep users informed</strong> — Describe what’s happening during long operations</li>
+<li>✓ <strong>Use spinners for inline loading</strong> — Small spinners inside buttons for quick actions</li>
+</ul>
+<h3 id="don-t">Don’t</h3>
+<ul>
+<li>✗ <strong>Show fake progress</strong> — Don’t animate progress that doesn’t reflect reality</li>
+<li>✗ <strong>Leave users without feedback</strong> — Any action over 1 second needs an indicator</li>
+<li>✗ <strong>Use spinners for content loading</strong> — Skeleton screens are better for layout-preserving loads</li>
+<li>✗ <strong>Block interaction silently</strong> — Always show why the UI is unresponsive</li>
+<li>✗ <strong>Omit ARIA attributes</strong> — Screen reader users need progress information too</li>
+<li>✗ <strong>Stack multiple progress bars</strong> — One clear indicator is better than several competing ones</li>
+</ul>
+
+                </article>
+
+                <footer class="page-footer">
+                    <p>Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

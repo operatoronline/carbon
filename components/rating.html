@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Rating | Carbon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/bold/style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Floating Pill Nav (Mobile: bottom, Desktop: top) -->
+        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation">
+            <a href="../index.html" class="fnav-btn" data-section="home" aria-label="Home">
+                <i class="ph-bold ph-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="../tokens/colors.html" class="fnav-btn" data-section="tokens" aria-label="Tokens">
+                <i class="ph-bold ph-palette"></i>
+                <span>Tokens</span>
+            </a>
+            <a href="../components/buttons.html" class="fnav-btn" data-section="components" aria-label="Components">
+                <i class="ph-bold ph-stack"></i>
+                <span>Components</span>
+            </a>
+            <a href="../patterns/layouts.html" class="fnav-btn" data-section="patterns" aria-label="Patterns">
+                <i class="ph-bold ph-grid-four"></i>
+                <span>Patterns</span>
+            </a>
+            <div class="fnav-sep"></div>
+            <button class="fnav-btn" id="search-toggle" aria-label="Search">
+                <i class="ph ph-magnifying-glass"></i>
+            </button>
+            <button class="fnav-btn" id="theme-btn" aria-label="Toggle theme">
+                <i class="ph ph-moon"></i>
+            </button>
+        </nav>
+
+        <!-- Glassmorphism Top Bar (Desktop only) -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <a href="../index.html" class="logo">
+                    <i class="ph ph-intersect"></i>
+                    <span>Carbon</span>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <div class="search-container" id="search-container">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search components..." aria-label="Search" autocomplete="off">
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <main class="main-content">
+                <header class="page-header">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="../index.html">Carbon</a> <span class="sep">/</span> <span>Components</span> <span class="sep">/</span> <span>Rating</span>
+                    </nav>
+                    <h1><em>Rating</em></h1>
+                </header>
+                
+                <article class="prose">
+                    <h1>Rating</h1>
+<p>Ratings allow users to view or provide feedback using a visual scale, typically stars.</p>
+<h2 id="basic-rating">Basic Rating</h2>
+<p>A simple star rating display.</p>
+
+<div class="Preview" id="preview-za3fjog5c">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Rating">
+    <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+    <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+    <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+    <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+    <i class="ph ph-star Rating-star"></i>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Rating&quot;&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-star Rating-star&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Rating&quot;&gt;
+  &lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;ph ph-star Rating-star&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="interactive-rating">Interactive Rating</h2>
+<p>Allow users to select a rating.</p>
+
+<div class="Preview" id="preview-w9cfv0qqs">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Rating Rating--interactive" role="radiogroup" aria-label="Rating">
+    <button class="Rating-star" role="radio" aria-checked="false" aria-label="1 star">
+      <i class="ph ph-star"></i>
+    </button>
+    <button class="Rating-star" role="radio" aria-checked="false" aria-label="2 stars">
+      <i class="ph ph-star"></i>
+    </button>
+    <button class="Rating-star" role="radio" aria-checked="false" aria-label="3 stars">
+      <i class="ph ph-star"></i>
+    </button>
+    <button class="Rating-star" role="radio" aria-checked="false" aria-label="4 stars">
+      <i class="ph ph-star"></i>
+    </button>
+    <button class="Rating-star" role="radio" aria-checked="false" aria-label="5 stars">
+      <i class="ph ph-star"></i>
+    </button>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Rating Rating--interactive&quot; role=&quot;radiogroup&quot; aria-label=&quot;Rating&quot;&gt;
+&lt;button class=&quot;Rating-star&quot; role=&quot;radio&quot; aria-checked=&quot;false&quot; aria-label=&quot;1 star&quot;&gt;
+&lt;i class=&quot;ph ph-star&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Rating-star&quot; role=&quot;radio&quot; aria-checked=&quot;false&quot; aria-label=&quot;2 stars&quot;&gt;
+&lt;i class=&quot;ph ph-star&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Rating-star&quot; role=&quot;radio&quot; aria-checked=&quot;false&quot; aria-label=&quot;3 stars&quot;&gt;
+&lt;i class=&quot;ph ph-star&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Rating-star&quot; role=&quot;radio&quot; aria-checked=&quot;false&quot; aria-label=&quot;4 stars&quot;&gt;
+&lt;i class=&quot;ph ph-star&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Rating-star&quot; role=&quot;radio&quot; aria-checked=&quot;false&quot; aria-label=&quot;5 stars&quot;&gt;
+&lt;i class=&quot;ph ph-star&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Rating Rating--interactive&quot; role=&quot;radiogroup&quot; aria-label=&quot;Rating&quot;&gt;
+  &lt;button class=&quot;Rating-star&quot; role=&quot;radio&quot; aria-checked=&quot;false&quot;&gt;
+    &lt;i class=&quot;ph ph-star&quot;&gt;&lt;/i&gt;
+  &lt;/button&gt;
+  &lt;!-- Repeat for each star --&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="sizes">Sizes</h2>
+<p>Ratings come in different sizes.</p>
+
+<div class="Preview" id="preview-j22pkoj82">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-4);">
+    <div>
+      <span class="text-sm text-secondary">Small</span>
+      <div class="Rating Rating--sm">
+        <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+        <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+        <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+        <i class="ph ph-star Rating-star"></i>
+        <i class="ph ph-star Rating-star"></i>
+      </div>
+    </div>
+    <div>
+      <span class="text-sm text-secondary">Default</span>
+      <div class="Rating">
+        <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+        <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+        <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+        <i class="ph ph-star Rating-star"></i>
+        <i class="ph ph-star Rating-star"></i>
+      </div>
+    </div>
+    <div>
+      <span class="text-sm text-secondary">Large</span>
+      <div class="Rating Rating--lg">
+        <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+        <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+        <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+        <i class="ph ph-star Rating-star"></i>
+        <i class="ph ph-star Rating-star"></i>
+      </div>
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-4);&quot;&gt;
+&lt;div&gt;
+&lt;span class=&quot;text-sm text-secondary&quot;&gt;Small&lt;/span&gt;
+&lt;div class=&quot;Rating Rating--sm&quot;&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-star Rating-star&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-star Rating-star&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;span class=&quot;text-sm text-secondary&quot;&gt;Default&lt;/span&gt;
+&lt;div class=&quot;Rating&quot;&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-star Rating-star&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-star Rating-star&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;span class=&quot;text-sm text-secondary&quot;&gt;Large&lt;/span&gt;
+&lt;div class=&quot;Rating Rating--lg&quot;&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-star Rating-star&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-star Rating-star&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Rating Rating--sm&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;Rating&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;Rating Rating--lg&quot;&gt;...&lt;/div&gt;
+</code></pre>
+<h2 id="with-count">With Count</h2>
+<p>Show the number of ratings alongside the stars.</p>
+
+<div class="Preview" id="preview-y059jbxbb">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-3);">
+    <div class="Rating-display">
+      <div class="Rating">
+        <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+        <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+        <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+        <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+        <i class="ph-fill ph-star Rating-star Rating-star--half"></i>
+      </div>
+      <span class="Rating-value">4.5</span>
+      <span class="Rating-count">(128 reviews)</span>
+    </div>
+    <div class="Rating-display">
+      <div class="Rating Rating--sm">
+        <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+        <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+        <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+        <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+        <i class="ph ph-star Rating-star"></i>
+      </div>
+      <span class="Rating-value Rating-value--sm">4.0</span>
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-3);&quot;&gt;
+&lt;div class=&quot;Rating-display&quot;&gt;
+&lt;div class=&quot;Rating&quot;&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--half&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;span class=&quot;Rating-value&quot;&gt;4.5&lt;/span&gt;
+&lt;span class=&quot;Rating-count&quot;&gt;(128 reviews)&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Rating-display&quot;&gt;
+&lt;div class=&quot;Rating Rating--sm&quot;&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-star Rating-star&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;span class=&quot;Rating-value Rating-value--sm&quot;&gt;4.0&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Rating-display&quot;&gt;
+  &lt;div class=&quot;Rating&quot;&gt;
+    &lt;!-- Stars --&gt;
+  &lt;/div&gt;
+  &lt;span class=&quot;Rating-value&quot;&gt;4.5&lt;/span&gt;
+  &lt;span class=&quot;Rating-count&quot;&gt;(128 reviews)&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="half-stars">Half Stars</h2>
+<p>Support for half-star precision.</p>
+
+<div class="Preview" id="preview-6ths7jb1g">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-3);">
+    <div class="Rating">
+      <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+      <i class="ph-fill ph-star-half Rating-star Rating-star--half"></i>
+      <i class="ph ph-star Rating-star"></i>
+      <i class="ph ph-star Rating-star"></i>
+      <i class="ph ph-star Rating-star"></i>
+    </div>
+    <div class="Rating">
+      <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+      <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+      <i class="ph-fill ph-star-half Rating-star Rating-star--half"></i>
+      <i class="ph ph-star Rating-star"></i>
+      <i class="ph ph-star Rating-star"></i>
+    </div>
+    <div class="Rating">
+      <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+      <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+      <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+      <i class="ph-fill ph-star-half Rating-star Rating-star--half"></i>
+      <i class="ph ph-star Rating-star"></i>
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-3);&quot;&gt;
+&lt;div class=&quot;Rating&quot;&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star-half Rating-star Rating-star--half&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-star Rating-star&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-star Rating-star&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-star Rating-star&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Rating&quot;&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star-half Rating-star Rating-star--half&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-star Rating-star&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-star Rating-star&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Rating&quot;&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star-half Rating-star Rating-star--half&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-star Rating-star&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;i class=&quot;ph-fill ph-star-half Rating-star Rating-star--half&quot;&gt;&lt;/i&gt;
+</code></pre>
+<h2 id="different-icons">Different Icons</h2>
+<p>Use hearts, thumbs, or custom icons.</p>
+
+<div class="Preview" id="preview-9iln3ak2f">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-4);">
+    <div>
+      <span class="text-sm text-secondary">Hearts</span>
+      <div class="Rating Rating--hearts">
+        <i class="ph-fill ph-heart Rating-star Rating-star--filled"></i>
+        <i class="ph-fill ph-heart Rating-star Rating-star--filled"></i>
+        <i class="ph-fill ph-heart Rating-star Rating-star--filled"></i>
+        <i class="ph ph-heart Rating-star"></i>
+        <i class="ph ph-heart Rating-star"></i>
+      </div>
+    </div>
+    <div>
+      <span class="text-sm text-secondary">Thumbs</span>
+      <div class="Rating Rating--thumbs">
+        <button class="Rating-thumb Rating-thumb--up">
+          <i class="ph ph-thumbs-up"></i>
+          <span>42</span>
+        </button>
+        <button class="Rating-thumb Rating-thumb--down">
+          <i class="ph ph-thumbs-down"></i>
+          <span>3</span>
+        </button>
+      </div>
+    </div>
+    <div>
+      <span class="text-sm text-secondary">Emoji</span>
+      <div class="Rating Rating--emoji">
+        <button class="Rating-emoji">😞</button>
+        <button class="Rating-emoji">😐</button>
+        <button class="Rating-emoji Rating-emoji--selected">🙂</button>
+        <button class="Rating-emoji">😊</button>
+        <button class="Rating-emoji">🤩</button>
+      </div>
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-4);&quot;&gt;
+&lt;div&gt;
+&lt;span class=&quot;text-sm text-secondary&quot;&gt;Hearts&lt;/span&gt;
+&lt;div class=&quot;Rating Rating--hearts&quot;&gt;
+&lt;i class=&quot;ph-fill ph-heart Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-heart Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-heart Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-heart Rating-star&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-heart Rating-star&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;span class=&quot;text-sm text-secondary&quot;&gt;Thumbs&lt;/span&gt;
+&lt;div class=&quot;Rating Rating--thumbs&quot;&gt;
+&lt;button class=&quot;Rating-thumb Rating-thumb--up&quot;&gt;
+&lt;i class=&quot;ph ph-thumbs-up&quot;&gt;&lt;/i&gt;
+&lt;span&gt;42&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Rating-thumb Rating-thumb--down&quot;&gt;
+&lt;i class=&quot;ph ph-thumbs-down&quot;&gt;&lt;/i&gt;
+&lt;span&gt;3&lt;/span&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;span class=&quot;text-sm text-secondary&quot;&gt;Emoji&lt;/span&gt;
+&lt;div class=&quot;Rating Rating--emoji&quot;&gt;
+&lt;button class=&quot;Rating-emoji&quot;&gt;😞&lt;/button&gt;
+&lt;button class=&quot;Rating-emoji&quot;&gt;😐&lt;/button&gt;
+&lt;button class=&quot;Rating-emoji Rating-emoji--selected&quot;&gt;🙂&lt;/button&gt;
+&lt;button class=&quot;Rating-emoji&quot;&gt;😊&lt;/button&gt;
+&lt;button class=&quot;Rating-emoji&quot;&gt;🤩&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;!-- Hearts --&gt;
+&lt;div class=&quot;Rating Rating--hearts&quot;&gt;
+  &lt;i class=&quot;ph-fill ph-heart Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+  ...
+&lt;/div&gt;
+
+&lt;!-- Thumbs --&gt;
+&lt;div class=&quot;Rating Rating--thumbs&quot;&gt;
+  &lt;button class=&quot;Rating-thumb Rating-thumb--up&quot;&gt;
+    &lt;i class=&quot;ph ph-thumbs-up&quot;&gt;&lt;/i&gt;
+    &lt;span&gt;42&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;Rating-thumb Rating-thumb--down&quot;&gt;
+    &lt;i class=&quot;ph ph-thumbs-down&quot;&gt;&lt;/i&gt;
+    &lt;span&gt;3&lt;/span&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Emoji --&gt;
+&lt;div class=&quot;Rating Rating--emoji&quot;&gt;
+  &lt;button class=&quot;Rating-emoji&quot;&gt;😞&lt;/button&gt;
+  &lt;button class=&quot;Rating-emoji Rating-emoji--selected&quot;&gt;🙂&lt;/button&gt;
+  ...
+&lt;/div&gt;
+</code></pre>
+<h2 id="rating-breakdown">Rating Breakdown</h2>
+<p>Show distribution of ratings.</p>
+
+<div class="Preview" id="preview-31x4cprqf">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Rating-breakdown">
+    <div class="Rating-breakdownRow">
+      <span class="Rating-breakdownLabel">5 stars</span>
+      <div class="Rating-breakdownBar">
+        <div class="Rating-breakdownFill" style="width: 65%;"></div>
+      </div>
+      <span class="Rating-breakdownCount">65%</span>
+    </div>
+    <div class="Rating-breakdownRow">
+      <span class="Rating-breakdownLabel">4 stars</span>
+      <div class="Rating-breakdownBar">
+        <div class="Rating-breakdownFill" style="width: 20%;"></div>
+      </div>
+      <span class="Rating-breakdownCount">20%</span>
+    </div>
+    <div class="Rating-breakdownRow">
+      <span class="Rating-breakdownLabel">3 stars</span>
+      <div class="Rating-breakdownBar">
+        <div class="Rating-breakdownFill" style="width: 10%;"></div>
+      </div>
+      <span class="Rating-breakdownCount">10%</span>
+    </div>
+    <div class="Rating-breakdownRow">
+      <span class="Rating-breakdownLabel">2 stars</span>
+      <div class="Rating-breakdownBar">
+        <div class="Rating-breakdownFill" style="width: 3%;"></div>
+      </div>
+      <span class="Rating-breakdownCount">3%</span>
+    </div>
+    <div class="Rating-breakdownRow">
+      <span class="Rating-breakdownLabel">1 star</span>
+      <div class="Rating-breakdownBar">
+        <div class="Rating-breakdownFill" style="width: 2%;"></div>
+      </div>
+      <span class="Rating-breakdownCount">2%</span>
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Rating-breakdown&quot;&gt;
+&lt;div class=&quot;Rating-breakdownRow&quot;&gt;
+&lt;span class=&quot;Rating-breakdownLabel&quot;&gt;5 stars&lt;/span&gt;
+&lt;div class=&quot;Rating-breakdownBar&quot;&gt;
+&lt;div class=&quot;Rating-breakdownFill&quot; style=&quot;width: 65%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;span class=&quot;Rating-breakdownCount&quot;&gt;65%&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Rating-breakdownRow&quot;&gt;
+&lt;span class=&quot;Rating-breakdownLabel&quot;&gt;4 stars&lt;/span&gt;
+&lt;div class=&quot;Rating-breakdownBar&quot;&gt;
+&lt;div class=&quot;Rating-breakdownFill&quot; style=&quot;width: 20%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;span class=&quot;Rating-breakdownCount&quot;&gt;20%&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Rating-breakdownRow&quot;&gt;
+&lt;span class=&quot;Rating-breakdownLabel&quot;&gt;3 stars&lt;/span&gt;
+&lt;div class=&quot;Rating-breakdownBar&quot;&gt;
+&lt;div class=&quot;Rating-breakdownFill&quot; style=&quot;width: 10%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;span class=&quot;Rating-breakdownCount&quot;&gt;10%&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Rating-breakdownRow&quot;&gt;
+&lt;span class=&quot;Rating-breakdownLabel&quot;&gt;2 stars&lt;/span&gt;
+&lt;div class=&quot;Rating-breakdownBar&quot;&gt;
+&lt;div class=&quot;Rating-breakdownFill&quot; style=&quot;width: 3%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;span class=&quot;Rating-breakdownCount&quot;&gt;3%&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Rating-breakdownRow&quot;&gt;
+&lt;span class=&quot;Rating-breakdownLabel&quot;&gt;1 star&lt;/span&gt;
+&lt;div class=&quot;Rating-breakdownBar&quot;&gt;
+&lt;div class=&quot;Rating-breakdownFill&quot; style=&quot;width: 2%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;span class=&quot;Rating-breakdownCount&quot;&gt;2%&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Rating-breakdown&quot;&gt;
+  &lt;div class=&quot;Rating-breakdownRow&quot;&gt;
+    &lt;span class=&quot;Rating-breakdownLabel&quot;&gt;5 stars&lt;/span&gt;
+    &lt;div class=&quot;Rating-breakdownBar&quot;&gt;
+      &lt;div class=&quot;Rating-breakdownFill&quot; style=&quot;width: 65%;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span class=&quot;Rating-breakdownCount&quot;&gt;65%&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;!-- Repeat for each rating level --&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="readonly">Readonly</h2>
+<p>Display-only rating (no interaction).</p>
+
+<div class="Preview" id="preview-rddh9kqay">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Rating Rating--readonly">
+    <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+    <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+    <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+    <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+    <i class="ph ph-star Rating-star"></i>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Rating Rating--readonly&quot;&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-star Rating-star&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Rating Rating--readonly&quot;&gt;
+  &lt;!-- Stars --&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="disabled">Disabled</h2>
+<p>Dimmed, non-interactive state.</p>
+
+<div class="Preview" id="preview-bbocf1k80">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Rating Rating--disabled">
+    <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+    <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+    <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+    <i class="ph ph-star Rating-star"></i>
+    <i class="ph ph-star Rating-star"></i>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Rating Rating--disabled&quot;&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-star Rating-star&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-star Rating-star&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Rating Rating--disabled&quot;&gt;
+  &lt;!-- Stars --&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="with-label">With Label</h2>
+<p>Include a text label.</p>
+
+<div class="Preview" id="preview-gdoujot3k">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-4);">
+    <div>
+      <label class="Rating-label">How would you rate this product?</label>
+      <div class="Rating Rating--interactive" role="radiogroup">
+        <button class="Rating-star" role="radio"><i class="ph ph-star"></i></button>
+        <button class="Rating-star" role="radio"><i class="ph ph-star"></i></button>
+        <button class="Rating-star" role="radio"><i class="ph ph-star"></i></button>
+        <button class="Rating-star" role="radio"><i class="ph ph-star"></i></button>
+        <button class="Rating-star" role="radio"><i class="ph ph-star"></i></button>
+      </div>
+    </div>
+    <div>
+      <label class="Rating-label">
+        Your rating
+        <span class="Rating-required">*</span>
+      </label>
+      <div class="Rating Rating--interactive" role="radiogroup">
+        <button class="Rating-star Rating-star--filled" role="radio"><i class="ph-fill ph-star"></i></button>
+        <button class="Rating-star Rating-star--filled" role="radio"><i class="ph-fill ph-star"></i></button>
+        <button class="Rating-star Rating-star--filled" role="radio"><i class="ph-fill ph-star"></i></button>
+        <button class="Rating-star Rating-star--filled" role="radio"><i class="ph-fill ph-star"></i></button>
+        <button class="Rating-star" role="radio"><i class="ph ph-star"></i></button>
+      </div>
+      <span class="Rating-helper">4 out of 5 stars</span>
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-4);&quot;&gt;
+&lt;div&gt;
+&lt;label class=&quot;Rating-label&quot;&gt;How would you rate this product?&lt;/label&gt;
+&lt;div class=&quot;Rating Rating--interactive&quot; role=&quot;radiogroup&quot;&gt;
+&lt;button class=&quot;Rating-star&quot; role=&quot;radio&quot;&gt;&lt;i class=&quot;ph ph-star&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Rating-star&quot; role=&quot;radio&quot;&gt;&lt;i class=&quot;ph ph-star&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Rating-star&quot; role=&quot;radio&quot;&gt;&lt;i class=&quot;ph ph-star&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Rating-star&quot; role=&quot;radio&quot;&gt;&lt;i class=&quot;ph ph-star&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Rating-star&quot; role=&quot;radio&quot;&gt;&lt;i class=&quot;ph ph-star&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;label class=&quot;Rating-label&quot;&gt;
+Your rating
+&lt;span class=&quot;Rating-required&quot;&gt;*&lt;/span&gt;
+&lt;/label&gt;
+&lt;div class=&quot;Rating Rating--interactive&quot; role=&quot;radiogroup&quot;&gt;
+&lt;button class=&quot;Rating-star Rating-star--filled&quot; role=&quot;radio&quot;&gt;&lt;i class=&quot;ph-fill ph-star&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Rating-star Rating-star--filled&quot; role=&quot;radio&quot;&gt;&lt;i class=&quot;ph-fill ph-star&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Rating-star Rating-star--filled&quot; role=&quot;radio&quot;&gt;&lt;i class=&quot;ph-fill ph-star&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Rating-star Rating-star--filled&quot; role=&quot;radio&quot;&gt;&lt;i class=&quot;ph-fill ph-star&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Rating-star&quot; role=&quot;radio&quot;&gt;&lt;i class=&quot;ph ph-star&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;span class=&quot;Rating-helper&quot;&gt;4 out of 5 stars&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;label class=&quot;Rating-label&quot;&gt;
+  Your rating
+  &lt;span class=&quot;Rating-required&quot;&gt;*&lt;/span&gt;
+&lt;/label&gt;
+&lt;div class=&quot;Rating Rating--interactive&quot; role=&quot;radiogroup&quot;&gt;
+  &lt;!-- Stars --&gt;
+&lt;/div&gt;
+&lt;span class=&quot;Rating-helper&quot;&gt;4 out of 5 stars&lt;/span&gt;
+</code></pre>
+<h2 id="javascript">JavaScript</h2>
+<pre><code class="language-js">// Interactive rating
+document.querySelectorAll('.Rating--interactive').forEach(rating =&gt; {
+  const stars = rating.querySelectorAll('.Rating-star');
+  let currentRating = 0;
+
+  stars.forEach((star, index) =&gt; {
+    star.addEventListener('click', () =&gt; {
+      currentRating = index + 1;
+      updateStars();
+    });
+
+    star.addEventListener('mouseenter', () =&gt; {
+      highlightStars(index + 1);
+    });
+  });
+
+  rating.addEventListener('mouseleave', () =&gt; {
+    highlightStars(currentRating);
+  });
+
+  function updateStars() {
+    stars.forEach((star, i) =&gt; {
+      const icon = star.querySelector('i');
+      star.setAttribute('aria-checked', i &lt; currentRating);
+      star.classList.toggle('Rating-star--filled', i &lt; currentRating);
+      icon.className = i &lt; currentRating ? 'ph-fill ph-star' : 'ph ph-star';
+    });
+  }
+
+  function highlightStars(count) {
+    stars.forEach((star, i) =&gt; {
+      const icon = star.querySelector('i');
+      icon.className = i &lt; count ? 'ph-fill ph-star' : 'ph ph-star';
+    });
+  }
+});
+</code></pre>
+<hr>
+<h2 id="common-patterns">Common Patterns</h2>
+<h3 id="product-review-card">Product Review Card</h3>
+
+<div class="Preview" id="preview-w75rq6uwx">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="max-width: 400px; padding: var(--space-4); border: 1px solid var(--bd); border-radius: var(--r-m);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-3);">
+            <div style="font-weight: 600; font-size: 1.1rem;">Customer Reviews</div>
+            <div class="Rating-display">
+                <div class="Rating Rating--sm">
+                    <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+                    <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+                    <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+                    <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+                    <i class="ph ph-star Rating-star"></i>
+                </div>
+                <span class="Rating-value Rating-value--sm">4.2</span>
+            </div>
+        </div>
+        <div style="font-size: 0.85rem; color: var(--fg-3);">Based on 1,247 reviews</div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;max-width: 400px; padding: var(--space-4); border: 1px solid var(--bd); border-radius: var(--r-m);&quot;&gt;
+&lt;div style=&quot;display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-3);&quot;&gt;
+&lt;div style=&quot;font-weight: 600; font-size: 1.1rem;&quot;&gt;Customer Reviews&lt;/div&gt;
+&lt;div class=&quot;Rating-display&quot;&gt;
+&lt;div class=&quot;Rating Rating--sm&quot;&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-star Rating-star&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;span class=&quot;Rating-value Rating-value--sm&quot;&gt;4.2&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;font-size: 0.85rem; color: var(--fg-3);&quot;&gt;Based on 1,247 reviews&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="feedback-form">Feedback Form</h3>
+
+<div class="Preview" id="preview-79sy7phe3">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="max-width: 400px; padding: var(--space-4); background: var(--bg-s); border-radius: var(--r-m);">
+        <div style="font-weight: 600; margin-bottom: var(--space-3);">How was your experience?</div>
+        <div class="Rating Rating--interactive" role="radiogroup" aria-label="Experience rating" style="margin-bottom: var(--space-3);">
+            <button class="Rating-star Rating-star--filled" role="radio" aria-checked="true"><i class="ph-fill ph-star"></i></button>
+            <button class="Rating-star Rating-star--filled" role="radio" aria-checked="true"><i class="ph-fill ph-star"></i></button>
+            <button class="Rating-star Rating-star--filled" role="radio" aria-checked="true"><i class="ph-fill ph-star"></i></button>
+            <button class="Rating-star Rating-star--filled" role="radio" aria-checked="true"><i class="ph-fill ph-star"></i></button>
+            <button class="Rating-star" role="radio" aria-checked="false"><i class="ph ph-star"></i></button>
+        </div>
+        <span class="Rating-helper">4 out of 5 stars</span>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;max-width: 400px; padding: var(--space-4); background: var(--bg-s); border-radius: var(--r-m);&quot;&gt;
+&lt;div style=&quot;font-weight: 600; margin-bottom: var(--space-3);&quot;&gt;How was your experience?&lt;/div&gt;
+&lt;div class=&quot;Rating Rating--interactive&quot; role=&quot;radiogroup&quot; aria-label=&quot;Experience rating&quot; style=&quot;margin-bottom: var(--space-3);&quot;&gt;
+&lt;button class=&quot;Rating-star Rating-star--filled&quot; role=&quot;radio&quot; aria-checked=&quot;true&quot;&gt;&lt;i class=&quot;ph-fill ph-star&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Rating-star Rating-star--filled&quot; role=&quot;radio&quot; aria-checked=&quot;true&quot;&gt;&lt;i class=&quot;ph-fill ph-star&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Rating-star Rating-star--filled&quot; role=&quot;radio&quot; aria-checked=&quot;true&quot;&gt;&lt;i class=&quot;ph-fill ph-star&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Rating-star Rating-star--filled&quot; role=&quot;radio&quot; aria-checked=&quot;true&quot;&gt;&lt;i class=&quot;ph-fill ph-star&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Rating-star&quot; role=&quot;radio&quot; aria-checked=&quot;false&quot;&gt;&lt;i class=&quot;ph ph-star&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;span class=&quot;Rating-helper&quot;&gt;4 out of 5 stars&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="compact-list-item-rating">Compact List Item Rating</h3>
+
+<div class="Preview" id="preview-r5sd2su19">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-3); max-width: 350px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: var(--space-2) 0; border-bottom: 1px solid var(--bd);">
+            <span style="font-weight: 500;">Wireless Headphones</span>
+            <div class="Rating Rating--sm">
+                <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+                <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+                <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+                <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+                <i class="ph-fill ph-star-half Rating-star Rating-star--half"></i>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: var(--space-2) 0; border-bottom: 1px solid var(--bd);">
+            <span style="font-weight: 500;">USB-C Hub</span>
+            <div class="Rating Rating--sm">
+                <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+                <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+                <i class="ph-fill ph-star Rating-star Rating-star--filled"></i>
+                <i class="ph ph-star Rating-star"></i>
+                <i class="ph ph-star Rating-star"></i>
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-3); max-width: 350px;&quot;&gt;
+&lt;div style=&quot;display: flex; justify-content: space-between; align-items: center; padding: var(--space-2) 0; border-bottom: 1px solid var(--bd);&quot;&gt;
+&lt;span style=&quot;font-weight: 500;&quot;&gt;Wireless Headphones&lt;/span&gt;
+&lt;div class=&quot;Rating Rating--sm&quot;&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star-half Rating-star Rating-star--half&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: flex; justify-content: space-between; align-items: center; padding: var(--space-2) 0; border-bottom: 1px solid var(--bd);&quot;&gt;
+&lt;span style=&quot;font-weight: 500;&quot;&gt;USB-C Hub&lt;/span&gt;
+&lt;div class=&quot;Rating Rating--sm&quot;&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star Rating-star Rating-star--filled&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-star Rating-star&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-star Rating-star&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="quick-satisfaction-survey">Quick Satisfaction Survey</h3>
+
+<div class="Preview" id="preview-hngbrsuer">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="text-align: center; padding: var(--space-4); background: var(--bg-s); border-radius: var(--r-m); max-width: 320px;">
+        <div style="font-weight: 500; margin-bottom: var(--space-3);">How helpful was this article?</div>
+        <div class="Rating Rating--emoji">
+            <button class="Rating-emoji">😞</button>
+            <button class="Rating-emoji">😐</button>
+            <button class="Rating-emoji Rating-emoji--selected">🙂</button>
+            <button class="Rating-emoji">😊</button>
+            <button class="Rating-emoji">🤩</button>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;text-align: center; padding: var(--space-4); background: var(--bg-s); border-radius: var(--r-m); max-width: 320px;&quot;&gt;
+&lt;div style=&quot;font-weight: 500; margin-bottom: var(--space-3);&quot;&gt;How helpful was this article?&lt;/div&gt;
+&lt;div class=&quot;Rating Rating--emoji&quot;&gt;
+&lt;button class=&quot;Rating-emoji&quot;&gt;😞&lt;/button&gt;
+&lt;button class=&quot;Rating-emoji&quot;&gt;😐&lt;/button&gt;
+&lt;button class=&quot;Rating-emoji Rating-emoji--selected&quot;&gt;🙂&lt;/button&gt;
+&lt;button class=&quot;Rating-emoji&quot;&gt;😊&lt;/button&gt;
+&lt;button class=&quot;Rating-emoji&quot;&gt;🤩&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="customization">Customization</h2>
+<p>Override rating styling with CSS custom properties:</p>
+<pre><code class="language-css">/* Custom star colors */
+.Rating {
+  --rating-color-empty: oklch(80% 0.02 0);
+  --rating-color-filled: oklch(65% 0.2 45);
+}
+
+.Rating-star { color: var(--rating-color-empty); }
+.Rating-star--filled { color: var(--rating-color-filled); }
+</code></pre>
+<h3 id="custom-icon-size">Custom Icon Size</h3>
+<pre><code class="language-css">.Rating--xl .Rating-star {
+  font-size: 2.5rem;
+}
+</code></pre>
+<h3 id="brand-colors">Brand Colors</h3>
+<pre><code class="language-css">/* Use brand blue instead of gold */
+.Rating--brand .Rating-star--filled {
+  color: oklch(55% 0.2 260);
+}
+
+.Rating--brand .Rating--hearts .Rating-star--filled {
+  color: oklch(55% 0.25 350);
+}
+</code></pre>
+<h3 id="theming">Theming</h3>
+<pre><code class="language-css">[data-theme=&quot;dark&quot;] .Rating-star {
+  color: oklch(40% 0.02 0);
+}
+
+[data-theme=&quot;dark&quot;] .Rating-star--filled {
+  color: oklch(80% 0.15 80);
+}
+</code></pre>
+<hr>
+<h2 id="api-reference">API Reference</h2>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">.Rating</code></td><td class="ApiTable-desc">Base rating container</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating--sm</code></td><td class="ApiTable-desc">Small size variant</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating--lg</code></td><td class="ApiTable-desc">Large size variant</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating--interactive</code></td><td class="ApiTable-desc">Enables click/hover interactions</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating--readonly</code></td><td class="ApiTable-desc">Display-only (no pointer events)</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating--disabled</code></td><td class="ApiTable-desc">Dimmed, non-interactive state</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating--hearts</code></td><td class="ApiTable-desc">Heart icon variant (red)</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating--thumbs</code></td><td class="ApiTable-desc">Thumbs up/down variant</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating--emoji</code></td><td class="ApiTable-desc">Emoji-based rating variant</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-star</code></td><td class="ApiTable-desc">Individual star element</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-star--filled</code></td><td class="ApiTable-desc">Filled/active star</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-star--half</code></td><td class="ApiTable-desc">Half-filled star</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-display</code></td><td class="ApiTable-desc">Container for rating + value + count</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-value</code></td><td class="ApiTable-desc">Numeric rating value</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-value--sm</code></td><td class="ApiTable-desc">Small value text</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-count</code></td><td class="ApiTable-desc">Review count text</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-thumb</code></td><td class="ApiTable-desc">Thumbs button container</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-thumb--up</code></td><td class="ApiTable-desc">Thumbs up button</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-thumb--down</code></td><td class="ApiTable-desc">Thumbs down button</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-emoji</code></td><td class="ApiTable-desc">Emoji button</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-emoji--selected</code></td><td class="ApiTable-desc">Selected emoji</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-breakdown</code></td><td class="ApiTable-desc">Rating distribution container</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-breakdownRow</code></td><td class="ApiTable-desc">Single breakdown row</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-breakdownBar</code></td><td class="ApiTable-desc">Progress bar track</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-breakdownFill</code></td><td class="ApiTable-desc">Progress bar fill</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-label</code></td><td class="ApiTable-desc">Label for rating input</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-required</code></td><td class="ApiTable-desc">Required field indicator</td></tr>
+<tr><td><code class="ApiTable-prop">.Rating-helper</code></td><td class="ApiTable-desc">Helper text below rating</td></tr>
+</tbody>
+</table>
+<hr>
+<h2 id="css-reference">CSS Reference</h2>
+<pre><code class="language-css">/* Base rating container */
+.Rating {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+/* Star element */
+.Rating-star {
+  color: var(--bd-s);
+  font-size: 1.25rem;
+  transition: color 0.15s, transform 0.15s;
+}
+
+.Rating-star--filled,
+.Rating-star--half {
+  color: oklch(75% 0.15 80);
+}
+
+/* Sizes */
+.Rating--sm .Rating-star { font-size: 1rem; }
+.Rating--lg .Rating-star { font-size: 1.75rem; }
+
+/* Interactive */
+.Rating--interactive .Rating-star {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: var(--space-1);
+}
+.Rating--interactive .Rating-star:hover {
+  transform: scale(1.1);
+}
+.Rating--interactive .Rating-star:hover,
+.Rating--interactive .Rating-star:hover ~ .Rating-star {
+  color: oklch(75% 0.15 80);
+}
+
+/* Display with value */
+.Rating-display {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.Rating-value {
+  font-weight: 600;
+  font-size: var(--text-lg);
+}
+.Rating-value--sm { font-size: var(--text-sm); }
+.Rating-count {
+  color: var(--fg-3);
+  font-size: var(--text-sm);
+}
+
+/* Hearts variant */
+.Rating--hearts .Rating-star--filled {
+  color: oklch(60% 0.25 15);
+}
+
+/* Thumbs variant */
+.Rating--thumbs {
+  gap: var(--space-3);
+}
+.Rating-thumb {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--bd);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.Rating-thumb:hover {
+  background: var(--bg-s);
+}
+.Rating-thumb--up:hover { color: oklch(55% 0.15 150); }
+.Rating-thumb--down:hover { color: oklch(55% 0.2 25); }
+
+/* Emoji variant */
+.Rating--emoji {
+  gap: var(--space-2);
+}
+.Rating-emoji {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all 0.15s;
+  padding: var(--space-1);
+}
+.Rating-emoji:hover,
+.Rating-emoji--selected {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Breakdown */
+.Rating-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  max-width: 300px;
+}
+.Rating-breakdownRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.Rating-breakdownLabel {
+  font-size: var(--text-sm);
+  color: var(--fg-3);
+  min-width: 60px;
+}
+.Rating-breakdownBar {
+  flex: 1;
+  height: 8px;
+  background: var(--bg-s);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+.Rating-breakdownFill {
+  height: 100%;
+  background: oklch(75% 0.15 80);
+  border-radius: var(--radius-full);
+}
+.Rating-breakdownCount {
+  font-size: var(--text-sm);
+  color: var(--fg-3);
+  min-width: 40px;
+  text-align: right;
+}
+
+/* States */
+.Rating--readonly { pointer-events: none; }
+.Rating--disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* Labels */
+.Rating-label {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  margin-bottom: var(--space-1);
+}
+.Rating-required { color: oklch(55% 0.2 25); }
+.Rating-helper {
+  display: block;
+  font-size: var(--text-xs);
+  color: var(--fg-3);
+  margin-top: var(--space-1);
+}
+</code></pre>
+<hr>
+<h2 id="accessibility">Accessibility</h2>
+<h3 id="keyboard-support">Keyboard Support</h3>
+<div class="Table-container"><table class="Table">
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Arrow Left</code> / <code>Arrow Right</code></td>
+<td>Navigate between stars</td>
+</tr>
+<tr>
+<td><code>Enter</code> / <code>Space</code></td>
+<td>Select the focused star</td>
+</tr>
+<tr>
+<td><code>Tab</code></td>
+<td>Move focus to/from the rating group</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="screen-reader-guidance">Screen Reader Guidance</h3>
+<p>Use <code>role=&quot;radiogroup&quot;</code> on the interactive container and <code>role=&quot;radio&quot;</code> with <code>aria-checked</code> on each star button. Provide <code>aria-label</code> with the star count on each button (e.g., “3 stars”).</p>
+<pre><code class="language-html">&lt;div class=&quot;Rating Rating--interactive&quot; role=&quot;radiogroup&quot; aria-label=&quot;Product rating&quot;&gt;
+    &lt;button class=&quot;Rating-star&quot; role=&quot;radio&quot; aria-checked=&quot;false&quot; aria-label=&quot;1 star&quot;&gt;
+        &lt;i class=&quot;ph ph-star&quot;&gt;&lt;/i&gt;
+    &lt;/button&gt;
+    &lt;!-- ... --&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="aria-attributes">ARIA Attributes</h3>
+<ul>
+<li><code>role=&quot;radiogroup&quot;</code> on the rating container</li>
+<li><code>role=&quot;radio&quot;</code> and <code>aria-checked</code> on each star button</li>
+<li><code>aria-label</code> with star count on each button</li>
+<li><code>aria-label</code> on the container to describe the rating purpose</li>
+<li>For read-only displays, use <code>aria-label</code> to convey the value (e.g., “Rated 4 out of 5 stars”)</li>
+<li>Ensure visible focus indicators on interactive elements</li>
+<li>Provide sufficient color contrast for filled vs empty states</li>
+</ul>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="do">Do</h3>
+<ul>
+<li>✓ <strong>Use labels with interactive ratings</strong> — Tell users what they’re rating</li>
+<li>✓ <strong>Show the numeric value</strong> — “4.5 out of 5” alongside stars adds clarity</li>
+<li>✓ <strong>Support keyboard navigation</strong> — Arrow keys should move between stars</li>
+<li>✓ <strong>Provide helper text</strong> — Confirm the selection (“You rated 4 stars”)</li>
+<li>✓ <strong>Use half-stars for display</strong> — More precise representation of averages</li>
+<li>✓ <strong>Show review count</strong> — “(128 reviews)” adds social proof and credibility</li>
+</ul>
+<h3 id="don-t">Don’t</h3>
+<ul>
+<li>✗ <strong>Use ratings without context</strong> — Stars alone don’t communicate what’s being rated</li>
+<li>✗ <strong>Allow accidental submissions</strong> — Require confirmation for important ratings</li>
+<li>✗ <strong>Mix rating scales</strong> — Don’t use 5-star and 10-point in the same interface</li>
+<li>✗ <strong>Hide empty stars</strong> — Always show the full scale for reference</li>
+<li>✗ <strong>Use color alone to convey state</strong> — Filled vs empty needs shape or icon change too</li>
+<li>✗ <strong>Make stars too small on touch devices</strong> — Minimum 44px tap targets for mobile</li>
+</ul>
+
+                </article>
+
+                <footer class="page-footer">
+                    <p>Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

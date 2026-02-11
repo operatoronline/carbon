@@ -1,0 +1,1704 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Lists | Carbon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/bold/style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Floating Pill Nav (Mobile: bottom, Desktop: top) -->
+        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation">
+            <a href="../index.html" class="fnav-btn" data-section="home" aria-label="Home">
+                <i class="ph-bold ph-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="../tokens/colors.html" class="fnav-btn" data-section="tokens" aria-label="Tokens">
+                <i class="ph-bold ph-palette"></i>
+                <span>Tokens</span>
+            </a>
+            <a href="../components/buttons.html" class="fnav-btn" data-section="components" aria-label="Components">
+                <i class="ph-bold ph-stack"></i>
+                <span>Components</span>
+            </a>
+            <a href="../patterns/layouts.html" class="fnav-btn" data-section="patterns" aria-label="Patterns">
+                <i class="ph-bold ph-grid-four"></i>
+                <span>Patterns</span>
+            </a>
+            <div class="fnav-sep"></div>
+            <button class="fnav-btn" id="search-toggle" aria-label="Search">
+                <i class="ph ph-magnifying-glass"></i>
+            </button>
+            <button class="fnav-btn" id="theme-btn" aria-label="Toggle theme">
+                <i class="ph ph-moon"></i>
+            </button>
+        </nav>
+
+        <!-- Glassmorphism Top Bar (Desktop only) -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <a href="../index.html" class="logo">
+                    <i class="ph ph-intersect"></i>
+                    <span>Carbon</span>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <div class="search-container" id="search-container">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search components..." aria-label="Search" autocomplete="off">
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <main class="main-content">
+                <header class="page-header">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="../index.html">Carbon</a> <span class="sep">/</span> <span>Components</span> <span class="sep">/</span> <span>Lists</span>
+                    </nav>
+                    <h1><em>Lists</em></h1>
+                </header>
+                
+                <article class="prose">
+                    <h1>Lists</h1>
+<p>Lists display collections of related items in a vertical arrangement. They’re ideal for navigation, settings, selections, and displaying data.</p>
+<hr>
+<h2 id="basic-list">Basic List</h2>
+<p>A simple list with clickable items.</p>
+
+<div class="Preview" id="preview-wjia27f1e">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><ul class="List" style="max-width: 320px;">
+        <li class="List-item">
+            <span class="List-item-text">Profile</span>
+        </li>
+        <li class="List-item">
+            <span class="List-item-text">Settings</span>
+        </li>
+        <li class="List-item">
+            <span class="List-item-text">Notifications</span>
+        </li>
+        <li class="List-item">
+            <span class="List-item-text">Help & Support</span>
+        </li>
+    </ul></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;ul class=&quot;List&quot; style=&quot;max-width: 320px;&quot;&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Profile&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Settings&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Notifications&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Help &amp; Support&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;ul class=&quot;List&quot;&gt;
+    &lt;li class=&quot;List-item&quot;&gt;
+        &lt;span class=&quot;List-item-text&quot;&gt;Profile&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;List-item&quot;&gt;
+        &lt;span class=&quot;List-item-text&quot;&gt;Settings&lt;/span&gt;
+    &lt;/li&gt;
+    ...
+&lt;/ul&gt;
+</code></pre>
+<h2 id="list-with-icons">List with Icons</h2>
+<p>Add leading icons to provide visual context for each item.</p>
+
+<div class="Preview" id="preview-r2yzziked">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><ul class="List" style="max-width: 320px;">
+        <li class="List-item">
+            <i class="List-item-icon ph ph-user"></i>
+            <span class="List-item-text">Profile</span>
+        </li>
+        <li class="List-item">
+            <i class="List-item-icon ph ph-gear"></i>
+            <span class="List-item-text">Settings</span>
+        </li>
+        <li class="List-item">
+            <i class="List-item-icon ph ph-bell"></i>
+            <span class="List-item-text">Notifications</span>
+        </li>
+        <li class="List-item">
+            <i class="List-item-icon ph ph-question"></i>
+            <span class="List-item-text">Help & Support</span>
+        </li>
+    </ul></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;ul class=&quot;List&quot; style=&quot;max-width: 320px;&quot;&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-user&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Profile&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-gear&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Settings&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-bell&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Notifications&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-question&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Help &amp; Support&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;ul class=&quot;List&quot;&gt;
+    &lt;li class=&quot;List-item&quot;&gt;
+        &lt;i class=&quot;List-item-icon ph ph-user&quot;&gt;&lt;/i&gt;
+        &lt;span class=&quot;List-item-text&quot;&gt;Profile&lt;/span&gt;
+    &lt;/li&gt;
+    ...
+&lt;/ul&gt;
+</code></pre>
+<h2 id="list-with-descriptions">List with Descriptions</h2>
+<p>Add secondary text for additional context.</p>
+
+<div class="Preview" id="preview-3rbh8whjk">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><ul class="List" style="max-width: 400px;">
+        <li class="List-item">
+            <i class="List-item-icon ph ph-user"></i>
+            <div class="List-item-content">
+                <span class="List-item-text">Profile</span>
+                <span class="List-item-description">Manage your personal information</span>
+            </div>
+        </li>
+        <li class="List-item">
+            <i class="List-item-icon ph ph-shield-check"></i>
+            <div class="List-item-content">
+                <span class="List-item-text">Security</span>
+                <span class="List-item-description">Password, 2FA, and login sessions</span>
+            </div>
+        </li>
+        <li class="List-item">
+            <i class="List-item-icon ph ph-bell"></i>
+            <div class="List-item-content">
+                <span class="List-item-text">Notifications</span>
+                <span class="List-item-description">Configure alerts and emails</span>
+            </div>
+        </li>
+    </ul></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;ul class=&quot;List&quot; style=&quot;max-width: 400px;&quot;&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-user&quot;&gt;&lt;/i&gt;
+&lt;div class=&quot;List-item-content&quot;&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Profile&lt;/span&gt;
+&lt;span class=&quot;List-item-description&quot;&gt;Manage your personal information&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-shield-check&quot;&gt;&lt;/i&gt;
+&lt;div class=&quot;List-item-content&quot;&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Security&lt;/span&gt;
+&lt;span class=&quot;List-item-description&quot;&gt;Password, 2FA, and login sessions&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-bell&quot;&gt;&lt;/i&gt;
+&lt;div class=&quot;List-item-content&quot;&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Notifications&lt;/span&gt;
+&lt;span class=&quot;List-item-description&quot;&gt;Configure alerts and emails&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;ul class=&quot;List&quot;&gt;
+    &lt;li class=&quot;List-item&quot;&gt;
+        &lt;i class=&quot;List-item-icon ph ph-user&quot;&gt;&lt;/i&gt;
+        &lt;div class=&quot;List-item-content&quot;&gt;
+            &lt;span class=&quot;List-item-text&quot;&gt;Profile&lt;/span&gt;
+            &lt;span class=&quot;List-item-description&quot;&gt;Manage your personal information&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    ...
+&lt;/ul&gt;
+</code></pre>
+<h2 id="list-with-trailing-actions">List with Trailing Actions</h2>
+<p>Add trailing elements like badges, chevrons, or switches.</p>
+
+<div class="Preview" id="preview-1temrvgr5">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><ul class="List" style="max-width: 400px;">
+        <li class="List-item">
+            <i class="List-item-icon ph ph-envelope"></i>
+            <span class="List-item-text">Messages</span>
+            <span class="List-item-trailing">
+                <span class="Badge Badge--primary">5</span>
+            </span>
+        </li>
+        <li class="List-item">
+            <i class="List-item-icon ph ph-moon"></i>
+            <span class="List-item-text">Dark Mode</span>
+            <span class="List-item-trailing">
+                <label class="Switch">
+                    <input type="checkbox" checked>
+                    <span class="Switch-slider"></span>
+                </label>
+            </span>
+        </li>
+        <li class="List-item">
+            <i class="List-item-icon ph ph-globe"></i>
+            <span class="List-item-text">Language</span>
+            <span class="List-item-trailing List-item-meta">
+                English
+                <i class="ph ph-caret-right"></i>
+            </span>
+        </li>
+        <li class="List-item">
+            <i class="List-item-icon ph ph-trash"></i>
+            <span class="List-item-text List-item-text--danger">Delete Account</span>
+            <span class="List-item-trailing">
+                <i class="ph ph-caret-right"></i>
+            </span>
+        </li>
+    </ul></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;ul class=&quot;List&quot; style=&quot;max-width: 400px;&quot;&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-envelope&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Messages&lt;/span&gt;
+&lt;span class=&quot;List-item-trailing&quot;&gt;
+&lt;span class=&quot;Badge Badge--primary&quot;&gt;5&lt;/span&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-moon&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Dark Mode&lt;/span&gt;
+&lt;span class=&quot;List-item-trailing&quot;&gt;
+&lt;label class=&quot;Switch&quot;&gt;
+&lt;input type=&quot;checkbox&quot; checked&gt;
+&lt;span class=&quot;Switch-slider&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-globe&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Language&lt;/span&gt;
+&lt;span class=&quot;List-item-trailing List-item-meta&quot;&gt;
+English
+&lt;i class=&quot;ph ph-caret-right&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-trash&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;List-item-text List-item-text--danger&quot;&gt;Delete Account&lt;/span&gt;
+&lt;span class=&quot;List-item-trailing&quot;&gt;
+&lt;i class=&quot;ph ph-caret-right&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;ul class=&quot;List&quot;&gt;
+    &lt;li class=&quot;List-item&quot;&gt;
+        &lt;i class=&quot;List-item-icon ph ph-envelope&quot;&gt;&lt;/i&gt;
+        &lt;span class=&quot;List-item-text&quot;&gt;Messages&lt;/span&gt;
+        &lt;span class=&quot;List-item-trailing&quot;&gt;
+            &lt;span class=&quot;Badge Badge--primary&quot;&gt;5&lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;
+    ...
+&lt;/ul&gt;
+</code></pre>
+<h2 id="grouped-lists">Grouped Lists</h2>
+<p>Use headers to organize related items into sections.</p>
+
+<div class="Preview" id="preview-5bcsqo4xl">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="max-width: 400px;">
+        <div class="List-header">Account</div>
+        <ul class="List">
+            <li class="List-item">
+                <i class="List-item-icon ph ph-user"></i>
+                <span class="List-item-text">Profile</span>
+                <span class="List-item-trailing"><i class="ph ph-caret-right"></i></span>
+            </li>
+            <li class="List-item">
+                <i class="List-item-icon ph ph-shield-check"></i>
+                <span class="List-item-text">Security</span>
+                <span class="List-item-trailing"><i class="ph ph-caret-right"></i></span>
+            </li>
+        </ul>
+        <div class="List-header">Preferences</div>
+        <ul class="List">
+            <li class="List-item">
+                <i class="List-item-icon ph ph-bell"></i>
+                <span class="List-item-text">Notifications</span>
+                <span class="List-item-trailing"><i class="ph ph-caret-right"></i></span>
+            </li>
+            <li class="List-item">
+                <i class="List-item-icon ph ph-palette"></i>
+                <span class="List-item-text">Appearance</span>
+                <span class="List-item-trailing"><i class="ph ph-caret-right"></i></span>
+            </li>
+        </ul>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;max-width: 400px;&quot;&gt;
+&lt;div class=&quot;List-header&quot;&gt;Account&lt;/div&gt;
+&lt;ul class=&quot;List&quot;&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-user&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Profile&lt;/span&gt;
+&lt;span class=&quot;List-item-trailing&quot;&gt;&lt;i class=&quot;ph ph-caret-right&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-shield-check&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Security&lt;/span&gt;
+&lt;span class=&quot;List-item-trailing&quot;&gt;&lt;i class=&quot;ph ph-caret-right&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;List-header&quot;&gt;Preferences&lt;/div&gt;
+&lt;ul class=&quot;List&quot;&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-bell&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Notifications&lt;/span&gt;
+&lt;span class=&quot;List-item-trailing&quot;&gt;&lt;i class=&quot;ph ph-caret-right&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-palette&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Appearance&lt;/span&gt;
+&lt;span class=&quot;List-item-trailing&quot;&gt;&lt;i class=&quot;ph ph-caret-right&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;List-header&quot;&gt;Account&lt;/div&gt;
+&lt;ul class=&quot;List&quot;&gt;
+    &lt;li class=&quot;List-item&quot;&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;List-header&quot;&gt;Preferences&lt;/div&gt;
+&lt;ul class=&quot;List&quot;&gt;
+    &lt;li class=&quot;List-item&quot;&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<h2 id="selectable-list">Selectable List</h2>
+<p>Lists where items can be selected, with checkboxes or radio buttons.</p>
+
+<div class="Preview" id="preview-rka6dyxop">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><ul class="List List--selectable" style="max-width: 320px;">
+        <li class="List-item">
+            <input type="checkbox" class="List-item-checkbox" id="sel-1" checked>
+            <label for="sel-1" class="List-item-text">Design System</label>
+        </li>
+        <li class="List-item">
+            <input type="checkbox" class="List-item-checkbox" id="sel-2">
+            <label for="sel-2" class="List-item-text">API Documentation</label>
+        </li>
+        <li class="List-item">
+            <input type="checkbox" class="List-item-checkbox" id="sel-3" checked>
+            <label for="sel-3" class="List-item-text">Component Library</label>
+        </li>
+        <li class="List-item">
+            <input type="checkbox" class="List-item-checkbox" id="sel-4">
+            <label for="sel-4" class="List-item-text">Testing Suite</label>
+        </li>
+    </ul></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;ul class=&quot;List List--selectable&quot; style=&quot;max-width: 320px;&quot;&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;input type=&quot;checkbox&quot; class=&quot;List-item-checkbox&quot; id=&quot;sel-1&quot; checked&gt;
+&lt;label for=&quot;sel-1&quot; class=&quot;List-item-text&quot;&gt;Design System&lt;/label&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;input type=&quot;checkbox&quot; class=&quot;List-item-checkbox&quot; id=&quot;sel-2&quot;&gt;
+&lt;label for=&quot;sel-2&quot; class=&quot;List-item-text&quot;&gt;API Documentation&lt;/label&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;input type=&quot;checkbox&quot; class=&quot;List-item-checkbox&quot; id=&quot;sel-3&quot; checked&gt;
+&lt;label for=&quot;sel-3&quot; class=&quot;List-item-text&quot;&gt;Component Library&lt;/label&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;input type=&quot;checkbox&quot; class=&quot;List-item-checkbox&quot; id=&quot;sel-4&quot;&gt;
+&lt;label for=&quot;sel-4&quot; class=&quot;List-item-text&quot;&gt;Testing Suite&lt;/label&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;ul class=&quot;List List--selectable&quot;&gt;
+    &lt;li class=&quot;List-item&quot;&gt;
+        &lt;input type=&quot;checkbox&quot; class=&quot;List-item-checkbox&quot; id=&quot;sel-1&quot; checked&gt;
+        &lt;label for=&quot;sel-1&quot; class=&quot;List-item-text&quot;&gt;Design System&lt;/label&gt;
+    &lt;/li&gt;
+    ...
+&lt;/ul&gt;
+</code></pre>
+
+<div class="Preview" id="preview-nevmprhmb">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><ul class="List List--selectable" style="max-width: 320px;">
+        <li class="List-item">
+            <input type="radio" name="plan" class="List-item-radio" id="plan-1">
+            <label for="plan-1" class="List-item-text">Free Plan</label>
+        </li>
+        <li class="List-item">
+            <input type="radio" name="plan" class="List-item-radio" id="plan-2" checked>
+            <label for="plan-2" class="List-item-text">Pro Plan</label>
+        </li>
+        <li class="List-item">
+            <input type="radio" name="plan" class="List-item-radio" id="plan-3">
+            <label for="plan-3" class="List-item-text">Enterprise</label>
+        </li>
+    </ul></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;ul class=&quot;List List--selectable&quot; style=&quot;max-width: 320px;&quot;&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;input type=&quot;radio&quot; name=&quot;plan&quot; class=&quot;List-item-radio&quot; id=&quot;plan-1&quot;&gt;
+&lt;label for=&quot;plan-1&quot; class=&quot;List-item-text&quot;&gt;Free Plan&lt;/label&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;input type=&quot;radio&quot; name=&quot;plan&quot; class=&quot;List-item-radio&quot; id=&quot;plan-2&quot; checked&gt;
+&lt;label for=&quot;plan-2&quot; class=&quot;List-item-text&quot;&gt;Pro Plan&lt;/label&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;input type=&quot;radio&quot; name=&quot;plan&quot; class=&quot;List-item-radio&quot; id=&quot;plan-3&quot;&gt;
+&lt;label for=&quot;plan-3&quot; class=&quot;List-item-text&quot;&gt;Enterprise&lt;/label&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;ul class=&quot;List List--selectable&quot;&gt;
+    &lt;li class=&quot;List-item&quot;&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;plan&quot; class=&quot;List-item-radio&quot; id=&quot;plan-1&quot;&gt;
+        &lt;label for=&quot;plan-1&quot; class=&quot;List-item-text&quot;&gt;Free Plan&lt;/label&gt;
+    &lt;/li&gt;
+    ...
+&lt;/ul&gt;
+</code></pre>
+<h2 id="list-with-avatars">List with Avatars</h2>
+<p>Display user or entity information with avatars.</p>
+
+<div class="Preview" id="preview-ymzc9ijcp">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><ul class="List" style="max-width: 400px;">
+        <li class="List-item">
+            <div class="Avatar Avatar--md">
+                <img src="https://i.pravatar.cc/150?img=1" alt="Sarah Chen">
+            </div>
+            <div class="List-item-content">
+                <span class="List-item-text">Sarah Chen</span>
+                <span class="List-item-description">Product Designer</span>
+            </div>
+            <span class="List-item-trailing">
+                <span class="Badge Badge--success">Online</span>
+            </span>
+        </li>
+        <li class="List-item">
+            <div class="Avatar Avatar--md">
+                <img src="https://i.pravatar.cc/150?img=3" alt="Alex Rivera">
+            </div>
+            <div class="List-item-content">
+                <span class="List-item-text">Alex Rivera</span>
+                <span class="List-item-description">Frontend Engineer</span>
+            </div>
+            <span class="List-item-trailing">
+                <span class="Badge">Away</span>
+            </span>
+        </li>
+        <li class="List-item">
+            <div class="Avatar Avatar--md">JD</div>
+            <div class="List-item-content">
+                <span class="List-item-text">Jordan Davis</span>
+                <span class="List-item-description">Backend Engineer</span>
+            </div>
+            <span class="List-item-trailing">
+                <span class="Badge Badge--secondary">Offline</span>
+            </span>
+        </li>
+    </ul></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;ul class=&quot;List&quot; style=&quot;max-width: 400px;&quot;&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;div class=&quot;Avatar Avatar--md&quot;&gt;
+&lt;img src=&quot;https://i.pravatar.cc/150?img=1&quot; alt=&quot;Sarah Chen&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;List-item-content&quot;&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Sarah Chen&lt;/span&gt;
+&lt;span class=&quot;List-item-description&quot;&gt;Product Designer&lt;/span&gt;
+&lt;/div&gt;
+&lt;span class=&quot;List-item-trailing&quot;&gt;
+&lt;span class=&quot;Badge Badge--success&quot;&gt;Online&lt;/span&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;div class=&quot;Avatar Avatar--md&quot;&gt;
+&lt;img src=&quot;https://i.pravatar.cc/150?img=3&quot; alt=&quot;Alex Rivera&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;List-item-content&quot;&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Alex Rivera&lt;/span&gt;
+&lt;span class=&quot;List-item-description&quot;&gt;Frontend Engineer&lt;/span&gt;
+&lt;/div&gt;
+&lt;span class=&quot;List-item-trailing&quot;&gt;
+&lt;span class=&quot;Badge&quot;&gt;Away&lt;/span&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;div class=&quot;Avatar Avatar--md&quot;&gt;JD&lt;/div&gt;
+&lt;div class=&quot;List-item-content&quot;&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Jordan Davis&lt;/span&gt;
+&lt;span class=&quot;List-item-description&quot;&gt;Backend Engineer&lt;/span&gt;
+&lt;/div&gt;
+&lt;span class=&quot;List-item-trailing&quot;&gt;
+&lt;span class=&quot;Badge Badge--secondary&quot;&gt;Offline&lt;/span&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;ul class=&quot;List&quot;&gt;
+    &lt;li class=&quot;List-item&quot;&gt;
+        &lt;div class=&quot;Avatar Avatar--md&quot;&gt;
+            &lt;img src=&quot;...&quot; alt=&quot;Sarah Chen&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;List-item-content&quot;&gt;
+            &lt;span class=&quot;List-item-text&quot;&gt;Sarah Chen&lt;/span&gt;
+            &lt;span class=&quot;List-item-description&quot;&gt;Product Designer&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;span class=&quot;List-item-trailing&quot;&gt;
+            &lt;span class=&quot;Badge Badge--success&quot;&gt;Online&lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;
+    ...
+&lt;/ul&gt;
+</code></pre>
+<h2 id="bordered-list">Bordered List</h2>
+<p>A list with visible borders between items.</p>
+
+<div class="Preview" id="preview-lnppvzoy1">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><ul class="List List--bordered" style="max-width: 320px;">
+        <li class="List-item">
+            <i class="List-item-icon ph ph-file-text"></i>
+            <span class="List-item-text">Documents</span>
+            <span class="List-item-trailing List-item-meta">128 files</span>
+        </li>
+        <li class="List-item">
+            <i class="List-item-icon ph ph-image"></i>
+            <span class="List-item-text">Images</span>
+            <span class="List-item-trailing List-item-meta">64 files</span>
+        </li>
+        <li class="List-item">
+            <i class="List-item-icon ph ph-video"></i>
+            <span class="List-item-text">Videos</span>
+            <span class="List-item-trailing List-item-meta">12 files</span>
+        </li>
+        <li class="List-item">
+            <i class="List-item-icon ph ph-music-note"></i>
+            <span class="List-item-text">Audio</span>
+            <span class="List-item-trailing List-item-meta">89 files</span>
+        </li>
+    </ul></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;ul class=&quot;List List--bordered&quot; style=&quot;max-width: 320px;&quot;&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-file-text&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Documents&lt;/span&gt;
+&lt;span class=&quot;List-item-trailing List-item-meta&quot;&gt;128 files&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-image&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Images&lt;/span&gt;
+&lt;span class=&quot;List-item-trailing List-item-meta&quot;&gt;64 files&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-video&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Videos&lt;/span&gt;
+&lt;span class=&quot;List-item-trailing List-item-meta&quot;&gt;12 files&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-music-note&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Audio&lt;/span&gt;
+&lt;span class=&quot;List-item-trailing List-item-meta&quot;&gt;89 files&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;ul class=&quot;List List--bordered&quot;&gt;
+    &lt;li class=&quot;List-item&quot;&gt;
+        &lt;i class=&quot;List-item-icon ph ph-file-text&quot;&gt;&lt;/i&gt;
+        &lt;span class=&quot;List-item-text&quot;&gt;Documents&lt;/span&gt;
+        &lt;span class=&quot;List-item-trailing List-item-meta&quot;&gt;128 files&lt;/span&gt;
+    &lt;/li&gt;
+    ...
+&lt;/ul&gt;
+</code></pre>
+<h2 id="compact-list">Compact List</h2>
+<p>A denser list variant for tighter spaces.</p>
+
+<div class="Preview" id="preview-ifivvo234">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><ul class="List List--compact" style="max-width: 280px;">
+        <li class="List-item">
+            <i class="List-item-icon ph ph-house"></i>
+            <span class="List-item-text">Home</span>
+        </li>
+        <li class="List-item List-item--active">
+            <i class="List-item-icon ph ph-folder"></i>
+            <span class="List-item-text">Projects</span>
+        </li>
+        <li class="List-item">
+            <i class="List-item-icon ph ph-calendar"></i>
+            <span class="List-item-text">Calendar</span>
+        </li>
+        <li class="List-item">
+            <i class="List-item-icon ph ph-chat-circle"></i>
+            <span class="List-item-text">Messages</span>
+        </li>
+        <li class="List-item">
+            <i class="List-item-icon ph ph-gear"></i>
+            <span class="List-item-text">Settings</span>
+        </li>
+    </ul></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;ul class=&quot;List List--compact&quot; style=&quot;max-width: 280px;&quot;&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-house&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Home&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item List-item--active&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-folder&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Projects&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-calendar&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Calendar&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-chat-circle&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Messages&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-gear&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Settings&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;ul class=&quot;List List--compact&quot;&gt;
+    &lt;li class=&quot;List-item&quot;&gt;
+        &lt;i class=&quot;List-item-icon ph ph-house&quot;&gt;&lt;/i&gt;
+        &lt;span class=&quot;List-item-text&quot;&gt;Home&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;List-item List-item--active&quot;&gt;
+        &lt;i class=&quot;List-item-icon ph ph-folder&quot;&gt;&lt;/i&gt;
+        &lt;span class=&quot;List-item-text&quot;&gt;Projects&lt;/span&gt;
+    &lt;/li&gt;
+    ...
+&lt;/ul&gt;
+</code></pre>
+<h2 id="disabled-items">Disabled Items</h2>
+<p>Items that cannot be interacted with.</p>
+
+<div class="Preview" id="preview-gc22grgbv">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><ul class="List" style="max-width: 320px;">
+        <li class="List-item">
+            <i class="List-item-icon ph ph-check-circle"></i>
+            <span class="List-item-text">Available Option</span>
+        </li>
+        <li class="List-item List-item--disabled">
+            <i class="List-item-icon ph ph-lock"></i>
+            <span class="List-item-text">Premium Feature</span>
+            <span class="List-item-trailing">
+                <span class="Badge Badge--warning">Pro</span>
+            </span>
+        </li>
+        <li class="List-item">
+            <i class="List-item-icon ph ph-check-circle"></i>
+            <span class="List-item-text">Another Option</span>
+        </li>
+        <li class="List-item List-item--disabled">
+            <i class="List-item-icon ph ph-clock"></i>
+            <span class="List-item-text">Coming Soon</span>
+        </li>
+    </ul></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;ul class=&quot;List&quot; style=&quot;max-width: 320px;&quot;&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-check-circle&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Available Option&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item List-item--disabled&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-lock&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Premium Feature&lt;/span&gt;
+&lt;span class=&quot;List-item-trailing&quot;&gt;
+&lt;span class=&quot;Badge Badge--warning&quot;&gt;Pro&lt;/span&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-check-circle&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Another Option&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item List-item--disabled&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-clock&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Coming Soon&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;ul class=&quot;List&quot;&gt;
+    &lt;li class=&quot;List-item&quot;&gt;
+        &lt;span class=&quot;List-item-text&quot;&gt;Available Option&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;List-item List-item--disabled&quot;&gt;
+        &lt;span class=&quot;List-item-text&quot;&gt;Premium Feature&lt;/span&gt;
+    &lt;/li&gt;
+    ...
+&lt;/ul&gt;
+</code></pre>
+<hr>
+<h2 id="common-patterns">Common Patterns</h2>
+<h3 id="settings-list">Settings List</h3>
+
+<div class="Preview" id="preview-yrrhje4e0">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Card" style="max-width: 400px;">
+        <div class="Card-header">
+            <h4 class="Card-title">Settings</h4>
+        </div>
+        <ul class="List">
+            <li class="List-item">
+                <i class="List-item-icon ph ph-bell"></i>
+                <span class="List-item-text">Notifications</span>
+                <span class="List-item-trailing">
+                    <label class="Switch">
+                        <input type="checkbox" checked>
+                        <span class="Switch-track"></span>
+                    </label>
+                </span>
+            </li>
+            <li class="List-item">
+                <i class="List-item-icon ph ph-moon"></i>
+                <span class="List-item-text">Dark Mode</span>
+                <span class="List-item-trailing">
+                    <label class="Switch">
+                        <input type="checkbox">
+                        <span class="Switch-track"></span>
+                    </label>
+                </span>
+            </li>
+            <li class="List-item">
+                <i class="List-item-icon ph ph-globe"></i>
+                <span class="List-item-text">Language</span>
+                <span class="List-item-trailing List-item-meta">English <i class="ph ph-caret-right"></i></span>
+            </li>
+        </ul>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Card&quot; style=&quot;max-width: 400px;&quot;&gt;
+&lt;div class=&quot;Card-header&quot;&gt;
+&lt;h4 class=&quot;Card-title&quot;&gt;Settings&lt;/h4&gt;
+&lt;/div&gt;
+&lt;ul class=&quot;List&quot;&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-bell&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Notifications&lt;/span&gt;
+&lt;span class=&quot;List-item-trailing&quot;&gt;
+&lt;label class=&quot;Switch&quot;&gt;
+&lt;input type=&quot;checkbox&quot; checked&gt;
+&lt;span class=&quot;Switch-track&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-moon&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Dark Mode&lt;/span&gt;
+&lt;span class=&quot;List-item-trailing&quot;&gt;
+&lt;label class=&quot;Switch&quot;&gt;
+&lt;input type=&quot;checkbox&quot;&gt;
+&lt;span class=&quot;Switch-track&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-globe&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Language&lt;/span&gt;
+&lt;span class=&quot;List-item-trailing List-item-meta&quot;&gt;English &lt;i class=&quot;ph ph-caret-right&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="file-browser">File Browser</h3>
+
+<div class="Preview" id="preview-s390tsc4n">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><ul class="List List--bordered" style="max-width: 400px;">
+        <li class="List-item">
+            <i class="List-item-icon ph ph-folder" style="color: oklch(70% 0.15 80);"></i>
+            <div class="List-item-content">
+                <span class="List-item-text">Documents</span>
+                <span class="List-item-description">24 items · Modified today</span>
+            </div>
+            <span class="List-item-trailing"><i class="ph ph-caret-right"></i></span>
+        </li>
+        <li class="List-item">
+            <i class="List-item-icon ph ph-folder" style="color: oklch(70% 0.15 80);"></i>
+            <div class="List-item-content">
+                <span class="List-item-text">Images</span>
+                <span class="List-item-description">156 items · Modified yesterday</span>
+            </div>
+            <span class="List-item-trailing"><i class="ph ph-caret-right"></i></span>
+        </li>
+        <li class="List-item">
+            <i class="List-item-icon ph ph-file-pdf" style="color: oklch(55% 0.2 25);"></i>
+            <div class="List-item-content">
+                <span class="List-item-text">report.pdf</span>
+                <span class="List-item-description">2.4 MB · Modified Jan 15</span>
+            </div>
+        </li>
+    </ul></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;ul class=&quot;List List--bordered&quot; style=&quot;max-width: 400px;&quot;&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-folder&quot; style=&quot;color: oklch(70% 0.15 80);&quot;&gt;&lt;/i&gt;
+&lt;div class=&quot;List-item-content&quot;&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Documents&lt;/span&gt;
+&lt;span class=&quot;List-item-description&quot;&gt;24 items · Modified today&lt;/span&gt;
+&lt;/div&gt;
+&lt;span class=&quot;List-item-trailing&quot;&gt;&lt;i class=&quot;ph ph-caret-right&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-folder&quot; style=&quot;color: oklch(70% 0.15 80);&quot;&gt;&lt;/i&gt;
+&lt;div class=&quot;List-item-content&quot;&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Images&lt;/span&gt;
+&lt;span class=&quot;List-item-description&quot;&gt;156 items · Modified yesterday&lt;/span&gt;
+&lt;/div&gt;
+&lt;span class=&quot;List-item-trailing&quot;&gt;&lt;i class=&quot;ph ph-caret-right&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;i class=&quot;List-item-icon ph ph-file-pdf&quot; style=&quot;color: oklch(55% 0.2 25);&quot;&gt;&lt;/i&gt;
+&lt;div class=&quot;List-item-content&quot;&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;report.pdf&lt;/span&gt;
+&lt;span class=&quot;List-item-description&quot;&gt;2.4 MB · Modified Jan 15&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    </div>
+</div><h3 id="contact-list">Contact List</h3>
+
+<div class="Preview" id="preview-zpm2s05q0">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><ul class="List" style="max-width: 360px;">
+        <li class="List-item">
+            <div class="Avatar Avatar--md" style="background: oklch(65% 0.15 250); color: white; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; font-size: 0.8rem; font-weight: 600;">SC</div>
+            <div class="List-item-content">
+                <span class="List-item-text">Sarah Chen</span>
+                <span class="List-item-description">Last active 2m ago</span>
+            </div>
+            <span class="List-item-trailing">
+                <span style="width: 8px; height: 8px; border-radius: 50%; background: oklch(55% 0.15 150);"></span>
+            </span>
+        </li>
+        <li class="List-item">
+            <div class="Avatar Avatar--md" style="background: oklch(65% 0.15 150); color: white; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; font-size: 0.8rem; font-weight: 600;">AR</div>
+            <div class="List-item-content">
+                <span class="List-item-text">Alex Rivera</span>
+                <span class="List-item-description">Last active 1h ago</span>
+            </div>
+        </li>
+    </ul></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;ul class=&quot;List&quot; style=&quot;max-width: 360px;&quot;&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;div class=&quot;Avatar Avatar--md&quot; style=&quot;background: oklch(65% 0.15 250); color: white; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; font-size: 0.8rem; font-weight: 600;&quot;&gt;SC&lt;/div&gt;
+&lt;div class=&quot;List-item-content&quot;&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Sarah Chen&lt;/span&gt;
+&lt;span class=&quot;List-item-description&quot;&gt;Last active 2m ago&lt;/span&gt;
+&lt;/div&gt;
+&lt;span class=&quot;List-item-trailing&quot;&gt;
+&lt;span style=&quot;width: 8px; height: 8px; border-radius: 50%; background: oklch(55% 0.15 150);&quot;&gt;&lt;/span&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;div class=&quot;Avatar Avatar--md&quot; style=&quot;background: oklch(65% 0.15 150); color: white; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; font-size: 0.8rem; font-weight: 600;&quot;&gt;AR&lt;/div&gt;
+&lt;div class=&quot;List-item-content&quot;&gt;
+&lt;span class=&quot;List-item-text&quot;&gt;Alex Rivera&lt;/span&gt;
+&lt;span class=&quot;List-item-description&quot;&gt;Last active 1h ago&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    </div>
+</div><h3 id="task-list">Task List</h3>
+
+<div class="Preview" id="preview-zkm72h9sw">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><ul class="List List--selectable" style="max-width: 400px;">
+        <li class="List-item">
+            <input type="checkbox" class="List-item-checkbox" id="task-1" checked>
+            <label for="task-1" class="List-item-text" style="text-decoration: line-through; color: var(--fg-3);">Design homepage mockup</label>
+        </li>
+        <li class="List-item">
+            <input type="checkbox" class="List-item-checkbox" id="task-2">
+            <label for="task-2" class="List-item-text">Review pull requests</label>
+        </li>
+        <li class="List-item">
+            <input type="checkbox" class="List-item-checkbox" id="task-3">
+            <label for="task-3" class="List-item-text">Write documentation</label>
+        </li>
+    </ul></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;ul class=&quot;List List--selectable&quot; style=&quot;max-width: 400px;&quot;&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;input type=&quot;checkbox&quot; class=&quot;List-item-checkbox&quot; id=&quot;task-1&quot; checked&gt;
+&lt;label for=&quot;task-1&quot; class=&quot;List-item-text&quot; style=&quot;text-decoration: line-through; color: var(--fg-3);&quot;&gt;Design homepage mockup&lt;/label&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;input type=&quot;checkbox&quot; class=&quot;List-item-checkbox&quot; id=&quot;task-2&quot;&gt;
+&lt;label for=&quot;task-2&quot; class=&quot;List-item-text&quot;&gt;Review pull requests&lt;/label&gt;
+&lt;/li&gt;
+&lt;li class=&quot;List-item&quot;&gt;
+&lt;input type=&quot;checkbox&quot; class=&quot;List-item-checkbox&quot; id=&quot;task-3&quot;&gt;
+&lt;label for=&quot;task-3&quot; class=&quot;List-item-text&quot;&gt;Write documentation&lt;/label&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="customization">Customization</h2>
+<p>Override list styles using CSS custom properties:</p>
+<pre><code class="language-css">/* Custom list spacing */
+.List--relaxed .List-item {
+  padding: var(--space-4) var(--space-3);
+}
+
+/* Custom hover color */
+.List-item:hover {
+  background-color: oklch(60% 0.15 250 / 0.08);
+}
+
+/* Custom active indicator */
+.List-item--active {
+  border-left: 3px solid var(--accent);
+  padding-left: calc(var(--space-3) - 3px);
+}
+
+/* Card-style list items */
+.List--cards .List-item {
+  border: 1px solid var(--bd);
+  border-radius: var(--r-m);
+  margin-bottom: var(--space-2);
+}
+
+/* Striped rows */
+.List--striped .List-item:nth-child(even) {
+  background-color: var(--bg-s);
+}
+</code></pre>
+<hr>
+<h2 id="api-reference">API Reference</h2>
+<h3 id="classes">Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">.List</code></td><td class="ApiTable-desc">Container for list items</td></tr>
+<tr><td><code class="ApiTable-prop">.List--bordered</code></td><td class="ApiTable-desc">Visible borders between items</td></tr>
+<tr><td><code class="ApiTable-prop">.List--compact</code></td><td class="ApiTable-desc">Reduced padding for dense layouts</td></tr>
+<tr><td><code class="ApiTable-prop">.List--selectable</code></td><td class="ApiTable-desc">List with checkbox/radio selection</td></tr>
+<tr><td><code class="ApiTable-prop">.List-header</code></td><td class="ApiTable-desc">Section header/title</td></tr>
+<tr><td><code class="ApiTable-prop">.List-item</code></td><td class="ApiTable-desc">Individual list item</td></tr>
+<tr><td><code class="ApiTable-prop">.List-item--active</code></td><td class="ApiTable-desc">Highlighted/selected state</td></tr>
+<tr><td><code class="ApiTable-prop">.List-item--disabled</code></td><td class="ApiTable-desc">Non-interactive item</td></tr>
+<tr><td><code class="ApiTable-prop">.List-item-icon</code></td><td class="ApiTable-desc">Leading icon</td></tr>
+<tr><td><code class="ApiTable-prop">.List-item-text</code></td><td class="ApiTable-desc">Primary text content</td></tr>
+<tr><td><code class="ApiTable-prop">.List-item-text--danger</code></td><td class="ApiTable-desc">Destructive action text (red)</td></tr>
+<tr><td><code class="ApiTable-prop">.List-item-description</code></td><td class="ApiTable-desc">Secondary/helper text</td></tr>
+<tr><td><code class="ApiTable-prop">.List-item-content</code></td><td class="ApiTable-desc">Wrapper for text + description</td></tr>
+<tr><td><code class="ApiTable-prop">.List-item-trailing</code></td><td class="ApiTable-desc">Right-aligned content</td></tr>
+<tr><td><code class="ApiTable-prop">.List-item-meta</code></td><td class="ApiTable-desc">Secondary trailing text</td></tr>
+<tr><td><code class="ApiTable-prop">.List-item-checkbox</code></td><td class="ApiTable-desc">Checkbox input in selectable lists</td></tr>
+<tr><td><code class="ApiTable-prop">.List-item-radio</code></td><td class="ApiTable-desc">Radio input in selectable lists</td></tr>
+</tbody>
+</table>
+<h3 id="attributes">Attributes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Attribute</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">role="listbox"</code></td><td class="ApiTable-desc">For interactive/selectable lists</td></tr>
+<tr><td><code class="ApiTable-prop">role="option"</code></td><td class="ApiTable-desc">For items in listbox</td></tr>
+<tr><td><code class="ApiTable-prop">aria-selected</code></td><td class="ApiTable-desc">Selection state for options</td></tr>
+<tr><td><code class="ApiTable-prop">aria-disabled="true"</code></td><td class="ApiTable-desc">Disabled item state</td></tr>
+</tbody>
+</table>
+<h3 id="css-custom-properties">CSS Custom Properties</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Property</th><th>Default</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">--bg-primary</code></td><td class="ApiTable-desc">—</td><td class="ApiTable-desc">List background</td></tr>
+<tr><td><code class="ApiTable-prop">--bg-secondary</code></td><td class="ApiTable-desc">—</td><td class="ApiTable-desc">Hover/active background</td></tr>
+<tr><td><code class="ApiTable-prop">--text-primary</code></td><td class="ApiTable-desc">—</td><td class="ApiTable-desc">Primary text color</td></tr>
+<tr><td><code class="ApiTable-prop">--text-secondary</code></td><td class="ApiTable-desc">—</td><td class="ApiTable-desc">Description/meta text</td></tr>
+<tr><td><code class="ApiTable-prop">--border-subtle</code></td><td class="ApiTable-desc">—</td><td class="ApiTable-desc">Border color</td></tr>
+</tbody>
+</table>
+<hr>
+<h2 id="css-reference">CSS Reference</h2>
+<pre><code class="language-css">/* List Container */
+.List {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* List Item */
+.List-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.List-item:hover {
+  background-color: var(--bg-s);
+}
+
+/* Active State */
+.List-item--active {
+  background-color: oklch(60% 0.15 250 / 0.1);
+  color: var(--accent);
+}
+
+/* Disabled State */
+.List-item--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Item Icon */
+.List-item-icon {
+  font-size: 1.25rem;
+  color: var(--fg-3);
+  flex-shrink: 0;
+}
+
+/* Item Text */
+.List-item-text {
+  flex: 1;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.List-item-text--danger {
+  color: oklch(55% 0.2 25);
+}
+
+/* Item Content (text + description) */
+.List-item-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  flex: 1;
+  min-width: 0;
+}
+
+/* Description */
+.List-item-description {
+  font-size: 0.8rem;
+  color: var(--fg-3);
+}
+
+/* Trailing */
+.List-item-trailing {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+.List-item-meta {
+  font-size: 0.8rem;
+  color: var(--fg-3);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+/* Variants */
+.List--bordered .List-item {
+  border-bottom: 1px solid var(--bd);
+}
+
+.List--bordered .List-item:last-child {
+  border-bottom: none;
+}
+
+.List--compact .List-item {
+  padding: var(--space-2) var(--space-3);
+}
+
+/* Selectable */
+.List--selectable .List-item {
+  gap: var(--space-3);
+}
+
+.List-item-checkbox,
+.List-item-radio {
+  flex-shrink: 0;
+}
+
+/* Section Header */
+.List-header {
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--fg-3);
+}
+</code></pre>
+<hr>
+<h2 id="accessibility">Accessibility</h2>
+<h3 id="keyboard-support">Keyboard Support</h3>
+<div class="Table-container"><table class="Table">
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tab</td>
+<td>Move focus to/from the list</td>
+</tr>
+<tr>
+<td>Arrow Down</td>
+<td>Move focus to next item</td>
+</tr>
+<tr>
+<td>Arrow Up</td>
+<td>Move focus to previous item</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>Toggle checkbox/radio selection</td>
+</tr>
+<tr>
+<td>Enter</td>
+<td>Activate focused item</td>
+</tr>
+<tr>
+<td>Home</td>
+<td>Move focus to first item</td>
+</tr>
+<tr>
+<td>End</td>
+<td>Move focus to last item</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="screen-reader-guidance">Screen Reader Guidance</h3>
+<pre><code class="language-html">&lt;!-- Interactive/selectable list --&gt;
+&lt;ul class=&quot;List List--selectable&quot; role=&quot;listbox&quot; aria-label=&quot;Project selection&quot;&gt;
+    &lt;li class=&quot;List-item&quot; role=&quot;option&quot; aria-selected=&quot;true&quot;&gt;
+        &lt;span class=&quot;List-item-text&quot;&gt;Design System&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;List-item&quot; role=&quot;option&quot; aria-selected=&quot;false&quot;&gt;
+        &lt;span class=&quot;List-item-text&quot;&gt;API Docs&lt;/span&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Disabled item --&gt;
+&lt;li class=&quot;List-item List-item--disabled&quot; role=&quot;option&quot; aria-disabled=&quot;true&quot;&gt;
+    &lt;span class=&quot;List-item-text&quot;&gt;Premium Feature&lt;/span&gt;
+&lt;/li&gt;
+</code></pre>
+<ul>
+<li>Use semantic <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> elements for static lists</li>
+<li>Interactive lists should use <code>role=&quot;listbox&quot;</code> and <code>role=&quot;option&quot;</code></li>
+<li>Use <code>aria-selected</code> for selectable items</li>
+<li>Use <code>aria-disabled=&quot;true&quot;</code> for disabled items</li>
+<li>Ensure sufficient color contrast for text and icons</li>
+</ul>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="do">Do</h3>
+<ul>
+<li>✓ <strong>Use consistent item structure</strong> — Same elements across items</li>
+<li>✓ <strong>Group related items</strong> — Use headers for sections</li>
+<li>✓ <strong>Show interactive states</strong> — Hover, focus, active</li>
+<li>✓ <strong>Provide visual hierarchy</strong> — Icons, text, descriptions</li>
+<li>✓ <strong>Use semantic markup</strong> — <code>&lt;ul&gt;</code> / <code>&lt;li&gt;</code> for lists</li>
+<li>✓ <strong>Keep items scannable</strong> — Primary info should be immediately visible</li>
+</ul>
+<h3 id="don-t">Don’t</h3>
+<ul>
+<li>✗ <strong>Overcrowd items</strong> — Keep content scannable</li>
+<li>✗ <strong>Mix navigation and actions</strong> — Separate menus from settings</li>
+<li>✗ <strong>Hide important info</strong> — Key data should be visible</li>
+<li>✗ <strong>Use lists for single items</strong> — Lists imply collections</li>
+<li>✗ <strong>Forget keyboard navigation</strong> — All items must be reachable</li>
+<li>✗ <strong>Omit disabled state explanations</strong> — Tell users why items are unavailable</li>
+</ul>
+
+                </article>
+
+                <footer class="page-footer">
+                    <p>Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

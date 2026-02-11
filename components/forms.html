@@ -1,0 +1,3174 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Forms | Carbon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/bold/style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Floating Pill Nav (Mobile: bottom, Desktop: top) -->
+        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation">
+            <a href="../index.html" class="fnav-btn" data-section="home" aria-label="Home">
+                <i class="ph-bold ph-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="../tokens/colors.html" class="fnav-btn" data-section="tokens" aria-label="Tokens">
+                <i class="ph-bold ph-palette"></i>
+                <span>Tokens</span>
+            </a>
+            <a href="../components/buttons.html" class="fnav-btn" data-section="components" aria-label="Components">
+                <i class="ph-bold ph-stack"></i>
+                <span>Components</span>
+            </a>
+            <a href="../patterns/layouts.html" class="fnav-btn" data-section="patterns" aria-label="Patterns">
+                <i class="ph-bold ph-grid-four"></i>
+                <span>Patterns</span>
+            </a>
+            <div class="fnav-sep"></div>
+            <button class="fnav-btn" id="search-toggle" aria-label="Search">
+                <i class="ph ph-magnifying-glass"></i>
+            </button>
+            <button class="fnav-btn" id="theme-btn" aria-label="Toggle theme">
+                <i class="ph ph-moon"></i>
+            </button>
+        </nav>
+
+        <!-- Glassmorphism Top Bar (Desktop only) -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <a href="../index.html" class="logo">
+                    <i class="ph ph-intersect"></i>
+                    <span>Carbon</span>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <div class="search-container" id="search-container">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search components..." aria-label="Search" autocomplete="off">
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <main class="main-content">
+                <header class="page-header">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="../index.html">Carbon</a> <span class="sep">/</span> <span>Components</span> <span class="sep">/</span> <span>Forms</span>
+                    </nav>
+                    <h1><em>Forms</em></h1>
+                </header>
+                
+                <article class="prose">
+                    <h1>Forms</h1>
+<p>Forms allow users to enter data and interact with the system. Carbon provides a complete set of form controls including inputs, textareas, selects, checkboxes, radio buttons, switches, and file uploads — all with built-in validation states and accessibility.</p>
+<hr>
+<h2 id="installation">Installation</h2>
+<p>Copy the form CSS from <code>styles/docs.css</code> or include the Carbon stylesheet:</p>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;carbon.min.css&quot;&gt;
+</code></pre>
+<p>Then use form classes in your HTML:</p>
+<pre><code class="language-html">&lt;div class=&quot;FormField&quot;&gt;
+    &lt;label class=&quot;FormField-label&quot; for=&quot;email&quot;&gt;Email&lt;/label&gt;
+    &lt;input type=&quot;email&quot; id=&quot;email&quot; class=&quot;Input&quot; placeholder=&quot;you@example.com&quot;&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="usage">Usage</h2>
+<p>The base <code>.Input</code> class provides core input styling. Wrap inputs in <code>.FormField</code> for proper labeling and spacing.</p>
+
+<div class="Preview" id="preview-b3igja5sj">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="FormField" style="max-width: 320px;">
+    <label class="FormField-label" for="demo-input">Username</label>
+    <input type="text" id="demo-input" class="Input" placeholder="Enter username">
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;FormField&quot; style=&quot;max-width: 320px;&quot;&gt;
+&lt;label class=&quot;FormField-label&quot; for=&quot;demo-input&quot;&gt;Username&lt;/label&gt;
+&lt;input type=&quot;text&quot; id=&quot;demo-input&quot; class=&quot;Input&quot; placeholder=&quot;Enter username&quot;&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="input-variants">Input Variants</h2>
+<h3 id="sizes">Sizes</h3>
+<p>Inputs come in three sizes: small, medium (default), and large.</p>
+
+<div class="Preview" id="preview-7uxicx9qx">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-4); max-width: 320px;">
+    <input type="text" class="Input Input--small" placeholder="Small">
+    <input type="text" class="Input" placeholder="Medium (default)">
+    <input type="text" class="Input Input--large" placeholder="Large">
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-4); max-width: 320px;&quot;&gt;
+&lt;input type=&quot;text&quot; class=&quot;Input Input--small&quot; placeholder=&quot;Small&quot;&gt;
+&lt;input type=&quot;text&quot; class=&quot;Input&quot; placeholder=&quot;Medium (default)&quot;&gt;
+&lt;input type=&quot;text&quot; class=&quot;Input Input--large&quot; placeholder=&quot;Large&quot;&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="with-icons">With Icons</h3>
+<p>Add leading or trailing icons for visual context.</p>
+
+<div class="Preview" id="preview-eutrdu5ls">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-4); max-width: 320px;">
+    <div class="Input-wrapper">
+        <i class="ph ph-magnifying-glass Input-icon"></i>
+        <input type="text" class="Input Input--withIcon" placeholder="Search...">
+    </div>
+    <div class="Input-wrapper">
+        <input type="email" class="Input Input--withIconTrailing" placeholder="Enter email">
+        <i class="ph ph-envelope Input-icon Input-icon--trailing"></i>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-4); max-width: 320px;&quot;&gt;
+&lt;div class=&quot;Input-wrapper&quot;&gt;
+&lt;i class=&quot;ph ph-magnifying-glass Input-icon&quot;&gt;&lt;/i&gt;
+&lt;input type=&quot;text&quot; class=&quot;Input Input--withIcon&quot; placeholder=&quot;Search...&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Input-wrapper&quot;&gt;
+&lt;input type=&quot;email&quot; class=&quot;Input Input--withIconTrailing&quot; placeholder=&quot;Enter email&quot;&gt;
+&lt;i class=&quot;ph ph-envelope Input-icon Input-icon--trailing&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="with-button">With Button</h3>
+<p>Common pattern for search or subscribe fields.</p>
+
+<div class="Preview" id="preview-9vx4oe3pg">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Input-group" style="max-width: 400px;">
+    <input type="text" class="Input Input--grouped" placeholder="Search documentation...">
+    <button class="Button Button--primary">Search</button>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Input-group&quot; style=&quot;max-width: 400px;&quot;&gt;
+&lt;input type=&quot;text&quot; class=&quot;Input Input--grouped&quot; placeholder=&quot;Search documentation...&quot;&gt;
+&lt;button class=&quot;Button Button--primary&quot;&gt;Search&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="password-with-toggle">Password with Toggle</h3>
+<p>Toggle password visibility for user convenience.</p>
+
+<div class="Preview" id="preview-7rt5tpy66">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="FormField" style="max-width: 320px;">
+    <label class="FormField-label" for="pw-demo">Password</label>
+    <div class="Input-wrapper">
+        <input type="password" id="pw-demo" class="Input Input--withIconTrailing" placeholder="Enter password">
+        <button type="button" class="Input-toggle" aria-label="Toggle password visibility" onclick="const input = this.previousElementSibling; const icon = this.querySelector('i'); if(input.type === 'password') { input.type = 'text'; icon.className = 'ph ph-eye-slash'; } else { input.type = 'password'; icon.className = 'ph ph-eye'; }">
+            <i class="ph ph-eye"></i>
+        </button>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;FormField&quot; style=&quot;max-width: 320px;&quot;&gt;
+&lt;label class=&quot;FormField-label&quot; for=&quot;pw-demo&quot;&gt;Password&lt;/label&gt;
+&lt;div class=&quot;Input-wrapper&quot;&gt;
+&lt;input type=&quot;password&quot; id=&quot;pw-demo&quot; class=&quot;Input Input--withIconTrailing&quot; placeholder=&quot;Enter password&quot;&gt;
+&lt;button type=&quot;button&quot; class=&quot;Input-toggle&quot; aria-label=&quot;Toggle password visibility&quot; onclick=&quot;const input = this.previousElementSibling; const icon = this.querySelector(&#039;i&#039;); if(input.type === &#039;password&#039;) { input.type = &#039;text&#039;; icon.className = &#039;ph ph-eye-slash&#039;; } else { input.type = &#039;password&#039;; icon.className = &#039;ph ph-eye&#039;; }&quot;&gt;
+&lt;i class=&quot;ph ph-eye&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="states">States</h2>
+<h3 id="validation-states">Validation States</h3>
+<p>Visual feedback for different input states.</p>
+
+<div class="Preview" id="preview-29kdawlhe">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-4); max-width: 320px;">
+    <div class="FormField">
+        <label class="FormField-label">Default</label>
+        <input type="text" class="Input" value="Normal input">
+    </div>
+    <div class="FormField FormField--error">
+        <label class="FormField-label">Error</label>
+        <input type="text" class="Input Input--error" value="Invalid value">
+        <span class="FormField-message FormField-message--error">
+            <i class="ph ph-warning-circle"></i>
+            This field is required
+        </span>
+    </div>
+    <div class="FormField FormField--success">
+        <label class="FormField-label">Success</label>
+        <input type="text" class="Input Input--success" value="Valid input">
+        <span class="FormField-message FormField-message--success">
+            <i class="ph ph-check-circle"></i>
+            Looks good!
+        </span>
+    </div>
+    <div class="FormField">
+        <label class="FormField-label">Disabled</label>
+        <input type="text" class="Input" value="Cannot edit" disabled>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-4); max-width: 320px;&quot;&gt;
+&lt;div class=&quot;FormField&quot;&gt;
+&lt;label class=&quot;FormField-label&quot;&gt;Default&lt;/label&gt;
+&lt;input type=&quot;text&quot; class=&quot;Input&quot; value=&quot;Normal input&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;FormField FormField--error&quot;&gt;
+&lt;label class=&quot;FormField-label&quot;&gt;Error&lt;/label&gt;
+&lt;input type=&quot;text&quot; class=&quot;Input Input--error&quot; value=&quot;Invalid value&quot;&gt;
+&lt;span class=&quot;FormField-message FormField-message--error&quot;&gt;
+&lt;i class=&quot;ph ph-warning-circle&quot;&gt;&lt;/i&gt;
+This field is required
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;FormField FormField--success&quot;&gt;
+&lt;label class=&quot;FormField-label&quot;&gt;Success&lt;/label&gt;
+&lt;input type=&quot;text&quot; class=&quot;Input Input--success&quot; value=&quot;Valid input&quot;&gt;
+&lt;span class=&quot;FormField-message FormField-message--success&quot;&gt;
+&lt;i class=&quot;ph ph-check-circle&quot;&gt;&lt;/i&gt;
+Looks good!
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;FormField&quot;&gt;
+&lt;label class=&quot;FormField-label&quot;&gt;Disabled&lt;/label&gt;
+&lt;input type=&quot;text&quot; class=&quot;Input&quot; value=&quot;Cannot edit&quot; disabled&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="helper-text-character-count">Helper Text &amp; Character Count</h3>
+<p>Provide additional context or show remaining characters.</p>
+
+<div class="Preview" id="preview-to7q75n6r">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-4); max-width: 320px;">
+    <div class="FormField">
+        <label class="FormField-label" for="helper-demo">Email Address</label>
+        <input type="email" id="helper-demo" class="Input" placeholder="you@example.com">
+        <span class="FormField-helper">We'll never share your email.</span>
+    </div>
+    <div class="FormField">
+        <label class="FormField-label" for="count-demo">Bio</label>
+        <input type="text" id="count-demo" class="Input" placeholder="Tell us about yourself" maxlength="100">
+        <div class="FormField-footer">
+            <span class="FormField-helper">Brief description</span>
+            <span class="FormField-count">0/100</span>
+        </div>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-4); max-width: 320px;&quot;&gt;
+&lt;div class=&quot;FormField&quot;&gt;
+&lt;label class=&quot;FormField-label&quot; for=&quot;helper-demo&quot;&gt;Email Address&lt;/label&gt;
+&lt;input type=&quot;email&quot; id=&quot;helper-demo&quot; class=&quot;Input&quot; placeholder=&quot;you@example.com&quot;&gt;
+&lt;span class=&quot;FormField-helper&quot;&gt;We&#039;ll never share your email.&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;FormField&quot;&gt;
+&lt;label class=&quot;FormField-label&quot; for=&quot;count-demo&quot;&gt;Bio&lt;/label&gt;
+&lt;input type=&quot;text&quot; id=&quot;count-demo&quot; class=&quot;Input&quot; placeholder=&quot;Tell us about yourself&quot; maxlength=&quot;100&quot;&gt;
+&lt;div class=&quot;FormField-footer&quot;&gt;
+&lt;span class=&quot;FormField-helper&quot;&gt;Brief description&lt;/span&gt;
+&lt;span class=&quot;FormField-count&quot;&gt;0/100&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="required-fields">Required Fields</h3>
+<p>Indicate required fields with an asterisk.</p>
+
+<div class="Preview" id="preview-kcggtg714">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="FormField" style="max-width: 320px;">
+    <label class="FormField-label FormField-label--required" for="req-demo">Email</label>
+    <input type="email" id="req-demo" class="Input" placeholder="you@example.com" required>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;FormField&quot; style=&quot;max-width: 320px;&quot;&gt;
+&lt;label class=&quot;FormField-label FormField-label--required&quot; for=&quot;req-demo&quot;&gt;Email&lt;/label&gt;
+&lt;input type=&quot;email&quot; id=&quot;req-demo&quot; class=&quot;Input&quot; placeholder=&quot;you@example.com&quot; required&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="textarea">Textarea</h2>
+<p>Multi-line text input for longer content.</p>
+
+<div class="Preview" id="preview-bd5iaadhb">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-4); max-width: 400px;">
+    <div class="FormField">
+        <label class="FormField-label" for="ta-basic">Description</label>
+        <textarea id="ta-basic" class="Textarea" placeholder="Enter a detailed description..." rows="4"></textarea>
+    </div>
+    <div class="FormField">
+        <label class="FormField-label" for="ta-count">Bio</label>
+        <textarea id="ta-count" class="Textarea" placeholder="Tell us about yourself..." rows="3" maxlength="280"></textarea>
+        <div class="FormField-footer">
+            <span class="FormField-helper">Brief description for your profile</span>
+            <span class="FormField-count">0/280</span>
+        </div>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-4); max-width: 400px;&quot;&gt;
+&lt;div class=&quot;FormField&quot;&gt;
+&lt;label class=&quot;FormField-label&quot; for=&quot;ta-basic&quot;&gt;Description&lt;/label&gt;
+&lt;textarea id=&quot;ta-basic&quot; class=&quot;Textarea&quot; placeholder=&quot;Enter a detailed description...&quot; rows=&quot;4&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+&lt;div class=&quot;FormField&quot;&gt;
+&lt;label class=&quot;FormField-label&quot; for=&quot;ta-count&quot;&gt;Bio&lt;/label&gt;
+&lt;textarea id=&quot;ta-count&quot; class=&quot;Textarea&quot; placeholder=&quot;Tell us about yourself...&quot; rows=&quot;3&quot; maxlength=&quot;280&quot;&gt;&lt;/textarea&gt;
+&lt;div class=&quot;FormField-footer&quot;&gt;
+&lt;span class=&quot;FormField-helper&quot;&gt;Brief description for your profile&lt;/span&gt;
+&lt;span class=&quot;FormField-count&quot;&gt;0/280&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="select">Select</h2>
+<p>Dropdown for choosing from predefined options.</p>
+
+<div class="Preview" id="preview-uzyxv8nuj">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="FormField" style="max-width: 320px;">
+    <label class="FormField-label" for="select-demo">Country</label>
+    <select id="select-demo" class="Select">
+        <option value="">Choose a country...</option>
+        <option>United States</option>
+        <option>Canada</option>
+        <option>United Kingdom</option>
+        <option>Australia</option>
+        <option>Germany</option>
+    </select>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;FormField&quot; style=&quot;max-width: 320px;&quot;&gt;
+&lt;label class=&quot;FormField-label&quot; for=&quot;select-demo&quot;&gt;Country&lt;/label&gt;
+&lt;select id=&quot;select-demo&quot; class=&quot;Select&quot;&gt;
+&lt;option value=&quot;&quot;&gt;Choose a country...&lt;/option&gt;
+&lt;option&gt;United States&lt;/option&gt;
+&lt;option&gt;Canada&lt;/option&gt;
+&lt;option&gt;United Kingdom&lt;/option&gt;
+&lt;option&gt;Australia&lt;/option&gt;
+&lt;option&gt;Germany&lt;/option&gt;
+&lt;/select&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="checkbox">Checkbox</h2>
+<p>For binary choices or multiple selections.</p>
+
+<div class="Preview" id="preview-7qpxk5tvq">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-3);">
+    <label class="Checkbox">
+        <input type="checkbox" class="Checkbox-input">
+        <span class="Checkbox-box"></span>
+        <span class="Checkbox-label">Remember me</span>
+    </label>
+    <label class="Checkbox">
+        <input type="checkbox" class="Checkbox-input" checked>
+        <span class="Checkbox-box"></span>
+        <span class="Checkbox-label">Receive notifications</span>
+    </label>
+    <label class="Checkbox Checkbox--disabled">
+        <input type="checkbox" class="Checkbox-input" disabled>
+        <span class="Checkbox-box"></span>
+        <span class="Checkbox-label">Disabled option</span>
+    </label>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-3);&quot;&gt;
+&lt;label class=&quot;Checkbox&quot;&gt;
+&lt;input type=&quot;checkbox&quot; class=&quot;Checkbox-input&quot;&gt;
+&lt;span class=&quot;Checkbox-box&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;Checkbox-label&quot;&gt;Remember me&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;Checkbox&quot;&gt;
+&lt;input type=&quot;checkbox&quot; class=&quot;Checkbox-input&quot; checked&gt;
+&lt;span class=&quot;Checkbox-box&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;Checkbox-label&quot;&gt;Receive notifications&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;Checkbox Checkbox--disabled&quot;&gt;
+&lt;input type=&quot;checkbox&quot; class=&quot;Checkbox-input&quot; disabled&gt;
+&lt;span class=&quot;Checkbox-box&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;Checkbox-label&quot;&gt;Disabled option&lt;/span&gt;
+&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="checkbox-group">Checkbox Group</h3>
+<p>Group related checkboxes in a fieldset.</p>
+
+<div class="Preview" id="preview-q5scwgczx">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><fieldset class="FormFieldset">
+    <legend class="FormFieldset-legend">Interests</legend>
+    <div class="CheckboxGroup">
+        <label class="Checkbox">
+            <input type="checkbox" class="Checkbox-input" name="interests" value="design">
+            <span class="Checkbox-box"></span>
+            <span class="Checkbox-label">Design</span>
+        </label>
+        <label class="Checkbox">
+            <input type="checkbox" class="Checkbox-input" name="interests" value="development" checked>
+            <span class="Checkbox-box"></span>
+            <span class="Checkbox-label">Development</span>
+        </label>
+        <label class="Checkbox">
+            <input type="checkbox" class="Checkbox-input" name="interests" value="marketing">
+            <span class="Checkbox-box"></span>
+            <span class="Checkbox-label">Marketing</span>
+        </label>
+    </div>
+</fieldset></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;fieldset class=&quot;FormFieldset&quot;&gt;
+&lt;legend class=&quot;FormFieldset-legend&quot;&gt;Interests&lt;/legend&gt;
+&lt;div class=&quot;CheckboxGroup&quot;&gt;
+&lt;label class=&quot;Checkbox&quot;&gt;
+&lt;input type=&quot;checkbox&quot; class=&quot;Checkbox-input&quot; name=&quot;interests&quot; value=&quot;design&quot;&gt;
+&lt;span class=&quot;Checkbox-box&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;Checkbox-label&quot;&gt;Design&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;Checkbox&quot;&gt;
+&lt;input type=&quot;checkbox&quot; class=&quot;Checkbox-input&quot; name=&quot;interests&quot; value=&quot;development&quot; checked&gt;
+&lt;span class=&quot;Checkbox-box&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;Checkbox-label&quot;&gt;Development&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;Checkbox&quot;&gt;
+&lt;input type=&quot;checkbox&quot; class=&quot;Checkbox-input&quot; name=&quot;interests&quot; value=&quot;marketing&quot;&gt;
+&lt;span class=&quot;Checkbox-box&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;Checkbox-label&quot;&gt;Marketing&lt;/span&gt;
+&lt;/label&gt;
+&lt;/div&gt;
+&lt;/fieldset&gt;</code></pre>
+    </div>
+</div><h3 id="indeterminate-state">Indeterminate State</h3>
+<p>For “select all” patterns where some items are selected.</p>
+
+<div class="Preview" id="preview-7o8442ir7">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="max-width: 300px;">
+    <label class="Checkbox" style="margin-bottom: var(--space-3); border-bottom: 1px solid var(--bd); padding-bottom: var(--space-3);">
+        <input type="checkbox" class="Checkbox-input Checkbox-input--indeterminate">
+        <span class="Checkbox-box Checkbox-box--indeterminate"></span>
+        <span class="Checkbox-label" style="font-weight: 500;">Select All Files</span>
+    </label>
+    <div style="padding-left: var(--space-6); display: flex; flex-direction: column; gap: var(--space-3);">
+        <label class="Checkbox">
+            <input type="checkbox" class="Checkbox-input" checked>
+            <span class="Checkbox-box"></span>
+            <span class="Checkbox-label">document.pdf</span>
+        </label>
+        <label class="Checkbox">
+            <input type="checkbox" class="Checkbox-input">
+            <span class="Checkbox-box"></span>
+            <span class="Checkbox-label">image.png</span>
+        </label>
+        <label class="Checkbox">
+            <input type="checkbox" class="Checkbox-input" checked>
+            <span class="Checkbox-box"></span>
+            <span class="Checkbox-label">spreadsheet.xlsx</span>
+        </label>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;max-width: 300px;&quot;&gt;
+&lt;label class=&quot;Checkbox&quot; style=&quot;margin-bottom: var(--space-3); border-bottom: 1px solid var(--bd); padding-bottom: var(--space-3);&quot;&gt;
+&lt;input type=&quot;checkbox&quot; class=&quot;Checkbox-input Checkbox-input--indeterminate&quot;&gt;
+&lt;span class=&quot;Checkbox-box Checkbox-box--indeterminate&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;Checkbox-label&quot; style=&quot;font-weight: 500;&quot;&gt;Select All Files&lt;/span&gt;
+&lt;/label&gt;
+&lt;div style=&quot;padding-left: var(--space-6); display: flex; flex-direction: column; gap: var(--space-3);&quot;&gt;
+&lt;label class=&quot;Checkbox&quot;&gt;
+&lt;input type=&quot;checkbox&quot; class=&quot;Checkbox-input&quot; checked&gt;
+&lt;span class=&quot;Checkbox-box&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;Checkbox-label&quot;&gt;document.pdf&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;Checkbox&quot;&gt;
+&lt;input type=&quot;checkbox&quot; class=&quot;Checkbox-input&quot;&gt;
+&lt;span class=&quot;Checkbox-box&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;Checkbox-label&quot;&gt;image.png&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;Checkbox&quot;&gt;
+&lt;input type=&quot;checkbox&quot; class=&quot;Checkbox-input&quot; checked&gt;
+&lt;span class=&quot;Checkbox-box&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;Checkbox-label&quot;&gt;spreadsheet.xlsx&lt;/span&gt;
+&lt;/label&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="radio-buttons">Radio Buttons</h2>
+<p>For single selection from a list of options.</p>
+
+<div class="Preview" id="preview-tbr23dvyt">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><fieldset class="FormFieldset">
+    <legend class="FormFieldset-legend">Plan</legend>
+    <div class="RadioGroup">
+        <label class="Radio">
+            <input type="radio" class="Radio-input" name="plan" value="free">
+            <span class="Radio-circle"></span>
+            <span class="Radio-label">Free</span>
+        </label>
+        <label class="Radio">
+            <input type="radio" class="Radio-input" name="plan" value="pro" checked>
+            <span class="Radio-circle"></span>
+            <span class="Radio-label">Pro</span>
+        </label>
+        <label class="Radio">
+            <input type="radio" class="Radio-input" name="plan" value="enterprise">
+            <span class="Radio-circle"></span>
+            <span class="Radio-label">Enterprise</span>
+        </label>
+    </div>
+</fieldset></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;fieldset class=&quot;FormFieldset&quot;&gt;
+&lt;legend class=&quot;FormFieldset-legend&quot;&gt;Plan&lt;/legend&gt;
+&lt;div class=&quot;RadioGroup&quot;&gt;
+&lt;label class=&quot;Radio&quot;&gt;
+&lt;input type=&quot;radio&quot; class=&quot;Radio-input&quot; name=&quot;plan&quot; value=&quot;free&quot;&gt;
+&lt;span class=&quot;Radio-circle&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;Radio-label&quot;&gt;Free&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;Radio&quot;&gt;
+&lt;input type=&quot;radio&quot; class=&quot;Radio-input&quot; name=&quot;plan&quot; value=&quot;pro&quot; checked&gt;
+&lt;span class=&quot;Radio-circle&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;Radio-label&quot;&gt;Pro&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;Radio&quot;&gt;
+&lt;input type=&quot;radio&quot; class=&quot;Radio-input&quot; name=&quot;plan&quot; value=&quot;enterprise&quot;&gt;
+&lt;span class=&quot;Radio-circle&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;Radio-label&quot;&gt;Enterprise&lt;/span&gt;
+&lt;/label&gt;
+&lt;/div&gt;
+&lt;/fieldset&gt;</code></pre>
+    </div>
+</div><h3 id="radio-cards">Radio Cards</h3>
+<p>Richer radio selection with descriptions and prices.</p>
+
+<div class="Preview" id="preview-kz68ciyt1">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="RadioCardGroup" style="max-width: 400px;">
+    <label class="RadioCard">
+        <input type="radio" name="tier" value="starter" class="RadioCard-input">
+        <div class="RadioCard-content">
+            <div class="RadioCard-header">
+                <span class="RadioCard-title">Starter</span>
+                <span class="RadioCard-price">$9/mo</span>
+            </div>
+            <p class="RadioCard-description">Perfect for individuals and small projects.</p>
+        </div>
+    </label>
+    <label class="RadioCard RadioCard--selected">
+        <input type="radio" name="tier" value="pro" class="RadioCard-input" checked>
+        <div class="RadioCard-content">
+            <div class="RadioCard-header">
+                <span class="RadioCard-title">Pro</span>
+                <span class="RadioCard-price">$29/mo</span>
+            </div>
+            <p class="RadioCard-description">For growing teams with advanced needs.</p>
+        </div>
+    </label>
+    <label class="RadioCard">
+        <input type="radio" name="tier" value="enterprise" class="RadioCard-input">
+        <div class="RadioCard-content">
+            <div class="RadioCard-header">
+                <span class="RadioCard-title">Enterprise</span>
+                <span class="RadioCard-price">Custom</span>
+            </div>
+            <p class="RadioCard-description">Dedicated support and custom integrations.</p>
+        </div>
+    </label>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;RadioCardGroup&quot; style=&quot;max-width: 400px;&quot;&gt;
+&lt;label class=&quot;RadioCard&quot;&gt;
+&lt;input type=&quot;radio&quot; name=&quot;tier&quot; value=&quot;starter&quot; class=&quot;RadioCard-input&quot;&gt;
+&lt;div class=&quot;RadioCard-content&quot;&gt;
+&lt;div class=&quot;RadioCard-header&quot;&gt;
+&lt;span class=&quot;RadioCard-title&quot;&gt;Starter&lt;/span&gt;
+&lt;span class=&quot;RadioCard-price&quot;&gt;$9/mo&lt;/span&gt;
+&lt;/div&gt;
+&lt;p class=&quot;RadioCard-description&quot;&gt;Perfect for individuals and small projects.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/label&gt;
+&lt;label class=&quot;RadioCard RadioCard--selected&quot;&gt;
+&lt;input type=&quot;radio&quot; name=&quot;tier&quot; value=&quot;pro&quot; class=&quot;RadioCard-input&quot; checked&gt;
+&lt;div class=&quot;RadioCard-content&quot;&gt;
+&lt;div class=&quot;RadioCard-header&quot;&gt;
+&lt;span class=&quot;RadioCard-title&quot;&gt;Pro&lt;/span&gt;
+&lt;span class=&quot;RadioCard-price&quot;&gt;$29/mo&lt;/span&gt;
+&lt;/div&gt;
+&lt;p class=&quot;RadioCard-description&quot;&gt;For growing teams with advanced needs.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/label&gt;
+&lt;label class=&quot;RadioCard&quot;&gt;
+&lt;input type=&quot;radio&quot; name=&quot;tier&quot; value=&quot;enterprise&quot; class=&quot;RadioCard-input&quot;&gt;
+&lt;div class=&quot;RadioCard-content&quot;&gt;
+&lt;div class=&quot;RadioCard-header&quot;&gt;
+&lt;span class=&quot;RadioCard-title&quot;&gt;Enterprise&lt;/span&gt;
+&lt;span class=&quot;RadioCard-price&quot;&gt;Custom&lt;/span&gt;
+&lt;/div&gt;
+&lt;p class=&quot;RadioCard-description&quot;&gt;Dedicated support and custom integrations.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="switch">Switch</h2>
+<p>Toggle switches for on/off settings.</p>
+
+<div class="Preview" id="preview-nv9semz9u">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-4);">
+    <label class="Switch">
+        <input type="checkbox" class="Switch-input">
+        <span class="Switch-track"></span>
+        <span class="Switch-label">Enable notifications</span>
+    </label>
+    <label class="Switch">
+        <input type="checkbox" class="Switch-input" checked>
+        <span class="Switch-track"></span>
+        <span class="Switch-label">Dark mode</span>
+    </label>
+    <label class="Switch Switch--disabled">
+        <input type="checkbox" class="Switch-input" disabled>
+        <span class="Switch-track"></span>
+        <span class="Switch-label">Disabled switch</span>
+    </label>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-4);&quot;&gt;
+&lt;label class=&quot;Switch&quot;&gt;
+&lt;input type=&quot;checkbox&quot; class=&quot;Switch-input&quot;&gt;
+&lt;span class=&quot;Switch-track&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;Switch-label&quot;&gt;Enable notifications&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;Switch&quot;&gt;
+&lt;input type=&quot;checkbox&quot; class=&quot;Switch-input&quot; checked&gt;
+&lt;span class=&quot;Switch-track&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;Switch-label&quot;&gt;Dark mode&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;Switch Switch--disabled&quot;&gt;
+&lt;input type=&quot;checkbox&quot; class=&quot;Switch-input&quot; disabled&gt;
+&lt;span class=&quot;Switch-track&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;Switch-label&quot;&gt;Disabled switch&lt;/span&gt;
+&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="switch-with-description">Switch with Description</h3>
+<p>For settings that need more context.</p>
+
+<div class="Preview" id="preview-lkxpssmj4">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="max-width: 400px;">
+    <label class="Switch Switch--block">
+        <div class="Switch-content">
+            <span class="Switch-label">Email notifications</span>
+            <span class="Switch-description">Receive email updates about your account activity</span>
+        </div>
+        <input type="checkbox" class="Switch-input" checked>
+        <span class="Switch-track"></span>
+    </label>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;max-width: 400px;&quot;&gt;
+&lt;label class=&quot;Switch Switch--block&quot;&gt;
+&lt;div class=&quot;Switch-content&quot;&gt;
+&lt;span class=&quot;Switch-label&quot;&gt;Email notifications&lt;/span&gt;
+&lt;span class=&quot;Switch-description&quot;&gt;Receive email updates about your account activity&lt;/span&gt;
+&lt;/div&gt;
+&lt;input type=&quot;checkbox&quot; class=&quot;Switch-input&quot; checked&gt;
+&lt;span class=&quot;Switch-track&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="switch-sizes">Switch Sizes</h3>
+
+<div class="Preview" id="preview-p83qi53b3">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-4);">
+    <label class="Switch Switch--small">
+        <input type="checkbox" class="Switch-input" checked>
+        <span class="Switch-track"></span>
+        <span class="Switch-label">Small</span>
+    </label>
+    <label class="Switch">
+        <input type="checkbox" class="Switch-input" checked>
+        <span class="Switch-track"></span>
+        <span class="Switch-label">Medium (default)</span>
+    </label>
+    <label class="Switch Switch--large">
+        <input type="checkbox" class="Switch-input" checked>
+        <span class="Switch-track"></span>
+        <span class="Switch-label">Large</span>
+    </label>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-4);&quot;&gt;
+&lt;label class=&quot;Switch Switch--small&quot;&gt;
+&lt;input type=&quot;checkbox&quot; class=&quot;Switch-input&quot; checked&gt;
+&lt;span class=&quot;Switch-track&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;Switch-label&quot;&gt;Small&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;Switch&quot;&gt;
+&lt;input type=&quot;checkbox&quot; class=&quot;Switch-input&quot; checked&gt;
+&lt;span class=&quot;Switch-track&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;Switch-label&quot;&gt;Medium (default)&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;Switch Switch--large&quot;&gt;
+&lt;input type=&quot;checkbox&quot; class=&quot;Switch-input&quot; checked&gt;
+&lt;span class=&quot;Switch-track&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;Switch-label&quot;&gt;Large&lt;/span&gt;
+&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="file-upload">File Upload</h2>
+<p>File input with drag-and-drop support.</p>
+
+<div class="Preview" id="preview-j5jgg42bs">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="FormField" style="max-width: 400px;">
+    <label class="FormField-label">Attachment</label>
+    <div class="FileInput">
+        <input type="file" class="FileInput-input" id="file-demo">
+        <label for="file-demo" class="FileInput-label">
+            <i class="ph ph-upload-simple FileInput-icon"></i>
+            <span class="FileInput-text">Choose file or drag here</span>
+            <span class="FileInput-hint">PNG, JPG up to 10MB</span>
+        </label>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;FormField&quot; style=&quot;max-width: 400px;&quot;&gt;
+&lt;label class=&quot;FormField-label&quot;&gt;Attachment&lt;/label&gt;
+&lt;div class=&quot;FileInput&quot;&gt;
+&lt;input type=&quot;file&quot; class=&quot;FileInput-input&quot; id=&quot;file-demo&quot;&gt;
+&lt;label for=&quot;file-demo&quot; class=&quot;FileInput-label&quot;&gt;
+&lt;i class=&quot;ph ph-upload-simple FileInput-icon&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;FileInput-text&quot;&gt;Choose file or drag here&lt;/span&gt;
+&lt;span class=&quot;FileInput-hint&quot;&gt;PNG, JPG up to 10MB&lt;/span&gt;
+&lt;/label&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="file-upload-with-preview">File Upload with Preview</h3>
+<p>Show a preview thumbnail alongside the upload button.</p>
+
+<div class="Preview" id="preview-kp72ltvh2">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="FormField" style="max-width: 400px;">
+    <label class="FormField-label">Profile Photo</label>
+    <div class="FileInput FileInput--with-preview">
+        <div class="FileInput-preview">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=upload" alt="Preview" class="FileInput-image">
+        </div>
+        <div class="FileInput-content">
+            <input type="file" class="FileInput-input" id="file-preview-demo" accept="image/*">
+            <label for="file-preview-demo" class="Button Button--secondary Button--small">
+                <i class="ph ph-upload-simple Button-icon"></i>
+                Change Photo
+            </label>
+            <span class="FileInput-hint">JPG, PNG or GIF. Max 2MB.</span>
+        </div>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;FormField&quot; style=&quot;max-width: 400px;&quot;&gt;
+&lt;label class=&quot;FormField-label&quot;&gt;Profile Photo&lt;/label&gt;
+&lt;div class=&quot;FileInput FileInput--with-preview&quot;&gt;
+&lt;div class=&quot;FileInput-preview&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=upload&quot; alt=&quot;Preview&quot; class=&quot;FileInput-image&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;FileInput-content&quot;&gt;
+&lt;input type=&quot;file&quot; class=&quot;FileInput-input&quot; id=&quot;file-preview-demo&quot; accept=&quot;image/*&quot;&gt;
+&lt;label for=&quot;file-preview-demo&quot; class=&quot;Button Button--secondary Button--small&quot;&gt;
+&lt;i class=&quot;ph ph-upload-simple Button-icon&quot;&gt;&lt;/i&gt;
+Change Photo
+&lt;/label&gt;
+&lt;span class=&quot;FileInput-hint&quot;&gt;JPG, PNG or GIF. Max 2MB.&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="multiple-file-upload">Multiple File Upload</h3>
+<p>Upload multiple files with a file list display.</p>
+
+<div class="Preview" id="preview-qftk8fxb7">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="FormField" style="max-width: 400px;">
+    <label class="FormField-label">Documents</label>
+    <div class="FileInput FileInput--multiple">
+        <input type="file" class="FileInput-input" id="file-multi-demo" multiple>
+        <label for="file-multi-demo" class="FileInput-label">
+            <i class="ph ph-files FileInput-icon"></i>
+            <span class="FileInput-text">Drop files here or click to browse</span>
+            <span class="FileInput-hint">Upload multiple files at once</span>
+        </label>
+    </div>
+    <div class="FileInput-list" style="margin-top: var(--space-3);">
+        <div class="FileInput-item">
+            <i class="ph ph-file-pdf FileInput-item-icon" style="color: oklch(55% 0.2 25);"></i>
+            <span class="FileInput-item-name">document.pdf</span>
+            <span class="FileInput-item-size">2.4 MB</span>
+            <button class="Button Button--icon Button--ghost Button--small" aria-label="Remove file">
+                <i class="ph ph-x"></i>
+            </button>
+        </div>
+        <div class="FileInput-item">
+            <i class="ph ph-file-image FileInput-item-icon" style="color: oklch(55% 0.15 150);"></i>
+            <span class="FileInput-item-name">photo.jpg</span>
+            <span class="FileInput-item-size">1.1 MB</span>
+            <button class="Button Button--icon Button--ghost Button--small" aria-label="Remove file">
+                <i class="ph ph-x"></i>
+            </button>
+        </div>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;FormField&quot; style=&quot;max-width: 400px;&quot;&gt;
+&lt;label class=&quot;FormField-label&quot;&gt;Documents&lt;/label&gt;
+&lt;div class=&quot;FileInput FileInput--multiple&quot;&gt;
+&lt;input type=&quot;file&quot; class=&quot;FileInput-input&quot; id=&quot;file-multi-demo&quot; multiple&gt;
+&lt;label for=&quot;file-multi-demo&quot; class=&quot;FileInput-label&quot;&gt;
+&lt;i class=&quot;ph ph-files FileInput-icon&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;FileInput-text&quot;&gt;Drop files here or click to browse&lt;/span&gt;
+&lt;span class=&quot;FileInput-hint&quot;&gt;Upload multiple files at once&lt;/span&gt;
+&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;FileInput-list&quot; style=&quot;margin-top: var(--space-3);&quot;&gt;
+&lt;div class=&quot;FileInput-item&quot;&gt;
+&lt;i class=&quot;ph ph-file-pdf FileInput-item-icon&quot; style=&quot;color: oklch(55% 0.2 25);&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;FileInput-item-name&quot;&gt;document.pdf&lt;/span&gt;
+&lt;span class=&quot;FileInput-item-size&quot;&gt;2.4 MB&lt;/span&gt;
+&lt;button class=&quot;Button Button--icon Button--ghost Button--small&quot; aria-label=&quot;Remove file&quot;&gt;
+&lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;FileInput-item&quot;&gt;
+&lt;i class=&quot;ph ph-file-image FileInput-item-icon&quot; style=&quot;color: oklch(55% 0.15 150);&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;FileInput-item-name&quot;&gt;photo.jpg&lt;/span&gt;
+&lt;span class=&quot;FileInput-item-size&quot;&gt;1.1 MB&lt;/span&gt;
+&lt;button class=&quot;Button Button--icon Button--ghost Button--small&quot; aria-label=&quot;Remove file&quot;&gt;
+&lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="form-layouts">Form Layouts</h2>
+<h3 id="stacked-form-default-">Stacked Form (Default)</h3>
+<p>Vertical layout with labels above inputs.</p>
+
+<div class="Preview" id="preview-f8h3rvjj4">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><form style="max-width: 400px; display: flex; flex-direction: column; gap: var(--space-4);">
+    <div class="FormField">
+        <label class="FormField-label FormField-label--required">Full Name</label>
+        <input type="text" class="Input" placeholder="John Doe">
+    </div>
+    <div class="FormField">
+        <label class="FormField-label FormField-label--required">Email</label>
+        <input type="email" class="Input" placeholder="john@example.com">
+    </div>
+    <div class="FormField">
+        <label class="FormField-label">Company</label>
+        <input type="text" class="Input" placeholder="Acme Inc">
+    </div>
+    <label class="Checkbox">
+        <input type="checkbox" class="Checkbox-input">
+        <span class="Checkbox-box"></span>
+        <span class="Checkbox-label">Subscribe to newsletter</span>
+    </label>
+    <button type="submit" class="Button Button--primary Button--block">Submit</button>
+</form></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;form style=&quot;max-width: 400px; display: flex; flex-direction: column; gap: var(--space-4);&quot;&gt;
+&lt;div class=&quot;FormField&quot;&gt;
+&lt;label class=&quot;FormField-label FormField-label--required&quot;&gt;Full Name&lt;/label&gt;
+&lt;input type=&quot;text&quot; class=&quot;Input&quot; placeholder=&quot;John Doe&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;FormField&quot;&gt;
+&lt;label class=&quot;FormField-label FormField-label--required&quot;&gt;Email&lt;/label&gt;
+&lt;input type=&quot;email&quot; class=&quot;Input&quot; placeholder=&quot;john@example.com&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;FormField&quot;&gt;
+&lt;label class=&quot;FormField-label&quot;&gt;Company&lt;/label&gt;
+&lt;input type=&quot;text&quot; class=&quot;Input&quot; placeholder=&quot;Acme Inc&quot;&gt;
+&lt;/div&gt;
+&lt;label class=&quot;Checkbox&quot;&gt;
+&lt;input type=&quot;checkbox&quot; class=&quot;Checkbox-input&quot;&gt;
+&lt;span class=&quot;Checkbox-box&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;Checkbox-label&quot;&gt;Subscribe to newsletter&lt;/span&gt;
+&lt;/label&gt;
+&lt;button type=&quot;submit&quot; class=&quot;Button Button--primary Button--block&quot;&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+    </div>
+</div><h3 id="inline-form">Inline Form</h3>
+<p>Horizontal layout for compact forms like newsletter signups.</p>
+
+<div class="Preview" id="preview-8apf0e61c">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><form class="FormInline">
+    <div class="FormField" style="flex: 1;">
+        <input type="email" class="Input" placeholder="Enter your email">
+    </div>
+    <button type="submit" class="Button Button--primary">Subscribe</button>
+</form></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;form class=&quot;FormInline&quot;&gt;
+&lt;div class=&quot;FormField&quot; style=&quot;flex: 1;&quot;&gt;
+&lt;input type=&quot;email&quot; class=&quot;Input&quot; placeholder=&quot;Enter your email&quot;&gt;
+&lt;/div&gt;
+&lt;button type=&quot;submit&quot; class=&quot;Button Button--primary&quot;&gt;Subscribe&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+    </div>
+</div><h3 id="two-column-form">Two-Column Form</h3>
+<p>Side-by-side fields for related data.</p>
+
+<div class="Preview" id="preview-zewyijfe8">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><form style="max-width: 500px;">
+    <div class="FormRow">
+        <div class="FormField">
+            <label class="FormField-label">First Name</label>
+            <input type="text" class="Input" placeholder="John">
+        </div>
+        <div class="FormField">
+            <label class="FormField-label">Last Name</label>
+            <input type="text" class="Input" placeholder="Doe">
+        </div>
+    </div>
+    <div class="FormField" style="margin-top: var(--space-4);">
+        <label class="FormField-label">Email</label>
+        <input type="email" class="Input" placeholder="john.doe@example.com">
+    </div>
+</form></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;form style=&quot;max-width: 500px;&quot;&gt;
+&lt;div class=&quot;FormRow&quot;&gt;
+&lt;div class=&quot;FormField&quot;&gt;
+&lt;label class=&quot;FormField-label&quot;&gt;First Name&lt;/label&gt;
+&lt;input type=&quot;text&quot; class=&quot;Input&quot; placeholder=&quot;John&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;FormField&quot;&gt;
+&lt;label class=&quot;FormField-label&quot;&gt;Last Name&lt;/label&gt;
+&lt;input type=&quot;text&quot; class=&quot;Input&quot; placeholder=&quot;Doe&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;FormField&quot; style=&quot;margin-top: var(--space-4);&quot;&gt;
+&lt;label class=&quot;FormField-label&quot;&gt;Email&lt;/label&gt;
+&lt;input type=&quot;email&quot; class=&quot;Input&quot; placeholder=&quot;john.doe@example.com&quot;&gt;
+&lt;/div&gt;
+&lt;/form&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="common-patterns">Common Patterns</h2>
+<h3 id="login-form">Login Form</h3>
+
+<div class="Preview" id="preview-ruzaafp78">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Card" style="max-width: 400px; margin: 0 auto;">
+    <div class="Card-body">
+        <div style="text-align: center; margin-bottom: var(--space-6);">
+            <h3 style="margin: 0 0 var(--space-2);">Welcome back</h3>
+            <p style="color: var(--fg-3); margin: 0; font-size: 0.9rem;">Sign in to your account</p>
+        </div>
+        <form style="display: flex; flex-direction: column; gap: var(--space-4);">
+            <div class="FormField">
+                <label class="FormField-label FormField-label--required">Email</label>
+                <div class="Input-wrapper">
+                    <i class="ph ph-envelope Input-icon"></i>
+                    <input type="email" class="Input Input--withIcon" placeholder="you@example.com">
+                </div>
+            </div>
+            <div class="FormField">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <label class="FormField-label FormField-label--required">Password</label>
+                    <a href="#" class="Link" style="font-size: 0.8rem;">Forgot password?</a>
+                </div>
+                <div class="Input-wrapper">
+                    <input type="password" class="Input Input--withIconTrailing" placeholder="••••••••">
+                    <button type="button" class="Input-toggle" aria-label="Show password">
+                        <i class="ph ph-eye"></i>
+                    </button>
+                </div>
+            </div>
+            <label class="Checkbox">
+                <input type="checkbox" class="Checkbox-input">
+                <span class="Checkbox-box"></span>
+                <span class="Checkbox-label">Remember me for 30 days</span>
+            </label>
+            <button type="submit" class="Button Button--primary Button--block">Sign In</button>
+        </form>
+        <div style="text-align: center; margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--bd);">
+            <span style="color: var(--fg-3); font-size: 0.9rem;">Don't have an account? </span>
+            <a href="#" class="Link">Sign up</a>
+        </div>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Card&quot; style=&quot;max-width: 400px; margin: 0 auto;&quot;&gt;
+&lt;div class=&quot;Card-body&quot;&gt;
+&lt;div style=&quot;text-align: center; margin-bottom: var(--space-6);&quot;&gt;
+&lt;h3 style=&quot;margin: 0 0 var(--space-2);&quot;&gt;Welcome back&lt;/h3&gt;
+&lt;p style=&quot;color: var(--fg-3); margin: 0; font-size: 0.9rem;&quot;&gt;Sign in to your account&lt;/p&gt;
+&lt;/div&gt;
+&lt;form style=&quot;display: flex; flex-direction: column; gap: var(--space-4);&quot;&gt;
+&lt;div class=&quot;FormField&quot;&gt;
+&lt;label class=&quot;FormField-label FormField-label--required&quot;&gt;Email&lt;/label&gt;
+&lt;div class=&quot;Input-wrapper&quot;&gt;
+&lt;i class=&quot;ph ph-envelope Input-icon&quot;&gt;&lt;/i&gt;
+&lt;input type=&quot;email&quot; class=&quot;Input Input--withIcon&quot; placeholder=&quot;you@example.com&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;FormField&quot;&gt;
+&lt;div style=&quot;display: flex; justify-content: space-between; align-items: center;&quot;&gt;
+&lt;label class=&quot;FormField-label FormField-label--required&quot;&gt;Password&lt;/label&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link&quot; style=&quot;font-size: 0.8rem;&quot;&gt;Forgot password?&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Input-wrapper&quot;&gt;
+&lt;input type=&quot;password&quot; class=&quot;Input Input--withIconTrailing&quot; placeholder=&quot;••••••••&quot;&gt;
+&lt;button type=&quot;button&quot; class=&quot;Input-toggle&quot; aria-label=&quot;Show password&quot;&gt;
+&lt;i class=&quot;ph ph-eye&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;label class=&quot;Checkbox&quot;&gt;
+&lt;input type=&quot;checkbox&quot; class=&quot;Checkbox-input&quot;&gt;
+&lt;span class=&quot;Checkbox-box&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;Checkbox-label&quot;&gt;Remember me for 30 days&lt;/span&gt;
+&lt;/label&gt;
+&lt;button type=&quot;submit&quot; class=&quot;Button Button--primary Button--block&quot;&gt;Sign In&lt;/button&gt;
+&lt;/form&gt;
+&lt;div style=&quot;text-align: center; margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--bd);&quot;&gt;
+&lt;span style=&quot;color: var(--fg-3); font-size: 0.9rem;&quot;&gt;Don&#039;t have an account? &lt;/span&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link&quot;&gt;Sign up&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="signup-form">Signup Form</h3>
+
+<div class="Preview" id="preview-ymr1kjljl">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Card" style="max-width: 480px; margin: 0 auto;">
+    <div class="Card-body">
+        <div style="text-align: center; margin-bottom: var(--space-6);">
+            <h3 style="margin: 0 0 var(--space-2);">Create your account</h3>
+            <p style="color: var(--fg-3); margin: 0; font-size: 0.9rem;">Start your 14-day free trial</p>
+        </div>
+        <form style="display: flex; flex-direction: column; gap: var(--space-4);">
+            <div class="FormRow">
+                <div class="FormField">
+                    <label class="FormField-label FormField-label--required">First name</label>
+                    <input type="text" class="Input" placeholder="John">
+                </div>
+                <div class="FormField">
+                    <label class="FormField-label FormField-label--required">Last name</label>
+                    <input type="text" class="Input" placeholder="Doe">
+                </div>
+            </div>
+            <div class="FormField">
+                <label class="FormField-label FormField-label--required">Email</label>
+                <input type="email" class="Input" placeholder="john@example.com">
+            </div>
+            <div class="FormField">
+                <label class="FormField-label FormField-label--required">Password</label>
+                <input type="password" class="Input" placeholder="Create a strong password">
+                <span class="FormField-helper">Must be at least 8 characters with a number and symbol</span>
+            </div>
+            <label class="Checkbox">
+                <input type="checkbox" class="Checkbox-input">
+                <span class="Checkbox-box"></span>
+                <span class="Checkbox-label" style="font-size: 0.85rem;">I agree to the <a href="#" class="Link">Terms of Service</a> and <a href="#" class="Link">Privacy Policy</a></span>
+            </label>
+            <button type="submit" class="Button Button--primary Button--block">Create Account</button>
+        </form>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Card&quot; style=&quot;max-width: 480px; margin: 0 auto;&quot;&gt;
+&lt;div class=&quot;Card-body&quot;&gt;
+&lt;div style=&quot;text-align: center; margin-bottom: var(--space-6);&quot;&gt;
+&lt;h3 style=&quot;margin: 0 0 var(--space-2);&quot;&gt;Create your account&lt;/h3&gt;
+&lt;p style=&quot;color: var(--fg-3); margin: 0; font-size: 0.9rem;&quot;&gt;Start your 14-day free trial&lt;/p&gt;
+&lt;/div&gt;
+&lt;form style=&quot;display: flex; flex-direction: column; gap: var(--space-4);&quot;&gt;
+&lt;div class=&quot;FormRow&quot;&gt;
+&lt;div class=&quot;FormField&quot;&gt;
+&lt;label class=&quot;FormField-label FormField-label--required&quot;&gt;First name&lt;/label&gt;
+&lt;input type=&quot;text&quot; class=&quot;Input&quot; placeholder=&quot;John&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;FormField&quot;&gt;
+&lt;label class=&quot;FormField-label FormField-label--required&quot;&gt;Last name&lt;/label&gt;
+&lt;input type=&quot;text&quot; class=&quot;Input&quot; placeholder=&quot;Doe&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;FormField&quot;&gt;
+&lt;label class=&quot;FormField-label FormField-label--required&quot;&gt;Email&lt;/label&gt;
+&lt;input type=&quot;email&quot; class=&quot;Input&quot; placeholder=&quot;john@example.com&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;FormField&quot;&gt;
+&lt;label class=&quot;FormField-label FormField-label--required&quot;&gt;Password&lt;/label&gt;
+&lt;input type=&quot;password&quot; class=&quot;Input&quot; placeholder=&quot;Create a strong password&quot;&gt;
+&lt;span class=&quot;FormField-helper&quot;&gt;Must be at least 8 characters with a number and symbol&lt;/span&gt;
+&lt;/div&gt;
+&lt;label class=&quot;Checkbox&quot;&gt;
+&lt;input type=&quot;checkbox&quot; class=&quot;Checkbox-input&quot;&gt;
+&lt;span class=&quot;Checkbox-box&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;Checkbox-label&quot; style=&quot;font-size: 0.85rem;&quot;&gt;I agree to the &lt;a href=&quot;#&quot; class=&quot;Link&quot;&gt;Terms of Service&lt;/a&gt; and &lt;a href=&quot;#&quot; class=&quot;Link&quot;&gt;Privacy Policy&lt;/a&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;button type=&quot;submit&quot; class=&quot;Button Button--primary Button--block&quot;&gt;Create Account&lt;/button&gt;
+&lt;/form&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="settings-form">Settings Form</h3>
+
+<div class="Preview" id="preview-qthlzt1kj">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><form style="max-width: 600px;">
+    <fieldset class="FormFieldset" style="margin-bottom: var(--space-6);">
+        <legend class="FormFieldset-legend" style="font-size: 1rem; margin-bottom: var(--space-4);">Profile Information</legend>
+        <div style="display: flex; flex-direction: column; gap: var(--space-4);">
+            <div class="FormRow">
+                <div class="FormField">
+                    <label class="FormField-label">First name</label>
+                    <input type="text" class="Input" value="Sarah">
+                </div>
+                <div class="FormField">
+                    <label class="FormField-label">Last name</label>
+                    <input type="text" class="Input" value="Chen">
+                </div>
+            </div>
+            <div class="FormField">
+                <label class="FormField-label">Email</label>
+                <input type="email" class="Input" value="sarah@example.com">
+            </div>
+            <div class="FormField">
+                <label class="FormField-label">Bio</label>
+                <textarea class="Textarea" rows="3" placeholder="Tell us about yourself..."></textarea>
+                <div class="FormField-footer">
+                    <span class="FormField-helper">Brief description for your profile</span>
+                    <span class="FormField-count">0/160</span>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset class="FormFieldset" style="margin-bottom: var(--space-6);">
+        <legend class="FormFieldset-legend" style="font-size: 1rem; margin-bottom: var(--space-4);">Notifications</legend>
+        <div style="display: flex; flex-direction: column; gap: var(--space-4);">
+            <label class="Switch Switch--block">
+                <div class="Switch-content">
+                    <span class="Switch-label">Email notifications</span>
+                    <span class="Switch-description">Receive emails about account activity</span>
+                </div>
+                <input type="checkbox" class="Switch-input" checked>
+                <span class="Switch-track"></span>
+            </label>
+            <label class="Switch Switch--block">
+                <div class="Switch-content">
+                    <span class="Switch-label">Push notifications</span>
+                    <span class="Switch-description">Receive push notifications on your devices</span>
+                </div>
+                <input type="checkbox" class="Switch-input">
+                <span class="Switch-track"></span>
+            </label>
+        </div>
+    </fieldset>
+    <div style="display: flex; gap: var(--space-3); justify-content: flex-end; padding-top: var(--space-4); border-top: 1px solid var(--bd);">
+        <button type="button" class="Button Button--secondary">Cancel</button>
+        <button type="submit" class="Button Button--primary">Save Changes</button>
+    </div>
+</form></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;form style=&quot;max-width: 600px;&quot;&gt;
+&lt;fieldset class=&quot;FormFieldset&quot; style=&quot;margin-bottom: var(--space-6);&quot;&gt;
+&lt;legend class=&quot;FormFieldset-legend&quot; style=&quot;font-size: 1rem; margin-bottom: var(--space-4);&quot;&gt;Profile Information&lt;/legend&gt;
+&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-4);&quot;&gt;
+&lt;div class=&quot;FormRow&quot;&gt;
+&lt;div class=&quot;FormField&quot;&gt;
+&lt;label class=&quot;FormField-label&quot;&gt;First name&lt;/label&gt;
+&lt;input type=&quot;text&quot; class=&quot;Input&quot; value=&quot;Sarah&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;FormField&quot;&gt;
+&lt;label class=&quot;FormField-label&quot;&gt;Last name&lt;/label&gt;
+&lt;input type=&quot;text&quot; class=&quot;Input&quot; value=&quot;Chen&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;FormField&quot;&gt;
+&lt;label class=&quot;FormField-label&quot;&gt;Email&lt;/label&gt;
+&lt;input type=&quot;email&quot; class=&quot;Input&quot; value=&quot;sarah@example.com&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;FormField&quot;&gt;
+&lt;label class=&quot;FormField-label&quot;&gt;Bio&lt;/label&gt;
+&lt;textarea class=&quot;Textarea&quot; rows=&quot;3&quot; placeholder=&quot;Tell us about yourself...&quot;&gt;&lt;/textarea&gt;
+&lt;div class=&quot;FormField-footer&quot;&gt;
+&lt;span class=&quot;FormField-helper&quot;&gt;Brief description for your profile&lt;/span&gt;
+&lt;span class=&quot;FormField-count&quot;&gt;0/160&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/fieldset&gt;
+&lt;fieldset class=&quot;FormFieldset&quot; style=&quot;margin-bottom: var(--space-6);&quot;&gt;
+&lt;legend class=&quot;FormFieldset-legend&quot; style=&quot;font-size: 1rem; margin-bottom: var(--space-4);&quot;&gt;Notifications&lt;/legend&gt;
+&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-4);&quot;&gt;
+&lt;label class=&quot;Switch Switch--block&quot;&gt;
+&lt;div class=&quot;Switch-content&quot;&gt;
+&lt;span class=&quot;Switch-label&quot;&gt;Email notifications&lt;/span&gt;
+&lt;span class=&quot;Switch-description&quot;&gt;Receive emails about account activity&lt;/span&gt;
+&lt;/div&gt;
+&lt;input type=&quot;checkbox&quot; class=&quot;Switch-input&quot; checked&gt;
+&lt;span class=&quot;Switch-track&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;Switch Switch--block&quot;&gt;
+&lt;div class=&quot;Switch-content&quot;&gt;
+&lt;span class=&quot;Switch-label&quot;&gt;Push notifications&lt;/span&gt;
+&lt;span class=&quot;Switch-description&quot;&gt;Receive push notifications on your devices&lt;/span&gt;
+&lt;/div&gt;
+&lt;input type=&quot;checkbox&quot; class=&quot;Switch-input&quot;&gt;
+&lt;span class=&quot;Switch-track&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;/div&gt;
+&lt;/fieldset&gt;
+&lt;div style=&quot;display: flex; gap: var(--space-3); justify-content: flex-end; padding-top: var(--space-4); border-top: 1px solid var(--bd);&quot;&gt;
+&lt;button type=&quot;button&quot; class=&quot;Button Button--secondary&quot;&gt;Cancel&lt;/button&gt;
+&lt;button type=&quot;submit&quot; class=&quot;Button Button--primary&quot;&gt;Save Changes&lt;/button&gt;
+&lt;/div&gt;
+&lt;/form&gt;</code></pre>
+    </div>
+</div><h3 id="contact-form">Contact Form</h3>
+
+<div class="Preview" id="preview-svcb51kca">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><form class="Card" style="max-width: 500px;">
+    <div class="Card-header">
+        <h4 class="Card-title">Get in touch</h4>
+    </div>
+    <div class="Card-body" style="display: flex; flex-direction: column; gap: var(--space-4);">
+        <div class="FormRow">
+            <div class="FormField">
+                <label class="FormField-label FormField-label--required">Name</label>
+                <input type="text" class="Input" placeholder="Your name">
+            </div>
+            <div class="FormField">
+                <label class="FormField-label FormField-label--required">Email</label>
+                <input type="email" class="Input" placeholder="you@example.com">
+            </div>
+        </div>
+        <div class="FormField">
+            <label class="FormField-label FormField-label--required">Subject</label>
+            <select class="Select">
+                <option value="">Select a topic...</option>
+                <option>General Inquiry</option>
+                <option>Technical Support</option>
+                <option>Billing Question</option>
+                <option>Partnership</option>
+            </select>
+        </div>
+        <div class="FormField">
+            <label class="FormField-label FormField-label--required">Message</label>
+            <textarea class="Textarea" rows="5" placeholder="How can we help?"></textarea>
+        </div>
+    </div>
+    <div class="Card-footer">
+        <button type="submit" class="Button Button--primary">
+            <i class="ph ph-paper-plane-right Button-icon"></i>
+            Send Message
+        </button>
+    </div>
+</form></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;form class=&quot;Card&quot; style=&quot;max-width: 500px;&quot;&gt;
+&lt;div class=&quot;Card-header&quot;&gt;
+&lt;h4 class=&quot;Card-title&quot;&gt;Get in touch&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Card-body&quot; style=&quot;display: flex; flex-direction: column; gap: var(--space-4);&quot;&gt;
+&lt;div class=&quot;FormRow&quot;&gt;
+&lt;div class=&quot;FormField&quot;&gt;
+&lt;label class=&quot;FormField-label FormField-label--required&quot;&gt;Name&lt;/label&gt;
+&lt;input type=&quot;text&quot; class=&quot;Input&quot; placeholder=&quot;Your name&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;FormField&quot;&gt;
+&lt;label class=&quot;FormField-label FormField-label--required&quot;&gt;Email&lt;/label&gt;
+&lt;input type=&quot;email&quot; class=&quot;Input&quot; placeholder=&quot;you@example.com&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;FormField&quot;&gt;
+&lt;label class=&quot;FormField-label FormField-label--required&quot;&gt;Subject&lt;/label&gt;
+&lt;select class=&quot;Select&quot;&gt;
+&lt;option value=&quot;&quot;&gt;Select a topic...&lt;/option&gt;
+&lt;option&gt;General Inquiry&lt;/option&gt;
+&lt;option&gt;Technical Support&lt;/option&gt;
+&lt;option&gt;Billing Question&lt;/option&gt;
+&lt;option&gt;Partnership&lt;/option&gt;
+&lt;/select&gt;
+&lt;/div&gt;
+&lt;div class=&quot;FormField&quot;&gt;
+&lt;label class=&quot;FormField-label FormField-label--required&quot;&gt;Message&lt;/label&gt;
+&lt;textarea class=&quot;Textarea&quot; rows=&quot;5&quot; placeholder=&quot;How can we help?&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Card-footer&quot;&gt;
+&lt;button type=&quot;submit&quot; class=&quot;Button Button--primary&quot;&gt;
+&lt;i class=&quot;ph ph-paper-plane-right Button-icon&quot;&gt;&lt;/i&gt;
+Send Message
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/form&gt;</code></pre>
+    </div>
+</div><h3 id="form-validation">Form Validation</h3>
+
+<div class="Preview" id="preview-aloh5mxx1">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><form style="max-width: 400px; display: flex; flex-direction: column; gap: var(--space-4);">
+    <div class="FormField FormField--error">
+        <label class="FormField-label FormField-label--required">Email</label>
+        <input type="email" class="Input Input--error" value="invalid-email">
+        <span class="FormField-message FormField-message--error">
+            <i class="ph ph-warning-circle"></i>
+            Please enter a valid email address
+        </span>
+    </div>
+    <div class="FormField FormField--success">
+        <label class="FormField-label FormField-label--required">Password</label>
+        <input type="password" class="Input Input--success" value="••••••••">
+        <span class="FormField-message FormField-message--success">
+            <i class="ph ph-check-circle"></i>
+            Strong password
+        </span>
+    </div>
+    <div class="FormField">
+        <label class="FormField-label FormField-label--required">Confirm Password</label>
+        <input type="password" class="Input" placeholder="Re-enter password">
+    </div>
+    <button type="submit" class="Button Button--primary Button--block" disabled>Create Account</button>
+</form></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;form style=&quot;max-width: 400px; display: flex; flex-direction: column; gap: var(--space-4);&quot;&gt;
+&lt;div class=&quot;FormField FormField--error&quot;&gt;
+&lt;label class=&quot;FormField-label FormField-label--required&quot;&gt;Email&lt;/label&gt;
+&lt;input type=&quot;email&quot; class=&quot;Input Input--error&quot; value=&quot;invalid-email&quot;&gt;
+&lt;span class=&quot;FormField-message FormField-message--error&quot;&gt;
+&lt;i class=&quot;ph ph-warning-circle&quot;&gt;&lt;/i&gt;
+Please enter a valid email address
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;FormField FormField--success&quot;&gt;
+&lt;label class=&quot;FormField-label FormField-label--required&quot;&gt;Password&lt;/label&gt;
+&lt;input type=&quot;password&quot; class=&quot;Input Input--success&quot; value=&quot;••••••••&quot;&gt;
+&lt;span class=&quot;FormField-message FormField-message--success&quot;&gt;
+&lt;i class=&quot;ph ph-check-circle&quot;&gt;&lt;/i&gt;
+Strong password
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;FormField&quot;&gt;
+&lt;label class=&quot;FormField-label FormField-label--required&quot;&gt;Confirm Password&lt;/label&gt;
+&lt;input type=&quot;password&quot; class=&quot;Input&quot; placeholder=&quot;Re-enter password&quot;&gt;
+&lt;/div&gt;
+&lt;button type=&quot;submit&quot; class=&quot;Button Button--primary Button--block&quot; disabled&gt;Create Account&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="customization">Customization</h2>
+<p>Override form styles using CSS custom properties:</p>
+<pre><code class="language-css">/* Custom input styling */
+.Input {
+  --input-radius: var(--space-2);
+  --input-border: var(--bd-s);
+  --input-focus: var(--accent);
+  
+  border-radius: var(--input-radius);
+  border-color: var(--input-border);
+}
+
+.Input:focus {
+  border-color: var(--input-focus);
+  box-shadow: 0 0 0 2px oklch(60% 0.15 250 / 0.15);
+}
+
+/* Custom checkbox color */
+.Checkbox-input:checked + .Checkbox-box {
+  background-color: oklch(55% 0.2 150); /* Green */
+  border-color: oklch(55% 0.2 150);
+}
+
+/* Custom switch color */
+.Switch-input:checked + .Switch-track {
+  background-color: oklch(55% 0.2 150);
+  border-color: oklch(55% 0.2 150);
+}
+
+/* Pill-shaped inputs */
+.Input--pill {
+  border-radius: 999px;
+  padding-left: var(--space-4);
+  padding-right: var(--space-4);
+}
+
+/* Custom error color */
+.Input--error {
+  border-color: oklch(55% 0.25 0); /* Deeper red */
+}
+</code></pre>
+<hr>
+<h2 id="api-reference">API Reference</h2>
+<h3 id="form-field-classes">Form Field Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.FormField</code></td>
+<td class="ApiTable-desc">Container for label, input, and helper text</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.FormField-label</code></td>
+<td class="ApiTable-desc">Label styling for form fields</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.FormField-label--required</code></td>
+<td class="ApiTable-desc">Adds asterisk to indicate required field</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.FormField-helper</code></td>
+<td class="ApiTable-desc">Helper text below input</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.FormField-message</code></td>
+<td class="ApiTable-desc">Validation message container</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.FormField-message--error</code></td>
+<td class="ApiTable-desc">Error message styling (red)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.FormField-message--success</code></td>
+<td class="ApiTable-desc">Success message styling (green)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.FormField-footer</code></td>
+<td class="ApiTable-desc">Container for helper + count</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.FormField-count</code></td>
+<td class="ApiTable-desc">Character count display</td>
+</tr>
+</tbody>
+</table>
+<h3 id="input-classes">Input Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Input</code></td>
+<td class="ApiTable-desc">Base input styling (required)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Input--small</code></td>
+<td class="ApiTable-desc">Small input size</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Input--large</code></td>
+<td class="ApiTable-desc">Large input size</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Input--error</code></td>
+<td class="ApiTable-desc">Error state (red border)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Input--success</code></td>
+<td class="ApiTable-desc">Success state (green border)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Input--withIcon</code></td>
+<td class="ApiTable-desc">Padding for leading icon</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Input--withIconTrailing</code></td>
+<td class="ApiTable-desc">Padding for trailing icon</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Input--grouped</code></td>
+<td class="ApiTable-desc">For input + button combos</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Input-wrapper</code></td>
+<td class="ApiTable-desc">Container for input with icon</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Input-icon</code></td>
+<td class="ApiTable-desc">Icon inside input wrapper</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Input-icon--trailing</code></td>
+<td class="ApiTable-desc">Position icon on right</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Input-toggle</code></td>
+<td class="ApiTable-desc">Password visibility toggle button</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Input-group</code></td>
+<td class="ApiTable-desc">Container for input + button</td>
+</tr>
+</tbody>
+</table>
+<h3 id="textarea-classes">Textarea Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Textarea</code></td>
+<td class="ApiTable-desc">Base textarea styling</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Textarea--error</code></td>
+<td class="ApiTable-desc">Error state (red border)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="select-classes">Select Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Select</code></td>
+<td class="ApiTable-desc">Base select/dropdown styling</td>
+</tr>
+</tbody>
+</table>
+<h3 id="checkbox-classes">Checkbox Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Checkbox</code></td>
+<td class="ApiTable-desc">Container for custom checkbox</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Checkbox-input</code></td>
+<td class="ApiTable-desc">Hidden native checkbox</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Checkbox-box</code></td>
+<td class="ApiTable-desc">Custom checkbox visual</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Checkbox-box--indeterminate</code></td>
+<td class="ApiTable-desc">Indeterminate state styling</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Checkbox-label</code></td>
+<td class="ApiTable-desc">Label text for checkbox</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Checkbox--disabled</code></td>
+<td class="ApiTable-desc">Disabled state</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.CheckboxGroup</code></td>
+<td class="ApiTable-desc">Container for multiple checkboxes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="radio-classes">Radio Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Radio</code></td>
+<td class="ApiTable-desc">Container for custom radio</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Radio-input</code></td>
+<td class="ApiTable-desc">Hidden native radio</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Radio-circle</code></td>
+<td class="ApiTable-desc">Custom radio visual</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Radio-label</code></td>
+<td class="ApiTable-desc">Label text for radio</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.RadioGroup</code></td>
+<td class="ApiTable-desc">Container for radio group</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.RadioCardGroup</code></td>
+<td class="ApiTable-desc">Container for radio cards</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.RadioCard</code></td>
+<td class="ApiTable-desc">Rich radio option with description</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.RadioCard--selected</code></td>
+<td class="ApiTable-desc">Selected radio card state</td>
+</tr>
+</tbody>
+</table>
+<h3 id="switch-classes">Switch Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Switch</code></td>
+<td class="ApiTable-desc">Container for toggle switch</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Switch-input</code></td>
+<td class="ApiTable-desc">Hidden native checkbox</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Switch-track</code></td>
+<td class="ApiTable-desc">Switch track and thumb</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Switch-label</code></td>
+<td class="ApiTable-desc">Label text for switch</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Switch--block</code></td>
+<td class="ApiTable-desc">Full-width switch with border</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Switch--small</code></td>
+<td class="ApiTable-desc">Small switch size</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Switch--large</code></td>
+<td class="ApiTable-desc">Large switch size</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Switch--disabled</code></td>
+<td class="ApiTable-desc">Disabled state</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Switch-content</code></td>
+<td class="ApiTable-desc">Container for label + description</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Switch-description</code></td>
+<td class="ApiTable-desc">Secondary text under label</td>
+</tr>
+</tbody>
+</table>
+<h3 id="file-upload-classes">File Upload Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.FileInput</code></td>
+<td class="ApiTable-desc">File upload container</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.FileInput-input</code></td>
+<td class="ApiTable-desc">Hidden native file input</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.FileInput-label</code></td>
+<td class="ApiTable-desc">Styled drop zone label</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.FileInput-icon</code></td>
+<td class="ApiTable-desc">Upload icon</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.FileInput-text</code></td>
+<td class="ApiTable-desc">Main drop zone text</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.FileInput-hint</code></td>
+<td class="ApiTable-desc">File type/size hint</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.FileInput--with-preview</code></td>
+<td class="ApiTable-desc">Layout for preview thumbnail</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.FileInput--multiple</code></td>
+<td class="ApiTable-desc">Multiple file upload variant</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.FileInput-list</code></td>
+<td class="ApiTable-desc">Container for uploaded file list</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.FileInput-item</code></td>
+<td class="ApiTable-desc">Individual file item</td>
+</tr>
+</tbody>
+</table>
+<h3 id="layout-classes">Layout Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.FormInline</code></td>
+<td class="ApiTable-desc">Horizontal form layout</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.FormRow</code></td>
+<td class="ApiTable-desc">Two-column grid row</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.FormFieldset</code></td>
+<td class="ApiTable-desc">Fieldset without default styling</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.FormFieldset-legend</code></td>
+<td class="ApiTable-desc">Fieldset legend styling</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="css-reference">CSS Reference</h2>
+<pre><code class="language-css">/* Form Field */
+.FormField {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.FormField-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--fg);
+}
+
+.FormField-label--required::after {
+  content: &quot; *&quot;;
+  color: oklch(55% 0.2 25);
+}
+
+.FormField-helper {
+  font-size: 0.8rem;
+  color: var(--fg-3);
+}
+
+.FormField-message {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: 0.8rem;
+}
+
+.FormField-message--error {
+  color: oklch(55% 0.2 25);
+}
+
+.FormField-message--success {
+  color: oklch(55% 0.15 150);
+}
+
+.FormField-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.FormField-count {
+  font-size: 0.8rem;
+  color: var(--fg-3);
+}
+
+/* Input */
+.Input {
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.9rem;
+  border: 1px solid var(--bd-s);
+  border-radius: var(--r-s);
+  background: var(--bg);
+  color: var(--fg);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.Input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px oklch(60% 0.15 250 / 0.15);
+}
+
+.Input::placeholder {
+  color: var(--fg-3);
+}
+
+.Input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: var(--bg-s);
+}
+
+/* Input Sizes */
+.Input--small {
+  padding: var(--space-1) var(--space-2);
+  font-size: 0.8rem;
+}
+
+.Input--large {
+  padding: var(--space-3) var(--space-4);
+  font-size: 1rem;
+}
+
+/* Input States */
+.Input--error {
+  border-color: oklch(55% 0.2 25);
+}
+
+.Input--error:focus {
+  box-shadow: 0 0 0 2px oklch(55% 0.2 25 / 0.15);
+}
+
+.Input--success {
+  border-color: oklch(55% 0.15 150);
+}
+
+.Input--success:focus {
+  box-shadow: 0 0 0 2px oklch(55% 0.15 150 / 0.15);
+}
+
+/* Input with Icons */
+.Input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.Input-icon {
+  position: absolute;
+  left: var(--space-3);
+  color: var(--fg-3);
+  pointer-events: none;
+}
+
+.Input-icon--trailing {
+  left: auto;
+  right: var(--space-3);
+}
+
+.Input--withIcon {
+  padding-left: calc(var(--space-3) + 1.25rem + var(--space-2));
+}
+
+.Input--withIconTrailing {
+  padding-right: calc(var(--space-3) + 1.25rem + var(--space-2));
+}
+
+.Input-toggle {
+  position: absolute;
+  right: var(--space-2);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--fg-3);
+  padding: var(--space-1);
+}
+
+/* Input Group */
+.Input-group {
+  display: flex;
+}
+
+.Input--grouped {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: none;
+}
+
+.Input-group .Button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* Textarea */
+.Textarea {
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.9rem;
+  border: 1px solid var(--bd-s);
+  border-radius: var(--r-s);
+  background: var(--bg);
+  color: var(--fg);
+  resize: vertical;
+  min-height: 80px;
+  font-family: inherit;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.Textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px oklch(60% 0.15 250 / 0.15);
+}
+
+/* Select */
+.Select {
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.9rem;
+  border: 1px solid var(--bd-s);
+  border-radius: var(--r-s);
+  background: var(--bg);
+  color: var(--fg);
+  appearance: none;
+  background-image: url(&quot;data:image/svg+xml,...&quot;);
+  background-repeat: no-repeat;
+  background-position: right var(--space-3) center;
+  cursor: pointer;
+}
+
+/* Checkbox */
+.Checkbox {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  cursor: pointer;
+}
+
+.Checkbox-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.Checkbox-box {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--bd-s);
+  border-radius: var(--r-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s, border-color 0.15s;
+  flex-shrink: 0;
+}
+
+.Checkbox-input:checked + .Checkbox-box {
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+.Checkbox-input:focus-visible + .Checkbox-box {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.Checkbox--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.Checkbox-label {
+  font-size: 0.9rem;
+}
+
+/* Radio */
+.Radio {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  cursor: pointer;
+}
+
+.Radio-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.Radio-circle {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--bd-s);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.15s;
+  flex-shrink: 0;
+}
+
+.Radio-input:checked + .Radio-circle {
+  border-color: var(--accent);
+}
+
+.Radio-input:checked + .Radio-circle::after {
+  content: &quot;&quot;;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.RadioGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+/* Radio Card */
+.RadioCardGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.RadioCard {
+  display: flex;
+  padding: var(--space-4);
+  border: 1px solid var(--bd);
+  border-radius: var(--r-m);
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.RadioCard--selected {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+/* Switch */
+.Switch {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  cursor: pointer;
+}
+
+.Switch-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.Switch-track {
+  width: 40px;
+  height: 22px;
+  background: var(--bg-s);
+  border: 1px solid var(--bd-s);
+  border-radius: 11px;
+  position: relative;
+  transition: background-color 0.2s, border-color 0.2s;
+  flex-shrink: 0;
+}
+
+.Switch-track::after {
+  content: &quot;&quot;;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.2s;
+}
+
+.Switch-input:checked + .Switch-track {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.Switch-input:checked + .Switch-track::after {
+  transform: translateX(18px);
+}
+
+.Switch--small .Switch-track { width: 32px; height: 18px; }
+.Switch--large .Switch-track { width: 48px; height: 26px; }
+
+.Switch--disabled { opacity: 0.5; cursor: not-allowed; }
+
+.Switch--block {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-3);
+  border: 1px solid var(--bd);
+  border-radius: var(--r-m);
+}
+
+.Switch-content { display: flex; flex-direction: column; gap: var(--space-1); }
+.Switch-description { font-size: 0.8rem; color: var(--fg-3); }
+
+/* File Input */
+.FileInput {
+  position: relative;
+}
+
+.FileInput-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.FileInput-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-6);
+  border: 2px dashed var(--bd);
+  border-radius: var(--r-m);
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.FileInput-label:hover {
+  border-color: var(--accent);
+  background: oklch(60% 0.15 250 / 0.05);
+}
+
+.FileInput-icon { font-size: 1.5rem; color: var(--fg-3); }
+.FileInput-text { font-weight: 500; }
+.FileInput-hint { font-size: 0.8rem; color: var(--fg-3); }
+
+.FileInput-list { display: flex; flex-direction: column; gap: var(--space-2); }
+.FileInput-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  border: 1px solid var(--bd);
+  border-radius: var(--r-s);
+}
+
+/* Form Layouts */
+.FormInline {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-end;
+}
+
+.FormRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.FormFieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.FormFieldset-legend {
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+}
+</code></pre>
+<hr>
+<h2 id="accessibility">Accessibility</h2>
+<h3 id="labels">Labels</h3>
+<p>Always associate labels with inputs using <code>for</code>/<code>id</code> or by wrapping.</p>
+<pre><code class="language-html">&lt;!-- Method 1: for/id association --&gt;
+&lt;label for=&quot;email-field&quot;&gt;Email&lt;/label&gt;
+&lt;input type=&quot;email&quot; id=&quot;email-field&quot; class=&quot;Input&quot;&gt;
+
+&lt;!-- Method 2: Wrap input in label --&gt;
+&lt;label class=&quot;Checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+    &lt;span class=&quot;Checkbox-label&quot;&gt;Accept terms&lt;/span&gt;
+&lt;/label&gt;
+</code></pre>
+<h3 id="error-messages">Error Messages</h3>
+<p>Connect error messages to inputs with <code>aria-describedby</code>.</p>
+<pre><code class="language-html">&lt;input 
+    type=&quot;email&quot; 
+    id=&quot;email&quot; 
+    class=&quot;Input Input--error&quot; 
+    aria-invalid=&quot;true&quot;
+    aria-describedby=&quot;email-error&quot;
+&gt;
+&lt;span id=&quot;email-error&quot; class=&quot;FormField-message FormField-message--error&quot;&gt;
+    Please enter a valid email
+&lt;/span&gt;
+</code></pre>
+<h3 id="required-fields">Required Fields</h3>
+<p>Mark required fields programmatically.</p>
+<pre><code class="language-html">&lt;label for=&quot;name&quot;&gt;
+    Name &lt;span aria-hidden=&quot;true&quot;&gt;*&lt;/span&gt;
+&lt;/label&gt;
+&lt;input type=&quot;text&quot; id=&quot;name&quot; required aria-required=&quot;true&quot;&gt;
+</code></pre>
+<h3 id="fieldsets-for-groups">Fieldsets for Groups</h3>
+<p>Use fieldsets to group related fields.</p>
+<pre><code class="language-html">&lt;fieldset&gt;
+    &lt;legend&gt;Shipping Address&lt;/legend&gt;
+    &lt;!-- Address fields --&gt;
+&lt;/fieldset&gt;
+</code></pre>
+<h3 id="keyboard-support">Keyboard Support</h3>
+<div class="Table-container"><table class="Table">
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tab</td>
+<td>Move focus to next field</td>
+</tr>
+<tr>
+<td>Shift + Tab</td>
+<td>Move focus to previous field</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>Toggle checkbox/switch, select radio</td>
+</tr>
+<tr>
+<td>Arrow keys</td>
+<td>Navigate between radio options</td>
+</tr>
+<tr>
+<td>Enter</td>
+<td>Submit form (when on button)</td>
+</tr>
+</tbody>
+</table></div>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="do">Do</h3>
+<ul>
+<li>✓ <strong>Use clear, descriptive labels</strong> — “Email address” not “Input 1”</li>
+<li>✓ <strong>Group related fields</strong> — Use fieldsets for address, payment info</li>
+<li>✓ <strong>Show validation inline</strong> — Error messages next to the field</li>
+<li>✓ <strong>Indicate required fields</strong> — Asterisk or “(required)” text</li>
+<li>✓ <strong>Provide helper text</strong> — Format hints, password requirements</li>
+<li>✓ <strong>Use appropriate input types</strong> — <code>type=&quot;email&quot;</code>, <code>type=&quot;tel&quot;</code>, etc.</li>
+<li>✓ <strong>Size touch targets</strong> — Minimum 44px for mobile</li>
+</ul>
+<h3 id="don-t">Don’t</h3>
+<ul>
+<li>✗ <strong>Use placeholder as label</strong> — Placeholders disappear on focus</li>
+<li>✗ <strong>Disable submit without explanation</strong> — Show why it’s disabled</li>
+<li>✗ <strong>Validate on every keystroke</strong> — Wait for blur or submit</li>
+<li>✗ <strong>Use only color for errors</strong> — Add icons and text</li>
+<li>✗ <strong>Reset forms on error</strong> — Preserve user input</li>
+<li>✗ <strong>Hide password requirements</strong> — Show them upfront</li>
+</ul>
+
+                </article>
+
+                <footer class="page-footer">
+                    <p>Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

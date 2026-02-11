@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Badges | Carbon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/bold/style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Floating Pill Nav (Mobile: bottom, Desktop: top) -->
+        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation">
+            <a href="../index.html" class="fnav-btn" data-section="home" aria-label="Home">
+                <i class="ph-bold ph-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="../tokens/colors.html" class="fnav-btn" data-section="tokens" aria-label="Tokens">
+                <i class="ph-bold ph-palette"></i>
+                <span>Tokens</span>
+            </a>
+            <a href="../components/buttons.html" class="fnav-btn" data-section="components" aria-label="Components">
+                <i class="ph-bold ph-stack"></i>
+                <span>Components</span>
+            </a>
+            <a href="../patterns/layouts.html" class="fnav-btn" data-section="patterns" aria-label="Patterns">
+                <i class="ph-bold ph-grid-four"></i>
+                <span>Patterns</span>
+            </a>
+            <div class="fnav-sep"></div>
+            <button class="fnav-btn" id="search-toggle" aria-label="Search">
+                <i class="ph ph-magnifying-glass"></i>
+            </button>
+            <button class="fnav-btn" id="theme-btn" aria-label="Toggle theme">
+                <i class="ph ph-moon"></i>
+            </button>
+        </nav>
+
+        <!-- Glassmorphism Top Bar (Desktop only) -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <a href="../index.html" class="logo">
+                    <i class="ph ph-intersect"></i>
+                    <span>Carbon</span>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <div class="search-container" id="search-container">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search components..." aria-label="Search" autocomplete="off">
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <main class="main-content">
+                <header class="page-header">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="../index.html">Carbon</a> <span class="sep">/</span> <span>Components</span> <span class="sep">/</span> <span>Badges</span>
+                    </nav>
+                    <h1><em>Badges</em></h1>
+                </header>
+                
+                <article class="prose">
+                    <h1>Badges</h1>
+<p>Badges are small status descriptors used to highlight item properties, counts, or states. They provide visual emphasis and quick recognition of important information.</p>
+<hr>
+<h2 id="simple-badges">Simple Badges</h2>
+<p>Basic badges for categorization and labels.</p>
+
+<div class="Preview" id="preview-eptebrb76">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><span class="Badge">Default</span>
+    <span class="Badge Badge--primary">Primary</span>
+    <span class="Badge Badge--secondary">Secondary</span></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;span class=&quot;Badge&quot;&gt;Default&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--primary&quot;&gt;Primary&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--secondary&quot;&gt;Secondary&lt;/span&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;span class=&quot;Badge&quot;&gt;Default&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--primary&quot;&gt;Primary&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--secondary&quot;&gt;Secondary&lt;/span&gt;
+</code></pre>
+<hr>
+<h2 id="status-badges">Status Badges</h2>
+<p>Semantic badges to indicate states like success, warning, or error.</p>
+
+<div class="Preview" id="preview-5f3i4gtk3">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><span class="Badge Badge--success">Active</span>
+    <span class="Badge Badge--warning">Pending</span>
+    <span class="Badge Badge--error">Failed</span>
+    <span class="Badge Badge--info">New</span></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;span class=&quot;Badge Badge--success&quot;&gt;Active&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--warning&quot;&gt;Pending&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--error&quot;&gt;Failed&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--info&quot;&gt;New&lt;/span&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;span class=&quot;Badge Badge--success&quot;&gt;Active&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--warning&quot;&gt;Pending&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--error&quot;&gt;Failed&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--info&quot;&gt;New&lt;/span&gt;
+</code></pre>
+<hr>
+<h2 id="badge-sizes">Badge Sizes</h2>
+<p>Badges come in three sizes: small, medium (default), and large.</p>
+
+<div class="Preview" id="preview-8a2xel56k">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><span class="Badge Badge--primary Badge--small">Small</span>
+    <span class="Badge Badge--primary">Medium</span>
+    <span class="Badge Badge--primary Badge--large">Large</span></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;span class=&quot;Badge Badge--primary Badge--small&quot;&gt;Small&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--primary&quot;&gt;Medium&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--primary Badge--large&quot;&gt;Large&lt;/span&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;span class=&quot;Badge Badge--primary Badge--small&quot;&gt;Small&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--primary&quot;&gt;Medium&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--primary Badge--large&quot;&gt;Large&lt;/span&gt;
+</code></pre>
+<hr>
+<h2 id="pill-badges">Pill Badges</h2>
+<p>Fully rounded badges for a softer appearance.</p>
+
+<div class="Preview" id="preview-o49v4hb4v">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><span class="Badge Badge--pill">Default</span>
+    <span class="Badge Badge--pill Badge--primary">Primary</span>
+    <span class="Badge Badge--pill Badge--success">Success</span>
+    <span class="Badge Badge--pill Badge--warning">Warning</span>
+    <span class="Badge Badge--pill Badge--error">Error</span></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;span class=&quot;Badge Badge--pill&quot;&gt;Default&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--pill Badge--primary&quot;&gt;Primary&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--pill Badge--success&quot;&gt;Success&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--pill Badge--warning&quot;&gt;Warning&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--pill Badge--error&quot;&gt;Error&lt;/span&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;span class=&quot;Badge Badge--pill Badge--primary&quot;&gt;Primary&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--pill Badge--success&quot;&gt;Success&lt;/span&gt;
+</code></pre>
+<hr>
+<h2 id="outline-badges">Outline Badges</h2>
+<p>Badges with transparent background and colored border.</p>
+
+<div class="Preview" id="preview-93ju5kc3w">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><span class="Badge Badge--outline">Default</span>
+    <span class="Badge Badge--outline Badge--primary">Primary</span>
+    <span class="Badge Badge--outline Badge--success">Success</span>
+    <span class="Badge Badge--outline Badge--warning">Warning</span>
+    <span class="Badge Badge--outline Badge--error">Error</span></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;span class=&quot;Badge Badge--outline&quot;&gt;Default&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--outline Badge--primary&quot;&gt;Primary&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--outline Badge--success&quot;&gt;Success&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--outline Badge--warning&quot;&gt;Warning&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--outline Badge--error&quot;&gt;Error&lt;/span&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;span class=&quot;Badge Badge--outline Badge--primary&quot;&gt;Primary&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--outline Badge--success&quot;&gt;Success&lt;/span&gt;
+</code></pre>
+<hr>
+<h2 id="badges-with-icons">Badges with Icons</h2>
+<p>Add icons for visual reinforcement.</p>
+
+<div class="Preview" id="preview-y60ayi4d3">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><span class="Badge Badge--success">
+        <i class="ph ph-check-circle Badge-icon"></i>
+        Complete
+    </span>
+    <span class="Badge Badge--warning">
+        <i class="ph ph-clock Badge-icon"></i>
+        Pending
+    </span>
+    <span class="Badge Badge--error">
+        <i class="ph ph-warning Badge-icon"></i>
+        Error
+    </span>
+    <span class="Badge Badge--info">
+        <i class="ph ph-info Badge-icon"></i>
+        Info
+    </span></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;span class=&quot;Badge Badge--success&quot;&gt;
+&lt;i class=&quot;ph ph-check-circle Badge-icon&quot;&gt;&lt;/i&gt;
+Complete
+&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--warning&quot;&gt;
+&lt;i class=&quot;ph ph-clock Badge-icon&quot;&gt;&lt;/i&gt;
+Pending
+&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--error&quot;&gt;
+&lt;i class=&quot;ph ph-warning Badge-icon&quot;&gt;&lt;/i&gt;
+Error
+&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--info&quot;&gt;
+&lt;i class=&quot;ph ph-info Badge-icon&quot;&gt;&lt;/i&gt;
+Info
+&lt;/span&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;span class=&quot;Badge Badge--success&quot;&gt;
+    &lt;i class=&quot;ph ph-check-circle Badge-icon&quot;&gt;&lt;/i&gt;
+    Complete
+&lt;/span&gt;
+</code></pre>
+
+<div class="Preview" id="preview-y7tvuo3q3">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><span class="Badge Badge--primary">
+        New Feature
+        <i class="ph ph-arrow-right Badge-icon Badge-icon--trailing"></i>
+    </span>
+    <span class="Badge Badge--secondary">
+        Settings
+        <i class="ph ph-gear Badge-icon Badge-icon--trailing"></i>
+    </span></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;span class=&quot;Badge Badge--primary&quot;&gt;
+New Feature
+&lt;i class=&quot;ph ph-arrow-right Badge-icon Badge-icon--trailing&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--secondary&quot;&gt;
+Settings
+&lt;i class=&quot;ph ph-gear Badge-icon Badge-icon--trailing&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;span class=&quot;Badge Badge--primary&quot;&gt;
+    New Feature
+    &lt;i class=&quot;ph ph-arrow-right Badge-icon Badge-icon--trailing&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;
+</code></pre>
+<hr>
+<h2 id="dot-indicator">Dot Indicator</h2>
+<p>Minimal status indicator without text.</p>
+
+<div class="Preview" id="preview-f2qr0xz97">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><span class="Badge Badge--dot"></span>
+    <span class="Badge Badge--dot Badge--success"></span>
+    <span class="Badge Badge--dot Badge--warning"></span>
+    <span class="Badge Badge--dot Badge--error"></span>
+    <span class="Badge Badge--dot Badge--primary"></span></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;span class=&quot;Badge Badge--dot&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--dot Badge--success&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--dot Badge--warning&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--dot Badge--error&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--dot Badge--primary&quot;&gt;&lt;/span&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;span class=&quot;Badge Badge--dot Badge--success&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--dot Badge--error&quot;&gt;&lt;/span&gt;
+</code></pre>
+
+<div class="Preview" id="preview-75jpzxvth">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; align-items: center; gap: var(--space-2);">
+        <span class="Badge Badge--dot Badge--success"></span>
+        <span style="font-size: 0.875rem;">Online</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: var(--space-2);">
+        <span class="Badge Badge--dot Badge--warning"></span>
+        <span style="font-size: 0.875rem;">Away</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: var(--space-2);">
+        <span class="Badge Badge--dot Badge--error"></span>
+        <span style="font-size: 0.875rem;">Offline</span>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-2);&quot;&gt;
+&lt;span class=&quot;Badge Badge--dot Badge--success&quot;&gt;&lt;/span&gt;
+&lt;span style=&quot;font-size: 0.875rem;&quot;&gt;Online&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-2);&quot;&gt;
+&lt;span class=&quot;Badge Badge--dot Badge--warning&quot;&gt;&lt;/span&gt;
+&lt;span style=&quot;font-size: 0.875rem;&quot;&gt;Away&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-2);&quot;&gt;
+&lt;span class=&quot;Badge Badge--dot Badge--error&quot;&gt;&lt;/span&gt;
+&lt;span style=&quot;font-size: 0.875rem;&quot;&gt;Offline&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="count-badges">Count Badges</h2>
+<p>Badges for displaying numeric counts.</p>
+
+<div class="Preview" id="preview-g63yx5c86">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><span class="Badge Badge--count">5</span>
+    <span class="Badge Badge--count Badge--primary">12</span>
+    <span class="Badge Badge--count Badge--error">99+</span></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;span class=&quot;Badge Badge--count&quot;&gt;5&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--count Badge--primary&quot;&gt;12&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--count Badge--error&quot;&gt;99+&lt;/span&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;span class=&quot;Badge Badge--count&quot;&gt;5&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--count Badge--primary&quot;&gt;12&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--count Badge--error&quot;&gt;99+&lt;/span&gt;
+</code></pre>
+<hr>
+<h2 id="badge-positioning">Badge Positioning</h2>
+<p>Common patterns for positioning badges relative to other elements.</p>
+
+<div class="Preview" id="preview-is8rmzytg">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><button class="Button Button--icon Button--secondary" style="position: relative;" aria-label="Notifications">
+        <i class="ph ph-bell"></i>
+        <span class="Badge Badge--count Badge--error Badge--positioned">3</span>
+    </button>
+    <button class="Button Button--icon Button--secondary" style="position: relative;" aria-label="Messages">
+        <i class="ph ph-envelope"></i>
+        <span class="Badge Badge--count Badge--primary Badge--positioned">12</span>
+    </button>
+    <button class="Button Button--icon Button--secondary" style="position: relative;" aria-label="Cart">
+        <i class="ph ph-shopping-cart"></i>
+        <span class="Badge Badge--dot Badge--error Badge--positioned"></span>
+    </button></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;button class=&quot;Button Button--icon Button--secondary&quot; style=&quot;position: relative;&quot; aria-label=&quot;Notifications&quot;&gt;
+&lt;i class=&quot;ph ph-bell&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;Badge Badge--count Badge--error Badge--positioned&quot;&gt;3&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Button Button--icon Button--secondary&quot; style=&quot;position: relative;&quot; aria-label=&quot;Messages&quot;&gt;
+&lt;i class=&quot;ph ph-envelope&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;Badge Badge--count Badge--primary Badge--positioned&quot;&gt;12&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Button Button--icon Button--secondary&quot; style=&quot;position: relative;&quot; aria-label=&quot;Cart&quot;&gt;
+&lt;i class=&quot;ph ph-shopping-cart&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;Badge Badge--dot Badge--error Badge--positioned&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;button class=&quot;Button Button--icon&quot; style=&quot;position: relative;&quot;&gt;
+    &lt;i class=&quot;ph ph-bell&quot;&gt;&lt;/i&gt;
+    &lt;span class=&quot;Badge Badge--count Badge--error Badge--positioned&quot;&gt;3&lt;/span&gt;
+&lt;/button&gt;
+</code></pre>
+
+<div class="Preview" id="preview-hvdb4zd7d">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; gap: var(--space-6);">
+        <div style="position: relative; display: inline-block;">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=badge1" class="Avatar" alt="User">
+            <span class="Badge Badge--dot Badge--success Badge--avatar"></span>
+        </div>
+        <div style="position: relative; display: inline-block;">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=badge2" class="Avatar" alt="User">
+            <span class="Badge Badge--dot Badge--warning Badge--avatar"></span>
+        </div>
+        <div style="position: relative; display: inline-block;">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=badge3" class="Avatar" alt="User">
+            <span class="Badge Badge--count Badge--error Badge--avatar" style="font-size: 0.65rem;">5</span>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; gap: var(--space-6);&quot;&gt;
+&lt;div style=&quot;position: relative; display: inline-block;&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=badge1&quot; class=&quot;Avatar&quot; alt=&quot;User&quot;&gt;
+&lt;span class=&quot;Badge Badge--dot Badge--success Badge--avatar&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;position: relative; display: inline-block;&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=badge2&quot; class=&quot;Avatar&quot; alt=&quot;User&quot;&gt;
+&lt;span class=&quot;Badge Badge--dot Badge--warning Badge--avatar&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;position: relative; display: inline-block;&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=badge3&quot; class=&quot;Avatar&quot; alt=&quot;User&quot;&gt;
+&lt;span class=&quot;Badge Badge--count Badge--error Badge--avatar&quot; style=&quot;font-size: 0.65rem;&quot;&gt;5&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div style=&quot;position: relative; display: inline-block;&quot;&gt;
+    &lt;img src=&quot;...&quot; class=&quot;Avatar&quot; alt=&quot;User&quot;&gt;
+    &lt;span class=&quot;Badge Badge--dot Badge--success Badge--avatar&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="interactive-badges">Interactive Badges</h2>
+<p>Badges that can be clicked or dismissed.</p>
+
+<div class="Preview" id="preview-ttxjtzy41">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><span class="Badge Badge--primary Badge--dismissible">
+        Filter Active
+        <button class="Badge-dismiss" aria-label="Remove filter">
+            <i class="ph ph-x"></i>
+        </button>
+    </span>
+    <span class="Badge Badge--secondary Badge--dismissible">
+        Tag Name
+        <button class="Badge-dismiss" aria-label="Remove tag">
+            <i class="ph ph-x"></i>
+        </button>
+    </span></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;span class=&quot;Badge Badge--primary Badge--dismissible&quot;&gt;
+Filter Active
+&lt;button class=&quot;Badge-dismiss&quot; aria-label=&quot;Remove filter&quot;&gt;
+&lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--secondary Badge--dismissible&quot;&gt;
+Tag Name
+&lt;button class=&quot;Badge-dismiss&quot; aria-label=&quot;Remove tag&quot;&gt;
+&lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/span&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;span class=&quot;Badge Badge--primary Badge--dismissible&quot;&gt;
+    Filter Active
+    &lt;button class=&quot;Badge-dismiss&quot; aria-label=&quot;Remove filter&quot;&gt;
+        &lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;
+    &lt;/button&gt;
+&lt;/span&gt;
+</code></pre>
+
+<div class="Preview" id="preview-35o6wlghk">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><a href="#" class="Badge Badge--primary Badge--clickable">View Details</a>
+    <a href="#" class="Badge Badge--outline Badge--clickable">Documentation</a></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;a href=&quot;#&quot; class=&quot;Badge Badge--primary Badge--clickable&quot;&gt;View Details&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Badge Badge--outline Badge--clickable&quot;&gt;Documentation&lt;/a&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;a href=&quot;#&quot; class=&quot;Badge Badge--primary Badge--clickable&quot;&gt;View Details&lt;/a&gt;
+</code></pre>
+<hr>
+<h2 id="common-patterns">Common Patterns</h2>
+<h3 id="table-row-status">Table Row Status</h3>
+
+<div class="Preview" id="preview-lkdeili02">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; align-items: center; gap: var(--space-4); padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-m);">
+        <span style="flex: 1; font-weight: 500;">Order #12345</span>
+        <span class="Badge Badge--success">Delivered</span>
+        <span style="color: var(--fg-3); font-size: 0.875rem;">Today</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: var(--space-4); padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-m); margin-top: var(--space-2);">
+        <span style="flex: 1; font-weight: 500;">Order #12346</span>
+        <span class="Badge Badge--warning">In Transit</span>
+        <span style="color: var(--fg-3); font-size: 0.875rem;">Est. Tomorrow</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: var(--space-4); padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-m); margin-top: var(--space-2);">
+        <span style="flex: 1; font-weight: 500;">Order #12347</span>
+        <span class="Badge Badge--error">Cancelled</span>
+        <span style="color: var(--fg-3); font-size: 0.875rem;">—</span>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-4); padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-m);&quot;&gt;
+&lt;span style=&quot;flex: 1; font-weight: 500;&quot;&gt;Order #12345&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--success&quot;&gt;Delivered&lt;/span&gt;
+&lt;span style=&quot;color: var(--fg-3); font-size: 0.875rem;&quot;&gt;Today&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-4); padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-m); margin-top: var(--space-2);&quot;&gt;
+&lt;span style=&quot;flex: 1; font-weight: 500;&quot;&gt;Order #12346&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--warning&quot;&gt;In Transit&lt;/span&gt;
+&lt;span style=&quot;color: var(--fg-3); font-size: 0.875rem;&quot;&gt;Est. Tomorrow&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-4); padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-m); margin-top: var(--space-2);&quot;&gt;
+&lt;span style=&quot;flex: 1; font-weight: 500;&quot;&gt;Order #12347&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--error&quot;&gt;Cancelled&lt;/span&gt;
+&lt;span style=&quot;color: var(--fg-3); font-size: 0.875rem;&quot;&gt;—&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="user-list-with-status">User List with Status</h3>
+
+<div class="Preview" id="preview-t1yajsp9z">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-3); max-width: 320px;">
+        <div style="display: flex; align-items: center; gap: var(--space-3);">
+            <div style="position: relative;">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=user1" class="Avatar Avatar--small" alt="Sarah">
+                <span class="Badge Badge--dot Badge--success Badge--avatar"></span>
+            </div>
+            <div style="flex: 1;">
+                <div style="font-weight: 500; font-size: 0.9rem;">Sarah Chen</div>
+                <div style="font-size: 0.75rem; color: var(--fg-3);">Online</div>
+            </div>
+            <span class="Badge Badge--primary Badge--small">Admin</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: var(--space-3);">
+            <div style="position: relative;">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=user2" class="Avatar Avatar--small" alt="John">
+                <span class="Badge Badge--dot Badge--warning Badge--avatar"></span>
+            </div>
+            <div style="flex: 1;">
+                <div style="font-weight: 500; font-size: 0.9rem;">John Smith</div>
+                <div style="font-size: 0.75rem; color: var(--fg-3);">Away</div>
+            </div>
+            <span class="Badge Badge--secondary Badge--small">Editor</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: var(--space-3);">
+            <div style="position: relative;">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=user3" class="Avatar Avatar--small" alt="Mike">
+                <span class="Badge Badge--dot Badge--avatar" style="background-color: var(--fg-3);"></span>
+            </div>
+            <div style="flex: 1;">
+                <div style="font-weight: 500; font-size: 0.9rem;">Mike Johnson</div>
+                <div style="font-size: 0.75rem; color: var(--fg-3);">Offline</div>
+            </div>
+            <span class="Badge Badge--secondary Badge--small">Viewer</span>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-3); max-width: 320px;&quot;&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-3);&quot;&gt;
+&lt;div style=&quot;position: relative;&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=user1&quot; class=&quot;Avatar Avatar--small&quot; alt=&quot;Sarah&quot;&gt;
+&lt;span class=&quot;Badge Badge--dot Badge--success Badge--avatar&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;flex: 1;&quot;&gt;
+&lt;div style=&quot;font-weight: 500; font-size: 0.9rem;&quot;&gt;Sarah Chen&lt;/div&gt;
+&lt;div style=&quot;font-size: 0.75rem; color: var(--fg-3);&quot;&gt;Online&lt;/div&gt;
+&lt;/div&gt;
+&lt;span class=&quot;Badge Badge--primary Badge--small&quot;&gt;Admin&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-3);&quot;&gt;
+&lt;div style=&quot;position: relative;&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=user2&quot; class=&quot;Avatar Avatar--small&quot; alt=&quot;John&quot;&gt;
+&lt;span class=&quot;Badge Badge--dot Badge--warning Badge--avatar&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;flex: 1;&quot;&gt;
+&lt;div style=&quot;font-weight: 500; font-size: 0.9rem;&quot;&gt;John Smith&lt;/div&gt;
+&lt;div style=&quot;font-size: 0.75rem; color: var(--fg-3);&quot;&gt;Away&lt;/div&gt;
+&lt;/div&gt;
+&lt;span class=&quot;Badge Badge--secondary Badge--small&quot;&gt;Editor&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-3);&quot;&gt;
+&lt;div style=&quot;position: relative;&quot;&gt;
+&lt;img src=&quot;https://api.dicebear.com/7.x/avataaars/svg?seed=user3&quot; class=&quot;Avatar Avatar--small&quot; alt=&quot;Mike&quot;&gt;
+&lt;span class=&quot;Badge Badge--dot Badge--avatar&quot; style=&quot;background-color: var(--fg-3);&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;flex: 1;&quot;&gt;
+&lt;div style=&quot;font-weight: 500; font-size: 0.9rem;&quot;&gt;Mike Johnson&lt;/div&gt;
+&lt;div style=&quot;font-size: 0.75rem; color: var(--fg-3);&quot;&gt;Offline&lt;/div&gt;
+&lt;/div&gt;
+&lt;span class=&quot;Badge Badge--secondary Badge--small&quot;&gt;Viewer&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="feature-tags">Feature Tags</h3>
+
+<div class="Preview" id="preview-c4sqhc2xd">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Card" style="max-width: 360px;">
+        <div class="Card-body">
+            <div style="display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-3);">
+                <span class="Badge Badge--pill Badge--primary Badge--small">Featured</span>
+                <span class="Badge Badge--pill Badge--info Badge--small">New</span>
+            </div>
+            <h4 class="Card-title">Advanced Analytics</h4>
+            <p class="Card-text">Track performance with real-time dashboards and detailed reports.</p>
+            <div style="display: flex; gap: var(--space-2); flex-wrap: wrap; margin-top: var(--space-4);">
+                <span class="Badge Badge--outline Badge--small">Charts</span>
+                <span class="Badge Badge--outline Badge--small">Exports</span>
+                <span class="Badge Badge--outline Badge--small">API</span>
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Card&quot; style=&quot;max-width: 360px;&quot;&gt;
+&lt;div class=&quot;Card-body&quot;&gt;
+&lt;div style=&quot;display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-3);&quot;&gt;
+&lt;span class=&quot;Badge Badge--pill Badge--primary Badge--small&quot;&gt;Featured&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--pill Badge--info Badge--small&quot;&gt;New&lt;/span&gt;
+&lt;/div&gt;
+&lt;h4 class=&quot;Card-title&quot;&gt;Advanced Analytics&lt;/h4&gt;
+&lt;p class=&quot;Card-text&quot;&gt;Track performance with real-time dashboards and detailed reports.&lt;/p&gt;
+&lt;div style=&quot;display: flex; gap: var(--space-2); flex-wrap: wrap; margin-top: var(--space-4);&quot;&gt;
+&lt;span class=&quot;Badge Badge--outline Badge--small&quot;&gt;Charts&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--outline Badge--small&quot;&gt;Exports&lt;/span&gt;
+&lt;span class=&quot;Badge Badge--outline Badge--small&quot;&gt;API&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="notification-header">Notification Header</h3>
+
+<div class="Preview" id="preview-l9vnbhy9y">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; align-items: center; justify-content: space-between; padding: var(--space-4); background: var(--bg-s); border-radius: var(--r-m); max-width: 400px;">
+        <div style="display: flex; align-items: center; gap: var(--space-3);">
+            <h4 style="margin: 0; font-size: 1rem;">Notifications</h4>
+            <span class="Badge Badge--error Badge--small">4 new</span>
+        </div>
+        <button class="Button Button--ghost Button--small">Mark all read</button>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; align-items: center; justify-content: space-between; padding: var(--space-4); background: var(--bg-s); border-radius: var(--r-m); max-width: 400px;&quot;&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-3);&quot;&gt;
+&lt;h4 style=&quot;margin: 0; font-size: 1rem;&quot;&gt;Notifications&lt;/h4&gt;
+&lt;span class=&quot;Badge Badge--error Badge--small&quot;&gt;4 new&lt;/span&gt;
+&lt;/div&gt;
+&lt;button class=&quot;Button Button--ghost Button--small&quot;&gt;Mark all read&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="customization">Customization</h2>
+<p>Override badge styles using CSS custom properties:</p>
+<pre><code class="language-css">/* Custom brand badge */
+.Badge--brand {
+  background-color: oklch(60% 0.15 280 / 0.15);
+  color: oklch(50% 0.15 280);
+}
+
+/* Larger count badge */
+.Badge--count-lg {
+  min-width: 28px;
+  height: 28px;
+  font-size: 0.8rem;
+  padding: 0 var(--space-2);
+}
+
+/* Animated dot (pulsing) */
+.Badge--dot.Badge--pulse {
+  animation: badge-pulse 2s infinite;
+}
+
+@keyframes badge-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* Bordered badge */
+.Badge--bordered {
+  border: 1.5px solid currentColor;
+  background-color: transparent;
+}
+
+/* Custom spacing for tight layouts */
+.Badge--tight {
+  padding: 0 var(--space-1);
+  font-size: 0.65rem;
+}
+</code></pre>
+<hr>
+<h2 id="api-reference">API Reference</h2>
+<h3 id="base-variant-classes">Base &amp; Variant Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">.Badge</code></td><td class="ApiTable-desc">Base badge styling</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge--primary</code></td><td class="ApiTable-desc">Primary color variant</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge--secondary</code></td><td class="ApiTable-desc">Secondary/neutral color variant</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge--success</code></td><td class="ApiTable-desc">Success/positive state</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge--warning</code></td><td class="ApiTable-desc">Warning/caution state</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge--error</code></td><td class="ApiTable-desc">Error/danger state</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge--info</code></td><td class="ApiTable-desc">Informational state</td></tr>
+</tbody>
+</table>
+<h3 id="size-shape-classes">Size &amp; Shape Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">.Badge--small</code></td><td class="ApiTable-desc">Smaller badge size</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge--large</code></td><td class="ApiTable-desc">Larger badge size</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge--pill</code></td><td class="ApiTable-desc">Fully rounded pill shape</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge--outline</code></td><td class="ApiTable-desc">Transparent background with border</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge--dot</code></td><td class="ApiTable-desc">Minimal dot indicator (no text)</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge--count</code></td><td class="ApiTable-desc">Circular count badge</td></tr>
+</tbody>
+</table>
+<h3 id="positioning-interactive-classes">Positioning &amp; Interactive Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">.Badge--positioned</code></td><td class="ApiTable-desc">Absolute positioning for overlays</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge--avatar</code></td><td class="ApiTable-desc">Positioning for avatar overlays</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge--dismissible</code></td><td class="ApiTable-desc">Badge with remove button</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge--clickable</code></td><td class="ApiTable-desc">Interactive link/button badge</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge-icon</code></td><td class="ApiTable-desc">Leading icon styling</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge-icon--trailing</code></td><td class="ApiTable-desc">Trailing icon positioning</td></tr>
+<tr><td><code class="ApiTable-prop">.Badge-dismiss</code></td><td class="ApiTable-desc">Dismiss button inside badge</td></tr>
+</tbody>
+</table>
+<h3 id="attributes">Attributes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Attribute</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">aria-label</code></td><td class="ApiTable-desc">Required for dot indicators without visible text</td></tr>
+<tr><td><code class="ApiTable-prop">aria-hidden</code></td><td class="ApiTable-desc">Use on count badges when count is announced via parent</td></tr>
+</tbody>
+</table>
+<hr>
+<h2 id="css-reference">CSS Reference</h2>
+<pre><code class="language-css">/* Base Badge */
+.Badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--r-s);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: nowrap;
+  background-color: var(--bg-s);
+  color: var(--fg);
+  border: 1px solid transparent;
+}
+
+/* Colors */
+.Badge--primary {
+  background-color: oklch(60% 0.15 250 / 0.15);
+  color: oklch(50% 0.15 250);
+}
+
+.Badge--secondary {
+  background-color: var(--bg-s);
+  color: var(--fg-3);
+  border-color: var(--bd);
+}
+
+.Badge--success {
+  background-color: oklch(65% 0.15 150 / 0.15);
+  color: oklch(45% 0.15 150);
+}
+
+.Badge--warning {
+  background-color: oklch(75% 0.15 80 / 0.15);
+  color: oklch(50% 0.15 80);
+}
+
+.Badge--error {
+  background-color: oklch(55% 0.2 25 / 0.15);
+  color: oklch(50% 0.2 25);
+}
+
+.Badge--info {
+  background-color: oklch(65% 0.15 220 / 0.15);
+  color: oklch(50% 0.15 220);
+}
+
+/* Sizes */
+.Badge--small {
+  padding: 0 var(--space-1);
+  font-size: 0.65rem;
+}
+
+.Badge--large {
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.875rem;
+}
+
+/* Pill */
+.Badge--pill {
+  border-radius: 9999px;
+}
+
+/* Outline */
+.Badge--outline {
+  background-color: transparent;
+}
+
+.Badge--outline.Badge--primary {
+  border-color: oklch(60% 0.15 250);
+  color: oklch(60% 0.15 250);
+}
+
+.Badge--outline.Badge--success {
+  border-color: oklch(55% 0.15 150);
+  color: oklch(55% 0.15 150);
+}
+
+.Badge--outline.Badge--warning {
+  border-color: oklch(60% 0.15 80);
+  color: oklch(60% 0.15 80);
+}
+
+.Badge--outline.Badge--error {
+  border-color: oklch(55% 0.2 25);
+  color: oklch(55% 0.2 25);
+}
+
+/* Dot */
+.Badge--dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--fg-3);
+}
+
+.Badge--dot.Badge--success {
+  background-color: oklch(55% 0.15 150);
+}
+
+.Badge--dot.Badge--warning {
+  background-color: oklch(70% 0.15 80);
+}
+
+.Badge--dot.Badge--error {
+  background-color: oklch(55% 0.2 25);
+}
+
+.Badge--dot.Badge--primary {
+  background-color: var(--accent);
+}
+
+/* Count */
+.Badge--count {
+  min-width: 20px;
+  height: 20px;
+  padding: 0 var(--space-1);
+  border-radius: 10px;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Positioning */
+.Badge--positioned {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 18px;
+  height: 18px;
+  font-size: 0.65rem;
+}
+
+.Badge--avatar {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: 2px solid var(--bg);
+}
+
+/* Icon */
+.Badge-icon {
+  font-size: 0.9em;
+}
+
+.Badge-icon--trailing {
+  order: 1;
+}
+
+/* Dismissible */
+.Badge--dismissible {
+  padding-right: var(--space-1);
+}
+
+.Badge-dismiss {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  margin-left: var(--space-1);
+  background: none;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  color: inherit;
+  opacity: 0.7;
+  transition: opacity 0.15s;
+}
+
+.Badge-dismiss:hover {
+  opacity: 1;
+  background-color: oklch(0% 0 0 / 0.1);
+}
+
+/* Clickable */
+.Badge--clickable {
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s;
+}
+
+.Badge--clickable:hover {
+  filter: brightness(0.95);
+}
+</code></pre>
+<hr>
+<h2 id="accessibility">Accessibility</h2>
+<h3 id="color-independence">Color Independence</h3>
+<pre><code class="language-html">&lt;!-- Don't rely on color alone — include text or icons --&gt;
+&lt;span class=&quot;Badge Badge--success&quot;&gt;
+    &lt;i class=&quot;ph ph-check-circle Badge-icon&quot;&gt;&lt;/i&gt;
+    Complete
+&lt;/span&gt;
+
+&lt;!-- Not just color --&gt;
+&lt;span class=&quot;Badge Badge--error&quot;&gt;Error&lt;/span&gt;
+</code></pre>
+<h3 id="screen-reader-context">Screen Reader Context</h3>
+<pre><code class="language-html">&lt;!-- Provide context for count badges --&gt;
+&lt;button class=&quot;Button Button--icon&quot; aria-label=&quot;Notifications, 3 unread&quot;&gt;
+    &lt;i class=&quot;ph ph-bell&quot;&gt;&lt;/i&gt;
+    &lt;span class=&quot;Badge Badge--count&quot; aria-hidden=&quot;true&quot;&gt;3&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;!-- For status dots, use aria-label --&gt;
+&lt;span class=&quot;Badge Badge--dot Badge--success&quot; aria-label=&quot;Online&quot;&gt;&lt;/span&gt;
+</code></pre>
+<h3 id="dismissible-badges">Dismissible Badges</h3>
+<pre><code class="language-html">&lt;!-- Always provide accessible dismiss button --&gt;
+&lt;span class=&quot;Badge Badge--dismissible&quot;&gt;
+    Filter: Active
+    &lt;button class=&quot;Badge-dismiss&quot; aria-label=&quot;Remove Active filter&quot;&gt;
+        &lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;
+    &lt;/button&gt;
+&lt;/span&gt;
+</code></pre>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="do">Do</h3>
+<ul>
+<li>✓ <strong>Keep text short</strong> — 1-2 words maximum</li>
+<li>✓ <strong>Use semantic colors</strong> — Green for success, red for errors</li>
+<li>✓ <strong>Include icons for clarity</strong> — Helps users with color blindness</li>
+<li>✓ <strong>Position consistently</strong> — Same placement across similar elements</li>
+<li>✓ <strong>Use for quick scanning</strong> — Badges should be glanceable</li>
+</ul>
+<h3 id="don-t">Don’t</h3>
+<ul>
+<li>✗ <strong>Overuse badges</strong> — Too many reduces impact</li>
+<li>✗ <strong>Rely on color alone</strong> — Always pair with text or icons</li>
+<li>✗ <strong>Use for long content</strong> — That’s what labels or tags are for</li>
+<li>✗ <strong>Mix too many colors</strong> — Stick to 2-3 per view</li>
+<li>✗ <strong>Hide important info</strong> — Critical statuses need more than a dot</li>
+</ul>
+
+                </article>
+
+                <footer class="page-footer">
+                    <p>Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

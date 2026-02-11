@@ -1,0 +1,2011 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Icons | Carbon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/bold/style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Floating Pill Nav (Mobile: bottom, Desktop: top) -->
+        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation">
+            <a href="../index.html" class="fnav-btn" data-section="home" aria-label="Home">
+                <i class="ph-bold ph-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="../tokens/colors.html" class="fnav-btn" data-section="tokens" aria-label="Tokens">
+                <i class="ph-bold ph-palette"></i>
+                <span>Tokens</span>
+            </a>
+            <a href="../components/buttons.html" class="fnav-btn" data-section="components" aria-label="Components">
+                <i class="ph-bold ph-stack"></i>
+                <span>Components</span>
+            </a>
+            <a href="../patterns/layouts.html" class="fnav-btn" data-section="patterns" aria-label="Patterns">
+                <i class="ph-bold ph-grid-four"></i>
+                <span>Patterns</span>
+            </a>
+            <div class="fnav-sep"></div>
+            <button class="fnav-btn" id="search-toggle" aria-label="Search">
+                <i class="ph ph-magnifying-glass"></i>
+            </button>
+            <button class="fnav-btn" id="theme-btn" aria-label="Toggle theme">
+                <i class="ph ph-moon"></i>
+            </button>
+        </nav>
+
+        <!-- Glassmorphism Top Bar (Desktop only) -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <a href="../index.html" class="logo">
+                    <i class="ph ph-intersect"></i>
+                    <span>Carbon</span>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <div class="search-container" id="search-container">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search components..." aria-label="Search" autocomplete="off">
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <main class="main-content">
+                <header class="page-header">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="../index.html">Carbon</a> <span class="sep">/</span> <span>Components</span> <span class="sep">/</span> <span>Icons</span>
+                    </nav>
+                    <h1><em>Icons</em></h1>
+                </header>
+                
+                <article class="prose">
+                    <h1>Icons</h1>
+<p>Carbon uses <strong>Phosphor Icons</strong> for its visual language. Icons provide visual context, improve scannability, and reinforce meaning throughout the interface.</p>
+<hr>
+<h2 id="basic-usage">Basic Usage</h2>
+<p>Include icons using the Phosphor icon font classes.</p>
+
+<div class="Preview" id="preview-x4jnempn7">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><i class="ph ph-house" style="font-size: 1.5rem;"></i>
+    <i class="ph ph-gear" style="font-size: 1.5rem;"></i>
+    <i class="ph ph-user" style="font-size: 1.5rem;"></i>
+    <i class="ph ph-envelope" style="font-size: 1.5rem;"></i>
+    <i class="ph ph-magnifying-glass" style="font-size: 1.5rem;"></i></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;i class=&quot;ph ph-house&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-gear&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-user&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-envelope&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-magnifying-glass&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;i class=&quot;ph ph-house&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-gear&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-user&quot;&gt;&lt;/i&gt;
+</code></pre>
+<hr>
+<h2 id="icon-styles">Icon Styles</h2>
+<p>Phosphor icons come in multiple styles: regular, bold, fill, and duotone.</p>
+
+<div class="Preview" id="preview-v4d7pfz2i">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; gap: var(--space-6); align-items: center;">
+        <div style="text-align: center;">
+            <i class="ph ph-heart" style="font-size: 2rem;"></i>
+            <div style="font-size: 0.75rem; color: var(--fg-3); margin-top: var(--space-2);">Regular</div>
+        </div>
+        <div style="text-align: center;">
+            <i class="ph-bold ph-heart" style="font-size: 2rem;"></i>
+            <div style="font-size: 0.75rem; color: var(--fg-3); margin-top: var(--space-2);">Bold</div>
+        </div>
+        <div style="text-align: center;">
+            <i class="ph-fill ph-heart" style="font-size: 2rem;"></i>
+            <div style="font-size: 0.75rem; color: var(--fg-3); margin-top: var(--space-2);">Fill</div>
+        </div>
+        <div style="text-align: center;">
+            <i class="ph-duotone ph-heart" style="font-size: 2rem;"></i>
+            <div style="font-size: 0.75rem; color: var(--fg-3); margin-top: var(--space-2);">Duotone</div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; gap: var(--space-6); align-items: center;&quot;&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;i class=&quot;ph ph-heart&quot; style=&quot;font-size: 2rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.75rem; color: var(--fg-3); margin-top: var(--space-2);&quot;&gt;Regular&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;i class=&quot;ph-bold ph-heart&quot; style=&quot;font-size: 2rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.75rem; color: var(--fg-3); margin-top: var(--space-2);&quot;&gt;Bold&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;i class=&quot;ph-fill ph-heart&quot; style=&quot;font-size: 2rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.75rem; color: var(--fg-3); margin-top: var(--space-2);&quot;&gt;Fill&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;i class=&quot;ph-duotone ph-heart&quot; style=&quot;font-size: 2rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.75rem; color: var(--fg-3); margin-top: var(--space-2);&quot;&gt;Duotone&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;i class=&quot;ph ph-heart&quot;&gt;&lt;/i&gt;         &lt;!-- Regular --&gt;
+&lt;i class=&quot;ph-bold ph-heart&quot;&gt;&lt;/i&gt;    &lt;!-- Bold --&gt;
+&lt;i class=&quot;ph-fill ph-heart&quot;&gt;&lt;/i&gt;    &lt;!-- Fill --&gt;
+&lt;i class=&quot;ph-duotone ph-heart&quot;&gt;&lt;/i&gt; &lt;!-- Duotone --&gt;
+</code></pre>
+<hr>
+<h2 id="icon-sizes">Icon Sizes</h2>
+<p>Control icon size using font-size or predefined classes.</p>
+
+<div class="Preview" id="preview-6tuvkyf08">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><i class="ph ph-star Icon Icon--xs"></i>
+    <i class="ph ph-star Icon Icon--small"></i>
+    <i class="ph ph-star Icon"></i>
+    <i class="ph ph-star Icon Icon--large"></i>
+    <i class="ph ph-star Icon Icon--xl"></i></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;i class=&quot;ph ph-star Icon Icon--xs&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-star Icon Icon--small&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-star Icon&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-star Icon Icon--large&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-star Icon Icon--xl&quot;&gt;&lt;/i&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;i class=&quot;ph ph-star Icon Icon--xs&quot;&gt;&lt;/i&gt;    &lt;!-- 12px --&gt;
+&lt;i class=&quot;ph ph-star Icon Icon--small&quot;&gt;&lt;/i&gt; &lt;!-- 16px --&gt;
+&lt;i class=&quot;ph ph-star Icon&quot;&gt;&lt;/i&gt;             &lt;!-- 20px --&gt;
+&lt;i class=&quot;ph ph-star Icon Icon--large&quot;&gt;&lt;/i&gt; &lt;!-- 24px --&gt;
+&lt;i class=&quot;ph ph-star Icon Icon--xl&quot;&gt;&lt;/i&gt;    &lt;!-- 32px --&gt;
+</code></pre>
+
+<div class="Preview" id="preview-pczy84uks">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><i class="ph ph-rocket" style="font-size: 1rem;"></i>
+    <i class="ph ph-rocket" style="font-size: 1.5rem;"></i>
+    <i class="ph ph-rocket" style="font-size: 2rem;"></i>
+    <i class="ph ph-rocket" style="font-size: 3rem;"></i></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;i class=&quot;ph ph-rocket&quot; style=&quot;font-size: 1rem;&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-rocket&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-rocket&quot; style=&quot;font-size: 2rem;&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-rocket&quot; style=&quot;font-size: 3rem;&quot;&gt;&lt;/i&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;i class=&quot;ph ph-rocket&quot; style=&quot;font-size: 2rem;&quot;&gt;&lt;/i&gt;
+</code></pre>
+<hr>
+<h2 id="icon-colors">Icon Colors</h2>
+<p>Icons inherit the current text color. Override with CSS.</p>
+
+<div class="Preview" id="preview-b23yoqbh1">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><i class="ph ph-check-circle" style="font-size: 1.5rem; color: oklch(55% 0.15 150);"></i>
+    <i class="ph ph-warning" style="font-size: 1.5rem; color: oklch(70% 0.15 80);"></i>
+    <i class="ph ph-x-circle" style="font-size: 1.5rem; color: oklch(55% 0.2 25);"></i>
+    <i class="ph ph-info" style="font-size: 1.5rem; color: var(--accent);"></i>
+    <i class="ph ph-star-fill" style="font-size: 1.5rem; color: oklch(75% 0.15 80);"></i></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;i class=&quot;ph ph-check-circle&quot; style=&quot;font-size: 1.5rem; color: oklch(55% 0.15 150);&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-warning&quot; style=&quot;font-size: 1.5rem; color: oklch(70% 0.15 80);&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-x-circle&quot; style=&quot;font-size: 1.5rem; color: oklch(55% 0.2 25);&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-info&quot; style=&quot;font-size: 1.5rem; color: var(--accent);&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-star-fill&quot; style=&quot;font-size: 1.5rem; color: oklch(75% 0.15 80);&quot;&gt;&lt;/i&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;i class=&quot;ph ph-check-circle&quot; style=&quot;color: oklch(55% 0.15 150);&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-warning&quot; style=&quot;color: oklch(70% 0.15 80);&quot;&gt;&lt;/i&gt;
+</code></pre>
+
+<div class="Preview" id="preview-4sckwb9kn">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><i class="ph ph-check-circle Icon Icon--success"></i>
+    <i class="ph ph-warning Icon Icon--warning"></i>
+    <i class="ph ph-x-circle Icon Icon--error"></i>
+    <i class="ph ph-info Icon Icon--info"></i></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;i class=&quot;ph ph-check-circle Icon Icon--success&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-warning Icon Icon--warning&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-x-circle Icon Icon--error&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-info Icon Icon--info&quot;&gt;&lt;/i&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;i class=&quot;ph ph-check-circle Icon Icon--success&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-warning Icon Icon--warning&quot;&gt;&lt;/i&gt;
+</code></pre>
+<hr>
+<h2 id="icons-in-buttons">Icons in Buttons</h2>
+<p>Common pattern for enhanced button clarity.</p>
+
+<div class="Preview" id="preview-qwsfh11pd">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><button class="Button Button--primary">
+        <i class="ph ph-plus Button-icon"></i>
+        Create New
+    </button>
+    <button class="Button Button--secondary">
+        <i class="ph ph-download Button-icon"></i>
+        Download
+    </button>
+    <button class="Button Button--danger">
+        <i class="ph ph-trash Button-icon"></i>
+        Delete
+    </button></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;button class=&quot;Button Button--primary&quot;&gt;
+&lt;i class=&quot;ph ph-plus Button-icon&quot;&gt;&lt;/i&gt;
+Create New
+&lt;/button&gt;
+&lt;button class=&quot;Button Button--secondary&quot;&gt;
+&lt;i class=&quot;ph ph-download Button-icon&quot;&gt;&lt;/i&gt;
+Download
+&lt;/button&gt;
+&lt;button class=&quot;Button Button--danger&quot;&gt;
+&lt;i class=&quot;ph ph-trash Button-icon&quot;&gt;&lt;/i&gt;
+Delete
+&lt;/button&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;button class=&quot;Button Button--primary&quot;&gt;
+    &lt;i class=&quot;ph ph-plus Button-icon&quot;&gt;&lt;/i&gt;
+    Create New
+&lt;/button&gt;
+</code></pre>
+
+<div class="Preview" id="preview-1uwupy786">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><button class="Button Button--primary">
+        Continue
+        <i class="ph ph-arrow-right Button-icon Button-icon--trailing"></i>
+    </button>
+    <button class="Button Button--secondary">
+        External Link
+        <i class="ph ph-arrow-square-out Button-icon Button-icon--trailing"></i>
+    </button></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;button class=&quot;Button Button--primary&quot;&gt;
+Continue
+&lt;i class=&quot;ph ph-arrow-right Button-icon Button-icon--trailing&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Button Button--secondary&quot;&gt;
+External Link
+&lt;i class=&quot;ph ph-arrow-square-out Button-icon Button-icon--trailing&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;button class=&quot;Button Button--primary&quot;&gt;
+    Continue
+    &lt;i class=&quot;ph ph-arrow-right Button-icon Button-icon--trailing&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+</code></pre>
+
+<div class="Preview" id="preview-eiscxukyg">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><button class="Button Button--icon" aria-label="Search">
+        <i class="ph ph-magnifying-glass"></i>
+    </button>
+    <button class="Button Button--icon Button--primary" aria-label="Add item">
+        <i class="ph ph-plus"></i>
+    </button>
+    <button class="Button Button--icon Button--secondary" aria-label="Settings">
+        <i class="ph ph-gear"></i>
+    </button>
+    <button class="Button Button--icon Button--ghost" aria-label="More options">
+        <i class="ph ph-dots-three"></i>
+    </button></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;button class=&quot;Button Button--icon&quot; aria-label=&quot;Search&quot;&gt;
+&lt;i class=&quot;ph ph-magnifying-glass&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Button Button--icon Button--primary&quot; aria-label=&quot;Add item&quot;&gt;
+&lt;i class=&quot;ph ph-plus&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Button Button--icon Button--secondary&quot; aria-label=&quot;Settings&quot;&gt;
+&lt;i class=&quot;ph ph-gear&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Button Button--icon Button--ghost&quot; aria-label=&quot;More options&quot;&gt;
+&lt;i class=&quot;ph ph-dots-three&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;button class=&quot;Button Button--icon&quot; aria-label=&quot;Search&quot;&gt;
+    &lt;i class=&quot;ph ph-magnifying-glass&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+</code></pre>
+<hr>
+<h2 id="icons-in-inputs">Icons in Inputs</h2>
+<p>Add context to form inputs.</p>
+
+<div class="Preview" id="preview-9u7s7doz9">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Input-wrapper" style="max-width: 280px;">
+        <i class="ph ph-magnifying-glass Input-icon"></i>
+        <input type="text" class="Input Input--withIcon" placeholder="Search...">
+    </div>
+    <div class="Input-wrapper" style="max-width: 280px; margin-top: var(--space-3);">
+        <i class="ph ph-envelope Input-icon"></i>
+        <input type="email" class="Input Input--withIcon" placeholder="Email address">
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Input-wrapper&quot; style=&quot;max-width: 280px;&quot;&gt;
+&lt;i class=&quot;ph ph-magnifying-glass Input-icon&quot;&gt;&lt;/i&gt;
+&lt;input type=&quot;text&quot; class=&quot;Input Input--withIcon&quot; placeholder=&quot;Search...&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Input-wrapper&quot; style=&quot;max-width: 280px; margin-top: var(--space-3);&quot;&gt;
+&lt;i class=&quot;ph ph-envelope Input-icon&quot;&gt;&lt;/i&gt;
+&lt;input type=&quot;email&quot; class=&quot;Input Input--withIcon&quot; placeholder=&quot;Email address&quot;&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Input-wrapper&quot;&gt;
+    &lt;i class=&quot;ph ph-magnifying-glass Input-icon&quot;&gt;&lt;/i&gt;
+    &lt;input type=&quot;text&quot; class=&quot;Input Input--withIcon&quot; placeholder=&quot;Search...&quot;&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="icons-in-lists">Icons in Lists</h2>
+<p>Enhance list items with icons.</p>
+
+<div class="Preview" id="preview-ox6hck2we">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-3);">
+        <li style="display: flex; align-items: center; gap: var(--space-3);">
+            <i class="ph ph-check-circle Icon Icon--success"></i>
+            <span>Feature included in plan</span>
+        </li>
+        <li style="display: flex; align-items: center; gap: var(--space-3);">
+            <i class="ph ph-check-circle Icon Icon--success"></i>
+            <span>Unlimited storage space</span>
+        </li>
+        <li style="display: flex; align-items: center; gap: var(--space-3);">
+            <i class="ph ph-check-circle Icon Icon--success"></i>
+            <span>Priority customer support</span>
+        </li>
+        <li style="display: flex; align-items: center; gap: var(--space-3);">
+            <i class="ph ph-x-circle" style="color: var(--fg-3);"></i>
+            <span style="color: var(--fg-3);">Advanced analytics</span>
+        </li>
+    </ul></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;ul style=&quot;list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-3);&quot;&gt;
+&lt;li style=&quot;display: flex; align-items: center; gap: var(--space-3);&quot;&gt;
+&lt;i class=&quot;ph ph-check-circle Icon Icon--success&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Feature included in plan&lt;/span&gt;
+&lt;/li&gt;
+&lt;li style=&quot;display: flex; align-items: center; gap: var(--space-3);&quot;&gt;
+&lt;i class=&quot;ph ph-check-circle Icon Icon--success&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Unlimited storage space&lt;/span&gt;
+&lt;/li&gt;
+&lt;li style=&quot;display: flex; align-items: center; gap: var(--space-3);&quot;&gt;
+&lt;i class=&quot;ph ph-check-circle Icon Icon--success&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Priority customer support&lt;/span&gt;
+&lt;/li&gt;
+&lt;li style=&quot;display: flex; align-items: center; gap: var(--space-3);&quot;&gt;
+&lt;i class=&quot;ph ph-x-circle&quot; style=&quot;color: var(--fg-3);&quot;&gt;&lt;/i&gt;
+&lt;span style=&quot;color: var(--fg-3);&quot;&gt;Advanced analytics&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;li style=&quot;display: flex; align-items: center; gap: var(--space-3);&quot;&gt;
+    &lt;i class=&quot;ph ph-check-circle Icon Icon--success&quot;&gt;&lt;/i&gt;
+    &lt;span&gt;Feature included&lt;/span&gt;
+&lt;/li&gt;
+</code></pre>
+<hr>
+<h2 id="icons-in-alerts">Icons in Alerts</h2>
+<p>Add visual weight to alert messages.</p>
+
+<div class="Preview" id="preview-2nmjcxfrs">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Alert Alert--info" style="max-width: 400px;">
+        <i class="ph ph-info Alert-icon"></i>
+        <div>This is an informational message.</div>
+    </div>
+    <div class="Alert Alert--success" style="max-width: 400px; margin-top: var(--space-3);">
+        <i class="ph ph-check-circle Alert-icon"></i>
+        <div>Changes saved successfully.</div>
+    </div>
+    <div class="Alert Alert--warning" style="max-width: 400px; margin-top: var(--space-3);">
+        <i class="ph ph-warning Alert-icon"></i>
+        <div>Please review your settings.</div>
+    </div>
+    <div class="Alert Alert--error" style="max-width: 400px; margin-top: var(--space-3);">
+        <i class="ph ph-x-circle Alert-icon"></i>
+        <div>An error occurred. Please try again.</div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Alert Alert--info&quot; style=&quot;max-width: 400px;&quot;&gt;
+&lt;i class=&quot;ph ph-info Alert-icon&quot;&gt;&lt;/i&gt;
+&lt;div&gt;This is an informational message.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Alert Alert--success&quot; style=&quot;max-width: 400px; margin-top: var(--space-3);&quot;&gt;
+&lt;i class=&quot;ph ph-check-circle Alert-icon&quot;&gt;&lt;/i&gt;
+&lt;div&gt;Changes saved successfully.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Alert Alert--warning&quot; style=&quot;max-width: 400px; margin-top: var(--space-3);&quot;&gt;
+&lt;i class=&quot;ph ph-warning Alert-icon&quot;&gt;&lt;/i&gt;
+&lt;div&gt;Please review your settings.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Alert Alert--error&quot; style=&quot;max-width: 400px; margin-top: var(--space-3);&quot;&gt;
+&lt;i class=&quot;ph ph-x-circle Alert-icon&quot;&gt;&lt;/i&gt;
+&lt;div&gt;An error occurred. Please try again.&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Alert Alert--success&quot;&gt;
+    &lt;i class=&quot;ph ph-check-circle Alert-icon&quot;&gt;&lt;/i&gt;
+    &lt;div&gt;Changes saved successfully.&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="icon-backgrounds">Icon Backgrounds</h2>
+<p>Icons in circular or square backgrounds.</p>
+
+<div class="Preview" id="preview-egxt84k4r">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><span class="IconBg">
+        <i class="ph ph-house"></i>
+    </span>
+    <span class="IconBg IconBg--primary">
+        <i class="ph ph-gear"></i>
+    </span>
+    <span class="IconBg IconBg--success">
+        <i class="ph ph-check"></i>
+    </span>
+    <span class="IconBg IconBg--warning">
+        <i class="ph ph-warning"></i>
+    </span>
+    <span class="IconBg IconBg--error">
+        <i class="ph ph-x"></i>
+    </span></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;span class=&quot;IconBg&quot;&gt;
+&lt;i class=&quot;ph ph-house&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;
+&lt;span class=&quot;IconBg IconBg--primary&quot;&gt;
+&lt;i class=&quot;ph ph-gear&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;
+&lt;span class=&quot;IconBg IconBg--success&quot;&gt;
+&lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;
+&lt;span class=&quot;IconBg IconBg--warning&quot;&gt;
+&lt;i class=&quot;ph ph-warning&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;
+&lt;span class=&quot;IconBg IconBg--error&quot;&gt;
+&lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;span class=&quot;IconBg IconBg--primary&quot;&gt;
+    &lt;i class=&quot;ph ph-gear&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;
+</code></pre>
+
+<div class="Preview" id="preview-3zcnmeu1y">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><span class="IconBg IconBg--small IconBg--primary">
+        <i class="ph ph-star"></i>
+    </span>
+    <span class="IconBg IconBg--primary">
+        <i class="ph ph-star"></i>
+    </span>
+    <span class="IconBg IconBg--large IconBg--primary">
+        <i class="ph ph-star"></i>
+    </span></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;span class=&quot;IconBg IconBg--small IconBg--primary&quot;&gt;
+&lt;i class=&quot;ph ph-star&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;
+&lt;span class=&quot;IconBg IconBg--primary&quot;&gt;
+&lt;i class=&quot;ph ph-star&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;
+&lt;span class=&quot;IconBg IconBg--large IconBg--primary&quot;&gt;
+&lt;i class=&quot;ph ph-star&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;span class=&quot;IconBg IconBg--small IconBg--primary&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;IconBg IconBg--large IconBg--primary&quot;&gt;...&lt;/span&gt;
+</code></pre>
+<hr>
+<h2 id="animated-icons">Animated Icons</h2>
+<p>Icons with loading or state animations.</p>
+
+<div class="Preview" id="preview-fiayb00ub">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><i class="ph ph-spinner Icon Icon--spin" style="font-size: 1.5rem;"></i>
+    <i class="ph ph-circle-notch Icon Icon--spin" style="font-size: 1.5rem;"></i>
+    <i class="ph ph-arrows-clockwise Icon Icon--spin" style="font-size: 1.5rem;"></i></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;i class=&quot;ph ph-spinner Icon Icon--spin&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-circle-notch Icon Icon--spin&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-arrows-clockwise Icon Icon--spin&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;i class=&quot;ph ph-spinner Icon Icon--spin&quot;&gt;&lt;/i&gt;
+</code></pre>
+
+<div class="Preview" id="preview-ecr563up5">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><i class="ph ph-bell Icon Icon--pulse" style="font-size: 1.5rem; color: var(--accent);"></i>
+    <i class="ph ph-heart-fill Icon Icon--pulse" style="font-size: 1.5rem; color: oklch(55% 0.2 25);"></i></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;i class=&quot;ph ph-bell Icon Icon--pulse&quot; style=&quot;font-size: 1.5rem; color: var(--accent);&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-heart-fill Icon Icon--pulse&quot; style=&quot;font-size: 1.5rem; color: oklch(55% 0.2 25);&quot;&gt;&lt;/i&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;i class=&quot;ph ph-bell Icon Icon--pulse&quot;&gt;&lt;/i&gt;
+</code></pre>
+<hr>
+<h2 id="common-icons-reference">Common Icons Reference</h2>
+<h3 id="navigation">Navigation</h3>
+
+<div class="Preview" id="preview-zxjgsrbm0">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-4); text-align: center;">
+        <div>
+            <i class="ph ph-house" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">house</div>
+        </div>
+        <div>
+            <i class="ph ph-magnifying-glass" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">magnifying-glass</div>
+        </div>
+        <div>
+            <i class="ph ph-gear" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">gear</div>
+        </div>
+        <div>
+            <i class="ph ph-bell" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">bell</div>
+        </div>
+        <div>
+            <i class="ph ph-user" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">user</div>
+        </div>
+        <div>
+            <i class="ph ph-sign-out" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">sign-out</div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-4); text-align: center;&quot;&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-house&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;house&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-magnifying-glass&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;magnifying-glass&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-gear&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;gear&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-bell&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;bell&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-user&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;user&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-sign-out&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;sign-out&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="actions">Actions</h3>
+
+<div class="Preview" id="preview-7j8it48ej">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-4); text-align: center;">
+        <div>
+            <i class="ph ph-plus" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">plus</div>
+        </div>
+        <div>
+            <i class="ph ph-pencil" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">pencil</div>
+        </div>
+        <div>
+            <i class="ph ph-trash" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">trash</div>
+        </div>
+        <div>
+            <i class="ph ph-download" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">download</div>
+        </div>
+        <div>
+            <i class="ph ph-upload" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">upload</div>
+        </div>
+        <div>
+            <i class="ph ph-share" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">share</div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-4); text-align: center;&quot;&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-plus&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;plus&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-pencil&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;pencil&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-trash&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;trash&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-download&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;download&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-upload&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;upload&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-share&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;share&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="status-feedback">Status &amp; Feedback</h3>
+
+<div class="Preview" id="preview-e32zjxm9z">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-4); text-align: center;">
+        <div>
+            <i class="ph ph-check" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">check</div>
+        </div>
+        <div>
+            <i class="ph ph-x" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">x</div>
+        </div>
+        <div>
+            <i class="ph ph-warning" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">warning</div>
+        </div>
+        <div>
+            <i class="ph ph-info" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">info</div>
+        </div>
+        <div>
+            <i class="ph ph-question" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">question</div>
+        </div>
+        <div>
+            <i class="ph ph-spinner" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">spinner</div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-4); text-align: center;&quot;&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-check&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;check&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-x&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;x&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-warning&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;warning&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-info&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;info&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-question&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;question&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-spinner&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;spinner&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="arrows-chevrons">Arrows &amp; Chevrons</h3>
+
+<div class="Preview" id="preview-pnf7dgh8x">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-4); text-align: center;">
+        <div>
+            <i class="ph ph-arrow-left" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">arrow-left</div>
+        </div>
+        <div>
+            <i class="ph ph-arrow-right" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">arrow-right</div>
+        </div>
+        <div>
+            <i class="ph ph-caret-down" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">caret-down</div>
+        </div>
+        <div>
+            <i class="ph ph-caret-right" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">caret-right</div>
+        </div>
+        <div>
+            <i class="ph ph-arrow-square-out" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">arrow-square-out</div>
+        </div>
+        <div>
+            <i class="ph ph-arrows-clockwise" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">arrows-clockwise</div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-4); text-align: center;&quot;&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-arrow-left&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;arrow-left&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-arrow-right&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;arrow-right&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-caret-down&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;caret-down&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-caret-right&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;caret-right&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-arrow-square-out&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;arrow-square-out&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-arrows-clockwise&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;arrows-clockwise&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="media-files">Media &amp; Files</h3>
+
+<div class="Preview" id="preview-j2au93s4l">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-4); text-align: center;">
+        <div>
+            <i class="ph ph-image" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">image</div>
+        </div>
+        <div>
+            <i class="ph ph-file" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">file</div>
+        </div>
+        <div>
+            <i class="ph ph-folder" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">folder</div>
+        </div>
+        <div>
+            <i class="ph ph-video" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">video</div>
+        </div>
+        <div>
+            <i class="ph ph-link" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">link</div>
+        </div>
+        <div>
+            <i class="ph ph-paperclip" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">paperclip</div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-4); text-align: center;&quot;&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-image&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;image&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-file&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;file&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-folder&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;folder&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-video&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;video&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-link&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;link&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-paperclip&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;paperclip&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="communication">Communication</h3>
+
+<div class="Preview" id="preview-trp9pp9d3">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-4); text-align: center;">
+        <div>
+            <i class="ph ph-envelope" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">envelope</div>
+        </div>
+        <div>
+            <i class="ph ph-chat" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">chat</div>
+        </div>
+        <div>
+            <i class="ph ph-phone" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">phone</div>
+        </div>
+        <div>
+            <i class="ph ph-paper-plane-tilt" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">paper-plane-tilt</div>
+        </div>
+        <div>
+            <i class="ph ph-at" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">at</div>
+        </div>
+        <div>
+            <i class="ph ph-users" style="font-size: 1.5rem;"></i>
+            <div style="font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);">users</div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-4); text-align: center;&quot;&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-envelope&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;envelope&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-chat&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;chat&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-phone&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;phone&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-paper-plane-tilt&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;paper-plane-tilt&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-at&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;at&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;i class=&quot;ph ph-users&quot; style=&quot;font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+&lt;div style=&quot;font-size: 0.7rem; color: var(--fg-3); margin-top: var(--space-1);&quot;&gt;users&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="common-patterns">Common Patterns</h2>
+<h3 id="empty-state">Empty State</h3>
+
+<div class="Preview" id="preview-a1rpf9ja8">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="text-align: center; padding: var(--space-8); max-width: 320px; margin: 0 auto;">
+        <span class="IconBg IconBg--large" style="margin-bottom: var(--space-4);">
+            <i class="ph ph-folder-open" style="font-size: 2rem; color: var(--fg-3);"></i>
+        </span>
+        <h4 style="margin: 0 0 var(--space-2);">No files yet</h4>
+        <p style="color: var(--fg-3); margin: 0 0 var(--space-4); font-size: 0.9rem;">Upload your first file to get started.</p>
+        <button class="Button Button--primary">
+            <i class="ph ph-upload Button-icon"></i>
+            Upload File
+        </button>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;text-align: center; padding: var(--space-8); max-width: 320px; margin: 0 auto;&quot;&gt;
+&lt;span class=&quot;IconBg IconBg--large&quot; style=&quot;margin-bottom: var(--space-4);&quot;&gt;
+&lt;i class=&quot;ph ph-folder-open&quot; style=&quot;font-size: 2rem; color: var(--fg-3);&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;
+&lt;h4 style=&quot;margin: 0 0 var(--space-2);&quot;&gt;No files yet&lt;/h4&gt;
+&lt;p style=&quot;color: var(--fg-3); margin: 0 0 var(--space-4); font-size: 0.9rem;&quot;&gt;Upload your first file to get started.&lt;/p&gt;
+&lt;button class=&quot;Button Button--primary&quot;&gt;
+&lt;i class=&quot;ph ph-upload Button-icon&quot;&gt;&lt;/i&gt;
+Upload File
+&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="feature-list">Feature List</h3>
+
+<div class="Preview" id="preview-1nyqz6hkp">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Card" style="max-width: 360px;">
+        <div class="Card-body">
+            <h4 class="Card-title" style="margin-bottom: var(--space-4);">Pro Plan Features</h4>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-3);">
+                <li style="display: flex; align-items: flex-start; gap: var(--space-3);">
+                    <span class="IconBg IconBg--small IconBg--success">
+                        <i class="ph ph-check"></i>
+                    </span>
+                    <span>Unlimited projects</span>
+                </li>
+                <li style="display: flex; align-items: flex-start; gap: var(--space-3);">
+                    <span class="IconBg IconBg--small IconBg--success">
+                        <i class="ph ph-check"></i>
+                    </span>
+                    <span>Advanced analytics</span>
+                </li>
+                <li style="display: flex; align-items: flex-start; gap: var(--space-3);">
+                    <span class="IconBg IconBg--small IconBg--success">
+                        <i class="ph ph-check"></i>
+                    </span>
+                    <span>Priority support</span>
+                </li>
+                <li style="display: flex; align-items: flex-start; gap: var(--space-3);">
+                    <span class="IconBg IconBg--small IconBg--success">
+                        <i class="ph ph-check"></i>
+                    </span>
+                    <span>Custom integrations</span>
+                </li>
+            </ul>
+        </div>
+        <div class="Card-footer">
+            <button class="Button Button--primary Button--block">Upgrade to Pro</button>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Card&quot; style=&quot;max-width: 360px;&quot;&gt;
+&lt;div class=&quot;Card-body&quot;&gt;
+&lt;h4 class=&quot;Card-title&quot; style=&quot;margin-bottom: var(--space-4);&quot;&gt;Pro Plan Features&lt;/h4&gt;
+&lt;ul style=&quot;list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-3);&quot;&gt;
+&lt;li style=&quot;display: flex; align-items: flex-start; gap: var(--space-3);&quot;&gt;
+&lt;span class=&quot;IconBg IconBg--small IconBg--success&quot;&gt;
+&lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;
+&lt;span&gt;Unlimited projects&lt;/span&gt;
+&lt;/li&gt;
+&lt;li style=&quot;display: flex; align-items: flex-start; gap: var(--space-3);&quot;&gt;
+&lt;span class=&quot;IconBg IconBg--small IconBg--success&quot;&gt;
+&lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;
+&lt;span&gt;Advanced analytics&lt;/span&gt;
+&lt;/li&gt;
+&lt;li style=&quot;display: flex; align-items: flex-start; gap: var(--space-3);&quot;&gt;
+&lt;span class=&quot;IconBg IconBg--small IconBg--success&quot;&gt;
+&lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;
+&lt;span&gt;Priority support&lt;/span&gt;
+&lt;/li&gt;
+&lt;li style=&quot;display: flex; align-items: flex-start; gap: var(--space-3);&quot;&gt;
+&lt;span class=&quot;IconBg IconBg--small IconBg--success&quot;&gt;
+&lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;
+&lt;span&gt;Custom integrations&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Card-footer&quot;&gt;
+&lt;button class=&quot;Button Button--primary Button--block&quot;&gt;Upgrade to Pro&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="menu-with-icons">Menu with Icons</h3>
+
+<div class="Preview" id="preview-jw9ixoqm9">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="background: var(--bg); border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-2); width: 200px; box-shadow: 0 4px 12px oklch(0% 0 0 / 0.1);">
+        <button style="display: flex; align-items: center; gap: var(--space-3); width: 100%; padding: var(--space-2) var(--space-3); border: none; background: none; cursor: pointer; border-radius: var(--r-s); font-size: 0.9rem; color: var(--fg);">
+            <i class="ph ph-user"></i>
+            Profile
+        </button>
+        <button style="display: flex; align-items: center; gap: var(--space-3); width: 100%; padding: var(--space-2) var(--space-3); border: none; background: none; cursor: pointer; border-radius: var(--r-s); font-size: 0.9rem; color: var(--fg);">
+            <i class="ph ph-gear"></i>
+            Settings
+        </button>
+        <button style="display: flex; align-items: center; gap: var(--space-3); width: 100%; padding: var(--space-2) var(--space-3); border: none; background: none; cursor: pointer; border-radius: var(--r-s); font-size: 0.9rem; color: var(--fg);">
+            <i class="ph ph-question"></i>
+            Help
+        </button>
+        <hr style="border: none; border-top: 1px solid var(--bd); margin: var(--space-2) 0;">
+        <button style="display: flex; align-items: center; gap: var(--space-3); width: 100%; padding: var(--space-2) var(--space-3); border: none; background: none; cursor: pointer; border-radius: var(--r-s); font-size: 0.9rem; color: oklch(55% 0.2 25);">
+            <i class="ph ph-sign-out"></i>
+            Sign out
+        </button>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;background: var(--bg); border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-2); width: 200px; box-shadow: 0 4px 12px oklch(0% 0 0 / 0.1);&quot;&gt;
+&lt;button style=&quot;display: flex; align-items: center; gap: var(--space-3); width: 100%; padding: var(--space-2) var(--space-3); border: none; background: none; cursor: pointer; border-radius: var(--r-s); font-size: 0.9rem; color: var(--fg);&quot;&gt;
+&lt;i class=&quot;ph ph-user&quot;&gt;&lt;/i&gt;
+Profile
+&lt;/button&gt;
+&lt;button style=&quot;display: flex; align-items: center; gap: var(--space-3); width: 100%; padding: var(--space-2) var(--space-3); border: none; background: none; cursor: pointer; border-radius: var(--r-s); font-size: 0.9rem; color: var(--fg);&quot;&gt;
+&lt;i class=&quot;ph ph-gear&quot;&gt;&lt;/i&gt;
+Settings
+&lt;/button&gt;
+&lt;button style=&quot;display: flex; align-items: center; gap: var(--space-3); width: 100%; padding: var(--space-2) var(--space-3); border: none; background: none; cursor: pointer; border-radius: var(--r-s); font-size: 0.9rem; color: var(--fg);&quot;&gt;
+&lt;i class=&quot;ph ph-question&quot;&gt;&lt;/i&gt;
+Help
+&lt;/button&gt;
+&lt;hr style=&quot;border: none; border-top: 1px solid var(--bd); margin: var(--space-2) 0;&quot;&gt;
+&lt;button style=&quot;display: flex; align-items: center; gap: var(--space-3); width: 100%; padding: var(--space-2) var(--space-3); border: none; background: none; cursor: pointer; border-radius: var(--r-s); font-size: 0.9rem; color: oklch(55% 0.2 25);&quot;&gt;
+&lt;i class=&quot;ph ph-sign-out&quot;&gt;&lt;/i&gt;
+Sign out
+&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="customization">Customization</h2>
+<p>Override icon styles using CSS custom properties:</p>
+<pre><code class="language-css">/* Custom icon color scheme */
+.Icon--brand {
+  color: oklch(55% 0.2 280);
+}
+
+/* Custom icon background */
+.IconBg--brand {
+  background-color: oklch(55% 0.2 280 / 0.15);
+  color: oklch(45% 0.2 280);
+}
+
+/* Square icon backgrounds */
+.IconBg--square {
+  border-radius: var(--r-s);
+}
+
+/* Custom animation speed */
+.Icon--spin-slow {
+  animation: spin 2s linear infinite;
+}
+
+/* Custom size scale */
+.Icon--xxl {
+  font-size: 3rem;
+}
+</code></pre>
+<hr>
+<h2 id="api-reference">API Reference</h2>
+<h3 id="classes">Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">.Icon</code></td><td class="ApiTable-desc">Base icon styling</td></tr>
+<tr><td><code class="ApiTable-prop">.Icon--xs</code></td><td class="ApiTable-desc">Extra small (12px)</td></tr>
+<tr><td><code class="ApiTable-prop">.Icon--small</code></td><td class="ApiTable-desc">Small (16px)</td></tr>
+<tr><td><code class="ApiTable-prop">.Icon--large</code></td><td class="ApiTable-desc">Large (24px)</td></tr>
+<tr><td><code class="ApiTable-prop">.Icon--xl</code></td><td class="ApiTable-desc">Extra large (32px)</td></tr>
+<tr><td><code class="ApiTable-prop">.Icon--success</code></td><td class="ApiTable-desc">Success/green color</td></tr>
+<tr><td><code class="ApiTable-prop">.Icon--warning</code></td><td class="ApiTable-desc">Warning/yellow color</td></tr>
+<tr><td><code class="ApiTable-prop">.Icon--error</code></td><td class="ApiTable-desc">Error/red color</td></tr>
+<tr><td><code class="ApiTable-prop">.Icon--info</code></td><td class="ApiTable-desc">Info/primary color</td></tr>
+<tr><td><code class="ApiTable-prop">.Icon--spin</code></td><td class="ApiTable-desc">Spinning animation</td></tr>
+<tr><td><code class="ApiTable-prop">.Icon--pulse</code></td><td class="ApiTable-desc">Pulsing animation</td></tr>
+<tr><td><code class="ApiTable-prop">.IconBg</code></td><td class="ApiTable-desc">Icon with circular background</td></tr>
+<tr><td><code class="ApiTable-prop">.IconBg--small</code></td><td class="ApiTable-desc">Small background (28px)</td></tr>
+<tr><td><code class="ApiTable-prop">.IconBg--large</code></td><td class="ApiTable-desc">Large background (56px)</td></tr>
+<tr><td><code class="ApiTable-prop">.IconBg--primary</code></td><td class="ApiTable-desc">Primary color background</td></tr>
+<tr><td><code class="ApiTable-prop">.IconBg--success</code></td><td class="ApiTable-desc">Success color background</td></tr>
+<tr><td><code class="ApiTable-prop">.IconBg--warning</code></td><td class="ApiTable-desc">Warning color background</td></tr>
+<tr><td><code class="ApiTable-prop">.IconBg--error</code></td><td class="ApiTable-desc">Error color background</td></tr>
+</tbody>
+</table>
+<h3 id="phosphor-icon-styles">Phosphor Icon Styles</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Class Prefix</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">ph</code></td><td class="ApiTable-desc">Regular weight</td></tr>
+<tr><td><code class="ApiTable-prop">ph-bold</code></td><td class="ApiTable-desc">Bold weight</td></tr>
+<tr><td><code class="ApiTable-prop">ph-fill</code></td><td class="ApiTable-desc">Filled style</td></tr>
+<tr><td><code class="ApiTable-prop">ph-duotone</code></td><td class="ApiTable-desc">Two-tone style</td></tr>
+</tbody>
+</table>
+<h3 id="attributes">Attributes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Attribute</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">aria-hidden="true"</code></td><td class="ApiTable-desc">For decorative icons (text provides meaning)</td></tr>
+<tr><td><code class="ApiTable-prop">aria-label</code></td><td class="ApiTable-desc">For meaningful icons without visible text</td></tr>
+<tr><td><code class="ApiTable-prop">role="img"</code></td><td class="ApiTable-desc">When icon conveys meaning</td></tr>
+</tbody>
+</table>
+<h3 id="css-custom-properties">CSS Custom Properties</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Property</th><th>Default</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">--text-secondary</code></td><td class="ApiTable-desc">—</td><td class="ApiTable-desc">Default icon color</td></tr>
+<tr><td><code class="ApiTable-prop">--bg-secondary</code></td><td class="ApiTable-desc">—</td><td class="ApiTable-desc">IconBg background</td></tr>
+<tr><td><code class="ApiTable-prop">--accent-primary</code></td><td class="ApiTable-desc">—</td><td class="ApiTable-desc">Info color</td></tr>
+</tbody>
+</table>
+<hr>
+<h2 id="css-reference">CSS Reference</h2>
+<pre><code class="language-css">/* Base Icon */
+.Icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+/* Sizes */
+.Icon--xs { font-size: 0.75rem; }
+.Icon--small { font-size: 1rem; }
+.Icon--large { font-size: 1.5rem; }
+.Icon--xl { font-size: 2rem; }
+
+/* Colors */
+.Icon--success { color: oklch(55% 0.15 150); }
+.Icon--warning { color: oklch(70% 0.15 80); }
+.Icon--error { color: oklch(55% 0.2 25); }
+.Icon--info { color: var(--accent); }
+
+/* Animations */
+.Icon--spin {
+  animation: spin 1s linear infinite;
+}
+
+.Icon--pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Icon Background */
+.IconBg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--bg-s);
+  color: var(--fg-3);
+}
+
+.IconBg--small {
+  width: 28px;
+  height: 28px;
+  font-size: 0.875rem;
+}
+
+.IconBg--large {
+  width: 56px;
+  height: 56px;
+  font-size: 1.5rem;
+}
+
+.IconBg--primary {
+  background-color: oklch(60% 0.15 250 / 0.15);
+  color: oklch(50% 0.15 250);
+}
+
+.IconBg--success {
+  background-color: oklch(65% 0.15 150 / 0.15);
+  color: oklch(45% 0.15 150);
+}
+
+.IconBg--warning {
+  background-color: oklch(75% 0.15 80 / 0.15);
+  color: oklch(50% 0.15 80);
+}
+
+.IconBg--error {
+  background-color: oklch(55% 0.2 25 / 0.15);
+  color: oklch(50% 0.2 25);
+}
+
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+</code></pre>
+<hr>
+<h2 id="accessibility">Accessibility</h2>
+<p>Icons require attention to ensure they’re accessible:</p>
+<h3 id="decorative-icons">Decorative Icons</h3>
+<pre><code class="language-html">&lt;!-- Icon is purely decorative, text provides meaning --&gt;
+&lt;button class=&quot;Button Button--primary&quot;&gt;
+    &lt;i class=&quot;ph ph-plus&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+    Add Item
+&lt;/button&gt;
+</code></pre>
+<h3 id="meaningful-icons">Meaningful Icons</h3>
+<pre><code class="language-html">&lt;!-- Icon-only button needs aria-label --&gt;
+&lt;button class=&quot;Button Button--icon&quot; aria-label=&quot;Search&quot;&gt;
+    &lt;i class=&quot;ph ph-magnifying-glass&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+
+&lt;!-- Or use visually-hidden text --&gt;
+&lt;button class=&quot;Button Button--icon&quot;&gt;
+    &lt;i class=&quot;ph ph-magnifying-glass&quot;&gt;&lt;/i&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;Search&lt;/span&gt;
+&lt;/button&gt;
+</code></pre>
+<h3 id="status-icons">Status Icons</h3>
+<pre><code class="language-html">&lt;!-- Provide text alternative for status --&gt;
+&lt;span&gt;
+    &lt;i class=&quot;ph ph-check-circle Icon Icon--success&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+    &lt;span&gt;Complete&lt;/span&gt;
+&lt;/span&gt;
+</code></pre>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="do">Do</h3>
+<ul>
+<li>✓ <strong>Use consistent sizing</strong> — Match icon size to text size</li>
+<li>✓ <strong>Pair icons with text</strong> — When possible, provide labels</li>
+<li>✓ <strong>Use recognizable icons</strong> — Stick to common conventions</li>
+<li>✓ <strong>Provide aria-labels</strong> — Required for icon-only buttons</li>
+<li>✓ <strong>Match icon style</strong> — Use the same weight throughout</li>
+<li>✓ <strong>Use semantic color classes</strong> — <code>.Icon--success</code> for positive states</li>
+</ul>
+<h3 id="don-t">Don’t</h3>
+<ul>
+<li>✗ <strong>Overuse icons</strong> — Not everything needs an icon</li>
+<li>✗ <strong>Create visual noise</strong> — Too many icons reduce clarity</li>
+<li>✗ <strong>Use ambiguous icons</strong> — A hamburger menu isn’t a hamburger</li>
+<li>✗ <strong>Forget color contrast</strong> — Icons need sufficient contrast</li>
+<li>✗ <strong>Mix icon libraries</strong> — Stick to Phosphor for consistency</li>
+<li>✗ <strong>Use icons without accessible names</strong> — Icon-only elements need aria-label</li>
+</ul>
+
+                </article>
+
+                <footer class="page-footer">
+                    <p>Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

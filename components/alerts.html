@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Alerts | Carbon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/bold/style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Floating Pill Nav (Mobile: bottom, Desktop: top) -->
+        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation">
+            <a href="../index.html" class="fnav-btn" data-section="home" aria-label="Home">
+                <i class="ph-bold ph-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="../tokens/colors.html" class="fnav-btn" data-section="tokens" aria-label="Tokens">
+                <i class="ph-bold ph-palette"></i>
+                <span>Tokens</span>
+            </a>
+            <a href="../components/buttons.html" class="fnav-btn" data-section="components" aria-label="Components">
+                <i class="ph-bold ph-stack"></i>
+                <span>Components</span>
+            </a>
+            <a href="../patterns/layouts.html" class="fnav-btn" data-section="patterns" aria-label="Patterns">
+                <i class="ph-bold ph-grid-four"></i>
+                <span>Patterns</span>
+            </a>
+            <div class="fnav-sep"></div>
+            <button class="fnav-btn" id="search-toggle" aria-label="Search">
+                <i class="ph ph-magnifying-glass"></i>
+            </button>
+            <button class="fnav-btn" id="theme-btn" aria-label="Toggle theme">
+                <i class="ph ph-moon"></i>
+            </button>
+        </nav>
+
+        <!-- Glassmorphism Top Bar (Desktop only) -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <a href="../index.html" class="logo">
+                    <i class="ph ph-intersect"></i>
+                    <span>Carbon</span>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <div class="search-container" id="search-container">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search components..." aria-label="Search" autocomplete="off">
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <main class="main-content">
+                <header class="page-header">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="../index.html">Carbon</a> <span class="sep">/</span> <span>Components</span> <span class="sep">/</span> <span>Alerts</span>
+                    </nav>
+                    <h1><em>Alerts</em></h1>
+                </header>
+                
+                <article class="prose">
+                    <h1>Alerts</h1>
+<p>Alerts display important messages that require user attention.</p>
+<h2 id="basic-alert">Basic Alert</h2>
+
+<div class="Preview" id="preview-gfmvq3svk">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Alert">
+        <p>This is a basic alert message.</p>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Alert&quot;&gt;
+&lt;p&gt;This is a basic alert message.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Alert&quot;&gt;
+    &lt;p&gt;This is a basic alert message.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="with-icon">With Icon</h2>
+
+<div class="Preview" id="preview-ulydn8l97">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Alert Alert--info">
+        <i class="ph ph-info Alert-icon"></i>
+        <div class="Alert-content">
+            <p>A new version is available. Please refresh to update.</p>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Alert Alert--info&quot;&gt;
+&lt;i class=&quot;ph ph-info Alert-icon&quot;&gt;&lt;/i&gt;
+&lt;div class=&quot;Alert-content&quot;&gt;
+&lt;p&gt;A new version is available. Please refresh to update.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Alert Alert--info&quot;&gt;
+    &lt;i class=&quot;ph ph-info Alert-icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;Alert-content&quot;&gt;
+        &lt;p&gt;Your message here.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="variants">Variants</h2>
+
+<div class="Preview" id="preview-5or0ld5sl">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-3);">
+        <div class="Alert Alert--info">
+            <i class="ph ph-info Alert-icon"></i>
+            <div class="Alert-content">
+                <strong>Info:</strong> This is an informational message.
+            </div>
+        </div>
+        <div class="Alert Alert--success">
+            <i class="ph ph-check-circle Alert-icon"></i>
+            <div class="Alert-content">
+                <strong>Success:</strong> Your changes have been saved.
+            </div>
+        </div>
+        <div class="Alert Alert--warning">
+            <i class="ph ph-warning Alert-icon"></i>
+            <div class="Alert-content">
+                <strong>Warning:</strong> Your session will expire in 5 minutes.
+            </div>
+        </div>
+        <div class="Alert Alert--error">
+            <i class="ph ph-x-circle Alert-icon"></i>
+            <div class="Alert-content">
+                <strong>Error:</strong> Something went wrong. Please try again.
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-3);&quot;&gt;
+&lt;div class=&quot;Alert Alert--info&quot;&gt;
+&lt;i class=&quot;ph ph-info Alert-icon&quot;&gt;&lt;/i&gt;
+&lt;div class=&quot;Alert-content&quot;&gt;
+&lt;strong&gt;Info:&lt;/strong&gt; This is an informational message.
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Alert Alert--success&quot;&gt;
+&lt;i class=&quot;ph ph-check-circle Alert-icon&quot;&gt;&lt;/i&gt;
+&lt;div class=&quot;Alert-content&quot;&gt;
+&lt;strong&gt;Success:&lt;/strong&gt; Your changes have been saved.
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Alert Alert--warning&quot;&gt;
+&lt;i class=&quot;ph ph-warning Alert-icon&quot;&gt;&lt;/i&gt;
+&lt;div class=&quot;Alert-content&quot;&gt;
+&lt;strong&gt;Warning:&lt;/strong&gt; Your session will expire in 5 minutes.
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Alert Alert--error&quot;&gt;
+&lt;i class=&quot;ph ph-x-circle Alert-icon&quot;&gt;&lt;/i&gt;
+&lt;div class=&quot;Alert-content&quot;&gt;
+&lt;strong&gt;Error:&lt;/strong&gt; Something went wrong. Please try again.
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Alert Alert--info&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;Alert Alert--success&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;Alert Alert--warning&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;Alert Alert--error&quot;&gt;...&lt;/div&gt;
+</code></pre>
+<h2 id="with-title">With Title</h2>
+
+<div class="Preview" id="preview-abk1248wf">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Alert Alert--warning">
+        <i class="ph ph-warning Alert-icon"></i>
+        <div class="Alert-content">
+            <p class="Alert-title">Scheduled Maintenance</p>
+            <p>The system will be unavailable on Sunday, Feb 5th from 2-4 AM UTC for scheduled maintenance.</p>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Alert Alert--warning&quot;&gt;
+&lt;i class=&quot;ph ph-warning Alert-icon&quot;&gt;&lt;/i&gt;
+&lt;div class=&quot;Alert-content&quot;&gt;
+&lt;p class=&quot;Alert-title&quot;&gt;Scheduled Maintenance&lt;/p&gt;
+&lt;p&gt;The system will be unavailable on Sunday, Feb 5th from 2-4 AM UTC for scheduled maintenance.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Alert Alert--warning&quot;&gt;
+    &lt;i class=&quot;ph ph-warning Alert-icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;Alert-content&quot;&gt;
+        &lt;p class=&quot;Alert-title&quot;&gt;Scheduled Maintenance&lt;/p&gt;
+        &lt;p&gt;Description text...&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="dismissible">Dismissible</h2>
+
+<div class="Preview" id="preview-b5w73hc0c">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Alert Alert--info">
+        <i class="ph ph-info Alert-icon"></i>
+        <div class="Alert-content">
+            <p>This alert can be dismissed.</p>
+        </div>
+        <button class="Alert-close" aria-label="Dismiss">
+            <i class="ph ph-x"></i>
+        </button>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Alert Alert--info&quot;&gt;
+&lt;i class=&quot;ph ph-info Alert-icon&quot;&gt;&lt;/i&gt;
+&lt;div class=&quot;Alert-content&quot;&gt;
+&lt;p&gt;This alert can be dismissed.&lt;/p&gt;
+&lt;/div&gt;
+&lt;button class=&quot;Alert-close&quot; aria-label=&quot;Dismiss&quot;&gt;
+&lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Alert Alert--info&quot;&gt;
+    &lt;i class=&quot;ph ph-info Alert-icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;Alert-content&quot;&gt;
+        &lt;p&gt;This alert can be dismissed.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;button class=&quot;Alert-close&quot; aria-label=&quot;Dismiss&quot;&gt;
+        &lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="with-actions">With Actions</h2>
+
+<div class="Preview" id="preview-j9s9u5fxe">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Alert Alert--info">
+        <i class="ph ph-cloud-arrow-up Alert-icon"></i>
+        <div class="Alert-content">
+            <p class="Alert-title">Update Available</p>
+            <p>A new version (v2.1.0) is ready to install.</p>
+            <div class="Alert-actions">
+                <button class="Button Button--primary" style="padding: var(--space-1) var(--space-3); font-size: 0.85rem;">Update Now</button>
+                <button class="Button" style="padding: var(--space-1) var(--space-3); font-size: 0.85rem;">Later</button>
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Alert Alert--info&quot;&gt;
+&lt;i class=&quot;ph ph-cloud-arrow-up Alert-icon&quot;&gt;&lt;/i&gt;
+&lt;div class=&quot;Alert-content&quot;&gt;
+&lt;p class=&quot;Alert-title&quot;&gt;Update Available&lt;/p&gt;
+&lt;p&gt;A new version (v2.1.0) is ready to install.&lt;/p&gt;
+&lt;div class=&quot;Alert-actions&quot;&gt;
+&lt;button class=&quot;Button Button--primary&quot; style=&quot;padding: var(--space-1) var(--space-3); font-size: 0.85rem;&quot;&gt;Update Now&lt;/button&gt;
+&lt;button class=&quot;Button&quot; style=&quot;padding: var(--space-1) var(--space-3); font-size: 0.85rem;&quot;&gt;Later&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Alert Alert--info&quot;&gt;
+    &lt;div class=&quot;Alert-content&quot;&gt;
+        &lt;p class=&quot;Alert-title&quot;&gt;Update Available&lt;/p&gt;
+        &lt;p&gt;Description...&lt;/p&gt;
+        &lt;div class=&quot;Alert-actions&quot;&gt;
+            &lt;button class=&quot;Button Button--primary&quot;&gt;Update Now&lt;/button&gt;
+            &lt;button class=&quot;Button&quot;&gt;Later&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="callout-bordered-">Callout (Bordered)</h2>
+<p>A softer variant for documentation callouts.</p>
+
+<div class="Preview" id="preview-yxzxp7i8b">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-3);">
+        <div class="Callout Callout--info">
+            <i class="ph ph-lightbulb Callout-icon"></i>
+            <div class="Callout-content">
+                <strong>Tip:</strong> You can use keyboard shortcuts to navigate faster.
+            </div>
+        </div>
+        <div class="Callout Callout--warning">
+            <i class="ph ph-warning Callout-icon"></i>
+            <div class="Callout-content">
+                <strong>Caution:</strong> This action cannot be undone.
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-3);&quot;&gt;
+&lt;div class=&quot;Callout Callout--info&quot;&gt;
+&lt;i class=&quot;ph ph-lightbulb Callout-icon&quot;&gt;&lt;/i&gt;
+&lt;div class=&quot;Callout-content&quot;&gt;
+&lt;strong&gt;Tip:&lt;/strong&gt; You can use keyboard shortcuts to navigate faster.
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Callout Callout--warning&quot;&gt;
+&lt;i class=&quot;ph ph-warning Callout-icon&quot;&gt;&lt;/i&gt;
+&lt;div class=&quot;Callout-content&quot;&gt;
+&lt;strong&gt;Caution:&lt;/strong&gt; This action cannot be undone.
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Callout Callout--info&quot;&gt;
+    &lt;i class=&quot;ph ph-lightbulb Callout-icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;Callout-content&quot;&gt;
+        &lt;strong&gt;Tip:&lt;/strong&gt; Your content here.
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="common-patterns">Common Patterns</h2>
+<h3 id="form-validation-summary">Form Validation Summary</h3>
+
+<div class="Preview" id="preview-lbouqgrgg">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="max-width: 400px;">
+    <div class="Alert Alert--error" style="margin-bottom: var(--space-4);">
+        <i class="ph ph-x-circle Alert-icon"></i>
+        <div class="Alert-content">
+            <p class="Alert-title">Please fix the following errors:</p>
+            <ul style="margin: var(--space-2) 0 0; padding-left: var(--space-4); font-size: 0.875rem;">
+                <li>Email address is required</li>
+                <li>Password must be at least 8 characters</li>
+            </ul>
+        </div>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;max-width: 400px;&quot;&gt;
+&lt;div class=&quot;Alert Alert--error&quot; style=&quot;margin-bottom: var(--space-4);&quot;&gt;
+&lt;i class=&quot;ph ph-x-circle Alert-icon&quot;&gt;&lt;/i&gt;
+&lt;div class=&quot;Alert-content&quot;&gt;
+&lt;p class=&quot;Alert-title&quot;&gt;Please fix the following errors:&lt;/p&gt;
+&lt;ul style=&quot;margin: var(--space-2) 0 0; padding-left: var(--space-4); font-size: 0.875rem;&quot;&gt;
+&lt;li&gt;Email address is required&lt;/li&gt;
+&lt;li&gt;Password must be at least 8 characters&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="success-confirmation">Success Confirmation</h3>
+
+<div class="Preview" id="preview-mzh8ibu52">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="max-width: 480px;">
+    <div class="Alert Alert--success">
+        <i class="ph ph-check-circle Alert-icon"></i>
+        <div class="Alert-content">
+            <strong>Changes saved successfully.</strong> Your profile has been updated.
+        </div>
+        <button class="Alert-close" aria-label="Dismiss">
+            <i class="ph ph-x"></i>
+        </button>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;max-width: 480px;&quot;&gt;
+&lt;div class=&quot;Alert Alert--success&quot;&gt;
+&lt;i class=&quot;ph ph-check-circle Alert-icon&quot;&gt;&lt;/i&gt;
+&lt;div class=&quot;Alert-content&quot;&gt;
+&lt;strong&gt;Changes saved successfully.&lt;/strong&gt; Your profile has been updated.
+&lt;/div&gt;
+&lt;button class=&quot;Alert-close&quot; aria-label=&quot;Dismiss&quot;&gt;
+&lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="system-banner">System Banner</h3>
+
+<div class="Preview" id="preview-zlt97wqn1">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="max-width: 600px;">
+    <div class="Alert Alert--warning">
+        <i class="ph ph-warning Alert-icon"></i>
+        <div class="Alert-content">
+            <p class="Alert-title">Scheduled Maintenance</p>
+            <p>Services will be unavailable on Sunday 2–4 AM UTC.</p>
+            <div class="Alert-actions">
+                <button class="Button Button--primary" style="padding: var(--space-1) var(--space-3); font-size: 0.85rem;">Learn More</button>
+                <button class="Button" style="padding: var(--space-1) var(--space-3); font-size: 0.85rem;">Dismiss</button>
+            </div>
+        </div>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;max-width: 600px;&quot;&gt;
+&lt;div class=&quot;Alert Alert--warning&quot;&gt;
+&lt;i class=&quot;ph ph-warning Alert-icon&quot;&gt;&lt;/i&gt;
+&lt;div class=&quot;Alert-content&quot;&gt;
+&lt;p class=&quot;Alert-title&quot;&gt;Scheduled Maintenance&lt;/p&gt;
+&lt;p&gt;Services will be unavailable on Sunday 2–4 AM UTC.&lt;/p&gt;
+&lt;div class=&quot;Alert-actions&quot;&gt;
+&lt;button class=&quot;Button Button--primary&quot; style=&quot;padding: var(--space-1) var(--space-3); font-size: 0.85rem;&quot;&gt;Learn More&lt;/button&gt;
+&lt;button class=&quot;Button&quot; style=&quot;padding: var(--space-1) var(--space-3); font-size: 0.85rem;&quot;&gt;Dismiss&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="inline-callout-in-documentation">Inline Callout in Documentation</h3>
+
+<div class="Preview" id="preview-g8f9wkrkm">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="max-width: 520px;">
+    <p style="margin-bottom: var(--space-3); font-size: 0.9rem;">To configure the API, set the following environment variable:</p>
+    <div class="Callout Callout--info">
+        <i class="ph ph-lightbulb Callout-icon"></i>
+        <div class="Callout-content">
+            <strong>Tip:</strong> You can also set this in your <code>.env</code> file for local development.
+        </div>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;max-width: 520px;&quot;&gt;
+&lt;p style=&quot;margin-bottom: var(--space-3); font-size: 0.9rem;&quot;&gt;To configure the API, set the following environment variable:&lt;/p&gt;
+&lt;div class=&quot;Callout Callout--info&quot;&gt;
+&lt;i class=&quot;ph ph-lightbulb Callout-icon&quot;&gt;&lt;/i&gt;
+&lt;div class=&quot;Callout-content&quot;&gt;
+&lt;strong&gt;Tip:&lt;/strong&gt; You can also set this in your &lt;code&gt;.env&lt;/code&gt; file for local development.
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="customization">Customization</h2>
+<p>Override alert styles using CSS custom properties:</p>
+<pre><code class="language-css">/* Custom alert colors */
+.Alert--brand {
+  background-color: oklch(60% 0.15 280 / 0.1);
+  border-left: 4px solid oklch(60% 0.15 280);
+  color: oklch(40% 0.15 280);
+}
+
+/* Compact alerts */
+.Alert--compact {
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.8rem;
+}
+
+.Alert--compact .Alert-icon {
+  font-size: 1rem;
+}
+
+/* Full-width banner style */
+.Alert--banner {
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Custom close button */
+.Alert-close:hover {
+  background-color: oklch(0% 0 0 / 0.08);
+  border-radius: var(--r-s);
+}
+</code></pre>
+<hr>
+<h2 id="api-reference">API Reference</h2>
+<h3 id="alert-classes">Alert Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">.Alert</code></td><td class="ApiTable-desc">Base alert container</td></tr>
+<tr><td><code class="ApiTable-prop">.Alert--info</code></td><td class="ApiTable-desc">Informational variant (blue)</td></tr>
+<tr><td><code class="ApiTable-prop">.Alert--success</code></td><td class="ApiTable-desc">Success variant (green)</td></tr>
+<tr><td><code class="ApiTable-prop">.Alert--warning</code></td><td class="ApiTable-desc">Warning variant (yellow)</td></tr>
+<tr><td><code class="ApiTable-prop">.Alert--error</code></td><td class="ApiTable-desc">Error variant (red)</td></tr>
+<tr><td><code class="ApiTable-prop">.Alert-icon</code></td><td class="ApiTable-desc">Icon container</td></tr>
+<tr><td><code class="ApiTable-prop">.Alert-content</code></td><td class="ApiTable-desc">Content wrapper</td></tr>
+<tr><td><code class="ApiTable-prop">.Alert-title</code></td><td class="ApiTable-desc">Bold heading text</td></tr>
+<tr><td><code class="ApiTable-prop">.Alert-actions</code></td><td class="ApiTable-desc">Button group container</td></tr>
+<tr><td><code class="ApiTable-prop">.Alert-close</code></td><td class="ApiTable-desc">Dismiss button</td></tr>
+</tbody>
+</table>
+<h3 id="callout-classes">Callout Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">.Callout</code></td><td class="ApiTable-desc">Bordered callout variant</td></tr>
+<tr><td><code class="ApiTable-prop">.Callout--info</code></td><td class="ApiTable-desc">Info callout</td></tr>
+<tr><td><code class="ApiTable-prop">.Callout--warning</code></td><td class="ApiTable-desc">Warning callout</td></tr>
+<tr><td><code class="ApiTable-prop">.Callout-icon</code></td><td class="ApiTable-desc">Callout icon</td></tr>
+<tr><td><code class="ApiTable-prop">.Callout-content</code></td><td class="ApiTable-desc">Callout content</td></tr>
+</tbody>
+</table>
+<hr>
+<h2 id="css-reference">CSS Reference</h2>
+<pre><code class="language-css">/* Base Alert */
+.Alert {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--r-m);
+  border-left: 4px solid var(--bd);
+  background-color: var(--bg-s);
+  color: var(--fg);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* Variants */
+.Alert--info {
+  border-left-color: oklch(60% 0.15 250);
+  background-color: oklch(60% 0.15 250 / 0.08);
+}
+
+.Alert--success {
+  border-left-color: oklch(55% 0.15 150);
+  background-color: oklch(55% 0.15 150 / 0.08);
+}
+
+.Alert--warning {
+  border-left-color: oklch(65% 0.15 80);
+  background-color: oklch(65% 0.15 80 / 0.08);
+}
+
+.Alert--error {
+  border-left-color: oklch(55% 0.2 25);
+  background-color: oklch(55% 0.2 25 / 0.08);
+}
+
+/* Icon */
+.Alert-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.Alert--info .Alert-icon { color: oklch(55% 0.15 250); }
+.Alert--success .Alert-icon { color: oklch(50% 0.15 150); }
+.Alert--warning .Alert-icon { color: oklch(55% 0.15 80); }
+.Alert--error .Alert-icon { color: oklch(50% 0.2 25); }
+
+/* Content */
+.Alert-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.Alert-title {
+  font-weight: 600;
+  margin: 0 0 var(--space-1);
+}
+
+.Alert-actions {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+/* Close Button */
+.Alert-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background: none;
+  border: none;
+  color: var(--fg-3);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: color 0.15s;
+}
+
+.Alert-close:hover {
+  color: var(--fg);
+}
+
+/* Callout */
+.Callout {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--bd);
+  border-radius: var(--r-m);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.Callout--info {
+  border-color: oklch(60% 0.15 250 / 0.3);
+  background-color: oklch(60% 0.15 250 / 0.05);
+}
+
+.Callout--warning {
+  border-color: oklch(65% 0.15 80 / 0.3);
+  background-color: oklch(65% 0.15 80 / 0.05);
+}
+
+.Callout-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.Callout-content {
+  flex: 1;
+  min-width: 0;
+}
+</code></pre>
+<hr>
+<h2 id="accessibility">Accessibility</h2>
+<h3 id="keyboard-support">Keyboard Support</h3>
+<div class="Table-container"><table class="Table">
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tab</td>
+<td>Move focus to dismiss button or action buttons</td>
+</tr>
+<tr>
+<td>Enter / Space</td>
+<td>Activate dismiss button or action</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="screen-readers">Screen Readers</h3>
+<pre><code class="language-html">&lt;!-- Time-sensitive alerts --&gt;
+&lt;div class=&quot;Alert Alert--error&quot; role=&quot;alert&quot;&gt;
+    &lt;i class=&quot;ph ph-x-circle Alert-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;Alert-content&quot;&gt;
+        &lt;p&gt;Payment failed. Please try again.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Informational alerts --&gt;
+&lt;div class=&quot;Alert Alert--info&quot; role=&quot;status&quot;&gt;
+    &lt;i class=&quot;ph ph-info Alert-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;Alert-content&quot;&gt;
+        &lt;p&gt;A new version is available.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Dismissible with accessible close --&gt;
+&lt;div class=&quot;Alert Alert--success&quot;&gt;
+    &lt;div class=&quot;Alert-content&quot;&gt;Changes saved.&lt;/div&gt;
+    &lt;button class=&quot;Alert-close&quot; aria-label=&quot;Dismiss&quot;&gt;
+        &lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="important-guidelines">Important Guidelines</h3>
+<ol>
+<li>Use <code>role=&quot;alert&quot;</code> for urgent, time-sensitive messages</li>
+<li>Use <code>role=&quot;status&quot;</code> for informational, non-urgent messages</li>
+<li>Include <code>aria-hidden=&quot;true&quot;</code> on decorative icons</li>
+<li>Ensure sufficient color contrast — don’t rely on color alone</li>
+<li>Give users enough time to read auto-dismissing alerts</li>
+</ol>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="do">Do</h3>
+<ul>
+<li>✓ <strong>Keep messages clear and concise</strong> — Users should understand the issue at a glance</li>
+<li>✓ <strong>Use the appropriate variant</strong> — Match color and icon to the severity level</li>
+<li>✓ <strong>Include an icon</strong> — Reinforces meaning beyond color alone</li>
+<li>✓ <strong>Position alerts prominently</strong> — Place near the relevant content or at the top of the page</li>
+<li>✓ <strong>Provide actionable guidance</strong> — Tell users what to do next, not just what went wrong</li>
+<li>✓ <strong>Use role=“alert” for urgent messages</strong> — Ensures screen readers announce immediately</li>
+</ul>
+<h3 id="don-t">Don’t</h3>
+<ul>
+<li>✗ <strong>Stack too many alerts</strong> — More than 2-3 simultaneous alerts overwhelm users</li>
+<li>✗ <strong>Use alerts for non-essential info</strong> — Reserve for genuinely important messages</li>
+<li>✗ <strong>Auto-dismiss error alerts</strong> — Users need time to read and act on errors</li>
+<li>✗ <strong>Use warning/error colors for info</strong> — Misusing severity erodes trust in the system</li>
+<li>✗ <strong>Hide critical info behind dismissible alerts</strong> — Important content should persist</li>
+<li>✗ <strong>Rely on color alone</strong> — Always pair with text and/or icons for accessibility</li>
+</ul>
+
+                </article>
+
+                <footer class="page-footer">
+                    <p>Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

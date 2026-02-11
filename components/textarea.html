@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Textarea | Carbon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/bold/style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Floating Pill Nav (Mobile: bottom, Desktop: top) -->
+        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation">
+            <a href="../index.html" class="fnav-btn" data-section="home" aria-label="Home">
+                <i class="ph-bold ph-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="../tokens/colors.html" class="fnav-btn" data-section="tokens" aria-label="Tokens">
+                <i class="ph-bold ph-palette"></i>
+                <span>Tokens</span>
+            </a>
+            <a href="../components/buttons.html" class="fnav-btn" data-section="components" aria-label="Components">
+                <i class="ph-bold ph-stack"></i>
+                <span>Components</span>
+            </a>
+            <a href="../patterns/layouts.html" class="fnav-btn" data-section="patterns" aria-label="Patterns">
+                <i class="ph-bold ph-grid-four"></i>
+                <span>Patterns</span>
+            </a>
+            <div class="fnav-sep"></div>
+            <button class="fnav-btn" id="search-toggle" aria-label="Search">
+                <i class="ph ph-magnifying-glass"></i>
+            </button>
+            <button class="fnav-btn" id="theme-btn" aria-label="Toggle theme">
+                <i class="ph ph-moon"></i>
+            </button>
+        </nav>
+
+        <!-- Glassmorphism Top Bar (Desktop only) -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <a href="../index.html" class="logo">
+                    <i class="ph ph-intersect"></i>
+                    <span>Carbon</span>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <div class="search-container" id="search-container">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search components..." aria-label="Search" autocomplete="off">
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <main class="main-content">
+                <header class="page-header">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="../index.html">Carbon</a> <span class="sep">/</span> <span>Components</span> <span class="sep">/</span> <span>Textarea</span>
+                    </nav>
+                    <h1><em>Textarea</em></h1>
+                </header>
+                
+                <article class="prose">
+                    <h1>Textarea</h1>
+<p>Textareas are multi-line text inputs for longer-form content like comments, descriptions, or messages.</p>
+<h2 id="basic-textarea">Basic Textarea</h2>
+<p>A standard multi-line text input.</p>
+
+<div class="Preview" id="preview-g8jhubv97">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="max-width: 400px;">
+        <label class="Form-label" for="basic-textarea">Description</label>
+        <textarea class="Textarea" id="basic-textarea" rows="4" placeholder="Enter a description..."></textarea>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;max-width: 400px;&quot;&gt;
+&lt;label class=&quot;Form-label&quot; for=&quot;basic-textarea&quot;&gt;Description&lt;/label&gt;
+&lt;textarea class=&quot;Textarea&quot; id=&quot;basic-textarea&quot; rows=&quot;4&quot; placeholder=&quot;Enter a description...&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;label class=&quot;Form-label&quot; for=&quot;basic-textarea&quot;&gt;Description&lt;/label&gt;
+&lt;textarea class=&quot;Textarea&quot; id=&quot;basic-textarea&quot; rows=&quot;4&quot; placeholder=&quot;Enter a description...&quot;&gt;&lt;/textarea&gt;
+</code></pre>
+<h2 id="with-helper-text">With Helper Text</h2>
+<p>Add context or instructions below the textarea.</p>
+
+<div class="Preview" id="preview-zbx5fxxfc">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Form-group" style="max-width: 400px;">
+        <label class="Form-label" for="helper-textarea">Bio</label>
+        <textarea class="Textarea" id="helper-textarea" rows="3" placeholder="Tell us about yourself..."></textarea>
+        <span class="Form-hint">Maximum 500 characters</span>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Form-group&quot; style=&quot;max-width: 400px;&quot;&gt;
+&lt;label class=&quot;Form-label&quot; for=&quot;helper-textarea&quot;&gt;Bio&lt;/label&gt;
+&lt;textarea class=&quot;Textarea&quot; id=&quot;helper-textarea&quot; rows=&quot;3&quot; placeholder=&quot;Tell us about yourself...&quot;&gt;&lt;/textarea&gt;
+&lt;span class=&quot;Form-hint&quot;&gt;Maximum 500 characters&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Form-group&quot;&gt;
+    &lt;label class=&quot;Form-label&quot; for=&quot;helper-textarea&quot;&gt;Bio&lt;/label&gt;
+    &lt;textarea class=&quot;Textarea&quot; id=&quot;helper-textarea&quot; rows=&quot;3&quot; placeholder=&quot;Tell us about yourself...&quot;&gt;&lt;/textarea&gt;
+    &lt;span class=&quot;Form-hint&quot;&gt;Maximum 500 characters&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="character-counter">Character Counter</h2>
+<p>Show remaining or used character count.</p>
+
+<div class="Preview" id="preview-ryd73gcfv">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Form-group" style="max-width: 400px;">
+        <label class="Form-label" for="counter-textarea">Message</label>
+        <textarea class="Textarea" id="counter-textarea" rows="4" maxlength="280" placeholder="What's on your mind?"></textarea>
+        <div class="Textarea-footer">
+            <span class="Form-hint">Be concise and clear</span>
+            <span class="Textarea-counter">0 / 280</span>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Form-group&quot; style=&quot;max-width: 400px;&quot;&gt;
+&lt;label class=&quot;Form-label&quot; for=&quot;counter-textarea&quot;&gt;Message&lt;/label&gt;
+&lt;textarea class=&quot;Textarea&quot; id=&quot;counter-textarea&quot; rows=&quot;4&quot; maxlength=&quot;280&quot; placeholder=&quot;What&#039;s on your mind?&quot;&gt;&lt;/textarea&gt;
+&lt;div class=&quot;Textarea-footer&quot;&gt;
+&lt;span class=&quot;Form-hint&quot;&gt;Be concise and clear&lt;/span&gt;
+&lt;span class=&quot;Textarea-counter&quot;&gt;0 / 280&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Form-group&quot;&gt;
+    &lt;label class=&quot;Form-label&quot; for=&quot;counter-textarea&quot;&gt;Message&lt;/label&gt;
+    &lt;textarea class=&quot;Textarea&quot; id=&quot;counter-textarea&quot; rows=&quot;4&quot; maxlength=&quot;280&quot; placeholder=&quot;...&quot;&gt;&lt;/textarea&gt;
+    &lt;div class=&quot;Textarea-footer&quot;&gt;
+        &lt;span class=&quot;Form-hint&quot;&gt;Be concise and clear&lt;/span&gt;
+        &lt;span class=&quot;Textarea-counter&quot;&gt;0 / 280&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="sizes">Sizes</h2>
+<p>Multiple size variants for different contexts.</p>
+
+<div class="Preview" id="preview-jdetrmom3">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-4); max-width: 400px;">
+        <div class="Form-group">
+            <label class="Form-label">Small</label>
+            <textarea class="Textarea Textarea--sm" rows="2" placeholder="Small textarea..."></textarea>
+        </div>
+        <div class="Form-group">
+            <label class="Form-label">Medium (Default)</label>
+            <textarea class="Textarea" rows="3" placeholder="Medium textarea..."></textarea>
+        </div>
+        <div class="Form-group">
+            <label class="Form-label">Large</label>
+            <textarea class="Textarea Textarea--lg" rows="4" placeholder="Large textarea..."></textarea>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-4); max-width: 400px;&quot;&gt;
+&lt;div class=&quot;Form-group&quot;&gt;
+&lt;label class=&quot;Form-label&quot;&gt;Small&lt;/label&gt;
+&lt;textarea class=&quot;Textarea Textarea--sm&quot; rows=&quot;2&quot; placeholder=&quot;Small textarea...&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Form-group&quot;&gt;
+&lt;label class=&quot;Form-label&quot;&gt;Medium (Default)&lt;/label&gt;
+&lt;textarea class=&quot;Textarea&quot; rows=&quot;3&quot; placeholder=&quot;Medium textarea...&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Form-group&quot;&gt;
+&lt;label class=&quot;Form-label&quot;&gt;Large&lt;/label&gt;
+&lt;textarea class=&quot;Textarea Textarea--lg&quot; rows=&quot;4&quot; placeholder=&quot;Large textarea...&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;textarea class=&quot;Textarea Textarea--sm&quot; rows=&quot;2&quot;&gt;Small&lt;/textarea&gt;
+&lt;textarea class=&quot;Textarea&quot; rows=&quot;3&quot;&gt;Medium (default)&lt;/textarea&gt;
+&lt;textarea class=&quot;Textarea Textarea--lg&quot; rows=&quot;4&quot;&gt;Large&lt;/textarea&gt;
+</code></pre>
+<h2 id="states">States</h2>
+<p>Different visual states for validation and interaction.</p>
+
+<div class="Preview" id="preview-lx64pvt1b">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-4); max-width: 400px;">
+        <div class="Form-group">
+            <label class="Form-label">Default</label>
+            <textarea class="Textarea" rows="2" placeholder="Default state..."></textarea>
+        </div>
+        <div class="Form-group">
+            <label class="Form-label">Focused</label>
+            <textarea class="Textarea Textarea--focus" rows="2" placeholder="Focused state..."></textarea>
+        </div>
+        <div class="Form-group">
+            <label class="Form-label">Error</label>
+            <textarea class="Textarea Textarea--error" rows="2" placeholder="Error state..."></textarea>
+            <span class="Form-error">This field is required</span>
+        </div>
+        <div class="Form-group">
+            <label class="Form-label">Success</label>
+            <textarea class="Textarea Textarea--success" rows="2" placeholder="Success state...">Valid content here</textarea>
+        </div>
+        <div class="Form-group">
+            <label class="Form-label">Disabled</label>
+            <textarea class="Textarea" rows="2" disabled placeholder="Disabled state...">Cannot edit this</textarea>
+        </div>
+        <div class="Form-group">
+            <label class="Form-label">Read-only</label>
+            <textarea class="Textarea" rows="2" readonly>This content is read-only</textarea>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-4); max-width: 400px;&quot;&gt;
+&lt;div class=&quot;Form-group&quot;&gt;
+&lt;label class=&quot;Form-label&quot;&gt;Default&lt;/label&gt;
+&lt;textarea class=&quot;Textarea&quot; rows=&quot;2&quot; placeholder=&quot;Default state...&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Form-group&quot;&gt;
+&lt;label class=&quot;Form-label&quot;&gt;Focused&lt;/label&gt;
+&lt;textarea class=&quot;Textarea Textarea--focus&quot; rows=&quot;2&quot; placeholder=&quot;Focused state...&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Form-group&quot;&gt;
+&lt;label class=&quot;Form-label&quot;&gt;Error&lt;/label&gt;
+&lt;textarea class=&quot;Textarea Textarea--error&quot; rows=&quot;2&quot; placeholder=&quot;Error state...&quot;&gt;&lt;/textarea&gt;
+&lt;span class=&quot;Form-error&quot;&gt;This field is required&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Form-group&quot;&gt;
+&lt;label class=&quot;Form-label&quot;&gt;Success&lt;/label&gt;
+&lt;textarea class=&quot;Textarea Textarea--success&quot; rows=&quot;2&quot; placeholder=&quot;Success state...&quot;&gt;Valid content here&lt;/textarea&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Form-group&quot;&gt;
+&lt;label class=&quot;Form-label&quot;&gt;Disabled&lt;/label&gt;
+&lt;textarea class=&quot;Textarea&quot; rows=&quot;2&quot; disabled placeholder=&quot;Disabled state...&quot;&gt;Cannot edit this&lt;/textarea&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Form-group&quot;&gt;
+&lt;label class=&quot;Form-label&quot;&gt;Read-only&lt;/label&gt;
+&lt;textarea class=&quot;Textarea&quot; rows=&quot;2&quot; readonly&gt;This content is read-only&lt;/textarea&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;textarea class=&quot;Textarea&quot;&gt;Default&lt;/textarea&gt;
+&lt;textarea class=&quot;Textarea Textarea--error&quot;&gt;Error state&lt;/textarea&gt;
+&lt;textarea class=&quot;Textarea Textarea--success&quot;&gt;Success state&lt;/textarea&gt;
+&lt;textarea class=&quot;Textarea&quot; disabled&gt;Disabled&lt;/textarea&gt;
+&lt;textarea class=&quot;Textarea&quot; readonly&gt;Read-only&lt;/textarea&gt;
+</code></pre>
+<h2 id="auto-resize">Auto-resize</h2>
+<p>Textareas that grow with content.</p>
+
+<div class="Preview" id="preview-nxjion39k">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Form-group" style="max-width: 400px;">
+        <label class="Form-label" for="autoresize-textarea">Notes</label>
+        <textarea class="Textarea Textarea--autoresize" id="autoresize-textarea" rows="2" placeholder="Start typing... the textarea will grow"></textarea>
+        <span class="Form-hint">Textarea expands as you type</span>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Form-group&quot; style=&quot;max-width: 400px;&quot;&gt;
+&lt;label class=&quot;Form-label&quot; for=&quot;autoresize-textarea&quot;&gt;Notes&lt;/label&gt;
+&lt;textarea class=&quot;Textarea Textarea--autoresize&quot; id=&quot;autoresize-textarea&quot; rows=&quot;2&quot; placeholder=&quot;Start typing... the textarea will grow&quot;&gt;&lt;/textarea&gt;
+&lt;span class=&quot;Form-hint&quot;&gt;Textarea expands as you type&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;textarea class=&quot;Textarea Textarea--autoresize&quot; rows=&quot;2&quot; placeholder=&quot;...&quot;&gt;&lt;/textarea&gt;
+
+&lt;script&gt;
+// Auto-resize implementation
+textarea.addEventListener('input', function() {
+    this.style.height = 'auto';
+    this.style.height = this.scrollHeight + 'px';
+});
+&lt;/script&gt;
+</code></pre>
+<h2 id="with-toolbar">With Toolbar</h2>
+<p>Add formatting controls above the textarea.</p>
+
+<div class="Preview" id="preview-7ty4xq54y">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Textarea-wrapper" style="max-width: 500px;">
+        <div class="Textarea-toolbar">
+            <button type="button" class="Textarea-toolbar-btn" title="Bold">
+                <i class="ph ph-text-bolder"></i>
+            </button>
+            <button type="button" class="Textarea-toolbar-btn" title="Italic">
+                <i class="ph ph-text-italic"></i>
+            </button>
+            <button type="button" class="Textarea-toolbar-btn" title="Underline">
+                <i class="ph ph-text-underline"></i>
+            </button>
+            <div class="Textarea-toolbar-divider"></div>
+            <button type="button" class="Textarea-toolbar-btn" title="Link">
+                <i class="ph ph-link"></i>
+            </button>
+            <button type="button" class="Textarea-toolbar-btn" title="Image">
+                <i class="ph ph-image"></i>
+            </button>
+            <button type="button" class="Textarea-toolbar-btn" title="Code">
+                <i class="ph ph-code"></i>
+            </button>
+            <div class="Textarea-toolbar-divider"></div>
+            <button type="button" class="Textarea-toolbar-btn" title="List">
+                <i class="ph ph-list-bullets"></i>
+            </button>
+            <button type="button" class="Textarea-toolbar-btn" title="Quote">
+                <i class="ph ph-quotes"></i>
+            </button>
+        </div>
+        <textarea class="Textarea Textarea--no-top-radius" rows="6" placeholder="Write your content here..."></textarea>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Textarea-wrapper&quot; style=&quot;max-width: 500px;&quot;&gt;
+&lt;div class=&quot;Textarea-toolbar&quot;&gt;
+&lt;button type=&quot;button&quot; class=&quot;Textarea-toolbar-btn&quot; title=&quot;Bold&quot;&gt;
+&lt;i class=&quot;ph ph-text-bolder&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;Textarea-toolbar-btn&quot; title=&quot;Italic&quot;&gt;
+&lt;i class=&quot;ph ph-text-italic&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;Textarea-toolbar-btn&quot; title=&quot;Underline&quot;&gt;
+&lt;i class=&quot;ph ph-text-underline&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;div class=&quot;Textarea-toolbar-divider&quot;&gt;&lt;/div&gt;
+&lt;button type=&quot;button&quot; class=&quot;Textarea-toolbar-btn&quot; title=&quot;Link&quot;&gt;
+&lt;i class=&quot;ph ph-link&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;Textarea-toolbar-btn&quot; title=&quot;Image&quot;&gt;
+&lt;i class=&quot;ph ph-image&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;Textarea-toolbar-btn&quot; title=&quot;Code&quot;&gt;
+&lt;i class=&quot;ph ph-code&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;div class=&quot;Textarea-toolbar-divider&quot;&gt;&lt;/div&gt;
+&lt;button type=&quot;button&quot; class=&quot;Textarea-toolbar-btn&quot; title=&quot;List&quot;&gt;
+&lt;i class=&quot;ph ph-list-bullets&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;Textarea-toolbar-btn&quot; title=&quot;Quote&quot;&gt;
+&lt;i class=&quot;ph ph-quotes&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;textarea class=&quot;Textarea Textarea--no-top-radius&quot; rows=&quot;6&quot; placeholder=&quot;Write your content here...&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Textarea-wrapper&quot;&gt;
+    &lt;div class=&quot;Textarea-toolbar&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;Textarea-toolbar-btn&quot; title=&quot;Bold&quot;&gt;
+            &lt;i class=&quot;ph ph-text-bolder&quot;&gt;&lt;/i&gt;
+        &lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;Textarea-toolbar-btn&quot; title=&quot;Italic&quot;&gt;
+            &lt;i class=&quot;ph ph-text-italic&quot;&gt;&lt;/i&gt;
+        &lt;/button&gt;
+        ...
+    &lt;/div&gt;
+    &lt;textarea class=&quot;Textarea Textarea--no-top-radius&quot; rows=&quot;6&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="with-action-bar">With Action Bar</h2>
+<p>Add actions below the textarea for submit or attachments.</p>
+
+<div class="Preview" id="preview-c4nm8cffx">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Textarea-wrapper" style="max-width: 500px;">
+        <textarea class="Textarea Textarea--no-bottom-radius" rows="4" placeholder="Write a comment..."></textarea>
+        <div class="Textarea-actions">
+            <div class="Textarea-actions-left">
+                <button type="button" class="Textarea-action-btn" title="Attach file">
+                    <i class="ph ph-paperclip"></i>
+                </button>
+                <button type="button" class="Textarea-action-btn" title="Add emoji">
+                    <i class="ph ph-smiley"></i>
+                </button>
+                <button type="button" class="Textarea-action-btn" title="Mention">
+                    <i class="ph ph-at"></i>
+                </button>
+            </div>
+            <button type="submit" class="Button Button--primary Button--sm">
+                Post Comment
+            </button>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Textarea-wrapper&quot; style=&quot;max-width: 500px;&quot;&gt;
+&lt;textarea class=&quot;Textarea Textarea--no-bottom-radius&quot; rows=&quot;4&quot; placeholder=&quot;Write a comment...&quot;&gt;&lt;/textarea&gt;
+&lt;div class=&quot;Textarea-actions&quot;&gt;
+&lt;div class=&quot;Textarea-actions-left&quot;&gt;
+&lt;button type=&quot;button&quot; class=&quot;Textarea-action-btn&quot; title=&quot;Attach file&quot;&gt;
+&lt;i class=&quot;ph ph-paperclip&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;Textarea-action-btn&quot; title=&quot;Add emoji&quot;&gt;
+&lt;i class=&quot;ph ph-smiley&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;Textarea-action-btn&quot; title=&quot;Mention&quot;&gt;
+&lt;i class=&quot;ph ph-at&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;button type=&quot;submit&quot; class=&quot;Button Button--primary Button--sm&quot;&gt;
+Post Comment
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Textarea-wrapper&quot;&gt;
+    &lt;textarea class=&quot;Textarea Textarea--no-bottom-radius&quot; rows=&quot;4&quot;&gt;&lt;/textarea&gt;
+    &lt;div class=&quot;Textarea-actions&quot;&gt;
+        &lt;div class=&quot;Textarea-actions-left&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;Textarea-action-btn&quot;&gt;
+                &lt;i class=&quot;ph ph-paperclip&quot;&gt;&lt;/i&gt;
+            &lt;/button&gt;
+            ...
+        &lt;/div&gt;
+        &lt;button type=&quot;submit&quot; class=&quot;Button Button--primary Button--sm&quot;&gt;
+            Post Comment
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="no-resize">No Resize</h2>
+<p>Disable user resizing.</p>
+
+<div class="Preview" id="preview-goe2trr01">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Form-group" style="max-width: 400px;">
+        <label class="Form-label" for="noresize-textarea">Fixed Size</label>
+        <textarea class="Textarea Textarea--no-resize" id="noresize-textarea" rows="4" placeholder="This textarea cannot be resized..."></textarea>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Form-group&quot; style=&quot;max-width: 400px;&quot;&gt;
+&lt;label class=&quot;Form-label&quot; for=&quot;noresize-textarea&quot;&gt;Fixed Size&lt;/label&gt;
+&lt;textarea class=&quot;Textarea Textarea--no-resize&quot; id=&quot;noresize-textarea&quot; rows=&quot;4&quot; placeholder=&quot;This textarea cannot be resized...&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;textarea class=&quot;Textarea Textarea--no-resize&quot; rows=&quot;4&quot;&gt;&lt;/textarea&gt;
+</code></pre>
+<h2 id="horizontal-resize-only">Horizontal Resize Only</h2>
+<p>Allow only horizontal resizing.</p>
+
+<div class="Preview" id="preview-4wzkid5wf">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Form-group" style="max-width: 600px;">
+        <label class="Form-label">Adjustable Width</label>
+        <textarea class="Textarea Textarea--resize-horizontal" rows="3" placeholder="Drag the corner to resize horizontally..."></textarea>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Form-group&quot; style=&quot;max-width: 600px;&quot;&gt;
+&lt;label class=&quot;Form-label&quot;&gt;Adjustable Width&lt;/label&gt;
+&lt;textarea class=&quot;Textarea Textarea--resize-horizontal&quot; rows=&quot;3&quot; placeholder=&quot;Drag the corner to resize horizontally...&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;textarea class=&quot;Textarea Textarea--resize-horizontal&quot; rows=&quot;3&quot;&gt;&lt;/textarea&gt;
+</code></pre>
+<h2 id="required-field">Required Field</h2>
+<p>Mark textarea as required with visual indicator.</p>
+
+<div class="Preview" id="preview-5fhmfxcvg">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Form-group" style="max-width: 400px;">
+        <label class="Form-label">
+            Feedback
+            <span class="Form-required">*</span>
+        </label>
+        <textarea class="Textarea" rows="4" required placeholder="Please share your feedback..."></textarea>
+        <span class="Form-hint">Required field</span>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Form-group&quot; style=&quot;max-width: 400px;&quot;&gt;
+&lt;label class=&quot;Form-label&quot;&gt;
+Feedback
+&lt;span class=&quot;Form-required&quot;&gt;*&lt;/span&gt;
+&lt;/label&gt;
+&lt;textarea class=&quot;Textarea&quot; rows=&quot;4&quot; required placeholder=&quot;Please share your feedback...&quot;&gt;&lt;/textarea&gt;
+&lt;span class=&quot;Form-hint&quot;&gt;Required field&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Form-group&quot;&gt;
+    &lt;label class=&quot;Form-label&quot;&gt;
+        Feedback
+        &lt;span class=&quot;Form-required&quot;&gt;*&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;textarea class=&quot;Textarea&quot; rows=&quot;4&quot; required&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="common-patterns">Common Patterns</h2>
+<h3 id="comment-box">Comment Box</h3>
+
+<div class="Preview" id="preview-k9ki5chds">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Textarea-wrapper" style="max-width: 500px;">
+        <textarea class="Textarea Textarea--no-bottom-radius" rows="3" placeholder="Write a comment..."></textarea>
+        <div class="Textarea-actions">
+            <div class="Textarea-actions-left">
+                <button type="button" class="Textarea-action-btn" title="Attach file"><i class="ph ph-paperclip"></i></button>
+                <button type="button" class="Textarea-action-btn" title="Emoji"><i class="ph ph-smiley"></i></button>
+            </div>
+            <button type="submit" class="Button Button--primary Button--sm">Comment</button>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Textarea-wrapper&quot; style=&quot;max-width: 500px;&quot;&gt;
+&lt;textarea class=&quot;Textarea Textarea--no-bottom-radius&quot; rows=&quot;3&quot; placeholder=&quot;Write a comment...&quot;&gt;&lt;/textarea&gt;
+&lt;div class=&quot;Textarea-actions&quot;&gt;
+&lt;div class=&quot;Textarea-actions-left&quot;&gt;
+&lt;button type=&quot;button&quot; class=&quot;Textarea-action-btn&quot; title=&quot;Attach file&quot;&gt;&lt;i class=&quot;ph ph-paperclip&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;Textarea-action-btn&quot; title=&quot;Emoji&quot;&gt;&lt;i class=&quot;ph ph-smiley&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;button type=&quot;submit&quot; class=&quot;Button Button--primary Button--sm&quot;&gt;Comment&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="feedback-form">Feedback Form</h3>
+
+<div class="Preview" id="preview-jvr6hi4b1">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="max-width: 450px; display: flex; flex-direction: column; gap: var(--space-4);">
+        <div class="Form-group">
+            <label class="Form-label">How can we improve?</label>
+            <textarea class="Textarea" rows="4" placeholder="Tell us what you think..."></textarea>
+            <div class="Textarea-footer">
+                <span class="Form-hint">Your feedback is anonymous</span>
+                <span class="Textarea-counter">0 / 500</span>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: flex-end; gap: var(--space-2);">
+            <button class="Button Button--secondary">Cancel</button>
+            <button class="Button Button--primary">Submit</button>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;max-width: 450px; display: flex; flex-direction: column; gap: var(--space-4);&quot;&gt;
+&lt;div class=&quot;Form-group&quot;&gt;
+&lt;label class=&quot;Form-label&quot;&gt;How can we improve?&lt;/label&gt;
+&lt;textarea class=&quot;Textarea&quot; rows=&quot;4&quot; placeholder=&quot;Tell us what you think...&quot;&gt;&lt;/textarea&gt;
+&lt;div class=&quot;Textarea-footer&quot;&gt;
+&lt;span class=&quot;Form-hint&quot;&gt;Your feedback is anonymous&lt;/span&gt;
+&lt;span class=&quot;Textarea-counter&quot;&gt;0 / 500&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: flex; justify-content: flex-end; gap: var(--space-2);&quot;&gt;
+&lt;button class=&quot;Button Button--secondary&quot;&gt;Cancel&lt;/button&gt;
+&lt;button class=&quot;Button Button--primary&quot;&gt;Submit&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="rich-text-editor">Rich Text Editor</h3>
+
+<div class="Preview" id="preview-opa9fl377">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Textarea-wrapper" style="max-width: 550px;">
+        <div class="Textarea-toolbar">
+            <button type="button" class="Textarea-toolbar-btn" title="Bold"><i class="ph ph-text-bolder"></i></button>
+            <button type="button" class="Textarea-toolbar-btn" title="Italic"><i class="ph ph-text-italic"></i></button>
+            <button type="button" class="Textarea-toolbar-btn" title="Underline"><i class="ph ph-text-underline"></i></button>
+            <div class="Textarea-toolbar-divider"></div>
+            <button type="button" class="Textarea-toolbar-btn" title="Link"><i class="ph ph-link"></i></button>
+            <button type="button" class="Textarea-toolbar-btn" title="Code"><i class="ph ph-code"></i></button>
+            <div class="Textarea-toolbar-divider"></div>
+            <button type="button" class="Textarea-toolbar-btn" title="List"><i class="ph ph-list-bullets"></i></button>
+            <button type="button" class="Textarea-toolbar-btn" title="Quote"><i class="ph ph-quotes"></i></button>
+        </div>
+        <textarea class="Textarea Textarea--no-top-radius" rows="8" placeholder="Write your content here..."></textarea>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Textarea-wrapper&quot; style=&quot;max-width: 550px;&quot;&gt;
+&lt;div class=&quot;Textarea-toolbar&quot;&gt;
+&lt;button type=&quot;button&quot; class=&quot;Textarea-toolbar-btn&quot; title=&quot;Bold&quot;&gt;&lt;i class=&quot;ph ph-text-bolder&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;Textarea-toolbar-btn&quot; title=&quot;Italic&quot;&gt;&lt;i class=&quot;ph ph-text-italic&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;Textarea-toolbar-btn&quot; title=&quot;Underline&quot;&gt;&lt;i class=&quot;ph ph-text-underline&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;div class=&quot;Textarea-toolbar-divider&quot;&gt;&lt;/div&gt;
+&lt;button type=&quot;button&quot; class=&quot;Textarea-toolbar-btn&quot; title=&quot;Link&quot;&gt;&lt;i class=&quot;ph ph-link&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;Textarea-toolbar-btn&quot; title=&quot;Code&quot;&gt;&lt;i class=&quot;ph ph-code&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;div class=&quot;Textarea-toolbar-divider&quot;&gt;&lt;/div&gt;
+&lt;button type=&quot;button&quot; class=&quot;Textarea-toolbar-btn&quot; title=&quot;List&quot;&gt;&lt;i class=&quot;ph ph-list-bullets&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;Textarea-toolbar-btn&quot; title=&quot;Quote&quot;&gt;&lt;i class=&quot;ph ph-quotes&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;textarea class=&quot;Textarea Textarea--no-top-radius&quot; rows=&quot;8&quot; placeholder=&quot;Write your content here...&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="bio-profile-description">Bio / Profile Description</h3>
+
+<div class="Preview" id="preview-r1n9l05ah">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Form-group" style="max-width: 400px;">
+        <label class="Form-label">Bio</label>
+        <textarea class="Textarea" rows="3" maxlength="160" placeholder="Write a short bio...">Product designer crafting thoughtful interfaces.</textarea>
+        <div class="Textarea-footer">
+            <span class="Form-hint">Displayed on your public profile</span>
+            <span class="Textarea-counter">49 / 160</span>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Form-group&quot; style=&quot;max-width: 400px;&quot;&gt;
+&lt;label class=&quot;Form-label&quot;&gt;Bio&lt;/label&gt;
+&lt;textarea class=&quot;Textarea&quot; rows=&quot;3&quot; maxlength=&quot;160&quot; placeholder=&quot;Write a short bio...&quot;&gt;Product designer crafting thoughtful interfaces.&lt;/textarea&gt;
+&lt;div class=&quot;Textarea-footer&quot;&gt;
+&lt;span class=&quot;Form-hint&quot;&gt;Displayed on your public profile&lt;/span&gt;
+&lt;span class=&quot;Textarea-counter&quot;&gt;49 / 160&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="customization">Customization</h2>
+<p>Override textarea styles using CSS custom properties:</p>
+<pre><code class="language-css">/* Custom border color on focus */
+.Textarea:focus {
+  border-color: oklch(55% 0.2 150);
+  box-shadow: 0 0 0 3px oklch(55% 0.2 150 / 0.15);
+}
+
+/* Monospace textarea for code */
+.Textarea--code {
+  font-family: var(--ff-m);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  tab-size: 2;
+}
+
+/* Dark toolbar */
+.Textarea-toolbar--dark {
+  background: var(--fg);
+  color: var(--bg);
+}
+.Textarea-toolbar--dark .Textarea-toolbar-btn {
+  color: var(--bg);
+}
+
+/* Minimal textarea (no border until focus) */
+.Textarea--minimal {
+  border-color: transparent;
+  background: transparent;
+}
+.Textarea--minimal:focus {
+  border-color: var(--bd);
+  background: var(--bg);
+}
+</code></pre>
+<hr>
+<h2 id="api-reference">API Reference</h2>
+<h3 id="base-classes">Base Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Textarea</code></td>
+<td class="ApiTable-desc">Base textarea styling (required)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Textarea-wrapper</code></td>
+<td class="ApiTable-desc">Container for textarea + toolbar/actions</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Textarea-footer</code></td>
+<td class="ApiTable-desc">Footer with counter/hint</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Textarea-counter</code></td>
+<td class="ApiTable-desc">Character counter display</td>
+</tr>
+</tbody>
+</table>
+<h3 id="size-classes">Size Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Textarea--sm</code></td>
+<td class="ApiTable-desc">Small size variant</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Textarea--lg</code></td>
+<td class="ApiTable-desc">Large size variant</td>
+</tr>
+</tbody>
+</table>
+<h3 id="state-classes">State Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Textarea--focus</code></td>
+<td class="ApiTable-desc">Forced focus state (for demos)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Textarea--error</code></td>
+<td class="ApiTable-desc">Error state styling</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Textarea--success</code></td>
+<td class="ApiTable-desc">Success/valid state styling</td>
+</tr>
+</tbody>
+</table>
+<h3 id="modifier-classes">Modifier Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Textarea--autoresize</code></td>
+<td class="ApiTable-desc">Auto-growing textarea</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Textarea--no-resize</code></td>
+<td class="ApiTable-desc">Disables user resizing</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Textarea--resize-horizontal</code></td>
+<td class="ApiTable-desc">Horizontal resize only</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Textarea--no-top-radius</code></td>
+<td class="ApiTable-desc">Removes top border radius (for toolbar)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Textarea--no-bottom-radius</code></td>
+<td class="ApiTable-desc">Removes bottom border radius (for action bar)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="toolbar-classes">Toolbar Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Textarea-toolbar</code></td>
+<td class="ApiTable-desc">Formatting toolbar above textarea</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Textarea-toolbar-btn</code></td>
+<td class="ApiTable-desc">Toolbar button</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Textarea-toolbar-divider</code></td>
+<td class="ApiTable-desc">Divider between toolbar groups</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Textarea-actions</code></td>
+<td class="ApiTable-desc">Action bar below textarea</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Textarea-actions-left</code></td>
+<td class="ApiTable-desc">Left-aligned actions</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Textarea-action-btn</code></td>
+<td class="ApiTable-desc">Action bar button</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="css-reference">CSS Reference</h2>
+<pre><code class="language-css">/* Base textarea */
+.Textarea {
+  display: block;
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  font-family: var(--ff-b);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  color: var(--fg);
+  background: var(--bg);
+  border: 1px solid var(--bd);
+  border-radius: var(--radius-md);
+  resize: vertical;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.Textarea::placeholder {
+  color: var(--fg-3);
+}
+
+.Textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px oklch(60% 0.15 250 / 0.15);
+}
+
+/* Sizes */
+.Textarea--sm {
+  padding: var(--space-1) var(--space-2);
+  font-size: var(--text-xs);
+}
+
+.Textarea--lg {
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-base);
+}
+
+/* States */
+.Textarea--error {
+  border-color: oklch(55% 0.2 25);
+}
+.Textarea--error:focus {
+  box-shadow: 0 0 0 3px oklch(55% 0.2 25 / 0.15);
+}
+
+.Textarea--success {
+  border-color: oklch(55% 0.15 150);
+}
+.Textarea--success:focus {
+  box-shadow: 0 0 0 3px oklch(55% 0.15 150 / 0.15);
+}
+
+.Textarea:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: var(--bg-s);
+}
+
+.Textarea[readonly] {
+  background: var(--bg-s);
+}
+
+/* Resize modifiers */
+.Textarea--no-resize { resize: none; }
+.Textarea--resize-horizontal { resize: horizontal; }
+.Textarea--autoresize { resize: none; overflow: hidden; }
+
+/* Border radius modifiers */
+.Textarea--no-top-radius { border-top-left-radius: 0; border-top-right-radius: 0; }
+.Textarea--no-bottom-radius { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+
+/* Wrapper */
+.Textarea-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Toolbar */
+.Textarea-toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  background: var(--bg-s);
+  border: 1px solid var(--bd);
+  border-bottom: none;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.Textarea-toolbar-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: none;
+  color: var(--fg-3);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+}
+.Textarea-toolbar-btn:hover {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.Textarea-toolbar-divider {
+  width: 1px;
+  height: 1rem;
+  background: var(--bd);
+  margin: 0 var(--space-1);
+}
+
+/* Actions bar */
+.Textarea-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2) var(--space-3);
+  background: var(--bg-s);
+  border: 1px solid var(--bd);
+  border-top: none;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+}
+
+.Textarea-actions-left {
+  display: flex;
+  gap: var(--space-1);
+}
+
+.Textarea-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: none;
+  color: var(--fg-3);
+  cursor: pointer;
+}
+.Textarea-action-btn:hover {
+  color: var(--fg);
+}
+
+/* Footer */
+.Textarea-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--space-1);
+}
+
+.Textarea-counter {
+  font-size: var(--text-xs);
+  color: var(--fg-3);
+}
+</code></pre>
+<hr>
+<h2 id="accessibility">Accessibility</h2>
+<ul>
+<li>Always associate textareas with labels using <code>for</code> and <code>id</code></li>
+<li>Use <code>aria-describedby</code> to link helper text and error messages</li>
+<li>Provide clear placeholder text that disappears on focus</li>
+<li>Ensure error states are announced to screen readers</li>
+<li>Support keyboard navigation (Tab to focus, standard text editing)</li>
+<li>Use <code>aria-invalid=&quot;true&quot;</code> for error states</li>
+<li>Include <code>maxlength</code> attribute when character limits apply</li>
+<li>Announce character count updates to screen readers with <code>aria-live=&quot;polite&quot;</code></li>
+<li>Ensure toolbar buttons have descriptive <code>title</code> or <code>aria-label</code> attributes</li>
+</ul>
+<h3 id="keyboard-support">Keyboard Support</h3>
+<div class="Table-container"><table class="Table">
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tab</td>
+<td>Move focus to/from the textarea</td>
+</tr>
+<tr>
+<td>Shift + Tab</td>
+<td>Move focus to previous element</td>
+</tr>
+<tr>
+<td>Escape</td>
+<td>Remove focus from textarea (when appropriate)</td>
+</tr>
+</tbody>
+</table></div>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="do">Do</h3>
+<ul>
+<li>✓ <strong>Always include a label</strong> — Every textarea needs an associated label</li>
+<li>✓ <strong>Set appropriate rows</strong> — Match initial height to expected input length</li>
+<li>✓ <strong>Show character limits</strong> — Display counter when maxlength is set</li>
+<li>✓ <strong>Provide helper text</strong> — Explain what input is expected</li>
+<li>✓ <strong>Use auto-resize for chat</strong> — Reduces unnecessary whitespace</li>
+<li>✓ <strong>Include error messages</strong> — Specific, actionable validation feedback</li>
+</ul>
+<h3 id="don-t">Don’t</h3>
+<ul>
+<li>✗ <strong>Disable resize without reason</strong> — Users may need more space</li>
+<li>✗ <strong>Use for single-line input</strong> — Use <code>&lt;input&gt;</code> instead</li>
+<li>✗ <strong>Set tiny max heights</strong> — Cramped textareas frustrate users</li>
+<li>✗ <strong>Rely on placeholder as label</strong> — Placeholders disappear on input</li>
+<li>✗ <strong>Skip validation feedback</strong> — Show errors inline, not just on submit</li>
+<li>✗ <strong>Use for read-only content</strong> — Use <code>&lt;div&gt;</code> or <code>&lt;pre&gt;</code> instead</li>
+</ul>
+
+                </article>
+
+                <footer class="page-footer">
+                    <p>Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

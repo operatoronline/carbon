@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Colors | Carbon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/bold/style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Floating Pill Nav (Mobile: bottom, Desktop: top) -->
+        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation">
+            <a href="../index.html" class="fnav-btn" data-section="home" aria-label="Home">
+                <i class="ph-bold ph-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="../tokens/colors.html" class="fnav-btn" data-section="tokens" aria-label="Tokens">
+                <i class="ph-bold ph-palette"></i>
+                <span>Tokens</span>
+            </a>
+            <a href="../components/buttons.html" class="fnav-btn" data-section="components" aria-label="Components">
+                <i class="ph-bold ph-stack"></i>
+                <span>Components</span>
+            </a>
+            <a href="../patterns/layouts.html" class="fnav-btn" data-section="patterns" aria-label="Patterns">
+                <i class="ph-bold ph-grid-four"></i>
+                <span>Patterns</span>
+            </a>
+            <div class="fnav-sep"></div>
+            <button class="fnav-btn" id="search-toggle" aria-label="Search">
+                <i class="ph ph-magnifying-glass"></i>
+            </button>
+            <button class="fnav-btn" id="theme-btn" aria-label="Toggle theme">
+                <i class="ph ph-moon"></i>
+            </button>
+        </nav>
+
+        <!-- Glassmorphism Top Bar (Desktop only) -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <a href="../index.html" class="logo">
+                    <i class="ph ph-intersect"></i>
+                    <span>Carbon</span>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <div class="search-container" id="search-container">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search components..." aria-label="Search" autocomplete="off">
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <main class="main-content">
+                <header class="page-header">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="../index.html">Carbon</a> <span class="sep">/</span> <span>Tokens</span> <span class="sep">/</span> <span>Colors</span>
+                    </nav>
+                    <h1><em>Colors</em></h1>
+                </header>
+                
+                <article class="prose">
+                    <h1>Colors</h1>
+<p>Carbon’s palette is built on <strong>OKLCH</strong> — a perceptually uniform color space where equal lightness values produce equal perceived brightness. The accent hue is <strong>270° purple</strong>.</p>
+<hr>
+<h2 id="grayscale">Grayscale</h2>
+<p>14 neutral steps from black to near-white. Every step is a pure OKLCH lightness value with zero chroma.</p>
+
+<div class="Preview" id="preview-72cvtlkjb">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; width: 100%; border-radius: var(--r-m); overflow: hidden; height: 64px;">
+        <div style="flex: 1; background: var(--black);" title="black · 0%"></div>
+        <div style="flex: 1; background: var(--g950);" title="g950 · 12%"></div>
+        <div style="flex: 1; background: var(--g900);" title="g900 · 17%"></div>
+        <div style="flex: 1; background: var(--g850);" title="g850 · 20%"></div>
+        <div style="flex: 1; background: var(--g800);" title="g800 · 24%"></div>
+        <div style="flex: 1; background: var(--g700);" title="g700 · 34%"></div>
+        <div style="flex: 1; background: var(--g600);" title="g600 · 44%"></div>
+        <div style="flex: 1; background: var(--g500);" title="g500 · 54%"></div>
+        <div style="flex: 1; background: var(--g400);" title="g400 · 64%"></div>
+        <div style="flex: 1; background: var(--g300);" title="g300 · 76%"></div>
+        <div style="flex: 1; background: var(--g200);" title="g200 · 86%"></div>
+        <div style="flex: 1; background: var(--g100);" title="g100 · 93%"></div>
+        <div style="flex: 1; background: var(--g50);" title="g50 · 97%"></div>
+        <div style="flex: 1; background: var(--white); border: 1px solid var(--bd-w);" title="white · 100%"></div>
+    </div>
+    <div style="display: flex; width: 100%; margin-top: var(--space-2);">
+        <div style="flex: 1; text-align: center; font-size: .5rem; font-family: var(--ff-m); color: var(--fg-4); letter-spacing: .02em;">0</div>
+        <div style="flex: 1; text-align: center; font-size: .5rem; font-family: var(--ff-m); color: var(--fg-4);">950</div>
+        <div style="flex: 1; text-align: center; font-size: .5rem; font-family: var(--ff-m); color: var(--fg-4);">900</div>
+        <div style="flex: 1; text-align: center; font-size: .5rem; font-family: var(--ff-m); color: var(--fg-4);">850</div>
+        <div style="flex: 1; text-align: center; font-size: .5rem; font-family: var(--ff-m); color: var(--fg-4);">800</div>
+        <div style="flex: 1; text-align: center; font-size: .5rem; font-family: var(--ff-m); color: var(--fg-4);">700</div>
+        <div style="flex: 1; text-align: center; font-size: .5rem; font-family: var(--ff-m); color: var(--fg-4);">600</div>
+        <div style="flex: 1; text-align: center; font-size: .5rem; font-family: var(--ff-m); color: var(--fg-4);">500</div>
+        <div style="flex: 1; text-align: center; font-size: .5rem; font-family: var(--ff-m); color: var(--fg-4);">400</div>
+        <div style="flex: 1; text-align: center; font-size: .5rem; font-family: var(--ff-m); color: var(--fg-4);">300</div>
+        <div style="flex: 1; text-align: center; font-size: .5rem; font-family: var(--ff-m); color: var(--fg-4);">200</div>
+        <div style="flex: 1; text-align: center; font-size: .5rem; font-family: var(--ff-m); color: var(--fg-4);">100</div>
+        <div style="flex: 1; text-align: center; font-size: .5rem; font-family: var(--ff-m); color: var(--fg-4);">50</div>
+        <div style="flex: 1; text-align: center; font-size: .5rem; font-family: var(--ff-m); color: var(--fg-4);">W</div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; width: 100%; border-radius: var(--r-m); overflow: hidden; height: 64px;&quot;&gt;
+&lt;div style=&quot;flex: 1; background: var(--black);&quot; title=&quot;black · 0%&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;flex: 1; background: var(--g950);&quot; title=&quot;g950 · 12%&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;flex: 1; background: var(--g900);&quot; title=&quot;g900 · 17%&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;flex: 1; background: var(--g850);&quot; title=&quot;g850 · 20%&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;flex: 1; background: var(--g800);&quot; title=&quot;g800 · 24%&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;flex: 1; background: var(--g700);&quot; title=&quot;g700 · 34%&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;flex: 1; background: var(--g600);&quot; title=&quot;g600 · 44%&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;flex: 1; background: var(--g500);&quot; title=&quot;g500 · 54%&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;flex: 1; background: var(--g400);&quot; title=&quot;g400 · 64%&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;flex: 1; background: var(--g300);&quot; title=&quot;g300 · 76%&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;flex: 1; background: var(--g200);&quot; title=&quot;g200 · 86%&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;flex: 1; background: var(--g100);&quot; title=&quot;g100 · 93%&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;flex: 1; background: var(--g50);&quot; title=&quot;g50 · 97%&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;flex: 1; background: var(--white); border: 1px solid var(--bd-w);&quot; title=&quot;white · 100%&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: flex; width: 100%; margin-top: var(--space-2);&quot;&gt;
+&lt;div style=&quot;flex: 1; text-align: center; font-size: .5rem; font-family: var(--ff-m); color: var(--fg-4); letter-spacing: .02em;&quot;&gt;0&lt;/div&gt;
+&lt;div style=&quot;flex: 1; text-align: center; font-size: .5rem; font-family: var(--ff-m); color: var(--fg-4);&quot;&gt;950&lt;/div&gt;
+&lt;div style=&quot;flex: 1; text-align: center; font-size: .5rem; font-family: var(--ff-m); color: var(--fg-4);&quot;&gt;900&lt;/div&gt;
+&lt;div style=&quot;flex: 1; text-align: center; font-size: .5rem; font-family: var(--ff-m); color: var(--fg-4);&quot;&gt;850&lt;/div&gt;
+&lt;div style=&quot;flex: 1; text-align: center; font-size: .5rem; font-family: var(--ff-m); color: var(--fg-4);&quot;&gt;800&lt;/div&gt;
+&lt;div style=&quot;flex: 1; text-align: center; font-size: .5rem; font-family: var(--ff-m); color: var(--fg-4);&quot;&gt;700&lt;/div&gt;
+&lt;div style=&quot;flex: 1; text-align: center; font-size: .5rem; font-family: var(--ff-m); color: var(--fg-4);&quot;&gt;600&lt;/div&gt;
+&lt;div style=&quot;flex: 1; text-align: center; font-size: .5rem; font-family: var(--ff-m); color: var(--fg-4);&quot;&gt;500&lt;/div&gt;
+&lt;div style=&quot;flex: 1; text-align: center; font-size: .5rem; font-family: var(--ff-m); color: var(--fg-4);&quot;&gt;400&lt;/div&gt;
+&lt;div style=&quot;flex: 1; text-align: center; font-size: .5rem; font-family: var(--ff-m); color: var(--fg-4);&quot;&gt;300&lt;/div&gt;
+&lt;div style=&quot;flex: 1; text-align: center; font-size: .5rem; font-family: var(--ff-m); color: var(--fg-4);&quot;&gt;200&lt;/div&gt;
+&lt;div style=&quot;flex: 1; text-align: center; font-size: .5rem; font-family: var(--ff-m); color: var(--fg-4);&quot;&gt;100&lt;/div&gt;
+&lt;div style=&quot;flex: 1; text-align: center; font-size: .5rem; font-family: var(--ff-m); color: var(--fg-4);&quot;&gt;50&lt;/div&gt;
+&lt;div style=&quot;flex: 1; text-align: center; font-size: .5rem; font-family: var(--ff-m); color: var(--fg-4);&quot;&gt;W&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-css">--black: oklch(0% 0 0);
+--g950:  oklch(12% 0 0);
+--g900:  oklch(17% 0 0);
+--g850:  oklch(20% 0 0);
+--g800:  oklch(24% 0 0);
+--g700:  oklch(34% 0 0);
+--g600:  oklch(44% 0 0);
+--g500:  oklch(54% 0 0);
+--g400:  oklch(64% 0 0);
+--g300:  oklch(76% 0 0);
+--g200:  oklch(86% 0 0);
+--g100:  oklch(93% 0 0);
+--g50:   oklch(97% 0 0);
+--white: oklch(100% 0 0);
+</code></pre>
+<hr>
+<h2 id="purple-accent">Purple Accent</h2>
+<p>The primary brand color at <strong>270° hue</strong>. Seven stops from deep (600) to barely-there (50).</p>
+
+<div class="Preview" id="preview-q8d90uefl">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; width: 100%; border-radius: var(--r-m); overflow: hidden; height: 64px;">
+        <div style="flex: 1; background: var(--pri-600);" title="pri-600"></div>
+        <div style="flex: 1; background: var(--pri-500);" title="pri-500"></div>
+        <div style="flex: 1; background: var(--pri-400);" title="pri-400"></div>
+        <div style="flex: 1; background: var(--pri-300);" title="pri-300"></div>
+        <div style="flex: 1; background: var(--pri-200);" title="pri-200"></div>
+        <div style="flex: 1; background: var(--pri-100);" title="pri-100"></div>
+        <div style="flex: 1; background: var(--pri-50); border: 1px solid var(--bd-w);" title="pri-50"></div>
+    </div>
+    <div style="display: flex; width: 100%; margin-top: var(--space-2);">
+        <div style="flex: 1; text-align: center; font-size: .5625rem; font-family: var(--ff-m); color: var(--fg-4);">600</div>
+        <div style="flex: 1; text-align: center; font-size: .5625rem; font-family: var(--ff-m); color: var(--fg-4);">500</div>
+        <div style="flex: 1; text-align: center; font-size: .5625rem; font-family: var(--ff-m); color: var(--fg-4);">400</div>
+        <div style="flex: 1; text-align: center; font-size: .5625rem; font-family: var(--ff-m); color: var(--fg-4);">300</div>
+        <div style="flex: 1; text-align: center; font-size: .5625rem; font-family: var(--ff-m); color: var(--fg-4);">200</div>
+        <div style="flex: 1; text-align: center; font-size: .5625rem; font-family: var(--ff-m); color: var(--fg-4);">100</div>
+        <div style="flex: 1; text-align: center; font-size: .5625rem; font-family: var(--ff-m); color: var(--fg-4);">50</div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; width: 100%; border-radius: var(--r-m); overflow: hidden; height: 64px;&quot;&gt;
+&lt;div style=&quot;flex: 1; background: var(--pri-600);&quot; title=&quot;pri-600&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;flex: 1; background: var(--pri-500);&quot; title=&quot;pri-500&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;flex: 1; background: var(--pri-400);&quot; title=&quot;pri-400&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;flex: 1; background: var(--pri-300);&quot; title=&quot;pri-300&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;flex: 1; background: var(--pri-200);&quot; title=&quot;pri-200&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;flex: 1; background: var(--pri-100);&quot; title=&quot;pri-100&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;flex: 1; background: var(--pri-50); border: 1px solid var(--bd-w);&quot; title=&quot;pri-50&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: flex; width: 100%; margin-top: var(--space-2);&quot;&gt;
+&lt;div style=&quot;flex: 1; text-align: center; font-size: .5625rem; font-family: var(--ff-m); color: var(--fg-4);&quot;&gt;600&lt;/div&gt;
+&lt;div style=&quot;flex: 1; text-align: center; font-size: .5625rem; font-family: var(--ff-m); color: var(--fg-4);&quot;&gt;500&lt;/div&gt;
+&lt;div style=&quot;flex: 1; text-align: center; font-size: .5625rem; font-family: var(--ff-m); color: var(--fg-4);&quot;&gt;400&lt;/div&gt;
+&lt;div style=&quot;flex: 1; text-align: center; font-size: .5625rem; font-family: var(--ff-m); color: var(--fg-4);&quot;&gt;300&lt;/div&gt;
+&lt;div style=&quot;flex: 1; text-align: center; font-size: .5625rem; font-family: var(--ff-m); color: var(--fg-4);&quot;&gt;200&lt;/div&gt;
+&lt;div style=&quot;flex: 1; text-align: center; font-size: .5625rem; font-family: var(--ff-m); color: var(--fg-4);&quot;&gt;100&lt;/div&gt;
+&lt;div style=&quot;flex: 1; text-align: center; font-size: .5625rem; font-family: var(--ff-m); color: var(--fg-4);&quot;&gt;50&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-css">--pri-600: oklch(45% 0.18 270);
+--pri-500: oklch(55% 0.20 270);  /* --accent */
+--pri-400: oklch(65% 0.18 270);
+--pri-300: oklch(75% 0.14 270);
+--pri-200: oklch(85% 0.08 270);
+--pri-100: oklch(92% 0.04 270);  /* --accent-s */
+--pri-50:  oklch(96% 0.02 270);
+</code></pre>
+<hr>
+<h2 id="status-colors">Status Colors</h2>
+<p>Feedback colors for success, warning, and error. Each has a full-strength and soft variant.</p>
+
+<div class="Preview" id="preview-7nzrkqnk5">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); width: 100%;">
+        <div style="border-radius: var(--r-m); overflow: hidden;">
+            <div style="background: var(--ok); padding: var(--space-3) var(--space-4); color: white;">
+                <strong style="font-size: .8rem;">Success</strong>
+                <div style="font-size: .65rem; opacity: .8; font-family: var(--ff-m);">oklch(65% 0.18 145)</div>
+            </div>
+            <div style="background: var(--ok-soft); padding: var(--space-3) var(--space-4); border: 1px solid oklch(from var(--ok) l c h / .15); border-top: 0;">
+                <div style="font-size: .7rem; color: var(--ok); font-family: var(--ff-m);">--ok-soft</div>
+            </div>
+        </div>
+        <div style="border-radius: var(--r-m); overflow: hidden;">
+            <div style="background: var(--warn); padding: var(--space-3) var(--space-4); color: black;">
+                <strong style="font-size: .8rem;">Warning</strong>
+                <div style="font-size: .65rem; opacity: .7; font-family: var(--ff-m);">oklch(75% 0.15 85)</div>
+            </div>
+            <div style="background: var(--warn-soft); padding: var(--space-3) var(--space-4); border: 1px solid oklch(from var(--warn) l c h / .15); border-top: 0;">
+                <div style="font-size: .7rem; color: oklch(55% 0.15 85); font-family: var(--ff-m);">--warn-soft</div>
+            </div>
+        </div>
+        <div style="border-radius: var(--r-m); overflow: hidden;">
+            <div style="background: var(--err); padding: var(--space-3) var(--space-4); color: white;">
+                <strong style="font-size: .8rem;">Error</strong>
+                <div style="font-size: .65rem; opacity: .8; font-family: var(--ff-m);">oklch(60% 0.20 25)</div>
+            </div>
+            <div style="background: var(--err-soft); padding: var(--space-3) var(--space-4); border: 1px solid oklch(from var(--err) l c h / .15); border-top: 0;">
+                <div style="font-size: .7rem; color: var(--err); font-family: var(--ff-m);">--err-soft</div>
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); width: 100%;&quot;&gt;
+&lt;div style=&quot;border-radius: var(--r-m); overflow: hidden;&quot;&gt;
+&lt;div style=&quot;background: var(--ok); padding: var(--space-3) var(--space-4); color: white;&quot;&gt;
+&lt;strong style=&quot;font-size: .8rem;&quot;&gt;Success&lt;/strong&gt;
+&lt;div style=&quot;font-size: .65rem; opacity: .8; font-family: var(--ff-m);&quot;&gt;oklch(65% 0.18 145)&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;background: var(--ok-soft); padding: var(--space-3) var(--space-4); border: 1px solid oklch(from var(--ok) l c h / .15); border-top: 0;&quot;&gt;
+&lt;div style=&quot;font-size: .7rem; color: var(--ok); font-family: var(--ff-m);&quot;&gt;--ok-soft&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;border-radius: var(--r-m); overflow: hidden;&quot;&gt;
+&lt;div style=&quot;background: var(--warn); padding: var(--space-3) var(--space-4); color: black;&quot;&gt;
+&lt;strong style=&quot;font-size: .8rem;&quot;&gt;Warning&lt;/strong&gt;
+&lt;div style=&quot;font-size: .65rem; opacity: .7; font-family: var(--ff-m);&quot;&gt;oklch(75% 0.15 85)&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;background: var(--warn-soft); padding: var(--space-3) var(--space-4); border: 1px solid oklch(from var(--warn) l c h / .15); border-top: 0;&quot;&gt;
+&lt;div style=&quot;font-size: .7rem; color: oklch(55% 0.15 85); font-family: var(--ff-m);&quot;&gt;--warn-soft&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;border-radius: var(--r-m); overflow: hidden;&quot;&gt;
+&lt;div style=&quot;background: var(--err); padding: var(--space-3) var(--space-4); color: white;&quot;&gt;
+&lt;strong style=&quot;font-size: .8rem;&quot;&gt;Error&lt;/strong&gt;
+&lt;div style=&quot;font-size: .65rem; opacity: .8; font-family: var(--ff-m);&quot;&gt;oklch(60% 0.20 25)&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;background: var(--err-soft); padding: var(--space-3) var(--space-4); border: 1px solid oklch(from var(--err) l c h / .15); border-top: 0;&quot;&gt;
+&lt;div style=&quot;font-size: .7rem; color: var(--err); font-family: var(--ff-m);&quot;&gt;--err-soft&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="semantic-mapping">Semantic Mapping</h2>
+<p>Tokens are aliased to semantic roles. The same token name resolves to different values per theme.</p>
+<h3 id="surfaces-text">Surfaces &amp; Text</h3>
+
+<div class="Preview" id="preview-enk1bm9ji">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); width: 100%;">
+        <div style="display: flex; flex-direction: column; gap: var(--space-2);">
+            <div style="font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--fg-4); padding-left: var(--space-2);">Surfaces</div>
+            <div style="background: var(--bg); padding: var(--space-3); border: 1px solid var(--bd); border-radius: var(--r-s); display: flex; justify-content: space-between; align-items: center;">
+                <code style="font-size: .75rem;">--bg</code>
+                <span style="font-size: .65rem; color: var(--fg-3);">Primary</span>
+            </div>
+            <div style="background: var(--bg-s); padding: var(--space-3); border: 1px solid var(--bd-w); border-radius: var(--r-s); display: flex; justify-content: space-between; align-items: center;">
+                <code style="font-size: .75rem;">--bg-s</code>
+                <span style="font-size: .65rem; color: var(--fg-3);">Subtle</span>
+            </div>
+            <div style="background: var(--bg-m); padding: var(--space-3); border: 1px solid var(--bd-w); border-radius: var(--r-s); display: flex; justify-content: space-between; align-items: center;">
+                <code style="font-size: .75rem;">--bg-m</code>
+                <span style="font-size: .65rem; color: var(--fg-3);">Muted</span>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: var(--space-2);">
+            <div style="font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--fg-4); padding-left: var(--space-2);">Text</div>
+            <div style="padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-s); display: flex; justify-content: space-between; align-items: center;">
+                <span style="color: var(--fg); font-weight: 600; font-size: .85rem;">--fg</span>
+                <span style="font-size: .65rem; color: var(--fg-3);">Primary</span>
+            </div>
+            <div style="padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-s); display: flex; justify-content: space-between; align-items: center;">
+                <span style="color: var(--fg-2); font-size: .85rem;">--fg-2</span>
+                <span style="font-size: .65rem; color: var(--fg-3);">Secondary</span>
+            </div>
+            <div style="padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-s); display: flex; justify-content: space-between; align-items: center;">
+                <span style="color: var(--fg-3); font-size: .85rem;">--fg-3</span>
+                <span style="font-size: .65rem; color: var(--fg-4);">Tertiary</span>
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); width: 100%;&quot;&gt;
+&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-2);&quot;&gt;
+&lt;div style=&quot;font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--fg-4); padding-left: var(--space-2);&quot;&gt;Surfaces&lt;/div&gt;
+&lt;div style=&quot;background: var(--bg); padding: var(--space-3); border: 1px solid var(--bd); border-radius: var(--r-s); display: flex; justify-content: space-between; align-items: center;&quot;&gt;
+&lt;code style=&quot;font-size: .75rem;&quot;&gt;--bg&lt;/code&gt;
+&lt;span style=&quot;font-size: .65rem; color: var(--fg-3);&quot;&gt;Primary&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;background: var(--bg-s); padding: var(--space-3); border: 1px solid var(--bd-w); border-radius: var(--r-s); display: flex; justify-content: space-between; align-items: center;&quot;&gt;
+&lt;code style=&quot;font-size: .75rem;&quot;&gt;--bg-s&lt;/code&gt;
+&lt;span style=&quot;font-size: .65rem; color: var(--fg-3);&quot;&gt;Subtle&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;background: var(--bg-m); padding: var(--space-3); border: 1px solid var(--bd-w); border-radius: var(--r-s); display: flex; justify-content: space-between; align-items: center;&quot;&gt;
+&lt;code style=&quot;font-size: .75rem;&quot;&gt;--bg-m&lt;/code&gt;
+&lt;span style=&quot;font-size: .65rem; color: var(--fg-3);&quot;&gt;Muted&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-2);&quot;&gt;
+&lt;div style=&quot;font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--fg-4); padding-left: var(--space-2);&quot;&gt;Text&lt;/div&gt;
+&lt;div style=&quot;padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-s); display: flex; justify-content: space-between; align-items: center;&quot;&gt;
+&lt;span style=&quot;color: var(--fg); font-weight: 600; font-size: .85rem;&quot;&gt;--fg&lt;/span&gt;
+&lt;span style=&quot;font-size: .65rem; color: var(--fg-3);&quot;&gt;Primary&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-s); display: flex; justify-content: space-between; align-items: center;&quot;&gt;
+&lt;span style=&quot;color: var(--fg-2); font-size: .85rem;&quot;&gt;--fg-2&lt;/span&gt;
+&lt;span style=&quot;font-size: .65rem; color: var(--fg-3);&quot;&gt;Secondary&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-s); display: flex; justify-content: space-between; align-items: center;&quot;&gt;
+&lt;span style=&quot;color: var(--fg-3); font-size: .85rem;&quot;&gt;--fg-3&lt;/span&gt;
+&lt;span style=&quot;font-size: .65rem; color: var(--fg-4);&quot;&gt;Tertiary&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="light-dark">Light ↔ Dark</h3>
+<div class="Table-container"><table class="Table">
+<thead>
+<tr>
+<th>Token</th>
+<th>Light</th>
+<th>Dark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--bg</code></td>
+<td>white</td>
+<td>g950</td>
+</tr>
+<tr>
+<td><code>--bg-s</code></td>
+<td>g50</td>
+<td>g900</td>
+</tr>
+<tr>
+<td><code>--bg-m</code></td>
+<td>g100</td>
+<td>g800</td>
+</tr>
+<tr>
+<td><code>--fg</code></td>
+<td>g950</td>
+<td>g50</td>
+</tr>
+<tr>
+<td><code>--fg-2</code></td>
+<td>g700</td>
+<td>g300</td>
+</tr>
+<tr>
+<td><code>--fg-3</code></td>
+<td>g500</td>
+<td>g400</td>
+</tr>
+<tr>
+<td><code>--fg-4</code></td>
+<td>g400</td>
+<td>g600</td>
+</tr>
+<tr>
+<td><code>--bd</code></td>
+<td>g200</td>
+<td>g800</td>
+</tr>
+<tr>
+<td><code>--bd-s</code></td>
+<td>g300</td>
+<td>g700</td>
+</tr>
+<tr>
+<td><code>--bd-w</code></td>
+<td>g100</td>
+<td>g900</td>
+</tr>
+<tr>
+<td><code>--accent</code></td>
+<td>pri-500</td>
+<td>pri-500</td>
+</tr>
+<tr>
+<td><code>--accent-s</code></td>
+<td>pri-100</td>
+<td>oklch(25% .08 270)</td>
+</tr>
+</tbody>
+</table></div>
+<hr>
+<h2 id="why-oklch-">Why OKLCH?</h2>
+<p>Traditional HSL has a fundamental problem: two colors with the same “lightness” don’t actually look equally bright.</p>
+
+<div class="Preview" id="preview-exo360qqd">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-4); width: 100%;">
+        <div>
+            <div style="font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--fg-4); margin-bottom: var(--space-2);">HSL — Same L (50%), different perceived brightness</div>
+            <div style="display: flex; gap: var(--space-2);">
+                <div style="background: hsl(60, 100%, 50%); padding: var(--space-3); border-radius: var(--r-s); flex: 1; text-align: center; color: black; font-size: .8rem; font-weight: 600;">Yellow</div>
+                <div style="background: hsl(240, 100%, 50%); padding: var(--space-3); border-radius: var(--r-s); flex: 1; text-align: center; color: white; font-size: .8rem; font-weight: 600;">Blue</div>
+            </div>
+        </div>
+        <div>
+            <div style="font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--fg-4); margin-bottom: var(--space-2);">OKLCH — Same L (70%), consistent brightness ✓</div>
+            <div style="display: flex; gap: var(--space-2);">
+                <div style="background: oklch(70% 0.15 90); padding: var(--space-3); border-radius: var(--r-s); flex: 1; text-align: center; color: black; font-size: .8rem; font-weight: 600;">Yellow</div>
+                <div style="background: oklch(70% 0.15 250); padding: var(--space-3); border-radius: var(--r-s); flex: 1; text-align: center; color: black; font-size: .8rem; font-weight: 600;">Blue</div>
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-4); width: 100%;&quot;&gt;
+&lt;div&gt;
+&lt;div style=&quot;font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--fg-4); margin-bottom: var(--space-2);&quot;&gt;HSL — Same L (50%), different perceived brightness&lt;/div&gt;
+&lt;div style=&quot;display: flex; gap: var(--space-2);&quot;&gt;
+&lt;div style=&quot;background: hsl(60, 100%, 50%); padding: var(--space-3); border-radius: var(--r-s); flex: 1; text-align: center; color: black; font-size: .8rem; font-weight: 600;&quot;&gt;Yellow&lt;/div&gt;
+&lt;div style=&quot;background: hsl(240, 100%, 50%); padding: var(--space-3); border-radius: var(--r-s); flex: 1; text-align: center; color: white; font-size: .8rem; font-weight: 600;&quot;&gt;Blue&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;div style=&quot;font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--fg-4); margin-bottom: var(--space-2);&quot;&gt;OKLCH — Same L (70%), consistent brightness ✓&lt;/div&gt;
+&lt;div style=&quot;display: flex; gap: var(--space-2);&quot;&gt;
+&lt;div style=&quot;background: oklch(70% 0.15 90); padding: var(--space-3); border-radius: var(--r-s); flex: 1; text-align: center; color: black; font-size: .8rem; font-weight: 600;&quot;&gt;Yellow&lt;/div&gt;
+&lt;div style=&quot;background: oklch(70% 0.15 250); padding: var(--space-3); border-radius: var(--r-s); flex: 1; text-align: center; color: black; font-size: .8rem; font-weight: 600;&quot;&gt;Blue&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><p>OKLCH values:</p>
+<pre><code>oklch(L  C  H)
+       │  │  └─ Hue: 0–360° color wheel
+       │  └──── Chroma: 0–~0.4 saturation
+       └─────── Lightness: 0–100% perceived brightness
+</code></pre>
+<hr>
+<h2 id="extending">Extending</h2>
+<p>To add custom hues that harmonize with the palette:</p>
+<pre><code class="language-css">:root {
+  --teal-500: oklch(60% 0.15 180);
+  --teal-100: oklch(92% 0.04 180);
+  --teal-soft: oklch(95% 0.02 180);
+}
+</code></pre>
+<p>Keep the same lightness values as the accent scale for visual consistency. The chroma and hue change — the lightness stays the same.</p>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="do">Do</h3>
+<ul>
+<li>✓ <strong>Use semantic tokens, not primitives</strong> — <code>var(--fg)</code> not <code>var(--g950)</code></li>
+<li>✓ <strong>Maintain OKLCH lightness consistency</strong> — Match lightness values when extending the palette</li>
+<li>✓ <strong>Use soft variants for backgrounds</strong> — <code>var(--ok-soft)</code> behind success messages, not <code>var(--ok)</code></li>
+<li>✓ <strong>Test both themes</strong> — Verify colors work in light and dark mode</li>
+<li>✓ <strong>Use status colors for meaning</strong> — Green for success, red for errors, yellow for warnings</li>
+</ul>
+<h3 id="don-t">Don’t</h3>
+<ul>
+<li>✗ <strong>Hardcode hex/rgb values</strong> — Always use CSS custom properties</li>
+<li>✗ <strong>Use pure black for text</strong> — Use <code>var(--fg)</code> (OKLCH-based, softer)</li>
+<li>✗ <strong>Invent new grays</strong> — Stick to the 14-step grayscale</li>
+<li>✗ <strong>Mix color spaces</strong> — Stay in OKLCH for custom colors</li>
+<li>✗ <strong>Ignore contrast</strong> — Ensure text meets WCAG AA (4.5:1 for body, 3:1 for large text)</li>
+</ul>
+<hr>
+<h2 id="quick-reference">Quick Reference</h2>
+<pre><code class="language-css">/* Surfaces */
+var(--bg)        var(--bg-s)      var(--bg-m)
+
+/* Text */
+var(--fg)        var(--fg-2)      var(--fg-3)      var(--fg-4)
+
+/* Borders */
+var(--bd-w)      var(--bd)        var(--bd-s)
+
+/* Accent */
+var(--accent)    var(--accent-h)  var(--accent-s)  var(--accent-fg)
+
+/* Status */
+var(--ok)        var(--ok-soft)
+var(--warn)      var(--warn-soft)
+var(--err)       var(--err-soft)
+</code></pre>
+
+                </article>
+
+                <footer class="page-footer">
+                    <p>Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

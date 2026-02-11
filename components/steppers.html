@@ -1,0 +1,1588 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Steppers | Carbon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/bold/style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Floating Pill Nav (Mobile: bottom, Desktop: top) -->
+        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation">
+            <a href="../index.html" class="fnav-btn" data-section="home" aria-label="Home">
+                <i class="ph-bold ph-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="../tokens/colors.html" class="fnav-btn" data-section="tokens" aria-label="Tokens">
+                <i class="ph-bold ph-palette"></i>
+                <span>Tokens</span>
+            </a>
+            <a href="../components/buttons.html" class="fnav-btn" data-section="components" aria-label="Components">
+                <i class="ph-bold ph-stack"></i>
+                <span>Components</span>
+            </a>
+            <a href="../patterns/layouts.html" class="fnav-btn" data-section="patterns" aria-label="Patterns">
+                <i class="ph-bold ph-grid-four"></i>
+                <span>Patterns</span>
+            </a>
+            <div class="fnav-sep"></div>
+            <button class="fnav-btn" id="search-toggle" aria-label="Search">
+                <i class="ph ph-magnifying-glass"></i>
+            </button>
+            <button class="fnav-btn" id="theme-btn" aria-label="Toggle theme">
+                <i class="ph ph-moon"></i>
+            </button>
+        </nav>
+
+        <!-- Glassmorphism Top Bar (Desktop only) -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <a href="../index.html" class="logo">
+                    <i class="ph ph-intersect"></i>
+                    <span>Carbon</span>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <div class="search-container" id="search-container">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search components..." aria-label="Search" autocomplete="off">
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <main class="main-content">
+                <header class="page-header">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="../index.html">Carbon</a> <span class="sep">/</span> <span>Components</span> <span class="sep">/</span> <span>Steppers</span>
+                    </nav>
+                    <h1><em>Steppers</em></h1>
+                </header>
+                
+                <article class="prose">
+                    <h1>Steppers</h1>
+<p>Steppers display progress through a sequence of steps, commonly used in multi-step forms, wizards, and onboarding flows.</p>
+<h2 id="basic-stepper">Basic Stepper</h2>
+<p>A horizontal stepper showing numbered steps.</p>
+
+<div class="Preview" id="preview-8xorejsh5">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Stepper">
+        <div class="Stepper-step Stepper-step--completed">
+            <div class="Stepper-indicator">
+                <i class="ph ph-check"></i>
+            </div>
+            <div class="Stepper-content">
+                <span class="Stepper-title">Account</span>
+            </div>
+        </div>
+        <div class="Stepper-connector Stepper-connector--completed"></div>
+        <div class="Stepper-step Stepper-step--active">
+            <div class="Stepper-indicator">2</div>
+            <div class="Stepper-content">
+                <span class="Stepper-title">Profile</span>
+            </div>
+        </div>
+        <div class="Stepper-connector"></div>
+        <div class="Stepper-step">
+            <div class="Stepper-indicator">3</div>
+            <div class="Stepper-content">
+                <span class="Stepper-title">Preferences</span>
+            </div>
+        </div>
+        <div class="Stepper-connector"></div>
+        <div class="Stepper-step">
+            <div class="Stepper-indicator">4</div>
+            <div class="Stepper-content">
+                <span class="Stepper-title">Confirm</span>
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Stepper&quot;&gt;
+&lt;div class=&quot;Stepper-step Stepper-step--completed&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;
+&lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-content&quot;&gt;
+&lt;span class=&quot;Stepper-title&quot;&gt;Account&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-connector Stepper-connector--completed&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-step Stepper-step--active&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;2&lt;/div&gt;
+&lt;div class=&quot;Stepper-content&quot;&gt;
+&lt;span class=&quot;Stepper-title&quot;&gt;Profile&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-connector&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-step&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;3&lt;/div&gt;
+&lt;div class=&quot;Stepper-content&quot;&gt;
+&lt;span class=&quot;Stepper-title&quot;&gt;Preferences&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-connector&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-step&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;4&lt;/div&gt;
+&lt;div class=&quot;Stepper-content&quot;&gt;
+&lt;span class=&quot;Stepper-title&quot;&gt;Confirm&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Stepper&quot;&gt;
+    &lt;div class=&quot;Stepper-step Stepper-step--completed&quot;&gt;
+        &lt;div class=&quot;Stepper-indicator&quot;&gt;
+            &lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;Stepper-content&quot;&gt;
+            &lt;span class=&quot;Stepper-title&quot;&gt;Account&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;Stepper-connector Stepper-connector--completed&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;Stepper-step Stepper-step--active&quot;&gt;
+        &lt;div class=&quot;Stepper-indicator&quot;&gt;2&lt;/div&gt;
+        &lt;div class=&quot;Stepper-content&quot;&gt;
+            &lt;span class=&quot;Stepper-title&quot;&gt;Profile&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    ...
+&lt;/div&gt;
+</code></pre>
+<h2 id="stepper-with-descriptions">Stepper with Descriptions</h2>
+<p>Add descriptions for additional context on each step.</p>
+
+<div class="Preview" id="preview-jgcke54wa">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Stepper">
+        <div class="Stepper-step Stepper-step--completed">
+            <div class="Stepper-indicator">
+                <i class="ph ph-check"></i>
+            </div>
+            <div class="Stepper-content">
+                <span class="Stepper-title">Cart</span>
+                <span class="Stepper-description">Review your items</span>
+            </div>
+        </div>
+        <div class="Stepper-connector Stepper-connector--completed"></div>
+        <div class="Stepper-step Stepper-step--active">
+            <div class="Stepper-indicator">2</div>
+            <div class="Stepper-content">
+                <span class="Stepper-title">Shipping</span>
+                <span class="Stepper-description">Enter delivery address</span>
+            </div>
+        </div>
+        <div class="Stepper-connector"></div>
+        <div class="Stepper-step">
+            <div class="Stepper-indicator">3</div>
+            <div class="Stepper-content">
+                <span class="Stepper-title">Payment</span>
+                <span class="Stepper-description">Add payment method</span>
+            </div>
+        </div>
+        <div class="Stepper-connector"></div>
+        <div class="Stepper-step">
+            <div class="Stepper-indicator">4</div>
+            <div class="Stepper-content">
+                <span class="Stepper-title">Review</span>
+                <span class="Stepper-description">Confirm your order</span>
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Stepper&quot;&gt;
+&lt;div class=&quot;Stepper-step Stepper-step--completed&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;
+&lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-content&quot;&gt;
+&lt;span class=&quot;Stepper-title&quot;&gt;Cart&lt;/span&gt;
+&lt;span class=&quot;Stepper-description&quot;&gt;Review your items&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-connector Stepper-connector--completed&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-step Stepper-step--active&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;2&lt;/div&gt;
+&lt;div class=&quot;Stepper-content&quot;&gt;
+&lt;span class=&quot;Stepper-title&quot;&gt;Shipping&lt;/span&gt;
+&lt;span class=&quot;Stepper-description&quot;&gt;Enter delivery address&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-connector&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-step&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;3&lt;/div&gt;
+&lt;div class=&quot;Stepper-content&quot;&gt;
+&lt;span class=&quot;Stepper-title&quot;&gt;Payment&lt;/span&gt;
+&lt;span class=&quot;Stepper-description&quot;&gt;Add payment method&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-connector&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-step&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;4&lt;/div&gt;
+&lt;div class=&quot;Stepper-content&quot;&gt;
+&lt;span class=&quot;Stepper-title&quot;&gt;Review&lt;/span&gt;
+&lt;span class=&quot;Stepper-description&quot;&gt;Confirm your order&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Stepper&quot;&gt;
+    &lt;div class=&quot;Stepper-step Stepper-step--completed&quot;&gt;
+        &lt;div class=&quot;Stepper-indicator&quot;&gt;
+            &lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;Stepper-content&quot;&gt;
+            &lt;span class=&quot;Stepper-title&quot;&gt;Cart&lt;/span&gt;
+            &lt;span class=&quot;Stepper-description&quot;&gt;Review your items&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    ...
+&lt;/div&gt;
+</code></pre>
+<h2 id="vertical-stepper">Vertical Stepper</h2>
+<p>A vertical layout for longer flows or mobile views.</p>
+
+<div class="Preview" id="preview-en95h4r8j">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Stepper Stepper--vertical" style="max-width: 320px;">
+        <div class="Stepper-step Stepper-step--completed">
+            <div class="Stepper-indicator">
+                <i class="ph ph-check"></i>
+            </div>
+            <div class="Stepper-content">
+                <span class="Stepper-title">Create account</span>
+                <span class="Stepper-description">Sign up with email or social login</span>
+            </div>
+        </div>
+        <div class="Stepper-step Stepper-step--completed">
+            <div class="Stepper-indicator">
+                <i class="ph ph-check"></i>
+            </div>
+            <div class="Stepper-content">
+                <span class="Stepper-title">Verify email</span>
+                <span class="Stepper-description">Check your inbox for verification</span>
+            </div>
+        </div>
+        <div class="Stepper-step Stepper-step--active">
+            <div class="Stepper-indicator">3</div>
+            <div class="Stepper-content">
+                <span class="Stepper-title">Complete profile</span>
+                <span class="Stepper-description">Add your personal information</span>
+            </div>
+        </div>
+        <div class="Stepper-step">
+            <div class="Stepper-indicator">4</div>
+            <div class="Stepper-content">
+                <span class="Stepper-title">Set preferences</span>
+                <span class="Stepper-description">Customize your experience</span>
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Stepper Stepper--vertical&quot; style=&quot;max-width: 320px;&quot;&gt;
+&lt;div class=&quot;Stepper-step Stepper-step--completed&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;
+&lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-content&quot;&gt;
+&lt;span class=&quot;Stepper-title&quot;&gt;Create account&lt;/span&gt;
+&lt;span class=&quot;Stepper-description&quot;&gt;Sign up with email or social login&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-step Stepper-step--completed&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;
+&lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-content&quot;&gt;
+&lt;span class=&quot;Stepper-title&quot;&gt;Verify email&lt;/span&gt;
+&lt;span class=&quot;Stepper-description&quot;&gt;Check your inbox for verification&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-step Stepper-step--active&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;3&lt;/div&gt;
+&lt;div class=&quot;Stepper-content&quot;&gt;
+&lt;span class=&quot;Stepper-title&quot;&gt;Complete profile&lt;/span&gt;
+&lt;span class=&quot;Stepper-description&quot;&gt;Add your personal information&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-step&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;4&lt;/div&gt;
+&lt;div class=&quot;Stepper-content&quot;&gt;
+&lt;span class=&quot;Stepper-title&quot;&gt;Set preferences&lt;/span&gt;
+&lt;span class=&quot;Stepper-description&quot;&gt;Customize your experience&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Stepper Stepper--vertical&quot;&gt;
+    &lt;div class=&quot;Stepper-step Stepper-step--completed&quot;&gt;
+        &lt;div class=&quot;Stepper-indicator&quot;&gt;
+            &lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;Stepper-content&quot;&gt;
+            &lt;span class=&quot;Stepper-title&quot;&gt;Create account&lt;/span&gt;
+            &lt;span class=&quot;Stepper-description&quot;&gt;Sign up with email...&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    ...
+&lt;/div&gt;
+</code></pre>
+<h2 id="icon-stepper">Icon Stepper</h2>
+<p>Use icons instead of numbers for visual clarity.</p>
+
+<div class="Preview" id="preview-d12lekyf9">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Stepper">
+        <div class="Stepper-step Stepper-step--completed">
+            <div class="Stepper-indicator">
+                <i class="ph ph-check"></i>
+            </div>
+            <div class="Stepper-content">
+                <span class="Stepper-title">Upload</span>
+            </div>
+        </div>
+        <div class="Stepper-connector Stepper-connector--completed"></div>
+        <div class="Stepper-step Stepper-step--active">
+            <div class="Stepper-indicator Stepper-indicator--icon">
+                <i class="ph ph-sliders"></i>
+            </div>
+            <div class="Stepper-content">
+                <span class="Stepper-title">Edit</span>
+            </div>
+        </div>
+        <div class="Stepper-connector"></div>
+        <div class="Stepper-step">
+            <div class="Stepper-indicator Stepper-indicator--icon">
+                <i class="ph ph-eye"></i>
+            </div>
+            <div class="Stepper-content">
+                <span class="Stepper-title">Preview</span>
+            </div>
+        </div>
+        <div class="Stepper-connector"></div>
+        <div class="Stepper-step">
+            <div class="Stepper-indicator Stepper-indicator--icon">
+                <i class="ph ph-share"></i>
+            </div>
+            <div class="Stepper-content">
+                <span class="Stepper-title">Publish</span>
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Stepper&quot;&gt;
+&lt;div class=&quot;Stepper-step Stepper-step--completed&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;
+&lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-content&quot;&gt;
+&lt;span class=&quot;Stepper-title&quot;&gt;Upload&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-connector Stepper-connector--completed&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-step Stepper-step--active&quot;&gt;
+&lt;div class=&quot;Stepper-indicator Stepper-indicator--icon&quot;&gt;
+&lt;i class=&quot;ph ph-sliders&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-content&quot;&gt;
+&lt;span class=&quot;Stepper-title&quot;&gt;Edit&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-connector&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-step&quot;&gt;
+&lt;div class=&quot;Stepper-indicator Stepper-indicator--icon&quot;&gt;
+&lt;i class=&quot;ph ph-eye&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-content&quot;&gt;
+&lt;span class=&quot;Stepper-title&quot;&gt;Preview&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-connector&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-step&quot;&gt;
+&lt;div class=&quot;Stepper-indicator Stepper-indicator--icon&quot;&gt;
+&lt;i class=&quot;ph ph-share&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-content&quot;&gt;
+&lt;span class=&quot;Stepper-title&quot;&gt;Publish&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Stepper&quot;&gt;
+    &lt;div class=&quot;Stepper-step Stepper-step--active&quot;&gt;
+        &lt;div class=&quot;Stepper-indicator Stepper-indicator--icon&quot;&gt;
+            &lt;i class=&quot;ph ph-sliders&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;Stepper-content&quot;&gt;
+            &lt;span class=&quot;Stepper-title&quot;&gt;Edit&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    ...
+&lt;/div&gt;
+</code></pre>
+<h2 id="compact-stepper">Compact Stepper</h2>
+<p>A minimal stepper for space-constrained layouts.</p>
+
+<div class="Preview" id="preview-8d722ushq">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Stepper Stepper--compact">
+        <div class="Stepper-step Stepper-step--completed">
+            <div class="Stepper-indicator">
+                <i class="ph ph-check"></i>
+            </div>
+        </div>
+        <div class="Stepper-connector Stepper-connector--completed"></div>
+        <div class="Stepper-step Stepper-step--completed">
+            <div class="Stepper-indicator">
+                <i class="ph ph-check"></i>
+            </div>
+        </div>
+        <div class="Stepper-connector Stepper-connector--completed"></div>
+        <div class="Stepper-step Stepper-step--active">
+            <div class="Stepper-indicator">3</div>
+        </div>
+        <div class="Stepper-connector"></div>
+        <div class="Stepper-step">
+            <div class="Stepper-indicator">4</div>
+        </div>
+        <div class="Stepper-connector"></div>
+        <div class="Stepper-step">
+            <div class="Stepper-indicator">5</div>
+        </div>
+    </div>
+    <p style="text-align: center; margin-top: var(--space-4); color: var(--fg-3); font-size: 0.9rem;">Step 3 of 5: Payment Details</p></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Stepper Stepper--compact&quot;&gt;
+&lt;div class=&quot;Stepper-step Stepper-step--completed&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;
+&lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-connector Stepper-connector--completed&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-step Stepper-step--completed&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;
+&lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-connector Stepper-connector--completed&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-step Stepper-step--active&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;3&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-connector&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-step&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;4&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-connector&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-step&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;5&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p style=&quot;text-align: center; margin-top: var(--space-4); color: var(--fg-3); font-size: 0.9rem;&quot;&gt;Step 3 of 5: Payment Details&lt;/p&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Stepper Stepper--compact&quot;&gt;
+    &lt;div class=&quot;Stepper-step Stepper-step--completed&quot;&gt;
+        &lt;div class=&quot;Stepper-indicator&quot;&gt;
+            &lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;Stepper-connector Stepper-connector--completed&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;Stepper-step Stepper-step--active&quot;&gt;
+        &lt;div class=&quot;Stepper-indicator&quot;&gt;3&lt;/div&gt;
+    &lt;/div&gt;
+    ...
+&lt;/div&gt;
+</code></pre>
+<h2 id="clickable-stepper">Clickable Stepper</h2>
+<p>Allow users to navigate between completed steps.</p>
+
+<div class="Preview" id="preview-fk59zmimw">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Stepper Stepper--clickable">
+        <button class="Stepper-step Stepper-step--completed Stepper-step--clickable">
+            <div class="Stepper-indicator">
+                <i class="ph ph-check"></i>
+            </div>
+            <div class="Stepper-content">
+                <span class="Stepper-title">Details</span>
+            </div>
+        </button>
+        <div class="Stepper-connector Stepper-connector--completed"></div>
+        <button class="Stepper-step Stepper-step--completed Stepper-step--clickable">
+            <div class="Stepper-indicator">
+                <i class="ph ph-check"></i>
+            </div>
+            <div class="Stepper-content">
+                <span class="Stepper-title">Address</span>
+            </div>
+        </button>
+        <div class="Stepper-connector Stepper-connector--completed"></div>
+        <button class="Stepper-step Stepper-step--active">
+            <div class="Stepper-indicator">3</div>
+            <div class="Stepper-content">
+                <span class="Stepper-title">Payment</span>
+            </div>
+        </button>
+        <div class="Stepper-connector"></div>
+        <button class="Stepper-step" disabled>
+            <div class="Stepper-indicator">4</div>
+            <div class="Stepper-content">
+                <span class="Stepper-title">Confirm</span>
+            </div>
+        </button>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Stepper Stepper--clickable&quot;&gt;
+&lt;button class=&quot;Stepper-step Stepper-step--completed Stepper-step--clickable&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;
+&lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-content&quot;&gt;
+&lt;span class=&quot;Stepper-title&quot;&gt;Details&lt;/span&gt;
+&lt;/div&gt;
+&lt;/button&gt;
+&lt;div class=&quot;Stepper-connector Stepper-connector--completed&quot;&gt;&lt;/div&gt;
+&lt;button class=&quot;Stepper-step Stepper-step--completed Stepper-step--clickable&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;
+&lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-content&quot;&gt;
+&lt;span class=&quot;Stepper-title&quot;&gt;Address&lt;/span&gt;
+&lt;/div&gt;
+&lt;/button&gt;
+&lt;div class=&quot;Stepper-connector Stepper-connector--completed&quot;&gt;&lt;/div&gt;
+&lt;button class=&quot;Stepper-step Stepper-step--active&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;3&lt;/div&gt;
+&lt;div class=&quot;Stepper-content&quot;&gt;
+&lt;span class=&quot;Stepper-title&quot;&gt;Payment&lt;/span&gt;
+&lt;/div&gt;
+&lt;/button&gt;
+&lt;div class=&quot;Stepper-connector&quot;&gt;&lt;/div&gt;
+&lt;button class=&quot;Stepper-step&quot; disabled&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;4&lt;/div&gt;
+&lt;div class=&quot;Stepper-content&quot;&gt;
+&lt;span class=&quot;Stepper-title&quot;&gt;Confirm&lt;/span&gt;
+&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Stepper Stepper--clickable&quot;&gt;
+    &lt;button class=&quot;Stepper-step Stepper-step--completed Stepper-step--clickable&quot;&gt;
+        &lt;div class=&quot;Stepper-indicator&quot;&gt;
+            &lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;Stepper-content&quot;&gt;
+            &lt;span class=&quot;Stepper-title&quot;&gt;Details&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/button&gt;
+    ...
+&lt;/div&gt;
+</code></pre>
+<h2 id="error-state">Error State</h2>
+<p>Show when a step has validation errors.</p>
+
+<div class="Preview" id="preview-ajdnknpie">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Stepper">
+        <div class="Stepper-step Stepper-step--completed">
+            <div class="Stepper-indicator">
+                <i class="ph ph-check"></i>
+            </div>
+            <div class="Stepper-content">
+                <span class="Stepper-title">Account</span>
+            </div>
+        </div>
+        <div class="Stepper-connector Stepper-connector--completed"></div>
+        <div class="Stepper-step Stepper-step--error">
+            <div class="Stepper-indicator">
+                <i class="ph ph-warning"></i>
+            </div>
+            <div class="Stepper-content">
+                <span class="Stepper-title">Payment</span>
+                <span class="Stepper-description Stepper-description--error">Card declined</span>
+            </div>
+        </div>
+        <div class="Stepper-connector"></div>
+        <div class="Stepper-step">
+            <div class="Stepper-indicator">3</div>
+            <div class="Stepper-content">
+                <span class="Stepper-title">Confirm</span>
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Stepper&quot;&gt;
+&lt;div class=&quot;Stepper-step Stepper-step--completed&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;
+&lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-content&quot;&gt;
+&lt;span class=&quot;Stepper-title&quot;&gt;Account&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-connector Stepper-connector--completed&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-step Stepper-step--error&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;
+&lt;i class=&quot;ph ph-warning&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-content&quot;&gt;
+&lt;span class=&quot;Stepper-title&quot;&gt;Payment&lt;/span&gt;
+&lt;span class=&quot;Stepper-description Stepper-description--error&quot;&gt;Card declined&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-connector&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-step&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;3&lt;/div&gt;
+&lt;div class=&quot;Stepper-content&quot;&gt;
+&lt;span class=&quot;Stepper-title&quot;&gt;Confirm&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Stepper&quot;&gt;
+    &lt;div class=&quot;Stepper-step Stepper-step--error&quot;&gt;
+        &lt;div class=&quot;Stepper-indicator&quot;&gt;
+            &lt;i class=&quot;ph ph-warning&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;Stepper-content&quot;&gt;
+            &lt;span class=&quot;Stepper-title&quot;&gt;Payment&lt;/span&gt;
+            &lt;span class=&quot;Stepper-description Stepper-description--error&quot;&gt;Card declined&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    ...
+&lt;/div&gt;
+</code></pre>
+<h2 id="progress-stepper">Progress Stepper</h2>
+<p>Combine with a progress indicator for completion status.</p>
+
+<div class="Preview" id="preview-7g6hf3odq">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="max-width: 400px;">
+        <div class="Stepper Stepper--compact" style="margin-bottom: var(--space-3);">
+            <div class="Stepper-step Stepper-step--completed">
+                <div class="Stepper-indicator"><i class="ph ph-check"></i></div>
+            </div>
+            <div class="Stepper-connector Stepper-connector--completed"></div>
+            <div class="Stepper-step Stepper-step--completed">
+                <div class="Stepper-indicator"><i class="ph ph-check"></i></div>
+            </div>
+            <div class="Stepper-connector Stepper-connector--completed"></div>
+            <div class="Stepper-step Stepper-step--active">
+                <div class="Stepper-indicator">3</div>
+            </div>
+            <div class="Stepper-connector"></div>
+            <div class="Stepper-step">
+                <div class="Stepper-indicator">4</div>
+            </div>
+        </div>
+        <div class="Progress" style="height: 4px;">
+            <div class="Progress-bar" style="width: 66%;"></div>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-top: var(--space-2); font-size: 0.85rem; color: var(--fg-3);">
+            <span>Step 3 of 4</span>
+            <span>66% complete</span>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;max-width: 400px;&quot;&gt;
+&lt;div class=&quot;Stepper Stepper--compact&quot; style=&quot;margin-bottom: var(--space-3);&quot;&gt;
+&lt;div class=&quot;Stepper-step Stepper-step--completed&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;&lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-connector Stepper-connector--completed&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-step Stepper-step--completed&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;&lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-connector Stepper-connector--completed&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-step Stepper-step--active&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;3&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-connector&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-step&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;4&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Progress&quot; style=&quot;height: 4px;&quot;&gt;
+&lt;div class=&quot;Progress-bar&quot; style=&quot;width: 66%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: flex; justify-content: space-between; margin-top: var(--space-2); font-size: 0.85rem; color: var(--fg-3);&quot;&gt;
+&lt;span&gt;Step 3 of 4&lt;/span&gt;
+&lt;span&gt;66% complete&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Stepper Stepper--compact&quot;&gt;
+    ...
+&lt;/div&gt;
+&lt;div class=&quot;Progress&quot; style=&quot;height: 4px;&quot;&gt;
+    &lt;div class=&quot;Progress-bar&quot; style=&quot;width: 66%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="dot-stepper">Dot Stepper</h2>
+<p>A minimal dot-based progress indicator.</p>
+
+<div class="Preview" id="preview-pyue1kavm">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Stepper Stepper--dots">
+        <div class="Stepper-dot Stepper-dot--completed"></div>
+        <div class="Stepper-dot Stepper-dot--completed"></div>
+        <div class="Stepper-dot Stepper-dot--active"></div>
+        <div class="Stepper-dot"></div>
+        <div class="Stepper-dot"></div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Stepper Stepper--dots&quot;&gt;
+&lt;div class=&quot;Stepper-dot Stepper-dot--completed&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-dot Stepper-dot--completed&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-dot Stepper-dot--active&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-dot&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-dot&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Stepper Stepper--dots&quot;&gt;
+    &lt;div class=&quot;Stepper-dot Stepper-dot--completed&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;Stepper-dot Stepper-dot--completed&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;Stepper-dot Stepper-dot--active&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;Stepper-dot&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;Stepper-dot&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="common-patterns">Common Patterns</h2>
+<h3 id="checkout-flow">Checkout Flow</h3>
+
+<div class="Preview" id="preview-y0kgvusrr">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="max-width: 500px; width: 100%;">
+        <div class="Stepper" style="margin-bottom: var(--space-4);">
+            <div class="Stepper-step Stepper-step--completed">
+                <div class="Stepper-indicator"><i class="ph ph-check"></i></div>
+                <div class="Stepper-content"><span class="Stepper-title">Cart</span></div>
+            </div>
+            <div class="Stepper-connector Stepper-connector--completed"></div>
+            <div class="Stepper-step Stepper-step--active">
+                <div class="Stepper-indicator">2</div>
+                <div class="Stepper-content"><span class="Stepper-title">Shipping</span></div>
+            </div>
+            <div class="Stepper-connector"></div>
+            <div class="Stepper-step">
+                <div class="Stepper-indicator">3</div>
+                <div class="Stepper-content"><span class="Stepper-title">Payment</span></div>
+            </div>
+            <div class="Stepper-connector"></div>
+            <div class="Stepper-step">
+                <div class="Stepper-indicator">4</div>
+                <div class="Stepper-content"><span class="Stepper-title">Review</span></div>
+            </div>
+        </div>
+        <div style="padding: var(--space-4); border: 1px solid var(--bd); border-radius: var(--r-m);">
+            <div style="font-weight: 600; margin-bottom: var(--space-2);">Shipping Address</div>
+            <div style="font-size: 0.85rem; color: var(--fg-3);">Enter your delivery details below</div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;max-width: 500px; width: 100%;&quot;&gt;
+&lt;div class=&quot;Stepper&quot; style=&quot;margin-bottom: var(--space-4);&quot;&gt;
+&lt;div class=&quot;Stepper-step Stepper-step--completed&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;&lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-content&quot;&gt;&lt;span class=&quot;Stepper-title&quot;&gt;Cart&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-connector Stepper-connector--completed&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-step Stepper-step--active&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;2&lt;/div&gt;
+&lt;div class=&quot;Stepper-content&quot;&gt;&lt;span class=&quot;Stepper-title&quot;&gt;Shipping&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-connector&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-step&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;3&lt;/div&gt;
+&lt;div class=&quot;Stepper-content&quot;&gt;&lt;span class=&quot;Stepper-title&quot;&gt;Payment&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-connector&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-step&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;4&lt;/div&gt;
+&lt;div class=&quot;Stepper-content&quot;&gt;&lt;span class=&quot;Stepper-title&quot;&gt;Review&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;padding: var(--space-4); border: 1px solid var(--bd); border-radius: var(--r-m);&quot;&gt;
+&lt;div style=&quot;font-weight: 600; margin-bottom: var(--space-2);&quot;&gt;Shipping Address&lt;/div&gt;
+&lt;div style=&quot;font-size: 0.85rem; color: var(--fg-3);&quot;&gt;Enter your delivery details below&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="account-setup-wizard">Account Setup Wizard</h3>
+
+<div class="Preview" id="preview-g0njcsqwt">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Stepper Stepper--vertical" style="max-width: 300px;">
+        <div class="Stepper-step Stepper-step--completed">
+            <div class="Stepper-indicator"><i class="ph ph-check"></i></div>
+            <div class="Stepper-content">
+                <span class="Stepper-title">Create account</span>
+                <span class="Stepper-description">Email verified</span>
+            </div>
+        </div>
+        <div class="Stepper-step Stepper-step--active">
+            <div class="Stepper-indicator">2</div>
+            <div class="Stepper-content">
+                <span class="Stepper-title">Add profile photo</span>
+                <span class="Stepper-description">Upload or take a picture</span>
+            </div>
+        </div>
+        <div class="Stepper-step">
+            <div class="Stepper-indicator">3</div>
+            <div class="Stepper-content">
+                <span class="Stepper-title">Choose preferences</span>
+                <span class="Stepper-description">Customize your feed</span>
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Stepper Stepper--vertical&quot; style=&quot;max-width: 300px;&quot;&gt;
+&lt;div class=&quot;Stepper-step Stepper-step--completed&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;&lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-content&quot;&gt;
+&lt;span class=&quot;Stepper-title&quot;&gt;Create account&lt;/span&gt;
+&lt;span class=&quot;Stepper-description&quot;&gt;Email verified&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-step Stepper-step--active&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;2&lt;/div&gt;
+&lt;div class=&quot;Stepper-content&quot;&gt;
+&lt;span class=&quot;Stepper-title&quot;&gt;Add profile photo&lt;/span&gt;
+&lt;span class=&quot;Stepper-description&quot;&gt;Upload or take a picture&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Stepper-step&quot;&gt;
+&lt;div class=&quot;Stepper-indicator&quot;&gt;3&lt;/div&gt;
+&lt;div class=&quot;Stepper-content&quot;&gt;
+&lt;span class=&quot;Stepper-title&quot;&gt;Choose preferences&lt;/span&gt;
+&lt;span class=&quot;Stepper-description&quot;&gt;Customize your feed&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="mobile-carousel-dots">Mobile Carousel Dots</h3>
+
+<div class="Preview" id="preview-3k2kxbtuh">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="text-align: center; padding: var(--space-4); background: var(--bg-s); border-radius: var(--r-m); max-width: 320px;">
+        <div style="height: 120px; display: flex; align-items: center; justify-content: center; color: var(--fg-3); margin-bottom: var(--space-3);">Slide Content</div>
+        <div class="Stepper Stepper--dots" style="justify-content: center;">
+            <div class="Stepper-dot Stepper-dot--completed"></div>
+            <div class="Stepper-dot Stepper-dot--active"></div>
+            <div class="Stepper-dot"></div>
+            <div class="Stepper-dot"></div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;text-align: center; padding: var(--space-4); background: var(--bg-s); border-radius: var(--r-m); max-width: 320px;&quot;&gt;
+&lt;div style=&quot;height: 120px; display: flex; align-items: center; justify-content: center; color: var(--fg-3); margin-bottom: var(--space-3);&quot;&gt;Slide Content&lt;/div&gt;
+&lt;div class=&quot;Stepper Stepper--dots&quot; style=&quot;justify-content: center;&quot;&gt;
+&lt;div class=&quot;Stepper-dot Stepper-dot--completed&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-dot Stepper-dot--active&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-dot&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-dot&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="form-with-compact-progress">Form with Compact Progress</h3>
+
+<div class="Preview" id="preview-3f8xudn8l">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="max-width: 400px; width: 100%;">
+        <div class="Stepper Stepper--compact" style="margin-bottom: var(--space-2);">
+            <div class="Stepper-step Stepper-step--completed"><div class="Stepper-indicator"><i class="ph ph-check"></i></div></div>
+            <div class="Stepper-connector Stepper-connector--completed"></div>
+            <div class="Stepper-step Stepper-step--completed"><div class="Stepper-indicator"><i class="ph ph-check"></i></div></div>
+            <div class="Stepper-connector Stepper-connector--completed"></div>
+            <div class="Stepper-step Stepper-step--active"><div class="Stepper-indicator">3</div></div>
+            <div class="Stepper-connector"></div>
+            <div class="Stepper-step"><div class="Stepper-indicator">4</div></div>
+        </div>
+        <p style="text-align: center; font-size: 0.85rem; color: var(--fg-3);">Step 3 of 4: Payment Details</p>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;max-width: 400px; width: 100%;&quot;&gt;
+&lt;div class=&quot;Stepper Stepper--compact&quot; style=&quot;margin-bottom: var(--space-2);&quot;&gt;
+&lt;div class=&quot;Stepper-step Stepper-step--completed&quot;&gt;&lt;div class=&quot;Stepper-indicator&quot;&gt;&lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-connector Stepper-connector--completed&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-step Stepper-step--completed&quot;&gt;&lt;div class=&quot;Stepper-indicator&quot;&gt;&lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-connector Stepper-connector--completed&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-step Stepper-step--active&quot;&gt;&lt;div class=&quot;Stepper-indicator&quot;&gt;3&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-connector&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Stepper-step&quot;&gt;&lt;div class=&quot;Stepper-indicator&quot;&gt;4&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p style=&quot;text-align: center; font-size: 0.85rem; color: var(--fg-3);&quot;&gt;Step 3 of 4: Payment Details&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="customization">Customization</h2>
+<p>Override stepper styling with CSS custom properties:</p>
+<pre><code class="language-css">/* Custom accent colors */
+.Stepper {
+  --stepper-active-bg: oklch(55% 0.2 260);
+  --stepper-completed-bg: oklch(55% 0.15 150);
+  --stepper-connector-color: var(--bd);
+}
+</code></pre>
+<h3 id="custom-indicator-size">Custom Indicator Size</h3>
+<pre><code class="language-css">.Stepper--lg .Stepper-indicator {
+  width: 40px;
+  height: 40px;
+  font-size: 1.1rem;
+}
+</code></pre>
+<h3 id="dashed-connectors">Dashed Connectors</h3>
+<pre><code class="language-css">.Stepper-connector--dashed {
+  border-top-style: dashed;
+}
+</code></pre>
+<h3 id="theming">Theming</h3>
+<pre><code class="language-css">[data-theme=&quot;dark&quot;] .Stepper-step--active .Stepper-indicator {
+  background: oklch(65% 0.18 260);
+}
+
+[data-theme=&quot;dark&quot;] .Stepper-connector--completed {
+  background: oklch(55% 0.15 150);
+}
+</code></pre>
+<hr>
+<h2 id="api-reference">API Reference</h2>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">.Stepper</code></td><td class="ApiTable-desc">Base stepper container</td></tr>
+<tr><td><code class="ApiTable-prop">.Stepper--vertical</code></td><td class="ApiTable-desc">Vertical layout variant</td></tr>
+<tr><td><code class="ApiTable-prop">.Stepper--compact</code></td><td class="ApiTable-desc">Minimal variant (indicators only)</td></tr>
+<tr><td><code class="ApiTable-prop">.Stepper--clickable</code></td><td class="ApiTable-desc">Enables navigation to completed steps</td></tr>
+<tr><td><code class="ApiTable-prop">.Stepper--dots</code></td><td class="ApiTable-desc">Dot-based progress indicator</td></tr>
+<tr><td><code class="ApiTable-prop">.Stepper-step</code></td><td class="ApiTable-desc">Individual step container</td></tr>
+<tr><td><code class="ApiTable-prop">.Stepper-step--completed</code></td><td class="ApiTable-desc">Completed step state</td></tr>
+<tr><td><code class="ApiTable-prop">.Stepper-step--active</code></td><td class="ApiTable-desc">Current active step</td></tr>
+<tr><td><code class="ApiTable-prop">.Stepper-step--error</code></td><td class="ApiTable-desc">Error state for a step</td></tr>
+<tr><td><code class="ApiTable-prop">.Stepper-step--clickable</code></td><td class="ApiTable-desc">Clickable step (for navigation)</td></tr>
+<tr><td><code class="ApiTable-prop">.Stepper-indicator</code></td><td class="ApiTable-desc">Step number or icon container</td></tr>
+<tr><td><code class="ApiTable-prop">.Stepper-indicator--icon</code></td><td class="ApiTable-desc">Icon-only indicator variant</td></tr>
+<tr><td><code class="ApiTable-prop">.Stepper-content</code></td><td class="ApiTable-desc">Step title and description container</td></tr>
+<tr><td><code class="ApiTable-prop">.Stepper-title</code></td><td class="ApiTable-desc">Step title text</td></tr>
+<tr><td><code class="ApiTable-prop">.Stepper-description</code></td><td class="ApiTable-desc">Step description text</td></tr>
+<tr><td><code class="ApiTable-prop">.Stepper-description--error</code></td><td class="ApiTable-desc">Error description styling</td></tr>
+<tr><td><code class="ApiTable-prop">.Stepper-connector</code></td><td class="ApiTable-desc">Line connecting steps</td></tr>
+<tr><td><code class="ApiTable-prop">.Stepper-connector--completed</code></td><td class="ApiTable-desc">Completed connector (filled)</td></tr>
+<tr><td><code class="ApiTable-prop">.Stepper-dot</code></td><td class="ApiTable-desc">Dot indicator (for dot variant)</td></tr>
+<tr><td><code class="ApiTable-prop">.Stepper-dot--completed</code></td><td class="ApiTable-desc">Completed dot</td></tr>
+<tr><td><code class="ApiTable-prop">.Stepper-dot--active</code></td><td class="ApiTable-desc">Active dot</td></tr>
+</tbody>
+</table>
+<hr>
+<h2 id="css-reference">CSS Reference</h2>
+<pre><code class="language-css">/* Base stepper */
+.Stepper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Step */
+.Stepper-step {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+/* Indicator */
+.Stepper-indicator {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: var(--bg-s);
+  color: var(--fg-3);
+  border: 2px solid var(--bd);
+  flex-shrink: 0;
+}
+
+/* Active step */
+.Stepper-step--active .Stepper-indicator {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+/* Completed step */
+.Stepper-step--completed .Stepper-indicator {
+  background: oklch(55% 0.15 150);
+  color: white;
+  border-color: oklch(55% 0.15 150);
+}
+
+/* Error step */
+.Stepper-step--error .Stepper-indicator {
+  background: oklch(55% 0.2 25);
+  color: white;
+  border-color: oklch(55% 0.2 25);
+}
+
+/* Connector */
+.Stepper-connector {
+  flex: 1;
+  height: 2px;
+  background: var(--bd);
+  margin: 0 var(--space-2);
+}
+
+.Stepper-connector--completed {
+  background: oklch(55% 0.15 150);
+}
+
+/* Content */
+.Stepper-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.Stepper-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.Stepper-description {
+  font-size: 0.8rem;
+  color: var(--fg-3);
+}
+
+.Stepper-description--error {
+  color: oklch(55% 0.2 25);
+}
+
+/* Vertical */
+.Stepper--vertical {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.Stepper--vertical .Stepper-step {
+  align-items: flex-start;
+}
+
+.Stepper--vertical .Stepper-connector {
+  width: 2px;
+  height: 24px;
+  flex: none;
+  margin: 0 0 0 15px;
+}
+
+/* Compact */
+.Stepper--compact .Stepper-indicator {
+  width: 24px;
+  height: 24px;
+  font-size: 0.75rem;
+}
+
+/* Clickable */
+.Stepper-step--clickable {
+  cursor: pointer;
+}
+
+.Stepper-step--clickable:hover .Stepper-indicator {
+  box-shadow: 0 0 0 3px oklch(55% 0.15 150 / 0.2);
+}
+
+/* Dots */
+.Stepper--dots {
+  gap: var(--space-2);
+}
+
+.Stepper-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--bd);
+}
+
+.Stepper-dot--active {
+  background: var(--accent);
+  width: 24px;
+  border-radius: var(--r-full);
+}
+
+.Stepper-dot--completed {
+  background: oklch(55% 0.15 150);
+}
+</code></pre>
+<hr>
+<h2 id="accessibility">Accessibility</h2>
+<h3 id="keyboard-support">Keyboard Support</h3>
+<div class="Table-container"><table class="Table">
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Tab</code></td>
+<td>Move focus between clickable steps</td>
+</tr>
+<tr>
+<td><code>Enter</code> / <code>Space</code></td>
+<td>Navigate to the focused step (if clickable)</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="screen-reader-guidance">Screen Reader Guidance</h3>
+<p>Use <code>role=&quot;list&quot;</code> on the stepper container and <code>role=&quot;listitem&quot;</code> on each step. Mark the active step with <code>aria-current=&quot;step&quot;</code>. For clickable steps, use <code>&lt;button&gt;</code> elements with descriptive labels.</p>
+<pre><code class="language-html">&lt;div class=&quot;Stepper&quot; role=&quot;list&quot; aria-label=&quot;Checkout progress&quot;&gt;
+    &lt;div class=&quot;Stepper-step Stepper-step--completed&quot; role=&quot;listitem&quot;&gt;
+        &lt;div class=&quot;Stepper-indicator&quot;&gt;&lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;div class=&quot;Stepper-content&quot;&gt;
+            &lt;span class=&quot;Stepper-title&quot;&gt;Cart&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;Stepper-step Stepper-step--active&quot; role=&quot;listitem&quot; aria-current=&quot;step&quot;&gt;
+        &lt;div class=&quot;Stepper-indicator&quot;&gt;2&lt;/div&gt;
+        &lt;div class=&quot;Stepper-content&quot;&gt;
+            &lt;span class=&quot;Stepper-title&quot;&gt;Shipping&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="aria-attributes">ARIA Attributes</h3>
+<ul>
+<li><code>aria-current=&quot;step&quot;</code> on the active step</li>
+<li><code>aria-label</code> on clickable steps for descriptive context</li>
+<li><code>role=&quot;list&quot;</code> and <code>role=&quot;listitem&quot;</code> for step sequences</li>
+<li><code>aria-disabled=&quot;true&quot;</code> for non-clickable future steps</li>
+<li><code>aria-invalid=&quot;true&quot;</code> on error steps with error description</li>
+<li><code>aria-live=&quot;polite&quot;</code> to announce step changes</li>
+</ul>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="do">Do</h3>
+<ul>
+<li>✓ <strong>Show step numbers or icons</strong> — Clear indicators help users track position</li>
+<li>✓ <strong>Mark completed steps visually</strong> — Checkmarks confirm progress</li>
+<li>✓ <strong>Allow navigation to completed steps</strong> — Users often need to go back</li>
+<li>✓ <strong>Use descriptions for complex flows</strong> — Extra context reduces confusion</li>
+<li>✓ <strong>Keep step count reasonable</strong> — 3–7 steps is ideal for most flows</li>
+<li>✓ <strong>Use vertical layout for mobile</strong> — Horizontal steppers don’t fit narrow screens</li>
+</ul>
+<h3 id="don-t">Don’t</h3>
+<ul>
+<li>✗ <strong>Skip step numbers</strong> — Users need to know their position in the sequence</li>
+<li>✗ <strong>Allow skipping required steps</strong> — Enforce sequential completion when needed</li>
+<li>✗ <strong>Use steppers for single actions</strong> — They’re for multi-step processes only</li>
+<li>✗ <strong>Hide error states</strong> — Show which step has a problem and describe it</li>
+<li>✗ <strong>Change step order mid-flow</strong> — Consistency builds user confidence</li>
+<li>✗ <strong>Use too many steps</strong> — More than 7 steps feels overwhelming; consider grouping</li>
+</ul>
+
+                </article>
+
+                <footer class="page-footer">
+                    <p>Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

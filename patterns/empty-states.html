@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Empty states | Carbon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/bold/style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Floating Pill Nav (Mobile: bottom, Desktop: top) -->
+        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation">
+            <a href="../index.html" class="fnav-btn" data-section="home" aria-label="Home">
+                <i class="ph-bold ph-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="../tokens/colors.html" class="fnav-btn" data-section="tokens" aria-label="Tokens">
+                <i class="ph-bold ph-palette"></i>
+                <span>Tokens</span>
+            </a>
+            <a href="../components/buttons.html" class="fnav-btn" data-section="components" aria-label="Components">
+                <i class="ph-bold ph-stack"></i>
+                <span>Components</span>
+            </a>
+            <a href="../patterns/layouts.html" class="fnav-btn" data-section="patterns" aria-label="Patterns">
+                <i class="ph-bold ph-grid-four"></i>
+                <span>Patterns</span>
+            </a>
+            <div class="fnav-sep"></div>
+            <button class="fnav-btn" id="search-toggle" aria-label="Search">
+                <i class="ph ph-magnifying-glass"></i>
+            </button>
+            <button class="fnav-btn" id="theme-btn" aria-label="Toggle theme">
+                <i class="ph ph-moon"></i>
+            </button>
+        </nav>
+
+        <!-- Glassmorphism Top Bar (Desktop only) -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <a href="../index.html" class="logo">
+                    <i class="ph ph-intersect"></i>
+                    <span>Carbon</span>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <div class="search-container" id="search-container">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search components..." aria-label="Search" autocomplete="off">
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <main class="main-content">
+                <header class="page-header">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="../index.html">Carbon</a> <span class="sep">/</span> <span>Patterns</span> <span class="sep">/</span> <span>Empty states</span>
+                    </nav>
+                    <h1><em>Empty</em> states</h1>
+                </header>
+                
+                <article class="prose">
+                    <h1>Empty States</h1>
+<p>Empty states communicate when there’s no content to display. A good empty state guides users toward their next action instead of leaving them confused.</p>
+<hr>
+<h2 id="basic-empty-state">Basic Empty State</h2>
+<p>A centered message with optional icon and action.</p>
+
+<div class="Preview" id="preview-b5utk8ft3">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="EmptyState">
+        <div class="EmptyState-icon">
+            <i class="ph ph-package"></i>
+        </div>
+        <h3 class="EmptyState-title">No items yet</h3>
+        <p class="EmptyState-description">Get started by creating your first item.</p>
+        <button class="Button Button--primary">Create Item</button>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;EmptyState&quot;&gt;
+&lt;div class=&quot;EmptyState-icon&quot;&gt;
+&lt;i class=&quot;ph ph-package&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;h3 class=&quot;EmptyState-title&quot;&gt;No items yet&lt;/h3&gt;
+&lt;p class=&quot;EmptyState-description&quot;&gt;Get started by creating your first item.&lt;/p&gt;
+&lt;button class=&quot;Button Button--primary&quot;&gt;Create Item&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;EmptyState&quot;&gt;
+    &lt;div class=&quot;EmptyState-icon&quot;&gt;
+        &lt;i class=&quot;ph ph-package&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;h3 class=&quot;EmptyState-title&quot;&gt;No items yet&lt;/h3&gt;
+    &lt;p class=&quot;EmptyState-description&quot;&gt;Get started by creating your first item.&lt;/p&gt;
+    &lt;button class=&quot;Button Button--primary&quot;&gt;Create Item&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="with-illustration">With Illustration</h2>
+<p>Replace the icon with a custom illustration for more personality.</p>
+
+<div class="Preview" id="preview-lgq88ipk0">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="EmptyState">
+        <div class="EmptyState-illustration">
+            <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+                <circle cx="60" cy="60" r="50" fill="var(--bg-s)" stroke="var(--bd)" stroke-width="2"/>
+                <path d="M40 55 L60 75 L80 55" stroke="var(--accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <circle cx="60" cy="40" r="6" fill="var(--accent)"/>
+            </svg>
+        </div>
+        <h3 class="EmptyState-title">Your inbox is empty</h3>
+        <p class="EmptyState-description">When you receive messages, they'll appear here.</p>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;EmptyState&quot;&gt;
+&lt;div class=&quot;EmptyState-illustration&quot;&gt;
+&lt;svg width=&quot;120&quot; height=&quot;120&quot; viewBox=&quot;0 0 120 120&quot; fill=&quot;none&quot;&gt;
+&lt;circle cx=&quot;60&quot; cy=&quot;60&quot; r=&quot;50&quot; fill=&quot;var(--bg-s)&quot; stroke=&quot;var(--bd)&quot; stroke-width=&quot;2&quot;/&gt;
+&lt;path d=&quot;M40 55 L60 75 L80 55&quot; stroke=&quot;var(--accent)&quot; stroke-width=&quot;4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; fill=&quot;none&quot;/&gt;
+&lt;circle cx=&quot;60&quot; cy=&quot;40&quot; r=&quot;6&quot; fill=&quot;var(--accent)&quot;/&gt;
+&lt;/svg&gt;
+&lt;/div&gt;
+&lt;h3 class=&quot;EmptyState-title&quot;&gt;Your inbox is empty&lt;/h3&gt;
+&lt;p class=&quot;EmptyState-description&quot;&gt;When you receive messages, they&#039;ll appear here.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;EmptyState&quot;&gt;
+    &lt;div class=&quot;EmptyState-illustration&quot;&gt;
+        &lt;img src=&quot;empty-inbox.svg&quot; alt=&quot;&quot;&gt;
+    &lt;/div&gt;
+    &lt;h3 class=&quot;EmptyState-title&quot;&gt;Your inbox is empty&lt;/h3&gt;
+    &lt;p class=&quot;EmptyState-description&quot;&gt;When you receive messages, they'll appear here.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="compact-variant">Compact Variant</h2>
+<p>For smaller containers like sidebars or cards.</p>
+
+<div class="Preview" id="preview-vsil7pi2j">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="max-width: 280px; border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-4);">
+        <div class="EmptyState EmptyState--compact">
+            <div class="EmptyState-icon">
+                <i class="ph ph-file-text"></i>
+            </div>
+            <p class="EmptyState-description">No documents</p>
+            <button class="Button Button--primary" style="font-size: 0.85rem; padding: var(--space-1) var(--space-3);">Upload</button>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;max-width: 280px; border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-4);&quot;&gt;
+&lt;div class=&quot;EmptyState EmptyState--compact&quot;&gt;
+&lt;div class=&quot;EmptyState-icon&quot;&gt;
+&lt;i class=&quot;ph ph-file-text&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;p class=&quot;EmptyState-description&quot;&gt;No documents&lt;/p&gt;
+&lt;button class=&quot;Button Button--primary&quot; style=&quot;font-size: 0.85rem; padding: var(--space-1) var(--space-3);&quot;&gt;Upload&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;EmptyState EmptyState--compact&quot;&gt;
+    &lt;div class=&quot;EmptyState-icon&quot;&gt;
+        &lt;i class=&quot;ph ph-file-text&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;EmptyState-description&quot;&gt;No documents&lt;/p&gt;
+    &lt;button class=&quot;Button Button--primary&quot;&gt;Upload&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="search-results">Search Results</h2>
+<p>When a search or filter returns no matches.</p>
+
+<div class="Preview" id="preview-yo5erl33p">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="EmptyState">
+        <div class="EmptyState-icon">
+            <i class="ph ph-magnifying-glass"></i>
+        </div>
+        <h3 class="EmptyState-title">No results found</h3>
+        <p class="EmptyState-description">We couldn't find anything matching "quantum flux capacitor". Try different keywords or check for typos.</p>
+        <div class="Layout-cluster" style="justify-content: center;">
+            <button class="Button">Clear Search</button>
+            <button class="Button Button--primary">Browse All</button>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;EmptyState&quot;&gt;
+&lt;div class=&quot;EmptyState-icon&quot;&gt;
+&lt;i class=&quot;ph ph-magnifying-glass&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;h3 class=&quot;EmptyState-title&quot;&gt;No results found&lt;/h3&gt;
+&lt;p class=&quot;EmptyState-description&quot;&gt;We couldn&#039;t find anything matching &quot;quantum flux capacitor&quot;. Try different keywords or check for typos.&lt;/p&gt;
+&lt;div class=&quot;Layout-cluster&quot; style=&quot;justify-content: center;&quot;&gt;
+&lt;button class=&quot;Button&quot;&gt;Clear Search&lt;/button&gt;
+&lt;button class=&quot;Button Button--primary&quot;&gt;Browse All&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;EmptyState&quot;&gt;
+    &lt;div class=&quot;EmptyState-icon&quot;&gt;
+        &lt;i class=&quot;ph ph-magnifying-glass&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;h3 class=&quot;EmptyState-title&quot;&gt;No results found&lt;/h3&gt;
+    &lt;p class=&quot;EmptyState-description&quot;&gt;Try different keywords or check for typos.&lt;/p&gt;
+    &lt;div class=&quot;Layout-cluster&quot;&gt;
+        &lt;button class=&quot;Button&quot;&gt;Clear Search&lt;/button&gt;
+        &lt;button class=&quot;Button Button--primary&quot;&gt;Browse All&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="error-state">Error State</h2>
+<p>When something goes wrong loading content.</p>
+
+<div class="Preview" id="preview-rubshshu9">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="EmptyState EmptyState--error">
+        <div class="EmptyState-icon">
+            <i class="ph ph-warning-circle"></i>
+        </div>
+        <h3 class="EmptyState-title">Unable to load data</h3>
+        <p class="EmptyState-description">Something went wrong on our end. Please try again or contact support if the problem persists.</p>
+        <div class="Layout-cluster" style="justify-content: center;">
+            <button class="Button Button--primary">
+                <i class="ph ph-arrow-clockwise"></i>
+                Retry
+            </button>
+            <button class="Button">Contact Support</button>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;EmptyState EmptyState--error&quot;&gt;
+&lt;div class=&quot;EmptyState-icon&quot;&gt;
+&lt;i class=&quot;ph ph-warning-circle&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;h3 class=&quot;EmptyState-title&quot;&gt;Unable to load data&lt;/h3&gt;
+&lt;p class=&quot;EmptyState-description&quot;&gt;Something went wrong on our end. Please try again or contact support if the problem persists.&lt;/p&gt;
+&lt;div class=&quot;Layout-cluster&quot; style=&quot;justify-content: center;&quot;&gt;
+&lt;button class=&quot;Button Button--primary&quot;&gt;
+&lt;i class=&quot;ph ph-arrow-clockwise&quot;&gt;&lt;/i&gt;
+Retry
+&lt;/button&gt;
+&lt;button class=&quot;Button&quot;&gt;Contact Support&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;EmptyState EmptyState--error&quot;&gt;
+    &lt;div class=&quot;EmptyState-icon&quot;&gt;
+        &lt;i class=&quot;ph ph-warning-circle&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;h3 class=&quot;EmptyState-title&quot;&gt;Unable to load data&lt;/h3&gt;
+    &lt;p class=&quot;EmptyState-description&quot;&gt;Something went wrong...&lt;/p&gt;
+    &lt;button class=&quot;Button Button--primary&quot;&gt;Retry&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="first-time-user">First-Time User</h2>
+<p>Onboarding empty states that guide new users.</p>
+
+<div class="Preview" id="preview-lx5u2lr32">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="EmptyState">
+        <div class="EmptyState-icon" style="background: oklch(55% 0.15 150 / 0.1); color: oklch(55% 0.15 150);">
+            <i class="ph ph-rocket-launch"></i>
+        </div>
+        <h3 class="EmptyState-title">Welcome to your dashboard!</h3>
+        <p class="EmptyState-description">You're all set up. Here's how to get started:</p>
+        <div class="Layout-stack Layout-stack--tight" style="text-align: left; max-width: 300px; margin: var(--space-4) auto 0;">
+            <div style="display: flex; gap: var(--space-3); align-items: flex-start;">
+                <span class="Badge Badge--primary" style="border-radius: 50%; min-width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;">1</span>
+                <span>Create your first project</span>
+            </div>
+            <div style="display: flex; gap: var(--space-3); align-items: flex-start;">
+                <span class="Badge" style="border-radius: 50%; min-width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;">2</span>
+                <span style="color: var(--fg-3);">Invite team members</span>
+            </div>
+            <div style="display: flex; gap: var(--space-3); align-items: flex-start;">
+                <span class="Badge" style="border-radius: 50%; min-width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;">3</span>
+                <span style="color: var(--fg-3);">Start collaborating</span>
+            </div>
+        </div>
+        <button class="Button Button--primary" style="margin-top: var(--space-4);">Create Project</button>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;EmptyState&quot;&gt;
+&lt;div class=&quot;EmptyState-icon&quot; style=&quot;background: oklch(55% 0.15 150 / 0.1); color: oklch(55% 0.15 150);&quot;&gt;
+&lt;i class=&quot;ph ph-rocket-launch&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;h3 class=&quot;EmptyState-title&quot;&gt;Welcome to your dashboard!&lt;/h3&gt;
+&lt;p class=&quot;EmptyState-description&quot;&gt;You&#039;re all set up. Here&#039;s how to get started:&lt;/p&gt;
+&lt;div class=&quot;Layout-stack Layout-stack--tight&quot; style=&quot;text-align: left; max-width: 300px; margin: var(--space-4) auto 0;&quot;&gt;
+&lt;div style=&quot;display: flex; gap: var(--space-3); align-items: flex-start;&quot;&gt;
+&lt;span class=&quot;Badge Badge--primary&quot; style=&quot;border-radius: 50%; min-width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;&quot;&gt;1&lt;/span&gt;
+&lt;span&gt;Create your first project&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: flex; gap: var(--space-3); align-items: flex-start;&quot;&gt;
+&lt;span class=&quot;Badge&quot; style=&quot;border-radius: 50%; min-width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;&quot;&gt;2&lt;/span&gt;
+&lt;span style=&quot;color: var(--fg-3);&quot;&gt;Invite team members&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: flex; gap: var(--space-3); align-items: flex-start;&quot;&gt;
+&lt;span class=&quot;Badge&quot; style=&quot;border-radius: 50%; min-width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;&quot;&gt;3&lt;/span&gt;
+&lt;span style=&quot;color: var(--fg-3);&quot;&gt;Start collaborating&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;button class=&quot;Button Button--primary&quot; style=&quot;margin-top: var(--space-4);&quot;&gt;Create Project&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="in-cards">In Cards</h2>
+<p>Empty states within card components.</p>
+
+<div class="Preview" id="preview-uqbjn6lwf">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Layout-grid" style="width: 100%;">
+        <div class="Layout-col-6">
+            <div class="Card" style="height: 200px;">
+                <div class="Card-body" style="height: 100%; display: flex; align-items: center; justify-content: center;">
+                    <div class="EmptyState EmptyState--compact">
+                        <i class="ph ph-chart-line" style="font-size: 2rem; color: var(--fg-3);"></i>
+                        <p class="EmptyState-description">No data to display</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Layout-col-6">
+            <div class="Card" style="height: 200px;">
+                <div class="Card-body" style="height: 100%; display: flex; align-items: center; justify-content: center;">
+                    <div class="EmptyState EmptyState--compact">
+                        <i class="ph ph-users" style="font-size: 2rem; color: var(--fg-3);"></i>
+                        <p class="EmptyState-description">No team members</p>
+                        <a href="#" class="Link" style="font-size: 0.85rem;">Invite people</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Layout-grid&quot; style=&quot;width: 100%;&quot;&gt;
+&lt;div class=&quot;Layout-col-6&quot;&gt;
+&lt;div class=&quot;Card&quot; style=&quot;height: 200px;&quot;&gt;
+&lt;div class=&quot;Card-body&quot; style=&quot;height: 100%; display: flex; align-items: center; justify-content: center;&quot;&gt;
+&lt;div class=&quot;EmptyState EmptyState--compact&quot;&gt;
+&lt;i class=&quot;ph ph-chart-line&quot; style=&quot;font-size: 2rem; color: var(--fg-3);&quot;&gt;&lt;/i&gt;
+&lt;p class=&quot;EmptyState-description&quot;&gt;No data to display&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Layout-col-6&quot;&gt;
+&lt;div class=&quot;Card&quot; style=&quot;height: 200px;&quot;&gt;
+&lt;div class=&quot;Card-body&quot; style=&quot;height: 100%; display: flex; align-items: center; justify-content: center;&quot;&gt;
+&lt;div class=&quot;EmptyState EmptyState--compact&quot;&gt;
+&lt;i class=&quot;ph ph-users&quot; style=&quot;font-size: 2rem; color: var(--fg-3);&quot;&gt;&lt;/i&gt;
+&lt;p class=&quot;EmptyState-description&quot;&gt;No team members&lt;/p&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link&quot; style=&quot;font-size: 0.85rem;&quot;&gt;Invite people&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="in-tables">In Tables</h2>
+<p>Empty state for table components.</p>
+
+<div class="Preview" id="preview-2myy34hfo">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="border: 1px solid var(--bd); border-radius: var(--r-m); overflow: hidden;">
+        <table class="Table" style="margin: 0;">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+        </table>
+        <div class="EmptyState" style="padding: var(--space-8);">
+            <div class="EmptyState-icon">
+                <i class="ph ph-clipboard-text"></i>
+            </div>
+            <h3 class="EmptyState-title">No records found</h3>
+            <p class="EmptyState-description">Create a new record to get started.</p>
+            <button class="Button Button--primary">Add Record</button>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;border: 1px solid var(--bd); border-radius: var(--r-m); overflow: hidden;&quot;&gt;
+&lt;table class=&quot;Table&quot; style=&quot;margin: 0;&quot;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Status&lt;/th&gt;
+&lt;th&gt;Date&lt;/th&gt;
+&lt;th&gt;Actions&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;div class=&quot;EmptyState&quot; style=&quot;padding: var(--space-8);&quot;&gt;
+&lt;div class=&quot;EmptyState-icon&quot;&gt;
+&lt;i class=&quot;ph ph-clipboard-text&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;h3 class=&quot;EmptyState-title&quot;&gt;No records found&lt;/h3&gt;
+&lt;p class=&quot;EmptyState-description&quot;&gt;Create a new record to get started.&lt;/p&gt;
+&lt;button class=&quot;Button Button--primary&quot;&gt;Add Record&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="content-guidelines">Content Guidelines</h3>
+<div class="Table-container"><table class="Table">
+<thead>
+<tr>
+<th>Element</th>
+<th>Guideline</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Title</strong></td>
+<td>Clear, concise — what’s missing</td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>Why it’s empty + what to do next</td>
+</tr>
+<tr>
+<td><strong>Action</strong></td>
+<td>Primary CTA to resolve the state</td>
+</tr>
+<tr>
+<td><strong>Tone</strong></td>
+<td>Helpful, not apologetic</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="do">Do</h3>
+<ul>
+<li>✓ <strong>Explain the situation</strong> — Tell users why there’s no content</li>
+<li>✓ <strong>Provide a clear action</strong> — Give them something to do</li>
+<li>✓ <strong>Use appropriate visuals</strong> — Icons or illustrations that match context</li>
+<li>✓ <strong>Keep it simple</strong> — One primary action, maybe a secondary</li>
+<li>✓ <strong>Match the context</strong> — Use compact variant in small containers like cards or sidebars</li>
+<li>✓ <strong>Differentiate error from empty</strong> — Use the error variant when content failed to load vs. simply not existing yet</li>
+</ul>
+<h3 id="don-t">Don’t</h3>
+<ul>
+<li>✗ <strong>Leave it blank</strong> — An empty container is confusing</li>
+<li>✗ <strong>Be overly verbose</strong> — Keep copy short and scannable</li>
+<li>✗ <strong>Use generic messages</strong> — “No data” doesn’t help anyone</li>
+<li>✗ <strong>Hide the state</strong> — Make it visible so users understand</li>
+<li>✗ <strong>Stack multiple empty states</strong> — If a page has several empty sections, consolidate into one page-level message</li>
+<li>✗ <strong>Blame the user</strong> — Say “No results found” not “You didn’t search correctly”</li>
+</ul>
+<hr>
+<h2 id="css-reference">CSS Reference</h2>
+<pre><code class="language-css">/* Base */
+.EmptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-8);
+  min-height: 200px;
+}
+
+.EmptyState-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: var(--bg-s);
+  color: var(--fg-3);
+  font-size: 2rem;
+  margin-bottom: var(--space-4);
+}
+
+.EmptyState-illustration {
+  margin-bottom: var(--space-4);
+}
+
+.EmptyState-illustration img,
+.EmptyState-illustration svg {
+  max-width: 160px;
+  height: auto;
+}
+
+.EmptyState-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--fg);
+  margin: 0 0 var(--space-2);
+}
+
+.EmptyState-description {
+  font-size: 0.9rem;
+  color: var(--fg-3);
+  max-width: 320px;
+  margin: 0 0 var(--space-4);
+}
+
+/* Compact variant */
+.EmptyState--compact {
+  padding: var(--space-4);
+  min-height: auto;
+}
+
+.EmptyState--compact .EmptyState-icon {
+  width: 48px;
+  height: 48px;
+  font-size: 1.5rem;
+  margin-bottom: var(--space-3);
+}
+
+.EmptyState--compact .EmptyState-title {
+  font-size: 1rem;
+}
+
+.EmptyState--compact .EmptyState-description {
+  font-size: 0.85rem;
+  margin-bottom: var(--space-3);
+}
+
+/* Error variant */
+.EmptyState--error .EmptyState-icon {
+  background-color: oklch(55% 0.2 25 / 0.1);
+  color: oklch(55% 0.2 25);
+}
+</code></pre>
+
+                </article>
+
+                <footer class="page-footer">
+                    <p>Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

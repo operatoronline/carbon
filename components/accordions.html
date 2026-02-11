@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Accordions | Carbon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/bold/style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Floating Pill Nav (Mobile: bottom, Desktop: top) -->
+        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation">
+            <a href="../index.html" class="fnav-btn" data-section="home" aria-label="Home">
+                <i class="ph-bold ph-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="../tokens/colors.html" class="fnav-btn" data-section="tokens" aria-label="Tokens">
+                <i class="ph-bold ph-palette"></i>
+                <span>Tokens</span>
+            </a>
+            <a href="../components/buttons.html" class="fnav-btn" data-section="components" aria-label="Components">
+                <i class="ph-bold ph-stack"></i>
+                <span>Components</span>
+            </a>
+            <a href="../patterns/layouts.html" class="fnav-btn" data-section="patterns" aria-label="Patterns">
+                <i class="ph-bold ph-grid-four"></i>
+                <span>Patterns</span>
+            </a>
+            <div class="fnav-sep"></div>
+            <button class="fnav-btn" id="search-toggle" aria-label="Search">
+                <i class="ph ph-magnifying-glass"></i>
+            </button>
+            <button class="fnav-btn" id="theme-btn" aria-label="Toggle theme">
+                <i class="ph ph-moon"></i>
+            </button>
+        </nav>
+
+        <!-- Glassmorphism Top Bar (Desktop only) -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <a href="../index.html" class="logo">
+                    <i class="ph ph-intersect"></i>
+                    <span>Carbon</span>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <div class="search-container" id="search-container">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search components..." aria-label="Search" autocomplete="off">
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <main class="main-content">
+                <header class="page-header">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="../index.html">Carbon</a> <span class="sep">/</span> <span>Components</span> <span class="sep">/</span> <span>Accordions</span>
+                    </nav>
+                    <h1><em>Accordions</em></h1>
+                </header>
+                
+                <article class="prose">
+                    <h1>Accordions</h1>
+<p>Accordions expand and collapse content sections, helping users focus on relevant information without overwhelming the page. Built on native <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> elements for optimal accessibility.</p>
+<hr>
+<h2 id="installation">Installation</h2>
+<p>Copy the accordion CSS from <code>styles/docs.css</code> or include the Carbon stylesheet:</p>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;carbon.min.css&quot;&gt;
+</code></pre>
+<p>Then use accordion classes in your HTML:</p>
+<pre><code class="language-html">&lt;div class=&quot;Accordion&quot;&gt;
+    &lt;details class=&quot;Accordion-item&quot;&gt;
+        &lt;summary class=&quot;Accordion-header&quot;&gt;Section Title&lt;/summary&gt;
+        &lt;div class=&quot;Accordion-content&quot;&gt;
+            &lt;p&gt;Content goes here...&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/details&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="usage">Usage</h2>
+<p>The base <code>.Accordion</code> class provides the container styling. Each panel uses native <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> elements for built-in accessibility and keyboard support.</p>
+
+<div class="Preview" id="preview-rwb3hcyw0">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Accordion">
+    <details class="Accordion-item">
+        <summary class="Accordion-header">What is Carbon?</summary>
+        <div class="Accordion-content">
+            <p>Carbon is a framework-agnostic design system built with OKLCH colors and a 4px spacing scale.</p>
+        </div>
+    </details>
+    <details class="Accordion-item">
+        <summary class="Accordion-header">How do I install it?</summary>
+        <div class="Accordion-content">
+            <p>Simply include the CSS file in your project. No JavaScript framework required.</p>
+        </div>
+    </details>
+    <details class="Accordion-item">
+        <summary class="Accordion-header">Is it accessible?</summary>
+        <div class="Accordion-content">
+            <p>Yes! Native elements provide built-in keyboard navigation and screen reader support.</p>
+        </div>
+    </details>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Accordion&quot;&gt;
+&lt;details class=&quot;Accordion-item&quot;&gt;
+&lt;summary class=&quot;Accordion-header&quot;&gt;What is Carbon?&lt;/summary&gt;
+&lt;div class=&quot;Accordion-content&quot;&gt;
+&lt;p&gt;Carbon is a framework-agnostic design system built with OKLCH colors and a 4px spacing scale.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&quot;Accordion-item&quot;&gt;
+&lt;summary class=&quot;Accordion-header&quot;&gt;How do I install it?&lt;/summary&gt;
+&lt;div class=&quot;Accordion-content&quot;&gt;
+&lt;p&gt;Simply include the CSS file in your project. No JavaScript framework required.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&quot;Accordion-item&quot;&gt;
+&lt;summary class=&quot;Accordion-header&quot;&gt;Is it accessible?&lt;/summary&gt;
+&lt;div class=&quot;Accordion-content&quot;&gt;
+&lt;p&gt;Yes! Native elements provide built-in keyboard navigation and screen reader support.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/details&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="examples">Examples</h2>
+<h3 id="with-icons">With Icons</h3>
+<p>Add chevron indicators that rotate on expand using the <code>.Accordion--icons</code> modifier and <code>.Accordion-icon</code> class.</p>
+
+<div class="Preview" id="preview-b86isriqy">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Accordion Accordion--icons">
+    <details class="Accordion-item">
+        <summary class="Accordion-header">
+            <span>Account Settings</span>
+            <i class="ph ph-caret-down Accordion-icon"></i>
+        </summary>
+        <div class="Accordion-content">
+            <p>Manage your account preferences, email notifications, and security settings.</p>
+        </div>
+    </details>
+    <details class="Accordion-item">
+        <summary class="Accordion-header">
+            <span>Privacy & Security</span>
+            <i class="ph ph-caret-down Accordion-icon"></i>
+        </summary>
+        <div class="Accordion-content">
+            <p>Control who can see your profile and manage two-factor authentication.</p>
+        </div>
+    </details>
+    <details class="Accordion-item">
+        <summary class="Accordion-header">
+            <span>Billing Information</span>
+            <i class="ph ph-caret-down Accordion-icon"></i>
+        </summary>
+        <div class="Accordion-content">
+            <p>Update your payment method, view invoices, and manage your subscription.</p>
+        </div>
+    </details>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Accordion Accordion--icons&quot;&gt;
+&lt;details class=&quot;Accordion-item&quot;&gt;
+&lt;summary class=&quot;Accordion-header&quot;&gt;
+&lt;span&gt;Account Settings&lt;/span&gt;
+&lt;i class=&quot;ph ph-caret-down Accordion-icon&quot;&gt;&lt;/i&gt;
+&lt;/summary&gt;
+&lt;div class=&quot;Accordion-content&quot;&gt;
+&lt;p&gt;Manage your account preferences, email notifications, and security settings.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&quot;Accordion-item&quot;&gt;
+&lt;summary class=&quot;Accordion-header&quot;&gt;
+&lt;span&gt;Privacy &amp; Security&lt;/span&gt;
+&lt;i class=&quot;ph ph-caret-down Accordion-icon&quot;&gt;&lt;/i&gt;
+&lt;/summary&gt;
+&lt;div class=&quot;Accordion-content&quot;&gt;
+&lt;p&gt;Control who can see your profile and manage two-factor authentication.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&quot;Accordion-item&quot;&gt;
+&lt;summary class=&quot;Accordion-header&quot;&gt;
+&lt;span&gt;Billing Information&lt;/span&gt;
+&lt;i class=&quot;ph ph-caret-down Accordion-icon&quot;&gt;&lt;/i&gt;
+&lt;/summary&gt;
+&lt;div class=&quot;Accordion-content&quot;&gt;
+&lt;p&gt;Update your payment method, view invoices, and manage your subscription.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/details&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="bordered">Bordered</h3>
+<p>Add visible borders between items with the <code>.Accordion--bordered</code> modifier.</p>
+
+<div class="Preview" id="preview-eljfkz91e">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Accordion Accordion--bordered">
+    <details class="Accordion-item">
+        <summary class="Accordion-header">
+            <span>Getting Started</span>
+            <i class="ph ph-caret-down Accordion-icon"></i>
+        </summary>
+        <div class="Accordion-content">
+            <p>Learn the basics of using Carbon in your projects.</p>
+        </div>
+    </details>
+    <details class="Accordion-item">
+        <summary class="Accordion-header">
+            <span>Components</span>
+            <i class="ph ph-caret-down Accordion-icon"></i>
+        </summary>
+        <div class="Accordion-content">
+            <p>Explore the full library of UI components.</p>
+        </div>
+    </details>
+    <details class="Accordion-item">
+        <summary class="Accordion-header">
+            <span>Customization</span>
+            <i class="ph ph-caret-down Accordion-icon"></i>
+        </summary>
+        <div class="Accordion-content">
+            <p>Learn how to customize tokens and extend the system.</p>
+        </div>
+    </details>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Accordion Accordion--bordered&quot;&gt;
+&lt;details class=&quot;Accordion-item&quot;&gt;
+&lt;summary class=&quot;Accordion-header&quot;&gt;
+&lt;span&gt;Getting Started&lt;/span&gt;
+&lt;i class=&quot;ph ph-caret-down Accordion-icon&quot;&gt;&lt;/i&gt;
+&lt;/summary&gt;
+&lt;div class=&quot;Accordion-content&quot;&gt;
+&lt;p&gt;Learn the basics of using Carbon in your projects.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&quot;Accordion-item&quot;&gt;
+&lt;summary class=&quot;Accordion-header&quot;&gt;
+&lt;span&gt;Components&lt;/span&gt;
+&lt;i class=&quot;ph ph-caret-down Accordion-icon&quot;&gt;&lt;/i&gt;
+&lt;/summary&gt;
+&lt;div class=&quot;Accordion-content&quot;&gt;
+&lt;p&gt;Explore the full library of UI components.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&quot;Accordion-item&quot;&gt;
+&lt;summary class=&quot;Accordion-header&quot;&gt;
+&lt;span&gt;Customization&lt;/span&gt;
+&lt;i class=&quot;ph ph-caret-down Accordion-icon&quot;&gt;&lt;/i&gt;
+&lt;/summary&gt;
+&lt;div class=&quot;Accordion-content&quot;&gt;
+&lt;p&gt;Learn how to customize tokens and extend the system.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/details&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="flush">Flush</h3>
+<p>No outer borders for seamless integration into cards or panels.</p>
+
+<div class="Preview" id="preview-dbeugolb6">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="background: var(--bg-s); padding: var(--space-4); border-radius: var(--r-m);">
+    <div class="Accordion Accordion--flush">
+        <details class="Accordion-item" open>
+            <summary class="Accordion-header">
+                <span>Order Summary</span>
+                <i class="ph ph-caret-down Accordion-icon"></i>
+            </summary>
+            <div class="Accordion-content">
+                <div class="Layout-split" style="margin-bottom: var(--space-2);">
+                    <span>Subtotal</span>
+                    <span>$99.00</span>
+                </div>
+                <div class="Layout-split" style="margin-bottom: var(--space-2);">
+                    <span>Shipping</span>
+                    <span>$5.00</span>
+                </div>
+                <div class="Layout-split" style="font-weight: 600;">
+                    <span>Total</span>
+                    <span>$104.00</span>
+                </div>
+            </div>
+        </details>
+        <details class="Accordion-item">
+            <summary class="Accordion-header">
+                <span>Shipping Address</span>
+                <i class="ph ph-caret-down Accordion-icon"></i>
+            </summary>
+            <div class="Accordion-content">
+                <p>123 Main Street<br>San Francisco, CA 94102</p>
+            </div>
+        </details>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;background: var(--bg-s); padding: var(--space-4); border-radius: var(--r-m);&quot;&gt;
+&lt;div class=&quot;Accordion Accordion--flush&quot;&gt;
+&lt;details class=&quot;Accordion-item&quot; open&gt;
+&lt;summary class=&quot;Accordion-header&quot;&gt;
+&lt;span&gt;Order Summary&lt;/span&gt;
+&lt;i class=&quot;ph ph-caret-down Accordion-icon&quot;&gt;&lt;/i&gt;
+&lt;/summary&gt;
+&lt;div class=&quot;Accordion-content&quot;&gt;
+&lt;div class=&quot;Layout-split&quot; style=&quot;margin-bottom: var(--space-2);&quot;&gt;
+&lt;span&gt;Subtotal&lt;/span&gt;
+&lt;span&gt;$99.00&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Layout-split&quot; style=&quot;margin-bottom: var(--space-2);&quot;&gt;
+&lt;span&gt;Shipping&lt;/span&gt;
+&lt;span&gt;$5.00&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Layout-split&quot; style=&quot;font-weight: 600;&quot;&gt;
+&lt;span&gt;Total&lt;/span&gt;
+&lt;span&gt;$104.00&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&quot;Accordion-item&quot;&gt;
+&lt;summary class=&quot;Accordion-header&quot;&gt;
+&lt;span&gt;Shipping Address&lt;/span&gt;
+&lt;i class=&quot;ph ph-caret-down Accordion-icon&quot;&gt;&lt;/i&gt;
+&lt;/summary&gt;
+&lt;div class=&quot;Accordion-content&quot;&gt;
+&lt;p&gt;123 Main Street&lt;br&gt;San Francisco, CA 94102&lt;/p&gt;
+&lt;/div&gt;
+&lt;/details&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="default-open">Default Open</h3>
+<p>Use the <code>open</code> attribute to expand an item by default.</p>
+
+<div class="Preview" id="preview-p3b03glmj">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Accordion Accordion--bordered">
+    <details class="Accordion-item" open>
+        <summary class="Accordion-header">
+            <span>This section is open by default</span>
+            <i class="ph ph-caret-down Accordion-icon"></i>
+        </summary>
+        <div class="Accordion-content">
+            <p>Add the <code>open</code> attribute to the <code>&lt;details&gt;</code> element to have it expanded on page load.</p>
+        </div>
+    </details>
+    <details class="Accordion-item">
+        <summary class="Accordion-header">
+            <span>This section is closed</span>
+            <i class="ph ph-caret-down Accordion-icon"></i>
+        </summary>
+        <div class="Accordion-content">
+            <p>Click to expand this content.</p>
+        </div>
+    </details>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Accordion Accordion--bordered&quot;&gt;
+&lt;details class=&quot;Accordion-item&quot; open&gt;
+&lt;summary class=&quot;Accordion-header&quot;&gt;
+&lt;span&gt;This section is open by default&lt;/span&gt;
+&lt;i class=&quot;ph ph-caret-down Accordion-icon&quot;&gt;&lt;/i&gt;
+&lt;/summary&gt;
+&lt;div class=&quot;Accordion-content&quot;&gt;
+&lt;p&gt;Add the &lt;code&gt;open&lt;/code&gt; attribute to the &lt;code&gt;&amp;lt;details&amp;gt;&lt;/code&gt; element to have it expanded on page load.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&quot;Accordion-item&quot;&gt;
+&lt;summary class=&quot;Accordion-header&quot;&gt;
+&lt;span&gt;This section is closed&lt;/span&gt;
+&lt;i class=&quot;ph ph-caret-down Accordion-icon&quot;&gt;&lt;/i&gt;
+&lt;/summary&gt;
+&lt;div class=&quot;Accordion-content&quot;&gt;
+&lt;p&gt;Click to expand this content.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/details&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="single-expand-exclusive-">Single Expand (Exclusive)</h3>
+<p>Use JavaScript to ensure only one item is open at a time. Add <code>data-accordion=&quot;exclusive&quot;</code> to enable this behavior.</p>
+
+<div class="Preview" id="preview-huf6yl5qo">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Accordion Accordion--bordered" data-accordion="exclusive">
+    <details class="Accordion-item">
+        <summary class="Accordion-header">
+            <span>Panel One</span>
+            <i class="ph ph-caret-down Accordion-icon"></i>
+        </summary>
+        <div class="Accordion-content">
+            <p>When this opens, other panels close automatically.</p>
+        </div>
+    </details>
+    <details class="Accordion-item">
+        <summary class="Accordion-header">
+            <span>Panel Two</span>
+            <i class="ph ph-caret-down Accordion-icon"></i>
+        </summary>
+        <div class="Accordion-content">
+            <p>Only one panel can be open at a time.</p>
+        </div>
+    </details>
+    <details class="Accordion-item">
+        <summary class="Accordion-header">
+            <span>Panel Three</span>
+            <i class="ph ph-caret-down Accordion-icon"></i>
+        </summary>
+        <div class="Accordion-content">
+            <p>This creates a traditional accordion behavior.</p>
+        </div>
+    </details>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Accordion Accordion--bordered&quot; data-accordion=&quot;exclusive&quot;&gt;
+&lt;details class=&quot;Accordion-item&quot;&gt;
+&lt;summary class=&quot;Accordion-header&quot;&gt;
+&lt;span&gt;Panel One&lt;/span&gt;
+&lt;i class=&quot;ph ph-caret-down Accordion-icon&quot;&gt;&lt;/i&gt;
+&lt;/summary&gt;
+&lt;div class=&quot;Accordion-content&quot;&gt;
+&lt;p&gt;When this opens, other panels close automatically.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&quot;Accordion-item&quot;&gt;
+&lt;summary class=&quot;Accordion-header&quot;&gt;
+&lt;span&gt;Panel Two&lt;/span&gt;
+&lt;i class=&quot;ph ph-caret-down Accordion-icon&quot;&gt;&lt;/i&gt;
+&lt;/summary&gt;
+&lt;div class=&quot;Accordion-content&quot;&gt;
+&lt;p&gt;Only one panel can be open at a time.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&quot;Accordion-item&quot;&gt;
+&lt;summary class=&quot;Accordion-header&quot;&gt;
+&lt;span&gt;Panel Three&lt;/span&gt;
+&lt;i class=&quot;ph ph-caret-down Accordion-icon&quot;&gt;&lt;/i&gt;
+&lt;/summary&gt;
+&lt;div class=&quot;Accordion-content&quot;&gt;
+&lt;p&gt;This creates a traditional accordion behavior.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/details&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-javascript">// Exclusive accordion behavior
+document.querySelectorAll('[data-accordion=&quot;exclusive&quot;]').forEach(accordion =&gt; {
+  accordion.querySelectorAll('details').forEach(details =&gt; {
+    details.addEventListener('toggle', () =&gt; {
+      if (details.open) {
+        accordion.querySelectorAll('details').forEach(other =&gt; {
+          if (other !== details) other.open = false;
+        });
+      }
+    });
+  });
+});
+</code></pre>
+<h3 id="with-rich-content">With Rich Content</h3>
+<p>Accordions can contain any content, including other components.</p>
+
+<div class="Preview" id="preview-wzyl7jtzs">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Accordion Accordion--bordered">
+    <details class="Accordion-item" open>
+        <summary class="Accordion-header">
+            <span>Team Members</span>
+            <i class="ph ph-caret-down Accordion-icon"></i>
+        </summary>
+        <div class="Accordion-content">
+            <div class="Layout-stack Layout-stack--tight">
+                <div class="Layout-split">
+                    <div style="display: flex; align-items: center; gap: var(--space-3);">
+                        <div class="Avatar" style="background: var(--accent); color: white; display: flex; align-items: center; justify-content: center; font-weight: 600;">A</div>
+                        <div>
+                            <div style="font-weight: 500;">Alice Johnson</div>
+                            <div style="font-size: 0.85rem; color: var(--fg-3);">Design Lead</div>
+                        </div>
+                    </div>
+                    <span class="Badge Badge--success">Active</span>
+                </div>
+                <div class="Layout-split">
+                    <div style="display: flex; align-items: center; gap: var(--space-3);">
+                        <div class="Avatar" style="background: oklch(55% 0.15 150); color: white; display: flex; align-items: center; justify-content: center; font-weight: 600;">B</div>
+                        <div>
+                            <div style="font-weight: 500;">Bob Smith</div>
+                            <div style="font-size: 0.85rem; color: var(--fg-3);">Developer</div>
+                        </div>
+                    </div>
+                    <span class="Badge Badge--success">Active</span>
+                </div>
+            </div>
+        </div>
+    </details>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Accordion Accordion--bordered&quot;&gt;
+&lt;details class=&quot;Accordion-item&quot; open&gt;
+&lt;summary class=&quot;Accordion-header&quot;&gt;
+&lt;span&gt;Team Members&lt;/span&gt;
+&lt;i class=&quot;ph ph-caret-down Accordion-icon&quot;&gt;&lt;/i&gt;
+&lt;/summary&gt;
+&lt;div class=&quot;Accordion-content&quot;&gt;
+&lt;div class=&quot;Layout-stack Layout-stack--tight&quot;&gt;
+&lt;div class=&quot;Layout-split&quot;&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-3);&quot;&gt;
+&lt;div class=&quot;Avatar&quot; style=&quot;background: var(--accent); color: white; display: flex; align-items: center; justify-content: center; font-weight: 600;&quot;&gt;A&lt;/div&gt;
+&lt;div&gt;
+&lt;div style=&quot;font-weight: 500;&quot;&gt;Alice Johnson&lt;/div&gt;
+&lt;div style=&quot;font-size: 0.85rem; color: var(--fg-3);&quot;&gt;Design Lead&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;span class=&quot;Badge Badge--success&quot;&gt;Active&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Layout-split&quot;&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-3);&quot;&gt;
+&lt;div class=&quot;Avatar&quot; style=&quot;background: oklch(55% 0.15 150); color: white; display: flex; align-items: center; justify-content: center; font-weight: 600;&quot;&gt;B&lt;/div&gt;
+&lt;div&gt;
+&lt;div style=&quot;font-weight: 500;&quot;&gt;Bob Smith&lt;/div&gt;
+&lt;div style=&quot;font-size: 0.85rem; color: var(--fg-3);&quot;&gt;Developer&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;span class=&quot;Badge Badge--success&quot;&gt;Active&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/details&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="common-patterns">Common Patterns</h2>
+<h3 id="faq-section">FAQ Section</h3>
+
+<div class="Preview" id="preview-gdba3hhvk">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="max-width: 600px;">
+    <h3 style="margin: 0 0 var(--space-4); font-size: 1.25rem;">Frequently Asked Questions</h3>
+    <div class="Accordion Accordion--bordered">
+        <details class="Accordion-item">
+            <summary class="Accordion-header">
+                <span>What payment methods do you accept?</span>
+                <i class="ph ph-caret-down Accordion-icon"></i>
+            </summary>
+            <div class="Accordion-content">
+                <p>We accept Visa, Mastercard, American Express, and PayPal. All transactions are encrypted and secure.</p>
+            </div>
+        </details>
+        <details class="Accordion-item">
+            <summary class="Accordion-header">
+                <span>How do I cancel my subscription?</span>
+                <i class="ph ph-caret-down Accordion-icon"></i>
+            </summary>
+            <div class="Accordion-content">
+                <p>Go to Settings → Billing → Cancel Subscription. Your access continues until the end of the billing period.</p>
+            </div>
+        </details>
+        <details class="Accordion-item">
+            <summary class="Accordion-header">
+                <span>Do you offer refunds?</span>
+                <i class="ph ph-caret-down Accordion-icon"></i>
+            </summary>
+            <div class="Accordion-content">
+                <p>Yes, we offer a 30-day money-back guarantee for all plans. Contact support to request a refund.</p>
+            </div>
+        </details>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;max-width: 600px;&quot;&gt;
+&lt;h3 style=&quot;margin: 0 0 var(--space-4); font-size: 1.25rem;&quot;&gt;Frequently Asked Questions&lt;/h3&gt;
+&lt;div class=&quot;Accordion Accordion--bordered&quot;&gt;
+&lt;details class=&quot;Accordion-item&quot;&gt;
+&lt;summary class=&quot;Accordion-header&quot;&gt;
+&lt;span&gt;What payment methods do you accept?&lt;/span&gt;
+&lt;i class=&quot;ph ph-caret-down Accordion-icon&quot;&gt;&lt;/i&gt;
+&lt;/summary&gt;
+&lt;div class=&quot;Accordion-content&quot;&gt;
+&lt;p&gt;We accept Visa, Mastercard, American Express, and PayPal. All transactions are encrypted and secure.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&quot;Accordion-item&quot;&gt;
+&lt;summary class=&quot;Accordion-header&quot;&gt;
+&lt;span&gt;How do I cancel my subscription?&lt;/span&gt;
+&lt;i class=&quot;ph ph-caret-down Accordion-icon&quot;&gt;&lt;/i&gt;
+&lt;/summary&gt;
+&lt;div class=&quot;Accordion-content&quot;&gt;
+&lt;p&gt;Go to Settings → Billing → Cancel Subscription. Your access continues until the end of the billing period.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&quot;Accordion-item&quot;&gt;
+&lt;summary class=&quot;Accordion-header&quot;&gt;
+&lt;span&gt;Do you offer refunds?&lt;/span&gt;
+&lt;i class=&quot;ph ph-caret-down Accordion-icon&quot;&gt;&lt;/i&gt;
+&lt;/summary&gt;
+&lt;div class=&quot;Accordion-content&quot;&gt;
+&lt;p&gt;Yes, we offer a 30-day money-back guarantee for all plans. Contact support to request a refund.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/details&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="settings-panel">Settings Panel</h3>
+
+<div class="Preview" id="preview-nqxlblpda">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="max-width: 480px; background: var(--bg-s); padding: var(--space-4); border-radius: var(--r-m);">
+    <div class="Accordion Accordion--flush">
+        <details class="Accordion-item" open>
+            <summary class="Accordion-header">
+                <div style="display: flex; align-items: center; gap: var(--space-2);">
+                    <i class="ph ph-user" style="font-size: 1.1rem;"></i>
+                    <span>Profile Settings</span>
+                </div>
+                <i class="ph ph-caret-down Accordion-icon"></i>
+            </summary>
+            <div class="Accordion-content">
+                <p style="color: var(--fg-3); font-size: 0.875rem;">Manage your display name, bio, and profile picture.</p>
+            </div>
+        </details>
+        <details class="Accordion-item">
+            <summary class="Accordion-header">
+                <div style="display: flex; align-items: center; gap: var(--space-2);">
+                    <i class="ph ph-bell" style="font-size: 1.1rem;"></i>
+                    <span>Notifications</span>
+                </div>
+                <i class="ph ph-caret-down Accordion-icon"></i>
+            </summary>
+            <div class="Accordion-content">
+                <p style="color: var(--fg-3); font-size: 0.875rem;">Configure email, push, and in-app notification preferences.</p>
+            </div>
+        </details>
+        <details class="Accordion-item">
+            <summary class="Accordion-header">
+                <div style="display: flex; align-items: center; gap: var(--space-2);">
+                    <i class="ph ph-shield-check" style="font-size: 1.1rem;"></i>
+                    <span>Security</span>
+                </div>
+                <i class="ph ph-caret-down Accordion-icon"></i>
+            </summary>
+            <div class="Accordion-content">
+                <p style="color: var(--fg-3); font-size: 0.875rem;">Two-factor authentication, password changes, and active sessions.</p>
+            </div>
+        </details>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;max-width: 480px; background: var(--bg-s); padding: var(--space-4); border-radius: var(--r-m);&quot;&gt;
+&lt;div class=&quot;Accordion Accordion--flush&quot;&gt;
+&lt;details class=&quot;Accordion-item&quot; open&gt;
+&lt;summary class=&quot;Accordion-header&quot;&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-2);&quot;&gt;
+&lt;i class=&quot;ph ph-user&quot; style=&quot;font-size: 1.1rem;&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Profile Settings&lt;/span&gt;
+&lt;/div&gt;
+&lt;i class=&quot;ph ph-caret-down Accordion-icon&quot;&gt;&lt;/i&gt;
+&lt;/summary&gt;
+&lt;div class=&quot;Accordion-content&quot;&gt;
+&lt;p style=&quot;color: var(--fg-3); font-size: 0.875rem;&quot;&gt;Manage your display name, bio, and profile picture.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&quot;Accordion-item&quot;&gt;
+&lt;summary class=&quot;Accordion-header&quot;&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-2);&quot;&gt;
+&lt;i class=&quot;ph ph-bell&quot; style=&quot;font-size: 1.1rem;&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Notifications&lt;/span&gt;
+&lt;/div&gt;
+&lt;i class=&quot;ph ph-caret-down Accordion-icon&quot;&gt;&lt;/i&gt;
+&lt;/summary&gt;
+&lt;div class=&quot;Accordion-content&quot;&gt;
+&lt;p style=&quot;color: var(--fg-3); font-size: 0.875rem;&quot;&gt;Configure email, push, and in-app notification preferences.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&quot;Accordion-item&quot;&gt;
+&lt;summary class=&quot;Accordion-header&quot;&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-2);&quot;&gt;
+&lt;i class=&quot;ph ph-shield-check&quot; style=&quot;font-size: 1.1rem;&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Security&lt;/span&gt;
+&lt;/div&gt;
+&lt;i class=&quot;ph ph-caret-down Accordion-icon&quot;&gt;&lt;/i&gt;
+&lt;/summary&gt;
+&lt;div class=&quot;Accordion-content&quot;&gt;
+&lt;p style=&quot;color: var(--fg-3); font-size: 0.875rem;&quot;&gt;Two-factor authentication, password changes, and active sessions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/details&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="sidebar-filter">Sidebar Filter</h3>
+
+<div class="Preview" id="preview-44x618293">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="max-width: 260px; border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-3);">
+    <div class="Accordion Accordion--flush Accordion--icons">
+        <details class="Accordion-item" open>
+            <summary class="Accordion-header" style="font-size: 0.875rem; font-weight: 600;">
+                <span>Category</span>
+                <i class="ph ph-caret-down Accordion-icon"></i>
+            </summary>
+            <div class="Accordion-content" style="font-size: 0.85rem;">
+                <label style="display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-2);"><input type="checkbox" checked> Electronics</label>
+                <label style="display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-2);"><input type="checkbox"> Clothing</label>
+                <label style="display: flex; align-items: center; gap: var(--space-2);"><input type="checkbox"> Books</label>
+            </div>
+        </details>
+        <details class="Accordion-item">
+            <summary class="Accordion-header" style="font-size: 0.875rem; font-weight: 600;">
+                <span>Price Range</span>
+                <i class="ph ph-caret-down Accordion-icon"></i>
+            </summary>
+            <div class="Accordion-content" style="font-size: 0.85rem;">
+                <label style="display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-2);"><input type="radio" name="price"> Under $25</label>
+                <label style="display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-2);"><input type="radio" name="price"> $25 – $100</label>
+                <label style="display: flex; align-items: center; gap: var(--space-2);"><input type="radio" name="price"> Over $100</label>
+            </div>
+        </details>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;max-width: 260px; border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-3);&quot;&gt;
+&lt;div class=&quot;Accordion Accordion--flush Accordion--icons&quot;&gt;
+&lt;details class=&quot;Accordion-item&quot; open&gt;
+&lt;summary class=&quot;Accordion-header&quot; style=&quot;font-size: 0.875rem; font-weight: 600;&quot;&gt;
+&lt;span&gt;Category&lt;/span&gt;
+&lt;i class=&quot;ph ph-caret-down Accordion-icon&quot;&gt;&lt;/i&gt;
+&lt;/summary&gt;
+&lt;div class=&quot;Accordion-content&quot; style=&quot;font-size: 0.85rem;&quot;&gt;
+&lt;label style=&quot;display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-2);&quot;&gt;&lt;input type=&quot;checkbox&quot; checked&gt; Electronics&lt;/label&gt;
+&lt;label style=&quot;display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-2);&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt; Clothing&lt;/label&gt;
+&lt;label style=&quot;display: flex; align-items: center; gap: var(--space-2);&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt; Books&lt;/label&gt;
+&lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&quot;Accordion-item&quot;&gt;
+&lt;summary class=&quot;Accordion-header&quot; style=&quot;font-size: 0.875rem; font-weight: 600;&quot;&gt;
+&lt;span&gt;Price Range&lt;/span&gt;
+&lt;i class=&quot;ph ph-caret-down Accordion-icon&quot;&gt;&lt;/i&gt;
+&lt;/summary&gt;
+&lt;div class=&quot;Accordion-content&quot; style=&quot;font-size: 0.85rem;&quot;&gt;
+&lt;label style=&quot;display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-2);&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;price&quot;&gt; Under $25&lt;/label&gt;
+&lt;label style=&quot;display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-2);&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;price&quot;&gt; $25 – $100&lt;/label&gt;
+&lt;label style=&quot;display: flex; align-items: center; gap: var(--space-2);&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;price&quot;&gt; Over $100&lt;/label&gt;
+&lt;/div&gt;
+&lt;/details&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="customization">Customization</h2>
+<p>Override accordion styles using CSS custom properties:</p>
+<pre><code class="language-css">/* Custom header styling */
+.Accordion-header {
+  --accordion-padding: var(--space-4);
+  --accordion-bg-hover: var(--bg-tertiary);
+  padding: var(--accordion-padding);
+}
+
+.Accordion-header:hover {
+  background-color: var(--accordion-bg-hover);
+}
+
+/* Custom border color */
+.Accordion--bordered {
+  --accordion-border: var(--border-default);
+  border-color: var(--accordion-border);
+}
+
+/* Custom icon animation */
+.Accordion-icon {
+  --accordion-icon-rotation: 180deg;
+  transition: transform 0.3s ease;
+}
+
+details[open] .Accordion-icon {
+  transform: rotate(var(--accordion-icon-rotation));
+}
+
+/* Compact accordion */
+.Accordion--compact .Accordion-header {
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.875rem;
+}
+
+.Accordion--compact .Accordion-content {
+  padding: 0 var(--space-3) var(--space-3);
+  font-size: 0.875rem;
+}
+</code></pre>
+<hr>
+<h2 id="api-reference">API Reference</h2>
+<h3 id="container-classes">Container Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Accordion</code></td>
+<td class="ApiTable-desc">Base accordion container (required)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Accordion--icons</code></td>
+<td class="ApiTable-desc">Enables icon rotation animation</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Accordion--bordered</code></td>
+<td class="ApiTable-desc">Adds borders around accordion and between items</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Accordion--flush</code></td>
+<td class="ApiTable-desc">Removes horizontal padding for card integration</td>
+</tr>
+</tbody>
+</table>
+<h3 id="item-classes">Item Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Accordion-item</code></td>
+<td class="ApiTable-desc">Wrapper for each accordion panel (use on <code>&lt;details&gt;</code>)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Accordion-header</code></td>
+<td class="ApiTable-desc">Clickable header element (use on <code>&lt;summary&gt;</code>)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Accordion-content</code></td>
+<td class="ApiTable-desc">Collapsible content container</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Accordion-icon</code></td>
+<td class="ApiTable-desc">Chevron icon that rotates on expand</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data-attributes">Data Attributes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">data-accordion</code></td>
+<td><code>"exclusive"</code></td>
+<td class="ApiTable-desc">Only one panel can be open at a time (requires JS)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">open</code></td>
+<td>boolean</td>
+<td class="ApiTable-desc">Native attribute to expand panel by default</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="css-reference">CSS Reference</h2>
+<pre><code class="language-css">/* Base Accordion */
+.Accordion {
+  width: 100%;
+}
+
+.Accordion-item {
+  border: none;
+}
+
+.Accordion-item + .Accordion-item {
+  border-top: 1px solid var(--bd);
+}
+
+.Accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  color: var(--fg);
+  list-style: none;
+  transition: background-color 0.15s;
+}
+
+.Accordion-header::-webkit-details-marker {
+  display: none;
+}
+
+.Accordion-header::marker {
+  display: none;
+  content: &quot;&quot;;
+}
+
+.Accordion-header:hover {
+  background-color: var(--bg-s);
+}
+
+.Accordion-header:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.Accordion-content {
+  padding: 0 var(--space-4) var(--space-4);
+  color: var(--fg-3);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/* Icon rotation */
+.Accordion-icon {
+  font-size: 1rem;
+  color: var(--fg-3);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+details[open] &gt; .Accordion-header .Accordion-icon {
+  transform: rotate(180deg);
+}
+
+/* Bordered variant */
+.Accordion--bordered {
+  border: 1px solid var(--bd);
+  border-radius: var(--r-m);
+  overflow: hidden;
+}
+
+.Accordion--bordered .Accordion-item + .Accordion-item {
+  border-top: 1px solid var(--bd);
+}
+
+/* Flush variant */
+.Accordion--flush .Accordion-header {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.Accordion--flush .Accordion-content {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.Accordion--flush .Accordion-item:first-child .Accordion-header {
+  padding-top: 0;
+}
+</code></pre>
+<hr>
+<h2 id="accessibility">Accessibility</h2>
+<h3 id="keyboard-support">Keyboard Support</h3>
+<div class="Table-container"><table class="Table">
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enter</td>
+<td>Toggles the focused accordion panel</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>Toggles the focused accordion panel</td>
+</tr>
+<tr>
+<td>Tab</td>
+<td>Moves focus to the next focusable element</td>
+</tr>
+<tr>
+<td>Shift + Tab</td>
+<td>Moves focus to the previous focusable element</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="screen-readers">Screen Readers</h3>
+<p>Native <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> elements provide excellent accessibility:</p>
+<pre><code class="language-html">&lt;!-- Native accordion — fully accessible out of the box --&gt;
+&lt;details class=&quot;Accordion-item&quot;&gt;
+    &lt;summary class=&quot;Accordion-header&quot;&gt;Section Title&lt;/summary&gt;
+    &lt;div class=&quot;Accordion-content&quot;&gt;
+        &lt;p&gt;Content is announced when expanded.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/details&gt;
+
+&lt;!-- Default expanded state --&gt;
+&lt;details class=&quot;Accordion-item&quot; open&gt;
+    &lt;summary class=&quot;Accordion-header&quot;&gt;Open Section&lt;/summary&gt;
+    &lt;div class=&quot;Accordion-content&quot;&gt;
+        &lt;p&gt;Screen readers announce &quot;expanded&quot; state.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/details&gt;
+</code></pre>
+<h3 id="custom-implementation">Custom Implementation</h3>
+<p>For non-native implementations, use proper ARIA attributes:</p>
+<pre><code class="language-html">&lt;div class=&quot;Accordion&quot;&gt;
+    &lt;div class=&quot;Accordion-item&quot;&gt;
+        &lt;button id=&quot;accordion-header-1&quot; 
+                class=&quot;Accordion-header&quot;
+                aria-expanded=&quot;false&quot; 
+                aria-controls=&quot;accordion-panel-1&quot;&gt;
+            Section Title
+        &lt;/button&gt;
+        &lt;div id=&quot;accordion-panel-1&quot; 
+             class=&quot;Accordion-content&quot;
+             role=&quot;region&quot; 
+             aria-labelledby=&quot;accordion-header-1&quot;
+             hidden&gt;
+            &lt;p&gt;Content...&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="do">Do</h3>
+<ul>
+<li>✓ <strong>Use clear, descriptive headers</strong> — Users decide to expand based on the title</li>
+<li>✓ <strong>Keep content focused</strong> — Each section should cover one topic</li>
+<li>✓ <strong>Consider default states</strong> — Open the most important section by default</li>
+<li>✓ <strong>Use native elements</strong> — <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> provide built-in accessibility</li>
+<li>✓ <strong>Use for optional content</strong> — Hide supplementary info, not critical content</li>
+</ul>
+<h3 id="don-t">Don’t</h3>
+<ul>
+<li>✗ <strong>Hide primary content</strong> — Don’t make users hunt for important information</li>
+<li>✗ <strong>Nest accordions deeply</strong> — One level is usually enough</li>
+<li>✗ <strong>Use for very short content</strong> — If it fits easily, just show it</li>
+<li>✗ <strong>Override keyboard behavior</strong> — Let native elements handle interaction</li>
+<li>✗ <strong>Forget visual indicators</strong> — Use icons to show expand/collapse state</li>
+</ul>
+
+                </article>
+
+                <footer class="page-footer">
+                    <p>Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

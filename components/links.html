@@ -1,0 +1,1646 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Links | Carbon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/bold/style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Floating Pill Nav (Mobile: bottom, Desktop: top) -->
+        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation">
+            <a href="../index.html" class="fnav-btn" data-section="home" aria-label="Home">
+                <i class="ph-bold ph-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="../tokens/colors.html" class="fnav-btn" data-section="tokens" aria-label="Tokens">
+                <i class="ph-bold ph-palette"></i>
+                <span>Tokens</span>
+            </a>
+            <a href="../components/buttons.html" class="fnav-btn" data-section="components" aria-label="Components">
+                <i class="ph-bold ph-stack"></i>
+                <span>Components</span>
+            </a>
+            <a href="../patterns/layouts.html" class="fnav-btn" data-section="patterns" aria-label="Patterns">
+                <i class="ph-bold ph-grid-four"></i>
+                <span>Patterns</span>
+            </a>
+            <div class="fnav-sep"></div>
+            <button class="fnav-btn" id="search-toggle" aria-label="Search">
+                <i class="ph ph-magnifying-glass"></i>
+            </button>
+            <button class="fnav-btn" id="theme-btn" aria-label="Toggle theme">
+                <i class="ph ph-moon"></i>
+            </button>
+        </nav>
+
+        <!-- Glassmorphism Top Bar (Desktop only) -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <a href="../index.html" class="logo">
+                    <i class="ph ph-intersect"></i>
+                    <span>Carbon</span>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <div class="search-container" id="search-container">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search components..." aria-label="Search" autocomplete="off">
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <main class="main-content">
+                <header class="page-header">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="../index.html">Carbon</a> <span class="sep">/</span> <span>Components</span> <span class="sep">/</span> <span>Links</span>
+                    </nav>
+                    <h1><em>Links</em></h1>
+                </header>
+                
+                <article class="prose">
+                    <h1>Links</h1>
+<p>Links are used for navigation and to reference external resources. They provide a way for users to move between pages, sections, or to external content.</p>
+<hr>
+<h2 id="usage">Usage</h2>
+<p>The base <code>.Link</code> class provides core link styling. Add variant classes to change appearance.</p>
+
+<div class="Preview" id="preview-0z86p60hh">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><a href="#" class="Link">Default Link</a>
+<a href="#" class="Link Link--subtle">Subtle</a>
+<a href="#" class="Link Link--muted">Muted</a></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;a href=&quot;#&quot; class=&quot;Link&quot;&gt;Default Link&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link Link--subtle&quot;&gt;Subtle&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link Link--muted&quot;&gt;Muted&lt;/a&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="inline-links">Inline Links</h2>
+<p>Links within body text should be clearly distinguishable but not disruptive.</p>
+
+<div class="Preview" id="preview-hx5ljo4gn">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><p style="max-width: 480px; line-height: 1.6;">
+        For more information about our services, please visit our 
+        <a href="#" class="Link">documentation</a> or contact 
+        <a href="#" class="Link">customer support</a>. You can also 
+        check out our <a href="#" class="Link">getting started guide</a> 
+        for beginners.
+    </p>
+
+---</div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;p style=&quot;max-width: 480px; line-height: 1.6;&quot;&gt;
+For more information about our services, please visit our
+&lt;a href=&quot;#&quot; class=&quot;Link&quot;&gt;documentation&lt;/a&gt; or contact
+&lt;a href=&quot;#&quot; class=&quot;Link&quot;&gt;customer support&lt;/a&gt;. You can also
+check out our &lt;a href=&quot;#&quot; class=&quot;Link&quot;&gt;getting started guide&lt;/a&gt;
+for beginners.
+&lt;/p&gt;
+---</code></pre>
+    </div>
+</div><h2 id="link-variants">Link Variants</h2>
+<p>Different visual styles for various contexts.</p>
+
+<div class="Preview" id="preview-mh65d8s8r">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-3);">
+        <a href="#" class="Link">Default Link</a>
+        <a href="#" class="Link Link--subtle">Subtle Link</a>
+        <a href="#" class="Link Link--muted">Muted Link</a>
+        <a href="#" class="Link Link--underline">Always Underlined</a>
+    </div>
+
+---</div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-3);&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link&quot;&gt;Default Link&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link Link--subtle&quot;&gt;Subtle Link&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link Link--muted&quot;&gt;Muted Link&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link Link--underline&quot;&gt;Always Underlined&lt;/a&gt;
+&lt;/div&gt;
+---</code></pre>
+    </div>
+</div><h2 id="standalone-links">Standalone Links</h2>
+<p>Links that stand alone as navigation elements.</p>
+
+<div class="Preview" id="preview-81nbk1364">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><a href="#" class="Link Link--standalone">
+        View all products
+    </a></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;a href=&quot;#&quot; class=&quot;Link Link--standalone&quot;&gt;
+View all products
+&lt;/a&gt;</code></pre>
+    </div>
+</div>
+<div class="Preview" id="preview-ioeaadkh5">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><a href="#" class="Link Link--standalone">
+        Read the full article
+        <i class="ph ph-arrow-right Link-icon"></i>
+    </a>
+
+---</div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;a href=&quot;#&quot; class=&quot;Link Link--standalone&quot;&gt;
+Read the full article
+&lt;i class=&quot;ph ph-arrow-right Link-icon&quot;&gt;&lt;/i&gt;
+&lt;/a&gt;
+---</code></pre>
+    </div>
+</div><h2 id="links-with-icons">Links with Icons</h2>
+<p>Add icons for visual context or to indicate behavior.</p>
+
+<div class="Preview" id="preview-l9yf1wrhe">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><a href="#" class="Link">
+        <i class="ph ph-file-text Link-icon"></i>
+        View Documentation
+    </a></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;a href=&quot;#&quot; class=&quot;Link&quot;&gt;
+&lt;i class=&quot;ph ph-file-text Link-icon&quot;&gt;&lt;/i&gt;
+View Documentation
+&lt;/a&gt;</code></pre>
+    </div>
+</div>
+<div class="Preview" id="preview-3q8tu508r">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><a href="#" class="Link" target="_blank">
+        Open in new tab
+        <i class="ph ph-arrow-square-out Link-icon"></i>
+    </a></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;a href=&quot;#&quot; class=&quot;Link&quot; target=&quot;_blank&quot;&gt;
+Open in new tab
+&lt;i class=&quot;ph ph-arrow-square-out Link-icon&quot;&gt;&lt;/i&gt;
+&lt;/a&gt;</code></pre>
+    </div>
+</div>
+<div class="Preview" id="preview-5wveoxtwi">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><p style="max-width: 480px; line-height: 1.6;">
+        Learn more on the 
+        <a href="#" class="Link Link--external" target="_blank" rel="noopener">
+            official website
+            <i class="ph ph-arrow-square-out Link-icon"></i>
+        </a>
+        for complete details.
+    </p>
+
+---</div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;p style=&quot;max-width: 480px; line-height: 1.6;&quot;&gt;
+Learn more on the
+&lt;a href=&quot;#&quot; class=&quot;Link Link--external&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+official website
+&lt;i class=&quot;ph ph-arrow-square-out Link-icon&quot;&gt;&lt;/i&gt;
+&lt;/a&gt;
+for complete details.
+&lt;/p&gt;
+---</code></pre>
+    </div>
+</div><h2 id="link-sizes">Link Sizes</h2>
+<p>Control link size for different contexts.</p>
+
+<div class="Preview" id="preview-wyx1ita39">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-3);">
+        <a href="#" class="Link Link--small">Small Link</a>
+        <a href="#" class="Link">Default Link</a>
+        <a href="#" class="Link Link--large">Large Link</a>
+    </div>
+
+---</div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-3);&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link Link--small&quot;&gt;Small Link&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link&quot;&gt;Default Link&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link Link--large&quot;&gt;Large Link&lt;/a&gt;
+&lt;/div&gt;
+---</code></pre>
+    </div>
+</div><h2 id="visited-state">Visited State</h2>
+<p>Indicate links that have been visited.</p>
+
+<div class="Preview" id="preview-xpkw5u8cn">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-3);">
+        <a href="#" class="Link">Unvisited Link</a>
+        <a href="#" class="Link Link--visited">Visited Link</a>
+    </div>
+
+### CSS for Visited State
+```css
+.Link:visited {
+  color: oklch(50% 0.12 300); /* Muted purple */
+}
+```</div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-3);&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link&quot;&gt;Unvisited Link&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link Link--visited&quot;&gt;Visited Link&lt;/a&gt;
+&lt;/div&gt;
+### CSS for Visited State
+```css
+.Link:visited {
+color: oklch(50% 0.12 300); /* Muted purple */
+}
+```</code></pre>
+    </div>
+</div><hr>
+<h2 id="disabled-link">Disabled Link</h2>
+<p>Style for links that are temporarily unavailable.</p>
+
+<div class="Preview" id="preview-gu58ic7vc">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><span class="Link Link--disabled" aria-disabled="true">
+        Currently unavailable
+    </span>
+
+---</div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;span class=&quot;Link Link--disabled&quot; aria-disabled=&quot;true&quot;&gt;
+Currently unavailable
+&lt;/span&gt;
+---</code></pre>
+    </div>
+</div><h2 id="link-groups">Link Groups</h2>
+<p>Common patterns for grouping related links.</p>
+
+<div class="Preview" id="preview-kl4eq7ckq">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><nav style="display: flex; flex-direction: column; gap: var(--space-2);">
+        <a href="#" class="Link Link--nav">Home</a>
+        <a href="#" class="Link Link--nav Link--active">Products</a>
+        <a href="#" class="Link Link--nav">About Us</a>
+        <a href="#" class="Link Link--nav">Contact</a>
+    </nav></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;nav style=&quot;display: flex; flex-direction: column; gap: var(--space-2);&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link Link--nav&quot;&gt;Home&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link Link--nav Link--active&quot;&gt;Products&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link Link--nav&quot;&gt;About Us&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link Link--nav&quot;&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+    </div>
+</div>
+<div class="Preview" id="preview-2g0amvcaw">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><nav style="display: flex; gap: var(--space-6);">
+        <a href="#" class="Link Link--nav">Features</a>
+        <a href="#" class="Link Link--nav">Pricing</a>
+        <a href="#" class="Link Link--nav">Blog</a>
+        <a href="#" class="Link Link--nav">Support</a>
+    </nav></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;nav style=&quot;display: flex; gap: var(--space-6);&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link Link--nav&quot;&gt;Features&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link Link--nav&quot;&gt;Pricing&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link Link--nav&quot;&gt;Blog&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link Link--nav&quot;&gt;Support&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+    </div>
+</div>
+<div class="Preview" id="preview-hy55he4nq">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
+        <a href="#" class="Link Link--muted Link--small">Privacy Policy</a>
+        <span style="color: var(--fg-3);">·</span>
+        <a href="#" class="Link Link--muted Link--small">Terms of Service</a>
+        <span style="color: var(--fg-3);">·</span>
+        <a href="#" class="Link Link--muted Link--small">Cookie Settings</a>
+    </div>
+
+---</div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; gap: var(--space-4); flex-wrap: wrap;&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link Link--muted Link--small&quot;&gt;Privacy Policy&lt;/a&gt;
+&lt;span style=&quot;color: var(--fg-3);&quot;&gt;·&lt;/span&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link Link--muted Link--small&quot;&gt;Terms of Service&lt;/a&gt;
+&lt;span style=&quot;color: var(--fg-3);&quot;&gt;·&lt;/span&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link Link--muted Link--small&quot;&gt;Cookie Settings&lt;/a&gt;
+&lt;/div&gt;
+---</code></pre>
+    </div>
+</div><h2 id="skip-link">Skip Link</h2>
+<p>Accessibility pattern for keyboard navigation.</p>
+
+<div class="Preview" id="preview-ki09yrzer">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><a href="#main-content" class="Link Link--skip">Skip to main content</a>
+    <p style="margin-top: var(--space-4); color: var(--fg-3); font-size: 0.875rem;">
+        (Tab to this preview to see the skip link appear)
+    </p>
+
+---</div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;a href=&quot;#main-content&quot; class=&quot;Link Link--skip&quot;&gt;Skip to main content&lt;/a&gt;
+&lt;p style=&quot;margin-top: var(--space-4); color: var(--fg-3); font-size: 0.875rem;&quot;&gt;
+(Tab to this preview to see the skip link appear)
+&lt;/p&gt;
+---</code></pre>
+    </div>
+</div><h2 id="download-links">Download Links</h2>
+<p>Style for downloadable resources.</p>
+
+<div class="Preview" id="preview-5kbndjw8k">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-3);">
+        <a href="#" class="Link" download>
+            <i class="ph ph-file-pdf Link-icon"></i>
+            Annual Report 2025.pdf
+        </a>
+        <a href="#" class="Link" download>
+            <i class="ph ph-file-xls Link-icon"></i>
+            Financial Data.xlsx
+        </a>
+        <a href="#" class="Link" download>
+            <i class="ph ph-file-zip Link-icon"></i>
+            Source Code.zip
+        </a>
+    </div>
+
+---</div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-3);&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link&quot; download&gt;
+&lt;i class=&quot;ph ph-file-pdf Link-icon&quot;&gt;&lt;/i&gt;
+Annual Report 2025.pdf
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link&quot; download&gt;
+&lt;i class=&quot;ph ph-file-xls Link-icon&quot;&gt;&lt;/i&gt;
+Financial Data.xlsx
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link&quot; download&gt;
+&lt;i class=&quot;ph ph-file-zip Link-icon&quot;&gt;&lt;/i&gt;
+Source Code.zip
+&lt;/a&gt;
+&lt;/div&gt;
+---</code></pre>
+    </div>
+</div><h2 id="common-patterns">Common Patterns</h2>
+<h3 id="card-with-link">Card with Link</h3>
+
+<div class="Preview" id="preview-x7efmec7k">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Card" style="max-width: 320px;">
+        <div class="Card-body">
+            <h4 class="Card-title">Getting Started Guide</h4>
+            <p class="Card-text">Learn the basics of setting up your first project with our step-by-step tutorial.</p>
+            <a href="#" class="Link Link--standalone" style="margin-top: var(--space-3); display: inline-flex;">
+                Read more
+                <i class="ph ph-arrow-right Link-icon"></i>
+            </a>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Card&quot; style=&quot;max-width: 320px;&quot;&gt;
+&lt;div class=&quot;Card-body&quot;&gt;
+&lt;h4 class=&quot;Card-title&quot;&gt;Getting Started Guide&lt;/h4&gt;
+&lt;p class=&quot;Card-text&quot;&gt;Learn the basics of setting up your first project with our step-by-step tutorial.&lt;/p&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link Link--standalone&quot; style=&quot;margin-top: var(--space-3); display: inline-flex;&quot;&gt;
+Read more
+&lt;i class=&quot;ph ph-arrow-right Link-icon&quot;&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="breadcrumb-navigation">Breadcrumb Navigation</h3>
+
+<div class="Preview" id="preview-5mvdx64fk">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><nav aria-label="Breadcrumb" style="display: flex; align-items: center; gap: var(--space-2); font-size: 0.9rem;">
+        <a href="#" class="Link Link--muted">Home</a>
+        <i class="ph ph-caret-right" style="color: var(--fg-3); font-size: 0.75rem;"></i>
+        <a href="#" class="Link Link--muted">Products</a>
+        <i class="ph ph-caret-right" style="color: var(--fg-3); font-size: 0.75rem;"></i>
+        <span style="color: var(--fg);">Widget Pro</span>
+    </nav>
+
+### Help Text with Link</div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;nav aria-label=&quot;Breadcrumb&quot; style=&quot;display: flex; align-items: center; gap: var(--space-2); font-size: 0.9rem;&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link Link--muted&quot;&gt;Home&lt;/a&gt;
+&lt;i class=&quot;ph ph-caret-right&quot; style=&quot;color: var(--fg-3); font-size: 0.75rem;&quot;&gt;&lt;/i&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link Link--muted&quot;&gt;Products&lt;/a&gt;
+&lt;i class=&quot;ph ph-caret-right&quot; style=&quot;color: var(--fg-3); font-size: 0.75rem;&quot;&gt;&lt;/i&gt;
+&lt;span style=&quot;color: var(--fg);&quot;&gt;Widget Pro&lt;/span&gt;
+&lt;/nav&gt;
+### Help Text with Link</code></pre>
+    </div>
+</div>
+<div class="Preview" id="preview-rsdz3hvik">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="FormField" style="max-width: 320px;">
+        <label class="FormField-label">Email Address</label>
+        <input type="email" class="Input" placeholder="you@example.com">
+        <span class="FormField-helper">
+            Having trouble? <a href="#" class="Link">Reset your email</a>
+        </span>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;FormField&quot; style=&quot;max-width: 320px;&quot;&gt;
+&lt;label class=&quot;FormField-label&quot;&gt;Email Address&lt;/label&gt;
+&lt;input type=&quot;email&quot; class=&quot;Input&quot; placeholder=&quot;you@example.com&quot;&gt;
+&lt;span class=&quot;FormField-helper&quot;&gt;
+Having trouble? &lt;a href=&quot;#&quot; class=&quot;Link&quot;&gt;Reset your email&lt;/a&gt;
+&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="alert-with-link">Alert with Link</h3>
+
+<div class="Preview" id="preview-ywdtb41pc">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Alert Alert--info" style="max-width: 480px;">
+        <i class="ph ph-info Alert-icon"></i>
+        <div>
+            Your subscription expires in 7 days. 
+            <a href="#" class="Link">Renew now</a> to avoid interruption.
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Alert Alert--info&quot; style=&quot;max-width: 480px;&quot;&gt;
+&lt;i class=&quot;ph ph-info Alert-icon&quot;&gt;&lt;/i&gt;
+&lt;div&gt;
+Your subscription expires in 7 days.
+&lt;a href=&quot;#&quot; class=&quot;Link&quot;&gt;Renew now&lt;/a&gt; to avoid interruption.
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="empty-state-with-links">Empty State with Links</h3>
+
+<div class="Preview" id="preview-u0bwj5bok">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="text-align: center; padding: var(--space-8); max-width: 400px;">
+        <i class="ph ph-magnifying-glass" style="font-size: 3rem; color: var(--fg-3); margin-bottom: var(--space-4);"></i>
+        <h4 style="margin: 0 0 var(--space-2);">No results found</h4>
+        <p style="color: var(--fg-3); margin: 0 0 var(--space-4);">
+            We couldn't find anything matching your search. Try 
+            <a href="#" class="Link">browsing all items</a> or 
+            <a href="#" class="Link">adjusting your filters</a>.
+        </p>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;text-align: center; padding: var(--space-8); max-width: 400px;&quot;&gt;
+&lt;i class=&quot;ph ph-magnifying-glass&quot; style=&quot;font-size: 3rem; color: var(--fg-3); margin-bottom: var(--space-4);&quot;&gt;&lt;/i&gt;
+&lt;h4 style=&quot;margin: 0 0 var(--space-2);&quot;&gt;No results found&lt;/h4&gt;
+&lt;p style=&quot;color: var(--fg-3); margin: 0 0 var(--space-4);&quot;&gt;
+We couldn&#039;t find anything matching your search. Try
+&lt;a href=&quot;#&quot; class=&quot;Link&quot;&gt;browsing all items&lt;/a&gt; or
+&lt;a href=&quot;#&quot; class=&quot;Link&quot;&gt;adjusting your filters&lt;/a&gt;.
+&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="reference-links">Reference Links</h3>
+
+<div class="Preview" id="preview-3rqgunfb5">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="max-width: 480px;">
+        <h5 style="margin: 0 0 var(--space-3); font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--fg-3);">Related Resources</h5>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-2);">
+            <li>
+                <a href="#" class="Link">
+                    <i class="ph ph-book-open Link-icon"></i>
+                    API Documentation
+                </a>
+            </li>
+            <li>
+                <a href="#" class="Link">
+                    <i class="ph ph-video Link-icon"></i>
+                    Video Tutorial
+                </a>
+            </li>
+            <li>
+                <a href="#" class="Link Link--external" target="_blank">
+                    <i class="ph ph-github-logo Link-icon"></i>
+                    GitHub Repository
+                    <i class="ph ph-arrow-square-out Link-icon" style="margin-left: var(--space-1);"></i>
+                </a>
+            </li>
+        </ul>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;max-width: 480px;&quot;&gt;
+&lt;h5 style=&quot;margin: 0 0 var(--space-3); font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--fg-3);&quot;&gt;Related Resources&lt;/h5&gt;
+&lt;ul style=&quot;list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-2);&quot;&gt;
+&lt;li&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link&quot;&gt;
+&lt;i class=&quot;ph ph-book-open Link-icon&quot;&gt;&lt;/i&gt;
+API Documentation
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link&quot;&gt;
+&lt;i class=&quot;ph ph-video Link-icon&quot;&gt;&lt;/i&gt;
+Video Tutorial
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&quot;#&quot; class=&quot;Link Link--external&quot; target=&quot;_blank&quot;&gt;
+&lt;i class=&quot;ph ph-github-logo Link-icon&quot;&gt;&lt;/i&gt;
+GitHub Repository
+&lt;i class=&quot;ph ph-arrow-square-out Link-icon&quot; style=&quot;margin-left: var(--space-1);&quot;&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="customization">Customization</h2>
+<p>Override link styles using CSS custom properties:</p>
+<pre><code class="language-css">/* Custom link color */
+.Link {
+  --link-color: oklch(55% 0.2 250);
+  --link-hover: oklch(50% 0.2 250);
+  color: var(--link-color);
+}
+
+.Link:hover {
+  color: var(--link-hover);
+}
+
+/* Custom underline style */
+.Link--fancy {
+  text-decoration: underline wavy;
+  text-underline-offset: 4px;
+}
+
+/* Custom nav link */
+.Link--nav {
+  --nav-active-color: oklch(55% 0.2 150);
+}
+
+.Link--nav.Link--active {
+  color: var(--nav-active-color);
+}
+</code></pre>
+<hr>
+<h2 id="api-reference">API Reference</h2>
+<h3 id="base-classes">Base Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Link</code></td>
+<td class="ApiTable-desc">Base link styles (required)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="variant-classes">Variant Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Link--subtle</code></td>
+<td class="ApiTable-desc">Inherits text color, accent on hover</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Link--muted</code></td>
+<td class="ApiTable-desc">Secondary text color</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Link--underline</code></td>
+<td class="ApiTable-desc">Always shows underline</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Link--standalone</code></td>
+<td class="ApiTable-desc">Standalone navigation link (bolder)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Link--external</code></td>
+<td class="ApiTable-desc">External link (with icon styling)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="size-classes">Size Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Link--small</code></td>
+<td class="ApiTable-desc">Smaller font size (0.875rem)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Link--large</code></td>
+<td class="ApiTable-desc">Larger font size (1.125rem)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="modifier-classes">Modifier Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Link--disabled</code></td>
+<td class="ApiTable-desc">Disabled/unavailable state</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Link--visited</code></td>
+<td class="ApiTable-desc">Explicit visited styling</td>
+</tr>
+</tbody>
+</table>
+<h3 id="navigation-classes">Navigation Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Link--nav</code></td>
+<td class="ApiTable-desc">Navigation link (for menus)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Link--active</code></td>
+<td class="ApiTable-desc">Active/current navigation state</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Link--skip</code></td>
+<td class="ApiTable-desc">Skip-to-content accessibility link</td>
+</tr>
+</tbody>
+</table>
+<h3 id="icon-classes">Icon Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Link-icon</code></td>
+<td class="ApiTable-desc">Icon inside link</td>
+</tr>
+</tbody>
+</table>
+<h3 id="attributes">Attributes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">href</code></td>
+<td class="ApiTable-desc">Required. The link destination</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">target="_blank"</code></td>
+<td class="ApiTable-desc">Open in new tab (use with rel="noopener")</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">rel="noopener noreferrer"</code></td>
+<td class="ApiTable-desc">Security attributes for external links</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">download</code></td>
+<td class="ApiTable-desc">Trigger file download</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">aria-label</code></td>
+<td class="ApiTable-desc">Accessible name when text isn't descriptive</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">aria-disabled="true"</code></td>
+<td class="ApiTable-desc">For disabled links (use with span)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="css-custom-properties">CSS Custom Properties</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Property</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">--accent-primary</code></td>
+<td class="ApiTable-desc">—</td>
+<td class="ApiTable-desc">Default link color</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">--text-primary</code></td>
+<td class="ApiTable-desc">—</td>
+<td class="ApiTable-desc">Subtle variant color</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">--text-secondary</code></td>
+<td class="ApiTable-desc">—</td>
+<td class="ApiTable-desc">Muted variant color</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">--space-1</code></td>
+<td class="ApiTable-desc">0.25rem</td>
+<td class="ApiTable-desc">Icon gap</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="css-reference">CSS Reference</h2>
+<pre><code class="language-css">/* Base Link */
+.Link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--accent);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.15s, text-decoration 0.15s;
+}
+
+.Link:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.Link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Link Icon */
+.Link-icon {
+  font-size: 0.9em;
+  flex-shrink: 0;
+}
+
+/* Variants */
+.Link--subtle {
+  color: var(--fg);
+}
+
+.Link--subtle:hover {
+  color: var(--accent);
+}
+
+.Link--muted {
+  color: var(--fg-3);
+}
+
+.Link--muted:hover {
+  color: var(--fg);
+}
+
+.Link--underline {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Standalone */
+.Link--standalone {
+  font-weight: 500;
+}
+
+/* External */
+.Link--external .Link-icon:last-child {
+  opacity: 0.7;
+}
+
+/* Sizes */
+.Link--small {
+  font-size: 0.875rem;
+}
+
+.Link--large {
+  font-size: 1.125rem;
+}
+
+/* Disabled */
+.Link--disabled {
+  color: var(--fg-3);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.Link--disabled:hover {
+  text-decoration: none;
+}
+
+/* Navigation Links */
+.Link--nav {
+  color: var(--fg-3);
+  font-weight: 500;
+}
+
+.Link--nav:hover {
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.Link--nav.Link--active {
+  color: var(--accent);
+}
+
+/* Visited State */
+.Link:visited {
+  color: oklch(50% 0.12 300);
+}
+
+.Link--subtle:visited,
+.Link--muted:visited {
+  color: var(--fg-3);
+}
+
+/* Skip Link */
+.Link--skip {
+  position: absolute;
+  left: -9999px;
+  top: var(--space-4);
+  z-index: 9999;
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--bg);
+  border: 1px solid var(--bd-s);
+  border-radius: var(--r-s);
+  font-weight: 500;
+}
+
+.Link--skip:focus {
+  left: var(--space-4);
+}
+
+/* Link in dark text (ensure contrast) */
+p .Link,
+.Card-text .Link,
+.FormField-helper .Link {
+  font-weight: 500;
+}
+</code></pre>
+<hr>
+<h2 id="accessibility">Accessibility</h2>
+<h3 id="keyboard-support">Keyboard Support</h3>
+<div class="Table-container"><table class="Table">
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enter</td>
+<td>Activates the link</td>
+</tr>
+<tr>
+<td>Tab</td>
+<td>Moves focus to the next link</td>
+</tr>
+<tr>
+<td>Shift + Tab</td>
+<td>Moves focus to the previous link</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="descriptive-text">Descriptive Text</h3>
+<pre><code class="language-html">&lt;!-- Good: Descriptive link text --&gt;
+&lt;a href=&quot;/pricing&quot; class=&quot;Link&quot;&gt;View pricing plans&lt;/a&gt;
+
+&lt;!-- Bad: Vague link text --&gt;
+&lt;a href=&quot;/pricing&quot; class=&quot;Link&quot;&gt;Click here&lt;/a&gt;
+</code></pre>
+<h3 id="external-links">External Links</h3>
+<pre><code class="language-html">&lt;!-- Indicate external links open in new tab --&gt;
+&lt;a href=&quot;https://example.com&quot; 
+   class=&quot;Link&quot; 
+   target=&quot;_blank&quot; 
+   rel=&quot;noopener noreferrer&quot;
+   aria-label=&quot;Example website (opens in new tab)&quot;&gt;
+    Example website
+    &lt;i class=&quot;ph ph-arrow-square-out&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+&lt;/a&gt;
+</code></pre>
+<h3 id="skip-links">Skip Links</h3>
+<pre><code class="language-html">&lt;!-- Provide skip navigation for keyboard users --&gt;
+&lt;a href=&quot;#main-content&quot; class=&quot;Link Link--skip&quot;&gt;
+    Skip to main content
+&lt;/a&gt;
+</code></pre>
+<h3 id="download-links">Download Links</h3>
+<pre><code class="language-html">&lt;!-- Indicate file type and size for downloads --&gt;
+&lt;a href=&quot;/report.pdf&quot; class=&quot;Link&quot; download&gt;
+    &lt;i class=&quot;ph ph-file-pdf&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+    Annual Report (PDF, 2.4 MB)
+&lt;/a&gt;
+</code></pre>
+<h3 id="links-vs-buttons">Links vs Buttons</h3>
+<pre><code class="language-html">&lt;!-- Link: Navigation to new page/resource --&gt;
+&lt;a href=&quot;/about&quot; class=&quot;Link&quot;&gt;About Us&lt;/a&gt;
+
+&lt;!-- Button: Triggers an action on the current page --&gt;
+&lt;button class=&quot;Button Button--primary&quot;&gt;Submit Form&lt;/button&gt;
+</code></pre>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="do">Do</h3>
+<ul>
+<li>✓ <strong>Use descriptive text</strong> — “View pricing” not “Click here”</li>
+<li>✓ <strong>Indicate external links</strong> — Use icon and/or aria-label</li>
+<li>✓ <strong>Provide skip links</strong> — Essential for keyboard navigation</li>
+<li>✓ <strong>Use links for navigation</strong> — To pages or resources</li>
+<li>✓ <strong>Include file info</strong> — For downloads, show type and size</li>
+</ul>
+<h3 id="don-t">Don’t</h3>
+<ul>
+<li>✗ <strong>Use “click here”</strong> — Link text should be meaningful alone</li>
+<li>✗ <strong>Open everything in new tabs</strong> — Only for external links</li>
+<li>✗ <strong>Style links as buttons</strong> — Use actual buttons for actions</li>
+<li>✗ <strong>Hide links in walls of text</strong> — Make them visually distinct</li>
+<li>✗ <strong>Remove focus indicators</strong> — Critical for accessibility</li>
+</ul>
+
+                </article>
+
+                <footer class="page-footer">
+                    <p>Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

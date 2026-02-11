@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Timeline | Carbon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/bold/style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Floating Pill Nav (Mobile: bottom, Desktop: top) -->
+        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation">
+            <a href="../index.html" class="fnav-btn" data-section="home" aria-label="Home">
+                <i class="ph-bold ph-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="../tokens/colors.html" class="fnav-btn" data-section="tokens" aria-label="Tokens">
+                <i class="ph-bold ph-palette"></i>
+                <span>Tokens</span>
+            </a>
+            <a href="../components/buttons.html" class="fnav-btn" data-section="components" aria-label="Components">
+                <i class="ph-bold ph-stack"></i>
+                <span>Components</span>
+            </a>
+            <a href="../patterns/layouts.html" class="fnav-btn" data-section="patterns" aria-label="Patterns">
+                <i class="ph-bold ph-grid-four"></i>
+                <span>Patterns</span>
+            </a>
+            <div class="fnav-sep"></div>
+            <button class="fnav-btn" id="search-toggle" aria-label="Search">
+                <i class="ph ph-magnifying-glass"></i>
+            </button>
+            <button class="fnav-btn" id="theme-btn" aria-label="Toggle theme">
+                <i class="ph ph-moon"></i>
+            </button>
+        </nav>
+
+        <!-- Glassmorphism Top Bar (Desktop only) -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <a href="../index.html" class="logo">
+                    <i class="ph ph-intersect"></i>
+                    <span>Carbon</span>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <div class="search-container" id="search-container">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search components..." aria-label="Search" autocomplete="off">
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <main class="main-content">
+                <header class="page-header">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="../index.html">Carbon</a> <span class="sep">/</span> <span>Components</span> <span class="sep">/</span> <span>Timeline</span>
+                    </nav>
+                    <h1><em>Timeline</em></h1>
+                </header>
+                
+                <article class="prose">
+                    <hr>
+<h2 id="title-timeline">title: Timeline</h2>
+<h1>Timeline</h1>
+<p>Timelines display a list of events in chronological order, commonly used for activity feeds, order tracking, or history views.</p>
+<h2 id="basic-timeline">Basic Timeline</h2>
+<p>A simple vertical timeline with events.</p>
+
+<div class="Preview" id="preview-bmzpxt720">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Timeline">
+    <div class="Timeline-item">
+      <div class="Timeline-marker"></div>
+      <div class="Timeline-content">
+        <div class="Timeline-title">Order placed</div>
+        <div class="Timeline-time">Today, 2:30 PM</div>
+      </div>
+    </div>
+    <div class="Timeline-item">
+      <div class="Timeline-marker"></div>
+      <div class="Timeline-content">
+        <div class="Timeline-title">Payment confirmed</div>
+        <div class="Timeline-time">Today, 2:32 PM</div>
+      </div>
+    </div>
+    <div class="Timeline-item">
+      <div class="Timeline-marker"></div>
+      <div class="Timeline-content">
+        <div class="Timeline-title">Order shipped</div>
+        <div class="Timeline-time">Today, 4:15 PM</div>
+      </div>
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Timeline&quot;&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;div class=&quot;Timeline-title&quot;&gt;Order placed&lt;/div&gt;
+&lt;div class=&quot;Timeline-time&quot;&gt;Today, 2:30 PM&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;div class=&quot;Timeline-title&quot;&gt;Payment confirmed&lt;/div&gt;
+&lt;div class=&quot;Timeline-time&quot;&gt;Today, 2:32 PM&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;div class=&quot;Timeline-title&quot;&gt;Order shipped&lt;/div&gt;
+&lt;div class=&quot;Timeline-time&quot;&gt;Today, 4:15 PM&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Timeline&quot;&gt;
+  &lt;div class=&quot;Timeline-item&quot;&gt;
+    &lt;div class=&quot;Timeline-marker&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;Timeline-content&quot;&gt;
+      &lt;div class=&quot;Timeline-title&quot;&gt;Order placed&lt;/div&gt;
+      &lt;div class=&quot;Timeline-time&quot;&gt;Today, 2:30 PM&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- More items... --&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="with-descriptions">With Descriptions</h2>
+<p>Add descriptions for more context.</p>
+
+<div class="Preview" id="preview-vyihihof2">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Timeline">
+    <div class="Timeline-item">
+      <div class="Timeline-marker"></div>
+      <div class="Timeline-content">
+        <div class="Timeline-title">Application submitted</div>
+        <div class="Timeline-description">Your application has been received and is being reviewed by our team.</div>
+        <div class="Timeline-time">Jan 15, 2026</div>
+      </div>
+    </div>
+    <div class="Timeline-item">
+      <div class="Timeline-marker"></div>
+      <div class="Timeline-content">
+        <div class="Timeline-title">Phone screening scheduled</div>
+        <div class="Timeline-description">We'd like to schedule a 30-minute call to discuss your experience.</div>
+        <div class="Timeline-time">Jan 18, 2026</div>
+      </div>
+    </div>
+    <div class="Timeline-item">
+      <div class="Timeline-marker"></div>
+      <div class="Timeline-content">
+        <div class="Timeline-title">Technical interview</div>
+        <div class="Timeline-description">A 1-hour technical discussion with the engineering team.</div>
+        <div class="Timeline-time">Jan 22, 2026</div>
+      </div>
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Timeline&quot;&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;div class=&quot;Timeline-title&quot;&gt;Application submitted&lt;/div&gt;
+&lt;div class=&quot;Timeline-description&quot;&gt;Your application has been received and is being reviewed by our team.&lt;/div&gt;
+&lt;div class=&quot;Timeline-time&quot;&gt;Jan 15, 2026&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;div class=&quot;Timeline-title&quot;&gt;Phone screening scheduled&lt;/div&gt;
+&lt;div class=&quot;Timeline-description&quot;&gt;We&#039;d like to schedule a 30-minute call to discuss your experience.&lt;/div&gt;
+&lt;div class=&quot;Timeline-time&quot;&gt;Jan 18, 2026&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;div class=&quot;Timeline-title&quot;&gt;Technical interview&lt;/div&gt;
+&lt;div class=&quot;Timeline-description&quot;&gt;A 1-hour technical discussion with the engineering team.&lt;/div&gt;
+&lt;div class=&quot;Timeline-time&quot;&gt;Jan 22, 2026&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Timeline-item&quot;&gt;
+  &lt;div class=&quot;Timeline-marker&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;Timeline-content&quot;&gt;
+    &lt;div class=&quot;Timeline-title&quot;&gt;Application submitted&lt;/div&gt;
+    &lt;div class=&quot;Timeline-description&quot;&gt;Your application has been received...&lt;/div&gt;
+    &lt;div class=&quot;Timeline-time&quot;&gt;Jan 15, 2026&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="with-icons">With Icons</h2>
+<p>Use icons instead of simple markers.</p>
+
+<div class="Preview" id="preview-y0mzqmc96">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Timeline">
+    <div class="Timeline-item">
+      <div class="Timeline-marker Timeline-marker--icon">
+        <i class="ph ph-package"></i>
+      </div>
+      <div class="Timeline-content">
+        <div class="Timeline-title">Package received at facility</div>
+        <div class="Timeline-time">Feb 1, 9:00 AM</div>
+      </div>
+    </div>
+    <div class="Timeline-item">
+      <div class="Timeline-marker Timeline-marker--icon">
+        <i class="ph ph-truck"></i>
+      </div>
+      <div class="Timeline-content">
+        <div class="Timeline-title">Out for delivery</div>
+        <div class="Timeline-time">Feb 2, 8:30 AM</div>
+      </div>
+    </div>
+    <div class="Timeline-item">
+      <div class="Timeline-marker Timeline-marker--icon Timeline-marker--success">
+        <i class="ph ph-check"></i>
+      </div>
+      <div class="Timeline-content">
+        <div class="Timeline-title">Delivered</div>
+        <div class="Timeline-description">Signed by: J. Smith</div>
+        <div class="Timeline-time">Feb 2, 2:15 PM</div>
+      </div>
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Timeline&quot;&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker Timeline-marker--icon&quot;&gt;
+&lt;i class=&quot;ph ph-package&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;div class=&quot;Timeline-title&quot;&gt;Package received at facility&lt;/div&gt;
+&lt;div class=&quot;Timeline-time&quot;&gt;Feb 1, 9:00 AM&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker Timeline-marker--icon&quot;&gt;
+&lt;i class=&quot;ph ph-truck&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;div class=&quot;Timeline-title&quot;&gt;Out for delivery&lt;/div&gt;
+&lt;div class=&quot;Timeline-time&quot;&gt;Feb 2, 8:30 AM&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker Timeline-marker--icon Timeline-marker--success&quot;&gt;
+&lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;div class=&quot;Timeline-title&quot;&gt;Delivered&lt;/div&gt;
+&lt;div class=&quot;Timeline-description&quot;&gt;Signed by: J. Smith&lt;/div&gt;
+&lt;div class=&quot;Timeline-time&quot;&gt;Feb 2, 2:15 PM&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Timeline-marker Timeline-marker--icon&quot;&gt;
+  &lt;i class=&quot;ph ph-package&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;Timeline-marker Timeline-marker--icon Timeline-marker--success&quot;&gt;
+  &lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="status-variants">Status Variants</h2>
+<p>Different colors indicate status.</p>
+
+<div class="Preview" id="preview-s3rqi0i3w">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Timeline">
+    <div class="Timeline-item">
+      <div class="Timeline-marker Timeline-marker--success"></div>
+      <div class="Timeline-content">
+        <div class="Timeline-title">Build passed</div>
+        <div class="Timeline-time">2 minutes ago</div>
+      </div>
+    </div>
+    <div class="Timeline-item">
+      <div class="Timeline-marker Timeline-marker--warning"></div>
+      <div class="Timeline-content">
+        <div class="Timeline-title">Tests have warnings</div>
+        <div class="Timeline-time">5 minutes ago</div>
+      </div>
+    </div>
+    <div class="Timeline-item">
+      <div class="Timeline-marker Timeline-marker--error"></div>
+      <div class="Timeline-content">
+        <div class="Timeline-title">Deployment failed</div>
+        <div class="Timeline-time">8 minutes ago</div>
+      </div>
+    </div>
+    <div class="Timeline-item">
+      <div class="Timeline-marker Timeline-marker--info"></div>
+      <div class="Timeline-content">
+        <div class="Timeline-title">Pipeline started</div>
+        <div class="Timeline-time">10 minutes ago</div>
+      </div>
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Timeline&quot;&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker Timeline-marker--success&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;div class=&quot;Timeline-title&quot;&gt;Build passed&lt;/div&gt;
+&lt;div class=&quot;Timeline-time&quot;&gt;2 minutes ago&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker Timeline-marker--warning&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;div class=&quot;Timeline-title&quot;&gt;Tests have warnings&lt;/div&gt;
+&lt;div class=&quot;Timeline-time&quot;&gt;5 minutes ago&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker Timeline-marker--error&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;div class=&quot;Timeline-title&quot;&gt;Deployment failed&lt;/div&gt;
+&lt;div class=&quot;Timeline-time&quot;&gt;8 minutes ago&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker Timeline-marker--info&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;div class=&quot;Timeline-title&quot;&gt;Pipeline started&lt;/div&gt;
+&lt;div class=&quot;Timeline-time&quot;&gt;10 minutes ago&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Timeline-marker Timeline-marker--success&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-marker Timeline-marker--warning&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-marker Timeline-marker--error&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-marker Timeline-marker--info&quot;&gt;&lt;/div&gt;
+</code></pre>
+<h2 id="alternating-layout">Alternating Layout</h2>
+<p>Events alternate between left and right.</p>
+
+<div class="Preview" id="preview-92jp7s3ot">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Timeline Timeline--alternating">
+    <div class="Timeline-item">
+      <div class="Timeline-marker"></div>
+      <div class="Timeline-content">
+        <div class="Timeline-title">Company founded</div>
+        <div class="Timeline-description">Started in a small garage with big dreams.</div>
+        <div class="Timeline-time">2015</div>
+      </div>
+    </div>
+    <div class="Timeline-item">
+      <div class="Timeline-marker"></div>
+      <div class="Timeline-content">
+        <div class="Timeline-title">First product launch</div>
+        <div class="Timeline-description">Released our flagship product to market.</div>
+        <div class="Timeline-time">2017</div>
+      </div>
+    </div>
+    <div class="Timeline-item">
+      <div class="Timeline-marker"></div>
+      <div class="Timeline-content">
+        <div class="Timeline-title">Series A funding</div>
+        <div class="Timeline-description">Raised $10M to accelerate growth.</div>
+        <div class="Timeline-time">2019</div>
+      </div>
+    </div>
+    <div class="Timeline-item">
+      <div class="Timeline-marker"></div>
+      <div class="Timeline-content">
+        <div class="Timeline-title">Global expansion</div>
+        <div class="Timeline-description">Opened offices in 5 new countries.</div>
+        <div class="Timeline-time">2022</div>
+      </div>
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Timeline Timeline--alternating&quot;&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;div class=&quot;Timeline-title&quot;&gt;Company founded&lt;/div&gt;
+&lt;div class=&quot;Timeline-description&quot;&gt;Started in a small garage with big dreams.&lt;/div&gt;
+&lt;div class=&quot;Timeline-time&quot;&gt;2015&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;div class=&quot;Timeline-title&quot;&gt;First product launch&lt;/div&gt;
+&lt;div class=&quot;Timeline-description&quot;&gt;Released our flagship product to market.&lt;/div&gt;
+&lt;div class=&quot;Timeline-time&quot;&gt;2017&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;div class=&quot;Timeline-title&quot;&gt;Series A funding&lt;/div&gt;
+&lt;div class=&quot;Timeline-description&quot;&gt;Raised $10M to accelerate growth.&lt;/div&gt;
+&lt;div class=&quot;Timeline-time&quot;&gt;2019&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;div class=&quot;Timeline-title&quot;&gt;Global expansion&lt;/div&gt;
+&lt;div class=&quot;Timeline-description&quot;&gt;Opened offices in 5 new countries.&lt;/div&gt;
+&lt;div class=&quot;Timeline-time&quot;&gt;2022&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Timeline Timeline--alternating&quot;&gt;
+  &lt;div class=&quot;Timeline-item&quot;&gt;...&lt;/div&gt;
+  &lt;div class=&quot;Timeline-item&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="compact-timeline">Compact Timeline</h2>
+<p>A denser layout for activity feeds.</p>
+
+<div class="Preview" id="preview-xmo6jz468">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Timeline Timeline--compact">
+    <div class="Timeline-item">
+      <div class="Timeline-marker"></div>
+      <div class="Timeline-content">
+        <span class="Timeline-actor">Sarah</span> commented on <span class="Timeline-link">Issue #42</span>
+        <span class="Timeline-time">5m ago</span>
+      </div>
+    </div>
+    <div class="Timeline-item">
+      <div class="Timeline-marker"></div>
+      <div class="Timeline-content">
+        <span class="Timeline-actor">Mike</span> merged <span class="Timeline-link">PR #128</span>
+        <span class="Timeline-time">12m ago</span>
+      </div>
+    </div>
+    <div class="Timeline-item">
+      <div class="Timeline-marker"></div>
+      <div class="Timeline-content">
+        <span class="Timeline-actor">Alex</span> closed <span class="Timeline-link">Issue #39</span>
+        <span class="Timeline-time">1h ago</span>
+      </div>
+    </div>
+    <div class="Timeline-item">
+      <div class="Timeline-marker"></div>
+      <div class="Timeline-content">
+        <span class="Timeline-actor">Jordan</span> opened <span class="Timeline-link">Issue #43</span>
+        <span class="Timeline-time">2h ago</span>
+      </div>
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Timeline Timeline--compact&quot;&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;span class=&quot;Timeline-actor&quot;&gt;Sarah&lt;/span&gt; commented on &lt;span class=&quot;Timeline-link&quot;&gt;Issue #42&lt;/span&gt;
+&lt;span class=&quot;Timeline-time&quot;&gt;5m ago&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;span class=&quot;Timeline-actor&quot;&gt;Mike&lt;/span&gt; merged &lt;span class=&quot;Timeline-link&quot;&gt;PR #128&lt;/span&gt;
+&lt;span class=&quot;Timeline-time&quot;&gt;12m ago&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;span class=&quot;Timeline-actor&quot;&gt;Alex&lt;/span&gt; closed &lt;span class=&quot;Timeline-link&quot;&gt;Issue #39&lt;/span&gt;
+&lt;span class=&quot;Timeline-time&quot;&gt;1h ago&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;span class=&quot;Timeline-actor&quot;&gt;Jordan&lt;/span&gt; opened &lt;span class=&quot;Timeline-link&quot;&gt;Issue #43&lt;/span&gt;
+&lt;span class=&quot;Timeline-time&quot;&gt;2h ago&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Timeline Timeline--compact&quot;&gt;
+  &lt;div class=&quot;Timeline-item&quot;&gt;
+    &lt;div class=&quot;Timeline-marker&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;Timeline-content&quot;&gt;
+      &lt;span class=&quot;Timeline-actor&quot;&gt;Sarah&lt;/span&gt; commented on 
+      &lt;span class=&quot;Timeline-link&quot;&gt;Issue #42&lt;/span&gt;
+      &lt;span class=&quot;Timeline-time&quot;&gt;5m ago&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="horizontal-timeline">Horizontal Timeline</h2>
+<p>Display events horizontally (useful for progress steps).</p>
+
+<div class="Preview" id="preview-qf3nv9hni">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Timeline Timeline--horizontal">
+    <div class="Timeline-item">
+      <div class="Timeline-marker Timeline-marker--success"></div>
+      <div class="Timeline-content">
+        <div class="Timeline-title">Ordered</div>
+        <div class="Timeline-time">Jan 28</div>
+      </div>
+    </div>
+    <div class="Timeline-item">
+      <div class="Timeline-marker Timeline-marker--success"></div>
+      <div class="Timeline-content">
+        <div class="Timeline-title">Shipped</div>
+        <div class="Timeline-time">Jan 30</div>
+      </div>
+    </div>
+    <div class="Timeline-item">
+      <div class="Timeline-marker Timeline-marker--active"></div>
+      <div class="Timeline-content">
+        <div class="Timeline-title">In Transit</div>
+        <div class="Timeline-time">Feb 1</div>
+      </div>
+    </div>
+    <div class="Timeline-item">
+      <div class="Timeline-marker"></div>
+      <div class="Timeline-content">
+        <div class="Timeline-title">Delivered</div>
+        <div class="Timeline-time">Est. Feb 3</div>
+      </div>
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Timeline Timeline--horizontal&quot;&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker Timeline-marker--success&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;div class=&quot;Timeline-title&quot;&gt;Ordered&lt;/div&gt;
+&lt;div class=&quot;Timeline-time&quot;&gt;Jan 28&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker Timeline-marker--success&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;div class=&quot;Timeline-title&quot;&gt;Shipped&lt;/div&gt;
+&lt;div class=&quot;Timeline-time&quot;&gt;Jan 30&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker Timeline-marker--active&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;div class=&quot;Timeline-title&quot;&gt;In Transit&lt;/div&gt;
+&lt;div class=&quot;Timeline-time&quot;&gt;Feb 1&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;div class=&quot;Timeline-title&quot;&gt;Delivered&lt;/div&gt;
+&lt;div class=&quot;Timeline-time&quot;&gt;Est. Feb 3&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Timeline Timeline--horizontal&quot;&gt;
+  &lt;div class=&quot;Timeline-item&quot;&gt;
+    &lt;div class=&quot;Timeline-marker Timeline-marker--success&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;Timeline-content&quot;&gt;
+      &lt;div class=&quot;Timeline-title&quot;&gt;Ordered&lt;/div&gt;
+      &lt;div class=&quot;Timeline-time&quot;&gt;Jan 28&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- More items... --&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="with-actions">With Actions</h2>
+<p>Include actions within timeline items.</p>
+
+<div class="Preview" id="preview-2tx88ftp8">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Timeline">
+    <div class="Timeline-item">
+      <div class="Timeline-marker Timeline-marker--icon">
+        <i class="ph ph-chat-circle"></i>
+      </div>
+      <div class="Timeline-content">
+        <div class="Timeline-header">
+          <div class="Timeline-title">New comment from Alex</div>
+          <div class="Timeline-time">Just now</div>
+        </div>
+        <div class="Timeline-body">
+          <p>Looks great! Just a few minor suggestions on the styling.</p>
+        </div>
+        <div class="Timeline-actions">
+          <button class="Button Button--ghost Button--sm">Reply</button>
+          <button class="Button Button--ghost Button--sm">View</button>
+        </div>
+      </div>
+    </div>
+    <div class="Timeline-item">
+      <div class="Timeline-marker Timeline-marker--icon">
+        <i class="ph ph-git-pull-request"></i>
+      </div>
+      <div class="Timeline-content">
+        <div class="Timeline-header">
+          <div class="Timeline-title">Pull request opened</div>
+          <div class="Timeline-time">2 hours ago</div>
+        </div>
+        <div class="Timeline-body">
+          <p><strong>#142</strong> — Add new authentication flow</p>
+        </div>
+        <div class="Timeline-actions">
+          <button class="Button Button--primary Button--sm">Review</button>
+          <button class="Button Button--ghost Button--sm">View Changes</button>
+        </div>
+      </div>
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Timeline&quot;&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker Timeline-marker--icon&quot;&gt;
+&lt;i class=&quot;ph ph-chat-circle&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;div class=&quot;Timeline-header&quot;&gt;
+&lt;div class=&quot;Timeline-title&quot;&gt;New comment from Alex&lt;/div&gt;
+&lt;div class=&quot;Timeline-time&quot;&gt;Just now&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-body&quot;&gt;
+&lt;p&gt;Looks great! Just a few minor suggestions on the styling.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-actions&quot;&gt;
+&lt;button class=&quot;Button Button--ghost Button--sm&quot;&gt;Reply&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--sm&quot;&gt;View&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker Timeline-marker--icon&quot;&gt;
+&lt;i class=&quot;ph ph-git-pull-request&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;div class=&quot;Timeline-header&quot;&gt;
+&lt;div class=&quot;Timeline-title&quot;&gt;Pull request opened&lt;/div&gt;
+&lt;div class=&quot;Timeline-time&quot;&gt;2 hours ago&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-body&quot;&gt;
+&lt;p&gt;&lt;strong&gt;#142&lt;/strong&gt; — Add new authentication flow&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-actions&quot;&gt;
+&lt;button class=&quot;Button Button--primary Button--sm&quot;&gt;Review&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--sm&quot;&gt;View Changes&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Timeline-content&quot;&gt;
+  &lt;div class=&quot;Timeline-header&quot;&gt;
+    &lt;div class=&quot;Timeline-title&quot;&gt;New comment from Alex&lt;/div&gt;
+    &lt;div class=&quot;Timeline-time&quot;&gt;Just now&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;Timeline-body&quot;&gt;
+    &lt;p&gt;Looks great! Just a few minor suggestions...&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;Timeline-actions&quot;&gt;
+    &lt;button class=&quot;Button Button--ghost Button--sm&quot;&gt;Reply&lt;/button&gt;
+    &lt;button class=&quot;Button Button--ghost Button--sm&quot;&gt;View&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="common-patterns">Common Patterns</h2>
+<h3 id="order-tracking">Order Tracking</h3>
+
+<div class="Preview" id="preview-874gb2pls">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Timeline">
+        <div class="Timeline-item">
+            <div class="Timeline-marker Timeline-marker--icon Timeline-marker--success"><i class="ph ph-check"></i></div>
+            <div class="Timeline-content">
+                <div class="Timeline-title">Order placed</div>
+                <div class="Timeline-time">Jan 28, 2:30 PM</div>
+            </div>
+        </div>
+        <div class="Timeline-item">
+            <div class="Timeline-marker Timeline-marker--icon Timeline-marker--success"><i class="ph ph-check"></i></div>
+            <div class="Timeline-content">
+                <div class="Timeline-title">Payment confirmed</div>
+                <div class="Timeline-time">Jan 28, 2:32 PM</div>
+            </div>
+        </div>
+        <div class="Timeline-item">
+            <div class="Timeline-marker Timeline-marker--active"></div>
+            <div class="Timeline-content">
+                <div class="Timeline-title">In transit</div>
+                <div class="Timeline-description">Package is on its way — expected Feb 2</div>
+                <div class="Timeline-time">Jan 30, 8:00 AM</div>
+            </div>
+        </div>
+        <div class="Timeline-item">
+            <div class="Timeline-marker"></div>
+            <div class="Timeline-content">
+                <div class="Timeline-title" style="color: var(--fg-3);">Delivered</div>
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Timeline&quot;&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker Timeline-marker--icon Timeline-marker--success&quot;&gt;&lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;div class=&quot;Timeline-title&quot;&gt;Order placed&lt;/div&gt;
+&lt;div class=&quot;Timeline-time&quot;&gt;Jan 28, 2:30 PM&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker Timeline-marker--icon Timeline-marker--success&quot;&gt;&lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;div class=&quot;Timeline-title&quot;&gt;Payment confirmed&lt;/div&gt;
+&lt;div class=&quot;Timeline-time&quot;&gt;Jan 28, 2:32 PM&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker Timeline-marker--active&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;div class=&quot;Timeline-title&quot;&gt;In transit&lt;/div&gt;
+&lt;div class=&quot;Timeline-description&quot;&gt;Package is on its way — expected Feb 2&lt;/div&gt;
+&lt;div class=&quot;Timeline-time&quot;&gt;Jan 30, 8:00 AM&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;div class=&quot;Timeline-title&quot; style=&quot;color: var(--fg-3);&quot;&gt;Delivered&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="activity-feed">Activity Feed</h3>
+
+<div class="Preview" id="preview-sekzip8jh">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Timeline Timeline--compact">
+        <div class="Timeline-item">
+            <div class="Timeline-marker" style="background: var(--accent); border-color: var(--accent);"></div>
+            <div class="Timeline-content">
+                <span class="Timeline-actor">Alice</span> pushed 3 commits to <span class="Timeline-link">main</span>
+                <span class="Timeline-time">2m ago</span>
+            </div>
+        </div>
+        <div class="Timeline-item">
+            <div class="Timeline-marker" style="background: oklch(55% 0.15 150); border-color: oklch(55% 0.15 150);"></div>
+            <div class="Timeline-content">
+                <span class="Timeline-actor">Bob</span> merged <span class="Timeline-link">PR #42</span>
+                <span class="Timeline-time">15m ago</span>
+            </div>
+        </div>
+        <div class="Timeline-item">
+            <div class="Timeline-marker" style="background: oklch(55% 0.2 25); border-color: oklch(55% 0.2 25);"></div>
+            <div class="Timeline-content">
+                <span class="Timeline-actor">CI</span> failed on <span class="Timeline-link">feature/auth</span>
+                <span class="Timeline-time">30m ago</span>
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Timeline Timeline--compact&quot;&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker&quot; style=&quot;background: var(--accent); border-color: var(--accent);&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;span class=&quot;Timeline-actor&quot;&gt;Alice&lt;/span&gt; pushed 3 commits to &lt;span class=&quot;Timeline-link&quot;&gt;main&lt;/span&gt;
+&lt;span class=&quot;Timeline-time&quot;&gt;2m ago&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker&quot; style=&quot;background: oklch(55% 0.15 150); border-color: oklch(55% 0.15 150);&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;span class=&quot;Timeline-actor&quot;&gt;Bob&lt;/span&gt; merged &lt;span class=&quot;Timeline-link&quot;&gt;PR #42&lt;/span&gt;
+&lt;span class=&quot;Timeline-time&quot;&gt;15m ago&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker&quot; style=&quot;background: oklch(55% 0.2 25); border-color: oklch(55% 0.2 25);&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;span class=&quot;Timeline-actor&quot;&gt;CI&lt;/span&gt; failed on &lt;span class=&quot;Timeline-link&quot;&gt;feature/auth&lt;/span&gt;
+&lt;span class=&quot;Timeline-time&quot;&gt;30m ago&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="project-milestones">Project Milestones</h3>
+
+<div class="Preview" id="preview-qd3ql78o0">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Timeline Timeline--alternating">
+        <div class="Timeline-item">
+            <div class="Timeline-marker Timeline-marker--icon"><i class="ph ph-rocket"></i></div>
+            <div class="Timeline-content">
+                <div class="Timeline-title">Founded</div>
+                <div class="Timeline-description">Started with a vision and a small team.</div>
+                <div class="Timeline-time">2020</div>
+            </div>
+        </div>
+        <div class="Timeline-item">
+            <div class="Timeline-marker Timeline-marker--icon Timeline-marker--success"><i class="ph ph-chart-line-up"></i></div>
+            <div class="Timeline-content">
+                <div class="Timeline-title">Series A</div>
+                <div class="Timeline-description">Raised $12M to scale operations.</div>
+                <div class="Timeline-time">2022</div>
+            </div>
+        </div>
+        <div class="Timeline-item">
+            <div class="Timeline-marker Timeline-marker--icon Timeline-marker--info"><i class="ph ph-globe"></i></div>
+            <div class="Timeline-content">
+                <div class="Timeline-title">Global Launch</div>
+                <div class="Timeline-description">Expanded to 15 countries.</div>
+                <div class="Timeline-time">2024</div>
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Timeline Timeline--alternating&quot;&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker Timeline-marker--icon&quot;&gt;&lt;i class=&quot;ph ph-rocket&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;div class=&quot;Timeline-title&quot;&gt;Founded&lt;/div&gt;
+&lt;div class=&quot;Timeline-description&quot;&gt;Started with a vision and a small team.&lt;/div&gt;
+&lt;div class=&quot;Timeline-time&quot;&gt;2020&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker Timeline-marker--icon Timeline-marker--success&quot;&gt;&lt;i class=&quot;ph ph-chart-line-up&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;div class=&quot;Timeline-title&quot;&gt;Series A&lt;/div&gt;
+&lt;div class=&quot;Timeline-description&quot;&gt;Raised $12M to scale operations.&lt;/div&gt;
+&lt;div class=&quot;Timeline-time&quot;&gt;2022&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Timeline-item&quot;&gt;
+&lt;div class=&quot;Timeline-marker Timeline-marker--icon Timeline-marker--info&quot;&gt;&lt;i class=&quot;ph ph-globe&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+&lt;div class=&quot;Timeline-content&quot;&gt;
+&lt;div class=&quot;Timeline-title&quot;&gt;Global Launch&lt;/div&gt;
+&lt;div class=&quot;Timeline-description&quot;&gt;Expanded to 15 countries.&lt;/div&gt;
+&lt;div class=&quot;Timeline-time&quot;&gt;2024&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="customization">Customization</h2>
+<p>Override timeline styles using CSS custom properties:</p>
+<pre><code class="language-css">/* Custom line color */
+.Timeline::before {
+  background: var(--accent);
+  opacity: 0.3;
+}
+
+/* Larger markers */
+.Timeline--large .Timeline-marker {
+  width: 16px;
+  height: 16px;
+}
+
+/* Custom status colors */
+.Timeline-marker--purple {
+  background: oklch(55% 0.2 300);
+  border-color: oklch(55% 0.2 300);
+}
+
+/* Card-style timeline items */
+.Timeline--cards .Timeline-content {
+  background: var(--bg-s);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--bd);
+}
+</code></pre>
+<hr>
+<h2 id="api-reference">API Reference</h2>
+<h3 id="base-classes">Base Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Timeline</code></td>
+<td class="ApiTable-desc">Base timeline container</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-item</code></td>
+<td class="ApiTable-desc">Individual timeline entry</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-marker</code></td>
+<td class="ApiTable-desc">Dot/icon marker on the timeline</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-content</code></td>
+<td class="ApiTable-desc">Content container for an item</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-title</code></td>
+<td class="ApiTable-desc">Event title</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-description</code></td>
+<td class="ApiTable-desc">Event description</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-time</code></td>
+<td class="ApiTable-desc">Timestamp</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-header</code></td>
+<td class="ApiTable-desc">Header with title and time</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-body</code></td>
+<td class="ApiTable-desc">Extended content area</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-actions</code></td>
+<td class="ApiTable-desc">Action buttons for an item</td>
+</tr>
+</tbody>
+</table>
+<h3 id="variant-classes">Variant Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Timeline--compact</code></td>
+<td class="ApiTable-desc">Dense layout for activity feeds</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline--horizontal</code></td>
+<td class="ApiTable-desc">Horizontal layout variant</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline--alternating</code></td>
+<td class="ApiTable-desc">Alternating left/right layout</td>
+</tr>
+</tbody>
+</table>
+<h3 id="marker-modifiers">Marker Modifiers</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-marker--icon</code></td>
+<td class="ApiTable-desc">Marker with icon inside</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-marker--success</code></td>
+<td class="ApiTable-desc">Green success marker</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-marker--warning</code></td>
+<td class="ApiTable-desc">Yellow warning marker</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-marker--error</code></td>
+<td class="ApiTable-desc">Red error marker</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-marker--info</code></td>
+<td class="ApiTable-desc">Blue info marker</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-marker--active</code></td>
+<td class="ApiTable-desc">Active/current marker with glow</td>
+</tr>
+</tbody>
+</table>
+<h3 id="compact-specific-classes">Compact-specific Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-actor</code></td>
+<td class="ApiTable-desc">Person/entity name (compact variant)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Timeline-link</code></td>
+<td class="ApiTable-desc">Linked reference (compact variant)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="css-reference">CSS Reference</h2>
+<pre><code class="language-css">/* Base timeline */
+.Timeline {
+  position: relative;
+  padding-left: var(--space-6);
+}
+
+/* Vertical line */
+.Timeline::before {
+  content: &quot;&quot;;
+  position: absolute;
+  left: 5px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--bd);
+}
+
+/* Timeline item */
+.Timeline-item {
+  position: relative;
+  padding-bottom: var(--space-6);
+}
+
+.Timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+/* Marker dot */
+.Timeline-marker {
+  position: absolute;
+  left: calc(-1 * var(--space-6) - 1px);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--bd-s);
+}
+
+/* Icon markers */
+.Timeline-marker--icon {
+  width: 28px;
+  height: 28px;
+  left: calc(-1 * var(--space-6) - 9px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-s);
+  border: 2px solid var(--bd);
+  font-size: 14px;
+  color: var(--fg-3);
+}
+
+/* Status variants */
+.Timeline-marker--success {
+  background: oklch(55% 0.15 150);
+  border-color: oklch(55% 0.15 150);
+}
+.Timeline-marker--warning {
+  background: oklch(70% 0.15 80);
+  border-color: oklch(70% 0.15 80);
+}
+.Timeline-marker--error {
+  background: oklch(55% 0.2 25);
+  border-color: oklch(55% 0.2 25);
+}
+.Timeline-marker--info {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.Timeline-marker--active {
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px oklch(60% 0.15 250 / 0.2);
+}
+
+/* Content */
+.Timeline-content {
+  padding-top: 0;
+}
+
+.Timeline-title {
+  font-weight: 500;
+  color: var(--fg);
+}
+
+.Timeline-description {
+  margin-top: var(--space-1);
+  color: var(--fg-3);
+  font-size: var(--text-sm);
+}
+
+.Timeline-time {
+  margin-top: var(--space-1);
+  font-size: var(--text-xs);
+  color: var(--fg-3);
+}
+
+/* Compact variant */
+.Timeline--compact .Timeline-item {
+  padding-bottom: var(--space-3);
+}
+.Timeline--compact .Timeline-content {
+  font-size: var(--text-sm);
+}
+.Timeline--compact .Timeline-time {
+  display: inline;
+  margin-left: var(--space-2);
+}
+
+/* Horizontal variant */
+.Timeline--horizontal {
+  display: flex;
+  padding-left: 0;
+}
+.Timeline--horizontal::before {
+  top: 5px;
+  left: 0;
+  right: 0;
+  bottom: auto;
+  height: 2px;
+  width: auto;
+}
+.Timeline--horizontal .Timeline-item {
+  flex: 1;
+  padding-bottom: 0;
+  padding-top: var(--space-6);
+  text-align: center;
+}
+.Timeline--horizontal .Timeline-marker {
+  left: 50%;
+  top: calc(-1 * var(--space-6) + 2px);
+  transform: translateX(-50%);
+}
+</code></pre>
+<hr>
+<h2 id="accessibility">Accessibility</h2>
+<ul>
+<li>Use semantic list markup (<code>&lt;ol&gt;</code> or <code>&lt;ul&gt;</code>) for timeline structure</li>
+<li>Include <code>role=&quot;list&quot;</code> and <code>role=&quot;listitem&quot;</code> when using divs</li>
+<li>Ensure timestamps are machine-readable with <code>&lt;time datetime=&quot;...&quot;&gt;</code></li>
+<li>Provide sufficient color contrast for status indicators</li>
+<li>Don’t rely solely on color—use icons or text for status meaning</li>
+<li>For interactive timelines, ensure focusable elements are keyboard-accessible</li>
+<li>Use <code>aria-label</code> to describe timeline purpose (e.g., “Order history”)</li>
+<li>Announce new items with <code>aria-live</code> for dynamically updating timelines</li>
+</ul>
+<h3 id="keyboard-support">Keyboard Support</h3>
+<div class="Table-container"><table class="Table">
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tab</td>
+<td>Move focus between interactive timeline items</td>
+</tr>
+<tr>
+<td>Enter / Space</td>
+<td>Activate action buttons within items</td>
+</tr>
+</tbody>
+</table></div>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="do">Do</h3>
+<ul>
+<li>✓ <strong>Order chronologically</strong> — Most recent first or last, be consistent</li>
+<li>✓ <strong>Use status colors meaningfully</strong> — Green for complete, red for errors</li>
+<li>✓ <strong>Include timestamps</strong> — Always provide temporal context</li>
+<li>✓ <strong>Use icons for clarity</strong> — Reinforce status with visual markers</li>
+<li>✓ <strong>Keep entries scannable</strong> — Short titles, optional descriptions</li>
+<li>✓ <strong>Use compact for feeds</strong> — Dense layout for high-frequency updates</li>
+</ul>
+<h3 id="don-t">Don’t</h3>
+<ul>
+<li>✗ <strong>Mix chronological orders</strong> — Pick newest-first or oldest-first</li>
+<li>✗ <strong>Rely only on color</strong> — Colorblind users need icons or text</li>
+<li>✗ <strong>Overload with content</strong> — Keep timeline items brief</li>
+<li>✗ <strong>Skip the connecting line</strong> — It provides visual continuity</li>
+<li>✗ <strong>Use horizontal for many items</strong> — More than 5 items should be vertical</li>
+<li>✗ <strong>Forget loading states</strong> — Show skeleton items for async data</li>
+</ul>
+
+                </article>
+
+                <footer class="page-footer">
+                    <p>Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

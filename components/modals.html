@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Modals | Carbon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/bold/style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Floating Pill Nav (Mobile: bottom, Desktop: top) -->
+        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation">
+            <a href="../index.html" class="fnav-btn" data-section="home" aria-label="Home">
+                <i class="ph-bold ph-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="../tokens/colors.html" class="fnav-btn" data-section="tokens" aria-label="Tokens">
+                <i class="ph-bold ph-palette"></i>
+                <span>Tokens</span>
+            </a>
+            <a href="../components/buttons.html" class="fnav-btn" data-section="components" aria-label="Components">
+                <i class="ph-bold ph-stack"></i>
+                <span>Components</span>
+            </a>
+            <a href="../patterns/layouts.html" class="fnav-btn" data-section="patterns" aria-label="Patterns">
+                <i class="ph-bold ph-grid-four"></i>
+                <span>Patterns</span>
+            </a>
+            <div class="fnav-sep"></div>
+            <button class="fnav-btn" id="search-toggle" aria-label="Search">
+                <i class="ph ph-magnifying-glass"></i>
+            </button>
+            <button class="fnav-btn" id="theme-btn" aria-label="Toggle theme">
+                <i class="ph ph-moon"></i>
+            </button>
+        </nav>
+
+        <!-- Glassmorphism Top Bar (Desktop only) -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <a href="../index.html" class="logo">
+                    <i class="ph ph-intersect"></i>
+                    <span>Carbon</span>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <div class="search-container" id="search-container">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search components..." aria-label="Search" autocomplete="off">
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <main class="main-content">
+                <header class="page-header">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="../index.html">Carbon</a> <span class="sep">/</span> <span>Components</span> <span class="sep">/</span> <span>Modals</span>
+                    </nav>
+                    <h1><em>Modals</em></h1>
+                </header>
+                
+                <article class="prose">
+                    <h1>Modals</h1>
+<p>Modals are overlay dialogs that require user interaction before returning to the main content. They focus attention on critical information, decisions, or forms.</p>
+<hr>
+<h2 id="installation">Installation</h2>
+<p>Copy the modal CSS from <code>styles/docs.css</code> or include the Carbon stylesheet:</p>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;carbon.min.css&quot;&gt;
+</code></pre>
+<p>Basic modal structure:</p>
+<pre><code class="language-html">&lt;div class=&quot;Modal-overlay&quot;&gt;
+  &lt;div class=&quot;Modal&quot;&gt;
+    &lt;header class=&quot;Modal-header&quot;&gt;
+      &lt;h2 class=&quot;Modal-title&quot;&gt;Modal Title&lt;/h2&gt;
+      &lt;button class=&quot;Button Button--icon Button--ghost&quot; aria-label=&quot;Close&quot;&gt;
+        &lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;
+      &lt;/button&gt;
+    &lt;/header&gt;
+    &lt;div class=&quot;Modal-body&quot;&gt;
+      &lt;p&gt;Modal content goes here.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;footer class=&quot;Modal-footer&quot;&gt;
+      &lt;button class=&quot;Button Button--tertiary&quot;&gt;Cancel&lt;/button&gt;
+      &lt;button class=&quot;Button Button--primary&quot;&gt;Confirm&lt;/button&gt;
+    &lt;/footer&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="usage">Usage</h2>
+<p>Modals use a two-part structure: <code>.Modal-overlay</code> for the backdrop and <code>.Modal</code> for the dialog itself. Add <code>.active</code> or <code>.Modal-overlay--active</code> to show the modal.</p>
+
+<div class="Preview" id="preview-rsg4tqefo">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="position: relative; width: 100%; height: 200px; background: var(--bg-s); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center;">
+  <div class="Modal" style="position: relative; transform: none; max-width: 320px;">
+    <header class="Modal-header">
+      <h2 class="Modal-title">Example Modal</h2>
+      <button class="Button Button--icon Button--ghost" aria-label="Close">
+        <i class="ph ph-x"></i>
+      </button>
+    </header>
+    <div class="Modal-body">
+      <p>This is an example modal dialog.</p>
+    </div>
+    <footer class="Modal-footer">
+      <button class="Button Button--tertiary">Cancel</button>
+      <button class="Button Button--primary">Confirm</button>
+    </footer>
+  </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;position: relative; width: 100%; height: 200px; background: var(--bg-s); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center;&quot;&gt;
+&lt;div class=&quot;Modal&quot; style=&quot;position: relative; transform: none; max-width: 320px;&quot;&gt;
+&lt;header class=&quot;Modal-header&quot;&gt;
+&lt;h2 class=&quot;Modal-title&quot;&gt;Example Modal&lt;/h2&gt;
+&lt;button class=&quot;Button Button--icon Button--ghost&quot; aria-label=&quot;Close&quot;&gt;
+&lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/header&gt;
+&lt;div class=&quot;Modal-body&quot;&gt;
+&lt;p&gt;This is an example modal dialog.&lt;/p&gt;
+&lt;/div&gt;
+&lt;footer class=&quot;Modal-footer&quot;&gt;
+&lt;button class=&quot;Button Button--tertiary&quot;&gt;Cancel&lt;/button&gt;
+&lt;button class=&quot;Button Button--primary&quot;&gt;Confirm&lt;/button&gt;
+&lt;/footer&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="examples">Examples</h2>
+<h3 id="basic">Basic</h3>
+<p>A simple modal with header, body, and footer actions.</p>
+
+<div class="Preview" id="preview-f7pa8fmua">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="position: relative; width: 100%; height: 220px; background: oklch(0% 0 0 / 0.5); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center; padding: var(--space-4);">
+  <div class="Modal" style="position: relative; transform: none;">
+    <header class="Modal-header">
+      <h2 class="Modal-title">Save Changes?</h2>
+      <button class="Button Button--icon Button--ghost" aria-label="Close">
+        <i class="ph ph-x"></i>
+      </button>
+    </header>
+    <div class="Modal-body">
+      <p>You have unsaved changes. Would you like to save them before leaving?</p>
+    </div>
+    <footer class="Modal-footer">
+      <button class="Button Button--tertiary">Discard</button>
+      <button class="Button Button--primary">Save</button>
+    </footer>
+  </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;position: relative; width: 100%; height: 220px; background: oklch(0% 0 0 / 0.5); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center; padding: var(--space-4);&quot;&gt;
+&lt;div class=&quot;Modal&quot; style=&quot;position: relative; transform: none;&quot;&gt;
+&lt;header class=&quot;Modal-header&quot;&gt;
+&lt;h2 class=&quot;Modal-title&quot;&gt;Save Changes?&lt;/h2&gt;
+&lt;button class=&quot;Button Button--icon Button--ghost&quot; aria-label=&quot;Close&quot;&gt;
+&lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/header&gt;
+&lt;div class=&quot;Modal-body&quot;&gt;
+&lt;p&gt;You have unsaved changes. Would you like to save them before leaving?&lt;/p&gt;
+&lt;/div&gt;
+&lt;footer class=&quot;Modal-footer&quot;&gt;
+&lt;button class=&quot;Button Button--tertiary&quot;&gt;Discard&lt;/button&gt;
+&lt;button class=&quot;Button Button--primary&quot;&gt;Save&lt;/button&gt;
+&lt;/footer&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="confirmation">Confirmation</h3>
+<p>Use danger buttons for destructive actions. Clear messaging helps users understand consequences.</p>
+
+<div class="Preview" id="preview-mdz4rdmea">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="position: relative; width: 100%; height: 240px; background: oklch(0% 0 0 / 0.5); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center; padding: var(--space-4);">
+  <div class="Modal Modal--small" style="position: relative; transform: none;">
+    <header class="Modal-header">
+      <h2 class="Modal-title">Delete Project?</h2>
+      <button class="Button Button--icon Button--ghost" aria-label="Close">
+        <i class="ph ph-x"></i>
+      </button>
+    </header>
+    <div class="Modal-body">
+      <p>This will permanently delete <strong>"My Project"</strong> and all associated files. This action cannot be undone.</p>
+    </div>
+    <footer class="Modal-footer">
+      <button class="Button Button--secondary">Cancel</button>
+      <button class="Button Button--danger">Delete Project</button>
+    </footer>
+  </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;position: relative; width: 100%; height: 240px; background: oklch(0% 0 0 / 0.5); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center; padding: var(--space-4);&quot;&gt;
+&lt;div class=&quot;Modal Modal--small&quot; style=&quot;position: relative; transform: none;&quot;&gt;
+&lt;header class=&quot;Modal-header&quot;&gt;
+&lt;h2 class=&quot;Modal-title&quot;&gt;Delete Project?&lt;/h2&gt;
+&lt;button class=&quot;Button Button--icon Button--ghost&quot; aria-label=&quot;Close&quot;&gt;
+&lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/header&gt;
+&lt;div class=&quot;Modal-body&quot;&gt;
+&lt;p&gt;This will permanently delete &lt;strong&gt;&quot;My Project&quot;&lt;/strong&gt; and all associated files. This action cannot be undone.&lt;/p&gt;
+&lt;/div&gt;
+&lt;footer class=&quot;Modal-footer&quot;&gt;
+&lt;button class=&quot;Button Button--secondary&quot;&gt;Cancel&lt;/button&gt;
+&lt;button class=&quot;Button Button--danger&quot;&gt;Delete Project&lt;/button&gt;
+&lt;/footer&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="form-modal">Form Modal</h3>
+<p>Modals work great for focused form inputs. Keep forms short — complex flows belong on dedicated pages.</p>
+
+<div class="Preview" id="preview-z89ngybz8">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="position: relative; width: 100%; height: 360px; background: oklch(0% 0 0 / 0.5); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center; padding: var(--space-4);">
+  <div class="Modal" style="position: relative; transform: none;">
+    <header class="Modal-header">
+      <h2 class="Modal-title">Create New Workspace</h2>
+      <button class="Button Button--icon Button--ghost" aria-label="Close">
+        <i class="ph ph-x"></i>
+      </button>
+    </header>
+    <div class="Modal-body">
+      <div class="FormField" style="margin-bottom: var(--space-4);">
+        <label class="FormField-label">Workspace Name</label>
+        <input type="text" class="Input" placeholder="My Workspace">
+      </div>
+      <div class="FormField">
+        <label class="FormField-label">Description</label>
+        <input type="text" class="Input" placeholder="Optional description...">
+      </div>
+    </div>
+    <footer class="Modal-footer">
+      <button class="Button Button--tertiary">Cancel</button>
+      <button class="Button Button--primary">Create Workspace</button>
+    </footer>
+  </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;position: relative; width: 100%; height: 360px; background: oklch(0% 0 0 / 0.5); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center; padding: var(--space-4);&quot;&gt;
+&lt;div class=&quot;Modal&quot; style=&quot;position: relative; transform: none;&quot;&gt;
+&lt;header class=&quot;Modal-header&quot;&gt;
+&lt;h2 class=&quot;Modal-title&quot;&gt;Create New Workspace&lt;/h2&gt;
+&lt;button class=&quot;Button Button--icon Button--ghost&quot; aria-label=&quot;Close&quot;&gt;
+&lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/header&gt;
+&lt;div class=&quot;Modal-body&quot;&gt;
+&lt;div class=&quot;FormField&quot; style=&quot;margin-bottom: var(--space-4);&quot;&gt;
+&lt;label class=&quot;FormField-label&quot;&gt;Workspace Name&lt;/label&gt;
+&lt;input type=&quot;text&quot; class=&quot;Input&quot; placeholder=&quot;My Workspace&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;FormField&quot;&gt;
+&lt;label class=&quot;FormField-label&quot;&gt;Description&lt;/label&gt;
+&lt;input type=&quot;text&quot; class=&quot;Input&quot; placeholder=&quot;Optional description...&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;footer class=&quot;Modal-footer&quot;&gt;
+&lt;button class=&quot;Button Button--tertiary&quot;&gt;Cancel&lt;/button&gt;
+&lt;button class=&quot;Button Button--primary&quot;&gt;Create Workspace&lt;/button&gt;
+&lt;/footer&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="fullscreen">Fullscreen</h3>
+<p>Fullscreen modals take over the entire viewport. Use for immersive experiences or complex multi-step flows.</p>
+
+<div class="Preview" id="preview-4m1ukqvjt">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="position: relative; width: 100%; height: 300px; background: oklch(0% 0 0 / 0.5); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center;">
+  <div class="Modal Modal--fullscreen" style="position: relative; transform: none; height: 100%; border-radius: var(--r-m);">
+    <header class="Modal-header">
+      <h2 class="Modal-title">Document Editor</h2>
+      <button class="Button Button--icon Button--ghost" aria-label="Close">
+        <i class="ph ph-x"></i>
+      </button>
+    </header>
+    <div class="Modal-body" style="display: flex; align-items: center; justify-content: center; color: var(--fg-3);">
+      <p>Fullscreen content area</p>
+    </div>
+    <footer class="Modal-footer">
+      <button class="Button Button--tertiary">Cancel</button>
+      <button class="Button Button--primary">Save Document</button>
+    </footer>
+  </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;position: relative; width: 100%; height: 300px; background: oklch(0% 0 0 / 0.5); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center;&quot;&gt;
+&lt;div class=&quot;Modal Modal--fullscreen&quot; style=&quot;position: relative; transform: none; height: 100%; border-radius: var(--r-m);&quot;&gt;
+&lt;header class=&quot;Modal-header&quot;&gt;
+&lt;h2 class=&quot;Modal-title&quot;&gt;Document Editor&lt;/h2&gt;
+&lt;button class=&quot;Button Button--icon Button--ghost&quot; aria-label=&quot;Close&quot;&gt;
+&lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/header&gt;
+&lt;div class=&quot;Modal-body&quot; style=&quot;display: flex; align-items: center; justify-content: center; color: var(--fg-3);&quot;&gt;
+&lt;p&gt;Fullscreen content area&lt;/p&gt;
+&lt;/div&gt;
+&lt;footer class=&quot;Modal-footer&quot;&gt;
+&lt;button class=&quot;Button Button--tertiary&quot;&gt;Cancel&lt;/button&gt;
+&lt;button class=&quot;Button Button--primary&quot;&gt;Save Document&lt;/button&gt;
+&lt;/footer&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="slideout-drawer">Slideout / Drawer</h3>
+<p>Slide-in panels from the side work well for settings, filters, or detailed information.</p>
+
+<div class="Preview" id="preview-kj8gm82jf">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="position: relative; width: 100%; height: 280px; background: oklch(0% 0 0 / 0.5); border-radius: var(--r-m); display: flex; justify-content: flex-end; overflow: hidden;">
+  <div class="Modal" style="position: relative; transform: none; height: 100%; border-radius: 0; max-width: 320px; border-left: 1px solid var(--bd);">
+    <header class="Modal-header">
+      <h2 class="Modal-title">Filters</h2>
+      <button class="Button Button--icon Button--ghost" aria-label="Close">
+        <i class="ph ph-x"></i>
+      </button>
+    </header>
+    <div class="Modal-body">
+      <div class="FormField" style="margin-bottom: var(--space-4);">
+        <label class="FormField-label">Category</label>
+        <select class="Select">
+          <option>All Categories</option>
+          <option>Design</option>
+          <option>Development</option>
+        </select>
+      </div>
+      <div class="FormField">
+        <label class="FormField-label">Status</label>
+        <select class="Select">
+          <option>Any Status</option>
+          <option>Active</option>
+          <option>Archived</option>
+        </select>
+      </div>
+    </div>
+    <footer class="Modal-footer">
+      <button class="Button Button--tertiary">Reset</button>
+      <button class="Button Button--primary">Apply Filters</button>
+    </footer>
+  </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;position: relative; width: 100%; height: 280px; background: oklch(0% 0 0 / 0.5); border-radius: var(--r-m); display: flex; justify-content: flex-end; overflow: hidden;&quot;&gt;
+&lt;div class=&quot;Modal&quot; style=&quot;position: relative; transform: none; height: 100%; border-radius: 0; max-width: 320px; border-left: 1px solid var(--bd);&quot;&gt;
+&lt;header class=&quot;Modal-header&quot;&gt;
+&lt;h2 class=&quot;Modal-title&quot;&gt;Filters&lt;/h2&gt;
+&lt;button class=&quot;Button Button--icon Button--ghost&quot; aria-label=&quot;Close&quot;&gt;
+&lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/header&gt;
+&lt;div class=&quot;Modal-body&quot;&gt;
+&lt;div class=&quot;FormField&quot; style=&quot;margin-bottom: var(--space-4);&quot;&gt;
+&lt;label class=&quot;FormField-label&quot;&gt;Category&lt;/label&gt;
+&lt;select class=&quot;Select&quot;&gt;
+&lt;option&gt;All Categories&lt;/option&gt;
+&lt;option&gt;Design&lt;/option&gt;
+&lt;option&gt;Development&lt;/option&gt;
+&lt;/select&gt;
+&lt;/div&gt;
+&lt;div class=&quot;FormField&quot;&gt;
+&lt;label class=&quot;FormField-label&quot;&gt;Status&lt;/label&gt;
+&lt;select class=&quot;Select&quot;&gt;
+&lt;option&gt;Any Status&lt;/option&gt;
+&lt;option&gt;Active&lt;/option&gt;
+&lt;option&gt;Archived&lt;/option&gt;
+&lt;/select&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;footer class=&quot;Modal-footer&quot;&gt;
+&lt;button class=&quot;Button Button--tertiary&quot;&gt;Reset&lt;/button&gt;
+&lt;button class=&quot;Button Button--primary&quot;&gt;Apply Filters&lt;/button&gt;
+&lt;/footer&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="nested">Nested</h3>
+<p>Open a modal from within another modal. The second modal uses <code>.Modal-overlay--nested</code> for higher z-index.</p>
+
+<div class="Preview" id="preview-r1xrisutz">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="position: relative; width: 100%; height: 320px; background: oklch(0% 0 0 / 0.5); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center; padding: var(--space-4);">
+  <div class="Modal" style="position: relative; transform: none; opacity: 0.6; scale: 0.95;">
+    <header class="Modal-header">
+      <h2 class="Modal-title">Edit Profile</h2>
+    </header>
+    <div class="Modal-body">
+      <p>Primary modal content...</p>
+    </div>
+  </div>
+  <div class="Modal Modal--small" style="position: absolute; transform: none;">
+    <header class="Modal-header">
+      <h2 class="Modal-title">Discard Changes?</h2>
+      <button class="Button Button--icon Button--ghost" aria-label="Close">
+        <i class="ph ph-x"></i>
+      </button>
+    </header>
+    <div class="Modal-body">
+      <p>You have unsaved changes. Are you sure you want to close?</p>
+    </div>
+    <footer class="Modal-footer">
+      <button class="Button Button--tertiary">Keep Editing</button>
+      <button class="Button Button--danger">Discard</button>
+    </footer>
+  </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;position: relative; width: 100%; height: 320px; background: oklch(0% 0 0 / 0.5); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center; padding: var(--space-4);&quot;&gt;
+&lt;div class=&quot;Modal&quot; style=&quot;position: relative; transform: none; opacity: 0.6; scale: 0.95;&quot;&gt;
+&lt;header class=&quot;Modal-header&quot;&gt;
+&lt;h2 class=&quot;Modal-title&quot;&gt;Edit Profile&lt;/h2&gt;
+&lt;/header&gt;
+&lt;div class=&quot;Modal-body&quot;&gt;
+&lt;p&gt;Primary modal content...&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Modal Modal--small&quot; style=&quot;position: absolute; transform: none;&quot;&gt;
+&lt;header class=&quot;Modal-header&quot;&gt;
+&lt;h2 class=&quot;Modal-title&quot;&gt;Discard Changes?&lt;/h2&gt;
+&lt;button class=&quot;Button Button--icon Button--ghost&quot; aria-label=&quot;Close&quot;&gt;
+&lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/header&gt;
+&lt;div class=&quot;Modal-body&quot;&gt;
+&lt;p&gt;You have unsaved changes. Are you sure you want to close?&lt;/p&gt;
+&lt;/div&gt;
+&lt;footer class=&quot;Modal-footer&quot;&gt;
+&lt;button class=&quot;Button Button--tertiary&quot;&gt;Keep Editing&lt;/button&gt;
+&lt;button class=&quot;Button Button--danger&quot;&gt;Discard&lt;/button&gt;
+&lt;/footer&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="image-lightbox">Image Lightbox</h3>
+<p>Display images in a focused, centered view with minimal chrome.</p>
+
+<div class="Preview" id="preview-pfl3x2tpp">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="position: relative; width: 100%; height: 280px; background: oklch(0% 0 0 / 0.85); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center; padding: var(--space-4);">
+  <button class="Button Button--icon Button--ghost" style="position: absolute; top: var(--space-3); right: var(--space-3); color: white;" aria-label="Close">
+    <i class="ph ph-x"></i>
+  </button>
+  <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=200&fit=crop" alt="Mountain landscape" style="max-width: 100%; max-height: 220px; border-radius: var(--r-m); object-fit: cover;">
+  <button class="Button Button--icon Button--ghost" style="position: absolute; left: var(--space-3); color: white;" aria-label="Previous">
+    <i class="ph ph-caret-left"></i>
+  </button>
+  <button class="Button Button--icon Button--ghost" style="position: absolute; right: var(--space-3); color: white;" aria-label="Next">
+    <i class="ph ph-caret-right"></i>
+  </button>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;position: relative; width: 100%; height: 280px; background: oklch(0% 0 0 / 0.85); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center; padding: var(--space-4);&quot;&gt;
+&lt;button class=&quot;Button Button--icon Button--ghost&quot; style=&quot;position: absolute; top: var(--space-3); right: var(--space-3); color: white;&quot; aria-label=&quot;Close&quot;&gt;
+&lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;img src=&quot;https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&amp;h=200&amp;fit=crop&quot; alt=&quot;Mountain landscape&quot; style=&quot;max-width: 100%; max-height: 220px; border-radius: var(--r-m); object-fit: cover;&quot;&gt;
+&lt;button class=&quot;Button Button--icon Button--ghost&quot; style=&quot;position: absolute; left: var(--space-3); color: white;&quot; aria-label=&quot;Previous&quot;&gt;
+&lt;i class=&quot;ph ph-caret-left&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Button Button--icon Button--ghost&quot; style=&quot;position: absolute; right: var(--space-3); color: white;&quot; aria-label=&quot;Next&quot;&gt;
+&lt;i class=&quot;ph ph-caret-right&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="video-modal">Video Modal</h3>
+<p>Embed video content with playback controls.</p>
+
+<div class="Preview" id="preview-6emr6vr4k">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="position: relative; width: 100%; height: 280px; background: oklch(0% 0 0 / 0.85); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center; padding: var(--space-6);">
+  <button class="Button Button--icon Button--ghost" style="position: absolute; top: var(--space-3); right: var(--space-3); color: white;" aria-label="Close">
+    <i class="ph ph-x"></i>
+  </button>
+  <div style="width: 100%; max-width: 480px; aspect-ratio: 16/9; background: oklch(10% 0 0); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center;">
+    <button class="Button Button--icon Button--primary Button--large" aria-label="Play video">
+      <i class="ph ph-play-fill"></i>
+    </button>
+  </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;position: relative; width: 100%; height: 280px; background: oklch(0% 0 0 / 0.85); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center; padding: var(--space-6);&quot;&gt;
+&lt;button class=&quot;Button Button--icon Button--ghost&quot; style=&quot;position: absolute; top: var(--space-3); right: var(--space-3); color: white;&quot; aria-label=&quot;Close&quot;&gt;
+&lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;div style=&quot;width: 100%; max-width: 480px; aspect-ratio: 16/9; background: oklch(10% 0 0); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center;&quot;&gt;
+&lt;button class=&quot;Button Button--icon Button--primary Button--large&quot; aria-label=&quot;Play video&quot;&gt;
+&lt;i class=&quot;ph ph-play-fill&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="sizes">Sizes</h2>
+<p>Modals come in three sizes: small, medium (default), and large. Fullscreen is also available.</p>
+
+<div class="Preview" id="preview-9bbipurfd">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-4); width: 100%;">
+  <div class="Modal Modal--small" style="position: relative; transform: none; margin: 0 auto;">
+    <header class="Modal-header">
+      <h2 class="Modal-title">Small (360px)</h2>
+    </header>
+    <div class="Modal-body">
+      <p>Compact dialogs</p>
+    </div>
+  </div>
+  <div class="Modal" style="position: relative; transform: none; margin: 0 auto;">
+    <header class="Modal-header">
+      <h2 class="Modal-title">Medium (480px) — Default</h2>
+    </header>
+    <div class="Modal-body">
+      <p>Standard modal width</p>
+    </div>
+  </div>
+  <div class="Modal Modal--large" style="position: relative; transform: none; margin: 0 auto; max-width: 100%;">
+    <header class="Modal-header">
+      <h2 class="Modal-title">Large (720px)</h2>
+    </header>
+    <div class="Modal-body">
+      <p>For complex content or forms</p>
+    </div>
+  </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-4); width: 100%;&quot;&gt;
+&lt;div class=&quot;Modal Modal--small&quot; style=&quot;position: relative; transform: none; margin: 0 auto;&quot;&gt;
+&lt;header class=&quot;Modal-header&quot;&gt;
+&lt;h2 class=&quot;Modal-title&quot;&gt;Small (360px)&lt;/h2&gt;
+&lt;/header&gt;
+&lt;div class=&quot;Modal-body&quot;&gt;
+&lt;p&gt;Compact dialogs&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Modal&quot; style=&quot;position: relative; transform: none; margin: 0 auto;&quot;&gt;
+&lt;header class=&quot;Modal-header&quot;&gt;
+&lt;h2 class=&quot;Modal-title&quot;&gt;Medium (480px) — Default&lt;/h2&gt;
+&lt;/header&gt;
+&lt;div class=&quot;Modal-body&quot;&gt;
+&lt;p&gt;Standard modal width&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Modal Modal--large&quot; style=&quot;position: relative; transform: none; margin: 0 auto; max-width: 100%;&quot;&gt;
+&lt;header class=&quot;Modal-header&quot;&gt;
+&lt;h2 class=&quot;Modal-title&quot;&gt;Large (720px)&lt;/h2&gt;
+&lt;/header&gt;
+&lt;div class=&quot;Modal-body&quot;&gt;
+&lt;p&gt;For complex content or forms&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="common-patterns">Common Patterns</h2>
+<h3 id="confirmation-before-delete">Confirmation Before Delete</h3>
+
+<div class="Preview" id="preview-q1ft8yzn3">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="position: relative; width: 100%; height: 220px; background: oklch(0% 0 0 / 0.5); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center; padding: var(--space-4);">
+        <div class="Modal Modal--small" style="position: relative; transform: none;">
+            <header class="Modal-header">
+                <h2 class="Modal-title">
+                    <i class="ph ph-warning" style="color: oklch(55% 0.2 25); margin-right: var(--space-2);"></i>
+                    Delete 3 items?
+                </h2>
+            </header>
+            <div class="Modal-body">
+                <p>This will permanently remove the selected items. This action cannot be undone.</p>
+            </div>
+            <footer class="Modal-footer">
+                <button class="Button Button--secondary">Cancel</button>
+                <button class="Button Button--danger">Delete Items</button>
+            </footer>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;position: relative; width: 100%; height: 220px; background: oklch(0% 0 0 / 0.5); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center; padding: var(--space-4);&quot;&gt;
+&lt;div class=&quot;Modal Modal--small&quot; style=&quot;position: relative; transform: none;&quot;&gt;
+&lt;header class=&quot;Modal-header&quot;&gt;
+&lt;h2 class=&quot;Modal-title&quot;&gt;
+&lt;i class=&quot;ph ph-warning&quot; style=&quot;color: oklch(55% 0.2 25); margin-right: var(--space-2);&quot;&gt;&lt;/i&gt;
+Delete 3 items?
+&lt;/h2&gt;
+&lt;/header&gt;
+&lt;div class=&quot;Modal-body&quot;&gt;
+&lt;p&gt;This will permanently remove the selected items. This action cannot be undone.&lt;/p&gt;
+&lt;/div&gt;
+&lt;footer class=&quot;Modal-footer&quot;&gt;
+&lt;button class=&quot;Button Button--secondary&quot;&gt;Cancel&lt;/button&gt;
+&lt;button class=&quot;Button Button--danger&quot;&gt;Delete Items&lt;/button&gt;
+&lt;/footer&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="success-feedback-modal">Success Feedback Modal</h3>
+
+<div class="Preview" id="preview-ao4lmmuu6">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="position: relative; width: 100%; height: 220px; background: oklch(0% 0 0 / 0.5); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center; padding: var(--space-4);">
+        <div class="Modal Modal--small" style="position: relative; transform: none; text-align: center;">
+            <div class="Modal-body" style="padding-top: var(--space-6);">
+                <i class="ph ph-check-circle" style="font-size: 3rem; color: oklch(55% 0.15 150); margin-bottom: var(--space-3);"></i>
+                <h3 style="margin: 0 0 var(--space-2);">Payment Successful</h3>
+                <p style="color: var(--fg-3);">Your order has been confirmed and will ship within 2 business days.</p>
+            </div>
+            <footer class="Modal-footer" style="justify-content: center;">
+                <button class="Button Button--primary">View Order</button>
+            </footer>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;position: relative; width: 100%; height: 220px; background: oklch(0% 0 0 / 0.5); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center; padding: var(--space-4);&quot;&gt;
+&lt;div class=&quot;Modal Modal--small&quot; style=&quot;position: relative; transform: none; text-align: center;&quot;&gt;
+&lt;div class=&quot;Modal-body&quot; style=&quot;padding-top: var(--space-6);&quot;&gt;
+&lt;i class=&quot;ph ph-check-circle&quot; style=&quot;font-size: 3rem; color: oklch(55% 0.15 150); margin-bottom: var(--space-3);&quot;&gt;&lt;/i&gt;
+&lt;h3 style=&quot;margin: 0 0 var(--space-2);&quot;&gt;Payment Successful&lt;/h3&gt;
+&lt;p style=&quot;color: var(--fg-3);&quot;&gt;Your order has been confirmed and will ship within 2 business days.&lt;/p&gt;
+&lt;/div&gt;
+&lt;footer class=&quot;Modal-footer&quot; style=&quot;justify-content: center;&quot;&gt;
+&lt;button class=&quot;Button Button--primary&quot;&gt;View Order&lt;/button&gt;
+&lt;/footer&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="modal-with-scrollable-content">Modal with Scrollable Content</h3>
+
+<div class="Preview" id="preview-ena5nwyg9">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="position: relative; width: 100%; height: 280px; background: oklch(0% 0 0 / 0.5); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center; padding: var(--space-4);">
+        <div class="Modal" style="position: relative; transform: none; max-height: 250px; display: flex; flex-direction: column;">
+            <header class="Modal-header">
+                <h2 class="Modal-title">Terms of Service</h2>
+                <button class="Button Button--icon Button--ghost" aria-label="Close"><i class="ph ph-x"></i></button>
+            </header>
+            <div class="Modal-body" style="overflow-y: auto; flex: 1; font-size: 0.85rem; color: var(--fg-3);">
+                <p>By using this service you agree to the following terms and conditions. Please read carefully before proceeding.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <footer class="Modal-footer">
+                <button class="Button Button--secondary">Decline</button>
+                <button class="Button Button--primary">I Agree</button>
+            </footer>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;position: relative; width: 100%; height: 280px; background: oklch(0% 0 0 / 0.5); border-radius: var(--r-m); display: flex; align-items: center; justify-content: center; padding: var(--space-4);&quot;&gt;
+&lt;div class=&quot;Modal&quot; style=&quot;position: relative; transform: none; max-height: 250px; display: flex; flex-direction: column;&quot;&gt;
+&lt;header class=&quot;Modal-header&quot;&gt;
+&lt;h2 class=&quot;Modal-title&quot;&gt;Terms of Service&lt;/h2&gt;
+&lt;button class=&quot;Button Button--icon Button--ghost&quot; aria-label=&quot;Close&quot;&gt;&lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/header&gt;
+&lt;div class=&quot;Modal-body&quot; style=&quot;overflow-y: auto; flex: 1; font-size: 0.85rem; color: var(--fg-3);&quot;&gt;
+&lt;p&gt;By using this service you agree to the following terms and conditions. Please read carefully before proceeding.&lt;/p&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+&lt;/div&gt;
+&lt;footer class=&quot;Modal-footer&quot;&gt;
+&lt;button class=&quot;Button Button--secondary&quot;&gt;Decline&lt;/button&gt;
+&lt;button class=&quot;Button Button--primary&quot;&gt;I Agree&lt;/button&gt;
+&lt;/footer&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="customization">Customization</h2>
+<p>Override modal styles using CSS custom properties:</p>
+<pre><code class="language-css">/* Custom modal width */
+.Modal--custom {
+  max-width: 600px;
+}
+
+/* Custom overlay color */
+.Modal-overlay--branded {
+  background-color: oklch(25% 0.05 250 / 0.8);
+}
+
+/* Remove backdrop blur for performance */
+.Modal-overlay--no-blur {
+  backdrop-filter: none;
+}
+
+/* Slide-in from side animation */
+.Modal-overlay--slideout .Modal {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  max-width: 400px;
+  height: 100%;
+  border-radius: 0;
+  transform: translateX(100%);
+}
+
+.Modal-overlay--slideout.active .Modal {
+  transform: translateX(0);
+}
+
+/* Centered content variant */
+.Modal--centered .Modal-header {
+  text-align: center;
+  justify-content: center;
+}
+
+.Modal--centered .Modal-body {
+  text-align: center;
+}
+
+.Modal--centered .Modal-footer {
+  justify-content: center;
+}
+</code></pre>
+<hr>
+<h2 id="api-reference">API Reference</h2>
+<h3 id="overlay-classes">Overlay Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Modal-overlay</code></td>
+<td class="ApiTable-desc">Full-screen backdrop with centering</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Modal-overlay.active</code></td>
+<td class="ApiTable-desc">Shows the modal (visible, interactive)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Modal-overlay--active</code></td>
+<td class="ApiTable-desc">Alternative active class</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Modal-overlay--nested</code></td>
+<td class="ApiTable-desc">Higher z-index for stacked modals</td>
+</tr>
+</tbody>
+</table>
+<h3 id="modal-classes">Modal Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Modal</code></td>
+<td class="ApiTable-desc">Modal container (required)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Modal--small</code></td>
+<td class="ApiTable-desc">Small modal (360px max-width)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Modal--large</code></td>
+<td class="ApiTable-desc">Large modal (720px max-width)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Modal--fullscreen</code></td>
+<td class="ApiTable-desc">Full viewport modal</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Modal--centered</code></td>
+<td class="ApiTable-desc">Center-aligned header and content</td>
+</tr>
+</tbody>
+</table>
+<h3 id="structure-classes">Structure Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Modal-header</code></td>
+<td class="ApiTable-desc">Header area with title and close button</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Modal-title</code></td>
+<td class="ApiTable-desc">Modal heading text</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Modal-body</code></td>
+<td class="ApiTable-desc">Main content area (scrollable)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Modal-body--scrollable</code></td>
+<td class="ApiTable-desc">Explicit scrollable body</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Modal-footer</code></td>
+<td class="ApiTable-desc">Action buttons area</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="css-reference">CSS Reference</h2>
+<pre><code class="language-css">/* Modal Overlay */
+.Modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: oklch(0% 0 0 / 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.Modal-overlay.active,
+.Modal-overlay--active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.Modal-overlay--nested {
+  z-index: 1001;
+}
+
+/* Modal Container */
+.Modal {
+  background: var(--bg);
+  border: 1px solid var(--bd);
+  border-radius: var(--r-l);
+  box-shadow: 0 8px 32px oklch(0% 0 0 / 0.15);
+  max-width: 480px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-8px);
+  transition: transform 0.2s;
+}
+
+.Modal-overlay.active .Modal {
+  transform: translateY(0);
+}
+
+/* Sizes */
+.Modal--small { max-width: 360px; }
+.Modal--large { max-width: 720px; }
+.Modal--fullscreen {
+  max-width: 100%;
+  max-height: 100%;
+  height: 100vh;
+  border-radius: 0;
+}
+
+/* Header */
+.Modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid var(--bd);
+}
+
+.Modal-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Body */
+.Modal-body {
+  padding: var(--space-4) var(--space-5);
+  flex: 1;
+  overflow-y: auto;
+}
+
+.Modal-body p {
+  margin: 0 0 var(--space-3);
+  line-height: 1.5;
+  color: var(--fg-3);
+}
+
+.Modal-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Footer */
+.Modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  border-top: 1px solid var(--bd);
+}
+
+/* Centered variant */
+.Modal--centered .Modal-header { text-align: center; justify-content: center; }
+.Modal--centered .Modal-body { text-align: center; }
+.Modal--centered .Modal-footer { justify-content: center; }
+</code></pre>
+<hr>
+<h2 id="accessibility">Accessibility</h2>
+<p>Proper modal accessibility ensures all users can interact with your dialogs, including those using keyboards and screen readers.</p>
+<h3 id="focus-management">Focus Management</h3>
+<pre><code class="language-html">&lt;!-- Modal should trap focus when open --&gt;
+&lt;div class=&quot;Modal-overlay active&quot; role=&quot;dialog&quot; aria-modal=&quot;true&quot; aria-labelledby=&quot;modal-title&quot;&gt;
+  &lt;div class=&quot;Modal&quot;&gt;
+    &lt;header class=&quot;Modal-header&quot;&gt;
+      &lt;h2 class=&quot;Modal-title&quot; id=&quot;modal-title&quot;&gt;Accessible Modal&lt;/h2&gt;
+      &lt;button class=&quot;Button Button--icon Button--ghost&quot; aria-label=&quot;Close modal&quot;&gt;
+        &lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;
+      &lt;/button&gt;
+    &lt;/header&gt;
+    &lt;div class=&quot;Modal-body&quot;&gt;
+      &lt;p&gt;First focusable element receives focus on open.&lt;/p&gt;
+      &lt;input type=&quot;text&quot; class=&quot;Input&quot; placeholder=&quot;Focus starts here&quot;&gt;
+    &lt;/div&gt;
+    &lt;footer class=&quot;Modal-footer&quot;&gt;
+      &lt;button class=&quot;Button Button--tertiary&quot;&gt;Cancel&lt;/button&gt;
+      &lt;button class=&quot;Button Button--primary&quot;&gt;Submit&lt;/button&gt;
+    &lt;/footer&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="focus-trap">Focus Trap</h3>
+<p>Keep focus within the modal while open. Tab cycles through focusable elements without escaping to background content.</p>
+<pre><code class="language-javascript">// Basic focus trap implementation
+function trapFocus(modal) {
+  const focusable = modal.querySelectorAll(
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])'
+  );
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+
+  modal.addEventListener('keydown', (e) =&gt; {
+    if (e.key !== 'Tab') return;
+
+    if (e.shiftKey &amp;&amp; document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey &amp;&amp; document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  });
+}
+</code></pre>
+<h3 id="escape-key">Escape Key</h3>
+<p>Allow users to close the modal by pressing Escape.</p>
+<pre><code class="language-javascript">function handleEscapeKey(modal, closeCallback) {
+  document.addEventListener('keydown', (e) =&gt; {
+    if (e.key === 'Escape' &amp;&amp; modal.classList.contains('active')) {
+      closeCallback();
+    }
+  });
+}
+</code></pre>
+<h3 id="aria-attributes">ARIA Attributes</h3>
+<div class="Table-container"><table class="Table">
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Element</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>role=&quot;dialog&quot;</code></td>
+<td><code>.Modal-overlay</code></td>
+<td>Identifies as a dialog</td>
+</tr>
+<tr>
+<td><code>aria-modal=&quot;true&quot;</code></td>
+<td><code>.Modal-overlay</code></td>
+<td>Indicates modal behavior</td>
+</tr>
+<tr>
+<td><code>aria-labelledby</code></td>
+<td><code>.Modal-overlay</code></td>
+<td>Points to title ID</td>
+</tr>
+<tr>
+<td><code>aria-describedby</code></td>
+<td><code>.Modal-overlay</code></td>
+<td>Points to description (optional)</td>
+</tr>
+<tr>
+<td><code>aria-label</code></td>
+<td>Close button</td>
+<td>Describes the button action</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="screen-reader-announcements">Screen Reader Announcements</h3>
+<pre><code class="language-html">&lt;!-- Use aria-live for dynamic content --&gt;
+&lt;div class=&quot;Modal-body&quot;&gt;
+  &lt;div aria-live=&quot;polite&quot; aria-atomic=&quot;true&quot;&gt;
+    &lt;!-- Dynamic messages announced to screen readers --&gt;
+    &lt;p class=&quot;Alert Alert--success&quot;&gt;Changes saved successfully!&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="keyboard-support">Keyboard Support</h3>
+<div class="Table-container"><table class="Table">
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tab</td>
+<td>Move focus to next focusable element</td>
+</tr>
+<tr>
+<td>Shift + Tab</td>
+<td>Move focus to previous focusable element</td>
+</tr>
+<tr>
+<td>Escape</td>
+<td>Close the modal</td>
+</tr>
+<tr>
+<td>Enter</td>
+<td>Activate focused button</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="return-focus">Return Focus</h3>
+<p>When the modal closes, return focus to the element that triggered it.</p>
+<pre><code class="language-javascript">let triggerElement = null;
+
+function openModal(modal, trigger) {
+  triggerElement = trigger;
+  modal.classList.add('active');
+  modal.querySelector('input, button')?.focus();
+}
+
+function closeModal(modal) {
+  modal.classList.remove('active');
+  triggerElement?.focus();
+  triggerElement = null;
+}
+</code></pre>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="do">Do</h3>
+<ul>
+<li>✓ <strong>Use clear, specific titles</strong> — “Delete Project?” not “Confirm”</li>
+<li>✓ <strong>Keep content concise</strong> — Modals interrupt flow, respect users’ time</li>
+<li>✓ <strong>Provide obvious exit paths</strong> — Close button, Cancel action, Escape key</li>
+<li>✓ <strong>Trap focus</strong> — Keep keyboard navigation within the modal</li>
+<li>✓ <strong>Return focus</strong> — On close, focus returns to the trigger element</li>
+<li>✓ <strong>Prevent background scroll</strong> — Body shouldn’t scroll when modal is open</li>
+<li>✓ <strong>Match button order to reading flow</strong> — Primary action on the right</li>
+<li>✓ <strong>Use danger styling</strong> — Red buttons for destructive actions</li>
+</ul>
+<h3 id="don-t">Don’t</h3>
+<ul>
+<li>✗ <strong>Stack too many modals</strong> — Two max; consider page navigation instead</li>
+<li>✗ <strong>Use for complex flows</strong> — Long forms belong on dedicated pages</li>
+<li>✗ <strong>Auto-open modals on page load</strong> — Let users initiate the interaction</li>
+<li>✗ <strong>Hide the close button</strong> — Users must always be able to dismiss</li>
+<li>✗ <strong>Put critical content in modals</strong> — Important info should be on the page</li>
+<li>✗ <strong>Use vague actions</strong> — “OK” and “Cancel” don’t describe what happens</li>
+<li>✗ <strong>Forget mobile</strong> — Ensure modals work on small screens</li>
+<li>✗ <strong>Block background interaction permanently</strong> — Always provide an exit</li>
+</ul>
+
+                </article>
+
+                <footer class="page-footer">
+                    <p>Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

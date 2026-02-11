@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Drawer | Carbon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/bold/style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Floating Pill Nav (Mobile: bottom, Desktop: top) -->
+        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation">
+            <a href="../index.html" class="fnav-btn" data-section="home" aria-label="Home">
+                <i class="ph-bold ph-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="../tokens/colors.html" class="fnav-btn" data-section="tokens" aria-label="Tokens">
+                <i class="ph-bold ph-palette"></i>
+                <span>Tokens</span>
+            </a>
+            <a href="../components/buttons.html" class="fnav-btn" data-section="components" aria-label="Components">
+                <i class="ph-bold ph-stack"></i>
+                <span>Components</span>
+            </a>
+            <a href="../patterns/layouts.html" class="fnav-btn" data-section="patterns" aria-label="Patterns">
+                <i class="ph-bold ph-grid-four"></i>
+                <span>Patterns</span>
+            </a>
+            <div class="fnav-sep"></div>
+            <button class="fnav-btn" id="search-toggle" aria-label="Search">
+                <i class="ph ph-magnifying-glass"></i>
+            </button>
+            <button class="fnav-btn" id="theme-btn" aria-label="Toggle theme">
+                <i class="ph ph-moon"></i>
+            </button>
+        </nav>
+
+        <!-- Glassmorphism Top Bar (Desktop only) -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <a href="../index.html" class="logo">
+                    <i class="ph ph-intersect"></i>
+                    <span>Carbon</span>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <div class="search-container" id="search-container">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search components..." aria-label="Search" autocomplete="off">
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <main class="main-content">
+                <header class="page-header">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="../index.html">Carbon</a> <span class="sep">/</span> <span>Components</span> <span class="sep">/</span> <span>Drawer</span>
+                    </nav>
+                    <h1><em>Drawer</em></h1>
+                </header>
+                
+                <article class="prose">
+                    <hr>
+<h2 id="title-drawer">title: Drawer</h2>
+<h1>Drawer</h1>
+<p>Drawers are panels that slide in from the edge of the screen, commonly used for navigation, filters, or secondary content.</p>
+<h2 id="basic-drawer">Basic Drawer</h2>
+<p>A simple slide-out panel from the right.</p>
+
+<div class="Preview" id="preview-afho2tes2">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="position: relative; height: 300px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--radius-md);">
+    <div class="Drawer-backdrop Drawer-backdrop--visible"></div>
+    <div class="Drawer Drawer--right Drawer--open" style="position: absolute;">
+      <div class="Drawer-header">
+        <h3 class="Drawer-title">Drawer Title</h3>
+        <button class="Button Button--ghost Button--icon"><i class="ph ph-x"></i></button>
+      </div>
+      <div class="Drawer-body">
+        <p>Drawer content goes here. This can contain any elements.</p>
+      </div>
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;position: relative; height: 300px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--radius-md);&quot;&gt;
+&lt;div class=&quot;Drawer-backdrop Drawer-backdrop--visible&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Drawer Drawer--right Drawer--open&quot; style=&quot;position: absolute;&quot;&gt;
+&lt;div class=&quot;Drawer-header&quot;&gt;
+&lt;h3 class=&quot;Drawer-title&quot;&gt;Drawer Title&lt;/h3&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Drawer-body&quot;&gt;
+&lt;p&gt;Drawer content goes here. This can contain any elements.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Drawer-backdrop&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Drawer Drawer--right&quot;&gt;
+  &lt;div class=&quot;Drawer-header&quot;&gt;
+    &lt;h3 class=&quot;Drawer-title&quot;&gt;Drawer Title&lt;/h3&gt;
+    &lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;Drawer-body&quot;&gt;
+    &lt;p&gt;Drawer content goes here.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="position-variants">Position Variants</h2>
+<p>Drawers can slide in from any edge.</p>
+
+<div class="Preview" id="preview-lulsuck7b">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4);">
+    <div style="position: relative; height: 200px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--radius-md);">
+      <div class="Drawer Drawer--left Drawer--open Drawer--sm" style="position: absolute;">
+        <div class="Drawer-header">
+          <h4 class="Drawer-title">Left</h4>
+        </div>
+      </div>
+    </div>
+    <div style="position: relative; height: 200px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--radius-md);">
+      <div class="Drawer Drawer--right Drawer--open Drawer--sm" style="position: absolute;">
+        <div class="Drawer-header">
+          <h4 class="Drawer-title">Right</h4>
+        </div>
+      </div>
+    </div>
+    <div style="position: relative; height: 200px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--radius-md);">
+      <div class="Drawer Drawer--top Drawer--open Drawer--sm" style="position: absolute;">
+        <div class="Drawer-header">
+          <h4 class="Drawer-title">Top</h4>
+        </div>
+      </div>
+    </div>
+    <div style="position: relative; height: 200px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--radius-md);">
+      <div class="Drawer Drawer--bottom Drawer--open Drawer--sm" style="position: absolute;">
+        <div class="Drawer-header">
+          <h4 class="Drawer-title">Bottom</h4>
+        </div>
+      </div>
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4);&quot;&gt;
+&lt;div style=&quot;position: relative; height: 200px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--radius-md);&quot;&gt;
+&lt;div class=&quot;Drawer Drawer--left Drawer--open Drawer--sm&quot; style=&quot;position: absolute;&quot;&gt;
+&lt;div class=&quot;Drawer-header&quot;&gt;
+&lt;h4 class=&quot;Drawer-title&quot;&gt;Left&lt;/h4&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;position: relative; height: 200px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--radius-md);&quot;&gt;
+&lt;div class=&quot;Drawer Drawer--right Drawer--open Drawer--sm&quot; style=&quot;position: absolute;&quot;&gt;
+&lt;div class=&quot;Drawer-header&quot;&gt;
+&lt;h4 class=&quot;Drawer-title&quot;&gt;Right&lt;/h4&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;position: relative; height: 200px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--radius-md);&quot;&gt;
+&lt;div class=&quot;Drawer Drawer--top Drawer--open Drawer--sm&quot; style=&quot;position: absolute;&quot;&gt;
+&lt;div class=&quot;Drawer-header&quot;&gt;
+&lt;h4 class=&quot;Drawer-title&quot;&gt;Top&lt;/h4&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;position: relative; height: 200px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--radius-md);&quot;&gt;
+&lt;div class=&quot;Drawer Drawer--bottom Drawer--open Drawer--sm&quot; style=&quot;position: absolute;&quot;&gt;
+&lt;div class=&quot;Drawer-header&quot;&gt;
+&lt;h4 class=&quot;Drawer-title&quot;&gt;Bottom&lt;/h4&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Drawer Drawer--left&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;Drawer Drawer--right&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;Drawer Drawer--top&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;Drawer Drawer--bottom&quot;&gt;...&lt;/div&gt;
+</code></pre>
+<h2 id="sizes">Sizes</h2>
+<p>Drawers come in different widths.</p>
+
+<div class="Preview" id="preview-18mgzy2c3">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-4);">
+    <div style="position: relative; height: 150px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--radius-md);">
+      <div class="Drawer Drawer--right Drawer--open Drawer--xs" style="position: absolute;">
+        <div class="Drawer-header"><h4 class="Drawer-title">XS (240px)</h4></div>
+      </div>
+    </div>
+    <div style="position: relative; height: 150px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--radius-md);">
+      <div class="Drawer Drawer--right Drawer--open Drawer--sm" style="position: absolute;">
+        <div class="Drawer-header"><h4 class="Drawer-title">SM (320px)</h4></div>
+      </div>
+    </div>
+    <div style="position: relative; height: 150px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--radius-md);">
+      <div class="Drawer Drawer--right Drawer--open" style="position: absolute;">
+        <div class="Drawer-header"><h4 class="Drawer-title">Default (400px)</h4></div>
+      </div>
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-4);&quot;&gt;
+&lt;div style=&quot;position: relative; height: 150px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--radius-md);&quot;&gt;
+&lt;div class=&quot;Drawer Drawer--right Drawer--open Drawer--xs&quot; style=&quot;position: absolute;&quot;&gt;
+&lt;div class=&quot;Drawer-header&quot;&gt;&lt;h4 class=&quot;Drawer-title&quot;&gt;XS (240px)&lt;/h4&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;position: relative; height: 150px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--radius-md);&quot;&gt;
+&lt;div class=&quot;Drawer Drawer--right Drawer--open Drawer--sm&quot; style=&quot;position: absolute;&quot;&gt;
+&lt;div class=&quot;Drawer-header&quot;&gt;&lt;h4 class=&quot;Drawer-title&quot;&gt;SM (320px)&lt;/h4&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;position: relative; height: 150px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--radius-md);&quot;&gt;
+&lt;div class=&quot;Drawer Drawer--right Drawer--open&quot; style=&quot;position: absolute;&quot;&gt;
+&lt;div class=&quot;Drawer-header&quot;&gt;&lt;h4 class=&quot;Drawer-title&quot;&gt;Default (400px)&lt;/h4&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Drawer Drawer--xs&quot;&gt;...&lt;/div&gt;  &lt;!-- 240px --&gt;
+&lt;div class=&quot;Drawer Drawer--sm&quot;&gt;...&lt;/div&gt;  &lt;!-- 320px --&gt;
+&lt;div class=&quot;Drawer&quot;&gt;...&lt;/div&gt;             &lt;!-- 400px --&gt;
+&lt;div class=&quot;Drawer Drawer--lg&quot;&gt;...&lt;/div&gt;  &lt;!-- 560px --&gt;
+&lt;div class=&quot;Drawer Drawer--xl&quot;&gt;...&lt;/div&gt;  &lt;!-- 720px --&gt;
+&lt;div class=&quot;Drawer Drawer--full&quot;&gt;...&lt;/div&gt; &lt;!-- 100% --&gt;
+</code></pre>
+<h2 id="navigation-drawer">Navigation Drawer</h2>
+<p>A sidebar navigation pattern.</p>
+
+<div class="Preview" id="preview-3bf62c02p">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="position: relative; height: 400px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--radius-md);">
+    <div class="Drawer Drawer--left Drawer--open Drawer--sm" style="position: absolute;">
+      <div class="Drawer-header">
+        <div style="display: flex; align-items: center; gap: var(--space-2);">
+          <div style="width: 32px; height: 32px; background: var(--accent); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">C</div>
+          <span style="font-weight: 600;">Carbon</span>
+        </div>
+      </div>
+      <nav class="Drawer-nav">
+        <a href="#" class="Drawer-navItem Drawer-navItem--active">
+          <i class="ph ph-house"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="#" class="Drawer-navItem">
+          <i class="ph ph-folder"></i>
+          <span>Projects</span>
+        </a>
+        <a href="#" class="Drawer-navItem">
+          <i class="ph ph-users"></i>
+          <span>Team</span>
+        </a>
+        <a href="#" class="Drawer-navItem">
+          <i class="ph ph-calendar"></i>
+          <span>Calendar</span>
+        </a>
+        <div class="Drawer-navDivider"></div>
+        <a href="#" class="Drawer-navItem">
+          <i class="ph ph-gear"></i>
+          <span>Settings</span>
+        </a>
+        <a href="#" class="Drawer-navItem">
+          <i class="ph ph-question"></i>
+          <span>Help</span>
+        </a>
+      </nav>
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;position: relative; height: 400px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--radius-md);&quot;&gt;
+&lt;div class=&quot;Drawer Drawer--left Drawer--open Drawer--sm&quot; style=&quot;position: absolute;&quot;&gt;
+&lt;div class=&quot;Drawer-header&quot;&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-2);&quot;&gt;
+&lt;div style=&quot;width: 32px; height: 32px; background: var(--accent); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;&quot;&gt;C&lt;/div&gt;
+&lt;span style=&quot;font-weight: 600;&quot;&gt;Carbon&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;nav class=&quot;Drawer-nav&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;Drawer-navItem Drawer-navItem--active&quot;&gt;
+&lt;i class=&quot;ph ph-house&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Dashboard&lt;/span&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Drawer-navItem&quot;&gt;
+&lt;i class=&quot;ph ph-folder&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Projects&lt;/span&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Drawer-navItem&quot;&gt;
+&lt;i class=&quot;ph ph-users&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Team&lt;/span&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Drawer-navItem&quot;&gt;
+&lt;i class=&quot;ph ph-calendar&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Calendar&lt;/span&gt;
+&lt;/a&gt;
+&lt;div class=&quot;Drawer-navDivider&quot;&gt;&lt;/div&gt;
+&lt;a href=&quot;#&quot; class=&quot;Drawer-navItem&quot;&gt;
+&lt;i class=&quot;ph ph-gear&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Settings&lt;/span&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Drawer-navItem&quot;&gt;
+&lt;i class=&quot;ph ph-question&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Help&lt;/span&gt;
+&lt;/a&gt;
+&lt;/nav&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Drawer Drawer--left Drawer--sm&quot;&gt;
+  &lt;div class=&quot;Drawer-header&quot;&gt;
+    &lt;div class=&quot;Logo&quot;&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;nav class=&quot;Drawer-nav&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;Drawer-navItem Drawer-navItem--active&quot;&gt;
+      &lt;i class=&quot;ph ph-house&quot;&gt;&lt;/i&gt;
+      &lt;span&gt;Dashboard&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;Drawer-navItem&quot;&gt;
+      &lt;i class=&quot;ph ph-folder&quot;&gt;&lt;/i&gt;
+      &lt;span&gt;Projects&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;div class=&quot;Drawer-navDivider&quot;&gt;&lt;/div&gt;
+    &lt;a href=&quot;#&quot; class=&quot;Drawer-navItem&quot;&gt;
+      &lt;i class=&quot;ph ph-gear&quot;&gt;&lt;/i&gt;
+      &lt;span&gt;Settings&lt;/span&gt;
+    &lt;/a&gt;
+  &lt;/nav&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="filter-drawer">Filter Drawer</h2>
+<p>A drawer for filter controls.</p>
+
+<div class="Preview" id="preview-6830e0hr7">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="position: relative; height: 400px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--radius-md);">
+    <div class="Drawer-backdrop Drawer-backdrop--visible"></div>
+    <div class="Drawer Drawer--right Drawer--open Drawer--sm" style="position: absolute;">
+      <div class="Drawer-header">
+        <h3 class="Drawer-title">Filters</h3>
+        <button class="Button Button--ghost Button--sm">Reset</button>
+      </div>
+      <div class="Drawer-body">
+        <div class="Drawer-section">
+          <h4 class="Drawer-sectionTitle">Category</h4>
+          <label class="Checkbox"><input type="checkbox" checked> Electronics</label>
+          <label class="Checkbox"><input type="checkbox"> Clothing</label>
+          <label class="Checkbox"><input type="checkbox" checked> Books</label>
+          <label class="Checkbox"><input type="checkbox"> Home & Garden</label>
+        </div>
+        <div class="Drawer-section">
+          <h4 class="Drawer-sectionTitle">Price Range</h4>
+          <div style="display: flex; gap: var(--space-2); align-items: center;">
+            <input type="number" class="Input Input--sm" placeholder="Min" style="width: 80px;">
+            <span>—</span>
+            <input type="number" class="Input Input--sm" placeholder="Max" style="width: 80px;">
+          </div>
+        </div>
+        <div class="Drawer-section">
+          <h4 class="Drawer-sectionTitle">Rating</h4>
+          <label class="Radio"><input type="radio" name="rating"> 4+ Stars</label>
+          <label class="Radio"><input type="radio" name="rating" checked> 3+ Stars</label>
+          <label class="Radio"><input type="radio" name="rating"> Any</label>
+        </div>
+      </div>
+      <div class="Drawer-footer">
+        <button class="Button Button--ghost" style="flex: 1;">Cancel</button>
+        <button class="Button Button--primary" style="flex: 1;">Apply Filters</button>
+      </div>
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;position: relative; height: 400px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--radius-md);&quot;&gt;
+&lt;div class=&quot;Drawer-backdrop Drawer-backdrop--visible&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Drawer Drawer--right Drawer--open Drawer--sm&quot; style=&quot;position: absolute;&quot;&gt;
+&lt;div class=&quot;Drawer-header&quot;&gt;
+&lt;h3 class=&quot;Drawer-title&quot;&gt;Filters&lt;/h3&gt;
+&lt;button class=&quot;Button Button--ghost Button--sm&quot;&gt;Reset&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Drawer-body&quot;&gt;
+&lt;div class=&quot;Drawer-section&quot;&gt;
+&lt;h4 class=&quot;Drawer-sectionTitle&quot;&gt;Category&lt;/h4&gt;
+&lt;label class=&quot;Checkbox&quot;&gt;&lt;input type=&quot;checkbox&quot; checked&gt; Electronics&lt;/label&gt;
+&lt;label class=&quot;Checkbox&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt; Clothing&lt;/label&gt;
+&lt;label class=&quot;Checkbox&quot;&gt;&lt;input type=&quot;checkbox&quot; checked&gt; Books&lt;/label&gt;
+&lt;label class=&quot;Checkbox&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt; Home &amp; Garden&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Drawer-section&quot;&gt;
+&lt;h4 class=&quot;Drawer-sectionTitle&quot;&gt;Price Range&lt;/h4&gt;
+&lt;div style=&quot;display: flex; gap: var(--space-2); align-items: center;&quot;&gt;
+&lt;input type=&quot;number&quot; class=&quot;Input Input--sm&quot; placeholder=&quot;Min&quot; style=&quot;width: 80px;&quot;&gt;
+&lt;span&gt;—&lt;/span&gt;
+&lt;input type=&quot;number&quot; class=&quot;Input Input--sm&quot; placeholder=&quot;Max&quot; style=&quot;width: 80px;&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Drawer-section&quot;&gt;
+&lt;h4 class=&quot;Drawer-sectionTitle&quot;&gt;Rating&lt;/h4&gt;
+&lt;label class=&quot;Radio&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;rating&quot;&gt; 4+ Stars&lt;/label&gt;
+&lt;label class=&quot;Radio&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;rating&quot; checked&gt; 3+ Stars&lt;/label&gt;
+&lt;label class=&quot;Radio&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;rating&quot;&gt; Any&lt;/label&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Drawer-footer&quot;&gt;
+&lt;button class=&quot;Button Button--ghost&quot; style=&quot;flex: 1;&quot;&gt;Cancel&lt;/button&gt;
+&lt;button class=&quot;Button Button--primary&quot; style=&quot;flex: 1;&quot;&gt;Apply Filters&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Drawer Drawer--right Drawer--sm&quot;&gt;
+  &lt;div class=&quot;Drawer-header&quot;&gt;
+    &lt;h3 class=&quot;Drawer-title&quot;&gt;Filters&lt;/h3&gt;
+    &lt;button class=&quot;Button Button--ghost Button--sm&quot;&gt;Reset&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;Drawer-body&quot;&gt;
+    &lt;div class=&quot;Drawer-section&quot;&gt;
+      &lt;h4 class=&quot;Drawer-sectionTitle&quot;&gt;Category&lt;/h4&gt;
+      &lt;!-- Filter controls --&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;Drawer-footer&quot;&gt;
+    &lt;button class=&quot;Button Button--ghost&quot;&gt;Cancel&lt;/button&gt;
+    &lt;button class=&quot;Button Button--primary&quot;&gt;Apply&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="with-tabs">With Tabs</h2>
+<p>Organize drawer content with tabs.</p>
+
+<div class="Preview" id="preview-prvxffblp">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="position: relative; height: 350px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--radius-md);">
+    <div class="Drawer Drawer--right Drawer--open" style="position: absolute;">
+      <div class="Drawer-header">
+        <h3 class="Drawer-title">Details</h3>
+        <button class="Button Button--ghost Button--icon"><i class="ph ph-x"></i></button>
+      </div>
+      <div class="Tabs Tabs--full">
+        <div class="Tabs-list" role="tablist">
+          <button class="Tabs-tab active" role="tab">Info</button>
+          <button class="Tabs-tab" role="tab">Activity</button>
+          <button class="Tabs-tab" role="tab">Comments</button>
+        </div>
+      </div>
+      <div class="Drawer-body">
+        <p>Tab content goes here...</p>
+      </div>
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;position: relative; height: 350px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--radius-md);&quot;&gt;
+&lt;div class=&quot;Drawer Drawer--right Drawer--open&quot; style=&quot;position: absolute;&quot;&gt;
+&lt;div class=&quot;Drawer-header&quot;&gt;
+&lt;h3 class=&quot;Drawer-title&quot;&gt;Details&lt;/h3&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Tabs Tabs--full&quot;&gt;
+&lt;div class=&quot;Tabs-list&quot; role=&quot;tablist&quot;&gt;
+&lt;button class=&quot;Tabs-tab active&quot; role=&quot;tab&quot;&gt;Info&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot;&gt;Activity&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot;&gt;Comments&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Drawer-body&quot;&gt;
+&lt;p&gt;Tab content goes here...&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Drawer Drawer--right&quot;&gt;
+  &lt;div class=&quot;Drawer-header&quot;&gt;
+    &lt;h3 class=&quot;Drawer-title&quot;&gt;Details&lt;/h3&gt;
+    &lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;Tabs Tabs--full&quot;&gt;
+    &lt;div class=&quot;Tabs-list&quot; role=&quot;tablist&quot;&gt;
+      &lt;button class=&quot;Tabs-tab active&quot; role=&quot;tab&quot;&gt;Info&lt;/button&gt;
+      &lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot;&gt;Activity&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;Drawer-body&quot;&gt;
+    &lt;!-- Content --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="persistent-sidebar">Persistent Sidebar</h2>
+<p>A drawer that stays open alongside main content.</p>
+
+<div class="Preview" id="preview-srxm4efjw">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; height: 300px; border: 1px solid var(--bd); border-radius: var(--radius-md); overflow: hidden;">
+    <div class="Drawer Drawer--persistent Drawer--open Drawer--sm" style="position: relative;">
+      <nav class="Drawer-nav">
+        <a href="#" class="Drawer-navItem Drawer-navItem--active">
+          <i class="ph ph-house"></i>
+          <span>Home</span>
+        </a>
+        <a href="#" class="Drawer-navItem">
+          <i class="ph ph-chart-bar"></i>
+          <span>Analytics</span>
+        </a>
+        <a href="#" class="Drawer-navItem">
+          <i class="ph ph-envelope"></i>
+          <span>Messages</span>
+        </a>
+      </nav>
+    </div>
+    <div style="flex: 1; padding: var(--space-4); background: var(--bg-s);">
+      <p style="color: var(--fg-3);">Main content area</p>
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; height: 300px; border: 1px solid var(--bd); border-radius: var(--radius-md); overflow: hidden;&quot;&gt;
+&lt;div class=&quot;Drawer Drawer--persistent Drawer--open Drawer--sm&quot; style=&quot;position: relative;&quot;&gt;
+&lt;nav class=&quot;Drawer-nav&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;Drawer-navItem Drawer-navItem--active&quot;&gt;
+&lt;i class=&quot;ph ph-house&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Home&lt;/span&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Drawer-navItem&quot;&gt;
+&lt;i class=&quot;ph ph-chart-bar&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Analytics&lt;/span&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Drawer-navItem&quot;&gt;
+&lt;i class=&quot;ph ph-envelope&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Messages&lt;/span&gt;
+&lt;/a&gt;
+&lt;/nav&gt;
+&lt;/div&gt;
+&lt;div style=&quot;flex: 1; padding: var(--space-4); background: var(--bg-s);&quot;&gt;
+&lt;p style=&quot;color: var(--fg-3);&quot;&gt;Main content area&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Layout&quot;&gt;
+  &lt;div class=&quot;Drawer Drawer--persistent Drawer--sm&quot;&gt;
+    &lt;nav class=&quot;Drawer-nav&quot;&gt;...&lt;/nav&gt;
+  &lt;/div&gt;
+  &lt;main class=&quot;Layout-main&quot;&gt;
+    &lt;!-- Main content --&gt;
+  &lt;/main&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="mini-variant">Mini Variant</h2>
+<p>Collapsed sidebar showing only icons, expands on hover.</p>
+
+<div class="Preview" id="preview-fl84z5q5n">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; height: 300px; border: 1px solid var(--bd); border-radius: var(--radius-md); overflow: hidden;">
+    <div class="Drawer Drawer--persistent Drawer--mini Drawer--open" style="position: relative;">
+      <nav class="Drawer-nav">
+        <a href="#" class="Drawer-navItem Drawer-navItem--active" title="Home">
+          <i class="ph ph-house"></i>
+          <span>Home</span>
+        </a>
+        <a href="#" class="Drawer-navItem" title="Search">
+          <i class="ph ph-magnifying-glass"></i>
+          <span>Search</span>
+        </a>
+        <a href="#" class="Drawer-navItem" title="Notifications">
+          <i class="ph ph-bell"></i>
+          <span>Notifications</span>
+        </a>
+        <a href="#" class="Drawer-navItem" title="Settings">
+          <i class="ph ph-gear"></i>
+          <span>Settings</span>
+        </a>
+      </nav>
+    </div>
+    <div style="flex: 1; padding: var(--space-4); background: var(--bg-s);">
+      <p style="color: var(--fg-3);">Hover over the sidebar to expand</p>
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; height: 300px; border: 1px solid var(--bd); border-radius: var(--radius-md); overflow: hidden;&quot;&gt;
+&lt;div class=&quot;Drawer Drawer--persistent Drawer--mini Drawer--open&quot; style=&quot;position: relative;&quot;&gt;
+&lt;nav class=&quot;Drawer-nav&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;Drawer-navItem Drawer-navItem--active&quot; title=&quot;Home&quot;&gt;
+&lt;i class=&quot;ph ph-house&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Home&lt;/span&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Drawer-navItem&quot; title=&quot;Search&quot;&gt;
+&lt;i class=&quot;ph ph-magnifying-glass&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Search&lt;/span&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Drawer-navItem&quot; title=&quot;Notifications&quot;&gt;
+&lt;i class=&quot;ph ph-bell&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Notifications&lt;/span&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Drawer-navItem&quot; title=&quot;Settings&quot;&gt;
+&lt;i class=&quot;ph ph-gear&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Settings&lt;/span&gt;
+&lt;/a&gt;
+&lt;/nav&gt;
+&lt;/div&gt;
+&lt;div style=&quot;flex: 1; padding: var(--space-4); background: var(--bg-s);&quot;&gt;
+&lt;p style=&quot;color: var(--fg-3);&quot;&gt;Hover over the sidebar to expand&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Drawer Drawer--persistent Drawer--mini&quot;&gt;
+  &lt;nav class=&quot;Drawer-nav&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;Drawer-navItem&quot; title=&quot;Home&quot;&gt;
+      &lt;i class=&quot;ph ph-house&quot;&gt;&lt;/i&gt;
+      &lt;span&gt;Home&lt;/span&gt;
+    &lt;/a&gt;
+  &lt;/nav&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="javascript">JavaScript</h2>
+<pre><code class="language-js">// Toggle drawer
+function toggleDrawer(drawerId) {
+  const drawer = document.getElementById(drawerId);
+  const backdrop = document.querySelector('.Drawer-backdrop');
+  
+  drawer.classList.toggle('Drawer--open');
+  backdrop?.classList.toggle('Drawer-backdrop--visible');
+  
+  // Prevent body scroll when open
+  document.body.style.overflow = drawer.classList.contains('Drawer--open') ? 'hidden' : '';
+}
+
+// Close on backdrop click
+document.querySelector('.Drawer-backdrop')?.addEventListener('click', () =&gt; {
+  document.querySelectorAll('.Drawer--open').forEach(d =&gt; d.classList.remove('Drawer--open'));
+  document.querySelector('.Drawer-backdrop')?.classList.remove('Drawer-backdrop--visible');
+  document.body.style.overflow = '';
+});
+
+// Close on Escape key
+document.addEventListener('keydown', (e) =&gt; {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.Drawer--open').forEach(d =&gt; d.classList.remove('Drawer--open'));
+    document.querySelector('.Drawer-backdrop')?.classList.remove('Drawer-backdrop--visible');
+    document.body.style.overflow = '';
+  }
+});
+</code></pre>
+<hr>
+<h2 id="common-patterns">Common Patterns</h2>
+<h3 id="shopping-cart-drawer">Shopping Cart Drawer</h3>
+
+<div class="Preview" id="preview-3rd90kc1d">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="position: relative; height: 350px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--r-m);">
+    <div class="Drawer-backdrop Drawer-backdrop--visible"></div>
+    <div class="Drawer Drawer--right Drawer--open Drawer--sm" style="position: absolute;">
+        <div class="Drawer-header">
+            <h3 class="Drawer-title">Cart (3)</h3>
+            <button class="Button Button--ghost Button--icon"><i class="ph ph-x"></i></button>
+        </div>
+        <div class="Drawer-body">
+            <div style="display: flex; gap: var(--space-3); margin-bottom: var(--space-4);">
+                <div style="width: 60px; height: 60px; background: var(--bg-s); border-radius: var(--r-s);"></div>
+                <div style="flex: 1;">
+                    <div style="font-weight: 500;">Wireless Mouse</div>
+                    <div style="font-size: 0.85rem; color: var(--fg-3);">Qty: 1</div>
+                    <div style="font-weight: 600;">$49.99</div>
+                </div>
+            </div>
+            <div style="display: flex; gap: var(--space-3); margin-bottom: var(--space-4);">
+                <div style="width: 60px; height: 60px; background: var(--bg-s); border-radius: var(--r-s);"></div>
+                <div style="flex: 1;">
+                    <div style="font-weight: 500;">USB-C Hub</div>
+                    <div style="font-size: 0.85rem; color: var(--fg-3);">Qty: 2</div>
+                    <div style="font-weight: 600;">$35.00</div>
+                </div>
+            </div>
+        </div>
+        <div class="Drawer-footer" style="flex-direction: column; gap: var(--space-2);">
+            <div style="display: flex; justify-content: space-between; width: 100%; font-weight: 600;">
+                <span>Total</span><span>$119.99</span>
+            </div>
+            <button class="Button Button--primary" style="width: 100%;">Checkout</button>
+        </div>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;position: relative; height: 350px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--r-m);&quot;&gt;
+&lt;div class=&quot;Drawer-backdrop Drawer-backdrop--visible&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Drawer Drawer--right Drawer--open Drawer--sm&quot; style=&quot;position: absolute;&quot;&gt;
+&lt;div class=&quot;Drawer-header&quot;&gt;
+&lt;h3 class=&quot;Drawer-title&quot;&gt;Cart (3)&lt;/h3&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Drawer-body&quot;&gt;
+&lt;div style=&quot;display: flex; gap: var(--space-3); margin-bottom: var(--space-4);&quot;&gt;
+&lt;div style=&quot;width: 60px; height: 60px; background: var(--bg-s); border-radius: var(--r-s);&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;flex: 1;&quot;&gt;
+&lt;div style=&quot;font-weight: 500;&quot;&gt;Wireless Mouse&lt;/div&gt;
+&lt;div style=&quot;font-size: 0.85rem; color: var(--fg-3);&quot;&gt;Qty: 1&lt;/div&gt;
+&lt;div style=&quot;font-weight: 600;&quot;&gt;$49.99&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: flex; gap: var(--space-3); margin-bottom: var(--space-4);&quot;&gt;
+&lt;div style=&quot;width: 60px; height: 60px; background: var(--bg-s); border-radius: var(--r-s);&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;flex: 1;&quot;&gt;
+&lt;div style=&quot;font-weight: 500;&quot;&gt;USB-C Hub&lt;/div&gt;
+&lt;div style=&quot;font-size: 0.85rem; color: var(--fg-3);&quot;&gt;Qty: 2&lt;/div&gt;
+&lt;div style=&quot;font-weight: 600;&quot;&gt;$35.00&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Drawer-footer&quot; style=&quot;flex-direction: column; gap: var(--space-2);&quot;&gt;
+&lt;div style=&quot;display: flex; justify-content: space-between; width: 100%; font-weight: 600;&quot;&gt;
+&lt;span&gt;Total&lt;/span&gt;&lt;span&gt;$119.99&lt;/span&gt;
+&lt;/div&gt;
+&lt;button class=&quot;Button Button--primary&quot; style=&quot;width: 100%;&quot;&gt;Checkout&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="notification-panel">Notification Panel</h3>
+
+<div class="Preview" id="preview-b6zob61k1">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="position: relative; height: 300px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--r-m);">
+    <div class="Drawer Drawer--right Drawer--open Drawer--sm" style="position: absolute;">
+        <div class="Drawer-header">
+            <h3 class="Drawer-title">Notifications</h3>
+            <button class="Button Button--ghost Button--small">Mark all read</button>
+        </div>
+        <div class="Drawer-body" style="padding: 0;">
+            <div style="padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--bd); background: oklch(60% 0.15 250 / 0.05);">
+                <div style="font-weight: 500;">New comment on your PR</div>
+                <div style="font-size: 0.8rem; color: var(--fg-3);">2 minutes ago</div>
+            </div>
+            <div style="padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--bd);">
+                <div style="font-weight: 500;">Build succeeded</div>
+                <div style="font-size: 0.8rem; color: var(--fg-3);">1 hour ago</div>
+            </div>
+        </div>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;position: relative; height: 300px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--r-m);&quot;&gt;
+&lt;div class=&quot;Drawer Drawer--right Drawer--open Drawer--sm&quot; style=&quot;position: absolute;&quot;&gt;
+&lt;div class=&quot;Drawer-header&quot;&gt;
+&lt;h3 class=&quot;Drawer-title&quot;&gt;Notifications&lt;/h3&gt;
+&lt;button class=&quot;Button Button--ghost Button--small&quot;&gt;Mark all read&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Drawer-body&quot; style=&quot;padding: 0;&quot;&gt;
+&lt;div style=&quot;padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--bd); background: oklch(60% 0.15 250 / 0.05);&quot;&gt;
+&lt;div style=&quot;font-weight: 500;&quot;&gt;New comment on your PR&lt;/div&gt;
+&lt;div style=&quot;font-size: 0.8rem; color: var(--fg-3);&quot;&gt;2 minutes ago&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--bd);&quot;&gt;
+&lt;div style=&quot;font-weight: 500;&quot;&gt;Build succeeded&lt;/div&gt;
+&lt;div style=&quot;font-size: 0.8rem; color: var(--fg-3);&quot;&gt;1 hour ago&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="mobile-navigation-drawer">Mobile Navigation Drawer</h3>
+
+<div class="Preview" id="preview-7pg187bea">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="position: relative; height: 350px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--r-m);">
+    <div class="Drawer-backdrop Drawer-backdrop--visible"></div>
+    <div class="Drawer Drawer--left Drawer--open Drawer--sm" style="position: absolute;">
+        <div class="Drawer-header">
+            <span style="font-weight: 700; font-size: 1.1rem;">Menu</span>
+            <button class="Button Button--ghost Button--icon"><i class="ph ph-x"></i></button>
+        </div>
+        <nav class="Drawer-nav">
+            <a href="#" class="Drawer-navItem Drawer-navItem--active"><i class="ph ph-house"></i><span>Home</span></a>
+            <a href="#" class="Drawer-navItem"><i class="ph ph-package"></i><span>Products</span></a>
+            <a href="#" class="Drawer-navItem"><i class="ph ph-info"></i><span>About</span></a>
+            <a href="#" class="Drawer-navItem"><i class="ph ph-phone"></i><span>Contact</span></a>
+        </nav>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;position: relative; height: 350px; overflow: hidden; border: 1px solid var(--bd); border-radius: var(--r-m);&quot;&gt;
+&lt;div class=&quot;Drawer-backdrop Drawer-backdrop--visible&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Drawer Drawer--left Drawer--open Drawer--sm&quot; style=&quot;position: absolute;&quot;&gt;
+&lt;div class=&quot;Drawer-header&quot;&gt;
+&lt;span style=&quot;font-weight: 700; font-size: 1.1rem;&quot;&gt;Menu&lt;/span&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;nav class=&quot;Drawer-nav&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;Drawer-navItem Drawer-navItem--active&quot;&gt;&lt;i class=&quot;ph ph-house&quot;&gt;&lt;/i&gt;&lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Drawer-navItem&quot;&gt;&lt;i class=&quot;ph ph-package&quot;&gt;&lt;/i&gt;&lt;span&gt;Products&lt;/span&gt;&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Drawer-navItem&quot;&gt;&lt;i class=&quot;ph ph-info&quot;&gt;&lt;/i&gt;&lt;span&gt;About&lt;/span&gt;&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Drawer-navItem&quot;&gt;&lt;i class=&quot;ph ph-phone&quot;&gt;&lt;/i&gt;&lt;span&gt;Contact&lt;/span&gt;&lt;/a&gt;
+&lt;/nav&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="customization">Customization</h2>
+<p>Override drawer styles using CSS custom properties:</p>
+<pre><code class="language-css">/* Custom drawer width */
+.Drawer--custom {
+  width: 480px;
+}
+
+/* Custom backdrop opacity */
+.Drawer-backdrop--light {
+  background: oklch(0% 0 0 / 0.25);
+}
+
+/* Custom transition speed */
+.Drawer--slow {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Drawer with border instead of shadow */
+.Drawer--bordered {
+  box-shadow: none;
+  border-left: 1px solid var(--bd);
+}
+
+/* Custom nav item style */
+.Drawer-navItem--rounded {
+  border-radius: var(--r-m);
+  margin: 0 var(--space-2);
+}
+</code></pre>
+<h3 id="theme-variants">Theme Variants</h3>
+<pre><code class="language-css">/* Dark drawer */
+.Drawer--dark {
+  background: oklch(15% 0 0);
+  color: oklch(90% 0 0);
+}
+
+.Drawer--dark .Drawer-header {
+  border-bottom-color: oklch(25% 0 0);
+}
+
+.Drawer--dark .Drawer-navItem:hover {
+  background: oklch(20% 0 0);
+}
+</code></pre>
+<hr>
+<h2 id="api-reference">API Reference</h2>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">.Drawer</code></td><td class="ApiTable-desc">Base drawer container</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer--left</code></td><td class="ApiTable-desc">Slides in from the left edge</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer--right</code></td><td class="ApiTable-desc">Slides in from the right edge (default)</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer--top</code></td><td class="ApiTable-desc">Slides in from the top edge</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer--bottom</code></td><td class="ApiTable-desc">Slides in from the bottom edge</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer--open</code></td><td class="ApiTable-desc">Shows the drawer (applies transform)</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer--xs</code></td><td class="ApiTable-desc">Extra small width (240px)</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer--sm</code></td><td class="ApiTable-desc">Small width (320px)</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer--lg</code></td><td class="ApiTable-desc">Large width (560px)</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer--xl</code></td><td class="ApiTable-desc">Extra large width (720px)</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer--full</code></td><td class="ApiTable-desc">Full width (100%)</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer--persistent</code></td><td class="ApiTable-desc">In-page sidebar (no overlay)</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer--mini</code></td><td class="ApiTable-desc">Collapsed sidebar, expands on hover</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer-backdrop</code></td><td class="ApiTable-desc">Overlay behind the drawer</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer-backdrop--visible</code></td><td class="ApiTable-desc">Shows the backdrop</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer-header</code></td><td class="ApiTable-desc">Header with title and close button</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer-title</code></td><td class="ApiTable-desc">Title text in header</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer-body</code></td><td class="ApiTable-desc">Scrollable content area</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer-footer</code></td><td class="ApiTable-desc">Footer with actions</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer-nav</code></td><td class="ApiTable-desc">Navigation container</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer-navItem</code></td><td class="ApiTable-desc">Navigation link item</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer-navItem--active</code></td><td class="ApiTable-desc">Active navigation item</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer-navDivider</code></td><td class="ApiTable-desc">Divider between nav groups</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer-section</code></td><td class="ApiTable-desc">Content section (e.g., filters)</td></tr>
+<tr><td><code class="ApiTable-prop">.Drawer-sectionTitle</code></td><td class="ApiTable-desc">Section heading</td></tr>
+</tbody>
+</table>
+<hr>
+<h2 id="css-reference">CSS Reference</h2>
+<pre><code class="language-css">/* Backdrop overlay */
+.Drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: oklch(0% 0 0 / 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+  z-index: 998;
+}
+.Drawer-backdrop--visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Base drawer */
+.Drawer {
+  position: fixed;
+  background: var(--bg);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-xl);
+  transition: transform 0.3s ease;
+}
+
+/* Position variants */
+.Drawer--right {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 400px;
+  transform: translateX(100%);
+}
+.Drawer--left {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 400px;
+  transform: translateX(-100%);
+}
+.Drawer--top {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
+  transform: translateY(-100%);
+}
+.Drawer--bottom {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
+  transform: translateY(100%);
+}
+
+/* Open state */
+.Drawer--open {
+  transform: translate(0);
+}
+
+/* Sizes */
+.Drawer--xs { width: 240px; }
+.Drawer--sm { width: 320px; }
+.Drawer--lg { width: 560px; }
+.Drawer--xl { width: 720px; }
+.Drawer--full { width: 100%; }
+
+/* Persistent (in-page sidebar) */
+.Drawer--persistent {
+  position: relative;
+  box-shadow: none;
+  border-right: 1px solid var(--bd);
+  transform: none;
+}
+
+/* Mini variant */
+.Drawer--mini {
+  width: 64px;
+  transition: width 0.2s;
+}
+.Drawer--mini:hover {
+  width: 240px;
+}
+.Drawer--mini .Drawer-navItem span {
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+}
+.Drawer--mini:hover .Drawer-navItem span {
+  opacity: 1;
+  width: auto;
+}
+
+/* Header */
+.Drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--bd);
+}
+.Drawer-title {
+  margin: 0;
+  font-size: var(--text-lg);
+  font-weight: 600;
+}
+
+/* Body */
+.Drawer-body {
+  flex: 1;
+  padding: var(--space-4);
+  overflow-y: auto;
+}
+
+/* Footer */
+.Drawer-footer {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-top: 1px solid var(--bd);
+}
+
+/* Navigation */
+.Drawer-nav {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-2);
+}
+.Drawer-navItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  color: var(--fg-3);
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+.Drawer-navItem:hover {
+  background: var(--bg-s);
+  color: var(--fg);
+}
+.Drawer-navItem--active {
+  background: oklch(60% 0.15 250 / 0.1);
+  color: var(--accent);
+}
+.Drawer-navDivider {
+  height: 1px;
+  background: var(--bd);
+  margin: var(--space-2) 0;
+}
+
+/* Sections */
+.Drawer-section {
+  margin-bottom: var(--space-4);
+}
+.Drawer-sectionTitle {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+  color: var(--fg);
+}
+</code></pre>
+<h2 id="accessibility">Accessibility</h2>
+<ul>
+<li>Use <code>role=&quot;dialog&quot;</code> and <code>aria-modal=&quot;true&quot;</code> for modal drawers</li>
+<li>Add <code>aria-labelledby</code> pointing to the drawer title</li>
+<li>Trap focus within the drawer when open</li>
+<li>Return focus to the trigger element when closed</li>
+<li>Support Escape key to close the drawer</li>
+<li>Ensure backdrop click closes the drawer</li>
+<li>Use <code>aria-hidden=&quot;true&quot;</code> on main content when drawer is open</li>
+<li>Provide a visible close button with <code>aria-label=&quot;Close&quot;</code></li>
+<li>For navigation drawers, use <code>nav</code> element with <code>aria-label</code></li>
+</ul>
+<h3 id="keyboard-support">Keyboard Support</h3>
+<div class="Table-container"><table class="Table">
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Escape</td>
+<td>Close the drawer</td>
+</tr>
+<tr>
+<td>Tab</td>
+<td>Navigate between interactive elements within the drawer</td>
+</tr>
+<tr>
+<td>Shift+Tab</td>
+<td>Navigate backwards through drawer elements</td>
+</tr>
+<tr>
+<td>Enter</td>
+<td>Activate focused button or link</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="aria-example">ARIA Example</h3>
+<pre><code class="language-html">&lt;div class=&quot;Drawer Drawer--right&quot; role=&quot;dialog&quot; aria-modal=&quot;true&quot; aria-labelledby=&quot;drawer-title&quot;&gt;
+    &lt;div class=&quot;Drawer-header&quot;&gt;
+        &lt;h3 class=&quot;Drawer-title&quot; id=&quot;drawer-title&quot;&gt;Settings&lt;/h3&gt;
+        &lt;button class=&quot;Button Button--ghost Button--icon&quot; aria-label=&quot;Close drawer&quot;&gt;
+            &lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;Drawer-body&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="do">Do</h3>
+<ul>
+<li>✓ <strong>Include a visible close button</strong> — Never rely solely on backdrop click or Escape</li>
+<li>✓ <strong>Trap focus within modal drawers</strong> — Prevent tabbing to hidden content behind</li>
+<li>✓ <strong>Use backdrop for modal drawers</strong> — Clearly indicates overlay context</li>
+<li>✓ <strong>Return focus to trigger</strong> — When the drawer closes, focus returns to the button that opened it</li>
+<li>✓ <strong>Keep drawer content focused</strong> — One task per drawer (filters, nav, or details)</li>
+<li>✓ <strong>Use persistent drawers for primary nav</strong> — Sidebar navigation should not require reopening</li>
+</ul>
+<h3 id="don-t">Don’t</h3>
+<ul>
+<li>✗ <strong>Stack multiple drawers</strong> — One drawer at a time; close before opening another</li>
+<li>✗ <strong>Put critical content only in drawers</strong> — Users may miss it; use inline for essential info</li>
+<li>✗ <strong>Use drawers for simple confirmations</strong> — A dialog or toast is more appropriate</li>
+<li>✗ <strong>Forget body scroll lock</strong> — Background should not scroll when a modal drawer is open</li>
+<li>✗ <strong>Auto-open drawers on page load</strong> — Let users trigger drawers intentionally</li>
+<li>✗ <strong>Omit ARIA attributes</strong> — <code>role=&quot;dialog&quot;</code> and <code>aria-modal=&quot;true&quot;</code> are essential for accessibility</li>
+</ul>
+
+                </article>
+
+                <footer class="page-footer">
+                    <p>Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

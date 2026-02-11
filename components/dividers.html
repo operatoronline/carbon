@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Dividers | Carbon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/bold/style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Floating Pill Nav (Mobile: bottom, Desktop: top) -->
+        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation">
+            <a href="../index.html" class="fnav-btn" data-section="home" aria-label="Home">
+                <i class="ph-bold ph-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="../tokens/colors.html" class="fnav-btn" data-section="tokens" aria-label="Tokens">
+                <i class="ph-bold ph-palette"></i>
+                <span>Tokens</span>
+            </a>
+            <a href="../components/buttons.html" class="fnav-btn" data-section="components" aria-label="Components">
+                <i class="ph-bold ph-stack"></i>
+                <span>Components</span>
+            </a>
+            <a href="../patterns/layouts.html" class="fnav-btn" data-section="patterns" aria-label="Patterns">
+                <i class="ph-bold ph-grid-four"></i>
+                <span>Patterns</span>
+            </a>
+            <div class="fnav-sep"></div>
+            <button class="fnav-btn" id="search-toggle" aria-label="Search">
+                <i class="ph ph-magnifying-glass"></i>
+            </button>
+            <button class="fnav-btn" id="theme-btn" aria-label="Toggle theme">
+                <i class="ph ph-moon"></i>
+            </button>
+        </nav>
+
+        <!-- Glassmorphism Top Bar (Desktop only) -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <a href="../index.html" class="logo">
+                    <i class="ph ph-intersect"></i>
+                    <span>Carbon</span>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <div class="search-container" id="search-container">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search components..." aria-label="Search" autocomplete="off">
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <main class="main-content">
+                <header class="page-header">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="../index.html">Carbon</a> <span class="sep">/</span> <span>Components</span> <span class="sep">/</span> <span>Dividers</span>
+                    </nav>
+                    <h1><em>Dividers</em></h1>
+                </header>
+                
+                <article class="prose">
+                    <h1>Dividers</h1>
+<p>Dividers separate content into distinct sections. They can be horizontal or vertical, with optional labels.</p>
+<hr>
+<h2 id="horizontal-divider">Horizontal Divider</h2>
+<p>A simple horizontal line to separate content blocks.</p>
+
+<div class="Preview" id="preview-uni7y9ihg">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Layout-stack">
+        <p>Content above the divider. This could be any block of text or components.</p>
+        <hr class="Divider">
+        <p>Content below the divider. Notice the clean visual separation.</p>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Layout-stack&quot;&gt;
+&lt;p&gt;Content above the divider. This could be any block of text or components.&lt;/p&gt;
+&lt;hr class=&quot;Divider&quot;&gt;
+&lt;p&gt;Content below the divider. Notice the clean visual separation.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;hr class=&quot;Divider&quot;&gt;
+</code></pre>
+<hr>
+<h2 id="with-label">With Label</h2>
+<p>Add a centered label to provide context.</p>
+
+<div class="Preview" id="preview-hqtihsssq">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Layout-stack">
+        <p>First section content goes here.</p>
+        <div class="Divider Divider--label">
+            <span>Or continue with</span>
+        </div>
+        <p>Second section content goes here.</p>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Layout-stack&quot;&gt;
+&lt;p&gt;First section content goes here.&lt;/p&gt;
+&lt;div class=&quot;Divider Divider--label&quot;&gt;
+&lt;span&gt;Or continue with&lt;/span&gt;
+&lt;/div&gt;
+&lt;p&gt;Second section content goes here.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Divider Divider--label&quot;&gt;
+    &lt;span&gt;Or continue with&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="label-positions">Label Positions</h3>
+
+<div class="Preview" id="preview-slwvxslv0">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Layout-stack Layout-stack--loose">
+        <div>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Left</small>
+            <div class="Divider Divider--label Divider--label-left">
+                <span>Section</span>
+            </div>
+        </div>
+        <div>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Center (default)</small>
+            <div class="Divider Divider--label">
+                <span>Section</span>
+            </div>
+        </div>
+        <div>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Right</small>
+            <div class="Divider Divider--label Divider--label-right">
+                <span>Section</span>
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Layout-stack Layout-stack--loose&quot;&gt;
+&lt;div&gt;
+&lt;small style=&quot;color: var(--fg-3); display: block; margin-bottom: var(--space-2);&quot;&gt;Left&lt;/small&gt;
+&lt;div class=&quot;Divider Divider--label Divider--label-left&quot;&gt;
+&lt;span&gt;Section&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;small style=&quot;color: var(--fg-3); display: block; margin-bottom: var(--space-2);&quot;&gt;Center (default)&lt;/small&gt;
+&lt;div class=&quot;Divider Divider--label&quot;&gt;
+&lt;span&gt;Section&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;small style=&quot;color: var(--fg-3); display: block; margin-bottom: var(--space-2);&quot;&gt;Right&lt;/small&gt;
+&lt;div class=&quot;Divider Divider--label Divider--label-right&quot;&gt;
+&lt;span&gt;Section&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Divider Divider--label Divider--label-left&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;Divider Divider--label&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;Divider Divider--label Divider--label-right&quot;&gt;...&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="vertical-divider">Vertical Divider</h2>
+<p>Separate inline or flex items horizontally.</p>
+
+<div class="Preview" id="preview-xbdp1dx10">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; align-items: center; gap: var(--space-4);">
+        <span>Home</span>
+        <span class="Divider Divider--vertical"></span>
+        <span>Products</span>
+        <span class="Divider Divider--vertical"></span>
+        <span>About</span>
+        <span class="Divider Divider--vertical"></span>
+        <span>Contact</span>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-4);&quot;&gt;
+&lt;span&gt;Home&lt;/span&gt;
+&lt;span class=&quot;Divider Divider--vertical&quot;&gt;&lt;/span&gt;
+&lt;span&gt;Products&lt;/span&gt;
+&lt;span class=&quot;Divider Divider--vertical&quot;&gt;&lt;/span&gt;
+&lt;span&gt;About&lt;/span&gt;
+&lt;span class=&quot;Divider Divider--vertical&quot;&gt;&lt;/span&gt;
+&lt;span&gt;Contact&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-4);&quot;&gt;
+    &lt;span&gt;Home&lt;/span&gt;
+    &lt;span class=&quot;Divider Divider--vertical&quot;&gt;&lt;/span&gt;
+    &lt;span&gt;Products&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="spacing-variants">Spacing Variants</h2>
+<p>Control the margin around dividers.</p>
+
+<div class="Preview" id="preview-9xi1g156a">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="background: var(--bg-s); padding: var(--space-4); border-radius: var(--r-m);">
+        <p>Tight spacing below:</p>
+        <hr class="Divider Divider--tight">
+        <p>Default spacing below:</p>
+        <hr class="Divider">
+        <p>Loose spacing below:</p>
+        <hr class="Divider Divider--loose">
+        <p>End of content.</p>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;background: var(--bg-s); padding: var(--space-4); border-radius: var(--r-m);&quot;&gt;
+&lt;p&gt;Tight spacing below:&lt;/p&gt;
+&lt;hr class=&quot;Divider Divider--tight&quot;&gt;
+&lt;p&gt;Default spacing below:&lt;/p&gt;
+&lt;hr class=&quot;Divider&quot;&gt;
+&lt;p&gt;Loose spacing below:&lt;/p&gt;
+&lt;hr class=&quot;Divider Divider--loose&quot;&gt;
+&lt;p&gt;End of content.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;hr class=&quot;Divider Divider--tight&quot;&gt;  &lt;!-- 8px margin --&gt;
+&lt;hr class=&quot;Divider&quot;&gt;                  &lt;!-- 16px margin --&gt;
+&lt;hr class=&quot;Divider Divider--loose&quot;&gt;  &lt;!-- 32px margin --&gt;
+</code></pre>
+<hr>
+<h2 id="style-variants">Style Variants</h2>
+
+<div class="Preview" id="preview-bah5jxo3d">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Layout-stack Layout-stack--loose">
+        <div>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Solid (default)</small>
+            <hr class="Divider">
+        </div>
+        <div>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Dashed</small>
+            <hr class="Divider Divider--dashed">
+        </div>
+        <div>
+            <small style="color: var(--fg-3); display: block; margin-bottom: var(--space-2);">Dotted</small>
+            <hr class="Divider Divider--dotted">
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Layout-stack Layout-stack--loose&quot;&gt;
+&lt;div&gt;
+&lt;small style=&quot;color: var(--fg-3); display: block; margin-bottom: var(--space-2);&quot;&gt;Solid (default)&lt;/small&gt;
+&lt;hr class=&quot;Divider&quot;&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;small style=&quot;color: var(--fg-3); display: block; margin-bottom: var(--space-2);&quot;&gt;Dashed&lt;/small&gt;
+&lt;hr class=&quot;Divider Divider--dashed&quot;&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;small style=&quot;color: var(--fg-3); display: block; margin-bottom: var(--space-2);&quot;&gt;Dotted&lt;/small&gt;
+&lt;hr class=&quot;Divider Divider--dotted&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;hr class=&quot;Divider&quot;&gt;              &lt;!-- Solid --&gt;
+&lt;hr class=&quot;Divider Divider--dashed&quot;&gt;
+&lt;hr class=&quot;Divider Divider--dotted&quot;&gt;
+</code></pre>
+<hr>
+<h2 id="in-context">In Context</h2>
+<h3 id="card-sections">Card Sections</h3>
+
+<div class="Preview" id="preview-bki72kk85">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Card" style="max-width: 320px;">
+        <div class="Card-body">
+            <div class="Card-title">Order Summary</div>
+            <div class="Card-description">Review your items</div>
+        </div>
+        <hr class="Divider" style="margin: 0;">
+        <div style="padding: var(--space-4);">
+            <div class="Layout-split" style="margin-bottom: var(--space-2);">
+                <span>Subtotal</span>
+                <span>$99.00</span>
+            </div>
+            <div class="Layout-split" style="margin-bottom: var(--space-2);">
+                <span>Shipping</span>
+                <span>$5.00</span>
+            </div>
+            <div class="Layout-split" style="color: var(--fg-3);">
+                <span>Tax</span>
+                <span>$8.32</span>
+            </div>
+        </div>
+        <hr class="Divider" style="margin: 0;">
+        <div style="padding: var(--space-4);">
+            <div class="Layout-split" style="font-weight: 600;">
+                <span>Total</span>
+                <span>$112.32</span>
+            </div>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Card&quot; style=&quot;max-width: 320px;&quot;&gt;
+&lt;div class=&quot;Card-body&quot;&gt;
+&lt;div class=&quot;Card-title&quot;&gt;Order Summary&lt;/div&gt;
+&lt;div class=&quot;Card-description&quot;&gt;Review your items&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr class=&quot;Divider&quot; style=&quot;margin: 0;&quot;&gt;
+&lt;div style=&quot;padding: var(--space-4);&quot;&gt;
+&lt;div class=&quot;Layout-split&quot; style=&quot;margin-bottom: var(--space-2);&quot;&gt;
+&lt;span&gt;Subtotal&lt;/span&gt;
+&lt;span&gt;$99.00&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Layout-split&quot; style=&quot;margin-bottom: var(--space-2);&quot;&gt;
+&lt;span&gt;Shipping&lt;/span&gt;
+&lt;span&gt;$5.00&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Layout-split&quot; style=&quot;color: var(--fg-3);&quot;&gt;
+&lt;span&gt;Tax&lt;/span&gt;
+&lt;span&gt;$8.32&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr class=&quot;Divider&quot; style=&quot;margin: 0;&quot;&gt;
+&lt;div style=&quot;padding: var(--space-4);&quot;&gt;
+&lt;div class=&quot;Layout-split&quot; style=&quot;font-weight: 600;&quot;&gt;
+&lt;span&gt;Total&lt;/span&gt;
+&lt;span&gt;$112.32&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="menu-sections">Menu Sections</h3>
+
+<div class="Preview" id="preview-0afz86tfo">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="width: 200px; background: var(--bg); border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-1) 0;">
+        <a href="#" style="display: block; padding: var(--space-2) var(--space-3); text-decoration: none; color: var(--fg);">Profile</a>
+        <a href="#" style="display: block; padding: var(--space-2) var(--space-3); text-decoration: none; color: var(--fg);">Settings</a>
+        <a href="#" style="display: block; padding: var(--space-2) var(--space-3); text-decoration: none; color: var(--fg);">Billing</a>
+        <hr class="Divider Divider--tight" style="margin-left: var(--space-3); margin-right: var(--space-3);">
+        <a href="#" style="display: block; padding: var(--space-2) var(--space-3); text-decoration: none; color: oklch(55% 0.2 25);">Sign Out</a>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;width: 200px; background: var(--bg); border: 1px solid var(--bd); border-radius: var(--r-m); padding: var(--space-1) 0;&quot;&gt;
+&lt;a href=&quot;#&quot; style=&quot;display: block; padding: var(--space-2) var(--space-3); text-decoration: none; color: var(--fg);&quot;&gt;Profile&lt;/a&gt;
+&lt;a href=&quot;#&quot; style=&quot;display: block; padding: var(--space-2) var(--space-3); text-decoration: none; color: var(--fg);&quot;&gt;Settings&lt;/a&gt;
+&lt;a href=&quot;#&quot; style=&quot;display: block; padding: var(--space-2) var(--space-3); text-decoration: none; color: var(--fg);&quot;&gt;Billing&lt;/a&gt;
+&lt;hr class=&quot;Divider Divider--tight&quot; style=&quot;margin-left: var(--space-3); margin-right: var(--space-3);&quot;&gt;
+&lt;a href=&quot;#&quot; style=&quot;display: block; padding: var(--space-2) var(--space-3); text-decoration: none; color: oklch(55% 0.2 25);&quot;&gt;Sign Out&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="login-form">Login Form</h3>
+
+<div class="Preview" id="preview-7bc96t5ip">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="max-width: 320px;">
+        <div class="Layout-stack Layout-stack--tight" style="margin-bottom: var(--space-4);">
+            <button class="Button" style="width: 100%;">
+                <i class="ph ph-google-logo"></i>
+                Continue with Google
+            </button>
+            <button class="Button" style="width: 100%;">
+                <i class="ph ph-apple-logo"></i>
+                Continue with Apple
+            </button>
+        </div>
+        <div class="Divider Divider--label">
+            <span>or</span>
+        </div>
+        <div class="Layout-stack Layout-stack--tight" style="margin-top: var(--space-4);">
+            <input type="email" class="Input" placeholder="Email">
+            <input type="password" class="Input" placeholder="Password">
+            <button class="Button Button--primary" style="width: 100%;">Sign In</button>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;max-width: 320px;&quot;&gt;
+&lt;div class=&quot;Layout-stack Layout-stack--tight&quot; style=&quot;margin-bottom: var(--space-4);&quot;&gt;
+&lt;button class=&quot;Button&quot; style=&quot;width: 100%;&quot;&gt;
+&lt;i class=&quot;ph ph-google-logo&quot;&gt;&lt;/i&gt;
+Continue with Google
+&lt;/button&gt;
+&lt;button class=&quot;Button&quot; style=&quot;width: 100%;&quot;&gt;
+&lt;i class=&quot;ph ph-apple-logo&quot;&gt;&lt;/i&gt;
+Continue with Apple
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Divider Divider--label&quot;&gt;
+&lt;span&gt;or&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Layout-stack Layout-stack--tight&quot; style=&quot;margin-top: var(--space-4);&quot;&gt;
+&lt;input type=&quot;email&quot; class=&quot;Input&quot; placeholder=&quot;Email&quot;&gt;
+&lt;input type=&quot;password&quot; class=&quot;Input&quot; placeholder=&quot;Password&quot;&gt;
+&lt;button class=&quot;Button Button--primary&quot; style=&quot;width: 100%;&quot;&gt;Sign In&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="common-patterns">Common Patterns</h2>
+<h3 id="section-divider-in-a-settings-page">Section Divider in a Settings Page</h3>
+
+<div class="Preview" id="preview-qa0qxobor">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="max-width: 400px;">
+    <div style="padding: var(--space-3) 0;">
+        <h4 style="margin: 0;">Account</h4>
+        <p style="color: var(--fg-3); font-size: 0.85rem;">Manage your account settings</p>
+    </div>
+    <hr class="Divider">
+    <div style="padding: var(--space-3) 0;">
+        <h4 style="margin: 0;">Notifications</h4>
+        <p style="color: var(--fg-3); font-size: 0.85rem;">Configure alert preferences</p>
+    </div>
+    <hr class="Divider">
+    <div style="padding: var(--space-3) 0;">
+        <h4 style="margin: 0;">Privacy</h4>
+        <p style="color: var(--fg-3); font-size: 0.85rem;">Control data sharing</p>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;max-width: 400px;&quot;&gt;
+&lt;div style=&quot;padding: var(--space-3) 0;&quot;&gt;
+&lt;h4 style=&quot;margin: 0;&quot;&gt;Account&lt;/h4&gt;
+&lt;p style=&quot;color: var(--fg-3); font-size: 0.85rem;&quot;&gt;Manage your account settings&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr class=&quot;Divider&quot;&gt;
+&lt;div style=&quot;padding: var(--space-3) 0;&quot;&gt;
+&lt;h4 style=&quot;margin: 0;&quot;&gt;Notifications&lt;/h4&gt;
+&lt;p style=&quot;color: var(--fg-3); font-size: 0.85rem;&quot;&gt;Configure alert preferences&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr class=&quot;Divider&quot;&gt;
+&lt;div style=&quot;padding: var(--space-3) 0;&quot;&gt;
+&lt;h4 style=&quot;margin: 0;&quot;&gt;Privacy&lt;/h4&gt;
+&lt;p style=&quot;color: var(--fg-3); font-size: 0.85rem;&quot;&gt;Control data sharing&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="toolbar-separator">Toolbar Separator</h3>
+
+<div class="Preview" id="preview-o2wt7vecx">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; align-items: center; gap: var(--space-2); padding: var(--space-2); border: 1px solid var(--bd); border-radius: var(--r-s); width: fit-content;">
+    <button class="Button Button--ghost Button--icon Button--small"><i class="ph ph-text-b"></i></button>
+    <button class="Button Button--ghost Button--icon Button--small"><i class="ph ph-text-italic"></i></button>
+    <button class="Button Button--ghost Button--icon Button--small"><i class="ph ph-text-underline"></i></button>
+    <span class="Divider Divider--vertical"></span>
+    <button class="Button Button--ghost Button--icon Button--small"><i class="ph ph-list-bullets"></i></button>
+    <button class="Button Button--ghost Button--icon Button--small"><i class="ph ph-list-numbers"></i></button>
+    <span class="Divider Divider--vertical"></span>
+    <button class="Button Button--ghost Button--icon Button--small"><i class="ph ph-link"></i></button>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-2); padding: var(--space-2); border: 1px solid var(--bd); border-radius: var(--r-s); width: fit-content;&quot;&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon Button--small&quot;&gt;&lt;i class=&quot;ph ph-text-b&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon Button--small&quot;&gt;&lt;i class=&quot;ph ph-text-italic&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon Button--small&quot;&gt;&lt;i class=&quot;ph ph-text-underline&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;span class=&quot;Divider Divider--vertical&quot;&gt;&lt;/span&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon Button--small&quot;&gt;&lt;i class=&quot;ph ph-list-bullets&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon Button--small&quot;&gt;&lt;i class=&quot;ph ph-list-numbers&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;span class=&quot;Divider Divider--vertical&quot;&gt;&lt;/span&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon Button--small&quot;&gt;&lt;i class=&quot;ph ph-link&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="footer-with-divider">Footer with Divider</h3>
+
+<div class="Preview" id="preview-fr52a5kax">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="max-width: 500px;">
+    <hr class="Divider Divider--loose">
+    <div style="display: flex; justify-content: space-between; color: var(--fg-3); font-size: 0.85rem;">
+        <span>© 2026 Acme Corp</span>
+        <div style="display: flex; gap: var(--space-3);">
+            <a href="#" style="color: var(--fg-3);">Privacy</a>
+            <span class="Divider Divider--vertical"></span>
+            <a href="#" style="color: var(--fg-3);">Terms</a>
+            <span class="Divider Divider--vertical"></span>
+            <a href="#" style="color: var(--fg-3);">Contact</a>
+        </div>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;max-width: 500px;&quot;&gt;
+&lt;hr class=&quot;Divider Divider--loose&quot;&gt;
+&lt;div style=&quot;display: flex; justify-content: space-between; color: var(--fg-3); font-size: 0.85rem;&quot;&gt;
+&lt;span&gt;© 2026 Acme Corp&lt;/span&gt;
+&lt;div style=&quot;display: flex; gap: var(--space-3);&quot;&gt;
+&lt;a href=&quot;#&quot; style=&quot;color: var(--fg-3);&quot;&gt;Privacy&lt;/a&gt;
+&lt;span class=&quot;Divider Divider--vertical&quot;&gt;&lt;/span&gt;
+&lt;a href=&quot;#&quot; style=&quot;color: var(--fg-3);&quot;&gt;Terms&lt;/a&gt;
+&lt;span class=&quot;Divider Divider--vertical&quot;&gt;&lt;/span&gt;
+&lt;a href=&quot;#&quot; style=&quot;color: var(--fg-3);&quot;&gt;Contact&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="customization">Customization</h2>
+<p>Override divider styles using CSS custom properties:</p>
+<pre><code class="language-css">/* Custom divider color */
+.Divider--accent {
+  border-top-color: var(--accent);
+}
+
+/* Thicker divider */
+.Divider--thick {
+  border-top-width: 3px;
+}
+
+/* Gradient divider */
+.Divider--gradient {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--bd), transparent);
+}
+
+/* Custom label styling */
+.Divider--label-fancy span {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.75rem;
+  color: var(--accent);
+}
+</code></pre>
+<h3 id="spacing-overrides">Spacing Overrides</h3>
+<pre><code class="language-css">/* Custom vertical divider height */
+.Divider--vertical-tall {
+  height: 2em;
+}
+
+/* Inset divider (indented) */
+.Divider--inset {
+  margin-left: var(--space-8);
+}
+</code></pre>
+<hr>
+<h2 id="api-reference">API Reference</h2>
+<h3 id="classes">Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">.Divider</code></td><td class="ApiTable-desc">Base horizontal divider</td></tr>
+<tr><td><code class="ApiTable-prop">.Divider--tight</code></td><td class="ApiTable-desc">Reduced margin (8px)</td></tr>
+<tr><td><code class="ApiTable-prop">.Divider--loose</code></td><td class="ApiTable-desc">Increased margin (32px)</td></tr>
+<tr><td><code class="ApiTable-prop">.Divider--dashed</code></td><td class="ApiTable-desc">Dashed line style</td></tr>
+<tr><td><code class="ApiTable-prop">.Divider--dotted</code></td><td class="ApiTable-desc">Dotted line style</td></tr>
+<tr><td><code class="ApiTable-prop">.Divider--vertical</code></td><td class="ApiTable-desc">Vertical separator (inline)</td></tr>
+<tr><td><code class="ApiTable-prop">.Divider--label</code></td><td class="ApiTable-desc">Divider with centered text</td></tr>
+<tr><td><code class="ApiTable-prop">.Divider--label-left</code></td><td class="ApiTable-desc">Label aligned left</td></tr>
+<tr><td><code class="ApiTable-prop">.Divider--label-right</code></td><td class="ApiTable-desc">Label aligned right</td></tr>
+</tbody>
+</table>
+<h3 id="elements">Elements</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Element</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">&lt;hr&gt;</code></td><td class="ApiTable-desc">Semantic horizontal divider</td></tr>
+<tr><td><code class="ApiTable-prop">&lt;div&gt;</code></td><td class="ApiTable-desc">Use for labeled dividers (contains <code>&lt;span&gt;</code>)</td></tr>
+<tr><td><code class="ApiTable-prop">&lt;span&gt;</code></td><td class="ApiTable-desc">Vertical dividers and label text</td></tr>
+</tbody>
+</table>
+<h3 id="attributes">Attributes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Attribute</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">role="presentation"</code></td><td class="ApiTable-desc">For decorative dividers</td></tr>
+<tr><td><code class="ApiTable-prop">role="separator"</code></td><td class="ApiTable-desc">For semantic labeled dividers</td></tr>
+<tr><td><code class="ApiTable-prop">aria-hidden="true"</code></td><td class="ApiTable-desc">Alternative for decorative dividers</td></tr>
+</tbody>
+</table>
+<hr>
+<h2 id="css-reference">CSS Reference</h2>
+<pre><code class="language-css">/* Base horizontal divider */
+.Divider {
+  border: none;
+  border-top: 1px solid var(--bd);
+  margin: var(--space-4) 0;
+}
+
+/* Spacing variants */
+.Divider--tight { margin: var(--space-2) 0; }
+.Divider--loose { margin: var(--space-8) 0; }
+
+/* Style variants */
+.Divider--dashed { border-top-style: dashed; }
+.Divider--dotted { border-top-style: dotted; }
+
+/* Vertical divider */
+.Divider--vertical {
+  display: inline-block;
+  width: 1px;
+  height: 1em;
+  background-color: var(--bd);
+  vertical-align: middle;
+}
+
+/* Labeled divider */
+.Divider--label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin: var(--space-4) 0;
+  border: none;
+}
+
+.Divider--label::before,
+.Divider--label::after {
+  content: &quot;&quot;;
+  flex: 1;
+  height: 1px;
+  background-color: var(--bd);
+}
+
+.Divider--label span {
+  font-size: 0.85rem;
+  color: var(--fg-3);
+  white-space: nowrap;
+}
+
+/* Label positions */
+.Divider--label-left::before { flex: 0 0 24px; }
+.Divider--label-right::after { flex: 0 0 24px; }
+</code></pre>
+<hr>
+<h2 id="accessibility">Accessibility</h2>
+<ul>
+<li>Use <code>&lt;hr&gt;</code> for semantic dividers — screen readers announce it as a separator</li>
+<li>Decorative dividers should use <code>role=&quot;presentation&quot;</code> or <code>aria-hidden=&quot;true&quot;</code></li>
+<li>Labeled dividers provide additional context for all users</li>
+</ul>
+<h3 id="keyboard-support">Keyboard Support</h3>
+<div class="Table-container"><table class="Table">
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N/A</td>
+<td>Dividers are not interactive and receive no keyboard focus</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="screen-reader-guidance">Screen Reader Guidance</h3>
+<pre><code class="language-html">&lt;!-- Semantic divider --&gt;
+&lt;hr class=&quot;Divider&quot;&gt;
+
+&lt;!-- Decorative divider --&gt;
+&lt;hr class=&quot;Divider&quot; role=&quot;presentation&quot;&gt;
+
+&lt;!-- Labeled divider (semantic) --&gt;
+&lt;div class=&quot;Divider Divider--label&quot; role=&quot;separator&quot;&gt;
+    &lt;span&gt;Section&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="do">Do</h3>
+<ul>
+<li>✓ <strong>Use sparingly</strong> — Dividers add visual weight; whitespace often suffices</li>
+<li>✓ <strong>Group related content</strong> — Dividers separate distinct sections, not every element</li>
+<li>✓ <strong>Match spacing to hierarchy</strong> — Use <code>--loose</code> for major sections, <code>--tight</code> for minor</li>
+<li>✓ <strong>Use labels for clarity</strong> — “Or” in login forms, section names in settings</li>
+<li>✓ <strong>Use semantic <code>&lt;hr&gt;</code></strong> — Provides meaning for screen readers</li>
+<li>✓ <strong>Be consistent</strong> — Pick one style (solid/dashed/dotted) and stick with it</li>
+</ul>
+<h3 id="don-t">Don’t</h3>
+<ul>
+<li>✗ <strong>Overuse dividers</strong> — More than 3-4 visible dividers crowds the interface</li>
+<li>✗ <strong>Use between every element</strong> — Creates visual noise and defeats the purpose</li>
+<li>✗ <strong>Mix styles randomly</strong> — Inconsistent dashed/dotted/solid looks messy</li>
+<li>✗ <strong>Use dividers instead of spacing</strong> — Margins and padding are lighter alternatives</li>
+<li>✗ <strong>Forget vertical dividers in flex layouts</strong> — They need explicit height to render</li>
+<li>✗ <strong>Add dividers inside tight components</strong> — Cards and chips don’t need extra lines</li>
+</ul>
+
+                </article>
+
+                <footer class="page-footer">
+                    <p>Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

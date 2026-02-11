@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Buttons | Carbon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/bold/style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Floating Pill Nav (Mobile: bottom, Desktop: top) -->
+        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation">
+            <a href="../index.html" class="fnav-btn" data-section="home" aria-label="Home">
+                <i class="ph-bold ph-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="../tokens/colors.html" class="fnav-btn" data-section="tokens" aria-label="Tokens">
+                <i class="ph-bold ph-palette"></i>
+                <span>Tokens</span>
+            </a>
+            <a href="../components/buttons.html" class="fnav-btn" data-section="components" aria-label="Components">
+                <i class="ph-bold ph-stack"></i>
+                <span>Components</span>
+            </a>
+            <a href="../patterns/layouts.html" class="fnav-btn" data-section="patterns" aria-label="Patterns">
+                <i class="ph-bold ph-grid-four"></i>
+                <span>Patterns</span>
+            </a>
+            <div class="fnav-sep"></div>
+            <button class="fnav-btn" id="search-toggle" aria-label="Search">
+                <i class="ph ph-magnifying-glass"></i>
+            </button>
+            <button class="fnav-btn" id="theme-btn" aria-label="Toggle theme">
+                <i class="ph ph-moon"></i>
+            </button>
+        </nav>
+
+        <!-- Glassmorphism Top Bar (Desktop only) -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <a href="../index.html" class="logo">
+                    <i class="ph ph-intersect"></i>
+                    <span>Carbon</span>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <div class="search-container" id="search-container">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search components..." aria-label="Search" autocomplete="off">
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <main class="main-content">
+                <header class="page-header">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="../index.html">Carbon</a> <span class="sep">/</span> <span>Components</span> <span class="sep">/</span> <span>Buttons</span>
+                    </nav>
+                    <h1><em>Buttons</em></h1>
+                </header>
+                
+                <article class="prose">
+                    <h1>Buttons</h1>
+<p>Buttons allow users to take actions and make choices with a single tap. They communicate actions that users can take and are typically placed throughout your UI.</p>
+<hr>
+<h2 id="usage">Usage</h2>
+<p>The base <code>.Button</code> class provides core button styling. Add variant classes to change appearance.</p>
+
+<div class="Preview" id="preview-6qj7jv2v9">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><button class="Button Button--primary">Primary Action</button>
+<button class="Button Button--secondary">Secondary</button>
+<button class="Button Button--tertiary">Cancel</button></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;button class=&quot;Button Button--primary&quot;&gt;Primary Action&lt;/button&gt;
+&lt;button class=&quot;Button Button--secondary&quot;&gt;Secondary&lt;/button&gt;
+&lt;button class=&quot;Button Button--tertiary&quot;&gt;Cancel&lt;/button&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="variants">Variants</h2>
+<h3 id="all-variants">All Variants</h3>
+
+<div class="Preview" id="preview-i043xkaul">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><button class="Button Button--primary">Primary</button>
+<button class="Button Button--secondary">Secondary</button>
+<button class="Button Button--tertiary">Tertiary</button>
+<button class="Button Button--ghost">Ghost</button>
+<button class="Button Button--outline">Outline</button>
+<button class="Button Button--danger">Danger</button></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;button class=&quot;Button Button--primary&quot;&gt;Primary&lt;/button&gt;
+&lt;button class=&quot;Button Button--secondary&quot;&gt;Secondary&lt;/button&gt;
+&lt;button class=&quot;Button Button--tertiary&quot;&gt;Tertiary&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost&quot;&gt;Ghost&lt;/button&gt;
+&lt;button class=&quot;Button Button--outline&quot;&gt;Outline&lt;/button&gt;
+&lt;button class=&quot;Button Button--danger&quot;&gt;Danger&lt;/button&gt;</code></pre>
+    </div>
+</div><h3 id="primary">Primary</h3>
+<p>The primary button is for the main action on a page. Use sparingly — one primary action per section.</p>
+
+<div class="Preview" id="preview-kpt2td95i">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><button class="Button Button--primary">Get Started</button></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;button class=&quot;Button Button--primary&quot;&gt;Get Started&lt;/button&gt;</code></pre>
+    </div>
+</div><h3 id="secondary">Secondary</h3>
+<p>Secondary buttons are for alternative actions. They pair well with primary buttons.</p>
+
+<div class="Preview" id="preview-frqpk8mo7">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><button class="Button Button--secondary">Learn More</button></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;button class=&quot;Button Button--secondary&quot;&gt;Learn More&lt;/button&gt;</code></pre>
+    </div>
+</div><h3 id="tertiary">Tertiary</h3>
+<p>Tertiary buttons are for less prominent actions. Use for actions like “Cancel” or “Back”.</p>
+
+<div class="Preview" id="preview-gjmxksbcf">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><button class="Button Button--tertiary">Cancel</button></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;button class=&quot;Button Button--tertiary&quot;&gt;Cancel&lt;/button&gt;</code></pre>
+    </div>
+</div><h3 id="ghost">Ghost</h3>
+<p>Ghost buttons are minimal, blending into the background until hovered.</p>
+
+<div class="Preview" id="preview-09gm8eu4w">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><button class="Button Button--ghost">View All</button></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;button class=&quot;Button Button--ghost&quot;&gt;View All&lt;/button&gt;</code></pre>
+    </div>
+</div><h3 id="outline">Outline</h3>
+<p>Outline buttons have a border but no fill. Good for secondary actions with more visual weight than ghost.</p>
+
+<div class="Preview" id="preview-ykmy0tx19">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><button class="Button Button--outline">Download</button></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;button class=&quot;Button Button--outline&quot;&gt;Download&lt;/button&gt;</code></pre>
+    </div>
+</div><h3 id="danger">Danger</h3>
+<p>Danger buttons indicate destructive actions like delete or remove.</p>
+
+<div class="Preview" id="preview-c4m3xrp74">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><button class="Button Button--danger">Delete Account</button></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;button class=&quot;Button Button--danger&quot;&gt;Delete Account&lt;/button&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="sizes">Sizes</h2>
+<p>Buttons come in three sizes: small, medium (default), and large.</p>
+
+<div class="Preview" id="preview-r95z9wgzi">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><button class="Button Button--primary Button--small">Small</button>
+<button class="Button Button--primary">Medium</button>
+<button class="Button Button--primary Button--large">Large</button></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;button class=&quot;Button Button--primary Button--small&quot;&gt;Small&lt;/button&gt;
+&lt;button class=&quot;Button Button--primary&quot;&gt;Medium&lt;/button&gt;
+&lt;button class=&quot;Button Button--primary Button--large&quot;&gt;Large&lt;/button&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="with-icons">With Icons</h2>
+<p>Buttons can include icons for visual reinforcement. Icons can be leading or trailing.</p>
+<h3 id="leading-icon">Leading Icon</h3>
+
+<div class="Preview" id="preview-1ed5jkzda">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><button class="Button Button--primary">
+    <i class="ph ph-plus Button-icon"></i>
+    Add Item
+</button>
+<button class="Button Button--secondary">
+    <i class="ph ph-download Button-icon"></i>
+    Download
+</button></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;button class=&quot;Button Button--primary&quot;&gt;
+&lt;i class=&quot;ph ph-plus Button-icon&quot;&gt;&lt;/i&gt;
+Add Item
+&lt;/button&gt;
+&lt;button class=&quot;Button Button--secondary&quot;&gt;
+&lt;i class=&quot;ph ph-download Button-icon&quot;&gt;&lt;/i&gt;
+Download
+&lt;/button&gt;</code></pre>
+    </div>
+</div><h3 id="trailing-icon">Trailing Icon</h3>
+
+<div class="Preview" id="preview-cbtyvxtmr">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><button class="Button Button--primary">
+    Continue
+    <i class="ph ph-arrow-right Button-icon Button-icon--trailing"></i>
+</button>
+<button class="Button Button--secondary">
+    Open Link
+    <i class="ph ph-arrow-square-out Button-icon Button-icon--trailing"></i>
+</button></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;button class=&quot;Button Button--primary&quot;&gt;
+Continue
+&lt;i class=&quot;ph ph-arrow-right Button-icon Button-icon--trailing&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Button Button--secondary&quot;&gt;
+Open Link
+&lt;i class=&quot;ph ph-arrow-square-out Button-icon Button-icon--trailing&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="icon-only-buttons">Icon-Only Buttons</h2>
+<p>For actions where the icon is self-explanatory. Always include an <code>aria-label</code>.</p>
+
+<div class="Preview" id="preview-jj63lx7cx">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><button class="Button Button--icon" aria-label="Search">
+    <i class="ph ph-magnifying-glass"></i>
+</button>
+<button class="Button Button--icon" aria-label="Settings">
+    <i class="ph ph-gear"></i>
+</button>
+<button class="Button Button--icon" aria-label="Close">
+    <i class="ph ph-x"></i>
+</button>
+<button class="Button Button--icon Button--primary" aria-label="Add">
+    <i class="ph ph-plus"></i>
+</button></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;button class=&quot;Button Button--icon&quot; aria-label=&quot;Search&quot;&gt;
+&lt;i class=&quot;ph ph-magnifying-glass&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Button Button--icon&quot; aria-label=&quot;Settings&quot;&gt;
+&lt;i class=&quot;ph ph-gear&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Button Button--icon&quot; aria-label=&quot;Close&quot;&gt;
+&lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Button Button--icon Button--primary&quot; aria-label=&quot;Add&quot;&gt;
+&lt;i class=&quot;ph ph-plus&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="states">States</h2>
+<h3 id="loading">Loading</h3>
+<p>Show a loading state when an action is in progress. Disable interaction during loading.</p>
+
+<div class="Preview" id="preview-c980utkls">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><button class="Button Button--primary Button--loading" disabled>
+    <span class="Button-spinner"></span>
+    Loading...
+</button>
+<button class="Button Button--secondary Button--loading" disabled>
+    <span class="Button-spinner"></span>
+    Saving...
+</button></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;button class=&quot;Button Button--primary Button--loading&quot; disabled&gt;
+&lt;span class=&quot;Button-spinner&quot;&gt;&lt;/span&gt;
+Loading...
+&lt;/button&gt;
+&lt;button class=&quot;Button Button--secondary Button--loading&quot; disabled&gt;
+&lt;span class=&quot;Button-spinner&quot;&gt;&lt;/span&gt;
+Saving...
+&lt;/button&gt;</code></pre>
+    </div>
+</div><h3 id="disabled">Disabled</h3>
+<p>Disabled buttons indicate an action is unavailable.</p>
+
+<div class="Preview" id="preview-fmk8upopu">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><button class="Button Button--primary" disabled>Primary</button>
+<button class="Button Button--secondary" disabled>Secondary</button>
+<button class="Button Button--outline" disabled>Outline</button>
+<button class="Button Button--danger" disabled>Danger</button></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;button class=&quot;Button Button--primary&quot; disabled&gt;Primary&lt;/button&gt;
+&lt;button class=&quot;Button Button--secondary&quot; disabled&gt;Secondary&lt;/button&gt;
+&lt;button class=&quot;Button Button--outline&quot; disabled&gt;Outline&lt;/button&gt;
+&lt;button class=&quot;Button Button--danger&quot; disabled&gt;Danger&lt;/button&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="button-groups">Button Groups</h2>
+<p>Group related buttons together.</p>
+
+<div class="Preview" id="preview-c3x6vvppc">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="ButtonGroup">
+    <button class="Button Button--secondary">Day</button>
+    <button class="Button Button--secondary ButtonGroup-item--active">Week</button>
+    <button class="Button Button--secondary">Month</button>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;ButtonGroup&quot;&gt;
+&lt;button class=&quot;Button Button--secondary&quot;&gt;Day&lt;/button&gt;
+&lt;button class=&quot;Button Button--secondary ButtonGroup-item--active&quot;&gt;Week&lt;/button&gt;
+&lt;button class=&quot;Button Button--secondary&quot;&gt;Month&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="icon-button-group">Icon Button Group</h3>
+
+<div class="Preview" id="preview-6dz7s50qc">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="ButtonGroup">
+    <button class="Button Button--icon Button--secondary" aria-label="List view">
+        <i class="ph ph-list"></i>
+    </button>
+    <button class="Button Button--icon Button--secondary ButtonGroup-item--active" aria-label="Grid view">
+        <i class="ph ph-squares-four"></i>
+    </button>
+    <button class="Button Button--icon Button--secondary" aria-label="Column view">
+        <i class="ph ph-columns"></i>
+    </button>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;ButtonGroup&quot;&gt;
+&lt;button class=&quot;Button Button--icon Button--secondary&quot; aria-label=&quot;List view&quot;&gt;
+&lt;i class=&quot;ph ph-list&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Button Button--icon Button--secondary ButtonGroup-item--active&quot; aria-label=&quot;Grid view&quot;&gt;
+&lt;i class=&quot;ph ph-squares-four&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Button Button--icon Button--secondary&quot; aria-label=&quot;Column view&quot;&gt;
+&lt;i class=&quot;ph ph-columns&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="full-width">Full Width</h2>
+<p>Buttons can expand to fill their container.</p>
+
+<div class="Preview" id="preview-tzsni5sni">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="max-width: 320px; width: 100%;">
+    <button class="Button Button--primary Button--block">Create Account</button>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;max-width: 320px; width: 100%;&quot;&gt;
+&lt;button class=&quot;Button Button--primary Button--block&quot;&gt;Create Account&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="common-patterns">Common Patterns</h2>
+<h3 id="modal-actions">Modal Actions</h3>
+
+<div class="Preview" id="preview-qclrusaq5">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; gap: var(--space-3); justify-content: flex-end;">
+    <button class="Button Button--tertiary">Cancel</button>
+    <button class="Button Button--primary">Save Changes</button>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; gap: var(--space-3); justify-content: flex-end;&quot;&gt;
+&lt;button class=&quot;Button Button--tertiary&quot;&gt;Cancel&lt;/button&gt;
+&lt;button class=&quot;Button Button--primary&quot;&gt;Save Changes&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="destructive-confirmation">Destructive Confirmation</h3>
+
+<div class="Preview" id="preview-jajasxlwn">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; gap: var(--space-3); justify-content: flex-end;">
+    <button class="Button Button--secondary">Keep</button>
+    <button class="Button Button--danger">Delete</button>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; gap: var(--space-3); justify-content: flex-end;&quot;&gt;
+&lt;button class=&quot;Button Button--secondary&quot;&gt;Keep&lt;/button&gt;
+&lt;button class=&quot;Button Button--danger&quot;&gt;Delete&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="form-submit">Form Submit</h3>
+
+<div class="Preview" id="preview-kh0x24jas">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="max-width: 320px; width: 100%;">
+    <div style="margin-bottom: var(--space-4);">
+        <label style="display: block; font-size: 0.875rem; font-weight: 500; margin-bottom: var(--space-2);">Email</label>
+        <input type="email" class="Input" placeholder="you@example.com">
+    </div>
+    <button class="Button Button--primary Button--block">Subscribe</button>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;max-width: 320px; width: 100%;&quot;&gt;
+&lt;div style=&quot;margin-bottom: var(--space-4);&quot;&gt;
+&lt;label style=&quot;display: block; font-size: 0.875rem; font-weight: 500; margin-bottom: var(--space-2);&quot;&gt;Email&lt;/label&gt;
+&lt;input type=&quot;email&quot; class=&quot;Input&quot; placeholder=&quot;you@example.com&quot;&gt;
+&lt;/div&gt;
+&lt;button class=&quot;Button Button--primary Button--block&quot;&gt;Subscribe&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="toolbar">Toolbar</h3>
+
+<div class="Preview" id="preview-j6jz0cz91">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-m);">
+    <button class="Button Button--primary Button--small">
+        <i class="ph ph-plus Button-icon"></i>
+        New
+    </button>
+    <div class="ButtonGroup">
+        <button class="Button Button--icon Button--secondary Button--small" aria-label="Undo">
+            <i class="ph ph-arrow-counter-clockwise"></i>
+        </button>
+        <button class="Button Button--icon Button--secondary Button--small" aria-label="Redo">
+            <i class="ph ph-arrow-clockwise"></i>
+        </button>
+    </div>
+    <div style="flex: 1;"></div>
+    <button class="Button Button--icon Button--ghost Button--small" aria-label="More options">
+        <i class="ph ph-dots-three"></i>
+    </button>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-m);&quot;&gt;
+&lt;button class=&quot;Button Button--primary Button--small&quot;&gt;
+&lt;i class=&quot;ph ph-plus Button-icon&quot;&gt;&lt;/i&gt;
+New
+&lt;/button&gt;
+&lt;div class=&quot;ButtonGroup&quot;&gt;
+&lt;button class=&quot;Button Button--icon Button--secondary Button--small&quot; aria-label=&quot;Undo&quot;&gt;
+&lt;i class=&quot;ph ph-arrow-counter-clockwise&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Button Button--icon Button--secondary Button--small&quot; aria-label=&quot;Redo&quot;&gt;
+&lt;i class=&quot;ph ph-arrow-clockwise&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;div style=&quot;flex: 1;&quot;&gt;&lt;/div&gt;
+&lt;button class=&quot;Button Button--icon Button--ghost Button--small&quot; aria-label=&quot;More options&quot;&gt;
+&lt;i class=&quot;ph ph-dots-three&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="customization">Customization</h2>
+<p>Override button styles using CSS custom properties:</p>
+<pre><code class="language-css">/* Custom primary color */
+.Button--primary {
+  --button-bg: oklch(55% 0.2 150);
+  --button-hover: oklch(50% 0.2 150);
+  background-color: var(--button-bg);
+}
+
+.Button--primary:hover {
+  background-color: var(--button-hover);
+}
+
+/* Custom size */
+.Button--xl {
+  padding: var(--space-4) var(--space-8);
+  font-size: 1.125rem;
+}
+
+/* Custom border radius */
+.Button--rounded {
+  border-radius: var(--space-6);
+}
+</code></pre>
+<hr>
+<h2 id="api-reference">API Reference</h2>
+<h3 id="base-classes">Base Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Button</code></td>
+<td class="ApiTable-desc">Base button styles (required)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="variant-classes">Variant Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Button--primary</code></td>
+<td class="ApiTable-desc">Primary action button (solid accent color)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Button--secondary</code></td>
+<td class="ApiTable-desc">Secondary action button (subtle background)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Button--tertiary</code></td>
+<td class="ApiTable-desc">Tertiary action button (text only)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Button--ghost</code></td>
+<td class="ApiTable-desc">Minimal button (transparent until hover)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Button--outline</code></td>
+<td class="ApiTable-desc">Outlined button (border, no fill)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Button--danger</code></td>
+<td class="ApiTable-desc">Destructive action button (red)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="size-classes">Size Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Button--small</code></td>
+<td class="ApiTable-desc">Small button (28px height)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Button--large</code></td>
+<td class="ApiTable-desc">Large button (44px height)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="modifier-classes">Modifier Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Button--icon</code></td>
+<td class="ApiTable-desc">Icon-only button (square aspect ratio)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Button--block</code></td>
+<td class="ApiTable-desc">Full-width button</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Button--loading</code></td>
+<td class="ApiTable-desc">Loading state (use with disabled)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="icon-classes">Icon Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Button-icon</code></td>
+<td class="ApiTable-desc">Icon inside button</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Button-icon--trailing</code></td>
+<td class="ApiTable-desc">Place icon after text</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Button-spinner</code></td>
+<td class="ApiTable-desc">Loading spinner element</td>
+</tr>
+</tbody>
+</table>
+<h3 id="button-group-classes">Button Group Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.ButtonGroup</code></td>
+<td class="ApiTable-desc">Container for grouped buttons</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.ButtonGroup-item--active</code></td>
+<td class="ApiTable-desc">Active state for segmented control</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="css-reference">CSS Reference</h2>
+<pre><code class="language-css">/* Base Button */
+.Button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid transparent;
+  border-radius: var(--r-s);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s, border-color 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  text-decoration: none;
+  background-color: var(--bg-s);
+  color: var(--fg);
+}
+
+.Button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Variants */
+.Button--primary {
+  background-color: var(--accent);
+  color: var(--fg-on-accent);
+  border-color: transparent;
+}
+
+.Button--primary:hover {
+  filter: brightness(1.1);
+}
+
+.Button--secondary {
+  background-color: var(--bg-s);
+  color: var(--fg);
+  border-color: var(--bd);
+}
+
+.Button--secondary:hover {
+  background-color: var(--bd);
+}
+
+.Button--tertiary {
+  background-color: transparent;
+  color: var(--fg-3);
+  border-color: transparent;
+}
+
+.Button--tertiary:hover {
+  background-color: var(--bg-s);
+  color: var(--fg);
+}
+
+.Button--ghost {
+  background-color: transparent;
+  color: var(--fg);
+  border-color: transparent;
+}
+
+.Button--ghost:hover {
+  background-color: var(--bg-s);
+}
+
+.Button--outline {
+  background-color: transparent;
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.Button--outline:hover {
+  background-color: oklch(from var(--accent) l c h / 0.1);
+}
+
+.Button--danger {
+  background-color: oklch(55% 0.2 25);
+  color: white;
+  border-color: transparent;
+}
+
+.Button--danger:hover {
+  background-color: oklch(50% 0.2 25);
+}
+
+/* Sizes */
+.Button--small {
+  padding: var(--space-1) var(--space-3);
+  font-size: 0.75rem;
+  height: 28px;
+}
+
+.Button--large {
+  padding: var(--space-3) var(--space-6);
+  font-size: 1rem;
+  height: 44px;
+}
+
+/* Icon-Only */
+.Button--icon {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+}
+
+.Button--icon.Button--small {
+  width: 28px;
+  height: 28px;
+}
+
+.Button--icon.Button--large {
+  width: 44px;
+  height: 44px;
+}
+
+/* Full Width */
+.Button--block {
+  display: flex;
+  width: 100%;
+}
+
+/* Loading */
+.Button--loading {
+  position: relative;
+  color: transparent;
+  pointer-events: none;
+}
+
+.Button-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: button-spin 0.6s linear infinite;
+}
+
+@keyframes button-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Disabled */
+.Button:disabled,
+.Button[aria-disabled=&quot;true&quot;] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Icon inside button */
+.Button-icon {
+  font-size: 1.1em;
+  flex-shrink: 0;
+}
+
+.Button-icon--trailing {
+  order: 1;
+}
+
+/* Button Group */
+.ButtonGroup {
+  display: inline-flex;
+  gap: 0;
+}
+
+.ButtonGroup .Button {
+  border-radius: 0;
+}
+
+.ButtonGroup .Button:first-child {
+  border-radius: var(--r-s) 0 0 var(--r-s);
+}
+
+.ButtonGroup .Button:last-child {
+  border-radius: 0 var(--r-s) var(--r-s) 0;
+}
+
+.ButtonGroup .Button + .Button {
+  margin-left: -1px;
+}
+
+.ButtonGroup-item--active {
+  background-color: var(--accent);
+  color: var(--fg-on-accent);
+  border-color: var(--accent);
+  z-index: 1;
+}
+</code></pre>
+<hr>
+<h2 id="accessibility">Accessibility</h2>
+<h3 id="keyboard-support">Keyboard Support</h3>
+<div class="Table-container"><table class="Table">
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enter</td>
+<td>Activates the button</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>Activates the button</td>
+</tr>
+<tr>
+<td>Tab</td>
+<td>Moves focus to the button</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="screen-readers">Screen Readers</h3>
+<pre><code class="language-html">&lt;!-- Standard button — text is read automatically --&gt;
+&lt;button class=&quot;Button Button--primary&quot;&gt;Submit Form&lt;/button&gt;
+
+&lt;!-- Icon-only — requires aria-label --&gt;
+&lt;button class=&quot;Button Button--icon&quot; aria-label=&quot;Close dialog&quot;&gt;
+    &lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+
+&lt;!-- Loading state — announce status --&gt;
+&lt;button class=&quot;Button Button--primary&quot; aria-busy=&quot;true&quot; disabled&gt;
+    &lt;span class=&quot;Button-spinner&quot;&gt;&lt;/span&gt;
+    Saving...
+&lt;/button&gt;
+
+&lt;!-- Toggle button --&gt;
+&lt;button class=&quot;Button Button--secondary&quot; aria-pressed=&quot;true&quot;&gt;
+    &lt;i class=&quot;ph ph-star-fill&quot;&gt;&lt;/i&gt;
+    Starred
+&lt;/button&gt;
+</code></pre>
+<h3 id="disabled-vs-aria-disabled">Disabled vs aria-disabled</h3>
+<pre><code class="language-html">&lt;!-- Native disabled — removes from tab order --&gt;
+&lt;button class=&quot;Button Button--primary&quot; disabled&gt;Cannot Click&lt;/button&gt;
+
+&lt;!-- aria-disabled — keeps in tab order (for tooltips) --&gt;
+&lt;button class=&quot;Button Button--primary&quot; aria-disabled=&quot;true&quot;&gt;
+    Upgrade Required
+&lt;/button&gt;
+</code></pre>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="do">Do</h3>
+<ul>
+<li>✓ <strong>Use clear, action-oriented labels</strong> — “Save Changes” not “Submit”</li>
+<li>✓ <strong>Lead with a verb</strong> — “Create Project”, “Delete File”</li>
+<li>✓ <strong>Limit primary buttons</strong> — One per section/view</li>
+<li>✓ <strong>Show loading states</strong> — Feedback during async actions</li>
+<li>✓ <strong>Size touch targets</strong> — Minimum 44px for mobile</li>
+</ul>
+<h3 id="don-t">Don’t</h3>
+<ul>
+<li>✗ <strong>Use vague labels</strong> — “Click Here”, “OK”, “Yes”</li>
+<li>✗ <strong>Disable without explanation</strong> — Provide tooltip or helper text</li>
+<li>✗ <strong>Use too many styles</strong> — Stick to 2-3 variants per view</li>
+<li>✗ <strong>Hide important actions</strong> — Primary actions should be visible</li>
+<li>✗ <strong>Forget hover/focus states</strong> — Essential for accessibility</li>
+</ul>
+
+                </article>
+
+                <footer class="page-footer">
+                    <p>Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

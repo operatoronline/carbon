@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Tabs | Carbon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/bold/style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Floating Pill Nav (Mobile: bottom, Desktop: top) -->
+        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation">
+            <a href="../index.html" class="fnav-btn" data-section="home" aria-label="Home">
+                <i class="ph-bold ph-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="../tokens/colors.html" class="fnav-btn" data-section="tokens" aria-label="Tokens">
+                <i class="ph-bold ph-palette"></i>
+                <span>Tokens</span>
+            </a>
+            <a href="../components/buttons.html" class="fnav-btn" data-section="components" aria-label="Components">
+                <i class="ph-bold ph-stack"></i>
+                <span>Components</span>
+            </a>
+            <a href="../patterns/layouts.html" class="fnav-btn" data-section="patterns" aria-label="Patterns">
+                <i class="ph-bold ph-grid-four"></i>
+                <span>Patterns</span>
+            </a>
+            <div class="fnav-sep"></div>
+            <button class="fnav-btn" id="search-toggle" aria-label="Search">
+                <i class="ph ph-magnifying-glass"></i>
+            </button>
+            <button class="fnav-btn" id="theme-btn" aria-label="Toggle theme">
+                <i class="ph ph-moon"></i>
+            </button>
+        </nav>
+
+        <!-- Glassmorphism Top Bar (Desktop only) -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <a href="../index.html" class="logo">
+                    <i class="ph ph-intersect"></i>
+                    <span>Carbon</span>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <div class="search-container" id="search-container">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search components..." aria-label="Search" autocomplete="off">
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <main class="main-content">
+                <header class="page-header">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="../index.html">Carbon</a> <span class="sep">/</span> <span>Components</span> <span class="sep">/</span> <span>Tabs</span>
+                    </nav>
+                    <h1><em>Tabs</em></h1>
+                </header>
+                
+                <article class="prose">
+                    <h1>Tabs</h1>
+<p>Tabs organize content into separate views, allowing users to switch between related sections without leaving the page. They help reduce clutter and make complex interfaces more manageable.</p>
+<hr>
+<h2 id="installation">Installation</h2>
+<p>Copy the tabs CSS from <code>styles/docs.css</code> or include the Carbon stylesheet:</p>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;carbon.min.css&quot;&gt;
+</code></pre>
+<p>Then use tabs classes in your HTML:</p>
+<pre><code class="language-html">&lt;div class=&quot;Tabs&quot;&gt;
+    &lt;div class=&quot;Tabs-list&quot; role=&quot;tablist&quot;&gt;
+        &lt;button class=&quot;Tabs-tab active&quot; role=&quot;tab&quot; aria-selected=&quot;true&quot;&gt;Tab One&lt;/button&gt;
+        &lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Tab Two&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;Tabs-panel active&quot; role=&quot;tabpanel&quot;&gt;Content here...&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="usage">Usage</h2>
+<p>The base <code>.Tabs</code> class provides the container. The <code>.Tabs-list</code> holds tab buttons, and <code>.Tabs-panel</code> contains the content for each tab.</p>
+
+<div class="Preview" id="preview-2540lax11">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Tabs">
+    <div class="Tabs-list" role="tablist">
+        <button class="Tabs-tab active" role="tab" aria-selected="true">Overview</button>
+        <button class="Tabs-tab" role="tab" aria-selected="false">Features</button>
+        <button class="Tabs-tab" role="tab" aria-selected="false">Pricing</button>
+    </div>
+    <div class="Tabs-panel active" role="tabpanel">
+        <p>Overview content goes here. This is the first panel with introductory information.</p>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Tabs&quot;&gt;
+&lt;div class=&quot;Tabs-list&quot; role=&quot;tablist&quot;&gt;
+&lt;button class=&quot;Tabs-tab active&quot; role=&quot;tab&quot; aria-selected=&quot;true&quot;&gt;Overview&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Features&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Pricing&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Tabs-panel active&quot; role=&quot;tabpanel&quot;&gt;
+&lt;p&gt;Overview content goes here. This is the first panel with introductory information.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="variants">Variants</h2>
+<h3 id="all-variants">All Variants</h3>
+
+<div class="Preview" id="preview-27n8rr62b">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-8);">
+    <div>
+        <div style="font-size: 0.75rem; color: var(--fg-3); margin-bottom: var(--space-2);">Default</div>
+        <div class="Tabs">
+            <div class="Tabs-list" role="tablist">
+                <button class="Tabs-tab active" role="tab" aria-selected="true">Tab</button>
+                <button class="Tabs-tab" role="tab" aria-selected="false">Tab</button>
+                <button class="Tabs-tab" role="tab" aria-selected="false">Tab</button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div style="font-size: 0.75rem; color: var(--fg-3); margin-bottom: var(--space-2);">Contained</div>
+        <div class="Tabs Tabs--contained">
+            <div class="Tabs-list" role="tablist">
+                <button class="Tabs-tab active" role="tab" aria-selected="true">Tab</button>
+                <button class="Tabs-tab" role="tab" aria-selected="false">Tab</button>
+                <button class="Tabs-tab" role="tab" aria-selected="false">Tab</button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div style="font-size: 0.75rem; color: var(--fg-3); margin-bottom: var(--space-2);">Pills</div>
+        <div class="Tabs Tabs--pills">
+            <div class="Tabs-list" role="tablist">
+                <button class="Tabs-tab active" role="tab" aria-selected="true">Tab</button>
+                <button class="Tabs-tab" role="tab" aria-selected="false">Tab</button>
+                <button class="Tabs-tab" role="tab" aria-selected="false">Tab</button>
+            </div>
+        </div>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-8);&quot;&gt;
+&lt;div&gt;
+&lt;div style=&quot;font-size: 0.75rem; color: var(--fg-3); margin-bottom: var(--space-2);&quot;&gt;Default&lt;/div&gt;
+&lt;div class=&quot;Tabs&quot;&gt;
+&lt;div class=&quot;Tabs-list&quot; role=&quot;tablist&quot;&gt;
+&lt;button class=&quot;Tabs-tab active&quot; role=&quot;tab&quot; aria-selected=&quot;true&quot;&gt;Tab&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Tab&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Tab&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;div style=&quot;font-size: 0.75rem; color: var(--fg-3); margin-bottom: var(--space-2);&quot;&gt;Contained&lt;/div&gt;
+&lt;div class=&quot;Tabs Tabs--contained&quot;&gt;
+&lt;div class=&quot;Tabs-list&quot; role=&quot;tablist&quot;&gt;
+&lt;button class=&quot;Tabs-tab active&quot; role=&quot;tab&quot; aria-selected=&quot;true&quot;&gt;Tab&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Tab&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Tab&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;div style=&quot;font-size: 0.75rem; color: var(--fg-3); margin-bottom: var(--space-2);&quot;&gt;Pills&lt;/div&gt;
+&lt;div class=&quot;Tabs Tabs--pills&quot;&gt;
+&lt;div class=&quot;Tabs-list&quot; role=&quot;tablist&quot;&gt;
+&lt;button class=&quot;Tabs-tab active&quot; role=&quot;tab&quot; aria-selected=&quot;true&quot;&gt;Tab&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Tab&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Tab&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="default">Default</h3>
+<p>The default tabs style features an underline indicator on the active tab. Best for primary navigation within a page.</p>
+
+<div class="Preview" id="preview-id6gyt2bs">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Tabs">
+    <div class="Tabs-list" role="tablist">
+        <button class="Tabs-tab active" role="tab" aria-selected="true">Overview</button>
+        <button class="Tabs-tab" role="tab" aria-selected="false">Features</button>
+        <button class="Tabs-tab" role="tab" aria-selected="false">Pricing</button>
+    </div>
+    <div class="Tabs-panel active" role="tabpanel">
+        <p>Overview content goes here. This is the first panel.</p>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Tabs&quot;&gt;
+&lt;div class=&quot;Tabs-list&quot; role=&quot;tablist&quot;&gt;
+&lt;button class=&quot;Tabs-tab active&quot; role=&quot;tab&quot; aria-selected=&quot;true&quot;&gt;Overview&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Features&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Pricing&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Tabs-panel active&quot; role=&quot;tabpanel&quot;&gt;
+&lt;p&gt;Overview content goes here. This is the first panel.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="contained">Contained</h3>
+<p>Contained tabs have a visible container boundary, making them ideal for code blocks, embedded content, or when tabs need visual separation from surrounding content.</p>
+
+<div class="Preview" id="preview-4k4fu7i03">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Tabs Tabs--contained">
+    <div class="Tabs-list" role="tablist">
+        <button class="Tabs-tab active" role="tab" aria-selected="true">HTML</button>
+        <button class="Tabs-tab" role="tab" aria-selected="false">CSS</button>
+        <button class="Tabs-tab" role="tab" aria-selected="false">JavaScript</button>
+    </div>
+    <div class="Tabs-panel active" role="tabpanel">
+        <pre><code>&lt;button class="Button"&gt;Click me&lt;/button&gt;</code></pre>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Tabs Tabs--contained&quot;&gt;
+&lt;div class=&quot;Tabs-list&quot; role=&quot;tablist&quot;&gt;
+&lt;button class=&quot;Tabs-tab active&quot; role=&quot;tab&quot; aria-selected=&quot;true&quot;&gt;HTML&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;CSS&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;JavaScript&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Tabs-panel active&quot; role=&quot;tabpanel&quot;&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;button class=&quot;Button&quot;&amp;gt;Click me&amp;lt;/button&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="pills">Pills</h3>
+<p>Pills-style tabs are more compact and work well for filters, categories, or segmented controls.</p>
+
+<div class="Preview" id="preview-pbp29q2dk">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Tabs Tabs--pills">
+    <div class="Tabs-list" role="tablist">
+        <button class="Tabs-tab active" role="tab" aria-selected="true">All</button>
+        <button class="Tabs-tab" role="tab" aria-selected="false">Active</button>
+        <button class="Tabs-tab" role="tab" aria-selected="false">Completed</button>
+        <button class="Tabs-tab" role="tab" aria-selected="false">Archived</button>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Tabs Tabs--pills&quot;&gt;
+&lt;div class=&quot;Tabs-list&quot; role=&quot;tablist&quot;&gt;
+&lt;button class=&quot;Tabs-tab active&quot; role=&quot;tab&quot; aria-selected=&quot;true&quot;&gt;All&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Active&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Completed&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Archived&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="with-icons">With Icons</h2>
+<p>Tabs can include icons for visual reinforcement. Icons can appear alone or alongside text.</p>
+<h3 id="icon-with-text">Icon with Text</h3>
+
+<div class="Preview" id="preview-i5gvery3h">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Tabs">
+    <div class="Tabs-list" role="tablist">
+        <button class="Tabs-tab active" role="tab" aria-selected="true">
+            <i class="ph ph-house"></i>
+            <span>Home</span>
+        </button>
+        <button class="Tabs-tab" role="tab" aria-selected="false">
+            <i class="ph ph-gear"></i>
+            <span>Settings</span>
+        </button>
+        <button class="Tabs-tab" role="tab" aria-selected="false">
+            <i class="ph ph-user"></i>
+            <span>Profile</span>
+        </button>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Tabs&quot;&gt;
+&lt;div class=&quot;Tabs-list&quot; role=&quot;tablist&quot;&gt;
+&lt;button class=&quot;Tabs-tab active&quot; role=&quot;tab&quot; aria-selected=&quot;true&quot;&gt;
+&lt;i class=&quot;ph ph-house&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Home&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;
+&lt;i class=&quot;ph ph-gear&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Settings&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;
+&lt;i class=&quot;ph ph-user&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Profile&lt;/span&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="icon-only">Icon Only</h3>
+<p>For compact interfaces where icons are self-explanatory. Always include <code>aria-label</code> for accessibility.</p>
+
+<div class="Preview" id="preview-5tark6eb9">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Tabs Tabs--pills">
+    <div class="Tabs-list" role="tablist">
+        <button class="Tabs-tab active" role="tab" aria-selected="true" aria-label="List view">
+            <i class="ph ph-list"></i>
+        </button>
+        <button class="Tabs-tab" role="tab" aria-selected="false" aria-label="Grid view">
+            <i class="ph ph-squares-four"></i>
+        </button>
+        <button class="Tabs-tab" role="tab" aria-selected="false" aria-label="Column view">
+            <i class="ph ph-columns"></i>
+        </button>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Tabs Tabs--pills&quot;&gt;
+&lt;div class=&quot;Tabs-list&quot; role=&quot;tablist&quot;&gt;
+&lt;button class=&quot;Tabs-tab active&quot; role=&quot;tab&quot; aria-selected=&quot;true&quot; aria-label=&quot;List view&quot;&gt;
+&lt;i class=&quot;ph ph-list&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot; aria-label=&quot;Grid view&quot;&gt;
+&lt;i class=&quot;ph ph-squares-four&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot; aria-label=&quot;Column view&quot;&gt;
+&lt;i class=&quot;ph ph-columns&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="states">States</h2>
+<h3 id="disabled">Disabled</h3>
+<p>Disabled tabs indicate a section is unavailable. Use sparingly and provide context for why.</p>
+
+<div class="Preview" id="preview-exfm4tqlx">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Tabs">
+    <div class="Tabs-list" role="tablist">
+        <button class="Tabs-tab active" role="tab" aria-selected="true">Active</button>
+        <button class="Tabs-tab" role="tab" aria-selected="false">Available</button>
+        <button class="Tabs-tab" role="tab" aria-selected="false" disabled>Premium Only</button>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Tabs&quot;&gt;
+&lt;div class=&quot;Tabs-list&quot; role=&quot;tablist&quot;&gt;
+&lt;button class=&quot;Tabs-tab active&quot; role=&quot;tab&quot; aria-selected=&quot;true&quot;&gt;Active&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Available&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot; disabled&gt;Premium Only&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="with-badge">With Badge</h3>
+<p>Show counts or status indicators with badges inside tabs.</p>
+
+<div class="Preview" id="preview-nvfr8x8fq">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Tabs">
+    <div class="Tabs-list" role="tablist">
+        <button class="Tabs-tab active" role="tab" aria-selected="true">
+            Inbox
+            <span class="Badge Badge--primary" style="margin-left: var(--space-2);">12</span>
+        </button>
+        <button class="Tabs-tab" role="tab" aria-selected="false">
+            Sent
+        </button>
+        <button class="Tabs-tab" role="tab" aria-selected="false">
+            Drafts
+            <span class="Badge Badge--secondary" style="margin-left: var(--space-2);">3</span>
+        </button>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Tabs&quot;&gt;
+&lt;div class=&quot;Tabs-list&quot; role=&quot;tablist&quot;&gt;
+&lt;button class=&quot;Tabs-tab active&quot; role=&quot;tab&quot; aria-selected=&quot;true&quot;&gt;
+Inbox
+&lt;span class=&quot;Badge Badge--primary&quot; style=&quot;margin-left: var(--space-2);&quot;&gt;12&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;
+Sent
+&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;
+Drafts
+&lt;span class=&quot;Badge Badge--secondary&quot; style=&quot;margin-left: var(--space-2);&quot;&gt;3&lt;/span&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="sizes">Sizes</h2>
+<p>Tabs come in three sizes to fit different contexts.</p>
+
+<div class="Preview" id="preview-ogoueyvw9">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-6);">
+    <div>
+        <div style="font-size: 0.75rem; color: var(--fg-3); margin-bottom: var(--space-2);">Small</div>
+        <div class="Tabs Tabs--small">
+            <div class="Tabs-list" role="tablist">
+                <button class="Tabs-tab active" role="tab" aria-selected="true">Details</button>
+                <button class="Tabs-tab" role="tab" aria-selected="false">Activity</button>
+                <button class="Tabs-tab" role="tab" aria-selected="false">Comments</button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div style="font-size: 0.75rem; color: var(--fg-3); margin-bottom: var(--space-2);">Default</div>
+        <div class="Tabs">
+            <div class="Tabs-list" role="tablist">
+                <button class="Tabs-tab active" role="tab" aria-selected="true">Details</button>
+                <button class="Tabs-tab" role="tab" aria-selected="false">Activity</button>
+                <button class="Tabs-tab" role="tab" aria-selected="false">Comments</button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div style="font-size: 0.75rem; color: var(--fg-3); margin-bottom: var(--space-2);">Large</div>
+        <div class="Tabs Tabs--large">
+            <div class="Tabs-list" role="tablist">
+                <button class="Tabs-tab active" role="tab" aria-selected="true">Details</button>
+                <button class="Tabs-tab" role="tab" aria-selected="false">Activity</button>
+                <button class="Tabs-tab" role="tab" aria-selected="false">Comments</button>
+            </div>
+        </div>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-6);&quot;&gt;
+&lt;div&gt;
+&lt;div style=&quot;font-size: 0.75rem; color: var(--fg-3); margin-bottom: var(--space-2);&quot;&gt;Small&lt;/div&gt;
+&lt;div class=&quot;Tabs Tabs--small&quot;&gt;
+&lt;div class=&quot;Tabs-list&quot; role=&quot;tablist&quot;&gt;
+&lt;button class=&quot;Tabs-tab active&quot; role=&quot;tab&quot; aria-selected=&quot;true&quot;&gt;Details&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Activity&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Comments&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;div style=&quot;font-size: 0.75rem; color: var(--fg-3); margin-bottom: var(--space-2);&quot;&gt;Default&lt;/div&gt;
+&lt;div class=&quot;Tabs&quot;&gt;
+&lt;div class=&quot;Tabs-list&quot; role=&quot;tablist&quot;&gt;
+&lt;button class=&quot;Tabs-tab active&quot; role=&quot;tab&quot; aria-selected=&quot;true&quot;&gt;Details&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Activity&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Comments&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;div style=&quot;font-size: 0.75rem; color: var(--fg-3); margin-bottom: var(--space-2);&quot;&gt;Large&lt;/div&gt;
+&lt;div class=&quot;Tabs Tabs--large&quot;&gt;
+&lt;div class=&quot;Tabs-list&quot; role=&quot;tablist&quot;&gt;
+&lt;button class=&quot;Tabs-tab active&quot; role=&quot;tab&quot; aria-selected=&quot;true&quot;&gt;Details&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Activity&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Comments&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="full-width">Full Width</h2>
+<p>Tabs can stretch to fill their container width. Useful for mobile layouts.</p>
+
+<div class="Preview" id="preview-nox79wtx0">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Tabs Tabs--fullWidth">
+    <div class="Tabs-list" role="tablist">
+        <button class="Tabs-tab active" role="tab" aria-selected="true">For You</button>
+        <button class="Tabs-tab" role="tab" aria-selected="false">Following</button>
+        <button class="Tabs-tab" role="tab" aria-selected="false">Trending</button>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Tabs Tabs--fullWidth&quot;&gt;
+&lt;div class=&quot;Tabs-list&quot; role=&quot;tablist&quot;&gt;
+&lt;button class=&quot;Tabs-tab active&quot; role=&quot;tab&quot; aria-selected=&quot;true&quot;&gt;For You&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Following&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Trending&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="javascript">JavaScript</h2>
+<p>Tabs require minimal JavaScript for interactivity:</p>
+<pre><code class="language-js">document.querySelectorAll('.Tabs').forEach(tabs =&gt; {
+    const tabList = tabs.querySelector('.Tabs-list');
+    const tabButtons = tabs.querySelectorAll('.Tabs-tab');
+    const panels = tabs.querySelectorAll('.Tabs-panel');
+    
+    tabList.addEventListener('click', (e) =&gt; {
+        const tab = e.target.closest('.Tabs-tab');
+        if (!tab || tab.disabled) return;
+        
+        // Update tab states
+        tabButtons.forEach(t =&gt; {
+            t.classList.remove('active');
+            t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+        
+        // Update panel visibility
+        const index = Array.from(tabButtons).indexOf(tab);
+        panels.forEach((panel, i) =&gt; {
+            panel.classList.toggle('active', i === index);
+        });
+    });
+    
+    // Keyboard navigation
+    tabList.addEventListener('keydown', (e) =&gt; {
+        const tabs = Array.from(tabButtons).filter(t =&gt; !t.disabled);
+        const current = tabs.findIndex(t =&gt; t.classList.contains('active'));
+        let next;
+        
+        switch(e.key) {
+            case 'ArrowRight':
+            case 'ArrowDown':
+                next = (current + 1) % tabs.length;
+                break;
+            case 'ArrowLeft':
+            case 'ArrowUp':
+                next = (current - 1 + tabs.length) % tabs.length;
+                break;
+            case 'Home':
+                next = 0;
+                break;
+            case 'End':
+                next = tabs.length - 1;
+                break;
+            default:
+                return;
+        }
+        
+        e.preventDefault();
+        tabs[next].click();
+        tabs[next].focus();
+    });
+});
+</code></pre>
+<h2 id="common-patterns">Common Patterns</h2>
+<h3 id="settings-page">Settings Page</h3>
+
+<div class="Preview" id="preview-wl7vpcj19">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="max-width: 600px;">
+    <div class="Tabs">
+        <div class="Tabs-list" role="tablist">
+            <button class="Tabs-tab active" role="tab" aria-selected="true">
+                <i class="ph ph-user"></i>
+                <span>Account</span>
+            </button>
+            <button class="Tabs-tab" role="tab" aria-selected="false">
+                <i class="ph ph-bell"></i>
+                <span>Notifications</span>
+            </button>
+            <button class="Tabs-tab" role="tab" aria-selected="false">
+                <i class="ph ph-lock"></i>
+                <span>Privacy</span>
+            </button>
+            <button class="Tabs-tab" role="tab" aria-selected="false">
+                <i class="ph ph-palette"></i>
+                <span>Appearance</span>
+            </button>
+        </div>
+        <div class="Tabs-panel active" role="tabpanel">
+            <div style="padding: var(--space-4) 0;">
+                <h3 style="margin: 0 0 var(--space-3);">Account Settings</h3>
+                <p style="color: var(--fg-3); margin: 0;">Manage your account information and preferences.</p>
+            </div>
+        </div>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;max-width: 600px;&quot;&gt;
+&lt;div class=&quot;Tabs&quot;&gt;
+&lt;div class=&quot;Tabs-list&quot; role=&quot;tablist&quot;&gt;
+&lt;button class=&quot;Tabs-tab active&quot; role=&quot;tab&quot; aria-selected=&quot;true&quot;&gt;
+&lt;i class=&quot;ph ph-user&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Account&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;
+&lt;i class=&quot;ph ph-bell&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Notifications&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;
+&lt;i class=&quot;ph ph-lock&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Privacy&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;
+&lt;i class=&quot;ph ph-palette&quot;&gt;&lt;/i&gt;
+&lt;span&gt;Appearance&lt;/span&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Tabs-panel active&quot; role=&quot;tabpanel&quot;&gt;
+&lt;div style=&quot;padding: var(--space-4) 0;&quot;&gt;
+&lt;h3 style=&quot;margin: 0 0 var(--space-3);&quot;&gt;Account Settings&lt;/h3&gt;
+&lt;p style=&quot;color: var(--fg-3); margin: 0;&quot;&gt;Manage your account information and preferences.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="code-viewer">Code Viewer</h3>
+
+<div class="Preview" id="preview-0ahqljh2a">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Tabs Tabs--contained">
+    <div class="Tabs-list" role="tablist">
+        <button class="Tabs-tab active" role="tab" aria-selected="true">index.html</button>
+        <button class="Tabs-tab" role="tab" aria-selected="false">styles.css</button>
+        <button class="Tabs-tab" role="tab" aria-selected="false">app.js</button>
+    </div>
+    <div class="Tabs-panel active" role="tabpanel" style="background: var(--bg-s); padding: var(--space-4);">
+        <pre style="margin: 0; font-size: 0.875rem;"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;title&gt;My App&lt;/title&gt;
+  &lt;/head&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Tabs Tabs--contained&quot;&gt;
+&lt;div class=&quot;Tabs-list&quot; role=&quot;tablist&quot;&gt;
+&lt;button class=&quot;Tabs-tab active&quot; role=&quot;tab&quot; aria-selected=&quot;true&quot;&gt;index.html&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;styles.css&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;app.js&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Tabs-panel active&quot; role=&quot;tabpanel&quot; style=&quot;background: var(--bg-s); padding: var(--space-4);&quot;&gt;
+&lt;pre style=&quot;margin: 0; font-size: 0.875rem;&quot;&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&quot;en&quot;&amp;gt;
+&amp;lt;head&amp;gt;
+&amp;lt;title&amp;gt;My App&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="filter-bar">Filter Bar</h3>
+
+<div class="Preview" id="preview-56fd98mij">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; align-items: center; gap: var(--space-4);">
+    <div class="Tabs Tabs--pills">
+        <div class="Tabs-list" role="tablist">
+            <button class="Tabs-tab active" role="tab" aria-selected="true">All</button>
+            <button class="Tabs-tab" role="tab" aria-selected="false">Open</button>
+            <button class="Tabs-tab" role="tab" aria-selected="false">Closed</button>
+        </div>
+    </div>
+    <div style="flex: 1;"></div>
+    <input type="search" class="Input Input--small" placeholder="Search..." style="max-width: 200px;">
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-4);&quot;&gt;
+&lt;div class=&quot;Tabs Tabs--pills&quot;&gt;
+&lt;div class=&quot;Tabs-list&quot; role=&quot;tablist&quot;&gt;
+&lt;button class=&quot;Tabs-tab active&quot; role=&quot;tab&quot; aria-selected=&quot;true&quot;&gt;All&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Open&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Closed&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;flex: 1;&quot;&gt;&lt;/div&gt;
+&lt;input type=&quot;search&quot; class=&quot;Input Input--small&quot; placeholder=&quot;Search...&quot; style=&quot;max-width: 200px;&quot;&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="vertical-tabs">Vertical Tabs</h3>
+
+<div class="Preview" id="preview-lnopfqfo2">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Tabs Tabs--vertical" style="display: flex; gap: var(--space-4);">
+    <div class="Tabs-list" role="tablist" style="flex-direction: column; border-bottom: none; border-right: 1px solid var(--bd); padding-right: var(--space-4);">
+        <button class="Tabs-tab active" role="tab" aria-selected="true">General</button>
+        <button class="Tabs-tab" role="tab" aria-selected="false">Security</button>
+        <button class="Tabs-tab" role="tab" aria-selected="false">Billing</button>
+        <button class="Tabs-tab" role="tab" aria-selected="false">Team</button>
+    </div>
+    <div class="Tabs-panel active" role="tabpanel" style="flex: 1;">
+        <h4 style="margin: 0 0 var(--space-2);">General Settings</h4>
+        <p style="margin: 0; color: var(--fg-3);">Configure your general preferences and options.</p>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Tabs Tabs--vertical&quot; style=&quot;display: flex; gap: var(--space-4);&quot;&gt;
+&lt;div class=&quot;Tabs-list&quot; role=&quot;tablist&quot; style=&quot;flex-direction: column; border-bottom: none; border-right: 1px solid var(--bd); padding-right: var(--space-4);&quot;&gt;
+&lt;button class=&quot;Tabs-tab active&quot; role=&quot;tab&quot; aria-selected=&quot;true&quot;&gt;General&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Security&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Billing&lt;/button&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Team&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Tabs-panel active&quot; role=&quot;tabpanel&quot; style=&quot;flex: 1;&quot;&gt;
+&lt;h4 style=&quot;margin: 0 0 var(--space-2);&quot;&gt;General Settings&lt;/h4&gt;
+&lt;p style=&quot;margin: 0; color: var(--fg-3);&quot;&gt;Configure your general preferences and options.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="customization">Customization</h2>
+<p>Override tab styles using CSS custom properties:</p>
+<pre><code class="language-css">/* Custom accent color */
+.Tabs-tab.active {
+  --tab-active-color: oklch(55% 0.2 150);
+  color: var(--tab-active-color);
+  border-color: var(--tab-active-color);
+}
+
+/* Custom pill styling */
+.Tabs--pills .Tabs-tab.active {
+  --tab-pill-bg: oklch(55% 0.2 150);
+  background-color: var(--tab-pill-bg);
+  color: white;
+}
+
+/* Custom spacing */
+.Tabs--compact .Tabs-tab {
+  padding: var(--space-1) var(--space-2);
+  font-size: 0.75rem;
+}
+
+/* Custom underline thickness */
+.Tabs-tab.active {
+  border-bottom-width: 3px;
+}
+</code></pre>
+<h3 id="creating-custom-variants">Creating Custom Variants</h3>
+<pre><code class="language-css">/* Bordered variant */
+.Tabs--bordered .Tabs-list {
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  padding: var(--space-1);
+  background: var(--bg-s);
+}
+
+.Tabs--bordered .Tabs-tab.active {
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Minimal variant */
+.Tabs--minimal .Tabs-list {
+  border-bottom: none;
+  gap: var(--space-6);
+}
+
+.Tabs--minimal .Tabs-tab {
+  padding: var(--space-2) 0;
+  border-bottom: none;
+  opacity: 0.6;
+}
+
+.Tabs--minimal .Tabs-tab.active {
+  opacity: 1;
+  font-weight: 600;
+}
+</code></pre>
+<hr>
+<h2 id="api-reference">API Reference</h2>
+<h3 id="base-classes">Base Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Tabs</code></td>
+<td class="ApiTable-desc">Container for the tabs component (required)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Tabs-list</code></td>
+<td class="ApiTable-desc">Container for tab buttons</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Tabs-tab</code></td>
+<td class="ApiTable-desc">Individual tab button</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Tabs-panel</code></td>
+<td class="ApiTable-desc">Content panel for each tab</td>
+</tr>
+</tbody>
+</table>
+<h3 id="variant-classes">Variant Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Tabs--contained</code></td>
+<td class="ApiTable-desc">Tabs with visible container boundary</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Tabs--pills</code></td>
+<td class="ApiTable-desc">Pill-style tab buttons</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Tabs--vertical</code></td>
+<td class="ApiTable-desc">Vertical tab layout</td>
+</tr>
+</tbody>
+</table>
+<h3 id="size-classes">Size Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Tabs--small</code></td>
+<td class="ApiTable-desc">Compact tabs for tight spaces</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Tabs--large</code></td>
+<td class="ApiTable-desc">Larger tabs for primary navigation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="modifier-classes">Modifier Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Tabs--fullWidth</code></td>
+<td class="ApiTable-desc">Tabs stretch to fill container width</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.active</code></td>
+<td class="ApiTable-desc">Active state for tab and panel</td>
+</tr>
+</tbody>
+</table>
+<h3 id="aria-attributes">ARIA Attributes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Element</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">role="tablist"</code></td>
+<td class="ApiTable-desc">.Tabs-list</td>
+<td class="ApiTable-desc">Identifies the tab list container</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">role="tab"</code></td>
+<td class="ApiTable-desc">.Tabs-tab</td>
+<td class="ApiTable-desc">Identifies each tab button</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">role="tabpanel"</code></td>
+<td class="ApiTable-desc">.Tabs-panel</td>
+<td class="ApiTable-desc">Identifies the content panel</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">aria-selected</code></td>
+<td class="ApiTable-desc">.Tabs-tab</td>
+<td class="ApiTable-desc">"true" for active tab, "false" for others</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="css-reference">CSS Reference</h2>
+<pre><code class="language-css">/* Base tabs */
+.Tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tab list */
+.Tabs-list {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--bd);
+}
+
+/* Individual tab */
+.Tabs-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--fg-3);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+
+.Tabs-tab:hover {
+  color: var(--fg);
+}
+
+.Tabs-tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.Tabs-tab:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Tab panel */
+.Tabs-panel {
+  display: none;
+  padding: var(--space-4) 0;
+}
+
+.Tabs-panel.active {
+  display: block;
+}
+
+/* Contained variant */
+.Tabs--contained {
+  border: 1px solid var(--bd);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.Tabs--contained .Tabs-list {
+  background: var(--bg-s);
+}
+.Tabs--contained .Tabs-tab.active {
+  background: var(--bg);
+  border-bottom-color: var(--bg);
+}
+.Tabs--contained .Tabs-panel {
+  padding: var(--space-4);
+}
+
+/* Pills variant */
+.Tabs--pills .Tabs-list {
+  border-bottom: none;
+  gap: var(--space-1);
+}
+.Tabs--pills .Tabs-tab {
+  border-bottom: none;
+  border-radius: var(--radius-md);
+  padding: var(--space-1) var(--space-3);
+}
+.Tabs--pills .Tabs-tab.active {
+  background: var(--accent);
+  color: white;
+}
+
+/* Size variants */
+.Tabs--small .Tabs-tab {
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--text-xs);
+}
+.Tabs--large .Tabs-tab {
+  padding: var(--space-3) var(--space-5);
+  font-size: var(--text-base);
+}
+
+/* Full width */
+.Tabs--fullWidth .Tabs-list {
+  width: 100%;
+}
+.Tabs--fullWidth .Tabs-tab {
+  flex: 1;
+  justify-content: center;
+}
+
+/* Vertical */
+.Tabs--vertical {
+  flex-direction: row;
+}
+.Tabs--vertical .Tabs-list {
+  flex-direction: column;
+  border-bottom: none;
+  border-right: 1px solid var(--bd);
+}
+.Tabs--vertical .Tabs-tab {
+  border-bottom: none;
+  border-right: 2px solid transparent;
+}
+.Tabs--vertical .Tabs-tab.active {
+  border-right-color: var(--accent);
+}
+</code></pre>
+<hr>
+<h2 id="accessibility">Accessibility</h2>
+<h3 id="keyboard-support">Keyboard Support</h3>
+<div class="Table-container"><table class="Table">
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tab</td>
+<td>Moves focus into/out of the tab list</td>
+</tr>
+<tr>
+<td>Arrow Left/Up</td>
+<td>Moves to the previous tab</td>
+</tr>
+<tr>
+<td>Arrow Right/Down</td>
+<td>Moves to the next tab</td>
+</tr>
+<tr>
+<td>Home</td>
+<td>Moves to the first tab</td>
+</tr>
+<tr>
+<td>End</td>
+<td>Moves to the last tab</td>
+</tr>
+<tr>
+<td>Enter/Space</td>
+<td>Activates the focused tab</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="screen-readers">Screen Readers</h3>
+<pre><code class="language-html">&lt;!-- Basic accessible tabs --&gt;
+&lt;div class=&quot;Tabs&quot;&gt;
+    &lt;div class=&quot;Tabs-list&quot; role=&quot;tablist&quot; aria-label=&quot;Account settings&quot;&gt;
+        &lt;button class=&quot;Tabs-tab active&quot; role=&quot;tab&quot; 
+                id=&quot;tab-1&quot; aria-selected=&quot;true&quot; 
+                aria-controls=&quot;panel-1&quot;&gt;
+            Profile
+        &lt;/button&gt;
+        &lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; 
+                id=&quot;tab-2&quot; aria-selected=&quot;false&quot; 
+                aria-controls=&quot;panel-2&quot; tabindex=&quot;-1&quot;&gt;
+            Security
+        &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;Tabs-panel active&quot; role=&quot;tabpanel&quot; 
+         id=&quot;panel-1&quot; aria-labelledby=&quot;tab-1&quot;&gt;
+        Profile content...
+    &lt;/div&gt;
+    &lt;div class=&quot;Tabs-panel&quot; role=&quot;tabpanel&quot; 
+         id=&quot;panel-2&quot; aria-labelledby=&quot;tab-2&quot; hidden&gt;
+        Security content...
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Icon-only tabs need aria-label --&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; aria-label=&quot;Grid view&quot;&gt;
+    &lt;i class=&quot;ph ph-squares-four&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+
+&lt;!-- Tabs with counts --&gt;
+&lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot;&gt;
+    Notifications
+    &lt;span class=&quot;Badge&quot; aria-label=&quot;5 unread&quot;&gt;5&lt;/span&gt;
+&lt;/button&gt;
+</code></pre>
+<h3 id="focus-management">Focus Management</h3>
+<pre><code class="language-html">&lt;!-- Only the active tab should be in the tab order --&gt;
+&lt;div class=&quot;Tabs-list&quot; role=&quot;tablist&quot;&gt;
+    &lt;button class=&quot;Tabs-tab active&quot; role=&quot;tab&quot; 
+            aria-selected=&quot;true&quot; tabindex=&quot;0&quot;&gt;Active&lt;/button&gt;
+    &lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; 
+            aria-selected=&quot;false&quot; tabindex=&quot;-1&quot;&gt;Inactive&lt;/button&gt;
+    &lt;button class=&quot;Tabs-tab&quot; role=&quot;tab&quot; 
+            aria-selected=&quot;false&quot; tabindex=&quot;-1&quot;&gt;Inactive&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="do">Do</h3>
+<ul>
+<li>✓ <strong>Use clear, concise labels</strong> — “Settings” not “Configuration Options”</li>
+<li>✓ <strong>Order tabs logically</strong> — Most important or commonly used first</li>
+<li>✓ <strong>Limit tab count</strong> — 2-7 tabs; more indicates need for different navigation</li>
+<li>✓ <strong>Keep labels short</strong> — One or two words per tab</li>
+<li>✓ <strong>Persist tab state</strong> — Remember selection on page refresh when appropriate</li>
+<li>✓ <strong>Provide feedback</strong> — Clear visual indicator for active tab</li>
+</ul>
+<h3 id="don-t">Don’t</h3>
+<ul>
+<li>✗ <strong>Nest tabs within tabs</strong> — Creates confusing navigation hierarchy</li>
+<li>✗ <strong>Use tabs for sequential steps</strong> — Use a stepper or wizard instead</li>
+<li>✗ <strong>Hide critical content</strong> — Essential info should be visible by default</li>
+<li>✗ <strong>Mix tab styles</strong> — Be consistent within a page or section</li>
+<li>✗ <strong>Use tabs for unrelated content</strong> — Tabs should group related views</li>
+<li>✗ <strong>Forget mobile</strong> — Consider if tabs make sense on smaller screens</li>
+</ul>
+
+                </article>
+
+                <footer class="page-footer">
+                    <p>Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

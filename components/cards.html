@@ -1,0 +1,2463 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Cards | Carbon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/bold/style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Floating Pill Nav (Mobile: bottom, Desktop: top) -->
+        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation">
+            <a href="../index.html" class="fnav-btn" data-section="home" aria-label="Home">
+                <i class="ph-bold ph-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="../tokens/colors.html" class="fnav-btn" data-section="tokens" aria-label="Tokens">
+                <i class="ph-bold ph-palette"></i>
+                <span>Tokens</span>
+            </a>
+            <a href="../components/buttons.html" class="fnav-btn" data-section="components" aria-label="Components">
+                <i class="ph-bold ph-stack"></i>
+                <span>Components</span>
+            </a>
+            <a href="../patterns/layouts.html" class="fnav-btn" data-section="patterns" aria-label="Patterns">
+                <i class="ph-bold ph-grid-four"></i>
+                <span>Patterns</span>
+            </a>
+            <div class="fnav-sep"></div>
+            <button class="fnav-btn" id="search-toggle" aria-label="Search">
+                <i class="ph ph-magnifying-glass"></i>
+            </button>
+            <button class="fnav-btn" id="theme-btn" aria-label="Toggle theme">
+                <i class="ph ph-moon"></i>
+            </button>
+        </nav>
+
+        <!-- Glassmorphism Top Bar (Desktop only) -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <a href="../index.html" class="logo">
+                    <i class="ph ph-intersect"></i>
+                    <span>Carbon</span>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <div class="search-container" id="search-container">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search components..." aria-label="Search" autocomplete="off">
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <main class="main-content">
+                <header class="page-header">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="../index.html">Carbon</a> <span class="sep">/</span> <span>Components</span> <span class="sep">/</span> <span>Cards</span>
+                    </nav>
+                    <h1><em>Cards</em></h1>
+                </header>
+                
+                <article class="prose">
+                    <h1>Cards</h1>
+<p>Cards are flexible containers that group related content and actions. They provide a clean, elevated surface for displaying everything from simple text to complex interactive layouts.</p>
+<hr>
+<h2 id="installation">Installation</h2>
+<p>Copy the card CSS from <code>styles/docs.css</code> or include the Carbon stylesheet:</p>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;carbon.min.css&quot;&gt;
+</code></pre>
+<p>Then use card classes in your HTML:</p>
+<pre><code class="language-html">&lt;div class=&quot;Card&quot;&gt;
+    &lt;div class=&quot;Card-body&quot;&gt;
+        &lt;h3 class=&quot;Card-title&quot;&gt;Card Title&lt;/h3&gt;
+        &lt;p class=&quot;Card-text&quot;&gt;Card content goes here.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="usage">Usage</h2>
+<p>The base <code>.Card</code> class provides core styling with elevation and border radius. Add sections like <code>.Card-header</code>, <code>.Card-body</code>, and <code>.Card-footer</code> to structure content.</p>
+
+<div class="Preview" id="preview-cvb43bf1w">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Card" style="max-width: 320px;">
+    <div class="Card-body">
+        <h3 class="Card-title">Simple Card</h3>
+        <p class="Card-text">Cards group related content and actions together.</p>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Card&quot; style=&quot;max-width: 320px;&quot;&gt;
+&lt;div class=&quot;Card-body&quot;&gt;
+&lt;h3 class=&quot;Card-title&quot;&gt;Simple Card&lt;/h3&gt;
+&lt;p class=&quot;Card-text&quot;&gt;Cards group related content and actions together.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="examples">Examples</h2>
+<h3 id="basic-card">Basic Card</h3>
+<p>A minimal card with title and text content.</p>
+
+<div class="Preview" id="preview-1gpcpv251">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Card" style="max-width: 320px;">
+    <div class="Card-body">
+        <h3 class="Card-title">Project Update</h3>
+        <p class="Card-text">The new dashboard feature is ready for review. All tests passing.</p>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Card&quot; style=&quot;max-width: 320px;&quot;&gt;
+&lt;div class=&quot;Card-body&quot;&gt;
+&lt;h3 class=&quot;Card-title&quot;&gt;Project Update&lt;/h3&gt;
+&lt;p class=&quot;Card-text&quot;&gt;The new dashboard feature is ready for review. All tests passing.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="card-with-header-and-footer">Card with Header and Footer</h3>
+<p>Use header and footer sections for titles, metadata, and actions.</p>
+
+<div class="Preview" id="preview-lhbwk1bjk">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Card" style="max-width: 320px;">
+    <div class="Card-header">
+        <h3 class="Card-title">Weekly Report</h3>
+        <span class="Card-subtitle">Feb 3, 2026</span>
+    </div>
+    <div class="Card-body">
+        <p class="Card-text">Revenue increased 12% this week. Customer satisfaction scores remain high at 4.8/5.</p>
+    </div>
+    <div class="Card-footer">
+        <button class="Button Button--tertiary Button--small">Dismiss</button>
+        <button class="Button Button--primary Button--small">View Details</button>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Card&quot; style=&quot;max-width: 320px;&quot;&gt;
+&lt;div class=&quot;Card-header&quot;&gt;
+&lt;h3 class=&quot;Card-title&quot;&gt;Weekly Report&lt;/h3&gt;
+&lt;span class=&quot;Card-subtitle&quot;&gt;Feb 3, 2026&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Card-body&quot;&gt;
+&lt;p class=&quot;Card-text&quot;&gt;Revenue increased 12% this week. Customer satisfaction scores remain high at 4.8/5.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Card-footer&quot;&gt;
+&lt;button class=&quot;Button Button--tertiary Button--small&quot;&gt;Dismiss&lt;/button&gt;
+&lt;button class=&quot;Button Button--primary Button--small&quot;&gt;View Details&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="card-with-image">Card with Image</h3>
+<p>Add images to cards using <code>.Card-image</code> at the top.</p>
+
+<div class="Preview" id="preview-qu1jxdzex">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Card" style="max-width: 320px;">
+    <div class="Card-image" style="background: linear-gradient(135deg, oklch(60% 0.15 250), oklch(50% 0.2 280)); height: 160px;"></div>
+    <div class="Card-body">
+        <h3 class="Card-title">Mountain Retreat</h3>
+        <p class="Card-text">Escape to the peaks for a weekend of hiking and relaxation.</p>
+        <button class="Button Button--primary Button--small">Book Now</button>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Card&quot; style=&quot;max-width: 320px;&quot;&gt;
+&lt;div class=&quot;Card-image&quot; style=&quot;background: linear-gradient(135deg, oklch(60% 0.15 250), oklch(50% 0.2 280)); height: 160px;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Card-body&quot;&gt;
+&lt;h3 class=&quot;Card-title&quot;&gt;Mountain Retreat&lt;/h3&gt;
+&lt;p class=&quot;Card-text&quot;&gt;Escape to the peaks for a weekend of hiking and relaxation.&lt;/p&gt;
+&lt;button class=&quot;Button Button--primary Button--small&quot;&gt;Book Now&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="card-with-image-overlay">Card with Image Overlay</h3>
+<p>Overlay text on images for hero-style cards.</p>
+
+<div class="Preview" id="preview-0bbi6a1oa">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Card Card--overlay" style="max-width: 400px;">
+    <div class="Card-image" style="background: linear-gradient(135deg, oklch(45% 0.18 30), oklch(35% 0.15 350)); height: 220px;"></div>
+    <div class="Card-overlay">
+        <span class="Card-tag">Featured</span>
+        <h3 class="Card-title">Sunset Photography Workshop</h3>
+        <p class="Card-text">Learn to capture golden hour magic</p>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Card Card--overlay&quot; style=&quot;max-width: 400px;&quot;&gt;
+&lt;div class=&quot;Card-image&quot; style=&quot;background: linear-gradient(135deg, oklch(45% 0.18 30), oklch(35% 0.15 350)); height: 220px;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Card-overlay&quot;&gt;
+&lt;span class=&quot;Card-tag&quot;&gt;Featured&lt;/span&gt;
+&lt;h3 class=&quot;Card-title&quot;&gt;Sunset Photography Workshop&lt;/h3&gt;
+&lt;p class=&quot;Card-text&quot;&gt;Learn to capture golden hour magic&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="horizontal-card">Horizontal Card</h3>
+<p>Side-by-side layout for media and content.</p>
+
+<div class="Preview" id="preview-jlg90scv5">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Card Card--horizontal" style="max-width: 480px;">
+    <div class="Card-image" style="background: linear-gradient(135deg, oklch(55% 0.12 170), oklch(45% 0.15 200)); min-width: 140px;"></div>
+    <div class="Card-body">
+        <span class="Card-tag">Article</span>
+        <h3 class="Card-title">Design Systems at Scale</h3>
+        <p class="Card-text">How leading teams maintain consistency across products.</p>
+        <span class="Card-meta">8 min read</span>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Card Card--horizontal&quot; style=&quot;max-width: 480px;&quot;&gt;
+&lt;div class=&quot;Card-image&quot; style=&quot;background: linear-gradient(135deg, oklch(55% 0.12 170), oklch(45% 0.15 200)); min-width: 140px;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Card-body&quot;&gt;
+&lt;span class=&quot;Card-tag&quot;&gt;Article&lt;/span&gt;
+&lt;h3 class=&quot;Card-title&quot;&gt;Design Systems at Scale&lt;/h3&gt;
+&lt;p class=&quot;Card-text&quot;&gt;How leading teams maintain consistency across products.&lt;/p&gt;
+&lt;span class=&quot;Card-meta&quot;&gt;8 min read&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="interactive-card">Interactive Card</h3>
+<p>Clickable cards with hover effects.</p>
+
+<div class="Preview" id="preview-b5mvu4w6i">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><a href="#" class="Card Card--interactive" style="max-width: 320px; text-decoration: none;">
+    <div class="Card-body">
+        <div style="display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-3);">
+            <div style="width: 40px; height: 40px; border-radius: var(--r-m); background: oklch(60% 0.15 250); display: flex; align-items: center; justify-content: center;">
+                <i class="ph ph-folder" style="color: white; font-size: 1.25rem;"></i>
+            </div>
+            <div>
+                <h3 class="Card-title" style="margin: 0;">Design Files</h3>
+                <span class="Card-meta">24 items</span>
+            </div>
+        </div>
+        <p class="Card-text">Figma files, brand assets, and component libraries.</p>
+    </div>
+</a></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;a href=&quot;#&quot; class=&quot;Card Card--interactive&quot; style=&quot;max-width: 320px; text-decoration: none;&quot;&gt;
+&lt;div class=&quot;Card-body&quot;&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-3);&quot;&gt;
+&lt;div style=&quot;width: 40px; height: 40px; border-radius: var(--r-m); background: oklch(60% 0.15 250); display: flex; align-items: center; justify-content: center;&quot;&gt;
+&lt;i class=&quot;ph ph-folder&quot; style=&quot;color: white; font-size: 1.25rem;&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;h3 class=&quot;Card-title&quot; style=&quot;margin: 0;&quot;&gt;Design Files&lt;/h3&gt;
+&lt;span class=&quot;Card-meta&quot;&gt;24 items&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class=&quot;Card-text&quot;&gt;Figma files, brand assets, and component libraries.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/a&gt;</code></pre>
+    </div>
+</div><h3 id="profile-card">Profile Card</h3>
+<p>Display user information and quick actions.</p>
+
+<div class="Preview" id="preview-jwi9zw90v">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Card" style="max-width: 300px; text-align: center;">
+    <div class="Card-body">
+        <div class="Card-avatar" style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, oklch(65% 0.15 150), oklch(55% 0.18 180)); margin: 0 auto var(--space-4);"></div>
+        <h3 class="Card-title">Alex Chen</h3>
+        <p class="Card-subtitle">Senior Product Designer</p>
+        <p class="Card-text" style="margin-top: var(--space-3);">Creating delightful experiences at Acme Corp. Previously at Figma.</p>
+        <div style="display: flex; gap: var(--space-2); justify-content: center; margin-top: var(--space-4);">
+            <button class="Button Button--primary Button--small">Follow</button>
+            <button class="Button Button--secondary Button--small">Message</button>
+        </div>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Card&quot; style=&quot;max-width: 300px; text-align: center;&quot;&gt;
+&lt;div class=&quot;Card-body&quot;&gt;
+&lt;div class=&quot;Card-avatar&quot; style=&quot;width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, oklch(65% 0.15 150), oklch(55% 0.18 180)); margin: 0 auto var(--space-4);&quot;&gt;&lt;/div&gt;
+&lt;h3 class=&quot;Card-title&quot;&gt;Alex Chen&lt;/h3&gt;
+&lt;p class=&quot;Card-subtitle&quot;&gt;Senior Product Designer&lt;/p&gt;
+&lt;p class=&quot;Card-text&quot; style=&quot;margin-top: var(--space-3);&quot;&gt;Creating delightful experiences at Acme Corp. Previously at Figma.&lt;/p&gt;
+&lt;div style=&quot;display: flex; gap: var(--space-2); justify-content: center; margin-top: var(--space-4);&quot;&gt;
+&lt;button class=&quot;Button Button--primary Button--small&quot;&gt;Follow&lt;/button&gt;
+&lt;button class=&quot;Button Button--secondary Button--small&quot;&gt;Message&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="stats-card">Stats Card</h3>
+<p>Highlight key metrics and numbers.</p>
+
+<div class="Preview" id="preview-7ak7kxxxt">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); max-width: 600px;">
+    <div class="Card">
+        <div class="Card-body" style="text-align: center;">
+            <span class="Card-stat">2,847</span>
+            <span class="Card-stat-label">Total Users</span>
+            <span class="Card-stat-change Card-stat-change--positive">+12.5%</span>
+        </div>
+    </div>
+    <div class="Card">
+        <div class="Card-body" style="text-align: center;">
+            <span class="Card-stat">$48.2k</span>
+            <span class="Card-stat-label">Revenue</span>
+            <span class="Card-stat-change Card-stat-change--positive">+8.2%</span>
+        </div>
+    </div>
+    <div class="Card">
+        <div class="Card-body" style="text-align: center;">
+            <span class="Card-stat">94.2%</span>
+            <span class="Card-stat-label">Uptime</span>
+            <span class="Card-stat-change Card-stat-change--negative">-0.3%</span>
+        </div>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); max-width: 600px;&quot;&gt;
+&lt;div class=&quot;Card&quot;&gt;
+&lt;div class=&quot;Card-body&quot; style=&quot;text-align: center;&quot;&gt;
+&lt;span class=&quot;Card-stat&quot;&gt;2,847&lt;/span&gt;
+&lt;span class=&quot;Card-stat-label&quot;&gt;Total Users&lt;/span&gt;
+&lt;span class=&quot;Card-stat-change Card-stat-change--positive&quot;&gt;+12.5%&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Card&quot;&gt;
+&lt;div class=&quot;Card-body&quot; style=&quot;text-align: center;&quot;&gt;
+&lt;span class=&quot;Card-stat&quot;&gt;$48.2k&lt;/span&gt;
+&lt;span class=&quot;Card-stat-label&quot;&gt;Revenue&lt;/span&gt;
+&lt;span class=&quot;Card-stat-change Card-stat-change--positive&quot;&gt;+8.2%&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Card&quot;&gt;
+&lt;div class=&quot;Card-body&quot; style=&quot;text-align: center;&quot;&gt;
+&lt;span class=&quot;Card-stat&quot;&gt;94.2%&lt;/span&gt;
+&lt;span class=&quot;Card-stat-label&quot;&gt;Uptime&lt;/span&gt;
+&lt;span class=&quot;Card-stat-change Card-stat-change--negative&quot;&gt;-0.3%&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="pricing-card">Pricing Card</h3>
+<p>Display pricing tiers and features.</p>
+
+<div class="Preview" id="preview-suehjvw6f">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Card Card--pricing" style="max-width: 320px;">
+    <div class="Card-header" style="text-align: center;">
+        <span class="Card-tag">Popular</span>
+        <h3 class="Card-title">Pro</h3>
+        <div class="Card-price">
+            <span class="Card-price-amount">$29</span>
+            <span class="Card-price-period">/month</span>
+        </div>
+    </div>
+    <div class="Card-body">
+        <ul class="Card-features">
+            <li class="Card-feature">
+                <i class="ph ph-check"></i>
+                Unlimited projects
+            </li>
+            <li class="Card-feature">
+                <i class="ph ph-check"></i>
+                50GB storage
+            </li>
+            <li class="Card-feature">
+                <i class="ph ph-check"></i>
+                Priority support
+            </li>
+            <li class="Card-feature">
+                <i class="ph ph-check"></i>
+                Advanced analytics
+            </li>
+            <li class="Card-feature Card-feature--disabled">
+                <i class="ph ph-x"></i>
+                Custom domain
+            </li>
+        </ul>
+    </div>
+    <div class="Card-footer">
+        <button class="Button Button--primary Button--block">Get Started</button>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Card Card--pricing&quot; style=&quot;max-width: 320px;&quot;&gt;
+&lt;div class=&quot;Card-header&quot; style=&quot;text-align: center;&quot;&gt;
+&lt;span class=&quot;Card-tag&quot;&gt;Popular&lt;/span&gt;
+&lt;h3 class=&quot;Card-title&quot;&gt;Pro&lt;/h3&gt;
+&lt;div class=&quot;Card-price&quot;&gt;
+&lt;span class=&quot;Card-price-amount&quot;&gt;$29&lt;/span&gt;
+&lt;span class=&quot;Card-price-period&quot;&gt;/month&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Card-body&quot;&gt;
+&lt;ul class=&quot;Card-features&quot;&gt;
+&lt;li class=&quot;Card-feature&quot;&gt;
+&lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;
+Unlimited projects
+&lt;/li&gt;
+&lt;li class=&quot;Card-feature&quot;&gt;
+&lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;
+50GB storage
+&lt;/li&gt;
+&lt;li class=&quot;Card-feature&quot;&gt;
+&lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;
+Priority support
+&lt;/li&gt;
+&lt;li class=&quot;Card-feature&quot;&gt;
+&lt;i class=&quot;ph ph-check&quot;&gt;&lt;/i&gt;
+Advanced analytics
+&lt;/li&gt;
+&lt;li class=&quot;Card-feature Card-feature--disabled&quot;&gt;
+&lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;
+Custom domain
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Card-footer&quot;&gt;
+&lt;button class=&quot;Button Button--primary Button--block&quot;&gt;Get Started&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="product-card">Product Card</h3>
+<p>E-commerce style product display.</p>
+
+<div class="Preview" id="preview-wtjviyn4e">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Card" style="max-width: 280px;">
+    <div class="Card-image" style="background: linear-gradient(135deg, oklch(92% 0.02 80), oklch(88% 0.03 60)); height: 200px; position: relative;">
+        <button class="Card-wishlist" aria-label="Add to wishlist">
+            <i class="ph ph-heart"></i>
+        </button>
+    </div>
+    <div class="Card-body">
+        <span class="Card-category">Electronics</span>
+        <h3 class="Card-title">Wireless Headphones</h3>
+        <div class="Card-rating">
+            <i class="ph-fill ph-star"></i>
+            <i class="ph-fill ph-star"></i>
+            <i class="ph-fill ph-star"></i>
+            <i class="ph-fill ph-star"></i>
+            <i class="ph ph-star"></i>
+            <span class="Card-rating-count">(128)</span>
+        </div>
+        <div class="Card-price-row">
+            <span class="Card-price-current">$79.99</span>
+            <span class="Card-price-original">$99.99</span>
+        </div>
+        <button class="Button Button--primary Button--block Button--small">Add to Cart</button>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Card&quot; style=&quot;max-width: 280px;&quot;&gt;
+&lt;div class=&quot;Card-image&quot; style=&quot;background: linear-gradient(135deg, oklch(92% 0.02 80), oklch(88% 0.03 60)); height: 200px; position: relative;&quot;&gt;
+&lt;button class=&quot;Card-wishlist&quot; aria-label=&quot;Add to wishlist&quot;&gt;
+&lt;i class=&quot;ph ph-heart&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Card-body&quot;&gt;
+&lt;span class=&quot;Card-category&quot;&gt;Electronics&lt;/span&gt;
+&lt;h3 class=&quot;Card-title&quot;&gt;Wireless Headphones&lt;/h3&gt;
+&lt;div class=&quot;Card-rating&quot;&gt;
+&lt;i class=&quot;ph-fill ph-star&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph-fill ph-star&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;ph ph-star&quot;&gt;&lt;/i&gt;
+&lt;span class=&quot;Card-rating-count&quot;&gt;(128)&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Card-price-row&quot;&gt;
+&lt;span class=&quot;Card-price-current&quot;&gt;$79.99&lt;/span&gt;
+&lt;span class=&quot;Card-price-original&quot;&gt;$99.99&lt;/span&gt;
+&lt;/div&gt;
+&lt;button class=&quot;Button Button--primary Button--block Button--small&quot;&gt;Add to Cart&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="notification-card">Notification Card</h3>
+<p>Alert or notification style cards.</p>
+
+<div class="Preview" id="preview-0155ark8r">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Card Card--notification Card--notification-info" style="max-width: 400px;">
+    <div class="Card-body" style="display: flex; gap: var(--space-3);">
+        <i class="ph ph-info" style="font-size: 1.25rem; flex-shrink: 0;"></i>
+        <div>
+            <h4 class="Card-title" style="margin-bottom: var(--space-1);">New Feature Available</h4>
+            <p class="Card-text">Dark mode is now available. Update your preferences in settings.</p>
+        </div>
+        <button class="Button Button--ghost Button--icon Button--small" aria-label="Dismiss">
+            <i class="ph ph-x"></i>
+        </button>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Card Card--notification Card--notification-info&quot; style=&quot;max-width: 400px;&quot;&gt;
+&lt;div class=&quot;Card-body&quot; style=&quot;display: flex; gap: var(--space-3);&quot;&gt;
+&lt;i class=&quot;ph ph-info&quot; style=&quot;font-size: 1.25rem; flex-shrink: 0;&quot;&gt;&lt;/i&gt;
+&lt;div&gt;
+&lt;h4 class=&quot;Card-title&quot; style=&quot;margin-bottom: var(--space-1);&quot;&gt;New Feature Available&lt;/h4&gt;
+&lt;p class=&quot;Card-text&quot;&gt;Dark mode is now available. Update your preferences in settings.&lt;/p&gt;
+&lt;/div&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon Button--small&quot; aria-label=&quot;Dismiss&quot;&gt;
+&lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+<div class="Preview" id="preview-3zrpqsbrj">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Card Card--notification Card--notification-success" style="max-width: 400px;">
+    <div class="Card-body" style="display: flex; gap: var(--space-3);">
+        <i class="ph ph-check-circle" style="font-size: 1.25rem; flex-shrink: 0;"></i>
+        <div>
+            <h4 class="Card-title" style="margin-bottom: var(--space-1);">Payment Successful</h4>
+            <p class="Card-text">Your subscription has been renewed for another year.</p>
+        </div>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Card Card--notification Card--notification-success&quot; style=&quot;max-width: 400px;&quot;&gt;
+&lt;div class=&quot;Card-body&quot; style=&quot;display: flex; gap: var(--space-3);&quot;&gt;
+&lt;i class=&quot;ph ph-check-circle&quot; style=&quot;font-size: 1.25rem; flex-shrink: 0;&quot;&gt;&lt;/i&gt;
+&lt;div&gt;
+&lt;h4 class=&quot;Card-title&quot; style=&quot;margin-bottom: var(--space-1);&quot;&gt;Payment Successful&lt;/h4&gt;
+&lt;p class=&quot;Card-text&quot;&gt;Your subscription has been renewed for another year.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="list-card">List Card</h3>
+<p>Cards containing list items.</p>
+
+<div class="Preview" id="preview-gnuwpocg7">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Card" style="max-width: 360px;">
+    <div class="Card-header">
+        <h3 class="Card-title">Recent Activity</h3>
+        <button class="Button Button--ghost Button--small">View All</button>
+    </div>
+    <ul class="Card-list">
+        <li class="Card-list-item">
+            <div class="Card-list-icon" style="background: oklch(60% 0.15 150);">
+                <i class="ph ph-file-text" style="color: white;"></i>
+            </div>
+            <div class="Card-list-content">
+                <span class="Card-list-title">Document uploaded</span>
+                <span class="Card-list-meta">report-q4.pdf • 2 min ago</span>
+            </div>
+        </li>
+        <li class="Card-list-item">
+            <div class="Card-list-icon" style="background: oklch(60% 0.15 250);">
+                <i class="ph ph-user-plus" style="color: white;"></i>
+            </div>
+            <div class="Card-list-content">
+                <span class="Card-list-title">New team member</span>
+                <span class="Card-list-meta">Sarah joined Design • 1 hour ago</span>
+            </div>
+        </li>
+        <li class="Card-list-item">
+            <div class="Card-list-icon" style="background: oklch(65% 0.15 45);">
+                <i class="ph ph-star" style="color: white;"></i>
+            </div>
+            <div class="Card-list-content">
+                <span class="Card-list-title">Project starred</span>
+                <span class="Card-list-meta">Carbon Design System • 3 hours ago</span>
+            </div>
+        </li>
+    </ul>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Card&quot; style=&quot;max-width: 360px;&quot;&gt;
+&lt;div class=&quot;Card-header&quot;&gt;
+&lt;h3 class=&quot;Card-title&quot;&gt;Recent Activity&lt;/h3&gt;
+&lt;button class=&quot;Button Button--ghost Button--small&quot;&gt;View All&lt;/button&gt;
+&lt;/div&gt;
+&lt;ul class=&quot;Card-list&quot;&gt;
+&lt;li class=&quot;Card-list-item&quot;&gt;
+&lt;div class=&quot;Card-list-icon&quot; style=&quot;background: oklch(60% 0.15 150);&quot;&gt;
+&lt;i class=&quot;ph ph-file-text&quot; style=&quot;color: white;&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Card-list-content&quot;&gt;
+&lt;span class=&quot;Card-list-title&quot;&gt;Document uploaded&lt;/span&gt;
+&lt;span class=&quot;Card-list-meta&quot;&gt;report-q4.pdf • 2 min ago&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class=&quot;Card-list-item&quot;&gt;
+&lt;div class=&quot;Card-list-icon&quot; style=&quot;background: oklch(60% 0.15 250);&quot;&gt;
+&lt;i class=&quot;ph ph-user-plus&quot; style=&quot;color: white;&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Card-list-content&quot;&gt;
+&lt;span class=&quot;Card-list-title&quot;&gt;New team member&lt;/span&gt;
+&lt;span class=&quot;Card-list-meta&quot;&gt;Sarah joined Design • 1 hour ago&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class=&quot;Card-list-item&quot;&gt;
+&lt;div class=&quot;Card-list-icon&quot; style=&quot;background: oklch(65% 0.15 45);&quot;&gt;
+&lt;i class=&quot;ph ph-star&quot; style=&quot;color: white;&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Card-list-content&quot;&gt;
+&lt;span class=&quot;Card-list-title&quot;&gt;Project starred&lt;/span&gt;
+&lt;span class=&quot;Card-list-meta&quot;&gt;Carbon Design System • 3 hours ago&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="variants">Variants</h2>
+<h3 id="elevated">Elevated</h3>
+<p>Default cards have subtle elevation with shadow.</p>
+
+<div class="Preview" id="preview-vz8gi0asf">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Card" style="max-width: 280px;">
+    <div class="Card-body">
+        <h3 class="Card-title">Elevated Card</h3>
+        <p class="Card-text">Default shadow provides depth.</p>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Card&quot; style=&quot;max-width: 280px;&quot;&gt;
+&lt;div class=&quot;Card-body&quot;&gt;
+&lt;h3 class=&quot;Card-title&quot;&gt;Elevated Card&lt;/h3&gt;
+&lt;p class=&quot;Card-text&quot;&gt;Default shadow provides depth.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="outlined">Outlined</h3>
+<p>Border-only variant without shadow.</p>
+
+<div class="Preview" id="preview-w7c5q2xw2">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Card Card--outlined" style="max-width: 280px;">
+    <div class="Card-body">
+        <h3 class="Card-title">Outlined Card</h3>
+        <p class="Card-text">Clean border, no shadow.</p>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Card Card--outlined&quot; style=&quot;max-width: 280px;&quot;&gt;
+&lt;div class=&quot;Card-body&quot;&gt;
+&lt;h3 class=&quot;Card-title&quot;&gt;Outlined Card&lt;/h3&gt;
+&lt;p class=&quot;Card-text&quot;&gt;Clean border, no shadow.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="flat">Flat</h3>
+<p>No border or shadow — blends with background.</p>
+
+<div class="Preview" id="preview-dce69vhx4">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Card Card--flat" style="max-width: 280px;">
+    <div class="Card-body">
+        <h3 class="Card-title">Flat Card</h3>
+        <p class="Card-text">Minimal visual weight.</p>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Card Card--flat&quot; style=&quot;max-width: 280px;&quot;&gt;
+&lt;div class=&quot;Card-body&quot;&gt;
+&lt;h3 class=&quot;Card-title&quot;&gt;Flat Card&lt;/h3&gt;
+&lt;p class=&quot;Card-text&quot;&gt;Minimal visual weight.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="filled">Filled</h3>
+<p>Filled background without shadow.</p>
+
+<div class="Preview" id="preview-25m8sphzx">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Card Card--filled" style="max-width: 280px;">
+    <div class="Card-body">
+        <h3 class="Card-title">Filled Card</h3>
+        <p class="Card-text">Solid background color.</p>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Card Card--filled&quot; style=&quot;max-width: 280px;&quot;&gt;
+&lt;div class=&quot;Card-body&quot;&gt;
+&lt;h3 class=&quot;Card-title&quot;&gt;Filled Card&lt;/h3&gt;
+&lt;p class=&quot;Card-text&quot;&gt;Solid background color.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="padding-sizes">Padding Sizes</h2>
+
+<div class="Preview" id="preview-hzrdaa9gl">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
+    <div class="Card Card--compact" style="max-width: 200px;">
+        <div class="Card-body">
+            <h4 class="Card-title">Compact</h4>
+            <p class="Card-text">Less padding</p>
+        </div>
+    </div>
+    <div class="Card" style="max-width: 200px;">
+        <div class="Card-body">
+            <h4 class="Card-title">Default</h4>
+            <p class="Card-text">Standard padding</p>
+        </div>
+    </div>
+    <div class="Card Card--spacious" style="max-width: 200px;">
+        <div class="Card-body">
+            <h4 class="Card-title">Spacious</h4>
+            <p class="Card-text">More padding</p>
+        </div>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; gap: var(--space-4); flex-wrap: wrap;&quot;&gt;
+&lt;div class=&quot;Card Card--compact&quot; style=&quot;max-width: 200px;&quot;&gt;
+&lt;div class=&quot;Card-body&quot;&gt;
+&lt;h4 class=&quot;Card-title&quot;&gt;Compact&lt;/h4&gt;
+&lt;p class=&quot;Card-text&quot;&gt;Less padding&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Card&quot; style=&quot;max-width: 200px;&quot;&gt;
+&lt;div class=&quot;Card-body&quot;&gt;
+&lt;h4 class=&quot;Card-title&quot;&gt;Default&lt;/h4&gt;
+&lt;p class=&quot;Card-text&quot;&gt;Standard padding&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Card Card--spacious&quot; style=&quot;max-width: 200px;&quot;&gt;
+&lt;div class=&quot;Card-body&quot;&gt;
+&lt;h4 class=&quot;Card-title&quot;&gt;Spacious&lt;/h4&gt;
+&lt;p class=&quot;Card-text&quot;&gt;More padding&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="card-grid">Card Grid</h2>
+<p>Responsive grid layout for multiple cards.</p>
+
+<div class="Preview" id="preview-83bsar3l7">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="CardGrid">
+    <div class="Card">
+        <div class="Card-image" style="background: linear-gradient(135deg, oklch(60% 0.15 30), oklch(50% 0.18 10)); height: 120px;"></div>
+        <div class="Card-body">
+            <h3 class="Card-title">Card One</h3>
+            <p class="Card-text">Description text for the first card.</p>
+        </div>
+    </div>
+    <div class="Card">
+        <div class="Card-image" style="background: linear-gradient(135deg, oklch(60% 0.15 150), oklch(50% 0.18 170)); height: 120px;"></div>
+        <div class="Card-body">
+            <h3 class="Card-title">Card Two</h3>
+            <p class="Card-text">Description text for the second card.</p>
+        </div>
+    </div>
+    <div class="Card">
+        <div class="Card-image" style="background: linear-gradient(135deg, oklch(60% 0.15 250), oklch(50% 0.18 270)); height: 120px;"></div>
+        <div class="Card-body">
+            <h3 class="Card-title">Card Three</h3>
+            <p class="Card-text">Description text for the third card.</p>
+        </div>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;CardGrid&quot;&gt;
+&lt;div class=&quot;Card&quot;&gt;
+&lt;div class=&quot;Card-image&quot; style=&quot;background: linear-gradient(135deg, oklch(60% 0.15 30), oklch(50% 0.18 10)); height: 120px;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Card-body&quot;&gt;
+&lt;h3 class=&quot;Card-title&quot;&gt;Card One&lt;/h3&gt;
+&lt;p class=&quot;Card-text&quot;&gt;Description text for the first card.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Card&quot;&gt;
+&lt;div class=&quot;Card-image&quot; style=&quot;background: linear-gradient(135deg, oklch(60% 0.15 150), oklch(50% 0.18 170)); height: 120px;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Card-body&quot;&gt;
+&lt;h3 class=&quot;Card-title&quot;&gt;Card Two&lt;/h3&gt;
+&lt;p class=&quot;Card-text&quot;&gt;Description text for the second card.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Card&quot;&gt;
+&lt;div class=&quot;Card-image&quot; style=&quot;background: linear-gradient(135deg, oklch(60% 0.15 250), oklch(50% 0.18 270)); height: 120px;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Card-body&quot;&gt;
+&lt;h3 class=&quot;Card-title&quot;&gt;Card Three&lt;/h3&gt;
+&lt;p class=&quot;Card-text&quot;&gt;Description text for the third card.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="common-patterns">Common Patterns</h2>
+<h3 id="dashboard-cards">Dashboard Cards</h3>
+
+<div class="Preview" id="preview-hoxkgvnmj">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); max-width: 700px;">
+    <div class="Card">
+        <div class="Card-body" style="text-align: center;">
+            <span class="Card-stat">1,284</span>
+            <span class="Card-stat-label">Active Users</span>
+            <span class="Card-stat-change Card-stat-change--positive">+5.2%</span>
+        </div>
+    </div>
+    <div class="Card">
+        <div class="Card-body" style="text-align: center;">
+            <span class="Card-stat">$32.1k</span>
+            <span class="Card-stat-label">Monthly Revenue</span>
+            <span class="Card-stat-change Card-stat-change--positive">+11%</span>
+        </div>
+    </div>
+    <div class="Card">
+        <div class="Card-body" style="text-align: center;">
+            <span class="Card-stat">98.7%</span>
+            <span class="Card-stat-label">Uptime</span>
+            <span class="Card-stat-change Card-stat-change--negative">-0.1%</span>
+        </div>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); max-width: 700px;&quot;&gt;
+&lt;div class=&quot;Card&quot;&gt;
+&lt;div class=&quot;Card-body&quot; style=&quot;text-align: center;&quot;&gt;
+&lt;span class=&quot;Card-stat&quot;&gt;1,284&lt;/span&gt;
+&lt;span class=&quot;Card-stat-label&quot;&gt;Active Users&lt;/span&gt;
+&lt;span class=&quot;Card-stat-change Card-stat-change--positive&quot;&gt;+5.2%&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Card&quot;&gt;
+&lt;div class=&quot;Card-body&quot; style=&quot;text-align: center;&quot;&gt;
+&lt;span class=&quot;Card-stat&quot;&gt;$32.1k&lt;/span&gt;
+&lt;span class=&quot;Card-stat-label&quot;&gt;Monthly Revenue&lt;/span&gt;
+&lt;span class=&quot;Card-stat-change Card-stat-change--positive&quot;&gt;+11%&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Card&quot;&gt;
+&lt;div class=&quot;Card-body&quot; style=&quot;text-align: center;&quot;&gt;
+&lt;span class=&quot;Card-stat&quot;&gt;98.7%&lt;/span&gt;
+&lt;span class=&quot;Card-stat-label&quot;&gt;Uptime&lt;/span&gt;
+&lt;span class=&quot;Card-stat-change Card-stat-change--negative&quot;&gt;-0.1%&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="card-in-a-settings-page">Card in a Settings Page</h3>
+
+<div class="Preview" id="preview-jtu9sr9ev">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Card Card--outlined" style="max-width: 480px;">
+    <div class="Card-header">
+        <h3 class="Card-title">Notifications</h3>
+    </div>
+    <div class="Card-body">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-3);">
+            <span>Email notifications</span>
+            <label class="Toggle"><input type="checkbox" checked><span class="Toggle-slider"></span></label>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span>Push notifications</span>
+            <label class="Toggle"><input type="checkbox"><span class="Toggle-slider"></span></label>
+        </div>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Card Card--outlined&quot; style=&quot;max-width: 480px;&quot;&gt;
+&lt;div class=&quot;Card-header&quot;&gt;
+&lt;h3 class=&quot;Card-title&quot;&gt;Notifications&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Card-body&quot;&gt;
+&lt;div style=&quot;display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-3);&quot;&gt;
+&lt;span&gt;Email notifications&lt;/span&gt;
+&lt;label class=&quot;Toggle&quot;&gt;&lt;input type=&quot;checkbox&quot; checked&gt;&lt;span class=&quot;Toggle-slider&quot;&gt;&lt;/span&gt;&lt;/label&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: flex; justify-content: space-between; align-items: center;&quot;&gt;
+&lt;span&gt;Push notifications&lt;/span&gt;
+&lt;label class=&quot;Toggle&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt;&lt;span class=&quot;Toggle-slider&quot;&gt;&lt;/span&gt;&lt;/label&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="card-with-media-gallery">Card with Media Gallery</h3>
+
+<div class="Preview" id="preview-h1m08o20v">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Card" style="max-width: 360px;">
+    <div class="Card-body">
+        <h3 class="Card-title">Trip Photos</h3>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-2); margin-top: var(--space-3);">
+            <div style="aspect-ratio: 1; background: linear-gradient(135deg, oklch(60% 0.15 30), oklch(50% 0.18 10)); border-radius: var(--r-s);"></div>
+            <div style="aspect-ratio: 1; background: linear-gradient(135deg, oklch(60% 0.15 150), oklch(50% 0.18 170)); border-radius: var(--r-s);"></div>
+            <div style="aspect-ratio: 1; background: linear-gradient(135deg, oklch(60% 0.15 250), oklch(50% 0.18 270)); border-radius: var(--r-s);"></div>
+        </div>
+        <p class="Card-meta" style="margin-top: var(--space-2);">12 photos · June 2025</p>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Card&quot; style=&quot;max-width: 360px;&quot;&gt;
+&lt;div class=&quot;Card-body&quot;&gt;
+&lt;h3 class=&quot;Card-title&quot;&gt;Trip Photos&lt;/h3&gt;
+&lt;div style=&quot;display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-2); margin-top: var(--space-3);&quot;&gt;
+&lt;div style=&quot;aspect-ratio: 1; background: linear-gradient(135deg, oklch(60% 0.15 30), oklch(50% 0.18 10)); border-radius: var(--r-s);&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;aspect-ratio: 1; background: linear-gradient(135deg, oklch(60% 0.15 150), oklch(50% 0.18 170)); border-radius: var(--r-s);&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;aspect-ratio: 1; background: linear-gradient(135deg, oklch(60% 0.15 250), oklch(50% 0.18 270)); border-radius: var(--r-s);&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class=&quot;Card-meta&quot; style=&quot;margin-top: var(--space-2);&quot;&gt;12 photos · June 2025&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="card-as-empty-state">Card as Empty State</h3>
+
+<div class="Preview" id="preview-hgy5npk6i">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Card Card--outlined" style="max-width: 400px; text-align: center;">
+    <div class="Card-body" style="padding: var(--space-8);">
+        <i class="ph ph-folder-open" style="font-size: 2.5rem; color: var(--fg-3); margin-bottom: var(--space-3);"></i>
+        <h3 class="Card-title">No projects yet</h3>
+        <p class="Card-text">Create your first project to get started.</p>
+        <button class="Button Button--primary Button--small" style="margin-top: var(--space-4);">Create Project</button>
+    </div>
+</div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Card Card--outlined&quot; style=&quot;max-width: 400px; text-align: center;&quot;&gt;
+&lt;div class=&quot;Card-body&quot; style=&quot;padding: var(--space-8);&quot;&gt;
+&lt;i class=&quot;ph ph-folder-open&quot; style=&quot;font-size: 2.5rem; color: var(--fg-3); margin-bottom: var(--space-3);&quot;&gt;&lt;/i&gt;
+&lt;h3 class=&quot;Card-title&quot;&gt;No projects yet&lt;/h3&gt;
+&lt;p class=&quot;Card-text&quot;&gt;Create your first project to get started.&lt;/p&gt;
+&lt;button class=&quot;Button Button--primary Button--small&quot; style=&quot;margin-top: var(--space-4);&quot;&gt;Create Project&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="customization">Customization</h2>
+<p>Override card styles using CSS custom properties:</p>
+<pre><code class="language-css">/* Custom card background */
+.Card--custom {
+  --card-bg: oklch(95% 0.02 250);
+  --card-border: oklch(85% 0.05 250);
+  background-color: var(--card-bg);
+  border-color: var(--card-border);
+}
+
+/* Custom shadow depth */
+.Card--deep {
+  box-shadow: 
+    0 4px 6px -1px oklch(0% 0 0 / 0.1),
+    0 10px 15px -3px oklch(0% 0 0 / 0.1);
+}
+
+/* Custom border radius */
+.Card--rounded {
+  border-radius: var(--space-6);
+}
+
+/* Custom padding */
+.Card--tight {
+  --card-padding: var(--space-3);
+}
+
+.Card--loose {
+  --card-padding: var(--space-8);
+}
+
+/* Accent border */
+.Card--accent {
+  border-left: 4px solid var(--accent);
+}
+</code></pre>
+<h3 id="theme-variants">Theme Variants</h3>
+<pre><code class="language-css">/* Success card */
+.Card--success {
+  --card-bg: oklch(95% 0.04 150);
+  --card-border: oklch(70% 0.15 150);
+  border-left: 4px solid var(--card-border);
+}
+
+/* Warning card */
+.Card--warning {
+  --card-bg: oklch(95% 0.04 85);
+  --card-border: oklch(75% 0.15 85);
+  border-left: 4px solid var(--card-border);
+}
+
+/* Error card */
+.Card--error {
+  --card-bg: oklch(95% 0.04 25);
+  --card-border: oklch(65% 0.2 25);
+  border-left: 4px solid var(--card-border);
+}
+</code></pre>
+<hr>
+<h2 id="api-reference">API Reference</h2>
+<h3 id="base-classes">Base Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Card</code></td>
+<td class="ApiTable-desc">Base card container (required)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="structure-classes">Structure Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Card-header</code></td>
+<td class="ApiTable-desc">Card header section with title and actions</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-body</code></td>
+<td class="ApiTable-desc">Main content area with padding</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-footer</code></td>
+<td class="ApiTable-desc">Footer section for actions</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-image</code></td>
+<td class="ApiTable-desc">Image container at card top</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-overlay</code></td>
+<td class="ApiTable-desc">Text overlay on images</td>
+</tr>
+</tbody>
+</table>
+<h3 id="typography-classes">Typography Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Card-title</code></td>
+<td class="ApiTable-desc">Card heading text</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-subtitle</code></td>
+<td class="ApiTable-desc">Secondary heading or date</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-text</code></td>
+<td class="ApiTable-desc">Body text content</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-meta</code></td>
+<td class="ApiTable-desc">Metadata like timestamps or counts</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-tag</code></td>
+<td class="ApiTable-desc">Category or status tag</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-category</code></td>
+<td class="ApiTable-desc">Product/content category label</td>
+</tr>
+</tbody>
+</table>
+<h3 id="variant-classes">Variant Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Card--outlined</code></td>
+<td class="ApiTable-desc">Border only, no shadow</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card--flat</code></td>
+<td class="ApiTable-desc">No border or shadow</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card--filled</code></td>
+<td class="ApiTable-desc">Filled background, no shadow</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card--interactive</code></td>
+<td class="ApiTable-desc">Clickable with hover effects</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card--horizontal</code></td>
+<td class="ApiTable-desc">Side-by-side layout</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card--overlay</code></td>
+<td class="ApiTable-desc">Text overlaid on image</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card--pricing</code></td>
+<td class="ApiTable-desc">Pricing tier styling</td>
+</tr>
+</tbody>
+</table>
+<h3 id="size-classes">Size Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Card--compact</code></td>
+<td class="ApiTable-desc">Reduced padding</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card--spacious</code></td>
+<td class="ApiTable-desc">Increased padding</td>
+</tr>
+</tbody>
+</table>
+<h3 id="stats-classes">Stats Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Card-stat</code></td>
+<td class="ApiTable-desc">Large metric number</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-stat-label</code></td>
+<td class="ApiTable-desc">Metric label text</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-stat-change</code></td>
+<td class="ApiTable-desc">Change indicator</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-stat-change--positive</code></td>
+<td class="ApiTable-desc">Positive change (green)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-stat-change--negative</code></td>
+<td class="ApiTable-desc">Negative change (red)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pricing-classes">Pricing Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Card-price</code></td>
+<td class="ApiTable-desc">Price container</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-price-amount</code></td>
+<td class="ApiTable-desc">Large price number</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-price-period</code></td>
+<td class="ApiTable-desc">Billing period text</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-features</code></td>
+<td class="ApiTable-desc">Feature list container</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-feature</code></td>
+<td class="ApiTable-desc">Individual feature item</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-feature--disabled</code></td>
+<td class="ApiTable-desc">Unavailable feature (grayed)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product-classes">Product Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Card-wishlist</code></td>
+<td class="ApiTable-desc">Wishlist heart button</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-rating</code></td>
+<td class="ApiTable-desc">Star rating container</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-rating-count</code></td>
+<td class="ApiTable-desc">Review count text</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-price-current</code></td>
+<td class="ApiTable-desc">Current sale price</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-price-original</code></td>
+<td class="ApiTable-desc">Original strikethrough price</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notification-classes">Notification Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Card--notification</code></td>
+<td class="ApiTable-desc">Notification card base</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card--notification-info</code></td>
+<td class="ApiTable-desc">Info notification (blue)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card--notification-success</code></td>
+<td class="ApiTable-desc">Success notification (green)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card--notification-warning</code></td>
+<td class="ApiTable-desc">Warning notification (yellow)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card--notification-error</code></td>
+<td class="ApiTable-desc">Error notification (red)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="list-classes">List Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Card-list</code></td>
+<td class="ApiTable-desc">List container inside card</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-list-item</code></td>
+<td class="ApiTable-desc">Individual list item</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-list-icon</code></td>
+<td class="ApiTable-desc">Icon container for list item</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-list-content</code></td>
+<td class="ApiTable-desc">Text content wrapper</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-list-title</code></td>
+<td class="ApiTable-desc">List item title</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Card-list-meta</code></td>
+<td class="ApiTable-desc">List item metadata</td>
+</tr>
+</tbody>
+</table>
+<h3 id="layout-classes">Layout Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.CardGrid</code></td>
+<td class="ApiTable-desc">Responsive card grid container</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="css-reference">CSS Reference</h2>
+<pre><code class="language-css">/* Base card */
+.Card {
+  background: var(--bg);
+  border: 1px solid var(--bd);
+  border-radius: var(--r-m);
+  box-shadow: 0 1px 3px oklch(0% 0 0 / 0.08);
+  overflow: hidden;
+}
+
+/* Structure */
+.Card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--bd);
+}
+
+.Card-body {
+  padding: var(--space-4);
+}
+
+.Card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border-top: 1px solid var(--bd);
+}
+
+.Card-image {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Typography */
+.Card-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--fg);
+  margin-bottom: var(--space-1);
+}
+
+.Card-subtitle {
+  font-size: 0.85rem;
+  color: var(--fg-3);
+}
+
+.Card-text {
+  font-size: 0.9rem;
+  color: var(--fg-2);
+  line-height: 1.5;
+}
+
+.Card-meta {
+  font-size: 0.8rem;
+  color: var(--fg-3);
+}
+
+.Card-tag {
+  display: inline-block;
+  padding: 2px var(--space-2);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: var(--r-s);
+  background: var(--accent);
+  color: white;
+}
+
+/* Variants */
+.Card--outlined {
+  box-shadow: none;
+}
+
+.Card--flat {
+  border: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+.Card--filled {
+  box-shadow: none;
+  background: var(--bg-s);
+}
+
+.Card--interactive {
+  cursor: pointer;
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+
+.Card--interactive:hover {
+  box-shadow: 0 4px 12px oklch(0% 0 0 / 0.12);
+  transform: translateY(-2px);
+}
+
+.Card--horizontal {
+  display: flex;
+}
+
+.Card--horizontal .Card-image {
+  width: auto;
+  min-width: 140px;
+}
+
+/* Overlay */
+.Card--overlay {
+  position: relative;
+}
+
+.Card--overlay .Card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-4);
+  background: linear-gradient(to top, oklch(0% 0 0 / 0.7), transparent);
+  color: white;
+}
+
+.Card--overlay .Card-title,
+.Card--overlay .Card-text {
+  color: white;
+}
+
+/* Sizes */
+.Card--compact .Card-body,
+.Card--compact .Card-header,
+.Card--compact .Card-footer {
+  padding: var(--space-2) var(--space-3);
+}
+
+.Card--spacious .Card-body,
+.Card--spacious .Card-header,
+.Card--spacious .Card-footer {
+  padding: var(--space-6);
+}
+
+/* Stats */
+.Card-stat {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--fg);
+}
+
+.Card-stat-label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--fg-3);
+  margin-top: var(--space-1);
+}
+
+.Card-stat-change {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: var(--space-1);
+}
+
+.Card-stat-change--positive { color: oklch(55% 0.15 150); }
+.Card-stat-change--negative { color: oklch(55% 0.2 25); }
+
+/* Pricing */
+.Card-price-amount {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.Card-price-period {
+  font-size: 0.85rem;
+  color: var(--fg-3);
+}
+
+.Card-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Card-feature {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) 0;
+}
+
+.Card-feature--disabled {
+  color: var(--fg-3);
+  text-decoration: line-through;
+}
+
+/* Product */
+.Card-wishlist {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 1px 3px oklch(0% 0 0 / 0.15);
+}
+
+.Card-rating {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: oklch(70% 0.15 80);
+  margin: var(--space-2) 0;
+}
+
+.Card-rating-count {
+  font-size: 0.8rem;
+  color: var(--fg-3);
+  margin-left: var(--space-1);
+}
+
+.Card-price-current {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.Card-price-original {
+  text-decoration: line-through;
+  color: var(--fg-3);
+  font-size: 0.9rem;
+  margin-left: var(--space-2);
+}
+
+/* Notification */
+.Card--notification {
+  border-left: 4px solid var(--bd);
+}
+
+.Card--notification-info { border-left-color: oklch(60% 0.15 250); }
+.Card--notification-success { border-left-color: oklch(55% 0.15 150); }
+.Card--notification-warning { border-left-color: oklch(70% 0.15 80); }
+.Card--notification-error { border-left-color: oklch(55% 0.2 25); }
+
+/* List */
+.Card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Card-list-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-top: 1px solid var(--bd);
+}
+
+.Card-list-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--r-s);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.Card-list-title {
+  display: block;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.Card-list-meta {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--fg-3);
+}
+
+/* Grid */
+.CardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-4);
+}
+</code></pre>
+<hr>
+<h2 id="accessibility">Accessibility</h2>
+<h3 id="semantic-structure">Semantic Structure</h3>
+<pre><code class="language-html">&lt;!-- Use article for standalone content --&gt;
+&lt;article class=&quot;Card&quot;&gt;
+    &lt;div class=&quot;Card-body&quot;&gt;
+        &lt;h3 class=&quot;Card-title&quot;&gt;Article Title&lt;/h3&gt;
+        &lt;p class=&quot;Card-text&quot;&gt;Self-contained content.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/article&gt;
+
+&lt;!-- Use heading hierarchy --&gt;
+&lt;div class=&quot;Card&quot;&gt;
+    &lt;div class=&quot;Card-header&quot;&gt;
+        &lt;h2 class=&quot;Card-title&quot;&gt;Section Title&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;Card-body&quot;&gt;
+        &lt;h3&gt;Subsection&lt;/h3&gt;
+        &lt;p class=&quot;Card-text&quot;&gt;Content under subsection.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="interactive-cards">Interactive Cards</h3>
+<pre><code class="language-html">&lt;!-- Clickable card as link --&gt;
+&lt;a href=&quot;/project&quot; class=&quot;Card Card--interactive&quot;&gt;
+    &lt;div class=&quot;Card-body&quot;&gt;
+        &lt;h3 class=&quot;Card-title&quot;&gt;Project Name&lt;/h3&gt;
+        &lt;p class=&quot;Card-text&quot;&gt;Click to view project details.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/a&gt;
+
+&lt;!-- Card with multiple actions — don't make whole card clickable --&gt;
+&lt;div class=&quot;Card&quot;&gt;
+    &lt;div class=&quot;Card-body&quot;&gt;
+        &lt;h3 class=&quot;Card-title&quot;&gt;Project Name&lt;/h3&gt;
+        &lt;p class=&quot;Card-text&quot;&gt;Project description here.&lt;/p&gt;
+        &lt;div class=&quot;Card-actions&quot;&gt;
+            &lt;a href=&quot;/project/edit&quot;&gt;Edit&lt;/a&gt;
+            &lt;button&gt;Delete&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="images">Images</h3>
+<pre><code class="language-html">&lt;!-- Decorative image --&gt;
+&lt;div class=&quot;Card&quot;&gt;
+    &lt;div class=&quot;Card-image&quot; role=&quot;presentation&quot; aria-hidden=&quot;true&quot;
+         style=&quot;background-image: url('pattern.jpg');&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;Card-body&quot;&gt;
+        &lt;h3 class=&quot;Card-title&quot;&gt;Title&lt;/h3&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Meaningful image --&gt;
+&lt;div class=&quot;Card&quot;&gt;
+    &lt;img class=&quot;Card-image&quot; src=&quot;product.jpg&quot; 
+         alt=&quot;Blue wireless headphones with cushioned ear cups&quot;&gt;
+    &lt;div class=&quot;Card-body&quot;&gt;
+        &lt;h3 class=&quot;Card-title&quot;&gt;Wireless Headphones&lt;/h3&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="keyboard-navigation">Keyboard Navigation</h3>
+<div class="Table-container"><table class="Table">
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tab</td>
+<td>Move focus to interactive elements</td>
+</tr>
+<tr>
+<td>Enter</td>
+<td>Activate focused link or button</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>Activate focused button</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="screen-reader-considerations">Screen Reader Considerations</h3>
+<pre><code class="language-html">&lt;!-- Price with context --&gt;
+&lt;div class=&quot;Card-price-row&quot;&gt;
+    &lt;span class=&quot;Card-price-current&quot; aria-label=&quot;Sale price: $79.99&quot;&gt;$79.99&lt;/span&gt;
+    &lt;span class=&quot;Card-price-original&quot; aria-label=&quot;Original price: $99.99&quot;&gt;
+        &lt;s&gt;$99.99&lt;/s&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- Stats with labels --&gt;
+&lt;div class=&quot;Card-body&quot;&gt;
+    &lt;span class=&quot;Card-stat&quot; aria-describedby=&quot;stat-label-users&quot;&gt;2,847&lt;/span&gt;
+    &lt;span class=&quot;Card-stat-label&quot; id=&quot;stat-label-users&quot;&gt;Total Users&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- Rating with text alternative --&gt;
+&lt;div class=&quot;Card-rating&quot; aria-label=&quot;4 out of 5 stars, 128 reviews&quot;&gt;
+    &lt;i class=&quot;ph-fill ph-star&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+    &lt;i class=&quot;ph-fill ph-star&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+    &lt;i class=&quot;ph-fill ph-star&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+    &lt;i class=&quot;ph-fill ph-star&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+    &lt;i class=&quot;ph ph-star&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+    &lt;span class=&quot;Card-rating-count&quot;&gt;(128)&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="do">Do</h3>
+<ul>
+<li>✓ <strong>Use consistent card heights</strong> in grids — align content or use CSS Grid</li>
+<li>✓ <strong>Limit content</strong> — Cards should be scannable, not essays</li>
+<li>✓ <strong>Single primary action</strong> — One clear CTA per card</li>
+<li>✓ <strong>Meaningful images</strong> — Images should add value, not just decoration</li>
+<li>✓ <strong>Clear visual hierarchy</strong> — Title → Supporting text → Actions</li>
+<li>✓ <strong>Group related cards</strong> — Use grids with consistent spacing</li>
+</ul>
+<h3 id="don-t">Don’t</h3>
+<ul>
+<li>✗ <strong>Nest cards</strong> — Cards inside cards creates visual confusion</li>
+<li>✗ <strong>Too many actions</strong> — More than 2-3 actions clutters the card</li>
+<li>✗ <strong>Walls of text</strong> — Keep descriptions to 2-3 lines max</li>
+<li>✗ <strong>Inconsistent styling</strong> — Mix variants sparingly within a view</li>
+<li>✗ <strong>Click the whole card with multiple CTAs</strong> — Accessibility nightmare</li>
+<li>✗ <strong>Tiny touch targets</strong> — Ensure buttons/links are at least 44px</li>
+</ul>
+<h3 id="content-guidelines">Content Guidelines</h3>
+<p><strong>Titles:</strong> Keep to one line when possible. Be specific.</p>
+<ul>
+<li>✓ “Q4 Revenue Report”</li>
+<li>✗ “Report”</li>
+</ul>
+<p><strong>Descriptions:</strong> Front-load important info. Truncate gracefully.</p>
+<ul>
+<li>✓ “Revenue increased 12% driven by new enterprise clients.”</li>
+<li>✗ “In this quarter we saw various changes across multiple metrics…”</li>
+</ul>
+<p><strong>Actions:</strong> Use clear, specific verbs.</p>
+<ul>
+<li>✓ “View Report”, “Add to Cart”, “Start Trial”</li>
+<li>✗ “Click Here”, “Submit”, “Go”</li>
+</ul>
+
+                </article>
+
+                <footer class="page-footer">
+                    <p>Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

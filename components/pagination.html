@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Pagination | Carbon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/bold/style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Floating Pill Nav (Mobile: bottom, Desktop: top) -->
+        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation">
+            <a href="../index.html" class="fnav-btn" data-section="home" aria-label="Home">
+                <i class="ph-bold ph-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="../tokens/colors.html" class="fnav-btn" data-section="tokens" aria-label="Tokens">
+                <i class="ph-bold ph-palette"></i>
+                <span>Tokens</span>
+            </a>
+            <a href="../components/buttons.html" class="fnav-btn" data-section="components" aria-label="Components">
+                <i class="ph-bold ph-stack"></i>
+                <span>Components</span>
+            </a>
+            <a href="../patterns/layouts.html" class="fnav-btn" data-section="patterns" aria-label="Patterns">
+                <i class="ph-bold ph-grid-four"></i>
+                <span>Patterns</span>
+            </a>
+            <div class="fnav-sep"></div>
+            <button class="fnav-btn" id="search-toggle" aria-label="Search">
+                <i class="ph ph-magnifying-glass"></i>
+            </button>
+            <button class="fnav-btn" id="theme-btn" aria-label="Toggle theme">
+                <i class="ph ph-moon"></i>
+            </button>
+        </nav>
+
+        <!-- Glassmorphism Top Bar (Desktop only) -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <a href="../index.html" class="logo">
+                    <i class="ph ph-intersect"></i>
+                    <span>Carbon</span>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <div class="search-container" id="search-container">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search components..." aria-label="Search" autocomplete="off">
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <main class="main-content">
+                <header class="page-header">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="../index.html">Carbon</a> <span class="sep">/</span> <span>Components</span> <span class="sep">/</span> <span>Pagination</span>
+                    </nav>
+                    <h1><em>Pagination</em></h1>
+                </header>
+                
+                <article class="prose">
+                    <h1>Pagination</h1>
+<p>Pagination helps users navigate through large sets of content.</p>
+<h2 id="basic-pagination">Basic Pagination</h2>
+
+<div class="Preview" id="preview-fay5bxo4z">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><nav class="Pagination">
+        <a href="#" class="Pagination-item Pagination-item--prev" aria-label="Previous">
+            <i class="ph ph-caret-left"></i>
+        </a>
+        <a href="#" class="Pagination-item">1</a>
+        <a href="#" class="Pagination-item active">2</a>
+        <a href="#" class="Pagination-item">3</a>
+        <a href="#" class="Pagination-item">4</a>
+        <a href="#" class="Pagination-item">5</a>
+        <a href="#" class="Pagination-item Pagination-item--next" aria-label="Next">
+            <i class="ph ph-caret-right"></i>
+        </a>
+    </nav></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;nav class=&quot;Pagination&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item Pagination-item--prev&quot; aria-label=&quot;Previous&quot;&gt;
+&lt;i class=&quot;ph ph-caret-left&quot;&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item&quot;&gt;1&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item active&quot;&gt;2&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item&quot;&gt;3&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item&quot;&gt;4&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item&quot;&gt;5&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item Pagination-item--next&quot; aria-label=&quot;Next&quot;&gt;
+&lt;i class=&quot;ph ph-caret-right&quot;&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;nav class=&quot;Pagination&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;Pagination-item Pagination-item--prev&quot;&gt;
+        &lt;i class=&quot;ph ph-caret-left&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;Pagination-item&quot;&gt;1&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;Pagination-item active&quot;&gt;2&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;Pagination-item&quot;&gt;3&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;Pagination-item Pagination-item--next&quot;&gt;
+        &lt;i class=&quot;ph ph-caret-right&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+&lt;/nav&gt;
+</code></pre>
+<h2 id="with-ellipsis">With Ellipsis</h2>
+<p>For large page counts, use ellipsis to indicate skipped pages.</p>
+
+<div class="Preview" id="preview-l9s0l1i8u">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><nav class="Pagination">
+        <a href="#" class="Pagination-item Pagination-item--prev">
+            <i class="ph ph-caret-left"></i>
+        </a>
+        <a href="#" class="Pagination-item">1</a>
+        <span class="Pagination-ellipsis">...</span>
+        <a href="#" class="Pagination-item">4</a>
+        <a href="#" class="Pagination-item active">5</a>
+        <a href="#" class="Pagination-item">6</a>
+        <span class="Pagination-ellipsis">...</span>
+        <a href="#" class="Pagination-item">20</a>
+        <a href="#" class="Pagination-item Pagination-item--next">
+            <i class="ph ph-caret-right"></i>
+        </a>
+    </nav></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;nav class=&quot;Pagination&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item Pagination-item--prev&quot;&gt;
+&lt;i class=&quot;ph ph-caret-left&quot;&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item&quot;&gt;1&lt;/a&gt;
+&lt;span class=&quot;Pagination-ellipsis&quot;&gt;...&lt;/span&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item&quot;&gt;4&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item active&quot;&gt;5&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item&quot;&gt;6&lt;/a&gt;
+&lt;span class=&quot;Pagination-ellipsis&quot;&gt;...&lt;/span&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item&quot;&gt;20&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item Pagination-item--next&quot;&gt;
+&lt;i class=&quot;ph ph-caret-right&quot;&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;span class=&quot;Pagination-ellipsis&quot;&gt;...&lt;/span&gt;
+</code></pre>
+<h2 id="disabled-states">Disabled States</h2>
+
+<div class="Preview" id="preview-4hjhphuyf">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><nav class="Pagination">
+        <a href="#" class="Pagination-item Pagination-item--prev disabled" aria-disabled="true">
+            <i class="ph ph-caret-left"></i>
+        </a>
+        <a href="#" class="Pagination-item active">1</a>
+        <a href="#" class="Pagination-item">2</a>
+        <a href="#" class="Pagination-item">3</a>
+        <a href="#" class="Pagination-item Pagination-item--next">
+            <i class="ph ph-caret-right"></i>
+        </a>
+    </nav></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;nav class=&quot;Pagination&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item Pagination-item--prev disabled&quot; aria-disabled=&quot;true&quot;&gt;
+&lt;i class=&quot;ph ph-caret-left&quot;&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item active&quot;&gt;1&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item&quot;&gt;2&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item&quot;&gt;3&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item Pagination-item--next&quot;&gt;
+&lt;i class=&quot;ph ph-caret-right&quot;&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;a class=&quot;Pagination-item Pagination-item--prev disabled&quot; aria-disabled=&quot;true&quot;&gt;
+</code></pre>
+<h2 id="compact">Compact</h2>
+<p>For tight spaces, use the compact variant.</p>
+
+<div class="Preview" id="preview-1o2gi82up">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><nav class="Pagination Pagination--compact">
+        <a href="#" class="Pagination-item Pagination-item--prev">
+            <i class="ph ph-caret-left"></i>
+        </a>
+        <span class="Pagination-info">Page 5 of 20</span>
+        <a href="#" class="Pagination-item Pagination-item--next">
+            <i class="ph ph-caret-right"></i>
+        </a>
+    </nav></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;nav class=&quot;Pagination Pagination--compact&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item Pagination-item--prev&quot;&gt;
+&lt;i class=&quot;ph ph-caret-left&quot;&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;span class=&quot;Pagination-info&quot;&gt;Page 5 of 20&lt;/span&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item Pagination-item--next&quot;&gt;
+&lt;i class=&quot;ph ph-caret-right&quot;&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;nav class=&quot;Pagination Pagination--compact&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;Pagination-item Pagination-item--prev&quot;&gt;...&lt;/a&gt;
+    &lt;span class=&quot;Pagination-info&quot;&gt;Page 5 of 20&lt;/span&gt;
+    &lt;a href=&quot;#&quot; class=&quot;Pagination-item Pagination-item--next&quot;&gt;...&lt;/a&gt;
+&lt;/nav&gt;
+</code></pre>
+<h2 id="with-page-size">With Page Size</h2>
+
+<div class="Preview" id="preview-dtinxgibk">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        <div style="display: flex; align-items: center; gap: var(--space-2); font-size: 0.9rem; color: var(--fg-3);">
+            <span>Show</span>
+            <select class="Select" style="width: auto; padding: var(--space-1) var(--space-2);">
+                <option>10</option>
+                <option>25</option>
+                <option>50</option>
+            </select>
+            <span>per page</span>
+        </div>
+        <nav class="Pagination">
+            <a href="#" class="Pagination-item Pagination-item--prev">
+                <i class="ph ph-caret-left"></i>
+            </a>
+            <a href="#" class="Pagination-item active">1</a>
+            <a href="#" class="Pagination-item">2</a>
+            <a href="#" class="Pagination-item">3</a>
+            <a href="#" class="Pagination-item Pagination-item--next">
+                <i class="ph ph-caret-right"></i>
+            </a>
+        </nav>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; justify-content: space-between; align-items: center; width: 100%;&quot;&gt;
+&lt;div style=&quot;display: flex; align-items: center; gap: var(--space-2); font-size: 0.9rem; color: var(--fg-3);&quot;&gt;
+&lt;span&gt;Show&lt;/span&gt;
+&lt;select class=&quot;Select&quot; style=&quot;width: auto; padding: var(--space-1) var(--space-2);&quot;&gt;
+&lt;option&gt;10&lt;/option&gt;
+&lt;option&gt;25&lt;/option&gt;
+&lt;option&gt;50&lt;/option&gt;
+&lt;/select&gt;
+&lt;span&gt;per page&lt;/span&gt;
+&lt;/div&gt;
+&lt;nav class=&quot;Pagination&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item Pagination-item--prev&quot;&gt;
+&lt;i class=&quot;ph ph-caret-left&quot;&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item active&quot;&gt;1&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item&quot;&gt;2&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item&quot;&gt;3&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item Pagination-item--next&quot;&gt;
+&lt;i class=&quot;ph ph-caret-right&quot;&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;/nav&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="common-patterns">Common Patterns</h2>
+<h3 id="data-table-footer">Data Table Footer</h3>
+
+<div class="Preview" id="preview-8bdmh33j8">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="width: 100%; border: 1px solid var(--bd); border-radius: var(--r-m); overflow: hidden;">
+        <div style="padding: var(--space-3); background: var(--bg-s); border-bottom: 1px solid var(--bd); font-weight: 600; font-size: 0.9rem;">Recent Orders</div>
+        <div style="padding: var(--space-3); border-bottom: 1px solid var(--bd); font-size: 0.9rem;">Order #1042 — $129.00</div>
+        <div style="padding: var(--space-3); border-bottom: 1px solid var(--bd); font-size: 0.9rem;">Order #1041 — $67.50</div>
+        <div style="padding: var(--space-3); border-bottom: 1px solid var(--bd); font-size: 0.9rem;">Order #1040 — $245.00</div>
+        <div style="padding: var(--space-3); display: flex; justify-content: space-between; align-items: center; background: var(--bg-s);">
+            <span style="font-size: 0.85rem; color: var(--fg-3);">Showing 1–3 of 128</span>
+            <nav class="Pagination">
+                <a href="#" class="Pagination-item Pagination-item--prev" aria-label="Previous"><i class="ph ph-caret-left"></i></a>
+                <a href="#" class="Pagination-item active">1</a>
+                <a href="#" class="Pagination-item">2</a>
+                <a href="#" class="Pagination-item">3</a>
+                <span class="Pagination-ellipsis">...</span>
+                <a href="#" class="Pagination-item">43</a>
+                <a href="#" class="Pagination-item Pagination-item--next" aria-label="Next"><i class="ph ph-caret-right"></i></a>
+            </nav>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;width: 100%; border: 1px solid var(--bd); border-radius: var(--r-m); overflow: hidden;&quot;&gt;
+&lt;div style=&quot;padding: var(--space-3); background: var(--bg-s); border-bottom: 1px solid var(--bd); font-weight: 600; font-size: 0.9rem;&quot;&gt;Recent Orders&lt;/div&gt;
+&lt;div style=&quot;padding: var(--space-3); border-bottom: 1px solid var(--bd); font-size: 0.9rem;&quot;&gt;Order #1042 — $129.00&lt;/div&gt;
+&lt;div style=&quot;padding: var(--space-3); border-bottom: 1px solid var(--bd); font-size: 0.9rem;&quot;&gt;Order #1041 — $67.50&lt;/div&gt;
+&lt;div style=&quot;padding: var(--space-3); border-bottom: 1px solid var(--bd); font-size: 0.9rem;&quot;&gt;Order #1040 — $245.00&lt;/div&gt;
+&lt;div style=&quot;padding: var(--space-3); display: flex; justify-content: space-between; align-items: center; background: var(--bg-s);&quot;&gt;
+&lt;span style=&quot;font-size: 0.85rem; color: var(--fg-3);&quot;&gt;Showing 1–3 of 128&lt;/span&gt;
+&lt;nav class=&quot;Pagination&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item Pagination-item--prev&quot; aria-label=&quot;Previous&quot;&gt;&lt;i class=&quot;ph ph-caret-left&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item active&quot;&gt;1&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item&quot;&gt;2&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item&quot;&gt;3&lt;/a&gt;
+&lt;span class=&quot;Pagination-ellipsis&quot;&gt;...&lt;/span&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item&quot;&gt;43&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item Pagination-item--next&quot; aria-label=&quot;Next&quot;&gt;&lt;i class=&quot;ph ph-caret-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/nav&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="search-results">Search Results</h3>
+
+<div class="Preview" id="preview-chu3xu73n">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="width: 100%; max-width: 500px;">
+        <div style="margin-bottom: var(--space-3); font-size: 0.9rem; color: var(--fg-3);">About 1,240 results (0.42 seconds)</div>
+        <div style="display: flex; flex-direction: column; gap: var(--space-3); margin-bottom: var(--space-4);">
+            <div style="padding: var(--space-3); border-left: 3px solid var(--accent); background: var(--bg-s);">
+                <div style="font-weight: 600; margin-bottom: var(--space-1);">Result Title</div>
+                <div style="font-size: 0.85rem; color: var(--fg-3);">Brief description of the search result...</div>
+            </div>
+        </div>
+        <nav class="Pagination" style="justify-content: center;">
+            <a href="#" class="Pagination-item Pagination-item--prev disabled" aria-disabled="true"><i class="ph ph-caret-left"></i></a>
+            <a href="#" class="Pagination-item active">1</a>
+            <a href="#" class="Pagination-item">2</a>
+            <a href="#" class="Pagination-item">3</a>
+            <span class="Pagination-ellipsis">...</span>
+            <a href="#" class="Pagination-item">124</a>
+            <a href="#" class="Pagination-item Pagination-item--next"><i class="ph ph-caret-right"></i></a>
+        </nav>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;width: 100%; max-width: 500px;&quot;&gt;
+&lt;div style=&quot;margin-bottom: var(--space-3); font-size: 0.9rem; color: var(--fg-3);&quot;&gt;About 1,240 results (0.42 seconds)&lt;/div&gt;
+&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-3); margin-bottom: var(--space-4);&quot;&gt;
+&lt;div style=&quot;padding: var(--space-3); border-left: 3px solid var(--accent); background: var(--bg-s);&quot;&gt;
+&lt;div style=&quot;font-weight: 600; margin-bottom: var(--space-1);&quot;&gt;Result Title&lt;/div&gt;
+&lt;div style=&quot;font-size: 0.85rem; color: var(--fg-3);&quot;&gt;Brief description of the search result...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;nav class=&quot;Pagination&quot; style=&quot;justify-content: center;&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item Pagination-item--prev disabled&quot; aria-disabled=&quot;true&quot;&gt;&lt;i class=&quot;ph ph-caret-left&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item active&quot;&gt;1&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item&quot;&gt;2&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item&quot;&gt;3&lt;/a&gt;
+&lt;span class=&quot;Pagination-ellipsis&quot;&gt;...&lt;/span&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item&quot;&gt;124&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item Pagination-item--next&quot;&gt;&lt;i class=&quot;ph ph-caret-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/nav&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="card-grid-with-pagination">Card Grid with Pagination</h3>
+
+<div class="Preview" id="preview-f921dtevb">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="width: 100%;">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); margin-bottom: var(--space-4);">
+            <div style="padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-m); text-align: center; font-size: 0.85rem; color: var(--fg-3);">Card 1</div>
+            <div style="padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-m); text-align: center; font-size: 0.85rem; color: var(--fg-3);">Card 2</div>
+            <div style="padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-m); text-align: center; font-size: 0.85rem; color: var(--fg-3);">Card 3</div>
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <nav class="Pagination">
+                <a href="#" class="Pagination-item Pagination-item--prev"><i class="ph ph-caret-left"></i></a>
+                <a href="#" class="Pagination-item">1</a>
+                <a href="#" class="Pagination-item active">2</a>
+                <a href="#" class="Pagination-item">3</a>
+                <a href="#" class="Pagination-item Pagination-item--next"><i class="ph ph-caret-right"></i></a>
+            </nav>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;width: 100%;&quot;&gt;
+&lt;div style=&quot;display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); margin-bottom: var(--space-4);&quot;&gt;
+&lt;div style=&quot;padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-m); text-align: center; font-size: 0.85rem; color: var(--fg-3);&quot;&gt;Card 1&lt;/div&gt;
+&lt;div style=&quot;padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-m); text-align: center; font-size: 0.85rem; color: var(--fg-3);&quot;&gt;Card 2&lt;/div&gt;
+&lt;div style=&quot;padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-m); text-align: center; font-size: 0.85rem; color: var(--fg-3);&quot;&gt;Card 3&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display: flex; justify-content: center;&quot;&gt;
+&lt;nav class=&quot;Pagination&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item Pagination-item--prev&quot;&gt;&lt;i class=&quot;ph ph-caret-left&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item&quot;&gt;1&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item active&quot;&gt;2&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item&quot;&gt;3&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item Pagination-item--next&quot;&gt;&lt;i class=&quot;ph ph-caret-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/nav&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="mobile-compact-pagination">Mobile Compact Pagination</h3>
+
+<div class="Preview" id="preview-mg7qbo0g6">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="max-width: 320px; width: 100%;">
+        <nav class="Pagination Pagination--compact" style="width: 100%; justify-content: space-between;">
+            <a href="#" class="Pagination-item Pagination-item--prev"><i class="ph ph-caret-left"></i></a>
+            <span class="Pagination-info">Page 3 of 12</span>
+            <a href="#" class="Pagination-item Pagination-item--next"><i class="ph ph-caret-right"></i></a>
+        </nav>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;max-width: 320px; width: 100%;&quot;&gt;
+&lt;nav class=&quot;Pagination Pagination--compact&quot; style=&quot;width: 100%; justify-content: space-between;&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item Pagination-item--prev&quot;&gt;&lt;i class=&quot;ph ph-caret-left&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;span class=&quot;Pagination-info&quot;&gt;Page 3 of 12&lt;/span&gt;
+&lt;a href=&quot;#&quot; class=&quot;Pagination-item Pagination-item--next&quot;&gt;&lt;i class=&quot;ph ph-caret-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/nav&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="customization">Customization</h2>
+<p>Override pagination styling with CSS custom properties:</p>
+<pre><code class="language-css">/* Custom accent color */
+.Pagination {
+  --pagination-active-bg: oklch(55% 0.2 260);
+  --pagination-active-fg: white;
+  --pagination-hover-bg: oklch(92% 0.02 260);
+}
+
+.Pagination-item.active {
+  background: var(--pagination-active-bg);
+  color: var(--pagination-active-fg);
+}
+
+.Pagination-item:hover:not(.active):not(.disabled) {
+  background: var(--pagination-hover-bg);
+}
+</code></pre>
+<h3 id="rounded-items">Rounded Items</h3>
+<pre><code class="language-css">.Pagination--rounded .Pagination-item {
+  border-radius: var(--r-full);
+}
+</code></pre>
+<h3 id="bordered-variant">Bordered Variant</h3>
+<pre><code class="language-css">.Pagination--bordered .Pagination-item {
+  border: 1px solid var(--bd);
+}
+</code></pre>
+<h3 id="theming">Theming</h3>
+<pre><code class="language-css">/* Dark theme overrides */
+[data-theme=&quot;dark&quot;] .Pagination-item.active {
+  background: oklch(70% 0.15 260);
+  color: oklch(15% 0 0);
+}
+</code></pre>
+<hr>
+<h2 id="api-reference">API Reference</h2>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">.Pagination</code></td><td class="ApiTable-desc">Container for pagination controls</td></tr>
+<tr><td><code class="ApiTable-prop">.Pagination--compact</code></td><td class="ApiTable-desc">Minimal prev/next with page info text</td></tr>
+<tr><td><code class="ApiTable-prop">.Pagination-item</code></td><td class="ApiTable-desc">Individual page link or button</td></tr>
+<tr><td><code class="ApiTable-prop">.Pagination-item--prev</code></td><td class="ApiTable-desc">Previous page button</td></tr>
+<tr><td><code class="ApiTable-prop">.Pagination-item--next</code></td><td class="ApiTable-desc">Next page button</td></tr>
+<tr><td><code class="ApiTable-prop">.Pagination-item.active</code></td><td class="ApiTable-desc">Current page indicator</td></tr>
+<tr><td><code class="ApiTable-prop">.Pagination-item.disabled</code></td><td class="ApiTable-desc">Non-interactive disabled state</td></tr>
+<tr><td><code class="ApiTable-prop">.Pagination-ellipsis</code></td><td class="ApiTable-desc">Skipped pages indicator (...)</td></tr>
+<tr><td><code class="ApiTable-prop">.Pagination-info</code></td><td class="ApiTable-desc">Page count text (compact mode)</td></tr>
+</tbody>
+</table>
+<h3 id="attributes">Attributes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Attribute</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code class="ApiTable-prop">aria-label</code></td><td class="ApiTable-desc">On <code>&lt;nav&gt;</code> to describe the pagination region</td></tr>
+<tr><td><code class="ApiTable-prop">aria-current="page"</code></td><td class="ApiTable-desc">On the current page item</td></tr>
+<tr><td><code class="ApiTable-prop">aria-disabled="true"</code></td><td class="ApiTable-desc">On disabled navigation items</td></tr>
+<tr><td><code class="ApiTable-prop">aria-label="Previous"</code></td><td class="ApiTable-desc">On prev/next icon-only buttons</td></tr>
+</tbody>
+</table>
+<h3 id="structure">Structure</h3>
+<pre><code class="language-html">&lt;nav class=&quot;Pagination&quot; aria-label=&quot;Pagination&quot;&gt;
+    &lt;a class=&quot;Pagination-item Pagination-item--prev&quot;&gt;...&lt;/a&gt;
+    &lt;a class=&quot;Pagination-item&quot;&gt;1&lt;/a&gt;
+    &lt;a class=&quot;Pagination-item active&quot; aria-current=&quot;page&quot;&gt;2&lt;/a&gt;
+    &lt;span class=&quot;Pagination-ellipsis&quot;&gt;...&lt;/span&gt;
+    &lt;a class=&quot;Pagination-item&quot;&gt;10&lt;/a&gt;
+    &lt;a class=&quot;Pagination-item Pagination-item--next&quot;&gt;...&lt;/a&gt;
+&lt;/nav&gt;
+</code></pre>
+<hr>
+<h2 id="css-reference">CSS Reference</h2>
+<pre><code class="language-css">/* Base pagination */
+.Pagination {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+/* Individual page item */
+.Pagination-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+  padding: 0 var(--space-2);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--fg);
+  background: transparent;
+  border: none;
+  border-radius: var(--r-s);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+
+.Pagination-item:hover:not(.active):not(.disabled) {
+  background: var(--bg-s);
+}
+
+/* Active state */
+.Pagination-item.active {
+  background: var(--accent);
+  color: white;
+}
+
+/* Disabled state */
+.Pagination-item.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Prev/Next buttons */
+.Pagination-item--prev,
+.Pagination-item--next {
+  font-size: 1rem;
+}
+
+/* Ellipsis */
+.Pagination-ellipsis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+  color: var(--fg-3);
+  font-size: 0.9rem;
+  user-select: none;
+}
+
+/* Compact variant */
+.Pagination--compact {
+  gap: var(--space-2);
+}
+
+.Pagination-info {
+  font-size: 0.9rem;
+  color: var(--fg-3);
+  white-space: nowrap;
+}
+</code></pre>
+<hr>
+<h2 id="accessibility">Accessibility</h2>
+<h3 id="keyboard-support">Keyboard Support</h3>
+<div class="Table-container"><table class="Table">
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Tab</code></td>
+<td>Move focus between pagination items</td>
+</tr>
+<tr>
+<td><code>Enter</code> / <code>Space</code></td>
+<td>Activate the focused page link</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="screen-reader-guidance">Screen Reader Guidance</h3>
+<p>Use <code>&lt;nav&gt;</code> with <code>aria-label</code> to create a landmark region. Mark the current page with <code>aria-current=&quot;page&quot;</code> so screen readers announce it. Disabled items should use <code>aria-disabled=&quot;true&quot;</code> instead of removing the <code>href</code>.</p>
+<pre><code class="language-html">&lt;nav class=&quot;Pagination&quot; aria-label=&quot;Pagination&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;Pagination-item Pagination-item--prev&quot; aria-label=&quot;Previous page&quot;&gt;
+        &lt;i class=&quot;ph ph-caret-left&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;Pagination-item active&quot; aria-current=&quot;page&quot;&gt;2&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;Pagination-item Pagination-item--next&quot; aria-label=&quot;Next page&quot;&gt;
+        &lt;i class=&quot;ph ph-caret-right&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+&lt;/nav&gt;
+</code></pre>
+<h3 id="aria-attributes">ARIA Attributes</h3>
+<ul>
+<li><code>aria-label</code> on <code>&lt;nav&gt;</code> to identify the pagination region</li>
+<li><code>aria-current=&quot;page&quot;</code> on the active page element</li>
+<li><code>aria-disabled=&quot;true&quot;</code> on non-functional prev/next when at boundaries</li>
+<li><code>aria-label</code> on icon-only buttons (Previous / Next)</li>
+</ul>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="do">Do</h3>
+<ul>
+<li>✓ <strong>Show current position</strong> — Always indicate which page the user is on</li>
+<li>✓ <strong>Use ellipsis for large sets</strong> — Collapse middle pages to avoid overwhelming UI</li>
+<li>✓ <strong>Disable boundary buttons</strong> — Gray out Previous on page 1, Next on last page</li>
+<li>✓ <strong>Provide compact mode for mobile</strong> — Switch to compact pagination on small screens</li>
+<li>✓ <strong>Keep first and last pages visible</strong> — Users need to know the total range</li>
+<li>✓ <strong>Use semantic <code>&lt;nav&gt;</code> element</strong> — Wrap pagination in a navigation landmark</li>
+</ul>
+<h3 id="don-t">Don’t</h3>
+<ul>
+<li>✗ <strong>Show all page numbers</strong> — Hundreds of links create visual noise</li>
+<li>✗ <strong>Hide page numbers entirely</strong> — Users lose sense of position in the dataset</li>
+<li>✗ <strong>Make touch targets smaller than 44px</strong> — Small targets frustrate mobile users</li>
+<li>✗ <strong>Use pagination for small datasets</strong> — Under 20 items usually don’t need pagination</li>
+<li>✗ <strong>Remove disabled links from DOM</strong> — Screen reader users lose navigation context</li>
+<li>✗ <strong>Forget to update URL</strong> — Users expect to bookmark or share paginated views</li>
+</ul>
+
+                </article>
+
+                <footer class="page-footer">
+                    <p>Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

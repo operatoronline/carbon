@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Toolbar | Carbon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/bold/style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Floating Pill Nav (Mobile: bottom, Desktop: top) -->
+        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation">
+            <a href="../index.html" class="fnav-btn" data-section="home" aria-label="Home">
+                <i class="ph-bold ph-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="../tokens/colors.html" class="fnav-btn" data-section="tokens" aria-label="Tokens">
+                <i class="ph-bold ph-palette"></i>
+                <span>Tokens</span>
+            </a>
+            <a href="../components/buttons.html" class="fnav-btn" data-section="components" aria-label="Components">
+                <i class="ph-bold ph-stack"></i>
+                <span>Components</span>
+            </a>
+            <a href="../patterns/layouts.html" class="fnav-btn" data-section="patterns" aria-label="Patterns">
+                <i class="ph-bold ph-grid-four"></i>
+                <span>Patterns</span>
+            </a>
+            <div class="fnav-sep"></div>
+            <button class="fnav-btn" id="search-toggle" aria-label="Search">
+                <i class="ph ph-magnifying-glass"></i>
+            </button>
+            <button class="fnav-btn" id="theme-btn" aria-label="Toggle theme">
+                <i class="ph ph-moon"></i>
+            </button>
+        </nav>
+
+        <!-- Glassmorphism Top Bar (Desktop only) -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <a href="../index.html" class="logo">
+                    <i class="ph ph-intersect"></i>
+                    <span>Carbon</span>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <div class="search-container" id="search-container">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search components..." aria-label="Search" autocomplete="off">
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <main class="main-content">
+                <header class="page-header">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="../index.html">Carbon</a> <span class="sep">/</span> <span>Components</span> <span class="sep">/</span> <span>Toolbar</span>
+                    </nav>
+                    <h1><em>Toolbar</em></h1>
+                </header>
+                
+                <article class="prose">
+                    <hr>
+<h2 id="title-toolbar">title: Toolbar</h2>
+<h1>Toolbar</h1>
+<p>Toolbars group related actions and controls in a horizontal bar, commonly used at the top of content areas or as contextual action bars.</p>
+<h2 id="basic-toolbar">Basic Toolbar</h2>
+<p>A simple toolbar with action buttons.</p>
+
+<div class="Preview" id="preview-euqzlialm">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Toolbar">
+    <button class="Button Button--ghost Button--icon"><i class="ph ph-list"></i></button>
+    <button class="Button Button--ghost Button--icon"><i class="ph ph-grid-four"></i></button>
+    <div class="Toolbar-divider"></div>
+    <button class="Button Button--ghost Button--icon"><i class="ph ph-funnel"></i></button>
+    <button class="Button Button--ghost Button--icon"><i class="ph ph-sort-ascending"></i></button>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Toolbar&quot;&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-list&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-grid-four&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;div class=&quot;Toolbar-divider&quot;&gt;&lt;/div&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-funnel&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-sort-ascending&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Toolbar&quot;&gt;
+  &lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-list&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-grid-four&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;div class=&quot;Toolbar-divider&quot;&gt;&lt;/div&gt;
+  &lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-funnel&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-sort-ascending&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="with-text-buttons">With Text Buttons</h2>
+<p>Toolbars can include text buttons alongside icon buttons.</p>
+
+<div class="Preview" id="preview-o17n86qj0">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Toolbar">
+    <button class="Button Button--ghost"><i class="ph ph-plus"></i> New</button>
+    <button class="Button Button--ghost"><i class="ph ph-upload"></i> Upload</button>
+    <div class="Toolbar-spacer"></div>
+    <button class="Button Button--ghost Button--icon"><i class="ph ph-magnifying-glass"></i></button>
+    <button class="Button Button--ghost Button--icon"><i class="ph ph-dots-three"></i></button>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Toolbar&quot;&gt;
+&lt;button class=&quot;Button Button--ghost&quot;&gt;&lt;i class=&quot;ph ph-plus&quot;&gt;&lt;/i&gt; New&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost&quot;&gt;&lt;i class=&quot;ph ph-upload&quot;&gt;&lt;/i&gt; Upload&lt;/button&gt;
+&lt;div class=&quot;Toolbar-spacer&quot;&gt;&lt;/div&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-magnifying-glass&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-dots-three&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Toolbar&quot;&gt;
+  &lt;button class=&quot;Button Button--ghost&quot;&gt;&lt;i class=&quot;ph ph-plus&quot;&gt;&lt;/i&gt; New&lt;/button&gt;
+  &lt;button class=&quot;Button Button--ghost&quot;&gt;&lt;i class=&quot;ph ph-upload&quot;&gt;&lt;/i&gt; Upload&lt;/button&gt;
+  &lt;div class=&quot;Toolbar-spacer&quot;&gt;&lt;/div&gt;
+  &lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-magnifying-glass&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-dots-three&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="button-groups">Button Groups</h2>
+<p>Group related actions together.</p>
+
+<div class="Preview" id="preview-c48ckhuiv">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Toolbar">
+    <div class="ButtonGroup">
+      <button class="Button Button--ghost Button--icon"><i class="ph ph-text-align-left"></i></button>
+      <button class="Button Button--ghost Button--icon active"><i class="ph ph-text-align-center"></i></button>
+      <button class="Button Button--ghost Button--icon"><i class="ph ph-text-align-right"></i></button>
+    </div>
+    <div class="Toolbar-divider"></div>
+    <div class="ButtonGroup">
+      <button class="Button Button--ghost Button--icon"><i class="ph ph-text-b"></i></button>
+      <button class="Button Button--ghost Button--icon"><i class="ph ph-text-italic"></i></button>
+      <button class="Button Button--ghost Button--icon"><i class="ph ph-text-underline"></i></button>
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Toolbar&quot;&gt;
+&lt;div class=&quot;ButtonGroup&quot;&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-text-align-left&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon active&quot;&gt;&lt;i class=&quot;ph ph-text-align-center&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-text-align-right&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Toolbar-divider&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;ButtonGroup&quot;&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-text-b&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-text-italic&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-text-underline&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Toolbar&quot;&gt;
+  &lt;div class=&quot;ButtonGroup&quot;&gt;
+    &lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-text-align-left&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;button class=&quot;Button Button--ghost Button--icon active&quot;&gt;&lt;i class=&quot;ph ph-text-align-center&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-text-align-right&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;Toolbar-divider&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;ButtonGroup&quot;&gt;
+    &lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-text-b&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-text-italic&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-text-underline&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="bordered-toolbar">Bordered Toolbar</h2>
+<p>Add a border for visual separation.</p>
+
+<div class="Preview" id="preview-dn9qml2hc">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Toolbar Toolbar--bordered">
+    <button class="Button Button--ghost Button--icon"><i class="ph ph-arrow-left"></i></button>
+    <button class="Button Button--ghost Button--icon"><i class="ph ph-arrow-right"></i></button>
+    <button class="Button Button--ghost Button--icon"><i class="ph ph-arrow-clockwise"></i></button>
+    <div class="Toolbar-spacer"></div>
+    <span class="Toolbar-text">Page 1 of 10</span>
+    <div class="Toolbar-spacer"></div>
+    <button class="Button Button--ghost Button--icon"><i class="ph ph-share"></i></button>
+    <button class="Button Button--ghost Button--icon"><i class="ph ph-download"></i></button>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Toolbar Toolbar--bordered&quot;&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-arrow-left&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-arrow-right&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-arrow-clockwise&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;div class=&quot;Toolbar-spacer&quot;&gt;&lt;/div&gt;
+&lt;span class=&quot;Toolbar-text&quot;&gt;Page 1 of 10&lt;/span&gt;
+&lt;div class=&quot;Toolbar-spacer&quot;&gt;&lt;/div&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-share&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-download&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Toolbar Toolbar--bordered&quot;&gt;
+  &lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;...&lt;/button&gt;
+  &lt;div class=&quot;Toolbar-spacer&quot;&gt;&lt;/div&gt;
+  &lt;span class=&quot;Toolbar-text&quot;&gt;Page 1 of 10&lt;/span&gt;
+  &lt;div class=&quot;Toolbar-spacer&quot;&gt;&lt;/div&gt;
+  &lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;...&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="sizes">Sizes</h2>
+<p>Toolbars come in different sizes.</p>
+
+<div class="Preview" id="preview-a3kxjn11w">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: flex; flex-direction: column; gap: var(--space-4);">
+    <div class="Toolbar Toolbar--sm Toolbar--bordered">
+      <span class="Toolbar-label">Small</span>
+      <div class="Toolbar-spacer"></div>
+      <button class="Button Button--ghost Button--icon Button--sm"><i class="ph ph-pencil"></i></button>
+      <button class="Button Button--ghost Button--icon Button--sm"><i class="ph ph-trash"></i></button>
+    </div>
+    <div class="Toolbar Toolbar--bordered">
+      <span class="Toolbar-label">Default</span>
+      <div class="Toolbar-spacer"></div>
+      <button class="Button Button--ghost Button--icon"><i class="ph ph-pencil"></i></button>
+      <button class="Button Button--ghost Button--icon"><i class="ph ph-trash"></i></button>
+    </div>
+    <div class="Toolbar Toolbar--lg Toolbar--bordered">
+      <span class="Toolbar-label">Large</span>
+      <div class="Toolbar-spacer"></div>
+      <button class="Button Button--ghost Button--icon Button--lg"><i class="ph ph-pencil"></i></button>
+      <button class="Button Button--ghost Button--icon Button--lg"><i class="ph ph-trash"></i></button>
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: flex; flex-direction: column; gap: var(--space-4);&quot;&gt;
+&lt;div class=&quot;Toolbar Toolbar--sm Toolbar--bordered&quot;&gt;
+&lt;span class=&quot;Toolbar-label&quot;&gt;Small&lt;/span&gt;
+&lt;div class=&quot;Toolbar-spacer&quot;&gt;&lt;/div&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon Button--sm&quot;&gt;&lt;i class=&quot;ph ph-pencil&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon Button--sm&quot;&gt;&lt;i class=&quot;ph ph-trash&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Toolbar Toolbar--bordered&quot;&gt;
+&lt;span class=&quot;Toolbar-label&quot;&gt;Default&lt;/span&gt;
+&lt;div class=&quot;Toolbar-spacer&quot;&gt;&lt;/div&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-pencil&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-trash&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Toolbar Toolbar--lg Toolbar--bordered&quot;&gt;
+&lt;span class=&quot;Toolbar-label&quot;&gt;Large&lt;/span&gt;
+&lt;div class=&quot;Toolbar-spacer&quot;&gt;&lt;/div&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon Button--lg&quot;&gt;&lt;i class=&quot;ph ph-pencil&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon Button--lg&quot;&gt;&lt;i class=&quot;ph ph-trash&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Toolbar Toolbar--sm&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;Toolbar&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;Toolbar Toolbar--lg&quot;&gt;...&lt;/div&gt;
+</code></pre>
+<h2 id="with-search">With Search</h2>
+<p>Integrate a search input into the toolbar.</p>
+
+<div class="Preview" id="preview-end0pyo3j">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Toolbar Toolbar--bordered">
+    <div class="Toolbar-search">
+      <i class="ph ph-magnifying-glass"></i>
+      <input type="text" placeholder="Search..." class="Toolbar-searchInput">
+    </div>
+    <div class="Toolbar-spacer"></div>
+    <button class="Button Button--ghost Button--icon"><i class="ph ph-funnel"></i></button>
+    <button class="Button Button--primary Button--sm">Search</button>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Toolbar Toolbar--bordered&quot;&gt;
+&lt;div class=&quot;Toolbar-search&quot;&gt;
+&lt;i class=&quot;ph ph-magnifying-glass&quot;&gt;&lt;/i&gt;
+&lt;input type=&quot;text&quot; placeholder=&quot;Search...&quot; class=&quot;Toolbar-searchInput&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Toolbar-spacer&quot;&gt;&lt;/div&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-funnel&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--primary Button--sm&quot;&gt;Search&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Toolbar Toolbar--bordered&quot;&gt;
+  &lt;div class=&quot;Toolbar-search&quot;&gt;
+    &lt;i class=&quot;ph ph-magnifying-glass&quot;&gt;&lt;/i&gt;
+    &lt;input type=&quot;text&quot; placeholder=&quot;Search...&quot; class=&quot;Toolbar-searchInput&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;Toolbar-spacer&quot;&gt;&lt;/div&gt;
+  &lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-funnel&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;button class=&quot;Button Button--primary Button--sm&quot;&gt;Search&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="contextual-toolbar">Contextual Toolbar</h2>
+<p>Appears when items are selected, showing relevant actions.</p>
+
+<div class="Preview" id="preview-1mzv9jhxf">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Toolbar Toolbar--contextual">
+    <button class="Button Button--ghost Button--icon"><i class="ph ph-x"></i></button>
+    <span class="Toolbar-text"><strong>3</strong> selected</span>
+    <div class="Toolbar-spacer"></div>
+    <button class="Button Button--ghost"><i class="ph ph-copy"></i> Copy</button>
+    <button class="Button Button--ghost"><i class="ph ph-folder"></i> Move</button>
+    <button class="Button Button--ghost text-error"><i class="ph ph-trash"></i> Delete</button>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Toolbar Toolbar--contextual&quot;&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;span class=&quot;Toolbar-text&quot;&gt;&lt;strong&gt;3&lt;/strong&gt; selected&lt;/span&gt;
+&lt;div class=&quot;Toolbar-spacer&quot;&gt;&lt;/div&gt;
+&lt;button class=&quot;Button Button--ghost&quot;&gt;&lt;i class=&quot;ph ph-copy&quot;&gt;&lt;/i&gt; Copy&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost&quot;&gt;&lt;i class=&quot;ph ph-folder&quot;&gt;&lt;/i&gt; Move&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost text-error&quot;&gt;&lt;i class=&quot;ph ph-trash&quot;&gt;&lt;/i&gt; Delete&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Toolbar Toolbar--contextual&quot;&gt;
+  &lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;span class=&quot;Toolbar-text&quot;&gt;&lt;strong&gt;3&lt;/strong&gt; selected&lt;/span&gt;
+  &lt;div class=&quot;Toolbar-spacer&quot;&gt;&lt;/div&gt;
+  &lt;button class=&quot;Button Button--ghost&quot;&gt;&lt;i class=&quot;ph ph-copy&quot;&gt;&lt;/i&gt; Copy&lt;/button&gt;
+  &lt;button class=&quot;Button Button--ghost&quot;&gt;&lt;i class=&quot;ph ph-folder&quot;&gt;&lt;/i&gt; Move&lt;/button&gt;
+  &lt;button class=&quot;Button Button--ghost text-error&quot;&gt;&lt;i class=&quot;ph ph-trash&quot;&gt;&lt;/i&gt; Delete&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="vertical-toolbar">Vertical Toolbar</h2>
+<p>Stack actions vertically for sidebars or narrow spaces.</p>
+
+<div class="Preview" id="preview-0d8u8jgge">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: inline-block;">
+    <div class="Toolbar Toolbar--vertical Toolbar--bordered">
+      <button class="Button Button--ghost Button--icon"><i class="ph ph-cursor"></i></button>
+      <button class="Button Button--ghost Button--icon active"><i class="ph ph-hand"></i></button>
+      <div class="Toolbar-divider"></div>
+      <button class="Button Button--ghost Button--icon"><i class="ph ph-square"></i></button>
+      <button class="Button Button--ghost Button--icon"><i class="ph ph-circle"></i></button>
+      <button class="Button Button--ghost Button--icon"><i class="ph ph-line-segment"></i></button>
+      <div class="Toolbar-divider"></div>
+      <button class="Button Button--ghost Button--icon"><i class="ph ph-text-t"></i></button>
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: inline-block;&quot;&gt;
+&lt;div class=&quot;Toolbar Toolbar--vertical Toolbar--bordered&quot;&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-cursor&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon active&quot;&gt;&lt;i class=&quot;ph ph-hand&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;div class=&quot;Toolbar-divider&quot;&gt;&lt;/div&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-square&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-circle&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-line-segment&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;div class=&quot;Toolbar-divider&quot;&gt;&lt;/div&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-text-t&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Toolbar Toolbar--vertical Toolbar--bordered&quot;&gt;
+  &lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-cursor&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;button class=&quot;Button Button--ghost Button--icon active&quot;&gt;&lt;i class=&quot;ph ph-hand&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;div class=&quot;Toolbar-divider&quot;&gt;&lt;/div&gt;
+  &lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-square&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+  ...
+&lt;/div&gt;
+</code></pre>
+<h2 id="floating-toolbar">Floating Toolbar</h2>
+<p>A floating toolbar for contextual actions (like text editors).</p>
+
+<div class="Preview" id="preview-4maubijvu">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="padding: var(--space-8); background: var(--bg-s); border-radius: var(--radius-md);">
+    <div class="Toolbar Toolbar--floating">
+      <button class="Button Button--ghost Button--icon Button--sm"><i class="ph ph-text-b"></i></button>
+      <button class="Button Button--ghost Button--icon Button--sm"><i class="ph ph-text-italic"></i></button>
+      <button class="Button Button--ghost Button--icon Button--sm"><i class="ph ph-text-underline"></i></button>
+      <div class="Toolbar-divider"></div>
+      <button class="Button Button--ghost Button--icon Button--sm"><i class="ph ph-link"></i></button>
+      <button class="Button Button--ghost Button--icon Button--sm"><i class="ph ph-code"></i></button>
+    </div>
+  </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;padding: var(--space-8); background: var(--bg-s); border-radius: var(--radius-md);&quot;&gt;
+&lt;div class=&quot;Toolbar Toolbar--floating&quot;&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon Button--sm&quot;&gt;&lt;i class=&quot;ph ph-text-b&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon Button--sm&quot;&gt;&lt;i class=&quot;ph ph-text-italic&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon Button--sm&quot;&gt;&lt;i class=&quot;ph ph-text-underline&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;div class=&quot;Toolbar-divider&quot;&gt;&lt;/div&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon Button--sm&quot;&gt;&lt;i class=&quot;ph ph-link&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon Button--sm&quot;&gt;&lt;i class=&quot;ph ph-code&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><pre><code class="language-html">&lt;div class=&quot;Toolbar Toolbar--floating&quot;&gt;
+  &lt;button class=&quot;Button Button--ghost Button--icon Button--sm&quot;&gt;&lt;i class=&quot;ph ph-text-b&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;button class=&quot;Button Button--ghost Button--icon Button--sm&quot;&gt;&lt;i class=&quot;ph ph-text-italic&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;button class=&quot;Button Button--ghost Button--icon Button--sm&quot;&gt;&lt;i class=&quot;ph ph-text-underline&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;div class=&quot;Toolbar-divider&quot;&gt;&lt;/div&gt;
+  &lt;button class=&quot;Button Button--ghost Button--icon Button--sm&quot;&gt;&lt;i class=&quot;ph ph-link&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;button class=&quot;Button Button--ghost Button--icon Button--sm&quot;&gt;&lt;i class=&quot;ph ph-code&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="common-patterns">Common Patterns</h2>
+<h3 id="text-editor-toolbar">Text Editor Toolbar</h3>
+
+<div class="Preview" id="preview-b2h65eod1">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Toolbar Toolbar--bordered" style="max-width: 600px;">
+        <div class="ButtonGroup">
+            <button class="Button Button--ghost Button--icon Button--sm"><i class="ph ph-text-b"></i></button>
+            <button class="Button Button--ghost Button--icon Button--sm"><i class="ph ph-text-italic"></i></button>
+            <button class="Button Button--ghost Button--icon Button--sm"><i class="ph ph-text-underline"></i></button>
+            <button class="Button Button--ghost Button--icon Button--sm"><i class="ph ph-text-strikethrough"></i></button>
+        </div>
+        <div class="Toolbar-divider"></div>
+        <div class="ButtonGroup">
+            <button class="Button Button--ghost Button--icon Button--sm"><i class="ph ph-text-align-left"></i></button>
+            <button class="Button Button--ghost Button--icon Button--sm active"><i class="ph ph-text-align-center"></i></button>
+            <button class="Button Button--ghost Button--icon Button--sm"><i class="ph ph-text-align-right"></i></button>
+        </div>
+        <div class="Toolbar-divider"></div>
+        <button class="Button Button--ghost Button--icon Button--sm"><i class="ph ph-link"></i></button>
+        <button class="Button Button--ghost Button--icon Button--sm"><i class="ph ph-image"></i></button>
+        <button class="Button Button--ghost Button--icon Button--sm"><i class="ph ph-code"></i></button>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Toolbar Toolbar--bordered&quot; style=&quot;max-width: 600px;&quot;&gt;
+&lt;div class=&quot;ButtonGroup&quot;&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon Button--sm&quot;&gt;&lt;i class=&quot;ph ph-text-b&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon Button--sm&quot;&gt;&lt;i class=&quot;ph ph-text-italic&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon Button--sm&quot;&gt;&lt;i class=&quot;ph ph-text-underline&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon Button--sm&quot;&gt;&lt;i class=&quot;ph ph-text-strikethrough&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Toolbar-divider&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;ButtonGroup&quot;&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon Button--sm&quot;&gt;&lt;i class=&quot;ph ph-text-align-left&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon Button--sm active&quot;&gt;&lt;i class=&quot;ph ph-text-align-center&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon Button--sm&quot;&gt;&lt;i class=&quot;ph ph-text-align-right&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Toolbar-divider&quot;&gt;&lt;/div&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon Button--sm&quot;&gt;&lt;i class=&quot;ph ph-link&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon Button--sm&quot;&gt;&lt;i class=&quot;ph ph-image&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon Button--sm&quot;&gt;&lt;i class=&quot;ph ph-code&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="file-manager-actions">File Manager Actions</h3>
+
+<div class="Preview" id="preview-onob39zat">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Toolbar Toolbar--bordered" style="max-width: 600px;">
+        <button class="Button Button--ghost Button--sm"><i class="ph ph-plus"></i> New</button>
+        <button class="Button Button--ghost Button--sm"><i class="ph ph-upload"></i> Upload</button>
+        <div class="Toolbar-divider"></div>
+        <div class="Toolbar-search">
+            <i class="ph ph-magnifying-glass"></i>
+            <input type="text" placeholder="Search files..." class="Toolbar-searchInput">
+        </div>
+        <div class="Toolbar-spacer"></div>
+        <div class="ButtonGroup">
+            <button class="Button Button--ghost Button--icon Button--sm active"><i class="ph ph-list"></i></button>
+            <button class="Button Button--ghost Button--icon Button--sm"><i class="ph ph-grid-four"></i></button>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Toolbar Toolbar--bordered&quot; style=&quot;max-width: 600px;&quot;&gt;
+&lt;button class=&quot;Button Button--ghost Button--sm&quot;&gt;&lt;i class=&quot;ph ph-plus&quot;&gt;&lt;/i&gt; New&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--sm&quot;&gt;&lt;i class=&quot;ph ph-upload&quot;&gt;&lt;/i&gt; Upload&lt;/button&gt;
+&lt;div class=&quot;Toolbar-divider&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;Toolbar-search&quot;&gt;
+&lt;i class=&quot;ph ph-magnifying-glass&quot;&gt;&lt;/i&gt;
+&lt;input type=&quot;text&quot; placeholder=&quot;Search files...&quot; class=&quot;Toolbar-searchInput&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Toolbar-spacer&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;ButtonGroup&quot;&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon Button--sm active&quot;&gt;&lt;i class=&quot;ph ph-list&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon Button--sm&quot;&gt;&lt;i class=&quot;ph ph-grid-four&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="bulk-selection-bar">Bulk Selection Bar</h3>
+
+<div class="Preview" id="preview-fhcot6b2v">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div class="Toolbar Toolbar--contextual" style="max-width: 500px;">
+        <button class="Button Button--ghost Button--icon"><i class="ph ph-x"></i></button>
+        <span class="Toolbar-text"><strong>5</strong> items selected</span>
+        <div class="Toolbar-spacer"></div>
+        <button class="Button Button--ghost"><i class="ph ph-download"></i> Export</button>
+        <button class="Button Button--ghost"><i class="ph ph-trash"></i> Delete</button>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div class=&quot;Toolbar Toolbar--contextual&quot; style=&quot;max-width: 500px;&quot;&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-x&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;span class=&quot;Toolbar-text&quot;&gt;&lt;strong&gt;5&lt;/strong&gt; items selected&lt;/span&gt;
+&lt;div class=&quot;Toolbar-spacer&quot;&gt;&lt;/div&gt;
+&lt;button class=&quot;Button Button--ghost&quot;&gt;&lt;i class=&quot;ph ph-download&quot;&gt;&lt;/i&gt; Export&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost&quot;&gt;&lt;i class=&quot;ph ph-trash&quot;&gt;&lt;/i&gt; Delete&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><h3 id="drawing-tools-vertical-">Drawing Tools (Vertical)</h3>
+
+<div class="Preview" id="preview-vmqtrg4np">
+    <div class="Preview-header">
+        <div class="Preview-tabs">
+            <button class="Preview-tab active" data-tab="preview">Preview</button>
+            <button class="Preview-tab" data-tab="html">HTML</button>
+        </div>
+        <div class="Preview-controls">
+            <button class="Preview-control" data-bg="light" title="Light background">
+                <i class="ph ph-sun"></i>
+            </button>
+            <button class="Preview-control" data-bg="dark" title="Dark background">
+                <i class="ph ph-moon"></i>
+            </button>
+            <button class="Preview-control" data-bg="checkered" title="Checkered">
+                <i class="ph ph-grid-four"></i>
+            </button>
+            <div style="width: 1px; height: 16px; background: var(--bd-w); margin: 0 4px;"></div>
+            <button class="Preview-control active" data-viewport="desktop" title="Desktop">
+                <i class="ph ph-desktop"></i>
+            </button>
+            <button class="Preview-control" data-viewport="tablet" title="Tablet">
+                <i class="ph ph-device-tablet"></i>
+            </button>
+            <button class="Preview-control" data-viewport="mobile" title="Mobile">
+                <i class="ph ph-device-mobile"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Preview-pane active" data-pane="preview">
+        <div class="Preview-canvas"><div style="display: inline-block;">
+        <div class="Toolbar Toolbar--vertical Toolbar--bordered">
+            <button class="Button Button--ghost Button--icon active"><i class="ph ph-cursor"></i></button>
+            <button class="Button Button--ghost Button--icon"><i class="ph ph-hand"></i></button>
+            <div class="Toolbar-divider"></div>
+            <button class="Button Button--ghost Button--icon"><i class="ph ph-pencil"></i></button>
+            <button class="Button Button--ghost Button--icon"><i class="ph ph-square"></i></button>
+            <button class="Button Button--ghost Button--icon"><i class="ph ph-circle"></i></button>
+            <button class="Button Button--ghost Button--icon"><i class="ph ph-line-segment"></i></button>
+            <div class="Toolbar-divider"></div>
+            <button class="Button Button--ghost Button--icon"><i class="ph ph-eraser"></i></button>
+        </div>
+    </div></div>
+    </div>
+    <div class="Preview-pane" data-pane="html">
+        <button class="Preview-code-copy"><i class="ph ph-copy"></i> Copy</button>
+        <pre class="language-html"><code class="language-html">&lt;div style=&quot;display: inline-block;&quot;&gt;
+&lt;div class=&quot;Toolbar Toolbar--vertical Toolbar--bordered&quot;&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon active&quot;&gt;&lt;i class=&quot;ph ph-cursor&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-hand&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;div class=&quot;Toolbar-divider&quot;&gt;&lt;/div&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-pencil&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-square&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-circle&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-line-segment&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;div class=&quot;Toolbar-divider&quot;&gt;&lt;/div&gt;
+&lt;button class=&quot;Button Button--ghost Button--icon&quot;&gt;&lt;i class=&quot;ph ph-eraser&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div><hr>
+<h2 id="customization">Customization</h2>
+<p>Override toolbar styles using CSS custom properties:</p>
+<pre><code class="language-css">/* Transparent toolbar */
+.Toolbar--transparent {
+  background: transparent;
+  border: none;
+}
+
+/* Custom contextual color */
+.Toolbar--contextual-danger {
+  background: oklch(55% 0.2 25);
+  color: white;
+}
+
+/* Compact button spacing */
+.Toolbar--tight {
+  gap: 0;
+  padding: var(--space-1);
+}
+
+/* Toolbar with bottom border only */
+.Toolbar--underline {
+  border: none;
+  border-bottom: 1px solid var(--bd);
+  border-radius: 0;
+  padding: var(--space-2) 0;
+}
+</code></pre>
+<hr>
+<h2 id="api-reference">API Reference</h2>
+<h3 id="base-classes">Base Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Toolbar</code></td>
+<td class="ApiTable-desc">Base toolbar container</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Toolbar-divider</code></td>
+<td class="ApiTable-desc">Vertical divider between groups</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Toolbar-spacer</code></td>
+<td class="ApiTable-desc">Flexible spacer (flex: 1)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Toolbar-text</code></td>
+<td class="ApiTable-desc">Text content in toolbar</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Toolbar-label</code></td>
+<td class="ApiTable-desc">Label text (bolder)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="variant-classes">Variant Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Toolbar--bordered</code></td>
+<td class="ApiTable-desc">Adds border and background</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Toolbar--vertical</code></td>
+<td class="ApiTable-desc">Vertical layout (sidebar)</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Toolbar--floating</code></td>
+<td class="ApiTable-desc">Elevated floating style with shadow</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Toolbar--contextual</code></td>
+<td class="ApiTable-desc">Selection context bar (accent colored)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="size-classes">Size Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Toolbar--sm</code></td>
+<td class="ApiTable-desc">Small size variant</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Toolbar--lg</code></td>
+<td class="ApiTable-desc">Large size variant</td>
+</tr>
+</tbody>
+</table>
+<h3 id="search-classes">Search Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.Toolbar-search</code></td>
+<td class="ApiTable-desc">Search input container</td>
+</tr>
+<tr>
+<td><code class="ApiTable-prop">.Toolbar-searchInput</code></td>
+<td class="ApiTable-desc">Search text input element</td>
+</tr>
+</tbody>
+</table>
+<h3 id="related-classes">Related Classes</h3>
+<table class="ApiTable">
+<thead>
+<tr><th>Class</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="ApiTable-prop">.ButtonGroup</code></td>
+<td class="ApiTable-desc">Groups related buttons together</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="css-reference">CSS Reference</h2>
+<pre><code class="language-css">/* Base toolbar */
+.Toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-2);
+}
+
+/* Divider between groups */
+.Toolbar-divider {
+  width: 1px;
+  height: 1.5rem;
+  background: var(--bd);
+  margin: 0 var(--space-2);
+}
+
+/* Flexible spacer */
+.Toolbar-spacer {
+  flex: 1;
+}
+
+/* Text content */
+.Toolbar-text {
+  font-size: var(--text-sm);
+  color: var(--fg-3);
+  padding: 0 var(--space-2);
+}
+
+.Toolbar-label {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--fg);
+  padding: 0 var(--space-2);
+}
+
+/* Bordered variant */
+.Toolbar--bordered {
+  border: 1px solid var(--bd);
+  border-radius: var(--radius-md);
+  background: var(--bg);
+}
+
+/* Sizes */
+.Toolbar--sm { padding: var(--space-1); gap: var(--space-0-5); }
+.Toolbar--lg { padding: var(--space-3); gap: var(--space-2); }
+
+/* Vertical layout */
+.Toolbar--vertical {
+  flex-direction: column;
+  width: fit-content;
+}
+.Toolbar--vertical .Toolbar-divider {
+  width: 100%;
+  height: 1px;
+  margin: var(--space-2) 0;
+}
+
+/* Floating (elevated) */
+.Toolbar--floating {
+  background: var(--bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-1);
+}
+
+/* Contextual (selection) */
+.Toolbar--contextual {
+  background: var(--accent);
+  color: white;
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-3);
+}
+.Toolbar--contextual .Toolbar-text { color: white; }
+.Toolbar--contextual .Button--ghost { color: white; }
+.Toolbar--contextual .Button--ghost:hover { background: oklch(100% 0 0 / 0.15); }
+
+/* Search in toolbar */
+.Toolbar-search {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-2);
+  background: var(--bg-s);
+  border-radius: var(--radius-sm);
+  color: var(--fg-3);
+}
+.Toolbar-searchInput {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: var(--text-sm);
+  color: var(--fg);
+  min-width: 150px;
+}
+
+/* Button groups */
+.ButtonGroup {
+  display: flex;
+  gap: 0;
+}
+.ButtonGroup .Button {
+  border-radius: 0;
+}
+.ButtonGroup .Button:first-child {
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+}
+.ButtonGroup .Button:last-child {
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.ButtonGroup .Button.active {
+  background: var(--bg-s);
+}
+</code></pre>
+<hr>
+<h2 id="accessibility">Accessibility</h2>
+<ul>
+<li>Use <code>role=&quot;toolbar&quot;</code> on the container element</li>
+<li>Add <code>aria-label</code> to describe the toolbar’s purpose</li>
+<li>Support arrow key navigation between toolbar items</li>
+<li>Use <code>aria-pressed</code> for toggle buttons in button groups</li>
+<li>Ensure all buttons have accessible names (<code>aria-label</code> for icon-only)</li>
+<li>For search inputs, use <code>role=&quot;searchbox&quot;</code> or <code>type=&quot;search&quot;</code></li>
+<li>In contextual toolbars, announce selection count to screen readers</li>
+<li>Provide visible focus indicators for keyboard navigation</li>
+<li>Use <code>aria-orientation</code> to indicate vertical toolbars</li>
+</ul>
+<h3 id="keyboard-support">Keyboard Support</h3>
+<div class="Table-container"><table class="Table">
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tab</td>
+<td>Move focus into/out of the toolbar</td>
+</tr>
+<tr>
+<td>Arrow Left/Right</td>
+<td>Navigate between toolbar items</td>
+</tr>
+<tr>
+<td>Arrow Up/Down</td>
+<td>Navigate in vertical toolbars</td>
+</tr>
+<tr>
+<td>Home</td>
+<td>Move to first toolbar item</td>
+</tr>
+<tr>
+<td>End</td>
+<td>Move to last toolbar item</td>
+</tr>
+<tr>
+<td>Enter / Space</td>
+<td>Activate focused button</td>
+</tr>
+</tbody>
+</table></div>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="do">Do</h3>
+<ul>
+<li>✓ <strong>Group related actions</strong> — Use dividers and ButtonGroups logically</li>
+<li>✓ <strong>Use icon-only for common actions</strong> — Bold, italic, align are universal</li>
+<li>✓ <strong>Add labels for text buttons</strong> — “New”, “Upload” with icons</li>
+<li>✓ <strong>Use spacers for alignment</strong> — Push actions to edges with Toolbar-spacer</li>
+<li>✓ <strong>Show contextual toolbars on selection</strong> — Replace default with relevant actions</li>
+<li>✓ <strong>Add aria-label to icon buttons</strong> — Screen readers need text alternatives</li>
+</ul>
+<h3 id="don-t">Don’t</h3>
+<ul>
+<li>✗ <strong>Overload with too many items</strong> — Group or overflow excess actions</li>
+<li>✗ <strong>Mix sizes inconsistently</strong> — Keep buttons uniform within a toolbar</li>
+<li>✗ <strong>Nest toolbars</strong> — Use sections or tabs instead</li>
+<li>✗ <strong>Hide essential actions</strong> — Primary actions should always be visible</li>
+<li>✗ <strong>Use without role=“toolbar”</strong> — Needed for keyboard navigation</li>
+<li>✗ <strong>Forget mobile</strong> — Toolbars may need to collapse or scroll on small screens</li>
+</ul>
+
+                </article>
+
+                <footer class="page-footer">
+                    <p>Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>
