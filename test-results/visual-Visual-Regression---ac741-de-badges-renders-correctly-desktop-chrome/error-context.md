@@ -1,0 +1,1196 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - navigation "Main navigation" [ref=e3]:
+    - link "Home" [ref=e4] [cursor=pointer]:
+      - /url: ../index.html
+      - generic [ref=e5]: 
+      - generic [ref=e6]: Home
+    - link "Tokens" [ref=e7] [cursor=pointer]:
+      - /url: ../tokens/colors.html
+      - generic [ref=e8]: 
+      - generic [ref=e9]: Tokens
+    - link "Components" [ref=e10] [cursor=pointer]:
+      - /url: ../components/buttons.html
+      - generic [ref=e11]: 
+      - generic [ref=e12]: Components
+    - link "Patterns" [ref=e13] [cursor=pointer]:
+      - /url: ../patterns/layouts.html
+      - generic [ref=e14]: 
+      - generic [ref=e15]: Patterns
+    - button "Search" [ref=e17] [cursor=pointer]:
+      - generic [ref=e18]: 
+    - button "Toggle theme" [ref=e19] [cursor=pointer]:
+      - generic [ref=e20]: 
+  - text:  
+  - main [ref=e22]:
+    - generic [ref=e23]:
+      - navigation "Breadcrumb" [ref=e24]:
+        - link "Carbon" [ref=e25] [cursor=pointer]:
+          - /url: ../index.html
+        - generic [ref=e26]: /
+        - generic [ref=e27]: Components
+        - generic [ref=e28]: /
+        - generic [ref=e29]: Badges
+      - heading "Badges" [level=1] [ref=e30]:
+        - emphasis [ref=e31]: Badges
+    - article [ref=e32]:
+      - heading "Badges" [level=1] [ref=e33]
+      - paragraph [ref=e34]: Badges are small status descriptors used to highlight item properties, counts, or states. They provide visual emphasis and quick recognition of important information.
+      - separator [ref=e35]
+      - heading "Simple Badges" [level=2] [ref=e36]
+      - paragraph [ref=e37]: Basic badges for categorization and labels.
+      - generic [ref=e38]:
+        - generic [ref=e39]:
+          - generic [ref=e40]:
+            - button "Preview" [ref=e41] [cursor=pointer]
+            - button "HTML" [ref=e42] [cursor=pointer]
+          - generic [ref=e43]:
+            - button "" [ref=e44] [cursor=pointer]:
+              - generic [ref=e45]: 
+            - button "" [ref=e46] [cursor=pointer]:
+              - generic [ref=e47]: 
+            - button "" [ref=e48] [cursor=pointer]:
+              - generic [ref=e49]: 
+            - button "" [ref=e51] [cursor=pointer]:
+              - generic [ref=e52]: 
+            - button "" [ref=e53] [cursor=pointer]:
+              - generic [ref=e54]: 
+            - button "" [ref=e55] [cursor=pointer]:
+              - generic [ref=e56]: 
+        - generic [ref=e58]:
+          - generic [ref=e59]: Default
+          - generic [ref=e60]: Primary
+          - generic [ref=e61]: Secondary
+        - text: 
+      - generic [ref=e62]:
+        - code [ref=e64]:
+          - generic [ref=e65]:
+            - generic [ref=e66]: <span
+            - text: class
+            - generic [ref=e67]: ="Badge"
+            - text: ">"
+          - text: Default
+          - generic [ref=e68]:
+            - generic [ref=e69]: </span
+            - text: ">"
+          - generic [ref=e70]:
+            - generic [ref=e71]: <span
+            - text: class
+            - generic [ref=e72]: ="Badge Badge--primary"
+            - text: ">"
+          - text: Primary
+          - generic [ref=e73]:
+            - generic [ref=e74]: </span
+            - text: ">"
+          - generic [ref=e75]:
+            - generic [ref=e76]: <span
+            - text: class
+            - generic [ref=e77]: ="Badge Badge--secondary"
+            - text: ">"
+          - text: Secondary
+          - generic [ref=e78]:
+            - generic [ref=e79]: </span
+            - text: ">"
+        - button "Copy code" [ref=e80] [cursor=pointer]:
+          - generic [ref=e81]: 
+      - separator [ref=e82]
+      - heading "Status Badges" [level=2] [ref=e83]
+      - paragraph [ref=e84]: Semantic badges to indicate states like success, warning, or error.
+      - generic [ref=e85]:
+        - generic [ref=e86]:
+          - generic [ref=e87]:
+            - button "Preview" [ref=e88] [cursor=pointer]
+            - button "HTML" [ref=e89] [cursor=pointer]
+          - generic [ref=e90]:
+            - button "" [ref=e91] [cursor=pointer]:
+              - generic [ref=e92]: 
+            - button "" [ref=e93] [cursor=pointer]:
+              - generic [ref=e94]: 
+            - button "" [ref=e95] [cursor=pointer]:
+              - generic [ref=e96]: 
+            - button "" [ref=e98] [cursor=pointer]:
+              - generic [ref=e99]: 
+            - button "" [ref=e100] [cursor=pointer]:
+              - generic [ref=e101]: 
+            - button "" [ref=e102] [cursor=pointer]:
+              - generic [ref=e103]: 
+        - generic [ref=e105]:
+          - generic [ref=e106]: Active
+          - generic [ref=e107]: Pending
+          - generic [ref=e108]: Failed
+          - generic [ref=e109]: New
+        - text: 
+      - generic [ref=e110]:
+        - code [ref=e112]:
+          - generic [ref=e113]:
+            - generic [ref=e114]: <span
+            - text: class
+            - generic [ref=e115]: ="Badge Badge--success"
+            - text: ">"
+          - text: Active
+          - generic [ref=e116]:
+            - generic [ref=e117]: </span
+            - text: ">"
+          - generic [ref=e118]:
+            - generic [ref=e119]: <span
+            - text: class
+            - generic [ref=e120]: ="Badge Badge--warning"
+            - text: ">"
+          - text: Pending
+          - generic [ref=e121]:
+            - generic [ref=e122]: </span
+            - text: ">"
+          - generic [ref=e123]:
+            - generic [ref=e124]: <span
+            - text: class
+            - generic [ref=e125]: ="Badge Badge--error"
+            - text: ">"
+          - text: Failed
+          - generic [ref=e126]:
+            - generic [ref=e127]: </span
+            - text: ">"
+          - generic [ref=e128]:
+            - generic [ref=e129]: <span
+            - text: class
+            - generic [ref=e130]: ="Badge Badge--info"
+            - text: ">"
+          - text: New
+          - generic [ref=e131]:
+            - generic [ref=e132]: </span
+            - text: ">"
+        - button "Copy code" [ref=e133] [cursor=pointer]:
+          - generic [ref=e134]: 
+      - separator [ref=e135]
+      - heading "Badge Sizes" [level=2] [ref=e136]
+      - paragraph [ref=e137]: "Badges come in three sizes: small, medium (default), and large."
+      - generic [ref=e138]:
+        - generic [ref=e139]:
+          - generic [ref=e140]:
+            - button "Preview" [ref=e141] [cursor=pointer]
+            - button "HTML" [ref=e142] [cursor=pointer]
+          - generic [ref=e143]:
+            - button "" [ref=e144] [cursor=pointer]:
+              - generic [ref=e145]: 
+            - button "" [ref=e146] [cursor=pointer]:
+              - generic [ref=e147]: 
+            - button "" [ref=e148] [cursor=pointer]:
+              - generic [ref=e149]: 
+            - button "" [ref=e151] [cursor=pointer]:
+              - generic [ref=e152]: 
+            - button "" [ref=e153] [cursor=pointer]:
+              - generic [ref=e154]: 
+            - button "" [ref=e155] [cursor=pointer]:
+              - generic [ref=e156]: 
+        - generic [ref=e158]:
+          - generic [ref=e159]: Small
+          - generic [ref=e160]: Medium
+          - generic [ref=e161]: Large
+        - text: 
+      - generic [ref=e162]:
+        - code [ref=e164]:
+          - generic [ref=e165]:
+            - generic [ref=e166]: <span
+            - text: class
+            - generic [ref=e167]: ="Badge Badge--primary Badge--small"
+            - text: ">"
+          - text: Small
+          - generic [ref=e168]:
+            - generic [ref=e169]: </span
+            - text: ">"
+          - generic [ref=e170]:
+            - generic [ref=e171]: <span
+            - text: class
+            - generic [ref=e172]: ="Badge Badge--primary"
+            - text: ">"
+          - text: Medium
+          - generic [ref=e173]:
+            - generic [ref=e174]: </span
+            - text: ">"
+          - generic [ref=e175]:
+            - generic [ref=e176]: <span
+            - text: class
+            - generic [ref=e177]: ="Badge Badge--primary Badge--large"
+            - text: ">"
+          - text: Large
+          - generic [ref=e178]:
+            - generic [ref=e179]: </span
+            - text: ">"
+        - button "Copy code" [ref=e180] [cursor=pointer]:
+          - generic [ref=e181]: 
+      - separator [ref=e182]
+      - heading "Pill Badges" [level=2] [ref=e183]
+      - paragraph [ref=e184]: Fully rounded badges for a softer appearance.
+      - generic [ref=e185]:
+        - generic [ref=e186]:
+          - generic [ref=e187]:
+            - button "Preview" [ref=e188] [cursor=pointer]
+            - button "HTML" [ref=e189] [cursor=pointer]
+          - generic [ref=e190]:
+            - button "" [ref=e191] [cursor=pointer]:
+              - generic [ref=e192]: 
+            - button "" [ref=e193] [cursor=pointer]:
+              - generic [ref=e194]: 
+            - button "" [ref=e195] [cursor=pointer]:
+              - generic [ref=e196]: 
+            - button "" [ref=e198] [cursor=pointer]:
+              - generic [ref=e199]: 
+            - button "" [ref=e200] [cursor=pointer]:
+              - generic [ref=e201]: 
+            - button "" [ref=e202] [cursor=pointer]:
+              - generic [ref=e203]: 
+        - generic [ref=e205]:
+          - generic [ref=e206]: Default
+          - generic [ref=e207]: Primary
+          - generic [ref=e208]: Success
+          - generic [ref=e209]: Warning
+          - generic [ref=e210]: Error
+        - text: 
+      - generic [ref=e211]:
+        - code [ref=e213]:
+          - generic [ref=e214]:
+            - generic [ref=e215]: <span
+            - text: class
+            - generic [ref=e216]: ="Badge Badge--pill Badge--primary"
+            - text: ">"
+          - text: Primary
+          - generic [ref=e217]:
+            - generic [ref=e218]: </span
+            - text: ">"
+          - generic [ref=e219]:
+            - generic [ref=e220]: <span
+            - text: class
+            - generic [ref=e221]: ="Badge Badge--pill Badge--success"
+            - text: ">"
+          - text: Success
+          - generic [ref=e222]:
+            - generic [ref=e223]: </span
+            - text: ">"
+        - button "Copy code" [ref=e224] [cursor=pointer]:
+          - generic [ref=e225]: 
+      - separator [ref=e226]
+      - heading "Outline Badges" [level=2] [ref=e227]
+      - paragraph [ref=e228]: Badges with transparent background and colored border.
+      - generic [ref=e229]:
+        - generic [ref=e230]:
+          - generic [ref=e231]:
+            - button "Preview" [ref=e232] [cursor=pointer]
+            - button "HTML" [ref=e233] [cursor=pointer]
+          - generic [ref=e234]:
+            - button "" [ref=e235] [cursor=pointer]:
+              - generic [ref=e236]: 
+            - button "" [ref=e237] [cursor=pointer]:
+              - generic [ref=e238]: 
+            - button "" [ref=e239] [cursor=pointer]:
+              - generic [ref=e240]: 
+            - button "" [ref=e242] [cursor=pointer]:
+              - generic [ref=e243]: 
+            - button "" [ref=e244] [cursor=pointer]:
+              - generic [ref=e245]: 
+            - button "" [ref=e246] [cursor=pointer]:
+              - generic [ref=e247]: 
+        - generic [ref=e249]:
+          - generic [ref=e250]: Default
+          - generic [ref=e251]: Primary
+          - generic [ref=e252]: Success
+          - generic [ref=e253]: Warning
+          - generic [ref=e254]: Error
+        - text: 
+      - generic [ref=e255]:
+        - code [ref=e257]:
+          - generic [ref=e258]:
+            - generic [ref=e259]: <span
+            - text: class
+            - generic [ref=e260]: ="Badge Badge--outline Badge--primary"
+            - text: ">"
+          - text: Primary
+          - generic [ref=e261]:
+            - generic [ref=e262]: </span
+            - text: ">"
+          - generic [ref=e263]:
+            - generic [ref=e264]: <span
+            - text: class
+            - generic [ref=e265]: ="Badge Badge--outline Badge--success"
+            - text: ">"
+          - text: Success
+          - generic [ref=e266]:
+            - generic [ref=e267]: </span
+            - text: ">"
+        - button "Copy code" [ref=e268] [cursor=pointer]:
+          - generic [ref=e269]: 
+      - separator [ref=e270]
+      - heading "Badges with Icons" [level=2] [ref=e271]
+      - paragraph [ref=e272]: Add icons for visual reinforcement.
+      - generic [ref=e273]:
+        - generic [ref=e274]:
+          - generic [ref=e275]:
+            - button "Preview" [ref=e276] [cursor=pointer]
+            - button "HTML" [ref=e277] [cursor=pointer]
+          - generic [ref=e278]:
+            - button "" [ref=e279] [cursor=pointer]:
+              - generic [ref=e280]: 
+            - button "" [ref=e281] [cursor=pointer]:
+              - generic [ref=e282]: 
+            - button "" [ref=e283] [cursor=pointer]:
+              - generic [ref=e284]: 
+            - button "" [ref=e286] [cursor=pointer]:
+              - generic [ref=e287]: 
+            - button "" [ref=e288] [cursor=pointer]:
+              - generic [ref=e289]: 
+            - button "" [ref=e290] [cursor=pointer]:
+              - generic [ref=e291]: 
+        - generic [ref=e293]:
+          - generic [ref=e294]:
+            - generic [ref=e295]: 
+            - text: Complete
+          - generic [ref=e296]:
+            - generic [ref=e297]: 
+            - text: Pending
+          - generic [ref=e298]:
+            - generic [ref=e299]: 
+            - text: Error
+          - generic [ref=e300]:
+            - generic [ref=e301]: 
+            - text: Info
+        - text: 
+      - generic [ref=e302]:
+        - code [ref=e304]:
+          - generic [ref=e305]:
+            - generic [ref=e306]: <span
+            - text: class
+            - generic [ref=e307]: ="Badge Badge--success"
+            - text: ">"
+          - generic [ref=e308]:
+            - generic [ref=e309]: <i
+            - text: class
+            - generic [ref=e310]: ="ph ph-check-circle Badge-icon"
+            - text: ">"
+          - generic [ref=e311]:
+            - generic [ref=e312]: </i
+            - text: ">"
+          - text: Complete
+          - generic [ref=e313]:
+            - generic [ref=e314]: </span
+            - text: ">"
+        - button "Copy code" [ref=e315] [cursor=pointer]:
+          - generic [ref=e316]: 
+      - generic [ref=e317]:
+        - generic [ref=e318]:
+          - generic [ref=e319]:
+            - button "Preview" [ref=e320] [cursor=pointer]
+            - button "HTML" [ref=e321] [cursor=pointer]
+          - generic [ref=e322]:
+            - button "" [ref=e323] [cursor=pointer]:
+              - generic [ref=e324]: 
+            - button "" [ref=e325] [cursor=pointer]:
+              - generic [ref=e326]: 
+            - button "" [ref=e327] [cursor=pointer]:
+              - generic [ref=e328]: 
+            - button "" [ref=e330] [cursor=pointer]:
+              - generic [ref=e331]: 
+            - button "" [ref=e332] [cursor=pointer]:
+              - generic [ref=e333]: 
+            - button "" [ref=e334] [cursor=pointer]:
+              - generic [ref=e335]: 
+        - generic [ref=e337]:
+          - generic [ref=e338]:
+            - text: New Feature
+            - generic [ref=e339]: 
+          - generic [ref=e340]:
+            - text: Settings
+            - generic [ref=e341]: 
+        - text: 
+      - generic [ref=e342]:
+        - code [ref=e344]:
+          - generic [ref=e345]:
+            - generic [ref=e346]: <span
+            - text: class
+            - generic [ref=e347]: ="Badge Badge--primary"
+            - text: ">"
+          - text: New Feature
+          - generic [ref=e348]:
+            - generic [ref=e349]: <i
+            - text: class
+            - generic [ref=e350]: ="ph ph-arrow-right Badge-icon Badge-icon--trailing"
+            - text: ">"
+          - generic [ref=e351]:
+            - generic [ref=e352]: </i
+            - text: ">"
+          - generic [ref=e353]:
+            - generic [ref=e354]: </span
+            - text: ">"
+        - button "Copy code" [ref=e355] [cursor=pointer]:
+          - generic [ref=e356]: 
+      - separator [ref=e357]
+      - heading "Dot Indicator" [level=2] [ref=e358]
+      - paragraph [ref=e359]: Minimal status indicator without text.
+      - generic [ref=e360]:
+        - generic [ref=e361]:
+          - generic [ref=e362]:
+            - button "Preview" [ref=e363] [cursor=pointer]
+            - button "HTML" [ref=e364] [cursor=pointer]
+          - generic [ref=e365]:
+            - button "" [ref=e366] [cursor=pointer]:
+              - generic [ref=e367]: 
+            - button "" [ref=e368] [cursor=pointer]:
+              - generic [ref=e369]: 
+            - button "" [ref=e370] [cursor=pointer]:
+              - generic [ref=e371]: 
+            - button "" [ref=e373] [cursor=pointer]:
+              - generic [ref=e374]: 
+            - button "" [ref=e375] [cursor=pointer]:
+              - generic [ref=e376]: 
+            - button "" [ref=e377] [cursor=pointer]:
+              - generic [ref=e378]: 
+        - text: 
+      - generic [ref=e386]:
+        - code [ref=e388]:
+          - generic [ref=e389]:
+            - generic [ref=e390]: <span
+            - text: class
+            - generic [ref=e391]: ="Badge Badge--dot Badge--success"
+            - text: ">"
+          - generic [ref=e392]:
+            - generic [ref=e393]: </span
+            - text: ">"
+          - generic [ref=e394]:
+            - generic [ref=e395]: <span
+            - text: class
+            - generic [ref=e396]: ="Badge Badge--dot Badge--error"
+            - text: ">"
+          - generic [ref=e397]:
+            - generic [ref=e398]: </span
+            - text: ">"
+        - button "Copy code" [ref=e399] [cursor=pointer]:
+          - generic [ref=e400]: 
+      - generic [ref=e401]:
+        - generic [ref=e402]:
+          - generic [ref=e403]:
+            - button "Preview" [ref=e404] [cursor=pointer]
+            - button "HTML" [ref=e405] [cursor=pointer]
+          - generic [ref=e406]:
+            - button "" [ref=e407] [cursor=pointer]:
+              - generic [ref=e408]: 
+            - button "" [ref=e409] [cursor=pointer]:
+              - generic [ref=e410]: 
+            - button "" [ref=e411] [cursor=pointer]:
+              - generic [ref=e412]: 
+            - button "" [ref=e414] [cursor=pointer]:
+              - generic [ref=e415]: 
+            - button "" [ref=e416] [cursor=pointer]:
+              - generic [ref=e417]: 
+            - button "" [ref=e418] [cursor=pointer]:
+              - generic [ref=e419]: 
+        - generic [ref=e421]:
+          - generic [ref=e424]: Online
+          - generic [ref=e427]: Away
+          - generic [ref=e430]: Offline
+        - text: 
+      - separator [ref=e431]
+      - heading "Count Badges" [level=2] [ref=e432]
+      - paragraph [ref=e433]: Badges for displaying numeric counts.
+      - generic [ref=e434]:
+        - generic [ref=e435]:
+          - generic [ref=e436]:
+            - button "Preview" [ref=e437] [cursor=pointer]
+            - button "HTML" [ref=e438] [cursor=pointer]
+          - generic [ref=e439]:
+            - button "" [ref=e440] [cursor=pointer]:
+              - generic [ref=e441]: 
+            - button "" [ref=e442] [cursor=pointer]:
+              - generic [ref=e443]: 
+            - button "" [ref=e444] [cursor=pointer]:
+              - generic [ref=e445]: 
+            - button "" [ref=e447] [cursor=pointer]:
+              - generic [ref=e448]: 
+            - button "" [ref=e449] [cursor=pointer]:
+              - generic [ref=e450]: 
+            - button "" [ref=e451] [cursor=pointer]:
+              - generic [ref=e452]: 
+        - generic [ref=e454]:
+          - generic [ref=e455]: "5"
+          - generic [ref=e456]: "12"
+          - generic [ref=e457]: 99+
+        - text: 
+      - generic [ref=e458]:
+        - code [ref=e460]:
+          - generic [ref=e461]:
+            - generic [ref=e462]: <span
+            - text: class
+            - generic [ref=e463]: ="Badge Badge--count"
+            - text: ">"
+          - text: "5"
+          - generic [ref=e464]:
+            - generic [ref=e465]: </span
+            - text: ">"
+          - generic [ref=e466]:
+            - generic [ref=e467]: <span
+            - text: class
+            - generic [ref=e468]: ="Badge Badge--count Badge--primary"
+            - text: ">"
+          - text: "12"
+          - generic [ref=e469]:
+            - generic [ref=e470]: </span
+            - text: ">"
+          - generic [ref=e471]:
+            - generic [ref=e472]: <span
+            - text: class
+            - generic [ref=e473]: ="Badge Badge--count Badge--error"
+            - text: ">"
+          - text: 99+
+          - generic [ref=e474]:
+            - generic [ref=e475]: </span
+            - text: ">"
+        - button "Copy code" [ref=e476] [cursor=pointer]:
+          - generic [ref=e477]: 
+      - separator [ref=e478]
+      - heading "Badge Positioning" [level=2] [ref=e479]
+      - paragraph [ref=e480]: Common patterns for positioning badges relative to other elements.
+      - generic [ref=e481]:
+        - generic [ref=e482]:
+          - generic [ref=e483]:
+            - button "Preview" [ref=e484] [cursor=pointer]
+            - button "HTML" [ref=e485] [cursor=pointer]
+          - generic [ref=e486]:
+            - button "" [ref=e487] [cursor=pointer]:
+              - generic [ref=e488]: 
+            - button "" [ref=e489] [cursor=pointer]:
+              - generic [ref=e490]: 
+            - button "" [ref=e491] [cursor=pointer]:
+              - generic [ref=e492]: 
+            - button "" [ref=e494] [cursor=pointer]:
+              - generic [ref=e495]: 
+            - button "" [ref=e496] [cursor=pointer]:
+              - generic [ref=e497]: 
+            - button "" [ref=e498] [cursor=pointer]:
+              - generic [ref=e499]: 
+        - generic [ref=e501]:
+          - button "Notifications" [ref=e502] [cursor=pointer]:
+            - generic [ref=e503]: 
+            - generic [ref=e504]: "3"
+          - button "Messages" [ref=e505] [cursor=pointer]:
+            - generic [ref=e506]: 
+            - generic [ref=e507]: "12"
+          - button "Cart" [ref=e508] [cursor=pointer]:
+            - generic [ref=e509]: 
+        - text: 
+      - generic [ref=e511]:
+        - code [ref=e513]:
+          - generic [ref=e514]:
+            - generic [ref=e515]: <button
+            - text: class
+            - generic [ref=e516]: ="Button Button--icon"
+            - generic [ref=e517]:
+              - text: style
+              - generic [ref=e518]:
+                - text: ="
+                - generic [ref=e519]: "position: relative;"
+                - text: "\""
+            - text: ">"
+          - generic [ref=e520]:
+            - generic [ref=e521]: <i
+            - text: class
+            - generic [ref=e522]: ="ph ph-bell"
+            - text: ">"
+          - generic [ref=e523]:
+            - generic [ref=e524]: </i
+            - text: ">"
+          - generic [ref=e525]:
+            - generic [ref=e526]: <span
+            - text: class
+            - generic [ref=e527]: ="Badge Badge--count Badge--error Badge--positioned"
+            - text: ">"
+          - text: "3"
+          - generic [ref=e528]:
+            - generic [ref=e529]: </span
+            - text: ">"
+          - generic [ref=e530]:
+            - generic [ref=e531]: </button
+            - text: ">"
+        - button "Copy code" [ref=e532] [cursor=pointer]:
+          - generic [ref=e533]: 
+      - generic [ref=e534]:
+        - generic [ref=e535]:
+          - generic [ref=e536]:
+            - button "Preview" [ref=e537] [cursor=pointer]
+            - button "HTML" [ref=e538] [cursor=pointer]
+          - generic [ref=e539]:
+            - button "" [ref=e540] [cursor=pointer]:
+              - generic [ref=e541]: 
+            - button "" [ref=e542] [cursor=pointer]:
+              - generic [ref=e543]: 
+            - button "" [ref=e544] [cursor=pointer]:
+              - generic [ref=e545]: 
+            - button "" [ref=e547] [cursor=pointer]:
+              - generic [ref=e548]: 
+            - button "" [ref=e549] [cursor=pointer]:
+              - generic [ref=e550]: 
+            - button "" [ref=e551] [cursor=pointer]:
+              - generic [ref=e552]: 
+        - generic [ref=e555]:
+          - img "User" [ref=e557]
+          - img "User" [ref=e560]
+          - generic [ref=e562]:
+            - img "User" [ref=e563]
+            - generic [ref=e564]: "5"
+        - text: 
+      - generic [ref=e565]:
+        - code [ref=e567]:
+          - generic [ref=e568]:
+            - generic [ref=e569]: <div
+            - generic [ref=e570]:
+              - text: style
+              - generic [ref=e571]:
+                - text: ="
+                - generic [ref=e572]: "position: relative; display: inline-block;"
+                - text: "\""
+            - text: ">"
+          - generic [ref=e573]:
+            - generic [ref=e574]: <img
+            - text: src
+            - generic [ref=e575]: ="..."
+            - text: class
+            - generic [ref=e576]: ="Avatar"
+            - text: alt
+            - generic [ref=e577]: ="User"
+            - text: ">"
+          - generic [ref=e578]:
+            - generic [ref=e579]: <span
+            - text: class
+            - generic [ref=e580]: ="Badge Badge--dot Badge--success Badge--avatar"
+            - text: ">"
+          - generic [ref=e581]:
+            - generic [ref=e582]: </span
+            - text: ">"
+          - generic [ref=e583]:
+            - generic [ref=e584]: </div
+            - text: ">"
+        - button "Copy code" [ref=e585] [cursor=pointer]:
+          - generic [ref=e586]: 
+      - separator [ref=e587]
+      - heading "Interactive Badges" [level=2] [ref=e588]
+      - paragraph [ref=e589]: Badges that can be clicked or dismissed.
+      - generic [ref=e590]:
+        - generic [ref=e591]:
+          - generic [ref=e592]:
+            - button "Preview" [ref=e593] [cursor=pointer]
+            - button "HTML" [ref=e594] [cursor=pointer]
+          - generic [ref=e595]:
+            - button "" [ref=e596] [cursor=pointer]:
+              - generic [ref=e597]: 
+            - button "" [ref=e598] [cursor=pointer]:
+              - generic [ref=e599]: 
+            - button "" [ref=e600] [cursor=pointer]:
+              - generic [ref=e601]: 
+            - button "" [ref=e603] [cursor=pointer]:
+              - generic [ref=e604]: 
+            - button "" [ref=e605] [cursor=pointer]:
+              - generic [ref=e606]: 
+            - button "" [ref=e607] [cursor=pointer]:
+              - generic [ref=e608]: 
+        - generic [ref=e610]:
+          - generic [ref=e611]:
+            - text: Filter Active
+            - button "Remove filter" [ref=e612] [cursor=pointer]:
+              - generic [ref=e613]: 
+          - generic [ref=e614]:
+            - text: Tag Name
+            - button "Remove tag" [ref=e615] [cursor=pointer]:
+              - generic [ref=e616]: 
+        - text: 
+      - generic [ref=e617]:
+        - code [ref=e619]:
+          - generic [ref=e620]:
+            - generic [ref=e621]: <span
+            - text: class
+            - generic [ref=e622]: ="Badge Badge--primary Badge--dismissible"
+            - text: ">"
+          - text: Filter Active
+          - generic [ref=e623]:
+            - generic [ref=e624]: <button
+            - text: class
+            - generic [ref=e625]: ="Badge-dismiss"
+            - text: aria-label
+            - generic [ref=e626]: ="Remove filter"
+            - text: ">"
+          - generic [ref=e627]:
+            - generic [ref=e628]: <i
+            - text: class
+            - generic [ref=e629]: ="ph ph-x"
+            - text: ">"
+          - generic [ref=e630]:
+            - generic [ref=e631]: </i
+            - text: ">"
+          - generic [ref=e632]:
+            - generic [ref=e633]: </button
+            - text: ">"
+          - generic [ref=e634]:
+            - generic [ref=e635]: </span
+            - text: ">"
+        - button "Copy code" [ref=e636] [cursor=pointer]:
+          - generic [ref=e637]: 
+      - generic [ref=e638]:
+        - generic [ref=e639]:
+          - generic [ref=e640]:
+            - button "Preview" [ref=e641] [cursor=pointer]
+            - button "HTML" [ref=e642] [cursor=pointer]
+          - generic [ref=e643]:
+            - button "" [ref=e644] [cursor=pointer]:
+              - generic [ref=e645]: 
+            - button "" [ref=e646] [cursor=pointer]:
+              - generic [ref=e647]: 
+            - button "" [ref=e648] [cursor=pointer]:
+              - generic [ref=e649]: 
+            - button "" [ref=e651] [cursor=pointer]:
+              - generic [ref=e652]: 
+            - button "" [ref=e653] [cursor=pointer]:
+              - generic [ref=e654]: 
+            - button "" [ref=e655] [cursor=pointer]:
+              - generic [ref=e656]: 
+        - generic [ref=e658]:
+          - link "View Details" [ref=e659] [cursor=pointer]:
+            - /url: "#"
+          - link "Documentation" [ref=e660] [cursor=pointer]:
+            - /url: "#"
+        - text: 
+      - generic [ref=e661]:
+        - code [ref=e663]:
+          - generic [ref=e664]:
+            - generic [ref=e665]: <a
+            - text: href
+            - generic [ref=e666]: ="#"
+            - text: class
+            - generic [ref=e667]: ="Badge Badge--primary Badge--clickable"
+            - text: ">"
+          - text: View Details
+          - generic [ref=e668]:
+            - generic [ref=e669]: </a
+            - text: ">"
+        - button "Copy code" [ref=e670] [cursor=pointer]:
+          - generic [ref=e671]: 
+      - separator [ref=e672]
+      - heading "Common Patterns" [level=2] [ref=e673]
+      - heading "Table Row Status" [level=3] [ref=e674]
+      - generic [ref=e675]:
+        - generic [ref=e676]:
+          - generic [ref=e677]:
+            - button "Preview" [ref=e678] [cursor=pointer]
+            - button "HTML" [ref=e679] [cursor=pointer]
+          - generic [ref=e680]:
+            - button "" [ref=e681] [cursor=pointer]:
+              - generic [ref=e682]: 
+            - button "" [ref=e683] [cursor=pointer]:
+              - generic [ref=e684]: 
+            - button "" [ref=e685] [cursor=pointer]:
+              - generic [ref=e686]: 
+            - button "" [ref=e688] [cursor=pointer]:
+              - generic [ref=e689]: 
+            - button "" [ref=e690] [cursor=pointer]:
+              - generic [ref=e691]: 
+            - button "" [ref=e692] [cursor=pointer]:
+              - generic [ref=e693]: 
+        - generic [ref=e695]:
+          - generic [ref=e696]:
+            - generic [ref=e697]: "Order #12345"
+            - generic [ref=e698]: Delivered
+            - generic [ref=e699]: Today
+          - generic [ref=e700]:
+            - generic [ref=e701]: "Order #12346"
+            - generic [ref=e702]: In Transit
+            - generic [ref=e703]: Est. Tomorrow
+          - generic [ref=e704]:
+            - generic [ref=e705]: "Order #12347"
+            - generic [ref=e706]: Cancelled
+            - generic [ref=e707]: —
+        - text: 
+      - heading "User List with Status" [level=3] [ref=e708]
+      - generic [ref=e709]:
+        - generic [ref=e710]:
+          - generic [ref=e711]:
+            - button "Preview" [ref=e712] [cursor=pointer]
+            - button "HTML" [ref=e713] [cursor=pointer]
+          - generic [ref=e714]:
+            - button "" [ref=e715] [cursor=pointer]:
+              - generic [ref=e716]: 
+            - button "" [ref=e717] [cursor=pointer]:
+              - generic [ref=e718]: 
+            - button "" [ref=e719] [cursor=pointer]:
+              - generic [ref=e720]: 
+            - button "" [ref=e722] [cursor=pointer]:
+              - generic [ref=e723]: 
+            - button "" [ref=e724] [cursor=pointer]:
+              - generic [ref=e725]: 
+            - button "" [ref=e726] [cursor=pointer]:
+              - generic [ref=e727]: 
+        - generic [ref=e730]:
+          - generic [ref=e731]:
+            - img "Sarah" [ref=e733]
+            - generic [ref=e735]:
+              - generic [ref=e736]: Sarah Chen
+              - generic [ref=e737]: Online
+            - generic [ref=e738]: Admin
+          - generic [ref=e739]:
+            - img "John" [ref=e741]
+            - generic [ref=e743]:
+              - generic [ref=e744]: John Smith
+              - generic [ref=e745]: Away
+            - generic [ref=e746]: Editor
+          - generic [ref=e747]:
+            - img "Mike" [ref=e749]
+            - generic [ref=e751]:
+              - generic [ref=e752]: Mike Johnson
+              - generic [ref=e753]: Offline
+            - generic [ref=e754]: Viewer
+        - text: 
+      - heading "Feature Tags" [level=3] [ref=e755]
+      - generic [ref=e756]:
+        - generic [ref=e757]:
+          - generic [ref=e758]:
+            - button "Preview" [ref=e759] [cursor=pointer]
+            - button "HTML" [ref=e760] [cursor=pointer]
+          - generic [ref=e761]:
+            - button "" [ref=e762] [cursor=pointer]:
+              - generic [ref=e763]: 
+            - button "" [ref=e764] [cursor=pointer]:
+              - generic [ref=e765]: 
+            - button "" [ref=e766] [cursor=pointer]:
+              - generic [ref=e767]: 
+            - button "" [ref=e769] [cursor=pointer]:
+              - generic [ref=e770]: 
+            - button "" [ref=e771] [cursor=pointer]:
+              - generic [ref=e772]: 
+            - button "" [ref=e773] [cursor=pointer]:
+              - generic [ref=e774]: 
+        - generic [ref=e778]:
+          - generic [ref=e779]:
+            - generic [ref=e780]: Featured
+            - generic [ref=e781]: New
+          - heading "Advanced Analytics" [level=4] [ref=e782]
+          - paragraph [ref=e783]: Track performance with real-time dashboards and detailed reports.
+          - generic [ref=e784]:
+            - generic [ref=e785]: Charts
+            - generic [ref=e786]: Exports
+            - generic [ref=e787]: API
+        - text: 
+      - heading "Notification Header" [level=3] [ref=e788]
+      - generic [ref=e789]:
+        - generic [ref=e790]:
+          - generic [ref=e791]:
+            - button "Preview" [ref=e792] [cursor=pointer]
+            - button "HTML" [ref=e793] [cursor=pointer]
+          - generic [ref=e794]:
+            - button "" [ref=e795] [cursor=pointer]:
+              - generic [ref=e796]: 
+            - button "" [ref=e797] [cursor=pointer]:
+              - generic [ref=e798]: 
+            - button "" [ref=e799] [cursor=pointer]:
+              - generic [ref=e800]: 
+            - button "" [ref=e802] [cursor=pointer]:
+              - generic [ref=e803]: 
+            - button "" [ref=e804] [cursor=pointer]:
+              - generic [ref=e805]: 
+            - button "" [ref=e806] [cursor=pointer]:
+              - generic [ref=e807]: 
+        - generic [ref=e810]:
+          - generic [ref=e811]:
+            - heading "Notifications" [level=4] [ref=e812]
+            - generic [ref=e813]: 4 new
+          - button "Mark all read" [ref=e814] [cursor=pointer]
+        - text: 
+      - separator [ref=e815]
+      - heading "Customization" [level=2] [ref=e816]
+      - paragraph [ref=e817]: "Override badge styles using CSS custom properties:"
+      - generic [ref=e818]:
+        - code [ref=e820]:
+          - text: "/* Custom brand badge */ .Badge--brand { background-color: oklch(60% 0.15 280 / 0.15); color: oklch(50% 0.15 280); } /* Larger count badge */ .Badge--count-lg { min-width: 28px; height: 28px; font-size: 0.8rem; padding: 0 var(--space-2); } /* Animated dot (pulsing) */ .Badge--dot.Badge--pulse { animation: badge-pulse 2s infinite; }"
+          - generic [ref=e821]: "@keyframes badge-pulse"
+          - text: "{ 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } } /* Bordered badge */ .Badge--bordered { border: 1.5px solid currentColor; background-color: transparent; } /* Custom spacing for tight layouts */ .Badge--tight { padding: 0 var(--space-1); font-size: 0.65rem; }"
+        - button "Copy code" [ref=e822] [cursor=pointer]:
+          - generic [ref=e823]: 
+      - separator [ref=e824]
+      - heading "API Reference" [level=2] [ref=e825]
+      - heading "Base & Variant Classes" [level=3] [ref=e826]
+      - table [ref=e827]:
+        - rowgroup [ref=e828]:
+          - row "Class Description" [ref=e829]:
+            - columnheader "Class" [ref=e830]
+            - columnheader "Description" [ref=e831]
+        - rowgroup [ref=e832]:
+          - row ".Badge Base badge styling" [ref=e833]:
+            - cell ".Badge" [ref=e834]:
+              - code [ref=e835]: .Badge
+            - cell "Base badge styling" [ref=e836]
+          - row ".Badge--primary Primary color variant" [ref=e837]:
+            - cell ".Badge--primary" [ref=e838]:
+              - code [ref=e839]: .Badge--primary
+            - cell "Primary color variant" [ref=e840]
+          - row ".Badge--secondary Secondary/neutral color variant" [ref=e841]:
+            - cell ".Badge--secondary" [ref=e842]:
+              - code [ref=e843]: .Badge--secondary
+            - cell "Secondary/neutral color variant" [ref=e844]
+          - row ".Badge--success Success/positive state" [ref=e845]:
+            - cell ".Badge--success" [ref=e846]:
+              - code [ref=e847]: .Badge--success
+            - cell "Success/positive state" [ref=e848]
+          - row ".Badge--warning Warning/caution state" [ref=e849]:
+            - cell ".Badge--warning" [ref=e850]:
+              - code [ref=e851]: .Badge--warning
+            - cell "Warning/caution state" [ref=e852]
+          - row ".Badge--error Error/danger state" [ref=e853]:
+            - cell ".Badge--error" [ref=e854]:
+              - code [ref=e855]: .Badge--error
+            - cell "Error/danger state" [ref=e856]
+          - row ".Badge--info Informational state" [ref=e857]:
+            - cell ".Badge--info" [ref=e858]:
+              - code [ref=e859]: .Badge--info
+            - cell "Informational state" [ref=e860]
+      - heading "Size & Shape Classes" [level=3] [ref=e861]
+      - table [ref=e862]:
+        - rowgroup [ref=e863]:
+          - row "Class Description" [ref=e864]:
+            - columnheader "Class" [ref=e865]
+            - columnheader "Description" [ref=e866]
+        - rowgroup [ref=e867]:
+          - row ".Badge--small Smaller badge size" [ref=e868]:
+            - cell ".Badge--small" [ref=e869]:
+              - code [ref=e870]: .Badge--small
+            - cell "Smaller badge size" [ref=e871]
+          - row ".Badge--large Larger badge size" [ref=e872]:
+            - cell ".Badge--large" [ref=e873]:
+              - code [ref=e874]: .Badge--large
+            - cell "Larger badge size" [ref=e875]
+          - row ".Badge--pill Fully rounded pill shape" [ref=e876]:
+            - cell ".Badge--pill" [ref=e877]:
+              - code [ref=e878]: .Badge--pill
+            - cell "Fully rounded pill shape" [ref=e879]
+          - row ".Badge--outline Transparent background with border" [ref=e880]:
+            - cell ".Badge--outline" [ref=e881]:
+              - code [ref=e882]: .Badge--outline
+            - cell "Transparent background with border" [ref=e883]
+          - row ".Badge--dot Minimal dot indicator (no text)" [ref=e884]:
+            - cell ".Badge--dot" [ref=e885]:
+              - code [ref=e886]: .Badge--dot
+            - cell "Minimal dot indicator (no text)" [ref=e887]
+          - row ".Badge--count Circular count badge" [ref=e888]:
+            - cell ".Badge--count" [ref=e889]:
+              - code [ref=e890]: .Badge--count
+            - cell "Circular count badge" [ref=e891]
+      - heading "Positioning & Interactive Classes" [level=3] [ref=e892]
+      - table [ref=e893]:
+        - rowgroup [ref=e894]:
+          - row "Class Description" [ref=e895]:
+            - columnheader "Class" [ref=e896]
+            - columnheader "Description" [ref=e897]
+        - rowgroup [ref=e898]:
+          - row ".Badge--positioned Absolute positioning for overlays" [ref=e899]:
+            - cell ".Badge--positioned" [ref=e900]:
+              - code [ref=e901]: .Badge--positioned
+            - cell "Absolute positioning for overlays" [ref=e902]
+          - row ".Badge--avatar Positioning for avatar overlays" [ref=e903]:
+            - cell ".Badge--avatar" [ref=e904]:
+              - code [ref=e905]: .Badge--avatar
+            - cell "Positioning for avatar overlays" [ref=e906]
+          - row ".Badge--dismissible Badge with remove button" [ref=e907]:
+            - cell ".Badge--dismissible" [ref=e908]:
+              - code [ref=e909]: .Badge--dismissible
+            - cell "Badge with remove button" [ref=e910]
+          - row ".Badge--clickable Interactive link/button badge" [ref=e911]:
+            - cell ".Badge--clickable" [ref=e912]:
+              - code [ref=e913]: .Badge--clickable
+            - cell "Interactive link/button badge" [ref=e914]
+          - row ".Badge-icon Leading icon styling" [ref=e915]:
+            - cell ".Badge-icon" [ref=e916]:
+              - code [ref=e917]: .Badge-icon
+            - cell "Leading icon styling" [ref=e918]
+          - row ".Badge-icon--trailing Trailing icon positioning" [ref=e919]:
+            - cell ".Badge-icon--trailing" [ref=e920]:
+              - code [ref=e921]: .Badge-icon--trailing
+            - cell "Trailing icon positioning" [ref=e922]
+          - row ".Badge-dismiss Dismiss button inside badge" [ref=e923]:
+            - cell ".Badge-dismiss" [ref=e924]:
+              - code [ref=e925]: .Badge-dismiss
+            - cell "Dismiss button inside badge" [ref=e926]
+      - heading "Attributes" [level=3] [ref=e927]
+      - table [ref=e928]:
+        - rowgroup [ref=e929]:
+          - row "Attribute Description" [ref=e930]:
+            - columnheader "Attribute" [ref=e931]
+            - columnheader "Description" [ref=e932]
+        - rowgroup [ref=e933]:
+          - row "aria-label Required for dot indicators without visible text" [ref=e934]:
+            - cell "aria-label" [ref=e935]:
+              - code [ref=e936]: aria-label
+            - cell "Required for dot indicators without visible text" [ref=e937]
+          - row "aria-hidden Use on count badges when count is announced via parent" [ref=e938]:
+            - cell "aria-hidden" [ref=e939]:
+              - code [ref=e940]: aria-hidden
+            - cell "Use on count badges when count is announced via parent" [ref=e941]
+      - separator [ref=e942]
+      - heading "CSS Reference" [level=2] [ref=e943]
+      - generic [ref=e944]:
+        - code [ref=e946]: "/* Base Badge */ .Badge { display: inline-flex; align-items: center; gap: var(--space-1); padding: var(--space-1) var(--space-2); border-radius: var(--r-s); font-family: var(--font-sans); font-size: 0.75rem; font-weight: 500; line-height: 1.2; white-space: nowrap; background-color: var(--bg-s); color: var(--fg); border: 1px solid transparent; } /* Colors */ .Badge--primary { background-color: oklch(60% 0.15 250 / 0.15); color: oklch(50% 0.15 250); } .Badge--secondary { background-color: var(--bg-s); color: var(--fg-3); border-color: var(--bd); } .Badge--success { background-color: oklch(65% 0.15 150 / 0.15); color: oklch(45% 0.15 150); } .Badge--warning { background-color: oklch(75% 0.15 80 / 0.15); color: oklch(50% 0.15 80); } .Badge--error { background-color: oklch(55% 0.2 25 / 0.15); color: oklch(50% 0.2 25); } .Badge--info { background-color: oklch(65% 0.15 220 / 0.15); color: oklch(50% 0.15 220); } /* Sizes */ .Badge--small { padding: 0 var(--space-1); font-size: 0.65rem; } .Badge--large { padding: var(--space-2) var(--space-3); font-size: 0.875rem; } /* Pill */ .Badge--pill { border-radius: 9999px; } /* Outline */ .Badge--outline { background-color: transparent; } .Badge--outline.Badge--primary { border-color: oklch(60% 0.15 250); color: oklch(60% 0.15 250); } .Badge--outline.Badge--success { border-color: oklch(55% 0.15 150); color: oklch(55% 0.15 150); } .Badge--outline.Badge--warning { border-color: oklch(60% 0.15 80); color: oklch(60% 0.15 80); } .Badge--outline.Badge--error { border-color: oklch(55% 0.2 25); color: oklch(55% 0.2 25); } /* Dot */ .Badge--dot { width: 8px; height: 8px; padding: 0; border-radius: 50%; background-color: var(--fg-3); } .Badge--dot.Badge--success { background-color: oklch(55% 0.15 150); } .Badge--dot.Badge--warning { background-color: oklch(70% 0.15 80); } .Badge--dot.Badge--error { background-color: oklch(55% 0.2 25); } .Badge--dot.Badge--primary { background-color: var(--accent); } /* Count */ .Badge--count { min-width: 20px; height: 20px; padding: 0 var(--space-1); border-radius: 10px; text-align: center; justify-content: center; } /* Positioning */ .Badge--positioned { position: absolute; top: -4px; right: -4px; min-width: 18px; height: 18px; font-size: 0.65rem; } .Badge--avatar { position: absolute; bottom: 0; right: 0; border: 2px solid var(--bg); } /* Icon */ .Badge-icon { font-size: 0.9em; } .Badge-icon--trailing { order: 1; } /* Dismissible */ .Badge--dismissible { padding-right: var(--space-1); } .Badge-dismiss { display: flex; align-items: center; justify-content: center; width: 16px; height: 16px; padding: 0; margin-left: var(--space-1); background: none; border: none; border-radius: 50%; cursor: pointer; color: inherit; opacity: 0.7; transition: opacity 0.15s; } .Badge-dismiss:hover { opacity: 1; background-color: oklch(0% 0 0 / 0.1); } /* Clickable */ .Badge--clickable { cursor: pointer; text-decoration: none; transition: all 0.15s; } .Badge--clickable:hover { filter: brightness(0.95); }"
+        - button "Copy code" [ref=e947] [cursor=pointer]:
+          - generic [ref=e948]: 
+      - separator [ref=e949]
+      - heading "Accessibility" [level=2] [ref=e950]
+      - heading "Color Independence" [level=3] [ref=e951]
+      - generic [ref=e952]:
+        - code [ref=e954]:
+          - text: <!-- Don't rely on color alone — include text or icons -->
+          - generic [ref=e955]:
+            - generic [ref=e956]: <span
+            - text: class
+            - generic [ref=e957]: ="Badge Badge--success"
+            - text: ">"
+          - generic [ref=e958]:
+            - generic [ref=e959]: <i
+            - text: class
+            - generic [ref=e960]: ="ph ph-check-circle Badge-icon"
+            - text: ">"
+          - generic [ref=e961]:
+            - generic [ref=e962]: </i
+            - text: ">"
+          - text: Complete
+          - generic [ref=e963]:
+            - generic [ref=e964]: </span
+            - text: ">"
+          - text: <!-- Not just color -->
+          - generic [ref=e965]:
+            - generic [ref=e966]: <span
+            - text: class
+            - generic [ref=e967]: ="Badge Badge--error"
+            - text: ">"
+          - text: Error
+          - generic [ref=e968]:
+            - generic [ref=e969]: </span
+            - text: ">"
+        - button "Copy code" [ref=e970] [cursor=pointer]:
+          - generic [ref=e971]: 
+      - heading "Screen Reader Context" [level=3] [ref=e972]
+      - generic [ref=e973]:
+        - code [ref=e975]:
+          - text: <!-- Provide context for count badges -->
+          - generic [ref=e976]:
+            - generic [ref=e977]: <button
+            - text: class
+            - generic [ref=e978]: ="Button Button--icon"
+            - text: aria-label
+            - generic [ref=e979]: ="Notifications, 3 unread"
+            - text: ">"
+          - generic [ref=e980]:
+            - generic [ref=e981]: <i
+            - text: class
+            - generic [ref=e982]: ="ph ph-bell"
+            - text: ">"
+          - generic [ref=e983]:
+            - generic [ref=e984]: </i
+            - text: ">"
+          - generic [ref=e985]:
+            - generic [ref=e986]: <span
+            - text: class
+            - generic [ref=e987]: ="Badge Badge--count"
+            - text: aria-hidden
+            - generic [ref=e988]: ="true"
+            - text: ">"
+          - text: "3"
+          - generic [ref=e989]:
+            - generic [ref=e990]: </span
+            - text: ">"
+          - generic [ref=e991]:
+            - generic [ref=e992]: </button
+            - text: ">"
+          - text: <!-- For status dots, use aria-label -->
+          - generic [ref=e993]:
+            - generic [ref=e994]: <span
+            - text: class
+            - generic [ref=e995]: ="Badge Badge--dot Badge--success"
+            - text: aria-label
+            - generic [ref=e996]: ="Online"
+            - text: ">"
+          - generic [ref=e997]:
+            - generic [ref=e998]: </span
+            - text: ">"
+        - button "Copy code" [ref=e999] [cursor=pointer]:
+          - generic [ref=e1000]: 
+      - heading "Dismissible Badges" [level=3] [ref=e1001]
+      - generic [ref=e1002]:
+        - code [ref=e1004]:
+          - text: <!-- Always provide accessible dismiss button -->
+          - generic [ref=e1005]:
+            - generic [ref=e1006]: <span
+            - text: class
+            - generic [ref=e1007]: ="Badge Badge--dismissible"
+            - text: ">"
+          - text: "Filter: Active"
+          - generic [ref=e1008]:
+            - generic [ref=e1009]: <button
+            - text: class
+            - generic [ref=e1010]: ="Badge-dismiss"
+            - text: aria-label
+            - generic [ref=e1011]: ="Remove Active filter"
+            - text: ">"
+          - generic [ref=e1012]:
+            - generic [ref=e1013]: <i
+            - text: class
+            - generic [ref=e1014]: ="ph ph-x"
+            - text: ">"
+          - generic [ref=e1015]:
+            - generic [ref=e1016]: </i
+            - text: ">"
+          - generic [ref=e1017]:
+            - generic [ref=e1018]: </button
+            - text: ">"
+          - generic [ref=e1019]:
+            - generic [ref=e1020]: </span
+            - text: ">"
+        - button "Copy code" [ref=e1021] [cursor=pointer]:
+          - generic [ref=e1022]: 
+      - separator [ref=e1023]
+      - heading "Best Practices" [level=2] [ref=e1024]
+      - heading "Do" [level=3] [ref=e1025]
+      - list [ref=e1026]:
+        - listitem [ref=e1027]:
+          - text: ✓
+          - strong [ref=e1028]: Keep text short
+          - text: — 1-2 words maximum
+        - listitem [ref=e1029]:
+          - text: ✓
+          - strong [ref=e1030]: Use semantic colors
+          - text: — Green for success, red for errors
+        - listitem [ref=e1031]:
+          - text: ✓
+          - strong [ref=e1032]: Include icons for clarity
+          - text: — Helps users with color blindness
+        - listitem [ref=e1033]:
+          - text: ✓
+          - strong [ref=e1034]: Position consistently
+          - text: — Same placement across similar elements
+        - listitem [ref=e1035]:
+          - text: ✓
+          - strong [ref=e1036]: Use for quick scanning
+          - text: — Badges should be glanceable
+      - heading "Don’t" [level=3] [ref=e1037]
+      - list [ref=e1038]:
+        - listitem [ref=e1039]:
+          - text: ✗
+          - strong [ref=e1040]: Overuse badges
+          - text: — Too many reduces impact
+        - listitem [ref=e1041]:
+          - text: ✗
+          - strong [ref=e1042]: Rely on color alone
+          - text: — Always pair with text or icons
+        - listitem [ref=e1043]:
+          - text: ✗
+          - strong [ref=e1044]: Use for long content
+          - text: — That’s what labels or tags are for
+        - listitem [ref=e1045]:
+          - text: ✗
+          - strong [ref=e1046]: Mix too many colors
+          - text: — Stick to 2-3 per view
+        - listitem [ref=e1047]:
+          - text: ✗
+          - strong [ref=e1048]: Hide important info
+          - text: — Critical statuses need more than a dot
+    - paragraph [ref=e1050]: "Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM"
+```

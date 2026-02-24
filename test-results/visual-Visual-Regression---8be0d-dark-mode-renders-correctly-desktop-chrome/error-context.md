@@ -1,0 +1,1513 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - navigation "Main navigation" [ref=e3]:
+    - link "Home" [ref=e4] [cursor=pointer]:
+      - /url: ../index.html
+      - generic [ref=e5]: 
+      - generic [ref=e6]: Home
+    - link "Tokens" [ref=e7] [cursor=pointer]:
+      - /url: ../tokens/colors.html
+      - generic [ref=e8]: 
+      - generic [ref=e9]: Tokens
+    - link "Components" [ref=e10] [cursor=pointer]:
+      - /url: ../components/buttons.html
+      - generic [ref=e11]: 
+      - generic [ref=e12]: Components
+    - link "Patterns" [ref=e13] [cursor=pointer]:
+      - /url: ../patterns/layouts.html
+      - generic [ref=e14]: 
+      - generic [ref=e15]: Patterns
+    - button "Search" [ref=e17] [cursor=pointer]:
+      - generic [ref=e18]: 
+    - button "Toggle theme" [ref=e19] [cursor=pointer]:
+      - generic [ref=e20]: 
+  - text:  
+  - main [ref=e22]:
+    - generic [ref=e23]:
+      - navigation "Breadcrumb" [ref=e24]:
+        - link "Carbon" [ref=e25] [cursor=pointer]:
+          - /url: ../index.html
+        - generic [ref=e26]: /
+        - generic [ref=e27]: Components
+        - generic [ref=e28]: /
+        - generic [ref=e29]: Tables
+      - heading "Tables" [level=1] [ref=e30]:
+        - emphasis [ref=e31]: Tables
+    - article [ref=e32]:
+      - heading "Tables" [level=1] [ref=e33]
+      - paragraph [ref=e34]: Tables display structured data in rows and columns, making it easy to scan, compare, and analyze information. They’re essential for dashboards, admin panels, and data-heavy applications.
+      - separator [ref=e35]
+      - heading "Installation" [level=2] [ref=e36]
+      - paragraph [ref=e37]:
+        - text: Copy the table CSS from
+        - code [ref=e38]: styles/docs.css
+        - text: "or include the Carbon stylesheet:"
+      - generic [ref=e39]:
+        - code [ref=e41]:
+          - generic [ref=e42]:
+            - generic [ref=e43]: <link
+            - text: rel
+            - generic [ref=e44]: ="stylesheet"
+            - text: href
+            - generic [ref=e45]: ="carbon.min.css"
+            - text: ">"
+        - button "Copy code" [ref=e46] [cursor=pointer]:
+          - generic [ref=e47]: 
+      - paragraph [ref=e48]: "Then use table classes in your HTML:"
+      - generic [ref=e49]:
+        - code [ref=e51]:
+          - generic [ref=e52]:
+            - generic [ref=e53]: <table
+            - text: class
+            - generic [ref=e54]: ="Table"
+            - text: ">"
+          - generic [ref=e55]:
+            - generic [ref=e56]: <thead
+            - text: ">"
+          - generic [ref=e57]:
+            - generic [ref=e58]: <tr
+            - text: ">"
+          - generic [ref=e59]:
+            - generic [ref=e60]: <th
+            - text: ">"
+          - text: Name
+          - generic [ref=e61]:
+            - generic [ref=e62]: </th
+            - text: ">"
+          - generic [ref=e63]:
+            - generic [ref=e64]: <th
+            - text: ">"
+          - text: Status
+          - generic [ref=e65]:
+            - generic [ref=e66]: </th
+            - text: ">"
+          - generic [ref=e67]:
+            - generic [ref=e68]: </tr
+            - text: ">"
+          - generic [ref=e69]:
+            - generic [ref=e70]: </thead
+            - text: ">"
+          - generic [ref=e71]:
+            - generic [ref=e72]: <tbody
+            - text: ">"
+          - generic [ref=e73]:
+            - generic [ref=e74]: <tr
+            - text: ">"
+          - generic [ref=e75]:
+            - generic [ref=e76]: <td
+            - text: ">"
+          - text: Project Alpha
+          - generic [ref=e77]:
+            - generic [ref=e78]: </td
+            - text: ">"
+          - generic [ref=e79]:
+            - generic [ref=e80]: <td
+            - text: ">"
+          - text: Active
+          - generic [ref=e81]:
+            - generic [ref=e82]: </td
+            - text: ">"
+          - generic [ref=e83]:
+            - generic [ref=e84]: </tr
+            - text: ">"
+          - generic [ref=e85]:
+            - generic [ref=e86]: </tbody
+            - text: ">"
+          - generic [ref=e87]:
+            - generic [ref=e88]: </table
+            - text: ">"
+        - button "Copy code" [ref=e89] [cursor=pointer]:
+          - generic [ref=e90]: 
+      - separator [ref=e91]
+      - heading "Usage" [level=2] [ref=e92]
+      - paragraph [ref=e93]:
+        - text: The base
+        - code [ref=e94]: .Table
+        - text: class provides clean table styling with proper spacing and borders. Add modifier classes to enable features like striping, hover states, and responsive behavior.
+      - generic [ref=e95]:
+        - generic [ref=e96]:
+          - generic [ref=e97]:
+            - button "Preview" [ref=e98] [cursor=pointer]
+            - button "HTML" [ref=e99] [cursor=pointer]
+          - generic [ref=e100]:
+            - button "" [ref=e101] [cursor=pointer]:
+              - generic [ref=e102]: 
+            - button "" [ref=e103] [cursor=pointer]:
+              - generic [ref=e104]: 
+            - button "" [ref=e105] [cursor=pointer]:
+              - generic [ref=e106]: 
+            - button "" [ref=e108] [cursor=pointer]:
+              - generic [ref=e109]: 
+            - button "" [ref=e110] [cursor=pointer]:
+              - generic [ref=e111]: 
+            - button "" [ref=e112] [cursor=pointer]:
+              - generic [ref=e113]: 
+        - table [ref=e116]:
+          - rowgroup [ref=e117]:
+            - row "Name Email Role" [ref=e118]:
+              - columnheader "Name" [ref=e119]
+              - columnheader "Email" [ref=e120]
+              - columnheader "Role" [ref=e121]
+          - rowgroup [ref=e122]:
+            - row "Alice Chen alice@example.com Admin" [ref=e123]:
+              - cell "Alice Chen" [ref=e124]
+              - cell "alice@example.com" [ref=e125]
+              - cell "Admin" [ref=e126]
+            - row "Bob Smith bob@example.com Editor" [ref=e127]:
+              - cell "Bob Smith" [ref=e128]
+              - cell "bob@example.com" [ref=e129]
+              - cell "Editor" [ref=e130]
+            - row "Carol Davis carol@example.com Viewer" [ref=e131]:
+              - cell "Carol Davis" [ref=e132]
+              - cell "carol@example.com" [ref=e133]
+              - cell "Viewer" [ref=e134]
+        - text: 
+      - separator [ref=e135]
+      - heading "Examples" [level=2] [ref=e136]
+      - heading "Basic Table" [level=3] [ref=e137]
+      - paragraph [ref=e138]:
+        - text: A simple table with header row and body content. The base
+        - code [ref=e139]: .Table
+        - text: class handles typography, spacing, and subtle borders.
+      - generic [ref=e140]:
+        - generic [ref=e141]:
+          - generic [ref=e142]:
+            - button "Preview" [ref=e143] [cursor=pointer]
+            - button "HTML" [ref=e144] [cursor=pointer]
+          - generic [ref=e145]:
+            - button "" [ref=e146] [cursor=pointer]:
+              - generic [ref=e147]: 
+            - button "" [ref=e148] [cursor=pointer]:
+              - generic [ref=e149]: 
+            - button "" [ref=e150] [cursor=pointer]:
+              - generic [ref=e151]: 
+            - button "" [ref=e153] [cursor=pointer]:
+              - generic [ref=e154]: 
+            - button "" [ref=e155] [cursor=pointer]:
+              - generic [ref=e156]: 
+            - button "" [ref=e157] [cursor=pointer]:
+              - generic [ref=e158]: 
+        - table [ref=e161]:
+          - rowgroup [ref=e162]:
+            - row "Product Category Price Stock" [ref=e163]:
+              - columnheader "Product" [ref=e164]
+              - columnheader "Category" [ref=e165]
+              - columnheader "Price" [ref=e166]
+              - columnheader "Stock" [ref=e167]
+          - rowgroup [ref=e168]:
+            - row "Wireless Headphones Electronics $149.00 234" [ref=e169]:
+              - cell "Wireless Headphones" [ref=e170]
+              - cell "Electronics" [ref=e171]
+              - cell "$149.00" [ref=e172]
+              - cell "234" [ref=e173]
+            - row "Ergonomic Keyboard Electronics $89.00 156" [ref=e174]:
+              - cell "Ergonomic Keyboard" [ref=e175]
+              - cell "Electronics" [ref=e176]
+              - cell "$89.00" [ref=e177]
+              - cell "156" [ref=e178]
+            - row "Standing Desk Mat Furniture $45.00 89" [ref=e179]:
+              - cell "Standing Desk Mat" [ref=e180]
+              - cell "Furniture" [ref=e181]
+              - cell "$45.00" [ref=e182]
+              - cell "89" [ref=e183]
+        - text: 
+      - heading "Striped Rows" [level=3] [ref=e184]
+      - paragraph [ref=e185]:
+        - text: Alternating row colors improve readability for large datasets. Add
+        - code [ref=e186]: .Table--striped
+        - text: for zebra striping.
+      - generic [ref=e187]:
+        - generic [ref=e188]:
+          - generic [ref=e189]:
+            - button "Preview" [ref=e190] [cursor=pointer]
+            - button "HTML" [ref=e191] [cursor=pointer]
+          - generic [ref=e192]:
+            - button "" [ref=e193] [cursor=pointer]:
+              - generic [ref=e194]: 
+            - button "" [ref=e195] [cursor=pointer]:
+              - generic [ref=e196]: 
+            - button "" [ref=e197] [cursor=pointer]:
+              - generic [ref=e198]: 
+            - button "" [ref=e200] [cursor=pointer]:
+              - generic [ref=e201]: 
+            - button "" [ref=e202] [cursor=pointer]:
+              - generic [ref=e203]: 
+            - button "" [ref=e204] [cursor=pointer]:
+              - generic [ref=e205]: 
+        - table [ref=e208]:
+          - rowgroup [ref=e209]:
+            - row "Date Description Amount Balance" [ref=e210]:
+              - columnheader "Date" [ref=e211]
+              - columnheader "Description" [ref=e212]
+              - columnheader "Amount" [ref=e213]
+              - columnheader "Balance" [ref=e214]
+          - rowgroup [ref=e215]:
+            - row "Feb 1, 2026 Opening Balance — $5,000.00" [ref=e216]:
+              - cell "Feb 1, 2026" [ref=e217]
+              - cell "Opening Balance" [ref=e218]
+              - cell "—" [ref=e219]
+              - cell "$5,000.00" [ref=e220]
+            - row "Feb 2, 2026 Wire Transfer +$2,500.00 $7,500.00" [ref=e221]:
+              - cell "Feb 2, 2026" [ref=e222]
+              - cell "Wire Transfer" [ref=e223]
+              - cell "+$2,500.00" [ref=e224]
+              - cell "$7,500.00" [ref=e225]
+            - row "Feb 3, 2026 Software License -$299.00 $7,201.00" [ref=e226]:
+              - cell "Feb 3, 2026" [ref=e227]
+              - cell "Software License" [ref=e228]
+              - cell "-$299.00" [ref=e229]
+              - cell "$7,201.00" [ref=e230]
+            - row "Feb 3, 2026 Office Supplies -$85.50 $7,115.50" [ref=e231]:
+              - cell "Feb 3, 2026" [ref=e232]
+              - cell "Office Supplies" [ref=e233]
+              - cell "-$85.50" [ref=e234]
+              - cell "$7,115.50" [ref=e235]
+            - row "Feb 4, 2026 Client Payment +$1,200.00 $8,315.50" [ref=e236]:
+              - cell "Feb 4, 2026" [ref=e237]
+              - cell "Client Payment" [ref=e238]
+              - cell "+$1,200.00" [ref=e239]
+              - cell "$8,315.50" [ref=e240]
+        - text: 
+      - heading "Hoverable Rows" [level=3] [ref=e241]
+      - paragraph [ref=e242]:
+        - text: Highlight rows on hover for better focus. Add
+        - code [ref=e243]: .Table--hoverable
+        - text: to enable hover states.
+      - generic [ref=e244]:
+        - generic [ref=e245]:
+          - generic [ref=e246]:
+            - button "Preview" [ref=e247] [cursor=pointer]
+            - button "HTML" [ref=e248] [cursor=pointer]
+          - generic [ref=e249]:
+            - button "" [ref=e250] [cursor=pointer]:
+              - generic [ref=e251]: 
+            - button "" [ref=e252] [cursor=pointer]:
+              - generic [ref=e253]: 
+            - button "" [ref=e254] [cursor=pointer]:
+              - generic [ref=e255]: 
+            - button "" [ref=e257] [cursor=pointer]:
+              - generic [ref=e258]: 
+            - button "" [ref=e259] [cursor=pointer]:
+              - generic [ref=e260]: 
+            - button "" [ref=e261] [cursor=pointer]:
+              - generic [ref=e262]: 
+        - table [ref=e265]:
+          - rowgroup [ref=e266]:
+            - row "Employee Department Location Start Date" [ref=e267]:
+              - columnheader "Employee" [ref=e268]
+              - columnheader "Department" [ref=e269]
+              - columnheader "Location" [ref=e270]
+              - columnheader "Start Date" [ref=e271]
+          - rowgroup [ref=e272]:
+            - row "Emma Wilson Engineering San Francisco Jan 15, 2024" [ref=e273]:
+              - cell "Emma Wilson" [ref=e274]
+              - cell "Engineering" [ref=e275]
+              - cell "San Francisco" [ref=e276]
+              - cell "Jan 15, 2024" [ref=e277]
+            - row "James Lee Design New York Mar 8, 2024" [ref=e278]:
+              - cell "James Lee" [ref=e279]
+              - cell "Design" [ref=e280]
+              - cell "New York" [ref=e281]
+              - cell "Mar 8, 2024" [ref=e282]
+            - row "Sofia Martinez Marketing Austin Jul 22, 2024" [ref=e283]:
+              - cell "Sofia Martinez" [ref=e284]
+              - cell "Marketing" [ref=e285]
+              - cell "Austin" [ref=e286]
+              - cell "Jul 22, 2024" [ref=e287]
+        - text: 
+      - heading "Bordered Table" [level=3] [ref=e288]
+      - paragraph [ref=e289]:
+        - text: Full borders around all cells. Add
+        - code [ref=e290]: .Table--bordered
+        - text: for a grid appearance.
+      - generic [ref=e291]:
+        - generic [ref=e292]:
+          - generic [ref=e293]:
+            - button "Preview" [ref=e294] [cursor=pointer]
+            - button "HTML" [ref=e295] [cursor=pointer]
+          - generic [ref=e296]:
+            - button "" [ref=e297] [cursor=pointer]:
+              - generic [ref=e298]: 
+            - button "" [ref=e299] [cursor=pointer]:
+              - generic [ref=e300]: 
+            - button "" [ref=e301] [cursor=pointer]:
+              - generic [ref=e302]: 
+            - button "" [ref=e304] [cursor=pointer]:
+              - generic [ref=e305]: 
+            - button "" [ref=e306] [cursor=pointer]:
+              - generic [ref=e307]: 
+            - button "" [ref=e308] [cursor=pointer]:
+              - generic [ref=e309]: 
+        - table [ref=e312]:
+          - rowgroup [ref=e313]:
+            - row "Feature Free Pro Enterprise" [ref=e314]:
+              - columnheader "Feature" [ref=e315]
+              - columnheader "Free" [ref=e316]
+              - columnheader "Pro" [ref=e317]
+              - columnheader "Enterprise" [ref=e318]
+          - rowgroup [ref=e319]:
+            - row "Projects 3 Unlimited Unlimited" [ref=e320]:
+              - cell "Projects" [ref=e321]
+              - cell "3" [ref=e322]
+              - cell "Unlimited" [ref=e323]
+              - cell "Unlimited" [ref=e324]
+            - row "Team Members 1 10 Unlimited" [ref=e325]:
+              - cell "Team Members" [ref=e326]
+              - cell "1" [ref=e327]
+              - cell "10" [ref=e328]
+              - cell "Unlimited" [ref=e329]
+            - row "Storage 1 GB 100 GB 1 TB" [ref=e330]:
+              - cell "Storage" [ref=e331]
+              - cell "1 GB" [ref=e332]
+              - cell "100 GB" [ref=e333]
+              - cell "1 TB" [ref=e334]
+            - row "Support Community Email 24/7 Phone" [ref=e335]:
+              - cell "Support" [ref=e336]
+              - cell "Community" [ref=e337]
+              - cell "Email" [ref=e338]
+              - cell "24/7 Phone" [ref=e339]
+        - text: 
+      - heading "Responsive / Scrollable Table" [level=3] [ref=e340]
+      - paragraph [ref=e341]:
+        - text: Wrap tables in
+        - code [ref=e342]: .Table-wrapper
+        - text: for horizontal scrolling on small screens.
+      - generic [ref=e343]:
+        - generic [ref=e344]:
+          - generic [ref=e345]:
+            - button "Preview" [ref=e346] [cursor=pointer]
+            - button "HTML" [ref=e347] [cursor=pointer]
+          - generic [ref=e348]:
+            - button "" [ref=e349] [cursor=pointer]:
+              - generic [ref=e350]: 
+            - button "" [ref=e351] [cursor=pointer]:
+              - generic [ref=e352]: 
+            - button "" [ref=e353] [cursor=pointer]:
+              - generic [ref=e354]: 
+            - button "" [ref=e356] [cursor=pointer]:
+              - generic [ref=e357]: 
+            - button "" [ref=e358] [cursor=pointer]:
+              - generic [ref=e359]: 
+            - button "" [ref=e360] [cursor=pointer]:
+              - generic [ref=e361]: 
+        - table [ref=e365]:
+          - rowgroup [ref=e366]:
+            - row "Order ID Customer Product Quantity Unit Price Total Status Date" [ref=e367]:
+              - columnheader "Order ID" [ref=e368]
+              - columnheader "Customer" [ref=e369]
+              - columnheader "Product" [ref=e370]
+              - columnheader "Quantity" [ref=e371]
+              - columnheader "Unit Price" [ref=e372]
+              - columnheader "Total" [ref=e373]
+              - columnheader "Status" [ref=e374]
+              - columnheader "Date" [ref=e375]
+          - rowgroup [ref=e376]:
+            - row "#ORD-001 Acme Corp Widget Pro 50 $25.00 $1,250.00 Shipped Feb 1, 2026" [ref=e377]:
+              - cell "#ORD-001" [ref=e378]
+              - cell "Acme Corp" [ref=e379]
+              - cell "Widget Pro" [ref=e380]
+              - cell "50" [ref=e381]
+              - cell "$25.00" [ref=e382]
+              - cell "$1,250.00" [ref=e383]
+              - cell "Shipped" [ref=e384]:
+                - generic [ref=e385]: Shipped
+              - cell "Feb 1, 2026" [ref=e386]
+            - row "#ORD-002 Tech Solutions Gadget Plus 25 $75.00 $1,875.00 Processing Feb 2, 2026" [ref=e387]:
+              - cell "#ORD-002" [ref=e388]
+              - cell "Tech Solutions" [ref=e389]
+              - cell "Gadget Plus" [ref=e390]
+              - cell "25" [ref=e391]
+              - cell "$75.00" [ref=e392]
+              - cell "$1,875.00" [ref=e393]
+              - cell "Processing" [ref=e394]:
+                - generic [ref=e395]: Processing
+              - cell "Feb 2, 2026" [ref=e396]
+            - row "#ORD-003 Global Industries Device Max 100 $50.00 $5,000.00 Pending Feb 3, 2026" [ref=e397]:
+              - cell "#ORD-003" [ref=e398]
+              - cell "Global Industries" [ref=e399]
+              - cell "Device Max" [ref=e400]
+              - cell "100" [ref=e401]
+              - cell "$50.00" [ref=e402]
+              - cell "$5,000.00" [ref=e403]
+              - cell "Pending" [ref=e404]:
+                - generic [ref=e405]: Pending
+              - cell "Feb 3, 2026" [ref=e406]
+        - text: 
+      - heading "Sortable Headers" [level=3] [ref=e407]
+      - paragraph [ref=e408]:
+        - text: Add
+        - code [ref=e409]: .Table--sortable
+        - text: and use
+        - code [ref=e410]: .Table-sort
+        - text: buttons in headers. JavaScript handles the sorting logic.
+      - generic [ref=e411]:
+        - generic [ref=e412]:
+          - generic [ref=e413]:
+            - button "Preview" [ref=e414] [cursor=pointer]
+            - button "HTML" [ref=e415] [cursor=pointer]
+          - generic [ref=e416]:
+            - button "" [ref=e417] [cursor=pointer]:
+              - generic [ref=e418]: 
+            - button "" [ref=e419] [cursor=pointer]:
+              - generic [ref=e420]: 
+            - button "" [ref=e421] [cursor=pointer]:
+              - generic [ref=e422]: 
+            - button "" [ref=e424] [cursor=pointer]:
+              - generic [ref=e425]: 
+            - button "" [ref=e426] [cursor=pointer]:
+              - generic [ref=e427]: 
+            - button "" [ref=e428] [cursor=pointer]:
+              - generic [ref=e429]: 
+        - table [ref=e432]:
+          - rowgroup [ref=e433]:
+            - row "Name  Size  Modified " [ref=e434]:
+              - columnheader "Name " [ref=e435]:
+                - button "Name " [ref=e436] [cursor=pointer]:
+                  - text: Name
+                  - generic [ref=e437]: 
+              - columnheader "Size " [ref=e438]:
+                - button "Size " [ref=e439] [cursor=pointer]:
+                  - text: Size
+                  - generic [ref=e440]: 
+              - columnheader "Modified " [ref=e441]:
+                - button "Modified " [ref=e442] [cursor=pointer]:
+                  - text: Modified
+                  - generic [ref=e443]: 
+          - rowgroup [ref=e444]:
+            - row " Documents — Feb 4, 2026" [ref=e445]:
+              - cell " Documents" [ref=e446]:
+                - generic [ref=e447]: 
+                - text: Documents
+              - cell "—" [ref=e448]
+              - cell "Feb 4, 2026" [ref=e449]
+            - row " Images — Feb 3, 2026" [ref=e450]:
+              - cell " Images" [ref=e451]:
+                - generic [ref=e452]: 
+                - text: Images
+              - cell "—" [ref=e453]
+              - cell "Feb 3, 2026" [ref=e454]
+            - row " notes.md 4.2 KB Feb 2, 2026" [ref=e455]:
+              - cell " notes.md" [ref=e456]:
+                - generic [ref=e457]: 
+                - text: notes.md
+              - cell "4.2 KB" [ref=e458]
+              - cell "Feb 2, 2026" [ref=e459]
+            - row " readme.txt 1.8 KB Feb 1, 2026" [ref=e460]:
+              - cell " readme.txt" [ref=e461]:
+                - generic [ref=e462]: 
+                - text: readme.txt
+              - cell "1.8 KB" [ref=e463]
+              - cell "Feb 1, 2026" [ref=e464]
+        - text: 
+      - heading "Selectable Rows" [level=3] [ref=e465]
+      - paragraph [ref=e466]:
+        - text: Add checkboxes for row selection. Use
+        - code [ref=e467]: .Table--selectable
+        - text: for proper alignment.
+      - generic [ref=e468]:
+        - generic [ref=e469]:
+          - generic [ref=e470]:
+            - button "Preview" [ref=e471] [cursor=pointer]
+            - button "HTML" [ref=e472] [cursor=pointer]
+          - generic [ref=e473]:
+            - button "" [ref=e474] [cursor=pointer]:
+              - generic [ref=e475]: 
+            - button "" [ref=e476] [cursor=pointer]:
+              - generic [ref=e477]: 
+            - button "" [ref=e478] [cursor=pointer]:
+              - generic [ref=e479]: 
+            - button "" [ref=e481] [cursor=pointer]:
+              - generic [ref=e482]: 
+            - button "" [ref=e483] [cursor=pointer]:
+              - generic [ref=e484]: 
+            - button "" [ref=e485] [cursor=pointer]:
+              - generic [ref=e486]: 
+        - table [ref=e489]:
+          - rowgroup [ref=e490]:
+            - row "Select all rows Name Type Size" [ref=e491]:
+              - columnheader "Select all rows" [ref=e492]:
+                - checkbox "Select all rows" [ref=e493] [cursor=pointer]
+              - columnheader "Name" [ref=e494]
+              - columnheader "Type" [ref=e495]
+              - columnheader "Size" [ref=e496]
+          - rowgroup [ref=e497]:
+            - row "Select row project-v2.zip Archive 45.2 MB" [ref=e498]:
+              - cell "Select row" [ref=e499]:
+                - checkbox "Select row" [checked] [ref=e500] [cursor=pointer]
+              - cell "project-v2.zip" [ref=e501]
+              - cell "Archive" [ref=e502]
+              - cell "45.2 MB" [ref=e503]
+            - row "Select row design-specs.pdf Document 2.8 MB" [ref=e504]:
+              - cell "Select row" [ref=e505]:
+                - checkbox "Select row" [ref=e506] [cursor=pointer]
+              - cell "design-specs.pdf" [ref=e507]
+              - cell "Document" [ref=e508]
+              - cell "2.8 MB" [ref=e509]
+            - row "Select row logo-final.svg Image 128 KB" [ref=e510]:
+              - cell "Select row" [ref=e511]:
+                - checkbox "Select row" [checked] [ref=e512] [cursor=pointer]
+              - cell "logo-final.svg" [ref=e513]
+              - cell "Image" [ref=e514]
+              - cell "128 KB" [ref=e515]
+            - row "Select row meeting-notes.docx Document 340 KB" [ref=e516]:
+              - cell "Select row" [ref=e517]:
+                - checkbox "Select row" [ref=e518] [cursor=pointer]
+              - cell "meeting-notes.docx" [ref=e519]
+              - cell "Document" [ref=e520]
+              - cell "340 KB" [ref=e521]
+        - text: 
+      - heading "Expandable Rows" [level=3] [ref=e522]
+      - paragraph [ref=e523]:
+        - text: Rows that expand to show additional details. Use
+        - code [ref=e524]: .Table-expandBtn
+        - text: to toggle nested content.
+      - generic [ref=e525]:
+        - generic [ref=e526]:
+          - generic [ref=e527]:
+            - button "Preview" [ref=e528] [cursor=pointer]
+            - button "HTML" [ref=e529] [cursor=pointer]
+          - generic [ref=e530]:
+            - button "" [ref=e531] [cursor=pointer]:
+              - generic [ref=e532]: 
+            - button "" [ref=e533] [cursor=pointer]:
+              - generic [ref=e534]: 
+            - button "" [ref=e535] [cursor=pointer]:
+              - generic [ref=e536]: 
+            - button "" [ref=e538] [cursor=pointer]:
+              - generic [ref=e539]: 
+            - button "" [ref=e540] [cursor=pointer]:
+              - generic [ref=e541]: 
+            - button "" [ref=e542] [cursor=pointer]:
+              - generic [ref=e543]: 
+        - table [ref=e546]:
+          - rowgroup [ref=e547]:
+            - row "Order Customer Total Status" [ref=e548]:
+              - columnheader [ref=e549]
+              - columnheader "Order" [ref=e550]
+              - columnheader "Customer" [ref=e551]
+              - columnheader "Total" [ref=e552]
+              - columnheader "Status" [ref=e553]
+          - rowgroup [ref=e554]:
+            - 'row "Expand row #ORD-1234 John Doe $299.00 Complete" [ref=e555]':
+              - cell "Expand row" [ref=e556]:
+                - button "Expand row" [ref=e557] [cursor=pointer]:
+                  - generic [ref=e558]: 
+              - cell "#ORD-1234" [ref=e559]
+              - cell "John Doe" [ref=e560]
+              - cell "$299.00" [ref=e561]
+              - cell "Complete" [ref=e562]:
+                - generic [ref=e563]: Complete
+            - 'row "Collapse row #ORD-1235 Jane Smith $549.00 Processing" [ref=e564]':
+              - cell "Collapse row" [ref=e565]:
+                - button "Collapse row" [expanded] [ref=e566] [cursor=pointer]:
+                  - generic [ref=e567]: 
+              - cell "#ORD-1235" [ref=e568]
+              - cell "Jane Smith" [ref=e569]
+              - cell "$549.00" [ref=e570]
+              - cell "Processing" [ref=e571]:
+                - generic [ref=e572]: Processing
+            - 'row "Shipping Address: 123 Main St, New York, NY 10001 Items: Widget Pro (2), Gadget Plus (1) Notes: Please leave at front door" [ref=e573]':
+              - 'cell "Shipping Address: 123 Main St, New York, NY 10001 Items: Widget Pro (2), Gadget Plus (1) Notes: Please leave at front door" [ref=e574]':
+                - generic [ref=e575]:
+                  - generic [ref=e576]:
+                    - strong [ref=e577]: "Shipping Address:"
+                    - text: 123 Main St, New York, NY 10001
+                  - generic [ref=e578]:
+                    - strong [ref=e579]: "Items:"
+                    - text: Widget Pro (2), Gadget Plus (1)
+                  - generic [ref=e580]:
+                    - strong [ref=e581]: "Notes:"
+                    - text: Please leave at front door
+            - 'row "Expand row #ORD-1236 Bob Johnson $125.00 Pending" [ref=e582]':
+              - cell "Expand row" [ref=e583]:
+                - button "Expand row" [ref=e584] [cursor=pointer]:
+                  - generic [ref=e585]: 
+              - cell "#ORD-1236" [ref=e586]
+              - cell "Bob Johnson" [ref=e587]
+              - cell "$125.00" [ref=e588]
+              - cell "Pending" [ref=e589]:
+                - generic [ref=e590]: Pending
+        - text: 
+      - heading "Sticky Header" [level=3] [ref=e591]
+      - paragraph [ref=e592]:
+        - text: Keep headers visible while scrolling long tables. Add
+        - code [ref=e593]: .Table--stickyHeader
+        - text: and set a max-height on the wrapper.
+      - generic [ref=e594]:
+        - generic [ref=e595]:
+          - generic [ref=e596]:
+            - button "Preview" [ref=e597] [cursor=pointer]
+            - button "HTML" [ref=e598] [cursor=pointer]
+          - generic [ref=e599]:
+            - button "" [ref=e600] [cursor=pointer]:
+              - generic [ref=e601]: 
+            - button "" [ref=e602] [cursor=pointer]:
+              - generic [ref=e603]: 
+            - button "" [ref=e604] [cursor=pointer]:
+              - generic [ref=e605]: 
+            - button "" [ref=e607] [cursor=pointer]:
+              - generic [ref=e608]: 
+            - button "" [ref=e609] [cursor=pointer]:
+              - generic [ref=e610]: 
+            - button "" [ref=e611] [cursor=pointer]:
+              - generic [ref=e612]: 
+        - table [ref=e616]:
+          - rowgroup [ref=e617]:
+            - row "ID Event User Timestamp" [ref=e618]:
+              - columnheader "ID" [ref=e619]
+              - columnheader "Event" [ref=e620]
+              - columnheader "User" [ref=e621]
+              - columnheader "Timestamp" [ref=e622]
+          - rowgroup [ref=e623]:
+            - row "001 User Login alice@example.com 04:02:15" [ref=e624]:
+              - cell "001" [ref=e625]
+              - cell "User Login" [ref=e626]
+              - cell "alice@example.com" [ref=e627]
+              - cell "04:02:15" [ref=e628]
+            - row "002 Page View alice@example.com 04:02:18" [ref=e629]:
+              - cell "002" [ref=e630]
+              - cell "Page View" [ref=e631]
+              - cell "alice@example.com" [ref=e632]
+              - cell "04:02:18" [ref=e633]
+            - row "003 File Upload bob@example.com 04:03:22" [ref=e634]:
+              - cell "003" [ref=e635]
+              - cell "File Upload" [ref=e636]
+              - cell "bob@example.com" [ref=e637]
+              - cell "04:03:22" [ref=e638]
+            - row "004 Settings Change alice@example.com 04:05:01" [ref=e639]:
+              - cell "004" [ref=e640]
+              - cell "Settings Change" [ref=e641]
+              - cell "alice@example.com" [ref=e642]
+              - cell "04:05:01" [ref=e643]
+            - row "005 User Logout bob@example.com 04:08:45" [ref=e644]:
+              - cell "005" [ref=e645]
+              - cell "User Logout" [ref=e646]
+              - cell "bob@example.com" [ref=e647]
+              - cell "04:08:45" [ref=e648]
+            - row "006 User Login carol@example.com 04:10:12" [ref=e649]:
+              - cell "006" [ref=e650]
+              - cell "User Login" [ref=e651]
+              - cell "carol@example.com" [ref=e652]
+              - cell "04:10:12" [ref=e653]
+            - row "007 API Request system 04:12:33" [ref=e654]:
+              - cell "007" [ref=e655]
+              - cell "API Request" [ref=e656]
+              - cell "system" [ref=e657]
+              - cell "04:12:33" [ref=e658]
+            - row "008 Error system 04:15:00" [ref=e659]:
+              - cell "008" [ref=e660]
+              - cell "Error" [ref=e661]
+              - cell "system" [ref=e662]
+              - cell "04:15:00" [ref=e663]
+        - text: 
+      - heading "Compact / Dense Table" [level=3] [ref=e664]
+      - paragraph [ref=e665]:
+        - text: Reduce padding for data-dense interfaces. Add
+        - code [ref=e666]: .Table--compact
+        - text: for tighter spacing.
+      - generic [ref=e667]:
+        - generic [ref=e668]:
+          - generic [ref=e669]:
+            - button "Preview" [ref=e670] [cursor=pointer]
+            - button "HTML" [ref=e671] [cursor=pointer]
+          - generic [ref=e672]:
+            - button "" [ref=e673] [cursor=pointer]:
+              - generic [ref=e674]: 
+            - button "" [ref=e675] [cursor=pointer]:
+              - generic [ref=e676]: 
+            - button "" [ref=e677] [cursor=pointer]:
+              - generic [ref=e678]: 
+            - button "" [ref=e680] [cursor=pointer]:
+              - generic [ref=e681]: 
+            - button "" [ref=e682] [cursor=pointer]:
+              - generic [ref=e683]: 
+            - button "" [ref=e684] [cursor=pointer]:
+              - generic [ref=e685]: 
+        - table [ref=e688]:
+          - rowgroup [ref=e689]:
+            - row "Key Value Type Updated" [ref=e690]:
+              - columnheader "Key" [ref=e691]
+              - columnheader "Value" [ref=e692]
+              - columnheader "Type" [ref=e693]
+              - columnheader "Updated" [ref=e694]
+          - rowgroup [ref=e695]:
+            - row "API_KEY sk_live_*** Secret 2h ago" [ref=e696]:
+              - cell "API_KEY" [ref=e697]:
+                - code [ref=e698]: API_KEY
+              - cell "sk_live_***" [ref=e699]:
+                - code [ref=e700]: sk_live_***
+              - cell "Secret" [ref=e701]
+              - cell "2h ago" [ref=e702]
+            - row "DEBUG_MODE false Boolean 1d ago" [ref=e703]:
+              - cell "DEBUG_MODE" [ref=e704]:
+                - code [ref=e705]: DEBUG_MODE
+              - cell "false" [ref=e706]:
+                - code [ref=e707]: "false"
+              - cell "Boolean" [ref=e708]
+              - cell "1d ago" [ref=e709]
+            - row "MAX_UPLOAD_SIZE 10485760 Number 3d ago" [ref=e710]:
+              - cell "MAX_UPLOAD_SIZE" [ref=e711]:
+                - code [ref=e712]: MAX_UPLOAD_SIZE
+              - cell "10485760" [ref=e713]:
+                - code [ref=e714]: "10485760"
+              - cell "Number" [ref=e715]
+              - cell "3d ago" [ref=e716]
+            - row "TIMEZONE UTC String 7d ago" [ref=e717]:
+              - cell "TIMEZONE" [ref=e718]:
+                - code [ref=e719]: TIMEZONE
+              - cell "UTC" [ref=e720]:
+                - code [ref=e721]: UTC
+              - cell "String" [ref=e722]
+              - cell "7d ago" [ref=e723]
+        - text: 
+      - heading "Table with Actions Column" [level=3] [ref=e724]
+      - paragraph [ref=e725]: Add action buttons in the last column for row-level operations.
+      - generic [ref=e726]:
+        - generic [ref=e727]:
+          - generic [ref=e728]:
+            - button "Preview" [ref=e729] [cursor=pointer]
+            - button "HTML" [ref=e730] [cursor=pointer]
+          - generic [ref=e731]:
+            - button "" [ref=e732] [cursor=pointer]:
+              - generic [ref=e733]: 
+            - button "" [ref=e734] [cursor=pointer]:
+              - generic [ref=e735]: 
+            - button "" [ref=e736] [cursor=pointer]:
+              - generic [ref=e737]: 
+            - button "" [ref=e739] [cursor=pointer]:
+              - generic [ref=e740]: 
+            - button "" [ref=e741] [cursor=pointer]:
+              - generic [ref=e742]: 
+            - button "" [ref=e743] [cursor=pointer]:
+              - generic [ref=e744]: 
+        - table [ref=e747]:
+          - rowgroup [ref=e748]:
+            - row "User Email Role Status Actions" [ref=e749]:
+              - columnheader "User" [ref=e750]
+              - columnheader "Email" [ref=e751]
+              - columnheader "Role" [ref=e752]
+              - columnheader "Status" [ref=e753]
+              - columnheader "Actions" [ref=e754]
+          - rowgroup [ref=e755]:
+            - row "AC Alice Chen alice@example.com Admin Active Edit user Delete user" [ref=e756]:
+              - cell "AC Alice Chen" [ref=e757]:
+                - generic [ref=e758]:
+                  - generic [ref=e759]: AC
+                  - text: Alice Chen
+              - cell "alice@example.com" [ref=e760]
+              - cell "Admin" [ref=e761]
+              - cell "Active" [ref=e762]:
+                - generic [ref=e763]: Active
+              - cell "Edit user Delete user" [ref=e764]:
+                - button "Edit user" [ref=e765] [cursor=pointer]:
+                  - generic [ref=e766]: 
+                - button "Delete user" [ref=e767] [cursor=pointer]:
+                  - generic [ref=e768]: 
+            - row "BS Bob Smith bob@example.com Editor Active Edit user Delete user" [ref=e769]:
+              - cell "BS Bob Smith" [ref=e770]:
+                - generic [ref=e771]:
+                  - generic [ref=e772]: BS
+                  - text: Bob Smith
+              - cell "bob@example.com" [ref=e773]
+              - cell "Editor" [ref=e774]
+              - cell "Active" [ref=e775]:
+                - generic [ref=e776]: Active
+              - cell "Edit user Delete user" [ref=e777]:
+                - button "Edit user" [ref=e778] [cursor=pointer]:
+                  - generic [ref=e779]: 
+                - button "Delete user" [ref=e780] [cursor=pointer]:
+                  - generic [ref=e781]: 
+            - row "CD Carol Davis carol@example.com Viewer Inactive Edit user Delete user" [ref=e782]:
+              - cell "CD Carol Davis" [ref=e783]:
+                - generic [ref=e784]:
+                  - generic [ref=e785]: CD
+                  - text: Carol Davis
+              - cell "carol@example.com" [ref=e786]
+              - cell "Viewer" [ref=e787]
+              - cell "Inactive" [ref=e788]:
+                - generic [ref=e789]: Inactive
+              - cell "Edit user Delete user" [ref=e790]:
+                - button "Edit user" [ref=e791] [cursor=pointer]:
+                  - generic [ref=e792]: 
+                - button "Delete user" [ref=e793] [cursor=pointer]:
+                  - generic [ref=e794]: 
+        - text: 
+      - heading "Pagination" [level=3] [ref=e795]
+      - paragraph [ref=e796]: Combine tables with pagination controls for large datasets.
+      - generic [ref=e797]:
+        - generic [ref=e798]:
+          - generic [ref=e799]:
+            - button "Preview" [ref=e800] [cursor=pointer]
+            - button "HTML" [ref=e801] [cursor=pointer]
+          - generic [ref=e802]:
+            - button "" [ref=e803] [cursor=pointer]:
+              - generic [ref=e804]: 
+            - button "" [ref=e805] [cursor=pointer]:
+              - generic [ref=e806]: 
+            - button "" [ref=e807] [cursor=pointer]:
+              - generic [ref=e808]: 
+            - button "" [ref=e810] [cursor=pointer]:
+              - generic [ref=e811]: 
+            - button "" [ref=e812] [cursor=pointer]:
+              - generic [ref=e813]: 
+            - button "" [ref=e814] [cursor=pointer]:
+              - generic [ref=e815]: 
+        - generic [ref=e818]:
+          - table [ref=e819]:
+            - rowgroup [ref=e820]:
+              - row "Invoice Client Amount Date Status" [ref=e821]:
+                - columnheader "Invoice" [ref=e822]
+                - columnheader "Client" [ref=e823]
+                - columnheader "Amount" [ref=e824]
+                - columnheader "Date" [ref=e825]
+                - columnheader "Status" [ref=e826]
+            - rowgroup [ref=e827]:
+              - row "#INV-0042 Acme Corporation $3,450.00 Jan 28, 2026 Paid" [ref=e828]:
+                - cell "#INV-0042" [ref=e829]
+                - cell "Acme Corporation" [ref=e830]
+                - cell "$3,450.00" [ref=e831]
+                - cell "Jan 28, 2026" [ref=e832]
+                - cell "Paid" [ref=e833]:
+                  - generic [ref=e834]: Paid
+              - row "#INV-0041 Tech Startup Inc $1,200.00 Jan 25, 2026 Paid" [ref=e835]:
+                - cell "#INV-0041" [ref=e836]
+                - cell "Tech Startup Inc" [ref=e837]
+                - cell "$1,200.00" [ref=e838]
+                - cell "Jan 25, 2026" [ref=e839]
+                - cell "Paid" [ref=e840]:
+                  - generic [ref=e841]: Paid
+              - row "#INV-0040 Design Studio $890.00 Jan 22, 2026 Pending" [ref=e842]:
+                - cell "#INV-0040" [ref=e843]
+                - cell "Design Studio" [ref=e844]
+                - cell "$890.00" [ref=e845]
+                - cell "Jan 22, 2026" [ref=e846]
+                - cell "Pending" [ref=e847]:
+                  - generic [ref=e848]: Pending
+              - row "#INV-0039 Marketing Agency $2,100.00 Jan 18, 2026 Overdue" [ref=e849]:
+                - cell "#INV-0039" [ref=e850]
+                - cell "Marketing Agency" [ref=e851]
+                - cell "$2,100.00" [ref=e852]
+                - cell "Jan 18, 2026" [ref=e853]
+                - cell "Overdue" [ref=e854]:
+                  - generic [ref=e855]: Overdue
+              - row "#INV-0038 Consulting LLC $4,500.00 Jan 15, 2026 Paid" [ref=e856]:
+                - cell "#INV-0038" [ref=e857]
+                - cell "Consulting LLC" [ref=e858]
+                - cell "$4,500.00" [ref=e859]
+                - cell "Jan 15, 2026" [ref=e860]
+                - cell "Paid" [ref=e861]:
+                  - generic [ref=e862]: Paid
+          - generic [ref=e863]:
+            - text: Showing 1-5 of 42 results
+            - generic [ref=e864]:
+              - button "Previous page" [disabled] [ref=e865]:
+                - generic [ref=e866]: 
+              - button "1" [ref=e867] [cursor=pointer]
+              - button "2" [ref=e868] [cursor=pointer]
+              - button "3" [ref=e869] [cursor=pointer]
+              - text: ...
+              - button "9" [ref=e870] [cursor=pointer]
+              - button "Next page" [ref=e871] [cursor=pointer]:
+                - generic [ref=e872]: 
+        - text: 
+      - separator [ref=e873]
+      - heading "Common Patterns" [level=2] [ref=e874]
+      - heading "Data Dashboard" [level=3] [ref=e875]
+      - generic [ref=e876]:
+        - generic [ref=e877]:
+          - generic [ref=e878]:
+            - button "Preview" [ref=e879] [cursor=pointer]
+            - button "HTML" [ref=e880] [cursor=pointer]
+          - generic [ref=e881]:
+            - button "" [ref=e882] [cursor=pointer]:
+              - generic [ref=e883]: 
+            - button "" [ref=e884] [cursor=pointer]:
+              - generic [ref=e885]: 
+            - button "" [ref=e886] [cursor=pointer]:
+              - generic [ref=e887]: 
+            - button "" [ref=e889] [cursor=pointer]:
+              - generic [ref=e890]: 
+            - button "" [ref=e891] [cursor=pointer]:
+              - generic [ref=e892]: 
+            - button "" [ref=e893] [cursor=pointer]:
+              - generic [ref=e894]: 
+        - generic [ref=e897]:
+          - generic [ref=e898]:
+            - generic [ref=e899]: Recent Orders
+            - button " Filter" [ref=e900] [cursor=pointer]:
+              - generic [ref=e901]: 
+              - text: Filter
+            - button " New" [ref=e902] [cursor=pointer]:
+              - generic [ref=e903]: 
+              - text: New
+          - table [ref=e904]:
+            - rowgroup [ref=e905]:
+              - row "Order Customer Amount Status" [ref=e906]:
+                - columnheader "Order" [ref=e907]
+                - columnheader "Customer" [ref=e908]
+                - columnheader "Amount" [ref=e909]
+                - columnheader "Status" [ref=e910]
+            - rowgroup [ref=e911]:
+              - row "#ORD-001 Acme Corp $1,250.00 Paid" [ref=e912]:
+                - cell "#ORD-001" [ref=e913]
+                - cell "Acme Corp" [ref=e914]
+                - cell "$1,250.00" [ref=e915]
+                - cell "Paid" [ref=e916]:
+                  - generic [ref=e917]: Paid
+              - row "#ORD-002 Tech Solutions $890.00 Pending" [ref=e918]:
+                - cell "#ORD-002" [ref=e919]
+                - cell "Tech Solutions" [ref=e920]
+                - cell "$890.00" [ref=e921]
+                - cell "Pending" [ref=e922]:
+                  - generic [ref=e923]: Pending
+              - row "#ORD-003 Design Co $2,100.00 Overdue" [ref=e924]:
+                - cell "#ORD-003" [ref=e925]
+                - cell "Design Co" [ref=e926]
+                - cell "$2,100.00" [ref=e927]
+                - cell "Overdue" [ref=e928]:
+                  - generic [ref=e929]: Overdue
+        - text: 
+      - heading "Settings Key-Value Table" [level=3] [ref=e930]
+      - generic [ref=e931]:
+        - generic [ref=e932]:
+          - generic [ref=e933]:
+            - button "Preview" [ref=e934] [cursor=pointer]
+            - button "HTML" [ref=e935] [cursor=pointer]
+          - generic [ref=e936]:
+            - button "" [ref=e937] [cursor=pointer]:
+              - generic [ref=e938]: 
+            - button "" [ref=e939] [cursor=pointer]:
+              - generic [ref=e940]: 
+            - button "" [ref=e941] [cursor=pointer]:
+              - generic [ref=e942]: 
+            - button "" [ref=e944] [cursor=pointer]:
+              - generic [ref=e945]: 
+            - button "" [ref=e946] [cursor=pointer]:
+              - generic [ref=e947]: 
+            - button "" [ref=e948] [cursor=pointer]:
+              - generic [ref=e949]: 
+        - table [ref=e952]:
+          - rowgroup [ref=e953]:
+            - row "Setting Value" [ref=e954]:
+              - columnheader "Setting" [ref=e955]
+              - columnheader "Value" [ref=e956]
+          - rowgroup [ref=e957]:
+            - row "Language English (US)" [ref=e958]:
+              - cell "Language" [ref=e959]
+              - cell "English (US)" [ref=e960]
+            - row "Timezone UTC-8 (Pacific)" [ref=e961]:
+              - cell "Timezone" [ref=e962]
+              - cell "UTC-8 (Pacific)" [ref=e963]
+            - row "Date Format MM/DD/YYYY" [ref=e964]:
+              - cell "Date Format" [ref=e965]
+              - cell "MM/DD/YYYY" [ref=e966]
+            - row "Currency USD ($)" [ref=e967]:
+              - cell "Currency" [ref=e968]
+              - cell "USD ($)" [ref=e969]
+        - text: 
+      - heading "Comparison Table" [level=3] [ref=e970]
+      - generic [ref=e971]:
+        - generic [ref=e972]:
+          - generic [ref=e973]:
+            - button "Preview" [ref=e974] [cursor=pointer]
+            - button "HTML" [ref=e975] [cursor=pointer]
+          - generic [ref=e976]:
+            - button "" [ref=e977] [cursor=pointer]:
+              - generic [ref=e978]: 
+            - button "" [ref=e979] [cursor=pointer]:
+              - generic [ref=e980]: 
+            - button "" [ref=e981] [cursor=pointer]:
+              - generic [ref=e982]: 
+            - button "" [ref=e984] [cursor=pointer]:
+              - generic [ref=e985]: 
+            - button "" [ref=e986] [cursor=pointer]:
+              - generic [ref=e987]: 
+            - button "" [ref=e988] [cursor=pointer]:
+              - generic [ref=e989]: 
+        - table [ref=e992]:
+          - rowgroup [ref=e993]:
+            - row "Feature Free Pro Enterprise" [ref=e994]:
+              - columnheader "Feature" [ref=e995]
+              - columnheader "Free" [ref=e996]
+              - columnheader "Pro" [ref=e997]
+              - columnheader "Enterprise" [ref=e998]
+          - rowgroup [ref=e999]:
+            - row "Users 1 10 Unlimited" [ref=e1000]:
+              - cell "Users" [ref=e1001]
+              - cell "1" [ref=e1002]
+              - cell "10" [ref=e1003]
+              - cell "Unlimited" [ref=e1004]
+            - row "Storage 1 GB 100 GB 1 TB" [ref=e1005]:
+              - cell "Storage" [ref=e1006]
+              - cell "1 GB" [ref=e1007]
+              - cell "100 GB" [ref=e1008]
+              - cell "1 TB" [ref=e1009]
+            - row "Support Community Email 24/7 Phone" [ref=e1010]:
+              - cell "Support" [ref=e1011]
+              - cell "Community" [ref=e1012]
+              - cell "Email" [ref=e1013]
+              - cell "24/7 Phone" [ref=e1014]
+        - text: 
+      - separator [ref=e1015]
+      - heading "Customization" [level=2] [ref=e1016]
+      - paragraph [ref=e1017]: "Override table styles using CSS custom properties:"
+      - generic [ref=e1018]:
+        - code [ref=e1020]: "/* Custom table colors */ .Table { --table-border-color: oklch(85% 0 0); --table-header-bg: oklch(97% 0 0); --table-stripe-bg: oklch(98% 0 0); --table-hover-bg: oklch(95% 0.02 250); --table-selected-bg: oklch(95% 0.05 250); } /* Dark mode overrides */ [data-theme=\"dark\"] .Table { --table-border-color: oklch(30% 0 0); --table-header-bg: oklch(20% 0 0); --table-stripe-bg: oklch(18% 0 0); --table-hover-bg: oklch(25% 0.02 250); --table-selected-bg: oklch(25% 0.05 250); } /* Custom compact sizing */ .Table--extra-compact { --table-cell-padding-y: var(--space-1); --table-cell-padding-x: var(--space-2); font-size: 0.75rem; } /* Accent header row */ .Table--accent-header thead { background: var(--accent); color: white; }"
+        - button "Copy code" [ref=e1021] [cursor=pointer]:
+          - generic [ref=e1022]: 
+      - separator [ref=e1023]
+      - heading "API Reference" [level=2] [ref=e1024]
+      - heading "Base Classes" [level=3] [ref=e1025]
+      - table [ref=e1026]:
+        - rowgroup [ref=e1027]:
+          - row "Class Description" [ref=e1028]:
+            - columnheader "Class" [ref=e1029]
+            - columnheader "Description" [ref=e1030]
+        - rowgroup [ref=e1031]:
+          - row ".Table Base table styles (required)" [ref=e1032]:
+            - cell ".Table" [ref=e1033]:
+              - code [ref=e1034]: .Table
+            - cell "Base table styles (required)" [ref=e1035]
+          - row ".Table-wrapper Responsive wrapper for horizontal scrolling" [ref=e1036]:
+            - cell ".Table-wrapper" [ref=e1037]:
+              - code [ref=e1038]: .Table-wrapper
+            - cell "Responsive wrapper for horizontal scrolling" [ref=e1039]
+          - row ".Table-container Container with pagination area" [ref=e1040]:
+            - cell ".Table-container" [ref=e1041]:
+              - code [ref=e1042]: .Table-container
+            - cell "Container with pagination area" [ref=e1043]
+      - heading "Variant Classes" [level=3] [ref=e1044]
+      - table [ref=e1045]:
+        - rowgroup [ref=e1046]:
+          - row "Class Description" [ref=e1047]:
+            - columnheader "Class" [ref=e1048]
+            - columnheader "Description" [ref=e1049]
+        - rowgroup [ref=e1050]:
+          - row ".Table--striped Alternating row background colors" [ref=e1051]:
+            - cell ".Table--striped" [ref=e1052]:
+              - code [ref=e1053]: .Table--striped
+            - cell "Alternating row background colors" [ref=e1054]
+          - row ".Table--hoverable Highlight rows on hover" [ref=e1055]:
+            - cell ".Table--hoverable" [ref=e1056]:
+              - code [ref=e1057]: .Table--hoverable
+            - cell "Highlight rows on hover" [ref=e1058]
+          - row ".Table--bordered Full borders around all cells" [ref=e1059]:
+            - cell ".Table--bordered" [ref=e1060]:
+              - code [ref=e1061]: .Table--bordered
+            - cell "Full borders around all cells" [ref=e1062]
+          - row ".Table--compact Reduced cell padding for dense data" [ref=e1063]:
+            - cell ".Table--compact" [ref=e1064]:
+              - code [ref=e1065]: .Table--compact
+            - cell "Reduced cell padding for dense data" [ref=e1066]
+          - row ".Table--stickyHeader Fixed header during vertical scroll" [ref=e1067]:
+            - cell ".Table--stickyHeader" [ref=e1068]:
+              - code [ref=e1069]: .Table--stickyHeader
+            - cell "Fixed header during vertical scroll" [ref=e1070]
+          - row ".Table--selectable Optimized for row selection with checkboxes" [ref=e1071]:
+            - cell ".Table--selectable" [ref=e1072]:
+              - code [ref=e1073]: .Table--selectable
+            - cell "Optimized for row selection with checkboxes" [ref=e1074]
+          - row ".Table--sortable Styled for sortable column headers" [ref=e1075]:
+            - cell ".Table--sortable" [ref=e1076]:
+              - code [ref=e1077]: .Table--sortable
+            - cell "Styled for sortable column headers" [ref=e1078]
+          - row ".Table--expandable Support for expandable row content" [ref=e1079]:
+            - cell ".Table--expandable" [ref=e1080]:
+              - code [ref=e1081]: .Table--expandable
+            - cell "Support for expandable row content" [ref=e1082]
+      - heading "Row Classes" [level=3] [ref=e1083]
+      - table [ref=e1084]:
+        - rowgroup [ref=e1085]:
+          - row "Class Description" [ref=e1086]:
+            - columnheader "Class" [ref=e1087]
+            - columnheader "Description" [ref=e1088]
+        - rowgroup [ref=e1089]:
+          - row ".Table-row--selected Highlighted selected row state" [ref=e1090]:
+            - cell ".Table-row--selected" [ref=e1091]:
+              - code [ref=e1092]: .Table-row--selected
+            - cell "Highlighted selected row state" [ref=e1093]
+          - row ".Table-row--expandable Row that can be expanded" [ref=e1094]:
+            - cell ".Table-row--expandable" [ref=e1095]:
+              - code [ref=e1096]: .Table-row--expandable
+            - cell "Row that can be expanded" [ref=e1097]
+          - row ".Table-row--expanded Currently expanded row" [ref=e1098]:
+            - cell ".Table-row--expanded" [ref=e1099]:
+              - code [ref=e1100]: .Table-row--expanded
+            - cell "Currently expanded row" [ref=e1101]
+          - row ".Table-expandContent Row containing expanded content" [ref=e1102]:
+            - cell ".Table-expandContent" [ref=e1103]:
+              - code [ref=e1104]: .Table-expandContent
+            - cell "Row containing expanded content" [ref=e1105]
+      - heading "Cell Classes" [level=3] [ref=e1106]
+      - table [ref=e1107]:
+        - rowgroup [ref=e1108]:
+          - row "Class Description" [ref=e1109]:
+            - columnheader "Class" [ref=e1110]
+            - columnheader "Description" [ref=e1111]
+        - rowgroup [ref=e1112]:
+          - row ".Table-checkbox Checkbox cell with proper alignment" [ref=e1113]:
+            - cell ".Table-checkbox" [ref=e1114]:
+              - code [ref=e1115]: .Table-checkbox
+            - cell "Checkbox cell with proper alignment" [ref=e1116]
+          - row ".Table-actions Actions column (right-aligned)" [ref=e1117]:
+            - cell ".Table-actions" [ref=e1118]:
+              - code [ref=e1119]: .Table-actions
+            - cell "Actions column (right-aligned)" [ref=e1120]
+          - row ".Table-expandCol Expand/collapse button column" [ref=e1121]:
+            - cell ".Table-expandCol" [ref=e1122]:
+              - code [ref=e1123]: .Table-expandCol
+            - cell "Expand/collapse button column" [ref=e1124]
+      - heading "Interactive Elements" [level=3] [ref=e1125]
+      - table [ref=e1126]:
+        - rowgroup [ref=e1127]:
+          - row "Class Description" [ref=e1128]:
+            - columnheader "Class" [ref=e1129]
+            - columnheader "Description" [ref=e1130]
+        - rowgroup [ref=e1131]:
+          - row ".Table-sort Sortable column header button" [ref=e1132]:
+            - cell ".Table-sort" [ref=e1133]:
+              - code [ref=e1134]: .Table-sort
+            - cell "Sortable column header button" [ref=e1135]
+          - row ".Table-sort--active Currently sorted column" [ref=e1136]:
+            - cell ".Table-sort--active" [ref=e1137]:
+              - code [ref=e1138]: .Table-sort--active
+            - cell "Currently sorted column" [ref=e1139]
+          - row ".Table-sortIcon Sort direction indicator icon" [ref=e1140]:
+            - cell ".Table-sortIcon" [ref=e1141]:
+              - code [ref=e1142]: .Table-sortIcon
+            - cell "Sort direction indicator icon" [ref=e1143]
+          - row ".Table-expandBtn Row expand/collapse button" [ref=e1144]:
+            - cell ".Table-expandBtn" [ref=e1145]:
+              - code [ref=e1146]: .Table-expandBtn
+            - cell "Row expand/collapse button" [ref=e1147]
+          - row ".Table-expandBtn--open Expanded state for button" [ref=e1148]:
+            - cell ".Table-expandBtn--open" [ref=e1149]:
+              - code [ref=e1150]: .Table-expandBtn--open
+            - cell "Expanded state for button" [ref=e1151]
+      - heading "Pagination Classes" [level=3] [ref=e1152]
+      - table [ref=e1153]:
+        - rowgroup [ref=e1154]:
+          - row "Class Description" [ref=e1155]:
+            - columnheader "Class" [ref=e1156]
+            - columnheader "Description" [ref=e1157]
+        - rowgroup [ref=e1158]:
+          - row ".Table-pagination Pagination controls container" [ref=e1159]:
+            - cell ".Table-pagination" [ref=e1160]:
+              - code [ref=e1161]: .Table-pagination
+            - cell "Pagination controls container" [ref=e1162]
+          - row ".Table-pageInfo \"Showing X of Y\" text" [ref=e1163]:
+            - cell ".Table-pageInfo" [ref=e1164]:
+              - code [ref=e1165]: .Table-pageInfo
+            - cell "\"Showing X of Y\" text" [ref=e1166]
+          - row ".Table-pageControls Page buttons container" [ref=e1167]:
+            - cell ".Table-pageControls" [ref=e1168]:
+              - code [ref=e1169]: .Table-pageControls
+            - cell "Page buttons container" [ref=e1170]
+          - row ".Table-pageBtn--active Current page button" [ref=e1171]:
+            - cell ".Table-pageBtn--active" [ref=e1172]:
+              - code [ref=e1173]: .Table-pageBtn--active
+            - cell "Current page button" [ref=e1174]
+          - row ".Table-pageEllipsis Ellipsis between page numbers" [ref=e1175]:
+            - cell ".Table-pageEllipsis" [ref=e1176]:
+              - code [ref=e1177]: .Table-pageEllipsis
+            - cell "Ellipsis between page numbers" [ref=e1178]
+      - heading "Utility Classes" [level=3] [ref=e1179]
+      - table [ref=e1180]:
+        - rowgroup [ref=e1181]:
+          - row "Class Description" [ref=e1182]:
+            - columnheader "Class" [ref=e1183]
+            - columnheader "Description" [ref=e1184]
+        - rowgroup [ref=e1185]:
+          - row ".Table-user User cell with avatar layout" [ref=e1186]:
+            - cell ".Table-user" [ref=e1187]:
+              - code [ref=e1188]: .Table-user
+            - cell "User cell with avatar layout" [ref=e1189]
+          - row ".Table-fileIcon File/folder icon in cells" [ref=e1190]:
+            - cell ".Table-fileIcon" [ref=e1191]:
+              - code [ref=e1192]: .Table-fileIcon
+            - cell "File/folder icon in cells" [ref=e1193]
+          - row ".Table-expandPanel Container for expanded content" [ref=e1194]:
+            - cell ".Table-expandPanel" [ref=e1195]:
+              - code [ref=e1196]: .Table-expandPanel
+            - cell "Container for expanded content" [ref=e1197]
+          - row ".Table-expandDetail Individual detail item in expanded content" [ref=e1198]:
+            - cell ".Table-expandDetail" [ref=e1199]:
+              - code [ref=e1200]: .Table-expandDetail
+            - cell "Individual detail item in expanded content" [ref=e1201]
+          - row ".Table-wrapper--scrollable Wrapper with vertical scroll (use with max-height)" [ref=e1202]:
+            - cell ".Table-wrapper--scrollable" [ref=e1203]:
+              - code [ref=e1204]: .Table-wrapper--scrollable
+            - cell "Wrapper with vertical scroll (use with max-height)" [ref=e1205]
+      - heading "CSS Reference" [level=2] [ref=e1206]
+      - generic [ref=e1207]:
+        - code [ref=e1209]: "/* Base table */ .Table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); color: var(--fg); } .Table th, .Table td { padding: var(--space-3) var(--space-4); text-align: left; border-bottom: 1px solid var(--bd); } .Table th { font-weight: 600; color: var(--fg); background: var(--bg-s); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.05em; } /* Striped variant */ .Table--striped tbody tr:nth-child(even) { background: var(--bg-s); } /* Hoverable variant */ .Table--hoverable tbody tr:hover { background: oklch(95% 0.02 250 / 0.5); } /* Bordered variant */ .Table--bordered th, .Table--bordered td { border: 1px solid var(--bd); } /* Compact variant */ .Table--compact th, .Table--compact td { padding: var(--space-1) var(--space-2); font-size: var(--text-xs); } /* Sticky header */ .Table--stickyHeader thead th { position: sticky; top: 0; z-index: 1; background: var(--bg); } /* Scrollable wrapper */ .Table-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; } .Table-wrapper--scrollable { overflow-y: auto; } /* Selected rows */ .Table-row--selected { background: oklch(95% 0.05 250); } /* Checkbox column */ .Table--selectable .Table-checkbox { width: 40px; padding: var(--space-2); } /* Sort buttons */ .Table-sort { display: inline-flex; align-items: center; gap: var(--space-1); background: none; border: none; padding: 0; font: inherit; font-weight: 600; color: var(--fg); cursor: pointer; text-transform: uppercase; letter-spacing: 0.05em; font-size: var(--text-xs); } .Table-sort:hover { color: var(--accent); } .Table-sort--active { color: var(--accent); } .Table-sortIcon { font-size: 0.875rem; opacity: 0.5; } .Table-sort--active .Table-sortIcon { opacity: 1; } /* Expand/collapse */ .Table-expandCol { width: 40px; padding: var(--space-2); } .Table-expandBtn { display: flex; align-items: center; justify-content: center; width: 24px; height: 24px; border: none; background: none; cursor: pointer; color: var(--fg-3); } .Table-expandBtn:hover { color: var(--fg); } .Table-expandPanel { padding: var(--space-3) var(--space-4); background: var(--bg-s); } .Table-expandDetail { padding: var(--space-1) 0; font-size: var(--text-sm); } /* Actions column */ .Table-actions { text-align: right; white-space: nowrap; } /* User cell */ .Table-user { display: flex; align-items: center; gap: var(--space-2); } /* Pagination */ .Table-pagination { display: flex; align-items: center; justify-content: space-between; padding: var(--space-3) var(--space-4); border-top: 1px solid var(--bd); } .Table-pageInfo { font-size: var(--text-sm); color: var(--fg-3); } .Table-pageControls { display: flex; align-items: center; gap: var(--space-1); } .Table-pageBtn--active { font-weight: 600; } .Table-pageEllipsis { padding: 0 var(--space-1); color: var(--fg-3); }"
+        - button "Copy code" [ref=e1210] [cursor=pointer]:
+          - generic [ref=e1211]: 
+      - separator [ref=e1212]
+      - heading "Accessibility" [level=2] [ref=e1213]
+      - heading "Keyboard Support" [level=3] [ref=e1214]
+      - table [ref=e1216]:
+        - rowgroup [ref=e1217]:
+          - row "Key Action" [ref=e1218]:
+            - columnheader "Key" [ref=e1219]
+            - columnheader "Action" [ref=e1220]
+        - rowgroup [ref=e1221]:
+          - row "Tab Move focus to next interactive element" [ref=e1222]:
+            - cell "Tab" [ref=e1223]
+            - cell "Move focus to next interactive element" [ref=e1224]
+          - row "Shift + Tab Move focus to previous interactive element" [ref=e1225]:
+            - cell "Shift + Tab" [ref=e1226]
+            - cell "Move focus to previous interactive element" [ref=e1227]
+          - row "Space Toggle checkbox, activate sort button" [ref=e1228]:
+            - cell "Space" [ref=e1229]
+            - cell "Toggle checkbox, activate sort button" [ref=e1230]
+          - row "Enter Activate buttons, expand/collapse rows" [ref=e1231]:
+            - cell "Enter" [ref=e1232]
+            - cell "Activate buttons, expand/collapse rows" [ref=e1233]
+          - row "Arrow Keys Navigate within pagination controls" [ref=e1234]:
+            - cell "Arrow Keys" [ref=e1235]
+            - cell "Navigate within pagination controls" [ref=e1236]
+      - heading "Screen Readers" [level=3] [ref=e1237]
+      - generic [ref=e1238]:
+        - code [ref=e1240]:
+          - text: <!-- Sortable header with proper ARIA -->
+          - generic [ref=e1241]:
+            - generic [ref=e1242]: <th
+            - text: ">"
+          - generic [ref=e1243]:
+            - generic [ref=e1244]: <button
+            - text: class
+            - generic [ref=e1245]: ="Table-sort"
+            - text: aria-sort
+            - generic [ref=e1246]: ="ascending"
+            - text: ">"
+          - text: Name
+          - generic [ref=e1247]:
+            - generic [ref=e1248]: <i
+            - text: class
+            - generic [ref=e1249]: ="ph ph-caret-up Table-sortIcon"
+            - text: aria-hidden
+            - generic [ref=e1250]: ="true"
+            - text: ">"
+          - generic [ref=e1251]:
+            - generic [ref=e1252]: </i
+            - text: ">"
+          - generic [ref=e1253]:
+            - generic [ref=e1254]: </button
+            - text: ">"
+          - generic [ref=e1255]:
+            - generic [ref=e1256]: </th
+            - text: ">"
+          - text: <!-- Select all checkbox -->
+          - generic [ref=e1257]:
+            - generic [ref=e1258]: <th
+            - text: class
+            - generic [ref=e1259]: ="Table-checkbox"
+            - text: ">"
+          - generic [ref=e1260]:
+            - generic [ref=e1261]: <input
+            - text: type
+            - generic [ref=e1262]: ="checkbox"
+            - text: class
+            - generic [ref=e1263]: ="Checkbox"
+            - text: aria-label
+            - generic [ref=e1264]: ="Select all rows"
+            - text: ">"
+          - generic [ref=e1265]:
+            - generic [ref=e1266]: </th
+            - text: ">"
+          - text: <!-- Expandable row -->
+          - generic [ref=e1267]:
+            - generic [ref=e1268]: <button
+            - text: class
+            - generic [ref=e1269]: ="Table-expandBtn"
+            - text: aria-expanded
+            - generic [ref=e1270]: ="false"
+            - text: aria-controls
+            - generic [ref=e1271]: ="row-details-1"
+            - text: aria-label
+            - generic [ref=e1272]: "=\"Show details for Order #1234\""
+            - text: ">"
+          - generic [ref=e1273]:
+            - generic [ref=e1274]: <i
+            - text: class
+            - generic [ref=e1275]: ="ph ph-caret-right"
+            - text: aria-hidden
+            - generic [ref=e1276]: ="true"
+            - text: ">"
+          - generic [ref=e1277]:
+            - generic [ref=e1278]: </i
+            - text: ">"
+          - generic [ref=e1279]:
+            - generic [ref=e1280]: </button
+            - text: ">"
+        - button "Copy code" [ref=e1281] [cursor=pointer]:
+          - generic [ref=e1282]: 
+      - heading "Caption and Summary" [level=3] [ref=e1283]
+      - generic [ref=e1284]:
+        - code [ref=e1286]:
+          - generic [ref=e1287]:
+            - generic [ref=e1288]: <table
+            - text: class
+            - generic [ref=e1289]: ="Table"
+            - text: ">"
+          - generic [ref=e1290]:
+            - generic [ref=e1291]: <caption
+            - text: class
+            - generic [ref=e1292]: ="sr-only"
+            - text: ">"
+          - text: User accounts showing name, email, role, and status.
+          - generic [ref=e1293]:
+            - generic [ref=e1294]: </caption
+            - text: ">"
+          - text: <!-- ... -->
+          - generic [ref=e1295]:
+            - generic [ref=e1296]: </table
+            - text: ">"
+        - button "Copy code" [ref=e1297] [cursor=pointer]:
+          - generic [ref=e1298]: 
+      - heading "Row Headers" [level=3] [ref=e1299]
+      - generic [ref=e1300]:
+        - code [ref=e1302]:
+          - generic [ref=e1303]:
+            - generic [ref=e1304]: <table
+            - text: class
+            - generic [ref=e1305]: ="Table"
+            - text: ">"
+          - generic [ref=e1306]:
+            - generic [ref=e1307]: <thead
+            - text: ">"
+          - generic [ref=e1308]:
+            - generic [ref=e1309]: <tr
+            - text: ">"
+          - generic [ref=e1310]:
+            - generic [ref=e1311]: <th
+            - text: scope
+            - generic [ref=e1312]: ="col"
+            - text: ">"
+          - text: Month
+          - generic [ref=e1313]:
+            - generic [ref=e1314]: </th
+            - text: ">"
+          - generic [ref=e1315]:
+            - generic [ref=e1316]: <th
+            - text: scope
+            - generic [ref=e1317]: ="col"
+            - text: ">"
+          - text: Revenue
+          - generic [ref=e1318]:
+            - generic [ref=e1319]: </th
+            - text: ">"
+          - generic [ref=e1320]:
+            - generic [ref=e1321]: <th
+            - text: scope
+            - generic [ref=e1322]: ="col"
+            - text: ">"
+          - text: Expenses
+          - generic [ref=e1323]:
+            - generic [ref=e1324]: </th
+            - text: ">"
+          - generic [ref=e1325]:
+            - generic [ref=e1326]: </tr
+            - text: ">"
+          - generic [ref=e1327]:
+            - generic [ref=e1328]: </thead
+            - text: ">"
+          - generic [ref=e1329]:
+            - generic [ref=e1330]: <tbody
+            - text: ">"
+          - generic [ref=e1331]:
+            - generic [ref=e1332]: <tr
+            - text: ">"
+          - generic [ref=e1333]:
+            - generic [ref=e1334]: <th
+            - text: scope
+            - generic [ref=e1335]: ="row"
+            - text: ">"
+          - text: January
+          - generic [ref=e1336]:
+            - generic [ref=e1337]: </th
+            - text: ">"
+          - generic [ref=e1338]:
+            - generic [ref=e1339]: <td
+            - text: ">"
+          - text: $45,000
+          - generic [ref=e1340]:
+            - generic [ref=e1341]: </td
+            - text: ">"
+          - generic [ref=e1342]:
+            - generic [ref=e1343]: <td
+            - text: ">"
+          - text: $32,000
+          - generic [ref=e1344]:
+            - generic [ref=e1345]: </td
+            - text: ">"
+          - generic [ref=e1346]:
+            - generic [ref=e1347]: </tr
+            - text: ">"
+          - generic [ref=e1348]:
+            - generic [ref=e1349]: </tbody
+            - text: ">"
+          - generic [ref=e1350]:
+            - generic [ref=e1351]: </table
+            - text: ">"
+        - button "Copy code" [ref=e1352] [cursor=pointer]:
+          - generic [ref=e1353]: 
+      - separator [ref=e1354]
+      - heading "Best Practices" [level=2] [ref=e1355]
+      - heading "Do" [level=3] [ref=e1356]
+      - list [ref=e1357]:
+        - listitem [ref=e1358]:
+          - text: ✓
+          - strong [ref=e1359]: Use tables for tabular data
+          - text: — Don’t use tables for layout
+        - listitem [ref=e1360]:
+          - text: ✓
+          - strong [ref=e1361]: Keep columns scannable
+          - text: — Align numbers right, text left
+        - listitem [ref=e1362]:
+          - text: ✓
+          - strong [ref=e1363]: Truncate long content
+          - text: — Use ellipsis or expand on hover
+        - listitem [ref=e1364]:
+          - text: ✓
+          - strong [ref=e1365]: Show loading states
+          - text: — Skeleton rows or spinner for async data
+        - listitem [ref=e1366]:
+          - text: ✓
+          - strong [ref=e1367]: Provide empty states
+          - text: — Clear message when no data exists
+        - listitem [ref=e1368]:
+          - text: ✓
+          - strong [ref=e1369]: Make actions discoverable
+          - text: — Hover to reveal or always visible
+      - heading "Don’t" [level=3] [ref=e1370]
+      - list [ref=e1371]:
+        - listitem [ref=e1372]:
+          - text: ✗
+          - strong [ref=e1373]: Overload with columns
+          - text: — 5-7 columns max for readability
+        - listitem [ref=e1374]:
+          - text: ✗
+          - strong [ref=e1375]: Hide critical information
+          - text: — Key data should always be visible
+        - listitem [ref=e1376]:
+          - text: ✗
+          - strong [ref=e1377]: Use inconsistent alignment
+          - text: — Pick one style and stick to it
+        - listitem [ref=e1378]:
+          - text: ✗
+          - strong [ref=e1379]: Forget mobile
+          - text: — Use responsive wrapper or card layout
+        - listitem [ref=e1380]:
+          - text: ✗
+          - strong [ref=e1381]: Skip keyboard support
+          - text: — All actions must be keyboard accessible
+        - listitem [ref=e1382]:
+          - text: ✗
+          - strong [ref=e1383]: Nest tables
+          - text: — Use expandable rows instead
+    - paragraph [ref=e1385]: "Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM"
+```

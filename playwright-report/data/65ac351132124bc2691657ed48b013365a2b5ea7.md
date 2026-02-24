@@ -1,0 +1,1640 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - navigation "Main navigation" [ref=e3]:
+    - link "Home" [ref=e4] [cursor=pointer]:
+      - /url: ../index.html
+      - generic [ref=e5]: 
+      - generic [ref=e6]: Home
+    - link "Tokens" [ref=e7] [cursor=pointer]:
+      - /url: ../tokens/colors.html
+      - generic [ref=e8]: 
+      - generic [ref=e9]: Tokens
+    - link "Components" [ref=e10] [cursor=pointer]:
+      - /url: ../components/buttons.html
+      - generic [ref=e11]: 
+      - generic [ref=e12]: Components
+    - link "Patterns" [ref=e13] [cursor=pointer]:
+      - /url: ../patterns/layouts.html
+      - generic [ref=e14]: 
+      - generic [ref=e15]: Patterns
+    - button "Search" [ref=e17] [cursor=pointer]:
+      - generic [ref=e18]: 
+    - button "Toggle theme" [ref=e19] [cursor=pointer]:
+      - generic [ref=e20]: 
+  - text:  
+  - main [ref=e22]:
+    - generic [ref=e23]:
+      - navigation "Breadcrumb" [ref=e24]:
+        - link "Carbon" [ref=e25] [cursor=pointer]:
+          - /url: ../index.html
+        - generic [ref=e26]: /
+        - generic [ref=e27]: Components
+        - generic [ref=e28]: /
+        - generic [ref=e29]: Forms
+      - heading "Forms" [level=1] [ref=e30]:
+        - emphasis [ref=e31]: Forms
+    - article [ref=e32]:
+      - heading "Forms" [level=1] [ref=e33]
+      - paragraph [ref=e34]: Forms allow users to enter data and interact with the system. Carbon provides a complete set of form controls including inputs, textareas, selects, checkboxes, radio buttons, switches, and file uploads — all with built-in validation states and accessibility.
+      - separator [ref=e35]
+      - heading "Installation" [level=2] [ref=e36]
+      - paragraph [ref=e37]:
+        - text: Copy the form CSS from
+        - code [ref=e38]: styles/docs.css
+        - text: "or include the Carbon stylesheet:"
+      - generic [ref=e39]:
+        - code [ref=e41]:
+          - generic [ref=e42]:
+            - generic [ref=e43]: <link
+            - text: rel
+            - generic [ref=e44]: ="stylesheet"
+            - text: href
+            - generic [ref=e45]: ="carbon.min.css"
+            - text: ">"
+        - button "Copy code" [ref=e46] [cursor=pointer]:
+          - generic [ref=e47]: 
+      - paragraph [ref=e48]: "Then use form classes in your HTML:"
+      - generic [ref=e49]:
+        - code [ref=e51]:
+          - generic [ref=e52]:
+            - generic [ref=e53]: <div
+            - text: class
+            - generic [ref=e54]: ="FormField"
+            - text: ">"
+          - generic [ref=e55]:
+            - generic [ref=e56]: <label
+            - text: class
+            - generic [ref=e57]: ="FormField-label"
+            - text: for
+            - generic [ref=e58]: ="email"
+            - text: ">"
+          - text: Email
+          - generic [ref=e59]:
+            - generic [ref=e60]: </label
+            - text: ">"
+          - generic [ref=e61]:
+            - generic [ref=e62]: <input
+            - text: type
+            - generic [ref=e63]: ="email"
+            - text: id
+            - generic [ref=e64]: ="email"
+            - text: class
+            - generic [ref=e65]: ="Input"
+            - text: placeholder
+            - generic [ref=e66]: ="you@example.com"
+            - text: ">"
+          - generic [ref=e67]:
+            - generic [ref=e68]: </div
+            - text: ">"
+        - button "Copy code" [ref=e69] [cursor=pointer]:
+          - generic [ref=e70]: 
+      - separator [ref=e71]
+      - heading "Usage" [level=2] [ref=e72]
+      - paragraph [ref=e73]:
+        - text: The base
+        - code [ref=e74]: .Input
+        - text: class provides core input styling. Wrap inputs in
+        - code [ref=e75]: .FormField
+        - text: for proper labeling and spacing.
+      - generic [ref=e76]:
+        - generic [ref=e77]:
+          - generic [ref=e78]:
+            - button "Preview" [ref=e79] [cursor=pointer]
+            - button "HTML" [ref=e80] [cursor=pointer]
+          - generic [ref=e81]:
+            - button "" [ref=e82] [cursor=pointer]:
+              - generic [ref=e83]: 
+            - button "" [ref=e84] [cursor=pointer]:
+              - generic [ref=e85]: 
+            - button "" [ref=e86] [cursor=pointer]:
+              - generic [ref=e87]: 
+            - button "" [ref=e89] [cursor=pointer]:
+              - generic [ref=e90]: 
+            - button "" [ref=e91] [cursor=pointer]:
+              - generic [ref=e92]: 
+            - button "" [ref=e93] [cursor=pointer]:
+              - generic [ref=e94]: 
+        - generic [ref=e97]:
+          - generic [ref=e98]: Username
+          - textbox "Username" [ref=e99]:
+            - /placeholder: Enter username
+        - text: 
+      - separator [ref=e100]
+      - heading "Input Variants" [level=2] [ref=e101]
+      - heading "Sizes" [level=3] [ref=e102]
+      - paragraph [ref=e103]: "Inputs come in three sizes: small, medium (default), and large."
+      - generic [ref=e104]:
+        - generic [ref=e105]:
+          - generic [ref=e106]:
+            - button "Preview" [ref=e107] [cursor=pointer]
+            - button "HTML" [ref=e108] [cursor=pointer]
+          - generic [ref=e109]:
+            - button "" [ref=e110] [cursor=pointer]:
+              - generic [ref=e111]: 
+            - button "" [ref=e112] [cursor=pointer]:
+              - generic [ref=e113]: 
+            - button "" [ref=e114] [cursor=pointer]:
+              - generic [ref=e115]: 
+            - button "" [ref=e117] [cursor=pointer]:
+              - generic [ref=e118]: 
+            - button "" [ref=e119] [cursor=pointer]:
+              - generic [ref=e120]: 
+            - button "" [ref=e121] [cursor=pointer]:
+              - generic [ref=e122]: 
+        - generic [ref=e125]:
+          - textbox "Small" [ref=e126]
+          - textbox "Medium (default)" [ref=e127]
+          - textbox "Large" [ref=e128]
+        - text: 
+      - heading "With Icons" [level=3] [ref=e129]
+      - paragraph [ref=e130]: Add leading or trailing icons for visual context.
+      - generic [ref=e131]:
+        - generic [ref=e132]:
+          - generic [ref=e133]:
+            - button "Preview" [ref=e134] [cursor=pointer]
+            - button "HTML" [ref=e135] [cursor=pointer]
+          - generic [ref=e136]:
+            - button "" [ref=e137] [cursor=pointer]:
+              - generic [ref=e138]: 
+            - button "" [ref=e139] [cursor=pointer]:
+              - generic [ref=e140]: 
+            - button "" [ref=e141] [cursor=pointer]:
+              - generic [ref=e142]: 
+            - button "" [ref=e144] [cursor=pointer]:
+              - generic [ref=e145]: 
+            - button "" [ref=e146] [cursor=pointer]:
+              - generic [ref=e147]: 
+            - button "" [ref=e148] [cursor=pointer]:
+              - generic [ref=e149]: 
+        - generic [ref=e152]:
+          - generic [ref=e153]:
+            - generic: 
+            - textbox "Search..." [ref=e154]
+          - generic [ref=e155]:
+            - textbox "Enter email" [ref=e156]
+            - generic: 
+        - text: 
+      - heading "With Button" [level=3] [ref=e157]
+      - paragraph [ref=e158]: Common pattern for search or subscribe fields.
+      - generic [ref=e159]:
+        - generic [ref=e160]:
+          - generic [ref=e161]:
+            - button "Preview" [ref=e162] [cursor=pointer]
+            - button "HTML" [ref=e163] [cursor=pointer]
+          - generic [ref=e164]:
+            - button "" [ref=e165] [cursor=pointer]:
+              - generic [ref=e166]: 
+            - button "" [ref=e167] [cursor=pointer]:
+              - generic [ref=e168]: 
+            - button "" [ref=e169] [cursor=pointer]:
+              - generic [ref=e170]: 
+            - button "" [ref=e172] [cursor=pointer]:
+              - generic [ref=e173]: 
+            - button "" [ref=e174] [cursor=pointer]:
+              - generic [ref=e175]: 
+            - button "" [ref=e176] [cursor=pointer]:
+              - generic [ref=e177]: 
+        - generic [ref=e180]:
+          - textbox "Search documentation..." [ref=e181]
+          - button "Search" [ref=e182] [cursor=pointer]
+        - text: 
+      - heading "Password with Toggle" [level=3] [ref=e183]
+      - paragraph [ref=e184]: Toggle password visibility for user convenience.
+      - generic [ref=e185]:
+        - generic [ref=e186]:
+          - generic [ref=e187]:
+            - button "Preview" [ref=e188] [cursor=pointer]
+            - button "HTML" [ref=e189] [cursor=pointer]
+          - generic [ref=e190]:
+            - button "" [ref=e191] [cursor=pointer]:
+              - generic [ref=e192]: 
+            - button "" [ref=e193] [cursor=pointer]:
+              - generic [ref=e194]: 
+            - button "" [ref=e195] [cursor=pointer]:
+              - generic [ref=e196]: 
+            - button "" [ref=e198] [cursor=pointer]:
+              - generic [ref=e199]: 
+            - button "" [ref=e200] [cursor=pointer]:
+              - generic [ref=e201]: 
+            - button "" [ref=e202] [cursor=pointer]:
+              - generic [ref=e203]: 
+        - generic [ref=e206]:
+          - generic [ref=e207]: Password
+          - generic [ref=e208]:
+            - textbox "Password" [ref=e209]:
+              - /placeholder: Enter password
+            - button "Toggle password visibility" [ref=e210] [cursor=pointer]:
+              - generic [ref=e211]: 
+        - text: 
+      - separator [ref=e212]
+      - heading "States" [level=2] [ref=e213]
+      - heading "Validation States" [level=3] [ref=e214]
+      - paragraph [ref=e215]: Visual feedback for different input states.
+      - generic [ref=e216]:
+        - generic [ref=e217]:
+          - generic [ref=e218]:
+            - button "Preview" [ref=e219] [cursor=pointer]
+            - button "HTML" [ref=e220] [cursor=pointer]
+          - generic [ref=e221]:
+            - button "" [ref=e222] [cursor=pointer]:
+              - generic [ref=e223]: 
+            - button "" [ref=e224] [cursor=pointer]:
+              - generic [ref=e225]: 
+            - button "" [ref=e226] [cursor=pointer]:
+              - generic [ref=e227]: 
+            - button "" [ref=e229] [cursor=pointer]:
+              - generic [ref=e230]: 
+            - button "" [ref=e231] [cursor=pointer]:
+              - generic [ref=e232]: 
+            - button "" [ref=e233] [cursor=pointer]:
+              - generic [ref=e234]: 
+        - generic [ref=e237]:
+          - generic [ref=e238]:
+            - generic [ref=e239]: Default
+            - textbox [ref=e240]: Normal input
+          - generic [ref=e241]:
+            - generic [ref=e242]: Error
+            - textbox [ref=e243]: Invalid value
+            - generic [ref=e244]:
+              - generic [ref=e245]: 
+              - text: This field is required
+          - generic [ref=e246]:
+            - generic [ref=e247]: Success
+            - textbox [ref=e248]: Valid input
+            - generic [ref=e249]:
+              - generic [ref=e250]: 
+              - text: Looks good!
+          - generic [ref=e251]:
+            - generic [ref=e252]: Disabled
+            - textbox [disabled] [ref=e253]: Cannot edit
+        - text: 
+      - heading "Helper Text & Character Count" [level=3] [ref=e254]
+      - paragraph [ref=e255]: Provide additional context or show remaining characters.
+      - generic [ref=e256]:
+        - generic [ref=e257]:
+          - generic [ref=e258]:
+            - button "Preview" [ref=e259] [cursor=pointer]
+            - button "HTML" [ref=e260] [cursor=pointer]
+          - generic [ref=e261]:
+            - button "" [ref=e262] [cursor=pointer]:
+              - generic [ref=e263]: 
+            - button "" [ref=e264] [cursor=pointer]:
+              - generic [ref=e265]: 
+            - button "" [ref=e266] [cursor=pointer]:
+              - generic [ref=e267]: 
+            - button "" [ref=e269] [cursor=pointer]:
+              - generic [ref=e270]: 
+            - button "" [ref=e271] [cursor=pointer]:
+              - generic [ref=e272]: 
+            - button "" [ref=e273] [cursor=pointer]:
+              - generic [ref=e274]: 
+        - generic [ref=e277]:
+          - generic [ref=e278]:
+            - generic [ref=e279]: Email Address
+            - textbox "Email Address" [ref=e280]:
+              - /placeholder: you@example.com
+            - generic [ref=e281]: We'll never share your email.
+          - generic [ref=e282]:
+            - generic [ref=e283]: Bio
+            - textbox "Bio" [ref=e284]:
+              - /placeholder: Tell us about yourself
+            - generic [ref=e285]: Brief description 0/100
+        - text: 
+      - heading "Required Fields" [level=3] [ref=e286]
+      - paragraph [ref=e287]: Indicate required fields with an asterisk.
+      - generic [ref=e288]:
+        - generic [ref=e289]:
+          - generic [ref=e290]:
+            - button "Preview" [ref=e291] [cursor=pointer]
+            - button "HTML" [ref=e292] [cursor=pointer]
+          - generic [ref=e293]:
+            - button "" [ref=e294] [cursor=pointer]:
+              - generic [ref=e295]: 
+            - button "" [ref=e296] [cursor=pointer]:
+              - generic [ref=e297]: 
+            - button "" [ref=e298] [cursor=pointer]:
+              - generic [ref=e299]: 
+            - button "" [ref=e301] [cursor=pointer]:
+              - generic [ref=e302]: 
+            - button "" [ref=e303] [cursor=pointer]:
+              - generic [ref=e304]: 
+            - button "" [ref=e305] [cursor=pointer]:
+              - generic [ref=e306]: 
+        - generic [ref=e309]:
+          - generic [ref=e310]: Email *
+          - textbox "Email *" [ref=e311]:
+            - /placeholder: you@example.com
+        - text: 
+      - separator [ref=e312]
+      - heading "Textarea" [level=2] [ref=e313]
+      - paragraph [ref=e314]: Multi-line text input for longer content.
+      - generic [ref=e315]:
+        - generic [ref=e316]:
+          - generic [ref=e317]:
+            - button "Preview" [ref=e318] [cursor=pointer]
+            - button "HTML" [ref=e319] [cursor=pointer]
+          - generic [ref=e320]:
+            - button "" [ref=e321] [cursor=pointer]:
+              - generic [ref=e322]: 
+            - button "" [ref=e323] [cursor=pointer]:
+              - generic [ref=e324]: 
+            - button "" [ref=e325] [cursor=pointer]:
+              - generic [ref=e326]: 
+            - button "" [ref=e328] [cursor=pointer]:
+              - generic [ref=e329]: 
+            - button "" [ref=e330] [cursor=pointer]:
+              - generic [ref=e331]: 
+            - button "" [ref=e332] [cursor=pointer]:
+              - generic [ref=e333]: 
+        - generic [ref=e336]:
+          - generic [ref=e337]:
+            - generic [ref=e338]: Description
+            - textbox "Description" [ref=e339]:
+              - /placeholder: Enter a detailed description...
+          - generic [ref=e340]:
+            - generic [ref=e341]: Bio
+            - textbox "Bio" [ref=e342]:
+              - /placeholder: Tell us about yourself...
+            - generic [ref=e343]: Brief description for your profile 0/280
+        - text: 
+      - separator [ref=e344]
+      - heading "Select" [level=2] [ref=e345]
+      - paragraph [ref=e346]: Dropdown for choosing from predefined options.
+      - generic [ref=e347]:
+        - generic [ref=e348]:
+          - generic [ref=e349]:
+            - button "Preview" [ref=e350] [cursor=pointer]
+            - button "HTML" [ref=e351] [cursor=pointer]
+          - generic [ref=e352]:
+            - button "" [ref=e353] [cursor=pointer]:
+              - generic [ref=e354]: 
+            - button "" [ref=e355] [cursor=pointer]:
+              - generic [ref=e356]: 
+            - button "" [ref=e357] [cursor=pointer]:
+              - generic [ref=e358]: 
+            - button "" [ref=e360] [cursor=pointer]:
+              - generic [ref=e361]: 
+            - button "" [ref=e362] [cursor=pointer]:
+              - generic [ref=e363]: 
+            - button "" [ref=e364] [cursor=pointer]:
+              - generic [ref=e365]: 
+        - generic [ref=e368]:
+          - generic [ref=e369]: Country
+          - combobox "Country" [ref=e370]:
+            - option "Choose a country..." [selected]
+            - option "United States"
+            - option "Canada"
+            - option "United Kingdom"
+            - option "Australia"
+            - option "Germany"
+        - text: 
+      - separator [ref=e371]
+      - heading "Checkbox" [level=2] [ref=e372]
+      - paragraph [ref=e373]: For binary choices or multiple selections.
+      - generic [ref=e374]:
+        - generic [ref=e375]:
+          - generic [ref=e376]:
+            - button "Preview" [ref=e377] [cursor=pointer]
+            - button "HTML" [ref=e378] [cursor=pointer]
+          - generic [ref=e379]:
+            - button "" [ref=e380] [cursor=pointer]:
+              - generic [ref=e381]: 
+            - button "" [ref=e382] [cursor=pointer]:
+              - generic [ref=e383]: 
+            - button "" [ref=e384] [cursor=pointer]:
+              - generic [ref=e385]: 
+            - button "" [ref=e387] [cursor=pointer]:
+              - generic [ref=e388]: 
+            - button "" [ref=e389] [cursor=pointer]:
+              - generic [ref=e390]: 
+            - button "" [ref=e391] [cursor=pointer]:
+              - generic [ref=e392]: 
+        - generic [ref=e395]:
+          - generic [ref=e396] [cursor=pointer]:
+            - checkbox "Remember me"
+            - generic [ref=e398]: Remember me
+          - generic [ref=e399] [cursor=pointer]:
+            - checkbox "Receive notifications" [checked]
+            - generic [ref=e401]: Receive notifications
+          - generic [ref=e402] [cursor=pointer]:
+            - checkbox "Disabled option" [disabled]
+            - generic [ref=e404]: Disabled option
+        - text: 
+      - heading "Checkbox Group" [level=3] [ref=e405]
+      - paragraph [ref=e406]: Group related checkboxes in a fieldset.
+      - generic [ref=e407]:
+        - generic [ref=e408]:
+          - generic [ref=e409]:
+            - button "Preview" [ref=e410] [cursor=pointer]
+            - button "HTML" [ref=e411] [cursor=pointer]
+          - generic [ref=e412]:
+            - button "" [ref=e413] [cursor=pointer]:
+              - generic [ref=e414]: 
+            - button "" [ref=e415] [cursor=pointer]:
+              - generic [ref=e416]: 
+            - button "" [ref=e417] [cursor=pointer]:
+              - generic [ref=e418]: 
+            - button "" [ref=e420] [cursor=pointer]:
+              - generic [ref=e421]: 
+            - button "" [ref=e422] [cursor=pointer]:
+              - generic [ref=e423]: 
+            - button "" [ref=e424] [cursor=pointer]:
+              - generic [ref=e425]: 
+        - group "Interests" [ref=e428]:
+          - generic [ref=e429]: Interests
+          - generic [ref=e430]:
+            - generic [ref=e431] [cursor=pointer]:
+              - checkbox "Design"
+              - generic [ref=e433]: Design
+            - generic [ref=e434] [cursor=pointer]:
+              - checkbox "Development" [checked]
+              - generic [ref=e436]: Development
+            - generic [ref=e437] [cursor=pointer]:
+              - checkbox "Marketing"
+              - generic [ref=e439]: Marketing
+        - text: 
+      - heading "Indeterminate State" [level=3] [ref=e440]
+      - paragraph [ref=e441]: For “select all” patterns where some items are selected.
+      - generic [ref=e442]:
+        - generic [ref=e443]:
+          - generic [ref=e444]:
+            - button "Preview" [ref=e445] [cursor=pointer]
+            - button "HTML" [ref=e446] [cursor=pointer]
+          - generic [ref=e447]:
+            - button "" [ref=e448] [cursor=pointer]:
+              - generic [ref=e449]: 
+            - button "" [ref=e450] [cursor=pointer]:
+              - generic [ref=e451]: 
+            - button "" [ref=e452] [cursor=pointer]:
+              - generic [ref=e453]: 
+            - button "" [ref=e455] [cursor=pointer]:
+              - generic [ref=e456]: 
+            - button "" [ref=e457] [cursor=pointer]:
+              - generic [ref=e458]: 
+            - button "" [ref=e459] [cursor=pointer]:
+              - generic [ref=e460]: 
+        - generic [ref=e463]:
+          - generic [ref=e464] [cursor=pointer]:
+            - checkbox "Select All Files"
+            - generic [ref=e466]: Select All Files
+          - generic [ref=e467]:
+            - generic [ref=e468] [cursor=pointer]:
+              - checkbox "document.pdf" [checked]
+              - generic [ref=e470]: document.pdf
+            - generic [ref=e471] [cursor=pointer]:
+              - checkbox "image.png"
+              - generic [ref=e473]: image.png
+            - generic [ref=e474] [cursor=pointer]:
+              - checkbox "spreadsheet.xlsx" [checked]
+              - generic [ref=e476]: spreadsheet.xlsx
+        - text: 
+      - separator [ref=e477]
+      - heading "Radio Buttons" [level=2] [ref=e478]
+      - paragraph [ref=e479]: For single selection from a list of options.
+      - generic [ref=e480]:
+        - generic [ref=e481]:
+          - generic [ref=e482]:
+            - button "Preview" [ref=e483] [cursor=pointer]
+            - button "HTML" [ref=e484] [cursor=pointer]
+          - generic [ref=e485]:
+            - button "" [ref=e486] [cursor=pointer]:
+              - generic [ref=e487]: 
+            - button "" [ref=e488] [cursor=pointer]:
+              - generic [ref=e489]: 
+            - button "" [ref=e490] [cursor=pointer]:
+              - generic [ref=e491]: 
+            - button "" [ref=e493] [cursor=pointer]:
+              - generic [ref=e494]: 
+            - button "" [ref=e495] [cursor=pointer]:
+              - generic [ref=e496]: 
+            - button "" [ref=e497] [cursor=pointer]:
+              - generic [ref=e498]: 
+        - group "Plan" [ref=e501]:
+          - generic [ref=e502]: Plan
+          - generic [ref=e503]:
+            - generic [ref=e504] [cursor=pointer]:
+              - radio "Free"
+              - generic [ref=e506]: Free
+            - generic [ref=e507] [cursor=pointer]:
+              - radio "Pro" [checked]
+              - generic [ref=e509]: Pro
+            - generic [ref=e510] [cursor=pointer]:
+              - radio "Enterprise"
+              - generic [ref=e512]: Enterprise
+        - text: 
+      - heading "Radio Cards" [level=3] [ref=e513]
+      - paragraph [ref=e514]: Richer radio selection with descriptions and prices.
+      - generic [ref=e515]:
+        - generic [ref=e516]:
+          - generic [ref=e517]:
+            - button "Preview" [ref=e518] [cursor=pointer]
+            - button "HTML" [ref=e519] [cursor=pointer]
+          - generic [ref=e520]:
+            - button "" [ref=e521] [cursor=pointer]:
+              - generic [ref=e522]: 
+            - button "" [ref=e523] [cursor=pointer]:
+              - generic [ref=e524]: 
+            - button "" [ref=e525] [cursor=pointer]:
+              - generic [ref=e526]: 
+            - button "" [ref=e528] [cursor=pointer]:
+              - generic [ref=e529]: 
+            - button "" [ref=e530] [cursor=pointer]:
+              - generic [ref=e531]: 
+            - button "" [ref=e532] [cursor=pointer]:
+              - generic [ref=e533]: 
+        - generic [ref=e536]:
+          - generic [ref=e537]:
+            - radio "Starter $9/mo Perfect for individuals and small projects." [ref=e538]
+            - generic [ref=e539]:
+              - generic [ref=e540]: Starter $9/mo
+              - paragraph [ref=e541]: Perfect for individuals and small projects.
+          - generic [ref=e542]:
+            - radio "Pro $29/mo For growing teams with advanced needs." [checked] [ref=e543]
+            - generic [ref=e544]:
+              - generic [ref=e545]: Pro $29/mo
+              - paragraph [ref=e546]: For growing teams with advanced needs.
+          - generic [ref=e547]:
+            - radio "Enterprise Custom Dedicated support and custom integrations." [ref=e548]
+            - generic [ref=e549]:
+              - generic [ref=e550]: Enterprise Custom
+              - paragraph [ref=e551]: Dedicated support and custom integrations.
+        - text: 
+      - separator [ref=e552]
+      - heading "Switch" [level=2] [ref=e553]
+      - paragraph [ref=e554]: Toggle switches for on/off settings.
+      - generic [ref=e555]:
+        - generic [ref=e556]:
+          - generic [ref=e557]:
+            - button "Preview" [ref=e558] [cursor=pointer]
+            - button "HTML" [ref=e559] [cursor=pointer]
+          - generic [ref=e560]:
+            - button "" [ref=e561] [cursor=pointer]:
+              - generic [ref=e562]: 
+            - button "" [ref=e563] [cursor=pointer]:
+              - generic [ref=e564]: 
+            - button "" [ref=e565] [cursor=pointer]:
+              - generic [ref=e566]: 
+            - button "" [ref=e568] [cursor=pointer]:
+              - generic [ref=e569]: 
+            - button "" [ref=e570] [cursor=pointer]:
+              - generic [ref=e571]: 
+            - button "" [ref=e572] [cursor=pointer]:
+              - generic [ref=e573]: 
+        - generic [ref=e576]:
+          - generic [ref=e577]:
+            - checkbox "Enable notifications"
+            - generic [ref=e578] [cursor=pointer]: Enable notifications
+          - generic [ref=e579]:
+            - checkbox "Dark mode" [checked]
+            - generic [ref=e580] [cursor=pointer]: Dark mode
+          - generic [ref=e581]:
+            - checkbox "Disabled switch" [disabled]
+            - generic [ref=e582] [cursor=pointer]: Disabled switch
+        - text: 
+      - heading "Switch with Description" [level=3] [ref=e583]
+      - paragraph [ref=e584]: For settings that need more context.
+      - generic [ref=e585]:
+        - generic [ref=e586]:
+          - generic [ref=e587]:
+            - button "Preview" [ref=e588] [cursor=pointer]
+            - button "HTML" [ref=e589] [cursor=pointer]
+          - generic [ref=e590]:
+            - button "" [ref=e591] [cursor=pointer]:
+              - generic [ref=e592]: 
+            - button "" [ref=e593] [cursor=pointer]:
+              - generic [ref=e594]: 
+            - button "" [ref=e595] [cursor=pointer]:
+              - generic [ref=e596]: 
+            - button "" [ref=e598] [cursor=pointer]:
+              - generic [ref=e599]: 
+            - button "" [ref=e600] [cursor=pointer]:
+              - generic [ref=e601]: 
+            - button "" [ref=e602] [cursor=pointer]:
+              - generic [ref=e603]: 
+        - generic [ref=e607]:
+          - generic [ref=e608]:
+            - generic [ref=e609] [cursor=pointer]: Email notifications
+            - text: Receive email updates about your account activity
+          - checkbox "Email notifications Receive email updates about your account activity" [checked]
+        - text: 
+      - heading "Switch Sizes" [level=3] [ref=e610]
+      - generic [ref=e611]:
+        - generic [ref=e612]:
+          - generic [ref=e613]:
+            - button "Preview" [ref=e614] [cursor=pointer]
+            - button "HTML" [ref=e615] [cursor=pointer]
+          - generic [ref=e616]:
+            - button "" [ref=e617] [cursor=pointer]:
+              - generic [ref=e618]: 
+            - button "" [ref=e619] [cursor=pointer]:
+              - generic [ref=e620]: 
+            - button "" [ref=e621] [cursor=pointer]:
+              - generic [ref=e622]: 
+            - button "" [ref=e624] [cursor=pointer]:
+              - generic [ref=e625]: 
+            - button "" [ref=e626] [cursor=pointer]:
+              - generic [ref=e627]: 
+            - button "" [ref=e628] [cursor=pointer]:
+              - generic [ref=e629]: 
+        - generic [ref=e632]:
+          - generic [ref=e633]:
+            - checkbox "Small" [checked]
+            - generic [ref=e634] [cursor=pointer]: Small
+          - generic [ref=e635]:
+            - checkbox "Medium (default)" [checked]
+            - generic [ref=e636] [cursor=pointer]: Medium (default)
+          - generic [ref=e637]:
+            - checkbox "Large" [checked]
+            - generic [ref=e638] [cursor=pointer]: Large
+        - text: 
+      - separator [ref=e639]
+      - heading "File Upload" [level=2] [ref=e640]
+      - paragraph [ref=e641]: File input with drag-and-drop support.
+      - generic [ref=e642]:
+        - generic [ref=e643]:
+          - generic [ref=e644]:
+            - button "Preview" [ref=e645] [cursor=pointer]
+            - button "HTML" [ref=e646] [cursor=pointer]
+          - generic [ref=e647]:
+            - button "" [ref=e648] [cursor=pointer]:
+              - generic [ref=e649]: 
+            - button "" [ref=e650] [cursor=pointer]:
+              - generic [ref=e651]: 
+            - button "" [ref=e652] [cursor=pointer]:
+              - generic [ref=e653]: 
+            - button "" [ref=e655] [cursor=pointer]:
+              - generic [ref=e656]: 
+            - button "" [ref=e657] [cursor=pointer]:
+              - generic [ref=e658]: 
+            - button "" [ref=e659] [cursor=pointer]:
+              - generic [ref=e660]: 
+        - generic [ref=e663]:
+          - generic [ref=e664]: Attachment
+          - generic [ref=e665]:
+            - button " Choose file or drag here PNG, JPG up to 10MB" [ref=e666]
+            - generic [ref=e667]:
+              - generic [ref=e668]: 
+              - text: Choose file or drag here PNG, JPG up to 10MB
+        - text: 
+      - heading "File Upload with Preview" [level=3] [ref=e669]
+      - paragraph [ref=e670]: Show a preview thumbnail alongside the upload button.
+      - generic [ref=e671]:
+        - generic [ref=e672]:
+          - generic [ref=e673]:
+            - button "Preview" [ref=e674] [cursor=pointer]
+            - button "HTML" [ref=e675] [cursor=pointer]
+          - generic [ref=e676]:
+            - button "" [ref=e677] [cursor=pointer]:
+              - generic [ref=e678]: 
+            - button "" [ref=e679] [cursor=pointer]:
+              - generic [ref=e680]: 
+            - button "" [ref=e681] [cursor=pointer]:
+              - generic [ref=e682]: 
+            - button "" [ref=e684] [cursor=pointer]:
+              - generic [ref=e685]: 
+            - button "" [ref=e686] [cursor=pointer]:
+              - generic [ref=e687]: 
+            - button "" [ref=e688] [cursor=pointer]:
+              - generic [ref=e689]: 
+        - generic [ref=e692]:
+          - generic [ref=e693]: Profile Photo
+          - generic [ref=e694]:
+            - img "Preview" [ref=e696]
+            - generic [ref=e697]:
+              - button " Change Photo" [ref=e698]
+              - generic [ref=e699] [cursor=pointer]:
+                - generic [ref=e700]: 
+                - text: Change Photo
+              - text: JPG, PNG or GIF. Max 2MB.
+        - text: 
+      - heading "Multiple File Upload" [level=3] [ref=e701]
+      - paragraph [ref=e702]: Upload multiple files with a file list display.
+      - generic [ref=e703]:
+        - generic [ref=e704]:
+          - generic [ref=e705]:
+            - button "Preview" [ref=e706] [cursor=pointer]
+            - button "HTML" [ref=e707] [cursor=pointer]
+          - generic [ref=e708]:
+            - button "" [ref=e709] [cursor=pointer]:
+              - generic [ref=e710]: 
+            - button "" [ref=e711] [cursor=pointer]:
+              - generic [ref=e712]: 
+            - button "" [ref=e713] [cursor=pointer]:
+              - generic [ref=e714]: 
+            - button "" [ref=e716] [cursor=pointer]:
+              - generic [ref=e717]: 
+            - button "" [ref=e718] [cursor=pointer]:
+              - generic [ref=e719]: 
+            - button "" [ref=e720] [cursor=pointer]:
+              - generic [ref=e721]: 
+        - generic [ref=e724]:
+          - generic [ref=e725]: Documents
+          - generic [ref=e726]:
+            - button " Drop files here or click to browse Upload multiple files at once" [ref=e727]
+            - generic [ref=e728]:
+              - generic [ref=e729]: 
+              - text: Drop files here or click to browse Upload multiple files at once
+          - generic [ref=e730]:
+            - generic [ref=e731]:
+              - generic [ref=e732]: 
+              - text: document.pdf 2.4 MB
+              - button "Remove file" [ref=e733] [cursor=pointer]:
+                - generic [ref=e734]: 
+            - generic [ref=e735]:
+              - generic [ref=e736]: 
+              - text: photo.jpg 1.1 MB
+              - button "Remove file" [ref=e737] [cursor=pointer]:
+                - generic [ref=e738]: 
+        - text: 
+      - separator [ref=e739]
+      - heading "Form Layouts" [level=2] [ref=e740]
+      - heading "Stacked Form (Default)" [level=3] [ref=e741]
+      - paragraph [ref=e742]: Vertical layout with labels above inputs.
+      - generic [ref=e743]:
+        - generic [ref=e744]:
+          - generic [ref=e745]:
+            - button "Preview" [ref=e746] [cursor=pointer]
+            - button "HTML" [ref=e747] [cursor=pointer]
+          - generic [ref=e748]:
+            - button "" [ref=e749] [cursor=pointer]:
+              - generic [ref=e750]: 
+            - button "" [ref=e751] [cursor=pointer]:
+              - generic [ref=e752]: 
+            - button "" [ref=e753] [cursor=pointer]:
+              - generic [ref=e754]: 
+            - button "" [ref=e756] [cursor=pointer]:
+              - generic [ref=e757]: 
+            - button "" [ref=e758] [cursor=pointer]:
+              - generic [ref=e759]: 
+            - button "" [ref=e760] [cursor=pointer]:
+              - generic [ref=e761]: 
+        - generic [ref=e764]:
+          - generic [ref=e765]:
+            - generic [ref=e766]: Full Name *
+            - textbox "John Doe" [ref=e767]
+          - generic [ref=e768]:
+            - generic [ref=e769]: Email *
+            - textbox "john@example.com" [ref=e770]
+          - generic [ref=e771]:
+            - generic [ref=e772]: Company
+            - textbox "Acme Inc" [ref=e773]
+          - generic [ref=e774] [cursor=pointer]:
+            - checkbox "Subscribe to newsletter"
+            - generic [ref=e776]: Subscribe to newsletter
+          - button "Submit" [ref=e777] [cursor=pointer]
+        - text: 
+      - heading "Inline Form" [level=3] [ref=e778]
+      - paragraph [ref=e779]: Horizontal layout for compact forms like newsletter signups.
+      - generic [ref=e780]:
+        - generic [ref=e781]:
+          - generic [ref=e782]:
+            - button "Preview" [ref=e783] [cursor=pointer]
+            - button "HTML" [ref=e784] [cursor=pointer]
+          - generic [ref=e785]:
+            - button "" [ref=e786] [cursor=pointer]:
+              - generic [ref=e787]: 
+            - button "" [ref=e788] [cursor=pointer]:
+              - generic [ref=e789]: 
+            - button "" [ref=e790] [cursor=pointer]:
+              - generic [ref=e791]: 
+            - button "" [ref=e793] [cursor=pointer]:
+              - generic [ref=e794]: 
+            - button "" [ref=e795] [cursor=pointer]:
+              - generic [ref=e796]: 
+            - button "" [ref=e797] [cursor=pointer]:
+              - generic [ref=e798]: 
+        - generic [ref=e801]:
+          - textbox "Enter your email" [ref=e803]
+          - button "Subscribe" [ref=e804] [cursor=pointer]
+        - text: 
+      - heading "Two-Column Form" [level=3] [ref=e805]
+      - paragraph [ref=e806]: Side-by-side fields for related data.
+      - generic [ref=e807]:
+        - generic [ref=e808]:
+          - generic [ref=e809]:
+            - button "Preview" [ref=e810] [cursor=pointer]
+            - button "HTML" [ref=e811] [cursor=pointer]
+          - generic [ref=e812]:
+            - button "" [ref=e813] [cursor=pointer]:
+              - generic [ref=e814]: 
+            - button "" [ref=e815] [cursor=pointer]:
+              - generic [ref=e816]: 
+            - button "" [ref=e817] [cursor=pointer]:
+              - generic [ref=e818]: 
+            - button "" [ref=e820] [cursor=pointer]:
+              - generic [ref=e821]: 
+            - button "" [ref=e822] [cursor=pointer]:
+              - generic [ref=e823]: 
+            - button "" [ref=e824] [cursor=pointer]:
+              - generic [ref=e825]: 
+        - generic [ref=e828]:
+          - generic [ref=e829]:
+            - generic [ref=e830]:
+              - generic [ref=e831]: First Name
+              - textbox "John" [ref=e832]
+            - generic [ref=e833]:
+              - generic [ref=e834]: Last Name
+              - textbox "Doe" [ref=e835]
+          - generic [ref=e836]:
+            - generic [ref=e837]: Email
+            - textbox "john.doe@example.com" [ref=e838]
+        - text: 
+      - separator [ref=e839]
+      - heading "Common Patterns" [level=2] [ref=e840]
+      - heading "Login Form" [level=3] [ref=e841]
+      - generic [ref=e842]:
+        - generic [ref=e843]:
+          - generic [ref=e844]:
+            - button "Preview" [ref=e845] [cursor=pointer]
+            - button "HTML" [ref=e846] [cursor=pointer]
+          - generic [ref=e847]:
+            - button "" [ref=e848] [cursor=pointer]:
+              - generic [ref=e849]: 
+            - button "" [ref=e850] [cursor=pointer]:
+              - generic [ref=e851]: 
+            - button "" [ref=e852] [cursor=pointer]:
+              - generic [ref=e853]: 
+            - button "" [ref=e855] [cursor=pointer]:
+              - generic [ref=e856]: 
+            - button "" [ref=e857] [cursor=pointer]:
+              - generic [ref=e858]: 
+            - button "" [ref=e859] [cursor=pointer]:
+              - generic [ref=e860]: 
+        - generic [ref=e864]:
+          - generic [ref=e865]:
+            - heading "Welcome back" [level=3] [ref=e866]
+            - paragraph [ref=e867]: Sign in to your account
+          - generic [ref=e868]:
+            - generic [ref=e869]:
+              - generic [ref=e870]: Email *
+              - generic [ref=e871]:
+                - generic: 
+                - textbox "you@example.com" [ref=e872]
+            - generic [ref=e873]:
+              - generic [ref=e874]:
+                - generic [ref=e875]: Password *
+                - link "Forgot password?" [ref=e876] [cursor=pointer]:
+                  - /url: "#"
+              - generic [ref=e877]:
+                - textbox "••••••••" [ref=e878]
+                - button "Show password" [ref=e879] [cursor=pointer]:
+                  - generic [ref=e880]: 
+            - generic [ref=e881] [cursor=pointer]:
+              - checkbox "Remember me for 30 days"
+              - generic [ref=e883]: Remember me for 30 days
+            - button "Sign In" [ref=e884] [cursor=pointer]
+          - generic [ref=e885]:
+            - text: Don't have an account?
+            - link "Sign up" [ref=e886] [cursor=pointer]:
+              - /url: "#"
+        - text: 
+      - heading "Signup Form" [level=3] [ref=e887]
+      - generic [ref=e888]:
+        - generic [ref=e889]:
+          - generic [ref=e890]:
+            - button "Preview" [ref=e891] [cursor=pointer]
+            - button "HTML" [ref=e892] [cursor=pointer]
+          - generic [ref=e893]:
+            - button "" [ref=e894] [cursor=pointer]:
+              - generic [ref=e895]: 
+            - button "" [ref=e896] [cursor=pointer]:
+              - generic [ref=e897]: 
+            - button "" [ref=e898] [cursor=pointer]:
+              - generic [ref=e899]: 
+            - button "" [ref=e901] [cursor=pointer]:
+              - generic [ref=e902]: 
+            - button "" [ref=e903] [cursor=pointer]:
+              - generic [ref=e904]: 
+            - button "" [ref=e905] [cursor=pointer]:
+              - generic [ref=e906]: 
+        - generic [ref=e910]:
+          - generic [ref=e911]:
+            - heading "Create your account" [level=3] [ref=e912]
+            - paragraph [ref=e913]: Start your 14-day free trial
+          - generic [ref=e914]:
+            - generic [ref=e915]:
+              - generic [ref=e916]:
+                - generic [ref=e917]: First name *
+                - textbox "John" [ref=e918]
+              - generic [ref=e919]:
+                - generic [ref=e920]: Last name *
+                - textbox "Doe" [ref=e921]
+            - generic [ref=e922]:
+              - generic [ref=e923]: Email *
+              - textbox "john@example.com" [ref=e924]
+            - generic [ref=e925]:
+              - generic [ref=e926]: Password *
+              - textbox "Create a strong password" [ref=e927]
+              - generic [ref=e928]: Must be at least 8 characters with a number and symbol
+            - generic [ref=e929] [cursor=pointer]:
+              - checkbox "I agree to the Terms of Service and Privacy Policy"
+              - generic [ref=e931]:
+                - text: I agree to the
+                - link "Terms of Service" [ref=e932]:
+                  - /url: "#"
+                - text: and
+                - link "Privacy Policy" [ref=e933]:
+                  - /url: "#"
+            - button "Create Account" [ref=e934] [cursor=pointer]
+        - text: 
+      - heading "Settings Form" [level=3] [ref=e935]
+      - generic [ref=e936]:
+        - generic [ref=e937]:
+          - generic [ref=e938]:
+            - button "Preview" [ref=e939] [cursor=pointer]
+            - button "HTML" [ref=e940] [cursor=pointer]
+          - generic [ref=e941]:
+            - button "" [ref=e942] [cursor=pointer]:
+              - generic [ref=e943]: 
+            - button "" [ref=e944] [cursor=pointer]:
+              - generic [ref=e945]: 
+            - button "" [ref=e946] [cursor=pointer]:
+              - generic [ref=e947]: 
+            - button "" [ref=e949] [cursor=pointer]:
+              - generic [ref=e950]: 
+            - button "" [ref=e951] [cursor=pointer]:
+              - generic [ref=e952]: 
+            - button "" [ref=e953] [cursor=pointer]:
+              - generic [ref=e954]: 
+        - generic [ref=e957]:
+          - group "Profile Information" [ref=e958]:
+            - generic [ref=e959]: Profile Information
+            - generic [ref=e960]:
+              - generic [ref=e961]:
+                - generic [ref=e962]:
+                  - generic [ref=e963]: First name
+                  - textbox [ref=e964]: Sarah
+                - generic [ref=e965]:
+                  - generic [ref=e966]: Last name
+                  - textbox [ref=e967]: Chen
+              - generic [ref=e968]:
+                - generic [ref=e969]: Email
+                - textbox [ref=e970]: sarah@example.com
+              - generic [ref=e971]:
+                - generic [ref=e972]: Bio
+                - textbox "Tell us about yourself..." [ref=e973]
+                - generic [ref=e974]: Brief description for your profile 0/160
+          - group "Notifications" [ref=e975]:
+            - generic [ref=e976]: Notifications
+            - generic [ref=e977]:
+              - generic [ref=e978]:
+                - generic [ref=e979]:
+                  - generic [ref=e980] [cursor=pointer]: Email notifications
+                  - text: Receive emails about account activity
+                - checkbox "Email notifications Receive emails about account activity" [checked]
+              - generic [ref=e981]:
+                - generic [ref=e982]:
+                  - generic [ref=e983] [cursor=pointer]: Push notifications
+                  - text: Receive push notifications on your devices
+                - checkbox "Push notifications Receive push notifications on your devices"
+          - generic [ref=e984]:
+            - button "Cancel" [ref=e985] [cursor=pointer]
+            - button "Save Changes" [ref=e986] [cursor=pointer]
+        - text: 
+      - heading "Contact Form" [level=3] [ref=e987]
+      - generic [ref=e988]:
+        - generic [ref=e989]:
+          - generic [ref=e990]:
+            - button "Preview" [ref=e991] [cursor=pointer]
+            - button "HTML" [ref=e992] [cursor=pointer]
+          - generic [ref=e993]:
+            - button "" [ref=e994] [cursor=pointer]:
+              - generic [ref=e995]: 
+            - button "" [ref=e996] [cursor=pointer]:
+              - generic [ref=e997]: 
+            - button "" [ref=e998] [cursor=pointer]:
+              - generic [ref=e999]: 
+            - button "" [ref=e1001] [cursor=pointer]:
+              - generic [ref=e1002]: 
+            - button "" [ref=e1003] [cursor=pointer]:
+              - generic [ref=e1004]: 
+            - button "" [ref=e1005] [cursor=pointer]:
+              - generic [ref=e1006]: 
+        - generic [ref=e1009]:
+          - heading "Get in touch" [level=4] [ref=e1011]
+          - generic [ref=e1012]:
+            - generic [ref=e1013]:
+              - generic [ref=e1014]:
+                - generic [ref=e1015]: Name *
+                - textbox "Your name" [ref=e1016]
+              - generic [ref=e1017]:
+                - generic [ref=e1018]: Email *
+                - textbox "you@example.com" [ref=e1019]
+            - generic [ref=e1020]:
+              - generic [ref=e1021]: Subject *
+              - combobox [ref=e1022]:
+                - option "Select a topic..." [selected]
+                - option "General Inquiry"
+                - option "Technical Support"
+                - option "Billing Question"
+                - option "Partnership"
+            - generic [ref=e1023]:
+              - generic [ref=e1024]: Message *
+              - textbox "How can we help?" [ref=e1025]
+          - button " Send Message" [ref=e1027] [cursor=pointer]:
+            - generic [ref=e1028]: 
+            - text: Send Message
+        - text: 
+      - heading "Form Validation" [level=3] [ref=e1029]
+      - generic [ref=e1030]:
+        - generic [ref=e1031]:
+          - generic [ref=e1032]:
+            - button "Preview" [ref=e1033] [cursor=pointer]
+            - button "HTML" [ref=e1034] [cursor=pointer]
+          - generic [ref=e1035]:
+            - button "" [ref=e1036] [cursor=pointer]:
+              - generic [ref=e1037]: 
+            - button "" [ref=e1038] [cursor=pointer]:
+              - generic [ref=e1039]: 
+            - button "" [ref=e1040] [cursor=pointer]:
+              - generic [ref=e1041]: 
+            - button "" [ref=e1043] [cursor=pointer]:
+              - generic [ref=e1044]: 
+            - button "" [ref=e1045] [cursor=pointer]:
+              - generic [ref=e1046]: 
+            - button "" [ref=e1047] [cursor=pointer]:
+              - generic [ref=e1048]: 
+        - generic [ref=e1051]:
+          - generic [ref=e1052]:
+            - generic [ref=e1053]: Email *
+            - textbox [ref=e1054]: invalid-email
+            - generic [ref=e1055]:
+              - generic [ref=e1056]: 
+              - text: Please enter a valid email address
+          - generic [ref=e1057]:
+            - generic [ref=e1058]: Password *
+            - textbox [ref=e1059]: ••••••••
+            - generic [ref=e1060]:
+              - generic [ref=e1061]: 
+              - text: Strong password
+          - generic [ref=e1062]:
+            - generic [ref=e1063]: Confirm Password *
+            - textbox "Re-enter password" [ref=e1064]
+          - button "Create Account" [disabled] [ref=e1065]
+        - text: 
+      - separator [ref=e1066]
+      - heading "Customization" [level=2] [ref=e1067]
+      - paragraph [ref=e1068]: "Override form styles using CSS custom properties:"
+      - generic [ref=e1069]:
+        - code [ref=e1071]: "/* Custom input styling */ .Input { --input-radius: var(--space-2); --input-border: var(--bd-s); --input-focus: var(--accent); border-radius: var(--input-radius); border-color: var(--input-border); } .Input:focus { border-color: var(--input-focus); box-shadow: 0 0 0 2px oklch(60% 0.15 250 / 0.15); } /* Custom checkbox color */ .Checkbox-input:checked + .Checkbox-box { background-color: oklch(55% 0.2 150); /* Green */ border-color: oklch(55% 0.2 150); } /* Custom switch color */ .Switch-input:checked + .Switch-track { background-color: oklch(55% 0.2 150); border-color: oklch(55% 0.2 150); } /* Pill-shaped inputs */ .Input--pill { border-radius: 999px; padding-left: var(--space-4); padding-right: var(--space-4); } /* Custom error color */ .Input--error { border-color: oklch(55% 0.25 0); /* Deeper red */ }"
+        - button "Copy code" [ref=e1072] [cursor=pointer]:
+          - generic [ref=e1073]: 
+      - separator [ref=e1074]
+      - heading "API Reference" [level=2] [ref=e1075]
+      - heading "Form Field Classes" [level=3] [ref=e1076]
+      - table [ref=e1077]:
+        - rowgroup [ref=e1078]:
+          - row "Class Description" [ref=e1079]:
+            - columnheader "Class" [ref=e1080]
+            - columnheader "Description" [ref=e1081]
+        - rowgroup [ref=e1082]:
+          - row ".FormField Container for label, input, and helper text" [ref=e1083]:
+            - cell ".FormField" [ref=e1084]:
+              - code [ref=e1085]: .FormField
+            - cell "Container for label, input, and helper text" [ref=e1086]
+          - row ".FormField-label Label styling for form fields" [ref=e1087]:
+            - cell ".FormField-label" [ref=e1088]:
+              - code [ref=e1089]: .FormField-label
+            - cell "Label styling for form fields" [ref=e1090]
+          - row ".FormField-label--required Adds asterisk to indicate required field" [ref=e1091]:
+            - cell ".FormField-label--required" [ref=e1092]:
+              - code [ref=e1093]: .FormField-label--required
+            - cell "Adds asterisk to indicate required field" [ref=e1094]
+          - row ".FormField-helper Helper text below input" [ref=e1095]:
+            - cell ".FormField-helper" [ref=e1096]:
+              - code [ref=e1097]: .FormField-helper
+            - cell "Helper text below input" [ref=e1098]
+          - row ".FormField-message Validation message container" [ref=e1099]:
+            - cell ".FormField-message" [ref=e1100]:
+              - code [ref=e1101]: .FormField-message
+            - cell "Validation message container" [ref=e1102]
+          - row ".FormField-message--error Error message styling (red)" [ref=e1103]:
+            - cell ".FormField-message--error" [ref=e1104]:
+              - code [ref=e1105]: .FormField-message--error
+            - cell "Error message styling (red)" [ref=e1106]
+          - row ".FormField-message--success Success message styling (green)" [ref=e1107]:
+            - cell ".FormField-message--success" [ref=e1108]:
+              - code [ref=e1109]: .FormField-message--success
+            - cell "Success message styling (green)" [ref=e1110]
+          - row ".FormField-footer Container for helper + count" [ref=e1111]:
+            - cell ".FormField-footer" [ref=e1112]:
+              - code [ref=e1113]: .FormField-footer
+            - cell "Container for helper + count" [ref=e1114]
+          - row ".FormField-count Character count display" [ref=e1115]:
+            - cell ".FormField-count" [ref=e1116]:
+              - code [ref=e1117]: .FormField-count
+            - cell "Character count display" [ref=e1118]
+      - heading "Input Classes" [level=3] [ref=e1119]
+      - table [ref=e1120]:
+        - rowgroup [ref=e1121]:
+          - row "Class Description" [ref=e1122]:
+            - columnheader "Class" [ref=e1123]
+            - columnheader "Description" [ref=e1124]
+        - rowgroup [ref=e1125]:
+          - row ".Input Base input styling (required)" [ref=e1126]:
+            - cell ".Input" [ref=e1127]:
+              - code [ref=e1128]: .Input
+            - cell "Base input styling (required)" [ref=e1129]
+          - row ".Input--small Small input size" [ref=e1130]:
+            - cell ".Input--small" [ref=e1131]:
+              - code [ref=e1132]: .Input--small
+            - cell "Small input size" [ref=e1133]
+          - row ".Input--large Large input size" [ref=e1134]:
+            - cell ".Input--large" [ref=e1135]:
+              - code [ref=e1136]: .Input--large
+            - cell "Large input size" [ref=e1137]
+          - row ".Input--error Error state (red border)" [ref=e1138]:
+            - cell ".Input--error" [ref=e1139]:
+              - code [ref=e1140]: .Input--error
+            - cell "Error state (red border)" [ref=e1141]
+          - row ".Input--success Success state (green border)" [ref=e1142]:
+            - cell ".Input--success" [ref=e1143]:
+              - code [ref=e1144]: .Input--success
+            - cell "Success state (green border)" [ref=e1145]
+          - row ".Input--withIcon Padding for leading icon" [ref=e1146]:
+            - cell ".Input--withIcon" [ref=e1147]:
+              - code [ref=e1148]: .Input--withIcon
+            - cell "Padding for leading icon" [ref=e1149]
+          - row ".Input--withIconTrailing Padding for trailing icon" [ref=e1150]:
+            - cell ".Input--withIconTrailing" [ref=e1151]:
+              - code [ref=e1152]: .Input--withIconTrailing
+            - cell "Padding for trailing icon" [ref=e1153]
+          - row ".Input--grouped For input + button combos" [ref=e1154]:
+            - cell ".Input--grouped" [ref=e1155]:
+              - code [ref=e1156]: .Input--grouped
+            - cell "For input + button combos" [ref=e1157]
+          - row ".Input-wrapper Container for input with icon" [ref=e1158]:
+            - cell ".Input-wrapper" [ref=e1159]:
+              - code [ref=e1160]: .Input-wrapper
+            - cell "Container for input with icon" [ref=e1161]
+          - row ".Input-icon Icon inside input wrapper" [ref=e1162]:
+            - cell ".Input-icon" [ref=e1163]:
+              - code [ref=e1164]: .Input-icon
+            - cell "Icon inside input wrapper" [ref=e1165]
+          - row ".Input-icon--trailing Position icon on right" [ref=e1166]:
+            - cell ".Input-icon--trailing" [ref=e1167]:
+              - code [ref=e1168]: .Input-icon--trailing
+            - cell "Position icon on right" [ref=e1169]
+          - row ".Input-toggle Password visibility toggle button" [ref=e1170]:
+            - cell ".Input-toggle" [ref=e1171]:
+              - code [ref=e1172]: .Input-toggle
+            - cell "Password visibility toggle button" [ref=e1173]
+          - row ".Input-group Container for input + button" [ref=e1174]:
+            - cell ".Input-group" [ref=e1175]:
+              - code [ref=e1176]: .Input-group
+            - cell "Container for input + button" [ref=e1177]
+      - heading "Textarea Classes" [level=3] [ref=e1178]
+      - table [ref=e1179]:
+        - rowgroup [ref=e1180]:
+          - row "Class Description" [ref=e1181]:
+            - columnheader "Class" [ref=e1182]
+            - columnheader "Description" [ref=e1183]
+        - rowgroup [ref=e1184]:
+          - row ".Textarea Base textarea styling" [ref=e1185]:
+            - cell ".Textarea" [ref=e1186]:
+              - code [ref=e1187]: .Textarea
+            - cell "Base textarea styling" [ref=e1188]
+          - row ".Textarea--error Error state (red border)" [ref=e1189]:
+            - cell ".Textarea--error" [ref=e1190]:
+              - code [ref=e1191]: .Textarea--error
+            - cell "Error state (red border)" [ref=e1192]
+      - heading "Select Classes" [level=3] [ref=e1193]
+      - table [ref=e1194]:
+        - rowgroup [ref=e1195]:
+          - row "Class Description" [ref=e1196]:
+            - columnheader "Class" [ref=e1197]
+            - columnheader "Description" [ref=e1198]
+        - rowgroup [ref=e1199]:
+          - row ".Select Base select/dropdown styling" [ref=e1200]:
+            - cell ".Select" [ref=e1201]:
+              - code [ref=e1202]: .Select
+            - cell "Base select/dropdown styling" [ref=e1203]
+      - heading "Checkbox Classes" [level=3] [ref=e1204]
+      - table [ref=e1205]:
+        - rowgroup [ref=e1206]:
+          - row "Class Description" [ref=e1207]:
+            - columnheader "Class" [ref=e1208]
+            - columnheader "Description" [ref=e1209]
+        - rowgroup [ref=e1210]:
+          - row ".Checkbox Container for custom checkbox" [ref=e1211]:
+            - cell ".Checkbox" [ref=e1212]:
+              - code [ref=e1213]: .Checkbox
+            - cell "Container for custom checkbox" [ref=e1214]
+          - row ".Checkbox-input Hidden native checkbox" [ref=e1215]:
+            - cell ".Checkbox-input" [ref=e1216]:
+              - code [ref=e1217]: .Checkbox-input
+            - cell "Hidden native checkbox" [ref=e1218]
+          - row ".Checkbox-box Custom checkbox visual" [ref=e1219]:
+            - cell ".Checkbox-box" [ref=e1220]:
+              - code [ref=e1221]: .Checkbox-box
+            - cell "Custom checkbox visual" [ref=e1222]
+          - row ".Checkbox-box--indeterminate Indeterminate state styling" [ref=e1223]:
+            - cell ".Checkbox-box--indeterminate" [ref=e1224]:
+              - code [ref=e1225]: .Checkbox-box--indeterminate
+            - cell "Indeterminate state styling" [ref=e1226]
+          - row ".Checkbox-label Label text for checkbox" [ref=e1227]:
+            - cell ".Checkbox-label" [ref=e1228]:
+              - code [ref=e1229]: .Checkbox-label
+            - cell "Label text for checkbox" [ref=e1230]
+          - row ".Checkbox--disabled Disabled state" [ref=e1231]:
+            - cell ".Checkbox--disabled" [ref=e1232]:
+              - code [ref=e1233]: .Checkbox--disabled
+            - cell "Disabled state" [ref=e1234]
+          - row ".CheckboxGroup Container for multiple checkboxes" [ref=e1235]:
+            - cell ".CheckboxGroup" [ref=e1236]:
+              - code [ref=e1237]: .CheckboxGroup
+            - cell "Container for multiple checkboxes" [ref=e1238]
+      - heading "Radio Classes" [level=3] [ref=e1239]
+      - table [ref=e1240]:
+        - rowgroup [ref=e1241]:
+          - row "Class Description" [ref=e1242]:
+            - columnheader "Class" [ref=e1243]
+            - columnheader "Description" [ref=e1244]
+        - rowgroup [ref=e1245]:
+          - row ".Radio Container for custom radio" [ref=e1246]:
+            - cell ".Radio" [ref=e1247]:
+              - code [ref=e1248]: .Radio
+            - cell "Container for custom radio" [ref=e1249]
+          - row ".Radio-input Hidden native radio" [ref=e1250]:
+            - cell ".Radio-input" [ref=e1251]:
+              - code [ref=e1252]: .Radio-input
+            - cell "Hidden native radio" [ref=e1253]
+          - row ".Radio-circle Custom radio visual" [ref=e1254]:
+            - cell ".Radio-circle" [ref=e1255]:
+              - code [ref=e1256]: .Radio-circle
+            - cell "Custom radio visual" [ref=e1257]
+          - row ".Radio-label Label text for radio" [ref=e1258]:
+            - cell ".Radio-label" [ref=e1259]:
+              - code [ref=e1260]: .Radio-label
+            - cell "Label text for radio" [ref=e1261]
+          - row ".RadioGroup Container for radio group" [ref=e1262]:
+            - cell ".RadioGroup" [ref=e1263]:
+              - code [ref=e1264]: .RadioGroup
+            - cell "Container for radio group" [ref=e1265]
+          - row ".RadioCardGroup Container for radio cards" [ref=e1266]:
+            - cell ".RadioCardGroup" [ref=e1267]:
+              - code [ref=e1268]: .RadioCardGroup
+            - cell "Container for radio cards" [ref=e1269]
+          - row ".RadioCard Rich radio option with description" [ref=e1270]:
+            - cell ".RadioCard" [ref=e1271]:
+              - code [ref=e1272]: .RadioCard
+            - cell "Rich radio option with description" [ref=e1273]
+          - row ".RadioCard--selected Selected radio card state" [ref=e1274]:
+            - cell ".RadioCard--selected" [ref=e1275]:
+              - code [ref=e1276]: .RadioCard--selected
+            - cell "Selected radio card state" [ref=e1277]
+      - heading "Switch Classes" [level=3] [ref=e1278]
+      - table [ref=e1279]:
+        - rowgroup [ref=e1280]:
+          - row "Class Description" [ref=e1281]:
+            - columnheader "Class" [ref=e1282]
+            - columnheader "Description" [ref=e1283]
+        - rowgroup [ref=e1284]:
+          - row ".Switch Container for toggle switch" [ref=e1285]:
+            - cell ".Switch" [ref=e1286]:
+              - code [ref=e1287]: .Switch
+            - cell "Container for toggle switch" [ref=e1288]
+          - row ".Switch-input Hidden native checkbox" [ref=e1289]:
+            - cell ".Switch-input" [ref=e1290]:
+              - code [ref=e1291]: .Switch-input
+            - cell "Hidden native checkbox" [ref=e1292]
+          - row ".Switch-track Switch track and thumb" [ref=e1293]:
+            - cell ".Switch-track" [ref=e1294]:
+              - code [ref=e1295]: .Switch-track
+            - cell "Switch track and thumb" [ref=e1296]
+          - row ".Switch-label Label text for switch" [ref=e1297]:
+            - cell ".Switch-label" [ref=e1298]:
+              - code [ref=e1299]: .Switch-label
+            - cell "Label text for switch" [ref=e1300]
+          - row ".Switch--block Full-width switch with border" [ref=e1301]:
+            - cell ".Switch--block" [ref=e1302]:
+              - code [ref=e1303]: .Switch--block
+            - cell "Full-width switch with border" [ref=e1304]
+          - row ".Switch--small Small switch size" [ref=e1305]:
+            - cell ".Switch--small" [ref=e1306]:
+              - code [ref=e1307]: .Switch--small
+            - cell "Small switch size" [ref=e1308]
+          - row ".Switch--large Large switch size" [ref=e1309]:
+            - cell ".Switch--large" [ref=e1310]:
+              - code [ref=e1311]: .Switch--large
+            - cell "Large switch size" [ref=e1312]
+          - row ".Switch--disabled Disabled state" [ref=e1313]:
+            - cell ".Switch--disabled" [ref=e1314]:
+              - code [ref=e1315]: .Switch--disabled
+            - cell "Disabled state" [ref=e1316]
+          - row ".Switch-content Container for label + description" [ref=e1317]:
+            - cell ".Switch-content" [ref=e1318]:
+              - code [ref=e1319]: .Switch-content
+            - cell "Container for label + description" [ref=e1320]
+          - row ".Switch-description Secondary text under label" [ref=e1321]:
+            - cell ".Switch-description" [ref=e1322]:
+              - code [ref=e1323]: .Switch-description
+            - cell "Secondary text under label" [ref=e1324]
+      - heading "File Upload Classes" [level=3] [ref=e1325]
+      - table [ref=e1326]:
+        - rowgroup [ref=e1327]:
+          - row "Class Description" [ref=e1328]:
+            - columnheader "Class" [ref=e1329]
+            - columnheader "Description" [ref=e1330]
+        - rowgroup [ref=e1331]:
+          - row ".FileInput File upload container" [ref=e1332]:
+            - cell ".FileInput" [ref=e1333]:
+              - code [ref=e1334]: .FileInput
+            - cell "File upload container" [ref=e1335]
+          - row ".FileInput-input Hidden native file input" [ref=e1336]:
+            - cell ".FileInput-input" [ref=e1337]:
+              - code [ref=e1338]: .FileInput-input
+            - cell "Hidden native file input" [ref=e1339]
+          - row ".FileInput-label Styled drop zone label" [ref=e1340]:
+            - cell ".FileInput-label" [ref=e1341]:
+              - code [ref=e1342]: .FileInput-label
+            - cell "Styled drop zone label" [ref=e1343]
+          - row ".FileInput-icon Upload icon" [ref=e1344]:
+            - cell ".FileInput-icon" [ref=e1345]:
+              - code [ref=e1346]: .FileInput-icon
+            - cell "Upload icon" [ref=e1347]
+          - row ".FileInput-text Main drop zone text" [ref=e1348]:
+            - cell ".FileInput-text" [ref=e1349]:
+              - code [ref=e1350]: .FileInput-text
+            - cell "Main drop zone text" [ref=e1351]
+          - row ".FileInput-hint File type/size hint" [ref=e1352]:
+            - cell ".FileInput-hint" [ref=e1353]:
+              - code [ref=e1354]: .FileInput-hint
+            - cell "File type/size hint" [ref=e1355]
+          - row ".FileInput--with-preview Layout for preview thumbnail" [ref=e1356]:
+            - cell ".FileInput--with-preview" [ref=e1357]:
+              - code [ref=e1358]: .FileInput--with-preview
+            - cell "Layout for preview thumbnail" [ref=e1359]
+          - row ".FileInput--multiple Multiple file upload variant" [ref=e1360]:
+            - cell ".FileInput--multiple" [ref=e1361]:
+              - code [ref=e1362]: .FileInput--multiple
+            - cell "Multiple file upload variant" [ref=e1363]
+          - row ".FileInput-list Container for uploaded file list" [ref=e1364]:
+            - cell ".FileInput-list" [ref=e1365]:
+              - code [ref=e1366]: .FileInput-list
+            - cell "Container for uploaded file list" [ref=e1367]
+          - row ".FileInput-item Individual file item" [ref=e1368]:
+            - cell ".FileInput-item" [ref=e1369]:
+              - code [ref=e1370]: .FileInput-item
+            - cell "Individual file item" [ref=e1371]
+      - heading "Layout Classes" [level=3] [ref=e1372]
+      - table [ref=e1373]:
+        - rowgroup [ref=e1374]:
+          - row "Class Description" [ref=e1375]:
+            - columnheader "Class" [ref=e1376]
+            - columnheader "Description" [ref=e1377]
+        - rowgroup [ref=e1378]:
+          - row ".FormInline Horizontal form layout" [ref=e1379]:
+            - cell ".FormInline" [ref=e1380]:
+              - code [ref=e1381]: .FormInline
+            - cell "Horizontal form layout" [ref=e1382]
+          - row ".FormRow Two-column grid row" [ref=e1383]:
+            - cell ".FormRow" [ref=e1384]:
+              - code [ref=e1385]: .FormRow
+            - cell "Two-column grid row" [ref=e1386]
+          - row ".FormFieldset Fieldset without default styling" [ref=e1387]:
+            - cell ".FormFieldset" [ref=e1388]:
+              - code [ref=e1389]: .FormFieldset
+            - cell "Fieldset without default styling" [ref=e1390]
+          - row ".FormFieldset-legend Fieldset legend styling" [ref=e1391]:
+            - cell ".FormFieldset-legend" [ref=e1392]:
+              - code [ref=e1393]: .FormFieldset-legend
+            - cell "Fieldset legend styling" [ref=e1394]
+      - separator [ref=e1395]
+      - heading "CSS Reference" [level=2] [ref=e1396]
+      - generic [ref=e1397]:
+        - code [ref=e1399]:
+          - text: "/* Form Field */ .FormField { display: flex; flex-direction: column; gap: var(--space-1); } .FormField-label { font-size: 0.875rem; font-weight: 500; color: var(--fg); } .FormField-label--required::after { content: \" *\"; color: oklch(55% 0.2 25); } .FormField-helper { font-size: 0.8rem; color: var(--fg-3); } .FormField-message { display: flex; align-items: center; gap: var(--space-1); font-size: 0.8rem; } .FormField-message--error { color: oklch(55% 0.2 25); } .FormField-message--success { color: oklch(55% 0.15 150); } .FormField-footer { display: flex; justify-content: space-between; align-items: center; } .FormField-count { font-size: 0.8rem; color: var(--fg-3); } /* Input */ .Input { width: 100%; padding: var(--space-2) var(--space-3); font-size: 0.9rem; border: 1px solid var(--bd-s); border-radius: var(--r-s); background: var(--bg); color: var(--fg); transition: border-color 0.15s, box-shadow 0.15s; } .Input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 2px oklch(60% 0.15 250 / 0.15); } .Input::placeholder { color: var(--fg-3); } .Input:disabled { opacity: 0.5; cursor: not-allowed; background: var(--bg-s); } /* Input Sizes */ .Input--small { padding: var(--space-1) var(--space-2); font-size: 0.8rem; } .Input--large { padding: var(--space-3) var(--space-4); font-size: 1rem; } /* Input States */ .Input--error { border-color: oklch(55% 0.2 25); } .Input--error:focus { box-shadow: 0 0 0 2px oklch(55% 0.2 25 / 0.15); } .Input--success { border-color: oklch(55% 0.15 150); } .Input--success:focus { box-shadow: 0 0 0 2px oklch(55% 0.15 150 / 0.15); } /* Input with Icons */ .Input-wrapper { position: relative; display: flex; align-items: center; } .Input-icon { position: absolute; left: var(--space-3); color: var(--fg-3); pointer-events: none; } .Input-icon--trailing { left: auto; right: var(--space-3); } .Input--withIcon { padding-left: calc(var(--space-3) + 1.25rem + var(--space-2)); } .Input--withIconTrailing { padding-right: calc(var(--space-3) + 1.25rem + var(--space-2)); } .Input-toggle { position: absolute; right: var(--space-2); background: none; border: none; cursor: pointer; color: var(--fg-3); padding: var(--space-1); } /* Input Group */ .Input-group { display: flex; } .Input--grouped { border-top-right-radius: 0; border-bottom-right-radius: 0; border-right: none; } .Input-group .Button { border-top-left-radius: 0; border-bottom-left-radius: 0; } /* Textarea */ .Textarea { width: 100%; padding: var(--space-2) var(--space-3); font-size: 0.9rem; border: 1px solid var(--bd-s); border-radius: var(--r-s); background: var(--bg); color: var(--fg); resize: vertical; min-height: 80px; font-family: inherit; transition: border-color 0.15s, box-shadow 0.15s; } .Textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 2px oklch(60% 0.15 250 / 0.15); } /* Select */ .Select { width: 100%; padding: var(--space-2) var(--space-3); font-size: 0.9rem; border: 1px solid var(--bd-s); border-radius: var(--r-s); background: var(--bg); color: var(--fg); appearance: none; background-image:"
+          - generic [ref=e1400]: url("data:image/svg+xml,...")
+          - text: "; background-repeat: no-repeat; background-position: right var(--space-3) center; cursor: pointer; } /* Checkbox */ .Checkbox { display: flex; align-items: center; gap: var(--space-2); cursor: pointer; } .Checkbox-input { position: absolute; opacity: 0; width: 0; height: 0; } .Checkbox-box { width: 18px; height: 18px; border: 2px solid var(--bd-s); border-radius: var(--r-xs); display: flex; align-items: center; justify-content: center; transition: background-color 0.15s, border-color 0.15s; flex-shrink: 0; } .Checkbox-input:checked + .Checkbox-box { background-color: var(--accent); border-color: var(--accent); } .Checkbox-input:focus-visible + .Checkbox-box { outline: 2px solid var(--accent); outline-offset: 2px; } .Checkbox--disabled { opacity: 0.5; cursor: not-allowed; } .Checkbox-label { font-size: 0.9rem; } /* Radio */ .Radio { display: flex; align-items: center; gap: var(--space-2); cursor: pointer; } .Radio-input { position: absolute; opacity: 0; width: 0; height: 0; } .Radio-circle { width: 18px; height: 18px; border: 2px solid var(--bd-s); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: border-color 0.15s; flex-shrink: 0; } .Radio-input:checked + .Radio-circle { border-color: var(--accent); } .Radio-input:checked + .Radio-circle::after { content: \"\"; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); } .RadioGroup { display: flex; flex-direction: column; gap: var(--space-3); } /* Radio Card */ .RadioCardGroup { display: flex; flex-direction: column; gap: var(--space-3); } .RadioCard { display: flex; padding: var(--space-4); border: 1px solid var(--bd); border-radius: var(--r-m); cursor: pointer; transition: border-color 0.15s, box-shadow 0.15s; } .RadioCard--selected { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); } /* Switch */ .Switch { display: flex; align-items: center; gap: var(--space-3); cursor: pointer; } .Switch-input { position: absolute; opacity: 0; width: 0; height: 0; } .Switch-track { width: 40px; height: 22px; background: var(--bg-s); border: 1px solid var(--bd-s); border-radius: 11px; position: relative; transition: background-color 0.2s, border-color 0.2s; flex-shrink: 0; } .Switch-track::after { content: \"\"; position: absolute; width: 16px; height: 16px; border-radius: 50%; background: white; top: 2px; left: 2px; transition: transform 0.2s; } .Switch-input:checked + .Switch-track { background: var(--accent); border-color: var(--accent); } .Switch-input:checked + .Switch-track::after { transform: translateX(18px); } .Switch--small .Switch-track { width: 32px; height: 18px; } .Switch--large .Switch-track { width: 48px; height: 26px; } .Switch--disabled { opacity: 0.5; cursor: not-allowed; } .Switch--block { display: flex; justify-content: space-between; padding: var(--space-3); border: 1px solid var(--bd); border-radius: var(--r-m); } .Switch-content { display: flex; flex-direction: column; gap: var(--space-1); } .Switch-description { font-size: 0.8rem; color: var(--fg-3); } /* File Input */ .FileInput { position: relative; } .FileInput-input { position: absolute; opacity: 0; width: 0; height: 0; } .FileInput-label { display: flex; flex-direction: column; align-items: center; gap: var(--space-2); padding: var(--space-6); border: 2px dashed var(--bd); border-radius: var(--r-m); cursor: pointer; text-align: center; transition: border-color 0.15s, background 0.15s; } .FileInput-label:hover { border-color: var(--accent); background: oklch(60% 0.15 250 / 0.05); } .FileInput-icon { font-size: 1.5rem; color: var(--fg-3); } .FileInput-text { font-weight: 500; } .FileInput-hint { font-size: 0.8rem; color: var(--fg-3); } .FileInput-list { display: flex; flex-direction: column; gap: var(--space-2); } .FileInput-item { display: flex; align-items: center; gap: var(--space-2); padding: var(--space-2); border: 1px solid var(--bd); border-radius: var(--r-s); } /* Form Layouts */ .FormInline { display: flex; gap: var(--space-3); align-items: flex-end; } .FormRow { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); } .FormFieldset { border: none; padding: 0; margin: 0; } .FormFieldset-legend { font-weight: 600; margin-bottom: var(--space-3); }"
+        - button "Copy code" [ref=e1401] [cursor=pointer]:
+          - generic [ref=e1402]: 
+      - separator [ref=e1403]
+      - heading "Accessibility" [level=2] [ref=e1404]
+      - heading "Labels" [level=3] [ref=e1405]
+      - paragraph [ref=e1406]:
+        - text: Always associate labels with inputs using
+        - code [ref=e1407]: for
+        - text: /
+        - code [ref=e1408]: id
+        - text: or by wrapping.
+      - generic [ref=e1409]:
+        - code [ref=e1411]:
+          - text: "<!-- Method 1: for/id association -->"
+          - generic [ref=e1412]:
+            - generic [ref=e1413]: <label
+            - text: for
+            - generic [ref=e1414]: ="email-field"
+            - text: ">"
+          - text: Email
+          - generic [ref=e1415]:
+            - generic [ref=e1416]: </label
+            - text: ">"
+          - generic [ref=e1417]:
+            - generic [ref=e1418]: <input
+            - text: type
+            - generic [ref=e1419]: ="email"
+            - text: id
+            - generic [ref=e1420]: ="email-field"
+            - text: class
+            - generic [ref=e1421]: ="Input"
+            - text: ">"
+          - text: "<!-- Method 2: Wrap input in label -->"
+          - generic [ref=e1422]:
+            - generic [ref=e1423]: <label
+            - text: class
+            - generic [ref=e1424]: ="Checkbox"
+            - text: ">"
+          - generic [ref=e1425]:
+            - generic [ref=e1426]: <input
+            - text: type
+            - generic [ref=e1427]: ="checkbox"
+            - text: ">"
+          - generic [ref=e1428]:
+            - generic [ref=e1429]: <span
+            - text: class
+            - generic [ref=e1430]: ="Checkbox-label"
+            - text: ">"
+          - text: Accept terms
+          - generic [ref=e1431]:
+            - generic [ref=e1432]: </span
+            - text: ">"
+          - generic [ref=e1433]:
+            - generic [ref=e1434]: </label
+            - text: ">"
+        - button "Copy code" [ref=e1435] [cursor=pointer]:
+          - generic [ref=e1436]: 
+      - heading "Error Messages" [level=3] [ref=e1437]
+      - paragraph [ref=e1438]:
+        - text: Connect error messages to inputs with
+        - code [ref=e1439]: aria-describedby
+        - text: .
+      - generic [ref=e1440]:
+        - code [ref=e1442]:
+          - generic [ref=e1443]:
+            - generic [ref=e1444]: <input
+            - text: type
+            - generic [ref=e1445]: ="email"
+            - text: id
+            - generic [ref=e1446]: ="email"
+            - text: class
+            - generic [ref=e1447]: ="Input Input--error"
+            - text: aria-invalid
+            - generic [ref=e1448]: ="true"
+            - text: aria-describedby
+            - generic [ref=e1449]: ="email-error"
+            - text: ">"
+          - generic [ref=e1450]:
+            - generic [ref=e1451]: <span
+            - text: id
+            - generic [ref=e1452]: ="email-error"
+            - text: class
+            - generic [ref=e1453]: ="FormField-message FormField-message--error"
+            - text: ">"
+          - text: Please enter a valid email
+          - generic [ref=e1454]:
+            - generic [ref=e1455]: </span
+            - text: ">"
+        - button "Copy code" [ref=e1456] [cursor=pointer]:
+          - generic [ref=e1457]: 
+      - heading "Required Fields" [level=3] [ref=e1458]
+      - paragraph [ref=e1459]: Mark required fields programmatically.
+      - generic [ref=e1460]:
+        - code [ref=e1462]:
+          - generic [ref=e1463]:
+            - generic [ref=e1464]: <label
+            - text: for
+            - generic [ref=e1465]: ="name"
+            - text: ">"
+          - text: Name
+          - generic [ref=e1466]:
+            - generic [ref=e1467]: <span
+            - text: aria-hidden
+            - generic [ref=e1468]: ="true"
+            - text: ">"
+          - text: "*"
+          - generic [ref=e1469]:
+            - generic [ref=e1470]: </span
+            - text: ">"
+          - generic [ref=e1471]:
+            - generic [ref=e1472]: </label
+            - text: ">"
+          - generic [ref=e1473]:
+            - generic [ref=e1474]: <input
+            - text: type
+            - generic [ref=e1475]: ="text"
+            - text: id
+            - generic [ref=e1476]: ="name"
+            - text: required aria-required
+            - generic [ref=e1477]: ="true"
+            - text: ">"
+        - button "Copy code" [ref=e1478] [cursor=pointer]:
+          - generic [ref=e1479]: 
+      - heading "Fieldsets for Groups" [level=3] [ref=e1480]
+      - paragraph [ref=e1481]: Use fieldsets to group related fields.
+      - generic [ref=e1482]:
+        - code [ref=e1484]:
+          - generic [ref=e1485]:
+            - generic [ref=e1486]: <fieldset
+            - text: ">"
+          - generic [ref=e1487]:
+            - generic [ref=e1488]: <legend
+            - text: ">"
+          - text: Shipping Address
+          - generic [ref=e1489]:
+            - generic [ref=e1490]: </legend
+            - text: ">"
+          - text: <!-- Address fields -->
+          - generic [ref=e1491]:
+            - generic [ref=e1492]: </fieldset
+            - text: ">"
+        - button "Copy code" [ref=e1493] [cursor=pointer]:
+          - generic [ref=e1494]: 
+      - heading "Keyboard Support" [level=3] [ref=e1495]
+      - table [ref=e1497]:
+        - rowgroup [ref=e1498]:
+          - row "Key Action" [ref=e1499]:
+            - columnheader "Key" [ref=e1500]
+            - columnheader "Action" [ref=e1501]
+        - rowgroup [ref=e1502]:
+          - row "Tab Move focus to next field" [ref=e1503]:
+            - cell "Tab" [ref=e1504]
+            - cell "Move focus to next field" [ref=e1505]
+          - row "Shift + Tab Move focus to previous field" [ref=e1506]:
+            - cell "Shift + Tab" [ref=e1507]
+            - cell "Move focus to previous field" [ref=e1508]
+          - row "Space Toggle checkbox/switch, select radio" [ref=e1509]:
+            - cell "Space" [ref=e1510]
+            - cell "Toggle checkbox/switch, select radio" [ref=e1511]
+          - row "Arrow keys Navigate between radio options" [ref=e1512]:
+            - cell "Arrow keys" [ref=e1513]
+            - cell "Navigate between radio options" [ref=e1514]
+          - row "Enter Submit form (when on button)" [ref=e1515]:
+            - cell "Enter" [ref=e1516]
+            - cell "Submit form (when on button)" [ref=e1517]
+      - separator [ref=e1518]
+      - heading "Best Practices" [level=2] [ref=e1519]
+      - heading "Do" [level=3] [ref=e1520]
+      - list [ref=e1521]:
+        - listitem [ref=e1522]:
+          - text: ✓
+          - strong [ref=e1523]: Use clear, descriptive labels
+          - text: — “Email address” not “Input 1”
+        - listitem [ref=e1524]:
+          - text: ✓
+          - strong [ref=e1525]: Group related fields
+          - text: — Use fieldsets for address, payment info
+        - listitem [ref=e1526]:
+          - text: ✓
+          - strong [ref=e1527]: Show validation inline
+          - text: — Error messages next to the field
+        - listitem [ref=e1528]:
+          - text: ✓
+          - strong [ref=e1529]: Indicate required fields
+          - text: — Asterisk or “(required)” text
+        - listitem [ref=e1530]:
+          - text: ✓
+          - strong [ref=e1531]: Provide helper text
+          - text: — Format hints, password requirements
+        - listitem [ref=e1532]:
+          - text: ✓
+          - strong [ref=e1533]: Use appropriate input types
+          - text: —
+          - code [ref=e1534]: type="email"
+          - text: ","
+          - code [ref=e1535]: type="tel"
+          - text: ", etc."
+        - listitem [ref=e1536]:
+          - text: ✓
+          - strong [ref=e1537]: Size touch targets
+          - text: — Minimum 44px for mobile
+      - heading "Don’t" [level=3] [ref=e1538]
+      - list [ref=e1539]:
+        - listitem [ref=e1540]:
+          - text: ✗
+          - strong [ref=e1541]: Use placeholder as label
+          - text: — Placeholders disappear on focus
+        - listitem [ref=e1542]:
+          - text: ✗
+          - strong [ref=e1543]: Disable submit without explanation
+          - text: — Show why it’s disabled
+        - listitem [ref=e1544]:
+          - text: ✗
+          - strong [ref=e1545]: Validate on every keystroke
+          - text: — Wait for blur or submit
+        - listitem [ref=e1546]:
+          - text: ✗
+          - strong [ref=e1547]: Use only color for errors
+          - text: — Add icons and text
+        - listitem [ref=e1548]:
+          - text: ✗
+          - strong [ref=e1549]: Reset forms on error
+          - text: — Preserve user input
+        - listitem [ref=e1550]:
+          - text: ✗
+          - strong [ref=e1551]: Hide password requirements
+          - text: — Show them upfront
+    - paragraph [ref=e1553]: "Carbon v0.3 • Last built: 2/8/2026, 3:06:47 PM"
+```
