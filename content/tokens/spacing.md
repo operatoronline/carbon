@@ -1,6 +1,6 @@
 # Spacing
 
-Carbon uses a **4px base unit** for all spacing. This isn't arbitrary — it's the smallest value that remains visible at 1x density, divides evenly at 2x and 3x screen densities, and aligns to the pixel grid at every common resolution. Every spacing decision in the system is a multiple of 4.
+Standard uses a **4px base unit** for all spacing. This isn't arbitrary — it's the smallest value that remains visible at 1x density, divides evenly at 2x and 3x screen densities, and aligns to the pixel grid at every common resolution. Every spacing decision in the system is a multiple of 4.
 
 The result: components breathe consistently, layouts feel unified, and the invisible grid that holds everything together stays invisible — which is exactly how you know it's working.
 
@@ -136,7 +136,7 @@ This follows **Weber's Law**: the just-noticeable difference in spacing is propo
 
 ## Spatial Hierarchy
 
-Spacing isn't just "how much room" — it communicates *relationships*. Closer things are related; farther things are separate. Carbon's scale maps to three spatial levels:
+Spacing isn't just "how much room" — it communicates *relationships*. Closer things are related; farther things are separate. Standard's scale maps to three spatial levels:
 
 <Preview title="Spatial Relationships">
     <div style="width: 100%; border: 1px solid var(--bd); border-radius: var(--r-l); padding: var(--space-8); background: var(--bg);">
@@ -279,7 +279,7 @@ Mobile interfaces need minimum tap areas of **44×44px** (Apple HIG) or **48×48
         <div style="display: flex; align-items: center; gap: var(--space-4);">
             <button class="Button Button--primary" style="height: 48px; display: flex; align-items: center; flex-shrink: 0;">Tap Target</button>
             <div>
-                <div style="font-size: .85rem; font-weight: 600;">Carbon default button</div>
+                <div style="font-size: .85rem; font-weight: 600;">Standard default button</div>
                 <div style="font-size: .75rem; color: var(--fg-3); font-family: var(--ff-m);">padding: space-2 space-4 → 40×48px ✓</div>
             </div>
         </div>

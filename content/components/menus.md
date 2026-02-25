@@ -6,10 +6,10 @@ Menus display a list of choices on temporary surfaces, typically triggered by bu
 
 ## Installation
 
-Copy the menu CSS from `styles/docs.css` or include the Carbon stylesheet:
+Copy the menu CSS from `styles/docs.css` or include the Standard stylesheet:
 
 ```html
-<link rel="stylesheet" href="carbon.min.css">
+<link rel="stylesheet" href="standard.min.css">
 ```
 
 Then use menu classes in your HTML:

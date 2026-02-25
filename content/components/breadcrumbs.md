@@ -6,10 +6,10 @@ Breadcrumbs show the user's location within a site hierarchy and provide quick n
 
 ## Installation
 
-Copy the breadcrumb CSS from `styles/docs.css` or include the Carbon stylesheet:
+Copy the breadcrumb CSS from `styles/docs.css` or include the Standard stylesheet:
 
 ```html
-<link rel="stylesheet" href="carbon.min.css">
+<link rel="stylesheet" href="standard.min.css">
 ```
 
 Then use breadcrumb classes in your HTML:
@@ -180,10 +180,10 @@ Breadcrumbs typically appear above the page title.
         <ol class="Breadcrumb-list">
             <li class="Breadcrumb-item"><a href="#">Dashboard</a></li>
             <li class="Breadcrumb-item"><a href="#">Projects</a></li>
-            <li class="Breadcrumb-item" aria-current="page">Carbon Design System</li>
+            <li class="Breadcrumb-item" aria-current="page">Standard Design System</li>
         </ol>
     </nav>
-    <h1 style="font-size: 1.5rem; font-weight: 600; margin: 0;">Carbon Design System</h1>
+    <h1 style="font-size: 1.5rem; font-weight: 600; margin: 0;">Standard Design System</h1>
 </div>
 </Preview>
 

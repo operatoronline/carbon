@@ -1,6 +1,6 @@
 # Typography
 
-Carbon's type system is built on a deliberate tension: **three fonts, each chosen for a specific emotional register**. Instrument Serif carries the weight of tradition — gravitas, authority, the feeling that words matter. Outfit is the geometric sans-serif that says clarity and modernity without trying too hard. JetBrains Mono is precision itself — every character the same width, every symbol unambiguous.
+Standard's type system is built on a deliberate tension: **three fonts, each chosen for a specific emotional register**. Instrument Serif carries the weight of tradition — gravitas, authority, the feeling that words matter. Outfit is the geometric sans-serif that says clarity and modernity without trying too hard. JetBrains Mono is precision itself — every character the same width, every symbol unambiguous.
 
 Together, they create a visual language where hierarchy isn't just size — it's *voice*.
 
@@ -33,7 +33,7 @@ Together, they create a visual language where hierarchy isn't just size — it's
 
 ### Why These Three?
 
-Most design systems pick one sans-serif and call it done. Carbon uses three because each serves a fundamentally different purpose:
+Most design systems pick one sans-serif and call it done. Standard uses three because each serves a fundamentally different purpose:
 
 <Preview title="Design Philosophy">
     <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); width: 100%;">
@@ -133,13 +133,13 @@ A modular scale creates sizes that feel *related* rather than arbitrary. Here's 
     </div>
 </Preview>
 
-The 1.25 ratio (Major Third) is deliberate — assertive enough to create clear hierarchy, restrained enough to avoid jarring jumps. Larger ratios (like 1.414 Augmented Fourth) work for dramatic editorial design; smaller ratios (like 1.125 Major Second) suit dense data UIs. Carbon's 1.25 sits in the sweet spot for documentation and product interfaces.
+The 1.25 ratio (Major Third) is deliberate — assertive enough to create clear hierarchy, restrained enough to avoid jarring jumps. Larger ratios (like 1.414 Augmented Fourth) work for dramatic editorial design; smaller ratios (like 1.125 Major Second) suit dense data UIs. Standard's 1.25 sits in the sweet spot for documentation and product interfaces.
 
 ---
 
 ## Vertical Rhythm
 
-When line heights and spacing share a common unit, text across adjacent columns aligns to the same invisible grid. Carbon's type system uses a **4px baseline** — every line height resolves to a multiple of 4px.
+When line heights and spacing share a common unit, text across adjacent columns aligns to the same invisible grid. Standard's type system uses a **4px baseline** — every line height resolves to a multiple of 4px.
 
 <Preview title="Baseline Rhythm">
     <div style="position: relative; width: 100%;">
@@ -453,7 +453,7 @@ Optimized typography for long-form reading.
 
 <Preview title="Prose Example">
     <div class="prose" style="max-width: 65ch;">
-        <p style="margin-bottom: var(--space-4); line-height: 1.7; color: var(--fg-2);">Good typography is invisible. When type is well-set, the reader doesn't notice the mechanics — they simply absorb the content. This is the goal of Carbon's typography system.</p>
+        <p style="margin-bottom: var(--space-4); line-height: 1.7; color: var(--fg-2);">Good typography is invisible. When type is well-set, the reader doesn't notice the mechanics — they simply absorb the content. This is the goal of Standard's typography system.</p>
         <p style="margin-bottom: var(--space-4); line-height: 1.7; color: var(--fg-2);">The <strong style="font-weight: 600; color: var(--fg);">measure</strong> (line length) is kept between 45-75 characters for optimal readability. Combined with generous <em>line-height</em> and proper spacing between paragraphs, long-form content becomes effortless to read.</p>
         <p style="line-height: 1.7; color: var(--fg-2);">Notice how your eye flows naturally from line to line without strain.</p>
     </div>

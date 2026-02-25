@@ -6,10 +6,10 @@ Cards are flexible containers that group related content and actions. They provi
 
 ## Installation
 
-Copy the card CSS from `styles/docs.css` or include the Carbon stylesheet:
+Copy the card CSS from `styles/docs.css` or include the Standard stylesheet:
 
 ```html
-<link rel="stylesheet" href="carbon.min.css">
+<link rel="stylesheet" href="standard.min.css">
 ```
 
 Then use card classes in your HTML:
@@ -332,7 +332,7 @@ Cards containing list items.
             </div>
             <div class="Card-list-content">
                 <span class="Card-list-title">Project starred</span>
-                <span class="Card-list-meta">Carbon Design System • 3 hours ago</span>
+                <span class="Card-list-meta">Standard Design System • 3 hours ago</span>
             </div>
         </li>
     </ul>

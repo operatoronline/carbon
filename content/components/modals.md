@@ -6,10 +6,10 @@ Modals are overlay dialogs that require user interaction before returning to the
 
 ## Installation
 
-Copy the modal CSS from `styles/docs.css` or include the Carbon stylesheet:
+Copy the modal CSS from `styles/docs.css` or include the Standard stylesheet:
 
 ```html
-<link rel="stylesheet" href="carbon.min.css">
+<link rel="stylesheet" href="standard.min.css">
 ```
 
 Basic modal structure:

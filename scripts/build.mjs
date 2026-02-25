@@ -124,7 +124,7 @@ const CONFIG = {
 
 async function build() {
     const startTime = Date.now();
-    console.log('🚀 Starting Carbon v0.3 build...');
+    console.log('🚀 Starting Standard v1.0 build...');
 
     const template = await fs.readFile(CONFIG.templatePath, 'utf-8');
 
@@ -193,7 +193,7 @@ async function build() {
 
         // Generate Breadcrumbs
         const pathParts = relativePath.replace('.md', '').split(path.sep);
-        let breadcrumbsHtml = `<a href="${relRoot}index.html">Carbon</a>`;
+        let breadcrumbsHtml = `<a href="${relRoot}index.html">Standard</a>`;
         let accumulatedPath = relRoot;
         if (pathParts[0] !== 'index') {
             for (let i = 0; i < pathParts.length; i++) {

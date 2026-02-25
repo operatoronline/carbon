@@ -1,4 +1,4 @@
-# Carbon Design System
+# Standard Design System
 
 A framework-agnostic design system built on OKLCH colors, a 4px spacing scale, and zero dependencies. Static HTML — host anywhere.
 

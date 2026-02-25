@@ -6,10 +6,10 @@ Tabs organize content into separate views, allowing users to switch between rela
 
 ## Installation
 
-Copy the tabs CSS from `styles/docs.css` or include the Carbon stylesheet:
+Copy the tabs CSS from `styles/docs.css` or include the Standard stylesheet:
 
 ```html
-<link rel="stylesheet" href="carbon.min.css">
+<link rel="stylesheet" href="standard.min.css">
 ```
 
 Then use tabs classes in your HTML:

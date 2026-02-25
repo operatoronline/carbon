@@ -325,7 +325,7 @@ Common pattern for tag inputs in forms.
                 <span class="Chip Chip--small Chip--outlined Chip--primary">Tutorial</span>
                 <span class="Chip Chip--small Chip--outlined">Beginner</span>
             </div>
-            <div class="Card-title">Getting Started with Carbon</div>
+            <div class="Card-title">Getting Started with Standard</div>
             <div class="Card-description">Learn how to set up and customize the design system.</div>
         </div>
     </div>

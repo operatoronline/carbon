@@ -1,6 +1,6 @@
 # Colors
 
-Carbon's palette is built on **OKLCH** — a perceptually uniform color space where equal lightness values produce equal perceived brightness. The accent hue is **270° purple**.
+Standard's palette is built on **OKLCH** — a perceptually uniform color space where equal lightness values produce equal perceived brightness. The accent hue is **270° purple**.
 
 ---
 

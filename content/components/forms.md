@@ -1,15 +1,15 @@
 # Forms
 
-Forms allow users to enter data and interact with the system. Carbon provides a complete set of form controls including inputs, textareas, selects, checkboxes, radio buttons, switches, and file uploads — all with built-in validation states and accessibility.
+Forms allow users to enter data and interact with the system. Standard provides a complete set of form controls including inputs, textareas, selects, checkboxes, radio buttons, switches, and file uploads — all with built-in validation states and accessibility.
 
 ---
 
 ## Installation
 
-Copy the form CSS from `styles/docs.css` or include the Carbon stylesheet:
+Copy the form CSS from `styles/docs.css` or include the Standard stylesheet:
 
 ```html
-<link rel="stylesheet" href="carbon.min.css">
+<link rel="stylesheet" href="standard.min.css">
 ```
 
 Then use form classes in your HTML:

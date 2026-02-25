@@ -6,10 +6,10 @@ Dropdowns display a list of actions or options when triggered. They help declutt
 
 ## Installation
 
-Copy the dropdown CSS from `styles/docs.css` or include the Carbon stylesheet:
+Copy the dropdown CSS from `styles/docs.css` or include the Standard stylesheet:
 
 ```html
-<link rel="stylesheet" href="carbon.min.css">
+<link rel="stylesheet" href="standard.min.css">
 ```
 
 Then use dropdown classes in your HTML:

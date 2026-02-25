@@ -6,10 +6,10 @@ Accordions expand and collapse content sections, helping users focus on relevant
 
 ## Installation
 
-Copy the accordion CSS from `styles/docs.css` or include the Carbon stylesheet:
+Copy the accordion CSS from `styles/docs.css` or include the Standard stylesheet:
 
 ```html
-<link rel="stylesheet" href="carbon.min.css">
+<link rel="stylesheet" href="standard.min.css">
 ```
 
 Then use accordion classes in your HTML:
@@ -34,9 +34,9 @@ The base `.Accordion` class provides the container styling. Each panel uses nati
 <Preview>
 <div class="Accordion">
     <details class="Accordion-item">
-        <summary class="Accordion-header">What is Carbon?</summary>
+        <summary class="Accordion-header">What is Standard?</summary>
         <div class="Accordion-content">
-            <p>Carbon is a framework-agnostic design system built with OKLCH colors and a 4px spacing scale.</p>
+            <p>Standard is a framework-agnostic design system built with OKLCH colors and a 4px spacing scale.</p>
         </div>
     </details>
     <details class="Accordion-item">
@@ -106,7 +106,7 @@ Add visible borders between items with the `.Accordion--bordered` modifier.
             <i class="ph ph-caret-down Accordion-icon"></i>
         </summary>
         <div class="Accordion-content">
-            <p>Learn the basics of using Carbon in your projects.</p>
+            <p>Learn the basics of using Standard in your projects.</p>
         </div>
     </details>
     <details class="Accordion-item">

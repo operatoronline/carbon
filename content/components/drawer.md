@@ -125,7 +125,7 @@ A sidebar navigation pattern.
       <div class="Drawer-header">
         <div style="display: flex; align-items: center; gap: var(--space-2);">
           <div style="width: 32px; height: 32px; background: var(--accent); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">C</div>
-          <span style="font-weight: 600;">Carbon</span>
+          <span style="font-weight: 600;">Standard</span>
         </div>
       </div>
       <nav class="Drawer-nav">

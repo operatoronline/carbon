@@ -6,7 +6,7 @@ Sliders allow users to select a value or range from a continuous or discrete set
 
 ## Basic Slider
 
-A simple range input with Carbon styling.
+A simple range input with Standard styling.
 
 <Preview title="Basic Slider">
     <div style="width: 100%; max-width: 320px;">

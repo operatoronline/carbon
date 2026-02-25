@@ -1,7 +1,7 @@
 {
-  "name": "carbon-design-system",
+  "name": "standard-design-system",
   "version": "0.3.0",
-  "description": "Framework-agnostic design system.",
+  "description": "Standard Design System — Framework-agnostic design system.",
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",

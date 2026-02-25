@@ -413,7 +413,7 @@ Avatars that respond to user interaction.
             </button>
         </div>
         <h3 style="margin: 0 0 var(--space-1);">Sarah Chen</h3>
-        <p style="color: var(--fg-3); margin: 0 0 var(--space-4); font-size: 0.9rem;">Senior Product Designer at Carbon</p>
+        <p style="color: var(--fg-3); margin: 0 0 var(--space-4); font-size: 0.9rem;">Senior Product Designer at Standard</p>
         <div style="display: flex; justify-content: center; gap: var(--space-3);">
             <button class="Button Button--primary Button--small">Follow</button>
             <button class="Button Button--secondary Button--small">Message</button>

@@ -1,6 +1,6 @@
 # Canonical Page Structure
 
-This document defines the required section structure for all Carbon Design System pages. Every sub-agent MUST follow this exactly.
+This document defines the required section structure for all Standard Design System pages. Every sub-agent MUST follow this exactly.
 
 ---
 
@@ -124,7 +124,7 @@ Match the token pages (colors, typography, spacing) in richness:
 1. **Rich Preview blocks** — Every major concept gets a visual demo
 2. **Educational depth** — Explain WHY, not just WHAT
 3. **Comparison demos** — Show good vs bad when relevant
-4. **Inline styles in Previews** — Use Carbon's own CSS variables (var(--space-4), var(--accent), var(--ff-b), etc.)
+4. **Inline styles in Previews** — Use Standard's own CSS variables (var(--space-4), var(--accent), var(--ff-b), etc.)
 5. **No curved vertical bars** — Any vertical bar elements must NOT have border-radius (straight edges only)
 6. **Code examples** — Every Preview should have a corresponding code block showing the HTML
 
@@ -132,7 +132,7 @@ Match the token pages (colors, typography, spacing) in richness:
 
 ## Formatting Rules
 
-1. **Previews**: `<Preview title="...">` with inline CSS using Carbon tokens
+1. **Previews**: `<Preview title="...">` with inline CSS using Standard tokens
 2. **Tables**: API tables use `<table class="ApiTable">` HTML; other tables can use markdown
 3. **Code blocks**: Fenced with language (```html, ```css, ```js)
 4. **Headings**: H2 for main sections, H3 for subsections

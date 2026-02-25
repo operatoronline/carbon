@@ -6,10 +6,10 @@ Tables display structured data in rows and columns, making it easy to scan, comp
 
 ## Installation
 
-Copy the table CSS from `styles/docs.css` or include the Carbon stylesheet:
+Copy the table CSS from `styles/docs.css` or include the Standard stylesheet:
 
 ```html
-<link rel="stylesheet" href="carbon.min.css">
+<link rel="stylesheet" href="standard.min.css">
 ```
 
 Then use table classes in your HTML:

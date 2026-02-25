@@ -1,6 +1,6 @@
 # Icons
 
-Carbon uses **Phosphor Icons** for its visual language. Icons provide visual context, improve scannability, and reinforce meaning throughout the interface.
+Standard uses **Phosphor Icons** for its visual language. Icons provide visual context, improve scannability, and reinforce meaning throughout the interface.
 
 ---
 
