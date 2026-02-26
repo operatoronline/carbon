@@ -40,9 +40,9 @@ Rename & refactor Carbon Design System → Standard Design System, fully alignin
 ## Phase 3: Content & Structure Audit
 | Task | Status |
 |------|--------|
-| Verify all 33 component pages follow canonical structure | ⬜ Pending |
-| Verify all 3 token pages follow canonical structure | ⬜ Pending |
-| Verify all 2 pattern pages follow canonical structure | ⬜ Pending |
+| Verify all 32 component pages follow canonical structure | ✅ Done — all 6 sections present, correct order, ApiTable HTML |
+| Verify all 3 token pages follow canonical structure | ✅ Done — Best Practices + Quick Reference present |
+| Verify all 2 pattern pages follow canonical structure | ✅ Done — Best Practices + CSS Reference present |
 | Update CANONICAL-STRUCTURE.md with new naming | ✅ Done |
 
 ## Phase 4: Build & Test
