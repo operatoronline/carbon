@@ -195,7 +195,7 @@ Empty states within card components.
 
 <Preview title="Empty Card">
     <div class="Layout-grid" style="width: 100%;">
-        <div class="Layout-col-6">
+        <div class="Layout-col-12">
             <div class="Card" style="height: 200px;">
                 <div class="Card-body" style="height: 100%; display: flex; align-items: center; justify-content: center;">
                     <div class="EmptyState EmptyState--compact">
@@ -205,7 +205,7 @@ Empty states within card components.
                 </div>
             </div>
         </div>
-        <div class="Layout-col-6">
+        <div class="Layout-col-12">
             <div class="Card" style="height: 200px;">
                 <div class="Card-body" style="height: 100%; display: flex; align-items: center; justify-content: center;">
                     <div class="EmptyState EmptyState--compact">

@@ -3064,7 +3064,7 @@ details[open] .Accordion-icon {
 /* Grid */
 .Layout-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(24, 1fr);
   gap: var(--space-4);
 }
 
@@ -3080,10 +3080,22 @@ details[open] .Accordion-icon {
 .Layout-col-10 { grid-column: span 10; }
 .Layout-col-11 { grid-column: span 11; }
 .Layout-col-12 { grid-column: span 12; }
+.Layout-col-13 { grid-column: span 13; }
+.Layout-col-14 { grid-column: span 14; }
+.Layout-col-15 { grid-column: span 15; }
+.Layout-col-16 { grid-column: span 16; }
+.Layout-col-17 { grid-column: span 17; }
+.Layout-col-18 { grid-column: span 18; }
+.Layout-col-19 { grid-column: span 19; }
+.Layout-col-20 { grid-column: span 20; }
+.Layout-col-21 { grid-column: span 21; }
+.Layout-col-22 { grid-column: span 22; }
+.Layout-col-23 { grid-column: span 23; }
+.Layout-col-24 { grid-column: span 24; }
 
 @media (max-width: 767px) {
   .Layout-grid > * {
-    grid-column: span 12;
+    grid-column: span 24;
   }
 }
 
@@ -3161,6 +3173,18 @@ details[open] .Accordion-icon {
   .Layout-col-10\@md { grid-column: span 10; }
   .Layout-col-11\@md { grid-column: span 11; }
   .Layout-col-12\@md { grid-column: span 12; }
+  .Layout-col-13\@md { grid-column: span 13; }
+  .Layout-col-14\@md { grid-column: span 14; }
+  .Layout-col-15\@md { grid-column: span 15; }
+  .Layout-col-16\@md { grid-column: span 16; }
+  .Layout-col-17\@md { grid-column: span 17; }
+  .Layout-col-18\@md { grid-column: span 18; }
+  .Layout-col-19\@md { grid-column: span 19; }
+  .Layout-col-20\@md { grid-column: span 20; }
+  .Layout-col-21\@md { grid-column: span 21; }
+  .Layout-col-22\@md { grid-column: span 22; }
+  .Layout-col-23\@md { grid-column: span 23; }
+  .Layout-col-24\@md { grid-column: span 24; }
 }
 
 /* ═══════════════════════════════════════

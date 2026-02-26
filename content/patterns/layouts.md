@@ -32,33 +32,33 @@ Centers content with a max-width and horizontal padding.
 
 ## Grid
 
-A 12-column grid. All columns collapse to full-width below 768px. Use `Layout-col-{n}@md` for responsive spans.
+A 24-column fluid grid. All columns collapse to full-width below 768px. Use `Layout-col-{n}@md` for responsive spans. The 24-column system gives finer control — thirds (8-col), halves (12-col), quarters (6-col), and asymmetric splits like 16/8 or 18/6.
 
-<Preview title="Equal Columns">
+<Preview title="Equal Thirds">
     <div class="Layout-grid" style="width: 100%;">
-        <div class="Layout-col-4" style="background: var(--accent); color: white; padding: var(--space-3); border-radius: var(--r-s); text-align: center; font-weight: 600;">4</div>
-        <div class="Layout-col-4" style="background: var(--accent); color: white; padding: var(--space-3); border-radius: var(--r-s); text-align: center; font-weight: 600;">4</div>
-        <div class="Layout-col-4" style="background: var(--accent); color: white; padding: var(--space-3); border-radius: var(--r-s); text-align: center; font-weight: 600;">4</div>
+        <div class="Layout-col-8" style="background: var(--accent); color: white; padding: var(--space-3); border-radius: var(--r-s); text-align: center; font-weight: 600;">8</div>
+        <div class="Layout-col-8" style="background: var(--accent); color: white; padding: var(--space-3); border-radius: var(--r-s); text-align: center; font-weight: 600;">8</div>
+        <div class="Layout-col-8" style="background: var(--accent); color: white; padding: var(--space-3); border-radius: var(--r-s); text-align: center; font-weight: 600;">8</div>
     </div>
 </Preview>
 
 <Preview title="Asymmetric (Main + Sidebar)">
     <div class="Layout-grid" style="width: 100%;">
-        <div class="Layout-col-8" style="background: oklch(55% 0.15 270); color: white; padding: var(--space-4); border-radius: var(--r-s); font-weight: 600;">8 — Main</div>
-        <div class="Layout-col-4" style="background: oklch(75% 0.08 270); padding: var(--space-4); border-radius: var(--r-s);">4 — Side</div>
+        <div class="Layout-col-16" style="background: oklch(55% 0.15 270); color: white; padding: var(--space-4); border-radius: var(--r-s); font-weight: 600;">16 — Main</div>
+        <div class="Layout-col-8" style="background: oklch(75% 0.08 270); padding: var(--space-4); border-radius: var(--r-s);">8 — Side</div>
     </div>
 </Preview>
 
 ```html
 <div class="Layout-grid">
-    <div class="Layout-col-8">Main content</div>
-    <div class="Layout-col-4">Sidebar</div>
+    <div class="Layout-col-16">Main content</div>
+    <div class="Layout-col-8">Sidebar</div>
 </div>
 
 <!-- Responsive: full on mobile, halves on tablet+ -->
 <div class="Layout-grid">
-    <div class="Layout-col-12 Layout-col-6@md">Left</div>
-    <div class="Layout-col-12 Layout-col-6@md">Right</div>
+    <div class="Layout-col-24 Layout-col-12@md">Left</div>
+    <div class="Layout-col-24 Layout-col-12@md">Right</div>
 </div>
 ```
 
@@ -223,9 +223,9 @@ These primitives are designed to nest. A typical page:
             </aside>
             <main class="Layout-stack">
                 <div class="Layout-grid">
-                    <div class="Layout-col-4">Stat card</div>
-                    <div class="Layout-col-4">Stat card</div>
-                    <div class="Layout-col-4">Stat card</div>
+                    <div class="Layout-col-8">Stat card</div>
+                    <div class="Layout-col-8">Stat card</div>
+                    <div class="Layout-col-8">Stat card</div>
                 </div>
                 <!-- Content -->
             </main>
@@ -261,14 +261,14 @@ These primitives are designed to nest. A typical page:
 </tr>
 <tr>
 <td><code class="ApiTable-prop">.Layout-grid</code></td>
-<td class="ApiTable-desc">12-column grid</td>
+<td class="ApiTable-desc">24-column fluid grid</td>
 </tr>
 <tr>
-<td><code class="ApiTable-prop">.Layout-col-{1-12}</code></td>
+<td><code class="ApiTable-prop">.Layout-col-{1-24}</code></td>
 <td class="ApiTable-desc">Column span</td>
 </tr>
 <tr>
-<td><code class="ApiTable-prop">.Layout-col-{1-12}@md</code></td>
+<td><code class="ApiTable-prop">.Layout-col-{1-24}@md</code></td>
 <td class="ApiTable-desc">Column span at 768px+</td>
 </tr>
 <tr>
@@ -315,7 +315,7 @@ These primitives are designed to nest. A typical page:
 - ✓ **Start with Container** — Wrap page content in `Layout-container` to constrain width and center the layout
 - ✓ **Use Stack as your default** — Most vertical arrangements should use `Layout-stack` rather than custom margins
 - ✓ **Compose primitives** — Nest Grid inside Stack inside Container; these are building blocks, not standalone solutions
-- ✓ **Use responsive column classes** — Apply `Layout-col-12 Layout-col-6@md` so layouts collapse gracefully on mobile
+- ✓ **Use responsive column classes** — Apply `Layout-col-24 Layout-col-12@md` so layouts collapse gracefully on mobile
 - ✓ **Choose the right gap** — Use `--tight` for related items (form fields), default for sections, `--loose` for page-level spacing
 
 ### Don't
@@ -347,10 +347,10 @@ These primitives are designed to nest. A typical page:
   max-width: 1280px;
 }
 
-/* ── Grid ── */
+/* ── Grid (24-column) ── */
 .Layout-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(24, 1fr);
   gap: var(--space-4);
 }
 
@@ -359,27 +359,31 @@ These primitives are designed to nest. A typical page:
 .Layout-col-3  { grid-column: span 3; }
 .Layout-col-4  { grid-column: span 4; }
 .Layout-col-5  { grid-column: span 5; }
-.Layout-col-6  { grid-column: span 6; }
+.Layout-col-6  { grid-column: span 6; }  /* Quarter */
 .Layout-col-7  { grid-column: span 7; }
-.Layout-col-8  { grid-column: span 8; }
+.Layout-col-8  { grid-column: span 8; }  /* Third */
 .Layout-col-9  { grid-column: span 9; }
 .Layout-col-10 { grid-column: span 10; }
 .Layout-col-11 { grid-column: span 11; }
-.Layout-col-12 { grid-column: span 12; }
+.Layout-col-12 { grid-column: span 12; } /* Half */
+.Layout-col-13 { grid-column: span 13; }
+.Layout-col-14 { grid-column: span 14; }
+.Layout-col-15 { grid-column: span 15; }
+.Layout-col-16 { grid-column: span 16; } /* Two-thirds */
+.Layout-col-17 { grid-column: span 17; }
+.Layout-col-18 { grid-column: span 18; } /* Three-quarters */
+.Layout-col-19 { grid-column: span 19; }
+.Layout-col-20 { grid-column: span 20; }
+.Layout-col-21 { grid-column: span 21; }
+.Layout-col-22 { grid-column: span 22; }
+.Layout-col-23 { grid-column: span 23; }
+.Layout-col-24 { grid-column: span 24; } /* Full */
 
 @media (min-width: 768px) {
   .Layout-col-1\@md  { grid-column: span 1; }
-  .Layout-col-2\@md  { grid-column: span 2; }
-  .Layout-col-3\@md  { grid-column: span 3; }
-  .Layout-col-4\@md  { grid-column: span 4; }
-  .Layout-col-5\@md  { grid-column: span 5; }
-  .Layout-col-6\@md  { grid-column: span 6; }
-  .Layout-col-7\@md  { grid-column: span 7; }
-  .Layout-col-8\@md  { grid-column: span 8; }
-  .Layout-col-9\@md  { grid-column: span 9; }
-  .Layout-col-10\@md { grid-column: span 10; }
-  .Layout-col-11\@md { grid-column: span 11; }
+  /* ... spans 2-23 ... */
   .Layout-col-12\@md { grid-column: span 12; }
+  .Layout-col-24\@md { grid-column: span 24; }
 }
 
 /* ── Stack ── */
