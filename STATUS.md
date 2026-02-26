@@ -49,9 +49,9 @@ Rename & refactor Carbon Design System → Standard Design System, fully alignin
 | Task | Status |
 |------|--------|
 | Run build (`node scripts/build.mjs`) and verify clean output | ✅ Done (38 pages, 176ms) |
-| Run Playwright tests and fix any regressions | ⬜ Pending |
-| Visual spot-check deployed site | ⬜ Pending |
-| Update Playwright snapshots if needed | ⬜ Pending |
+| Run Playwright tests and fix any regressions | ✅ Done — 68/68 passing |
+| Visual spot-check deployed site | ✅ Done (via Playwright desktop + mobile) |
+| Update Playwright snapshots if needed | ✅ Done — all 66 baselines regenerated |
 
 ## Phase 5: Infrastructure
 | Task | Status |
