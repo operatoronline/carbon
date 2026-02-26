@@ -56,12 +56,12 @@ Rename & refactor Carbon Design System → Standard Design System, fully alignin
 ## Phase 5: Infrastructure
 | Task | Status |
 |------|--------|
-| Rename GitHub repo (operatoronline/carbon → operatoronline/standard) | ⬜ Pending |
-| Update git remote | ⬜ Pending |
-| Create new Caddy config for standard.operator.onl | ⬜ Pending |
-| Update symlink (dist → /var/www/prototypes/standard) | ⬜ Pending |
-| Update TOOLS.md deployment table | ⬜ Pending |
-| Update MEMORY.md project section | ⬜ Pending |
+| Rename GitHub repo (operatoronline/carbon → operatoronline/standard) | ✅ Done |
+| Update git remote | ✅ Done (auto-updated by GitHub) |
+| Create new Caddy config for standard.operator.onl | ✅ Done (carbon.operator.onl kept as alias) |
+| Update symlink (dist → /var/www/prototypes/standard) | ✅ Done |
+| Update TOOLS.md deployment table | ✅ Done |
+| Update MEMORY.md project section | ✅ Done |
 
 ---
 

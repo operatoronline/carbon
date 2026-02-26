@@ -1,7 +1,7 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
 
-const BASE_URL = process.env.BASE_URL || 'https://carbon.operator.onl';
+const BASE_URL = process.env.BASE_URL || 'https://standard.operator.onl';
 
 export default defineConfig({
   testDir: './tests',
