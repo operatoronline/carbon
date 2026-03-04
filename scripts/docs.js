@@ -53,11 +53,11 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Determine current section from path
         let currentSection = 'home';
-        if (currentPath.includes('/tokens/')) {
+        if (currentPath.includes('/tokens/') || currentPath.includes('/tokens.html')) {
             currentSection = 'tokens';
-        } else if (currentPath.includes('/components/')) {
+        } else if (currentPath.includes('/components/') || currentPath.includes('/components.html')) {
             currentSection = 'components';
-        } else if (currentPath.includes('/patterns/')) {
+        } else if (currentPath.includes('/patterns/') || currentPath.includes('/patterns.html')) {
             currentSection = 'patterns';
         }
         
@@ -65,6 +65,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const section = link.getAttribute('data-section');
             if (section === currentSection) {
                 link.classList.add('active');
+                link.setAttribute('aria-current', section === currentSection && currentPath === link.pathname ? 'page' : 'true');
+            } else {
+                link.removeAttribute('aria-current');
             }
         });
     }
