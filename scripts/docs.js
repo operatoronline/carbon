@@ -357,6 +357,60 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ═══════════════════════════════════════
+    // PAGE TRANSITIONS
+    // ═══════════════════════════════════════
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const hasViewTransitions = 'startViewTransition' in document;
+
+    // For browsers WITHOUT View Transitions API: intercept internal links
+    // and add a smooth fade-out before navigating.
+    // For browsers WITH the API, the CSS @view-transition { navigation: auto }
+    // handles cross-document transitions natively — no JS interception needed.
+    if (!hasViewTransitions && !prefersReducedMotion) {
+        document.addEventListener('click', (e) => {
+            const link = e.target.closest('a[href]');
+            if (!link) return;
+
+            const href = link.getAttribute('href');
+            // Skip: external links, anchors, new tabs, special protocols
+            if (!href ||
+                href.startsWith('#') ||
+                href.startsWith('http') ||
+                href.startsWith('mailto:') ||
+                href.startsWith('tel:') ||
+                link.target === '_blank' ||
+                e.ctrlKey || e.metaKey || e.shiftKey) {
+                return;
+            }
+
+            // Only intercept same-origin relative links
+            try {
+                const url = new URL(href, window.location.origin);
+                if (url.origin !== window.location.origin) return;
+            } catch { return; }
+
+            e.preventDefault();
+
+            const mainContent = document.querySelector('.main-content');
+            if (!mainContent) {
+                window.location.href = href;
+                return;
+            }
+
+            // Trigger exit animation
+            mainContent.classList.add('page-exit');
+
+            // Navigate after exit animation completes
+            const duration = parseFloat(getComputedStyle(document.documentElement)
+                .getPropertyValue('--dur-n')) || 200;
+
+            setTimeout(() => {
+                window.location.href = href;
+            }, duration);
+        });
+    }
+
+    // ═══════════════════════════════════════
     // KEYBOARD SHORTCUTS
     // ═══════════════════════════════════════
     document.addEventListener('keydown', (e) => {

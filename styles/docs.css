@@ -4136,5 +4136,141 @@ details[open] .Accordion-icon {
 }
 
 /* ═══════════════════════════════════════
+   PAGE TRANSITIONS
+   ═══════════════════════════════════════ */
+
+/* --- View Transitions API (Chrome 111+, Edge 111+) --- */
+@view-transition {
+  navigation: auto;
+}
+
+/* Customize the default view transition animations */
+::view-transition-old(root) {
+  animation: vt-fade-out var(--dur-s) var(--ease) both;
+}
+::view-transition-new(root) {
+  animation: vt-fade-in var(--dur-s) var(--ease) both;
+}
+
+/* Main content gets a slide + fade for more depth */
+::view-transition-old(main-content) {
+  animation: vt-slide-out var(--dur-s) var(--ease) both;
+}
+::view-transition-new(main-content) {
+  animation: vt-slide-in var(--dur-s) var(--ease) both;
+}
+
+/* Tag the main content for its own transition group */
+.main-content {
+  view-transition-name: main-content;
+}
+
+/* Nav stays put during transitions */
+.fnav {
+  view-transition-name: fnav;
+}
+::view-transition-old(fnav),
+::view-transition-new(fnav) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+.top-bar {
+  view-transition-name: top-bar;
+}
+::view-transition-old(top-bar),
+::view-transition-new(top-bar) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+/* View Transition keyframes */
+@keyframes vt-fade-out {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+@keyframes vt-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes vt-slide-out {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(-8px); }
+}
+@keyframes vt-slide-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Fallback Page Transitions (all browsers) --- */
+/* Entry animation: content fades/slides in on page load */
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main-content {
+  animation: page-enter var(--dur-s) var(--ease) both;
+}
+
+/* Exit state: JS adds this class before navigation */
+.main-content.page-exit {
+  animation: page-exit var(--dur-n) var(--ease) both;
+}
+
+@keyframes page-exit {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
+/* Breadcrumbs stagger in slightly after main content */
+.page-header .breadcrumbs {
+  animation: page-enter var(--dur-s) var(--ease) both;
+  animation-delay: 40ms;
+}
+
+/* Title stagger */
+.page-header h1 {
+  animation: page-enter var(--dur-s) var(--ease) both;
+  animation-delay: 80ms;
+}
+
+/* Prose stagger */
+.prose {
+  animation: page-enter var(--dur-s) var(--ease) both;
+  animation-delay: 120ms;
+}
+
+/* --- Reduced Motion --- */
+@media (prefers-reduced-motion: reduce) {
+  .main-content,
+  .main-content.page-exit,
+  .page-header .breadcrumbs,
+  .page-header h1,
+  .prose {
+    animation: none !important;
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root),
+  ::view-transition-old(main-content),
+  ::view-transition-new(main-content) {
+    animation-duration: 0.001ms !important;
+  }
+}
+
+/* ═══════════════════════════════════════
    END OF STANDARD v0.3 STYLES
    ═══════════════════════════════════════ */
