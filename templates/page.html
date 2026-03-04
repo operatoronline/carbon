@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>{{TITLE}} | Standard</title>
+    <!-- Preload critical fonts (latin subsets) to eliminate FOIT/FOUT -->
+    <link rel="preload" href="{{REL_ROOT}}assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{REL_ROOT}}assets/fonts/instrument-serif-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{REL_ROOT}}assets/fonts/instrument-serif-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.css">
     <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
     <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/bold/style.css">
