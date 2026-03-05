@@ -859,3 +859,348 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+/* ═══════════════════════════════════════
+   TOKEN PLAYGROUND — Interactive OKLCH Tools
+   ═══════════════════════════════════════ */
+(function () {
+    'use strict';
+
+    // --- OKLCH → sRGB Conversion (for hex output and contrast calc) ---
+    // Attempt CSS.supports check for oklch; if not, we still render via CSS but hex approximations use math
+    function oklchToLinearRGB(l, c, h) {
+        // Convert OKLCH → OKLab → Linear sRGB
+        const hRad = (h * Math.PI) / 180;
+        const a = c * Math.cos(hRad);
+        const b = c * Math.sin(hRad);
+
+        // OKLab → LMS (cube root domain)
+        const l_ = l + 0.3963377774 * a + 0.2158037573 * b;
+        const m_ = l - 0.1055613458 * a - 0.0638541728 * b;
+        const s_ = l - 0.0894841775 * a - 1.2914855480 * b;
+
+        // Undo cube root
+        const ll = l_ * l_ * l_;
+        const mm = m_ * m_ * m_;
+        const ss = s_ * s_ * s_;
+
+        // LMS → Linear sRGB
+        const r = +4.0767416621 * ll - 3.3077115913 * mm + 0.2309699292 * ss;
+        const g = -1.2684380046 * ll + 2.6097574011 * mm - 0.3413193965 * ss;
+        const bOut = -0.0041960863 * ll - 0.7034186147 * mm + 1.7076147010 * ss;
+
+        return [r, g, bOut];
+    }
+
+    function linearToSRGB(c) {
+        return c <= 0.0031308 ? 12.92 * c : 1.055 * Math.pow(c, 1 / 2.4) - 0.055;
+    }
+
+    function oklchToHex(l100, c100, h) {
+        const l = l100 / 100; // Convert percentage to 0-1
+        const c = c100 / 100; // Convert from 0-40 slider → 0-0.40
+        const [lr, lg, lb] = oklchToLinearRGB(l, c, h);
+        const r = Math.round(Math.max(0, Math.min(1, linearToSRGB(lr))) * 255);
+        const g = Math.round(Math.max(0, Math.min(1, linearToSRGB(lg))) * 255);
+        const b = Math.round(Math.max(0, Math.min(1, linearToSRGB(lb))) * 255);
+        return '#' + [r, g, b].map(v => v.toString(16).padStart(2, '0')).join('');
+    }
+
+    function isInGamut(l100, c100, h) {
+        const l = l100 / 100;
+        const c = c100 / 100;
+        const [lr, lg, lb] = oklchToLinearRGB(l, c, h);
+        const sr = linearToSRGB(lr), sg = linearToSRGB(lg), sb = linearToSRGB(lb);
+        return sr >= -0.002 && sr <= 1.002 && sg >= -0.002 && sg <= 1.002 && sb >= -0.002 && sb <= 1.002;
+    }
+
+    // WCAG relative luminance from sRGB 0-255
+    function relativeLuminance(r, g, b) {
+        const [rs, gs, bs] = [r, g, b].map(c => {
+            c = c / 255;
+            return c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+        });
+        return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
+    }
+
+    function contrastRatio(l1, l2) {
+        const lighter = Math.max(l1, l2);
+        const darker = Math.min(l1, l2);
+        return (lighter + 0.05) / (darker + 0.05);
+    }
+
+    function hexToRGB(hex) {
+        const r = parseInt(hex.slice(1, 3), 16);
+        const g = parseInt(hex.slice(3, 5), 16);
+        const b = parseInt(hex.slice(5, 7), 16);
+        return [r, g, b];
+    }
+
+    function announce(msg) {
+        const el = document.getElementById('a11y-announcer');
+        if (el) { el.textContent = ''; requestAnimationFrame(() => { el.textContent = msg; }); }
+    }
+
+    function copyText(text, btn) {
+        navigator.clipboard.writeText(text).then(() => {
+            btn.classList.add('copied');
+            const orig = btn.innerHTML;
+            btn.innerHTML = '<i class="ph ph-check" aria-hidden="true"></i> Copied!';
+            announce('Copied to clipboard');
+            setTimeout(() => { btn.classList.remove('copied'); btn.innerHTML = orig; }, 2000);
+        });
+    }
+
+    // ─────── OKLCH Explorer ───────
+    const explorer = document.getElementById('oklch-explorer');
+    if (explorer) {
+        const lSlider = document.getElementById('pg-lightness');
+        const cSlider = document.getElementById('pg-chroma');
+        const hSlider = document.getElementById('pg-hue');
+        const lVal = document.getElementById('pg-lightness-val');
+        const cVal = document.getElementById('pg-chroma-val');
+        const hVal = document.getElementById('pg-hue-val');
+        const swatchInner = document.getElementById('pg-swatch-inner');
+        const swatchLabel = document.getElementById('pg-swatch-label');
+        const copyOklch = document.getElementById('pg-copy-oklch');
+        const copyHex = document.getElementById('pg-copy-hex');
+        const hexLabel = document.getElementById('pg-hex-label');
+
+        function updateExplorer() {
+            const l = parseInt(lSlider.value);
+            const c = parseInt(cSlider.value);
+            const h = parseInt(hSlider.value);
+            const cFloat = (c / 100).toFixed(2);
+            const oklchStr = `oklch(${l}% ${cFloat} ${h})`;
+            const hex = oklchToHex(l, c, h);
+
+            lVal.textContent = l + '%';
+            cVal.textContent = cFloat;
+            hVal.textContent = h + '°';
+
+            swatchInner.style.background = oklchStr;
+            swatchLabel.textContent = oklchStr;
+
+            // Determine label color based on lightness
+            swatchLabel.style.color = l > 60 ? 'oklch(0% 0 0 / .8)' : 'oklch(100% 0 0 / .9)';
+            swatchLabel.style.background = l > 60 ? 'oklch(100% 0 0 / .4)' : 'oklch(0% 0 0 / .4)';
+
+            copyOklch.setAttribute('data-copy-value', oklchStr);
+            copyHex.setAttribute('data-copy-value', hex);
+            hexLabel.textContent = hex;
+
+            // Update chroma track gradient to show current L/H
+            cSlider.style.background = `linear-gradient(to right, oklch(${l}% 0 ${h}), oklch(${l}% 0.20 ${h}), oklch(${l}% 0.40 ${h}))`;
+        }
+
+        [lSlider, cSlider, hSlider].forEach(s => s.addEventListener('input', updateExplorer));
+        copyOklch.addEventListener('click', () => copyText(copyOklch.getAttribute('data-copy-value'), copyOklch));
+        copyHex.addEventListener('click', () => copyText(copyHex.getAttribute('data-copy-value'), copyHex));
+        updateExplorer();
+
+        // Public API for preset loading
+        window._pgSetExplorer = function (l, c, h) {
+            lSlider.value = l;
+            cSlider.value = c;
+            hSlider.value = h;
+            updateExplorer();
+            explorer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        };
+    }
+
+    // ─────── Contrast Checker ───────
+    const ccEl = document.getElementById('contrast-checker');
+    if (ccEl) {
+        const fgL = document.getElementById('cc-fg-l');
+        const fgC = document.getElementById('cc-fg-c');
+        const fgH = document.getElementById('cc-fg-h');
+        const bgL = document.getElementById('cc-bg-l');
+        const bgC = document.getElementById('cc-bg-c');
+        const bgH = document.getElementById('cc-bg-h');
+        const sample = document.getElementById('cc-sample');
+        const ratioEl = document.getElementById('cc-ratio');
+        const aaNormal = document.getElementById('cc-aa-normal');
+        const aaLarge = document.getElementById('cc-aa-large');
+        const aaa = document.getElementById('cc-aaa');
+        const fgChip = document.getElementById('cc-fg-chip');
+        const bgChip = document.getElementById('cc-bg-chip');
+        const ccCopy = document.getElementById('cc-copy');
+
+        function updateContrast() {
+            const fl = parseInt(fgL.value), fc = parseInt(fgC.value), fh = parseInt(fgH.value);
+            const bl = parseInt(bgL.value), bc = parseInt(bgC.value), bh = parseInt(bgH.value);
+            const fgOklch = `oklch(${fl}% ${(fc/100).toFixed(2)} ${fh})`;
+            const bgOklch = `oklch(${bl}% ${(bc/100).toFixed(2)} ${bh})`;
+
+            sample.style.color = fgOklch;
+            sample.style.background = bgOklch;
+            fgChip.style.background = fgOklch;
+            bgChip.style.background = bgOklch;
+
+            // Outputs
+            document.getElementById('cc-fg-l-val').textContent = fl + '%';
+            document.getElementById('cc-fg-c-val').textContent = (fc/100).toFixed(2);
+            document.getElementById('cc-fg-h-val').textContent = fh + '°';
+            document.getElementById('cc-bg-l-val').textContent = bl + '%';
+            document.getElementById('cc-bg-c-val').textContent = (bc/100).toFixed(2);
+            document.getElementById('cc-bg-h-val').textContent = bh + '°';
+
+            // Compute contrast
+            const fgHex = oklchToHex(fl, fc, fh);
+            const bgHex = oklchToHex(bl, bc, bh);
+            const fgRGB = hexToRGB(fgHex);
+            const bgRGB = hexToRGB(bgHex);
+            const fgLum = relativeLuminance(...fgRGB);
+            const bgLum = relativeLuminance(...bgRGB);
+            const ratio = contrastRatio(fgLum, bgLum);
+
+            ratioEl.textContent = ratio.toFixed(2) + ':1';
+
+            function setBadge(el, pass, label) {
+                el.textContent = label + (pass ? ' ✓ Pass' : ' ✗ Fail');
+                el.className = 'playground-badge ' + (pass ? 'pass' : 'fail');
+            }
+            setBadge(aaNormal, ratio >= 4.5, 'AA Normal');
+            setBadge(aaLarge, ratio >= 3, 'AA Large');
+            setBadge(aaa, ratio >= 7, 'AAA');
+
+            ccCopy.setAttribute('data-copy-value', `color: ${fgOklch};\nbackground: ${bgOklch};\n/* Contrast ratio: ${ratio.toFixed(2)}:1 */`);
+        }
+
+        [fgL, fgC, fgH, bgL, bgC, bgH].forEach(s => s.addEventListener('input', updateContrast));
+        ccCopy.addEventListener('click', () => copyText(ccCopy.getAttribute('data-copy-value'), ccCopy));
+        updateContrast();
+    }
+
+    // ─────── Hue Wheel ───────
+    const hueWheelContainer = document.getElementById('hue-wheel-container');
+    if (hueWheelContainer) {
+        const wheel = document.getElementById('hue-wheel');
+        const hwL = document.getElementById('hw-lightness');
+        const hwC = document.getElementById('hw-chroma');
+        const hwLVal = document.getElementById('hw-lightness-val');
+        const hwCVal = document.getElementById('hw-chroma-val');
+        const hwLabel = document.getElementById('hw-label');
+        let activeSegment = null;
+
+        function buildWheel() {
+            const l = parseInt(hwL.value);
+            const c = parseInt(hwC.value);
+            hwLVal.textContent = l + '%';
+            hwCVal.textContent = (c / 100).toFixed(2);
+
+            wheel.innerHTML = '';
+            for (let h = 0; h < 360; h += 5) {
+                const seg = document.createElement('div');
+                seg.className = 'playground-wheel-segment';
+                seg.style.background = `oklch(${l}% ${(c/100).toFixed(2)} ${h})`;
+                seg.setAttribute('data-hue', h);
+                seg.setAttribute('role', 'button');
+                seg.setAttribute('aria-label', `Hue ${h}°`);
+                seg.setAttribute('tabindex', '0');
+                wheel.appendChild(seg);
+            }
+        }
+
+        wheel.addEventListener('mouseover', (e) => {
+            const seg = e.target.closest('.playground-wheel-segment');
+            if (seg) {
+                const h = seg.getAttribute('data-hue');
+                const l = hwL.value;
+                const c = (parseInt(hwC.value) / 100).toFixed(2);
+                hwLabel.textContent = `oklch(${l}% ${c} ${h})`;
+            }
+        });
+
+        wheel.addEventListener('click', (e) => {
+            const seg = e.target.closest('.playground-wheel-segment');
+            if (seg) {
+                if (activeSegment) activeSegment.classList.remove('active');
+                seg.classList.add('active');
+                activeSegment = seg;
+                const h = parseInt(seg.getAttribute('data-hue'));
+                if (window._pgSetExplorer) {
+                    window._pgSetExplorer(parseInt(hwL.value), parseInt(hwC.value), h);
+                }
+            }
+        });
+
+        wheel.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                e.target.click();
+            }
+        });
+
+        [hwL, hwC].forEach(s => s.addEventListener('input', buildWheel));
+        buildWheel();
+    }
+
+    // ─────── Scale Generator ───────
+    const sgEl = document.getElementById('scale-generator');
+    if (sgEl) {
+        const sgHue = document.getElementById('sg-hue');
+        const sgChroma = document.getElementById('sg-chroma');
+        const sgHueVal = document.getElementById('sg-hue-val');
+        const sgChromaVal = document.getElementById('sg-chroma-val');
+        const sgScale = document.getElementById('sg-scale');
+        const sgCopy = document.getElementById('sg-copy');
+
+        // Scale stops: name, lightness, chroma multiplier
+        const stops = [
+            { name: '600', l: 45, cm: 0.90 },
+            { name: '500', l: 55, cm: 1.00 },
+            { name: '400', l: 65, cm: 0.90 },
+            { name: '300', l: 75, cm: 0.70 },
+            { name: '200', l: 85, cm: 0.40 },
+            { name: '100', l: 92, cm: 0.20 },
+            { name: '50',  l: 96, cm: 0.10 },
+        ];
+
+        function updateScale() {
+            const h = parseInt(sgHue.value);
+            const peakC = parseInt(sgChroma.value);
+            sgHueVal.textContent = h + '°';
+            sgChromaVal.textContent = (peakC / 100).toFixed(2);
+
+            sgScale.innerHTML = '';
+            const cssLines = [];
+
+            stops.forEach(stop => {
+                const c = ((peakC * stop.cm) / 100).toFixed(2);
+                const oklch = `oklch(${stop.l}% ${c} ${h})`;
+                const el = document.createElement('div');
+                el.className = 'playground-scale-stop';
+                el.style.background = oklch;
+                // Determine text color based on lightness
+                const textColor = stop.l > 60 ? 'oklch(0% 0 0 / .7)' : 'oklch(100% 0 0 / .85)';
+                el.innerHTML = `<span class="playground-scale-stop-name" style="color:${textColor}">${stop.name}</span><span class="playground-scale-stop-value" style="color:${textColor}">${c}</span>`;
+                el.addEventListener('click', () => {
+                    if (window._pgSetExplorer) window._pgSetExplorer(stop.l, Math.round(peakC * stop.cm), h);
+                });
+                sgScale.appendChild(el);
+                cssLines.push(`  --hue-${stop.name}: ${oklch};`);
+            });
+
+            sgCopy.setAttribute('data-copy-value', `:root {\n${cssLines.join('\n')}\n}`);
+        }
+
+        [sgHue, sgChroma].forEach(s => s.addEventListener('input', updateScale));
+        sgCopy.addEventListener('click', () => copyText(sgCopy.getAttribute('data-copy-value'), sgCopy));
+        updateScale();
+    }
+
+    // ─────── Presets ───────
+    const presetsEl = document.getElementById('presets');
+    if (presetsEl) {
+        presetsEl.addEventListener('click', (e) => {
+            const btn = e.target.closest('.playground-preset');
+            if (btn && window._pgSetExplorer) {
+                const l = parseInt(btn.getAttribute('data-l'));
+                const c = parseInt(btn.getAttribute('data-c'));
+                const h = parseInt(btn.getAttribute('data-h'));
+                window._pgSetExplorer(l, c, h);
+            }
+        });
+    }
+})();

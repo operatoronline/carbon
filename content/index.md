@@ -15,6 +15,7 @@ The foundation: colors, type, and spacing that every component inherits.
 - [Spacing](./tokens/spacing.html) — 4px base grid, spacing tokens
 - [Elevation](./tokens/elevation.html) — Shadow system, multi-layer composites
 - [Export](./tokens/export.html) — Copy all tokens as CSS, JSON, or SCSS
+- [Playground](./tokens/playground.html) — Interactive OKLCH explorer, contrast checker, scale generator
 
 ---
 
