@@ -80,24 +80,11 @@ const previewPlugin = (md) => {
             <button class="Preview-tab" data-tab="html" type="button">HTML</button>
         </div>
         <div class="Preview-controls">
-            <button class="Preview-control${defaultBg === 'light' ? ' active' : ''}" data-bg="light" title="Light background" type="button" aria-label="Light background">
+            <button class="Preview-cycle" data-cycle="bg" data-state="${defaultBg || 'light'}" title="Toggle background" type="button" aria-label="Toggle background">
                 <i class="ph ph-sun" aria-hidden="true"></i>
             </button>
-            <button class="Preview-control${defaultBg === 'dark' ? ' active' : ''}" data-bg="dark" title="Dark background" type="button" aria-label="Dark background">
-                <i class="ph ph-moon" aria-hidden="true"></i>
-            </button>
-            <button class="Preview-control${defaultBg === 'checkered' ? ' active' : ''}" data-bg="checkered" title="Checkered background" type="button" aria-label="Checkered background">
-                <i class="ph ph-grid-four" aria-hidden="true"></i>
-            </button>
-            <div class="Preview-divider" role="separator" aria-hidden="true"></div>
-            <button class="Preview-control active" data-viewport="desktop" title="Desktop viewport" type="button" aria-label="Desktop viewport">
+            <button class="Preview-cycle" data-cycle="viewport" data-state="desktop" title="Toggle viewport" type="button" aria-label="Toggle viewport">
                 <i class="ph ph-desktop" aria-hidden="true"></i>
-            </button>
-            <button class="Preview-control" data-viewport="tablet" title="Tablet viewport" type="button" aria-label="Tablet viewport">
-                <i class="ph ph-device-tablet" aria-hidden="true"></i>
-            </button>
-            <button class="Preview-control" data-viewport="mobile" title="Mobile viewport" type="button" aria-label="Mobile viewport">
-                <i class="ph ph-device-mobile" aria-hidden="true"></i>
             </button>
         </div>
     </div>

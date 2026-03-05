@@ -2330,50 +2330,27 @@ pre.line-numbers code .line::before {
   background: var(--accent-s);
 }
 
-/* --- Controls (bg toggle, viewport) --- */
+/* --- Controls (cycle buttons) --- */
 .Preview-controls {
   display: flex;
   gap: var(--space-1);
-  flex-wrap: wrap;
-  justify-content: flex-end;
+  flex-shrink: 0;
 }
 
-.Preview-control {
+.Preview-cycle {
   width: 28px;
   height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: var(--r-s);
-  color: var(--fg-4);
+  color: var(--fg-3);
   transition: color var(--dur-f), background var(--dur-f);
 }
 
-.Preview-control:hover {
-  color: var(--fg-2);
+.Preview-cycle:hover {
+  color: var(--fg);
   background: var(--bg-s);
-}
-
-.Preview-control.active {
-  color: var(--accent);
-  background: var(--accent-s);
-}
-
-/* Separator between bg and viewport controls */
-.Preview-divider {
-  width: 1px;
-  height: 16px;
-  background: var(--bd);
-  margin: 0 var(--space-1);
-  flex-shrink: 0;
-}
-
-/* Hide viewport controls + divider on small screens */
-@media (max-width: 600px) {
-  .Preview-controls [data-viewport],
-  .Preview-divider {
-    display: none;
-  }
 }
 
 /* --- Panes --- */
@@ -4905,17 +4882,6 @@ details[open] .Accordion-icon {
 
   .Preview-header {
     padding: var(--space-1) var(--space-2);
-    flex-wrap: wrap;
-    gap: var(--space-1);
-  }
-
-  .Preview-tabs {
-    order: 1;
-    width: 100%;
-  }
-
-  .Preview-controls {
-    order: 2;
   }
 
   .Preview {

@@ -559,37 +559,36 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // Background toggle
-        const bgControls = preview.querySelectorAll('.Preview-control[data-bg]');
+        // Cycle button logic
         const canvas = preview.querySelector('.Preview-canvas');
-        
-        bgControls.forEach(control => {
-            control.addEventListener('click', () => {
-                const bg = control.dataset.bg;
-                
-                bgControls.forEach(c => c.classList.remove('active'));
-                control.classList.add('active');
-                
-                canvas.classList.remove('Preview-canvas--light', 'Preview-canvas--dark', 'Preview-canvas--checkered');
-                if (bg !== 'default') {
-                    canvas.classList.add(`Preview-canvas--${bg}`);
-                }
-            });
-        });
+        const bgCycle = ['light', 'dark', 'checkered'];
+        const bgIcons = { light: 'ph-sun', dark: 'ph-moon', checkered: 'ph-grid-four' };
+        const bgLabels = { light: 'Light background', dark: 'Dark background', checkered: 'Checkered background' };
+        const vpCycle = ['desktop', 'tablet', 'mobile'];
+        const vpIcons = { desktop: 'ph-desktop', tablet: 'ph-device-tablet', mobile: 'ph-device-mobile' };
+        const vpLabels = { desktop: 'Desktop viewport', tablet: 'Tablet viewport', mobile: 'Mobile viewport' };
 
-        // Viewport toggle
-        const viewportControls = preview.querySelectorAll('.Preview-control[data-viewport]');
-        
-        viewportControls.forEach(control => {
-            control.addEventListener('click', () => {
-                const viewport = control.dataset.viewport;
-                
-                viewportControls.forEach(c => c.classList.remove('active'));
-                control.classList.add('active');
-                
-                canvas.classList.remove('Preview-canvas--mobile', 'Preview-canvas--tablet');
-                if (viewport !== 'desktop') {
-                    canvas.classList.add(`Preview-canvas--${viewport}`);
+        preview.querySelectorAll('.Preview-cycle').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const type = btn.dataset.cycle;
+                const states = type === 'bg' ? bgCycle : vpCycle;
+                const icons = type === 'bg' ? bgIcons : vpIcons;
+                const labels = type === 'bg' ? bgLabels : vpLabels;
+                const current = btn.dataset.state;
+                const idx = states.indexOf(current);
+                const next = states[(idx + 1) % states.length];
+
+                btn.dataset.state = next;
+                btn.querySelector('i').className = `ph ${icons[next]}`;
+                btn.setAttribute('aria-label', labels[next]);
+                btn.title = labels[next];
+
+                if (type === 'bg') {
+                    canvas.classList.remove('Preview-canvas--light', 'Preview-canvas--dark', 'Preview-canvas--checkered');
+                    canvas.classList.add(`Preview-canvas--${next}`);
+                } else {
+                    canvas.classList.remove('Preview-canvas--mobile', 'Preview-canvas--tablet');
+                    if (next !== 'desktop') canvas.classList.add(`Preview-canvas--${next}`);
                 }
             });
         });
