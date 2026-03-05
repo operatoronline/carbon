@@ -6822,5 +6822,194 @@ details[open] .Accordion-icon {
 }
 
 /* ═══════════════════════════════════════
+   Section Index — Card Grid
+   ═══════════════════════════════════════ */
+
+/* Category heading with icon */
+.section-category {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-4);
+  font-family: var(--font-sans);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+}
+
+.section-category i {
+  font-size: var(--fs-base);
+  color: var(--accent);
+}
+
+.section-category:first-of-type {
+  margin-top: var(--space-4);
+}
+
+/* Card grid */
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+/* Individual card */
+.section-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-5);
+  background: var(--bg-s);
+  border: 1px solid var(--bd-w);
+  border-radius: var(--r-m);
+  text-decoration: none;
+  color: var(--fg);
+  transition: border-color var(--dur-n) var(--ease),
+              box-shadow var(--dur-n) var(--ease),
+              transform var(--dur-n) var(--ease),
+              background var(--dur-n) var(--ease);
+}
+
+.section-card:hover {
+  border-color: var(--accent);
+  box-shadow: var(--sh-m);
+  transform: translateY(-2px);
+  background: var(--bg);
+}
+
+.section-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Card icon */
+.section-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--r-s);
+  background: oklch(from var(--accent) l c h / .10);
+  color: var(--accent);
+  font-size: var(--fs-2xl);
+  flex-shrink: 0;
+}
+
+.section-card:hover .section-card-icon {
+  background: oklch(from var(--accent) l c h / .16);
+}
+
+/* Card title */
+.section-card-title {
+  font-family: var(--font-sans);
+  font-size: var(--fs-base);
+  font-weight: 600;
+  color: var(--fg);
+  margin: 0;
+}
+
+/* Card description */
+.section-card-desc {
+  font-size: var(--fs-sm);
+  color: var(--fg-3);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Category stats badge */
+.section-category-count {
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  color: var(--fg-4);
+  letter-spacing: 0;
+  text-transform: none;
+  margin-left: auto;
+}
+
+/* Dark mode */
+[data-theme="dark"] .section-card {
+  background: var(--bg-s);
+  border-color: var(--bd-w);
+}
+[data-theme="dark"] .section-card:hover {
+  background: var(--bg-m);
+  border-color: var(--accent);
+}
+[data-theme="dark"] .section-card-icon {
+  background: oklch(from var(--accent) l c h / .14);
+}
+[data-theme="dark"] .section-card:hover .section-card-icon {
+  background: oklch(from var(--accent) l c h / .22);
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .section-card {
+    background: var(--bg-s);
+    border-color: var(--bd-w);
+  }
+  html:not([data-theme="light"]) .section-card:hover {
+    background: var(--bg-m);
+    border-color: var(--accent);
+  }
+  html:not([data-theme="light"]) .section-card-icon {
+    background: oklch(from var(--accent) l c h / .14);
+  }
+  html:not([data-theme="light"]) .section-card:hover .section-card-icon {
+    background: oklch(from var(--accent) l c h / .22);
+  }
+}
+
+/* Responsive */
+@media (max-width: 599px) {
+  .section-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+  .section-card {
+    flex-direction: row;
+    align-items: center;
+    padding: var(--space-4);
+  }
+  .section-card-icon {
+    width: 36px;
+    height: 36px;
+    font-size: var(--fs-xl);
+  }
+  .section-card-text {
+    flex: 1;
+    min-width: 0;
+  }
+  .section-card-desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* Print */
+@media print {
+  .section-grid {
+    display: block;
+  }
+  .section-card {
+    display: block;
+    border: 1px solid #ccc;
+    margin-bottom: var(--space-2);
+    page-break-inside: avoid;
+    box-shadow: none;
+    transform: none;
+  }
+  .section-card-icon {
+    display: none;
+  }
+}
+
+/* ═══════════════════════════════════════
    END OF STANDARD v1.0 STYLES
    ═══════════════════════════════════════ */

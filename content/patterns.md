@@ -4,10 +4,24 @@ Composable layout primitives and common UI patterns. These aren't components —
 
 ---
 
-## Available Patterns
+<div class="section-category"><i class="ph-bold ph-grid-four" aria-hidden="true"></i> Available Patterns <span class="section-category-count">2 patterns</span></div>
 
-- [Layouts](./patterns/layouts.html) — Container, Grid, Stack, Cluster, Split, Sidebar, Center
-- [Empty States](./patterns/empty-states.html) — No-content messaging with icons and CTAs
+<div class="section-grid">
+<a href="./patterns/layouts.html" class="section-card">
+  <div class="section-card-icon"><i class="ph ph-columns" aria-hidden="true"></i></div>
+  <div class="section-card-text">
+    <p class="section-card-title">Layouts</p>
+    <p class="section-card-desc">Container, Grid, Stack, Cluster, Split, Sidebar, Center</p>
+  </div>
+</a>
+<a href="./patterns/empty-states.html" class="section-card">
+  <div class="section-card-icon"><i class="ph ph-ghost" aria-hidden="true"></i></div>
+  <div class="section-card-text">
+    <p class="section-card-title">Empty States</p>
+    <p class="section-card-desc">No-content messaging with icons and CTAs</p>
+  </div>
+</a>
+</div>
 
 ---
 
