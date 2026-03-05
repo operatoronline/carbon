@@ -705,29 +705,67 @@ async function build() {
         const ogUrl = canonicalUrl;
 
         // Generate JSON-LD structured data
-        const jsonLd = JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'WebPage',
-            name: `${title} | Standard`,
-            description: metaDescription,
-            url: canonicalUrl,
-            isPartOf: {
+        const isHomePage = relativePath === 'index.md';
+        const jsonLdGraphItems = [];
+
+        // WebSite schema (homepage only — triggers sitelinks search box in Google)
+        if (isHomePage) {
+            jsonLdGraphItems.push({
                 '@type': 'WebSite',
+                '@id': `${CONFIG.siteUrl}/#website`,
                 name: 'Standard Design System',
-                url: CONFIG.siteUrl
-            },
-            ...(relativePath === 'index.md' ? {
-                '@type': 'WebSite',
+                url: CONFIG.siteUrl,
+                description: 'A zero-dependency CSS design system built on OKLCH colors, 4px grid, and semantic tokens. 47 pages, 32 components, WCAG AA.',
                 potentialAction: {
                     '@type': 'SearchAction',
                     target: { '@type': 'EntryPoint', urlTemplate: `${CONFIG.siteUrl}/?q={search_term_string}` },
                     'query-input': 'required name=search_term_string'
                 }
-            } : {})
+            });
+        }
+
+        // WebPage schema (every page)
+        jsonLdGraphItems.push({
+            '@type': 'WebPage',
+            '@id': canonicalUrl,
+            name: isHomePage ? 'Standard Design System' : `${title} | Standard`,
+            description: metaDescription,
+            url: canonicalUrl,
+            isPartOf: { '@id': `${CONFIG.siteUrl}/#website` },
+            ...(isHomePage ? {} : {
+                breadcrumb: { '@id': `${canonicalUrl}#breadcrumb` }
+            })
+        });
+
+        // BreadcrumbList schema (non-homepage pages — enables breadcrumb rich results)
+        if (!isHomePage) {
+            const bcItems = [
+                { '@type': 'ListItem', position: 1, name: 'Home', item: CONFIG.siteUrl }
+            ];
+            const bcParts = relativePath.replace('.md', '').split(path.sep);
+            for (let i = 0; i < bcParts.length; i++) {
+                const partLabel = bcParts[i].replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+                const partUrl = `${CONFIG.siteUrl}/${bcParts.slice(0, i + 1).join('/')}`;
+                bcItems.push({
+                    '@type': 'ListItem',
+                    position: i + 2,
+                    name: partLabel,
+                    item: partUrl
+                });
+            }
+            jsonLdGraphItems.push({
+                '@type': 'BreadcrumbList',
+                '@id': `${canonicalUrl}#breadcrumb`,
+                itemListElement: bcItems
+            });
+        }
+
+        const jsonLd = JSON.stringify({
+            '@context': 'https://schema.org',
+            '@graph': jsonLdGraphItems
         });
 
         // For homepage, use just "Standard Design System" as the page title (no " | Standard" suffix)
-        const isHomePage = relativePath === 'index.md';
         const pageTitle = isHomePage ? title : `${title} | Standard`;
         const finalHtml = template
             .replace(/{{TITLE}}/g, title)
@@ -748,7 +786,7 @@ async function build() {
             .replace(/{{CSS_FILE}}/g, assetMap['docs.css'] || 'docs.css')
             .replace(/{{VENDOR_JS_FILE}}/g, assetMap['vendor.js'] || 'vendor.js')
             .replace(/{{JS_FILE}}/g, assetMap['docs.js'] || 'docs.js')
-            .replace(/{{JSON_LD}}/g, () => jsonLd)
+            .replace(/{{JSON_LD}}/g, () => `<script type="application/ld+json">${jsonLd}</script>`)
             .replace(/{{ACTIVE_SECTION}}/g, activeSection)
             .replace(/{{CONTAINER_CLASS}}/g, hasToc ? 'has-toc' : '')
             .replace(/{{TOC_SIDEBAR}}/g, () => tocSidebarHtml)
