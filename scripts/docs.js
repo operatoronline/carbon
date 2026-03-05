@@ -166,6 +166,84 @@ document.addEventListener('DOMContentLoaded', () => {
     loadSearchIndex();
 
     // ═══════════════════════════════════════
+    // SEARCH SNIPPET EXTRACTION
+    // ═══════════════════════════════════════
+    // Extract a content snippet around the best match, with highlighted text
+    function getSearchSnippet(result, query) {
+        const item = result.item;
+        const content = item.content || '';
+        if (!content) return '';
+
+        // Find the content match from Fuse.js matches array
+        const contentMatch = result.matches?.find(m => m.key === 'content');
+        const queryLower = query.toLowerCase();
+
+        // Get the position to center the snippet around
+        let snippetStart = 0;
+        if (contentMatch && contentMatch.indices && contentMatch.indices.length > 0) {
+            // Use first match index from Fuse
+            snippetStart = Math.max(0, contentMatch.indices[0][0] - 40);
+        } else {
+            // Fallback: find query text directly in content
+            const idx = content.toLowerCase().indexOf(queryLower);
+            if (idx >= 0) snippetStart = Math.max(0, idx - 40);
+        }
+
+        // Extract ~120 char window
+        const maxLen = 120;
+        let snippet = content.slice(snippetStart, snippetStart + maxLen);
+
+        // Clean up: trim to word boundaries
+        if (snippetStart > 0) {
+            const spaceIdx = snippet.indexOf(' ');
+            if (spaceIdx > 0 && spaceIdx < 20) snippet = snippet.slice(spaceIdx + 1);
+            snippet = '…' + snippet;
+        }
+        if (snippetStart + maxLen < content.length) {
+            const lastSpace = snippet.lastIndexOf(' ');
+            if (lastSpace > snippet.length - 20) snippet = snippet.slice(0, lastSpace);
+            snippet += '…';
+        }
+
+        // Strip leftover markdown/HTML artifacts
+        snippet = snippet.replace(/<[^>]+>/g, '').replace(/[#*_`|]/g, '').replace(/\s+/g, ' ').trim();
+
+        // Highlight matching text (escape HTML first, then wrap matches)
+        snippet = snippet.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        if (queryLower.length >= 2) {
+            const escaped = queryLower.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            const re = new RegExp(`(${escaped})`, 'gi');
+            snippet = snippet.replace(re, '<mark>$1</mark>');
+        }
+
+        return snippet;
+    }
+
+    // Section icon mapping for search results
+    const sectionIcons = {
+        'Home': 'ph ph-house',
+        'Tokens': 'ph ph-palette',
+        'Components': 'ph ph-stack',
+        'Patterns': 'ph ph-grid-four'
+    };
+
+    function renderSearchResult(result, query, i, idPrefix) {
+        const item = result.item;
+        const snippet = getSearchSnippet(result, query);
+        const iconClass = sectionIcons[item.section] || 'ph ph-file-text';
+        return `
+            <a href="${item.url}" class="search-result-item" role="option" id="${idPrefix}-${i}">
+                <div class="search-result-icon"><i class="${iconClass}" aria-hidden="true"></i></div>
+                <div class="search-result-body">
+                    <span class="search-result-title">${item.title}</span>
+                    ${snippet ? `<span class="search-result-snippet">${snippet}</span>` : ''}
+                </div>
+                <span class="search-result-section">${item.section}</span>
+            </a>
+        `;
+    }
+
+    // ═══════════════════════════════════════
     // MOBILE SEARCH OVERLAY
     // ═══════════════════════════════════════
     // On mobile (< 768px), the top-bar search is hidden.
@@ -246,15 +324,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        mobileSearchResults.innerHTML = results.map((result, i) => {
-            const item = result.item;
-            return `
-                <a href="${item.url}" class="search-result-item" role="option" id="mobile-search-opt-${i}">
-                    <span class="search-result-title">${item.title}</span>
-                    <span class="search-result-section">${item.section}</span>
-                </a>
-            `;
-        }).join('');
+        mobileSearchResults.innerHTML = results.map((result, i) => renderSearchResult(result, query, i, 'mobile-search-opt')).join('');
 
         mobileSearchResults.classList.add('active');
         mobileSearchInput.setAttribute('aria-expanded', 'true');
@@ -317,15 +387,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            searchResults.innerHTML = results.map((result, i) => {
-                const item = result.item;
-                return `
-                    <a href="${item.url}" class="search-result-item" role="option" id="search-opt-${i}">
-                        <span class="search-result-title">${item.title}</span>
-                        <span class="search-result-section">${item.section}</span>
-                    </a>
-                `;
-            }).join('');
+            searchResults.innerHTML = results.map((result, i) => renderSearchResult(result, query, i, 'search-opt')).join('');
             
             searchResults.classList.add('active');
             searchInput.setAttribute('aria-expanded', 'true');
