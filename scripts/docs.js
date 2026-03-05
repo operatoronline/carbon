@@ -1486,3 +1486,101 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 })();
+
+/* ═══════════════════════════════════════
+   Section Index Filter
+   ═══════════════════════════════════════ */
+(function() {
+    const filterInput = document.getElementById('component-filter');
+    if (!filterInput) return;
+
+    const container = document.getElementById('component-grid-container');
+    const countEl = document.getElementById('component-filter-count');
+    const clearBtn = document.getElementById('component-filter-clear');
+    const emptyEl = document.getElementById('component-filter-empty');
+    if (!container) return;
+
+    const cards = container.querySelectorAll('.section-card');
+    const categories = container.querySelectorAll('.section-category');
+    const grids = container.querySelectorAll('.section-grid');
+    const totalCount = cards.length;
+
+    function filterCards() {
+        const query = filterInput.value.trim().toLowerCase();
+        let visibleCount = 0;
+
+        // Show/hide individual cards
+        cards.forEach(card => {
+            const title = (card.querySelector('.section-card-title')?.textContent || '').toLowerCase();
+            const desc = (card.querySelector('.section-card-desc')?.textContent || '').toLowerCase();
+            const matches = !query || title.includes(query) || desc.includes(query);
+
+            if (matches) {
+                card.removeAttribute('data-filter-hidden');
+                visibleCount++;
+            } else {
+                card.setAttribute('data-filter-hidden', '');
+            }
+        });
+
+        // Show/hide categories based on whether their grid has visible cards
+        grids.forEach((grid, i) => {
+            const hasVisible = grid.querySelector('.section-card:not([data-filter-hidden])');
+            const category = categories[i];
+
+            if (hasVisible) {
+                grid.removeAttribute('data-filter-hidden');
+                if (category) category.removeAttribute('data-filter-hidden');
+            } else {
+                grid.setAttribute('data-filter-hidden', '');
+                if (category) category.setAttribute('data-filter-hidden', '');
+            }
+        });
+
+        // Update count
+        if (query) {
+            countEl.textContent = visibleCount + ' of ' + totalCount;
+            countEl.classList.add('filtered');
+            clearBtn.hidden = false;
+        } else {
+            countEl.textContent = totalCount + ' components';
+            countEl.classList.remove('filtered');
+            clearBtn.hidden = true;
+        }
+
+        // Show/hide empty state
+        if (emptyEl) {
+            emptyEl.hidden = visibleCount > 0;
+        }
+
+        // Announce to screen reader
+        if (announcer) {
+            if (query && visibleCount === 0) {
+                announcer.textContent = 'No components match "' + filterInput.value + '"';
+            } else if (query) {
+                announcer.textContent = visibleCount + ' of ' + totalCount + ' components shown';
+            }
+        }
+    }
+
+    filterInput.addEventListener('input', filterCards);
+
+    clearBtn.addEventListener('click', function() {
+        filterInput.value = '';
+        filterCards();
+        filterInput.focus();
+    });
+
+    // Escape clears the filter
+    filterInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            if (filterInput.value) {
+                filterInput.value = '';
+                filterCards();
+                e.stopPropagation();
+            } else {
+                filterInput.blur();
+            }
+        }
+    });
+})();

@@ -2,6 +2,17 @@
 
 Interactive building blocks with live previews, code snippets, and API references. Each component uses semantic tokens, supports dark mode, and follows accessibility best practices.
 
+<div class="section-filter" role="search">
+  <i class="ph ph-funnel" aria-hidden="true"></i>
+  <input type="text" class="section-filter-input" id="component-filter" placeholder="Filter components..." aria-label="Filter components" autocomplete="off">
+  <span class="section-filter-count" id="component-filter-count">32 components</span>
+  <button class="section-filter-clear" id="component-filter-clear" type="button" aria-label="Clear filter" hidden>
+    <i class="ph ph-x" aria-hidden="true"></i>
+  </button>
+</div>
+
+<div id="component-grid-container">
+
 ---
 
 <div class="section-category"><i class="ph-bold ph-cursor-click" aria-hidden="true"></i> Actions <span class="section-category-count">4 components</span></div>
@@ -256,4 +267,11 @@ Interactive building blocks with live previews, code snippets, and API reference
     <p class="section-card-desc">Horizontal rules, dashed, labeled</p>
   </div>
 </a>
+</div>
+
+<div class="section-filter-empty" id="component-filter-empty" hidden>
+  <i class="ph ph-ghost" aria-hidden="true"></i>
+  <p>No components match your filter.</p>
+</div>
+
 </div>
