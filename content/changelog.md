@@ -12,7 +12,7 @@ The first production-grade release of Standard. This version represents a compre
 
 ### Highlights
 
-- **40 pages** of documentation across tokens, components, and patterns
+- **43 pages** of documentation across tokens, components, and patterns
 - **WCAG 2.1 AA compliant** — contrast, focus management, reduced motion, screen reader support
 - **Zero external dependencies** — all assets self-hosted and vendored
 - **Dark mode** — complete coverage across all 32 components with system preference auto-detection
@@ -23,8 +23,12 @@ The first production-grade release of Standard. This version represents a compre
 ### Added
 - **Getting Started guide** — quick start, token overview, dark mode setup, project structure
 - **Elevation tokens page** — interactive scale, multi-layer anatomy, component hierarchy map
+- **Token export page** — copy-all utility with CSS, JSON, and SCSS formats
+- **Contributing guide** — dev workflow, CSS conventions, accessibility checklist
 - **Changelog page** — this page
 - **404 page** — branded error page with integrated search and quick navigation
+- **Sticky TOC sidebar** — scroll-spy navigation on all doc pages (≥1200px)
+- **Lazy loading** — all 89 demo images use `loading="lazy"` and `decoding="async"`
 - **Skip-to-content link** — keyboard-accessible bypass navigation (WCAG 2.4.1)
 - **Live region announcer** — screen reader announcements for theme changes, search results, copy actions
 - **Focus trap utility** — modal and overlay focus management
@@ -67,6 +71,8 @@ The first production-grade release of Standard. This version represents a compre
 - **Decorative icons announced by screen readers** — added `aria-hidden="true"` to all icon elements
 
 ### Security
+- **Content Security Policy** — strict CSP with `script-src 'self'`, zero inline scripts
+- **HSTS** — 2-year `Strict-Transport-Security` with `includeSubDomains` and `preload`
 - **Security headers added** — `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`, `Referrer-Policy`, `Permissions-Policy`
 - **carbon.operator.onl** — permanent 301 redirect to `standard.operator.onl`
 
