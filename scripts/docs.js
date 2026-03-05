@@ -713,6 +713,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ═══════════════════════════════════════
+    // DELEGATED EVENT HANDLERS (replaces inline onclick)
+    // ═══════════════════════════════════════
+    document.addEventListener('click', (e) => {
+        // Password visibility toggle
+        const pwToggle = e.target.closest('[data-action="toggle-password"]');
+        if (pwToggle) {
+            const input = pwToggle.previousElementSibling;
+            const icon = pwToggle.querySelector('i');
+            if (input && icon) {
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    icon.className = 'ph ph-eye-slash';
+                } else {
+                    input.type = 'password';
+                    icon.className = 'ph ph-eye';
+                }
+            }
+            return;
+        }
+
+        // Menu toggle
+        const menuToggle = e.target.closest('[data-action="toggle-menu"]');
+        if (menuToggle) {
+            const menu = menuToggle.nextElementSibling;
+            if (menu) menu.classList.toggle('Menu--open');
+            return;
+        }
+    });
+
+    // ═══════════════════════════════════════
     // KEYBOARD SHORTCUTS
     // ═══════════════════════════════════════
     document.addEventListener('keydown', (e) => {

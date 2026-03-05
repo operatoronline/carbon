@@ -46,7 +46,7 @@ A simple dropdown menu with clickable items.
 
 <Preview>
 <div class="Menu-demo">
-    <button class="Button Button--secondary" onclick="this.nextElementSibling.classList.toggle('Menu--open')">
+    <button class="Button Button--secondary" data-action="toggle-menu">
         Options
         <i class="ph ph-caret-down"></i>
     </button>

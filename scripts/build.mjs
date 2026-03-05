@@ -185,6 +185,40 @@ async function build() {
         console.log(`  ✓ Minified docs.js → ${jsMinName} (${(jsOrigSize / 1024).toFixed(1)}KB → ${(jsMinSize / 1024).toFixed(1)}KB, ${Math.round((1 - jsMinSize / jsOrigSize) * 100)}% smaller)`);
     }
 
+    // Minify 404 CSS
+    const css404Path = path.join(CONFIG.distDir, 'styles/404.css');
+    if (await fs.pathExists(css404Path)) {
+        const css404Source = await fs.readFile(css404Path, 'utf-8');
+        const css404Result = await transform(css404Source, {
+            loader: 'css',
+            minify: true,
+            target: ['chrome111', 'safari17', 'firefox121'],
+        });
+        const css404Hash = createHash('md5').update(css404Result.code).digest('hex').slice(0, 8);
+        const css404MinName = `404.${css404Hash}.min.css`;
+        await fs.writeFile(path.join(CONFIG.distDir, `styles/${css404MinName}`), css404Result.code);
+        await fs.remove(css404Path);
+        assetMap['404.css'] = css404MinName;
+        console.log(`  ✓ Minified 404.css → ${css404MinName}`);
+    }
+
+    // Minify 404 JS
+    const js404Path = path.join(CONFIG.distDir, 'scripts/404.js');
+    if (await fs.pathExists(js404Path)) {
+        const js404Source = await fs.readFile(js404Path, 'utf-8');
+        const js404Result = await transform(js404Source, {
+            loader: 'js',
+            minify: true,
+            target: ['chrome111', 'safari17', 'firefox121'],
+        });
+        const js404Hash = createHash('md5').update(js404Result.code).digest('hex').slice(0, 8);
+        const js404MinName = `404.${js404Hash}.min.js`;
+        await fs.writeFile(path.join(CONFIG.distDir, `scripts/${js404MinName}`), js404Result.code);
+        await fs.remove(js404Path);
+        assetMap['404.js'] = js404MinName;
+        console.log(`  ✓ Minified 404.js → ${js404MinName}`);
+    }
+
     // 2. Walk content
     const files = await glob(`${CONFIG.contentDir}/**/*.md`);
     
@@ -461,7 +495,7 @@ ${sitemapEntries.map(e => `  <url>
     );
     console.log('  ✓ Generated manifest.webmanifest');
 
-    // 6. Generate 404 page
+    // 6. Generate 404 page (all CSS/JS external — CSP-safe)
     const notFoundHtml = `<!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
@@ -489,262 +523,12 @@ ${sitemapEntries.map(e => `  <url>
     <link rel="stylesheet" href="./vendor/phosphor/fill/style.css">
     <link rel="stylesheet" href="./vendor/phosphor/duotone/style.css">
     <link rel="stylesheet" href="./styles/${assetMap['docs.css'] || 'docs.css'}">
-    <style>
-        /* 404 Page — Unique Styles */
-        .error-page {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            min-height: 100dvh;
-            padding: var(--space-6);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Ambient background glow */
-        .error-page::before {
-            content: '';
-            position: absolute;
-            top: -30%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, oklch(from var(--accent) l c h / .06) 0%, transparent 70%);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .error-content {
-            position: relative;
-            z-index: 1;
-            max-width: 560px;
-            animation: error-fade-in var(--dur-s) var(--ease) both;
-        }
-
-        @keyframes error-fade-in {
-            from { opacity: 0; transform: translateY(16px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* The big 404 number */
-        .error-code {
-            font-family: var(--ff-d);
-            font-size: clamp(6rem, 20vw, 12rem);
-            font-weight: 400;
-            line-height: 1;
-            letter-spacing: -0.02em;
-            color: var(--fg);
-            margin: 0 0 var(--space-2) 0;
-            position: relative;
-        }
-
-        .error-code em {
-            font-style: italic;
-            color: var(--accent);
-        }
-
-        .error-title {
-            font-family: var(--ff-d);
-            font-size: clamp(1.5rem, 4vw, 2rem);
-            font-weight: 400;
-            font-style: italic;
-            color: var(--fg-2);
-            margin: 0 0 var(--space-6) 0;
-            line-height: 1.3;
-        }
-
-        .error-description {
-            font-family: var(--ff-b);
-            font-size: 1rem;
-            line-height: 1.7;
-            color: var(--fg-3);
-            margin: 0 0 var(--space-8) 0;
-        }
-
-        /* Search box on the 404 page */
-        .error-search {
-            width: 100%;
-            max-width: 400px;
-            position: relative;
-            margin: 0 auto var(--space-8) auto;
-        }
-
-        .error-search-icon {
-            position: absolute;
-            left: var(--space-4);
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--fg-4);
-            font-size: 1.1rem;
-            pointer-events: none;
-        }
-
-        .error-search input {
-            width: 100%;
-            padding: var(--space-3) var(--space-4) var(--space-3) var(--space-10);
-            font-family: var(--ff-b);
-            font-size: 0.95rem;
-            color: var(--fg);
-            background: var(--bg-s);
-            border: 1px solid var(--bd);
-            border-radius: var(--r-f);
-            outline: none;
-            transition: border-color var(--dur-n) var(--ease), box-shadow var(--dur-n) var(--ease);
-        }
-
-        .error-search input::placeholder {
-            color: var(--fg-4);
-        }
-
-        .error-search input:focus {
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px oklch(from var(--accent) l c h / .12);
-        }
-
-        .error-search .search-results {
-            position: absolute;
-            top: calc(100% + var(--space-2));
-            left: 0;
-            right: 0;
-            background: var(--bg);
-            border: 1px solid var(--bd);
-            border-radius: var(--r-m);
-            box-shadow: var(--sh-m);
-            max-height: 280px;
-            overflow-y: auto;
-            display: none;
-            z-index: 10;
-        }
-
-        .error-search .search-results.active {
-            display: block;
-        }
-
-        .error-search .search-result-item {
-            display: block;
-            padding: var(--space-3) var(--space-4);
-            color: var(--fg);
-            text-decoration: none;
-            font-family: var(--ff-b);
-            font-size: 0.9rem;
-            border-bottom: 1px solid var(--bd-w);
-            transition: background var(--dur-f) var(--ease);
-        }
-
-        .error-search .search-result-item:last-child {
-            border-bottom: none;
-        }
-
-        .error-search .search-result-item:hover,
-        .error-search .search-result-item.active {
-            background: var(--bg-s);
-        }
-
-        .error-search .search-result-item .search-result-section {
-            font-size: 0.75rem;
-            color: var(--fg-4);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        /* Quick links grid */
-        .error-links {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: var(--space-3);
-            width: 100%;
-            max-width: 480px;
-            margin: 0 auto;
-        }
-
-        .error-link {
-            display: flex;
-            align-items: center;
-            gap: var(--space-2);
-            padding: var(--space-3) var(--space-4);
-            font-family: var(--ff-b);
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: var(--fg-2);
-            text-decoration: none;
-            background: var(--bg-s);
-            border: 1px solid var(--bd-w);
-            border-radius: var(--r-m);
-            transition: all var(--dur-n) var(--ease);
-        }
-
-        .error-link:hover {
-            color: var(--accent);
-            border-color: var(--accent);
-            background: var(--accent-s);
-            transform: translateY(-1px);
-            box-shadow: var(--sh-s);
-        }
-
-        .error-link i {
-            font-size: 1.1rem;
-            flex-shrink: 0;
-        }
-
-        /* Divider */
-        .error-divider {
-            width: 48px;
-            height: 1px;
-            background: var(--bd);
-            margin: var(--space-6) auto;
-            border: none;
-        }
-
-        .error-footer {
-            font-family: var(--ff-b);
-            font-size: 0.8rem;
-            color: var(--fg-4);
-            margin-top: var(--space-4);
-        }
-
-        .error-footer a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        .error-footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Dark mode overrides for 404 */
-        [data-theme="dark"] .error-page::before {
-            background: radial-gradient(circle, oklch(from var(--accent) l c h / .08) 0%, transparent 70%);
-        }
-
-        @media (prefers-color-scheme: dark) {
-            html:not([data-theme="light"]) .error-page::before {
-                background: radial-gradient(circle, oklch(from var(--accent) l c h / .08) 0%, transparent 70%);
-            }
-        }
-
-        /* Hide the default app chrome on the 404 page */
-        .app > .fnav,
-        .app > .top-bar,
-        .app > .container {
-            display: none;
-        }
-
-        /* Reduced motion */
-        @media (prefers-reduced-motion: reduce) {
-            .error-content { animation: none; }
-            .error-link { transition: none; }
-        }
-    </style>
+    <link rel="stylesheet" href="./styles/${assetMap['404.css'] || '404.css'}">
 </head>
 <body>
     <div class="app">
         <!-- Hidden nav — 404 has its own navigation -->
-        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation" style="display:none"></nav>
+        <nav class="fnav fnav--hidden" id="fnav" role="navigation" aria-label="Main navigation"></nav>
 
         <!-- 404 Content -->
         <div class="error-page">
@@ -790,112 +574,7 @@ ${sitemapEntries.map(e => `  <url>
         </div>
     </div>
 
-    <!-- Theme detection (minimal — no nav/search scripts needed from docs.js) -->
-    <script>
-        // Theme
-        const html = document.documentElement;
-        const saved = localStorage.getItem('standard-theme') ||
-            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        html.setAttribute('data-theme', saved);
-
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-            if (!localStorage.getItem('standard-theme')) {
-                html.setAttribute('data-theme', e.matches ? 'dark' : 'light');
-            }
-        });
-
-        // Search (standalone — loads Fuse.js and search index)
-        (async () => {
-            const input = document.getElementById('error-search-input');
-            const resultsEl = document.getElementById('error-search-results');
-            if (!input || !resultsEl) return;
-
-            // Load Fuse.js
-            const fuseScript = document.createElement('script');
-            fuseScript.src = './vendor/fuse.min.js';
-            document.head.appendChild(fuseScript);
-
-            await new Promise(resolve => { fuseScript.onload = resolve; });
-
-            // Load search index
-            let searchData = [];
-            try {
-                const res = await fetch('./search-index.json');
-                searchData = await res.json();
-            } catch (e) { return; }
-
-            const fuse = new Fuse(searchData, {
-                keys: [
-                    { name: 'title', weight: 3 },
-                    { name: 'content', weight: 1 },
-                    { name: 'section', weight: 2 }
-                ],
-                threshold: 0.35,
-                includeScore: true,
-                minMatchCharLength: 2
-            });
-
-            let activeIndex = -1;
-
-            input.addEventListener('input', () => {
-                const query = input.value.trim();
-                if (query.length < 2) {
-                    resultsEl.classList.remove('active');
-                    resultsEl.innerHTML = '';
-                    activeIndex = -1;
-                    return;
-                }
-
-                const results = fuse.search(query).slice(0, 8);
-                if (results.length === 0) {
-                    resultsEl.classList.remove('active');
-                    resultsEl.innerHTML = '';
-                    activeIndex = -1;
-                    return;
-                }
-
-                activeIndex = -1;
-                resultsEl.innerHTML = results.map((r, i) =>
-                    '<a class="search-result-item" href="./' + r.item.url + '">' +
-                        '<span class="search-result-section">' + r.item.section + '</span> ' +
-                        r.item.title +
-                    '</a>'
-                ).join('');
-                resultsEl.classList.add('active');
-            });
-
-            input.addEventListener('keydown', (e) => {
-                const items = resultsEl.querySelectorAll('.search-result-item');
-                if (!items.length) return;
-
-                if (e.key === 'ArrowDown') {
-                    e.preventDefault();
-                    activeIndex = Math.min(activeIndex + 1, items.length - 1);
-                    items.forEach((el, i) => el.classList.toggle('active', i === activeIndex));
-                } else if (e.key === 'ArrowUp') {
-                    e.preventDefault();
-                    activeIndex = Math.max(activeIndex - 1, 0);
-                    items.forEach((el, i) => el.classList.toggle('active', i === activeIndex));
-                } else if (e.key === 'Enter' && activeIndex >= 0) {
-                    e.preventDefault();
-                    items[activeIndex].click();
-                } else if (e.key === 'Escape') {
-                    resultsEl.classList.remove('active');
-                    resultsEl.innerHTML = '';
-                    activeIndex = -1;
-                    input.blur();
-                }
-            });
-
-            // Close on click outside
-            document.addEventListener('click', (e) => {
-                if (!e.target.closest('.error-search')) {
-                    resultsEl.classList.remove('active');
-                    activeIndex = -1;
-                }
-            });
-        })();
-    <\/script>
+    <script src="./scripts/${assetMap['404.js'] || '404.js'}"></script>
 </body>
 </html>`;
 

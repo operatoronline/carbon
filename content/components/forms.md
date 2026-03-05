@@ -87,7 +87,7 @@ Toggle password visibility for user convenience.
     <label class="FormField-label" for="pw-demo">Password</label>
     <div class="Input-wrapper">
         <input type="password" id="pw-demo" class="Input Input--withIconTrailing" placeholder="Enter password">
-        <button type="button" class="Input-toggle" aria-label="Toggle password visibility" onclick="const input = this.previousElementSibling; const icon = this.querySelector('i'); if(input.type === 'password') { input.type = 'text'; icon.className = 'ph ph-eye-slash'; } else { input.type = 'password'; icon.className = 'ph ph-eye'; }">
+        <button type="button" class="Input-toggle" aria-label="Toggle password visibility" data-action="toggle-password">
             <i class="ph ph-eye"></i>
         </button>
     </div>
