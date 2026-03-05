@@ -280,7 +280,10 @@ async function build() {
     await fs.writeFile(path.join(CONFIG.distDir, `styles/${combinedMinName}`), combinedResult.code);
     const combinedMinSize = Buffer.byteLength(combinedResult.code);
     assetMap['docs.css'] = combinedMinName;
+    // Also create a stable /styles/standard.css alias for external consumers (Getting Started guide)
+    await fs.writeFile(path.join(CONFIG.distDir, 'styles/standard.css'), combinedResult.code);
     console.log(`  ✓ Combined vendor + docs → ${combinedMinName} (${(combinedOrigSize / 1024).toFixed(1)}KB → ${(combinedMinSize / 1024).toFixed(1)}KB, ${Math.round((1 - combinedMinSize / combinedOrigSize) * 100)}% smaller)`);
+    console.log(`  ✓ Stable alias: styles/standard.css (for external consumers)`);
 
     // Minify JS
     const jsPath = path.join(CONFIG.distDir, 'scripts/docs.js');
@@ -699,13 +702,14 @@ ${sitemapEntries.map(e => `  <url>
 
     // 6. Generate 404 page (all CSS/JS external — CSP-safe)
     const notFoundHtml = `<!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="color-scheme" content="light dark">
     <meta name="theme-color" content="#7B2FBE" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#1E1E1E" media="(prefers-color-scheme: dark)">
+    <script>(function(){var t=localStorage.getItem('standard-theme');if(t)document.documentElement.setAttribute('data-theme',t)})()</script>
     <title>404 — Page Not Found | Standard</title>
     <meta name="description" content="The page you're looking for doesn't exist. Search the Standard Design System or navigate to a section.">
     <link rel="canonical" href="${CONFIG.siteUrl}/404">

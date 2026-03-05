@@ -50,9 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeBtn = document.getElementById('theme-btn');
     const html = document.documentElement;
     
+    // Theme is set by blocking inline script in <head> (prevents FOUC).
+    // If no saved theme, CSS prefers-color-scheme handles it — read the effective state.
     const savedTheme = localStorage.getItem('standard-theme') ||
         (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    html.setAttribute('data-theme', savedTheme);
     updateThemeIcon(savedTheme);
 
     // Listen for system theme changes (when no manual override)

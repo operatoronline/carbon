@@ -15,7 +15,7 @@ Add Standard's CSS to any HTML page. That's the entire setup.
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My App</title>
-    <link rel="stylesheet" href="https://standard.operator.onl/styles/docs.css">
+    <link rel="stylesheet" href="https://standard.operator.onl/styles/standard.css">
 </head>
 <body>
     <button class="Button Button--primary">Get Started</button>
