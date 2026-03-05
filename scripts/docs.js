@@ -821,4 +821,41 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     }
+
+    // ─── Token Export: Copy buttons ───
+    document.querySelectorAll('.token-export-copy[data-copy-target]').forEach(btn => {
+        btn.addEventListener('click', async () => {
+            const targetId = btn.getAttribute('data-copy-target');
+            const codeEl = document.getElementById(targetId);
+            if (!codeEl) return;
+            const code = codeEl.querySelector('code')?.textContent || codeEl.textContent;
+            try {
+                await navigator.clipboard.writeText(code);
+                const origHtml = btn.innerHTML;
+                btn.innerHTML = '<i class="ph ph-check" aria-hidden="true"></i> Copied!';
+                btn.classList.add('copied');
+                announce('Tokens copied to clipboard');
+                setTimeout(() => {
+                    btn.innerHTML = origHtml;
+                    btn.classList.remove('copied');
+                }, 2000);
+            } catch (err) {
+                console.error('Failed to copy tokens:', err);
+            }
+        });
+    });
+
+    // Token count for "Copy All" block
+    const allCodeEl = document.getElementById('token-code-all');
+    const countEl = document.getElementById('token-count-all');
+    const sizeEl = document.getElementById('token-size-all');
+    if (allCodeEl && countEl) {
+        const text = allCodeEl.textContent || '';
+        const tokenCount = (text.match(/^\s+--[\w-]+:/gm) || []).length;
+        countEl.textContent = tokenCount + ' tokens';
+        if (sizeEl) {
+            const bytes = new Blob([text]).size;
+            sizeEl.textContent = bytes < 1024 ? bytes + ' B' : (bytes / 1024).toFixed(1) + ' KB';
+        }
+    }
 });

@@ -13,6 +13,8 @@ The foundation: colors, type, and spacing that every component inherits.
 - [Colors](./tokens/colors.html) — OKLCH palette, grayscale, accent, status, semantic mapping
 - [Typography](./tokens/typography.html) — Font stacks, scale, weights, line heights
 - [Spacing](./tokens/spacing.html) — 4px base grid, spacing tokens
+- [Elevation](./tokens/elevation.html) — Shadow system, multi-layer composites
+- [Export](./tokens/export.html) — Copy all tokens as CSS, JSON, or SCSS
 
 ---
 
