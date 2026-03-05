@@ -1215,4 +1215,46 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // ═══════════════════════════════════════
+    // BACK TO TOP BUTTON
+    // ═══════════════════════════════════════
+    const backToTopBtn = document.getElementById('back-to-top');
+    if (backToTopBtn) {
+        const BTT_THRESHOLD = 400; // px scrolled before showing
+        let bttTicking = false;
+
+        function updateBackToTop() {
+            if (window.scrollY > BTT_THRESHOLD) {
+                backToTopBtn.classList.add('is-visible');
+            } else {
+                backToTopBtn.classList.remove('is-visible');
+            }
+            bttTicking = false;
+        }
+
+        window.addEventListener('scroll', () => {
+            if (!bttTicking) {
+                requestAnimationFrame(updateBackToTop);
+                bttTicking = true;
+            }
+        }, { passive: true });
+
+        backToTopBtn.addEventListener('click', () => {
+            // Use smooth scroll if user hasn't opted out of motion
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            window.scrollTo({
+                top: 0,
+                behavior: prefersReducedMotion ? 'instant' : 'smooth'
+            });
+            // Move focus to skip-link or top of page for a11y
+            const skipLink = document.querySelector('.skip-link');
+            if (skipLink) {
+                skipLink.focus({ preventScroll: true });
+            }
+        });
+
+        // Initial check (e.g., if page loaded scrolled down)
+        updateBackToTop();
+    }
 })();

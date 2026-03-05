@@ -6725,5 +6725,102 @@ details[open] .Accordion-icon {
 }
 
 /* ═══════════════════════════════════════
+   BACK TO TOP BUTTON
+   ═══════════════════════════════════════ */
+.back-to-top {
+  position: fixed;
+  /* Mobile: above the floating pill nav (nav height ~56px + space-4 bottom + safe-b) */
+  bottom: calc(72px + var(--safe-b));
+  right: var(--space-4);
+  z-index: 499; /* Below fnav (500) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--bd);
+  border-radius: var(--r-f);
+  background: oklch(from var(--bg) l c h / .85);
+  backdrop-filter: blur(16px) saturate(1.4);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+  box-shadow: var(--sh-s);
+  color: var(--fg-3);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity var(--dur-n) var(--ease),
+              visibility var(--dur-n) var(--ease),
+              transform var(--dur-n) var(--ease),
+              background var(--dur-n) var(--ease),
+              color var(--dur-n) var(--ease),
+              border-color var(--dur-n) var(--ease),
+              box-shadow var(--dur-n) var(--ease);
+  -webkit-tap-highlight-color: transparent;
+}
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.back-to-top:hover {
+  background: var(--bg-s);
+  color: var(--accent);
+  border-color: var(--accent-s);
+  box-shadow: var(--sh-m);
+}
+.back-to-top:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.back-to-top:active {
+  transform: translateY(-1px);
+}
+.back-to-top i {
+  font-size: var(--fs-xl);
+  line-height: 1;
+}
+
+/* Desktop: fnav is at top, so button sits in normal bottom-right */
+@media (min-width: 768px) {
+  .back-to-top {
+    bottom: var(--space-8);
+    right: var(--space-6);
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* Has TOC sidebar: nudge right of sidebar boundary on wide screens */
+@media (min-width: 1200px) {
+  .back-to-top {
+    right: var(--space-8);
+  }
+}
+
+/* Dark mode */
+[data-theme="dark"] .back-to-top {
+  background: oklch(from var(--bg) l c h / .80);
+  box-shadow: var(--sh-m);
+}
+[data-theme="dark"] .back-to-top:hover {
+  background: var(--bg-s);
+}
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .back-to-top {
+    background: oklch(from var(--bg) l c h / .80);
+    box-shadow: var(--sh-m);
+  }
+  html:not([data-theme="light"]) .back-to-top:hover {
+    background: var(--bg-s);
+  }
+}
+
+/* Print: hide */
+@media print {
+  .back-to-top { display: none !important; }
+}
+
+/* ═══════════════════════════════════════
    END OF STANDARD v1.0 STYLES
    ═══════════════════════════════════════ */
