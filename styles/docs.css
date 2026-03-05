@@ -4845,5 +4845,428 @@ details[open] .Accordion-icon {
 }
 
 /* ═══════════════════════════════════════
+   PRINT STYLESHEET
+   ═══════════════════════════════════════
+   Goals:
+   - Clean, readable printout of component docs
+   - Hide all interactive/nav chrome
+   - Proper page breaks around components
+   - Readable code blocks (no overflow)
+   - Consistent black-on-white for ink savings
+   - Preserve preview containers as visual reference
+   ═══════════════════════════════════════ */
+
+@media print {
+
+  /* ─── Reset to light, print-safe colors ─── */
+  :root,
+  html,
+  html[data-theme="dark"],
+  html[data-theme="light"] {
+    --bg: oklch(100% 0 0);
+    --bg-s: oklch(97% 0 0);
+    --bg-m: oklch(94% 0 0);
+    --fg: oklch(0% 0 0);
+    --fg-m: oklch(25% 0 0);
+    --fg-w: oklch(40% 0 0);
+    --bd: oklch(75% 0 0);
+    --bd-w: oklch(85% 0 0);
+    --accent: oklch(0% 0 0);
+    color-scheme: light;
+  }
+
+  *,
+  *::before,
+  *::after {
+    /* Remove shadows for clean print */
+    box-shadow: none !important;
+    text-shadow: none !important;
+    /* Disable transitions/animations */
+    transition: none !important;
+    animation: none !important;
+  }
+
+  html, body {
+    background: white !important;
+    color: black !important;
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+
+  /* ─── Hide interactive/nav chrome ─── */
+  .fnav,
+  .top-bar,
+  .mobile-search-overlay,
+  #search-container,
+  #theme-btn,
+  #search-toggle,
+  .code-copy-btn,
+  .code-block-header .code-copy-btn,
+  .Preview-code-copy,
+  .Toast-container,
+  .Modal-overlay,
+  .Drawer-overlay,
+  .page-footer {
+    display: none !important;
+  }
+
+  /* ─── Layout: remove fixed positioning, use full width ─── */
+  .app {
+    display: block;
+  }
+
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .main-content {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    /* Remove view-transition-name (breaks print in some browsers) */
+    view-transition-name: none !important;
+  }
+
+  /* ─── Page header ─── */
+  .page-header {
+    margin-bottom: 1.5em;
+  }
+
+  .page-header h1 {
+    font-size: 22pt;
+    color: black !important;
+    margin-bottom: 0.25em;
+  }
+
+  .page-header h1 em {
+    font-style: italic;
+    color: black !important;
+  }
+
+  .breadcrumbs {
+    font-size: 9pt;
+    color: #555 !important;
+    margin-bottom: 0.5em;
+  }
+
+  .breadcrumbs a {
+    color: #555 !important;
+    text-decoration: none !important;
+  }
+
+  .breadcrumbs .sep {
+    color: #999 !important;
+  }
+
+  /* ─── Prose typography ─── */
+  .prose {
+    max-width: 100% !important;
+  }
+
+  .prose h2 {
+    font-size: 16pt;
+    color: black !important;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.25em;
+    margin-top: 1.5em;
+    page-break-after: avoid;
+  }
+
+  .prose h3 {
+    font-size: 13pt;
+    color: black !important;
+    margin-top: 1.25em;
+    page-break-after: avoid;
+  }
+
+  .prose p,
+  .prose li {
+    font-size: 11pt;
+    color: #111 !important;
+    orphans: 3;
+    widows: 3;
+  }
+
+  .prose a {
+    color: black !important;
+    text-decoration: underline !important;
+  }
+
+  /* Print URLs after links for reference */
+  .prose a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 8pt;
+    color: #666 !important;
+    font-weight: 400;
+    word-break: break-all;
+  }
+
+  /* Don't print URL for internal nav links */
+  .prose a[href^="#"]::after,
+  .breadcrumbs a::after,
+  .fnav-btn::after {
+    content: none !important;
+  }
+
+  /* ─── Tables ─── */
+  .prose table,
+  .Table-container table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    font-size: 9pt;
+    page-break-inside: auto;
+  }
+
+  .prose table th,
+  .Table-container table th {
+    background: #f0f0f0 !important;
+    color: black !important;
+    font-weight: 600;
+    border: 1px solid #ccc !important;
+    padding: 6px 8px !important;
+  }
+
+  .prose table td,
+  .Table-container table td {
+    border: 1px solid #ccc !important;
+    padding: 6px 8px !important;
+    color: #111 !important;
+  }
+
+  .prose table tr {
+    page-break-inside: avoid;
+  }
+
+  .table-scroll-wrapper {
+    overflow: visible !important;
+  }
+
+  /* ─── Code blocks ─── */
+  pre,
+  pre[class*="language-"],
+  code[class*="language-"] {
+    background: #f5f5f5 !important;
+    color: black !important;
+    border: 1px solid #ddd !important;
+    font-size: 8.5pt !important;
+    line-height: 1.45 !important;
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
+    overflow: visible !important;
+    page-break-inside: avoid;
+  }
+
+  pre[class*="language-"] {
+    padding: 12px !important;
+    border-radius: 4px !important;
+    margin: 0.75em 0 !important;
+  }
+
+  .code-block-wrapper {
+    page-break-inside: avoid;
+  }
+
+  .code-block-header {
+    background: #e8e8e8 !important;
+    color: #333 !important;
+    border: 1px solid #ddd !important;
+    border-bottom: none !important;
+    padding: 4px 12px !important;
+    font-size: 8pt !important;
+    border-radius: 4px 4px 0 0 !important;
+  }
+
+  .code-block-header + pre[class*="language-"] {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+  }
+
+  /* Flatten syntax highlighting to grayscale for print */
+  .token.comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: #666 !important;
+  }
+
+  .token.punctuation {
+    color: #333 !important;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol {
+    color: #111 !important;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin {
+    color: #333 !important;
+  }
+
+  .token.operator,
+  .token.entity,
+  .token.url,
+  .token.keyword,
+  .token.atrule,
+  .token.attr-value,
+  .token.function,
+  .token.class-name,
+  .token.regex,
+  .token.important,
+  .token.variable {
+    color: #000 !important;
+    font-weight: 600;
+  }
+
+  /* Inline code */
+  .prose code:not([class*="language-"]) {
+    background: #f0f0f0 !important;
+    color: #111 !important;
+    border: 1px solid #ddd !important;
+    padding: 1px 4px !important;
+    font-size: 9pt !important;
+    border-radius: 2px !important;
+  }
+
+  /* ─── Preview containers ─── */
+  .Preview {
+    border: 1px solid #ccc !important;
+    border-radius: 6px !important;
+    margin: 1em 0 !important;
+    page-break-inside: avoid;
+    overflow: visible !important;
+  }
+
+  .Preview-header {
+    background: #f5f5f5 !important;
+    border-bottom: 1px solid #ccc !important;
+    padding: 6px 12px !important;
+    font-size: 9pt !important;
+    color: #555 !important;
+  }
+
+  /* Hide viewport toggle buttons in preview header */
+  .Preview-header button,
+  .Preview-divider {
+    display: none !important;
+  }
+
+  .Preview-canvas {
+    padding: 20px !important;
+    background: white !important;
+  }
+
+  /* ─── Component samples: keep them visible but simplified ─── */
+  .Button,
+  .Badge,
+  .Chip,
+  .Alert,
+  .Card {
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+  }
+
+  .Button {
+    background: #f5f5f5 !important;
+    color: black !important;
+  }
+
+  .Button--primary {
+    background: #333 !important;
+    color: white !important;
+  }
+
+  /* ─── Specific component print helpers ─── */
+  .Accordion,
+  .Tabs,
+  .Stepper,
+  .Timeline {
+    page-break-inside: avoid;
+  }
+
+  /* Keep do/don't examples together */
+  .DosDonts,
+  .do-dont {
+    page-break-inside: avoid;
+  }
+
+  /* ─── Images ─── */
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  /* ─── Page break controls ─── */
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+
+  .prose > section,
+  .prose > div {
+    page-break-inside: avoid;
+  }
+
+  /* ─── Color swatches / token displays ─── */
+  .color-grid,
+  .swatch-grid {
+    page-break-inside: avoid;
+  }
+
+  .swatch,
+  .color-swatch {
+    border: 1px solid #ccc !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ─── Icons grid ─── */
+  .icons-grid {
+    page-break-inside: auto;
+  }
+
+  .icons-grid .icon-item {
+    page-break-inside: avoid;
+    border: 1px solid #eee !important;
+  }
+
+  /* ─── Spacing / sizing: tighten for paper ─── */
+  .prose h2 + .Preview,
+  .prose h3 + .Preview {
+    margin-top: 0.5em !important;
+  }
+
+  /* ─── Header / identification ─── */
+  /* Add a print-only header with the site name */
+  .page-header::before {
+    content: "Standard Design System";
+    display: block;
+    font-size: 9pt;
+    color: #999;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+  }
+
+  /* ─── Page margins via @page ─── */
+  @page {
+    margin: 2cm 1.5cm;
+    size: A4;
+  }
+
+  @page :first {
+    margin-top: 2.5cm;
+  }
+}
+
+/* ═══════════════════════════════════════
    END OF STANDARD v0.3 STYLES
    ═══════════════════════════════════════ */
