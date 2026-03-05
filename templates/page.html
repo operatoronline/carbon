@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#7B2FBE" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1E1E1E" media="(prefers-color-scheme: dark)">
     <title>{{TITLE}} | Standard</title>
     <meta name="description" content="{{META_DESCRIPTION}}">
     <link rel="canonical" href="{{CANONICAL_URL}}">
@@ -30,22 +33,21 @@
     <link rel="apple-touch-icon" href="{{REL_ROOT}}assets/apple-touch-icon.png">
     <link rel="manifest" href="{{REL_ROOT}}manifest.webmanifest">
 
-    <!-- Preload critical fonts (latin subsets) to eliminate FOIT/FOUT -->
-    <link rel="preload" href="{{REL_ROOT}}assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Preload critical fonts (above-the-fold: body text, headings, nav icons) -->
+    <link rel="preload" href="{{REL_ROOT}}assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
     <link rel="preload" href="{{REL_ROOT}}assets/fonts/instrument-serif-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="{{REL_ROOT}}assets/fonts/instrument-serif-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="{{REL_ROOT}}vendor/normalize.css">
-    <link rel="stylesheet" href="{{REL_ROOT}}vendor/phosphor/regular/style.css">
-    <link rel="stylesheet" href="{{REL_ROOT}}vendor/phosphor/bold/style.css">
-    <link rel="stylesheet" href="{{REL_ROOT}}vendor/phosphor/fill/style.css">
-    <link rel="stylesheet" href="{{REL_ROOT}}vendor/phosphor/duotone/style.css">
-    <link rel="stylesheet" href="{{REL_ROOT}}styles/{{CSS_FILE}}">
+    <link rel="preload" href="{{REL_ROOT}}vendor/phosphor/bold/Phosphor-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Critical CSS inlined for instant first paint (tokens + layout + nav + header) -->
+    <style>{{CRITICAL_CSS}}</style>
+    <!-- Preload full stylesheet (start download immediately, applied in body) -->
+    <link rel="preload" href="{{REL_ROOT}}styles/{{CSS_FILE}}" as="style">
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to content</a>
     <div class="app">
         <!-- Floating Pill Nav (Mobile: bottom, Desktop: top) -->
-        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation">
+        <nav class="fnav" id="fnav" role="navigation" aria-label="Main navigation" data-active-section="{{ACTIVE_SECTION}}">
             <a href="{{REL_ROOT}}index.html" class="fnav-btn" data-section="home" aria-label="Home">
                 <i class="ph-bold ph-house" aria-hidden="true"></i>
                 <span>Home</span>
@@ -109,13 +111,12 @@
         </div>
     </div>
 
-    <script src="{{REL_ROOT}}vendor/fuse.min.js"></script>
-    <script src="{{REL_ROOT}}vendor/prism/prism.min.js"></script>
-    <script src="{{REL_ROOT}}vendor/prism/prism-markup.min.js"></script>
-    <script src="{{REL_ROOT}}vendor/prism/prism-css.min.js"></script>
-    <script src="{{REL_ROOT}}vendor/prism/prism-javascript.min.js"></script>
+    <!-- Full stylesheet (non-blocking — after content, preloaded in head) -->
+    <link rel="stylesheet" href="{{REL_ROOT}}styles/{{CSS_FILE}}">
     <!-- Screen reader live region for dynamic announcements -->
     <div id="a11y-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
-    <script src="{{REL_ROOT}}scripts/{{JS_FILE}}"></script>
+    <!-- Single combined vendor bundle (Fuse.js + Prism.js + plugins) — reduces HTTP requests -->
+    <script src="{{REL_ROOT}}scripts/{{VENDOR_JS_FILE}}" defer></script>
+    <script src="{{REL_ROOT}}scripts/{{JS_FILE}}" defer></script>
 </body>
 </html>

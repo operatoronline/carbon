@@ -131,6 +131,17 @@ async function build() {
 
     const template = await fs.readFile(CONFIG.templatePath, 'utf-8');
 
+    // Read and minify critical CSS for inline injection
+    const criticalCssRaw = await fs.readFile('styles/critical.css', 'utf-8');
+    const criticalCssResult = await transform(criticalCssRaw, {
+        loader: 'css',
+        minify: true,
+        target: ['chrome111', 'safari17', 'firefox121'],
+    });
+    const criticalCssInline = criticalCssResult.code;
+    console.log(`  ✓ Critical CSS: ${(Buffer.byteLength(criticalCssRaw) / 1024).toFixed(1)}KB → ${(Buffer.byteLength(criticalCssInline) / 1024).toFixed(1)}KB (minified for inline)`);
+
+
     // 1. Clean dist and copy assets
     await fs.ensureDir(CONFIG.distDir);
     const filesInDist = await fs.readdir(CONFIG.distDir);
@@ -144,27 +155,131 @@ async function build() {
         }
     }
 
-    // 1b. Minify CSS and JS, generate content-hashed filenames
     const assetMap = {}; // maps original name → hashed name (e.g. 'docs.css' → 'docs.a1b2c3d4.min.css')
 
-    // Minify CSS
-    const cssPath = path.join(CONFIG.distDir, 'styles/docs.css');
-    if (await fs.pathExists(cssPath)) {
-        const cssSource = await fs.readFile(cssPath, 'utf-8');
-        const cssResult = await transform(cssSource, {
-            loader: 'css',
-            minify: true,
-            target: ['chrome111', 'safari17', 'firefox121'],
-        });
-        const cssHash = createHash('md5').update(cssResult.code).digest('hex').slice(0, 8);
-        const cssMinName = `docs.${cssHash}.min.css`;
-        await fs.writeFile(path.join(CONFIG.distDir, `styles/${cssMinName}`), cssResult.code);
-        await fs.remove(cssPath); // remove unminified
-        assetMap['docs.css'] = cssMinName;
-        const cssOrigSize = Buffer.byteLength(cssSource, 'utf-8');
-        const cssMinSize = Buffer.byteLength(cssResult.code, 'utf-8');
-        console.log(`  ✓ Minified docs.css → ${cssMinName} (${(cssOrigSize / 1024).toFixed(1)}KB → ${(cssMinSize / 1024).toFixed(1)}KB, ${Math.round((1 - cssMinSize / cssOrigSize) * 100)}% smaller)`);
+    // 1b. Combine + subset + minify all vendor CSS into single file
+    // Step 1: Scan all source files for used Phosphor icon names
+    const sourceFiles = await glob('{content,templates,scripts,styles}/**/*.{md,html,js,css}');
+    const usedIcons = new Set();
+    for (const sf of sourceFiles) {
+        const src = await fs.readFile(sf, 'utf-8');
+        const matches = src.matchAll(/ph-([a-z][a-z0-9-]*)/g);
+        for (const m of matches) usedIcons.add(m[1]);
     }
+    // Remove false positives (CSS class prefixes, not icon names)
+    ['bold', 'fill', 'duotone'].forEach(w => usedIcons.delete(w));
+    console.log(`  ✓ Found ${usedIcons.size} unique Phosphor icon names used`);
+
+    // Step 2: Subset each Phosphor CSS — keep @font-face + base class + only used icon rules
+    const vendorCssParts = [
+        { path: 'vendor/normalize.css', subset: false },
+        { path: 'vendor/phosphor/regular/style.css', subset: true, prefix: '.ph.ph-' },
+        { path: 'vendor/phosphor/bold/style.css', subset: true, prefix: '.ph-bold.ph-' },
+        { path: 'vendor/phosphor/fill/style.css', subset: true, prefix: '.ph-fill.ph-' },
+        { path: 'vendor/phosphor/duotone/style.css', subset: true, prefix: '.ph-duotone.ph-' },
+    ];
+    let combinedVendorCss = '';
+    let totalOrigRules = 0;
+    let totalKeptRules = 0;
+
+    for (const vp of vendorCssParts) {
+        const fullPath = path.join(CONFIG.distDir, vp.path);
+        if (!await fs.pathExists(fullPath)) continue;
+        let css = await fs.readFile(fullPath, 'utf-8');
+
+        // Rewrite font url() paths for combined file (served from styles/)
+        const dir = path.dirname(vp.path);
+        css = css.replace(/url\(["']?\.\/([^"')]+)["']?\)/g, (_, file) => `url(../${dir}/${file})`);
+
+        if (vp.subset) {
+            // Split into lines and keep: @font-face block, base class block, and used icon rules
+            const lines = css.split('\n');
+            const kept = [];
+            let inBlock = false;
+            let blockLines = [];
+            let blockSelector = '';
+            let braceDepth = 0;
+
+            for (const line of lines) {
+                const openBraces = (line.match(/{/g) || []).length;
+                const closeBraces = (line.match(/}/g) || []).length;
+
+                if (!inBlock && openBraces > 0) {
+                    inBlock = true;
+                    blockSelector = line;
+                    blockLines = [line];
+                    braceDepth = openBraces - closeBraces;
+                    if (braceDepth <= 0) {
+                        // Single-line rule
+                        inBlock = false;
+                        totalOrigRules++;
+                        // Check if we should keep this rule
+                        const isIconRule = blockSelector.includes(':before') || blockSelector.includes('::before') || blockSelector.includes(':after') || blockSelector.includes('::after');
+                        if (isIconRule) {
+                            // Extract icon name from selector like .ph.ph-house:before, .ph-duotone.ph-house:after
+                            const nameMatch = blockSelector.match(/\.ph-([a-z][a-z0-9-]*?)(?:::|:)(?:before|after)/);
+                            if (nameMatch && usedIcons.has(nameMatch[1])) {
+                                kept.push(blockLines.join('\n'));
+                                totalKeptRules++;
+                            }
+                        } else {
+                            kept.push(blockLines.join('\n'));
+                            totalKeptRules++;
+                        }
+                    }
+                } else if (inBlock) {
+                    blockLines.push(line);
+                    braceDepth += openBraces - closeBraces;
+                    if (braceDepth <= 0) {
+                        inBlock = false;
+                        totalOrigRules++;
+                        const isIconRule = blockSelector.includes(':before') || blockSelector.includes('::before') || blockSelector.includes(':after') || blockSelector.includes('::after');
+                        if (isIconRule) {
+                            const nameMatch = blockSelector.match(/\.ph-([a-z][a-z0-9-]*?)(?:::|:)(?:before|after)/);
+                            if (nameMatch && usedIcons.has(nameMatch[1])) {
+                                kept.push(blockLines.join('\n'));
+                                totalKeptRules++;
+                            }
+                        } else {
+                            // Non-icon rule: @font-face, base class, etc. — keep
+                            kept.push(blockLines.join('\n'));
+                            totalKeptRules++;
+                        }
+                    }
+                } else {
+                    // Outside blocks (comments, whitespace)
+                    kept.push(line);
+                }
+            }
+            css = kept.join('\n');
+        }
+
+        combinedVendorCss += `/* ${vp.path} */\n${css}\n`;
+    }
+
+    console.log(`  ✓ Phosphor CSS subsetted: ${totalKeptRules} rules kept of ${totalOrigRules} (${Math.round((1 - totalKeptRules / totalOrigRules) * 100)}% removed)`);
+
+    // 1c. Combine vendor CSS + docs CSS into SINGLE file (eliminates one render-blocking request)
+    const cssPath = path.join(CONFIG.distDir, 'styles/docs.css');
+    let combinedAllCss = combinedVendorCss;
+    if (await fs.pathExists(cssPath)) {
+        const docsCss = await fs.readFile(cssPath, 'utf-8');
+        combinedAllCss += `\n/* docs.css */\n${docsCss}`;
+        await fs.remove(cssPath);
+    }
+    const combinedOrigSize = Buffer.byteLength(combinedAllCss);
+
+    const combinedResult = await transform(combinedAllCss, {
+        loader: 'css',
+        minify: true,
+        target: ['chrome111', 'safari17', 'firefox121'],
+    });
+    const combinedHash = createHash('md5').update(combinedResult.code).digest('hex').slice(0, 8);
+    const combinedMinName = `standard.${combinedHash}.min.css`;
+    await fs.writeFile(path.join(CONFIG.distDir, `styles/${combinedMinName}`), combinedResult.code);
+    const combinedMinSize = Buffer.byteLength(combinedResult.code);
+    assetMap['docs.css'] = combinedMinName;
+    console.log(`  ✓ Combined vendor + docs → ${combinedMinName} (${(combinedOrigSize / 1024).toFixed(1)}KB → ${(combinedMinSize / 1024).toFixed(1)}KB, ${Math.round((1 - combinedMinSize / combinedOrigSize) * 100)}% smaller)`);
 
     // Minify JS
     const jsPath = path.join(CONFIG.distDir, 'scripts/docs.js');
@@ -183,6 +298,36 @@ async function build() {
         const jsOrigSize = Buffer.byteLength(jsSource, 'utf-8');
         const jsMinSize = Buffer.byteLength(jsResult.code, 'utf-8');
         console.log(`  ✓ Minified docs.js → ${jsMinName} (${(jsOrigSize / 1024).toFixed(1)}KB → ${(jsMinSize / 1024).toFixed(1)}KB, ${Math.round((1 - jsMinSize / jsOrigSize) * 100)}% smaller)`);
+    }
+
+    // Combine vendor JS into single bundle (Fuse.js + Prism.js + plugins → one request)
+    const vendorJsFiles = [
+        'vendor/fuse.min.js',
+        'vendor/prism/prism.min.js',
+        'vendor/prism/prism-markup.min.js',
+        'vendor/prism/prism-css.min.js',
+        'vendor/prism/prism-javascript.min.js',
+    ];
+    let combinedVendorJs = '';
+    for (const vjf of vendorJsFiles) {
+        const fullPath = path.join(CONFIG.distDir, vjf);
+        if (await fs.pathExists(fullPath)) {
+            combinedVendorJs += await fs.readFile(fullPath, 'utf-8') + ';\n';
+        }
+    }
+    if (combinedVendorJs) {
+        const vendorJsResult = await transform(combinedVendorJs, {
+            loader: 'js',
+            minify: true,
+            target: ['chrome111', 'safari17', 'firefox121'],
+        });
+        const vendorJsHash = createHash('md5').update(vendorJsResult.code).digest('hex').slice(0, 8);
+        const vendorJsMinName = `vendor.${vendorJsHash}.min.js`;
+        await fs.writeFile(path.join(CONFIG.distDir, `scripts/${vendorJsMinName}`), vendorJsResult.code);
+        assetMap['vendor.js'] = vendorJsMinName;
+        const vendorJsOrigSize = Buffer.byteLength(combinedVendorJs);
+        const vendorJsMinSize = Buffer.byteLength(vendorJsResult.code);
+        console.log(`  ✓ Combined vendor JS → ${vendorJsMinName} (${(vendorJsOrigSize / 1024).toFixed(1)}KB → ${(vendorJsMinSize / 1024).toFixed(1)}KB, ${Math.round((1 - vendorJsMinSize / vendorJsOrigSize) * 100)}% smaller)`);
     }
 
     // Minify 404 CSS
@@ -269,6 +414,16 @@ async function build() {
 
         const navHtml = generateNavHtml(navTree, relRoot);
 
+        // Determine active nav section from path
+        let activeSection = 'home';
+        if (relativePath.startsWith('tokens/') || relativePath === 'tokens.md') {
+            activeSection = 'tokens';
+        } else if (relativePath.startsWith('components/') || relativePath === 'components.md') {
+            activeSection = 'components';
+        } else if (relativePath.startsWith('patterns/') || relativePath === 'patterns.md') {
+            activeSection = 'patterns';
+        }
+
         // Generate Breadcrumbs
         const pathParts = relativePath.replace('.md', '').split(path.sep);
         let breadcrumbsHtml = `<a href="${relRoot}index.html">Standard</a>`;
@@ -349,6 +504,28 @@ async function build() {
         const canonicalUrl = `${CONFIG.siteUrl}/${canonicalPath}`;
         const ogUrl = canonicalUrl;
 
+        // Generate JSON-LD structured data
+        const jsonLd = JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            name: `${title} | Standard`,
+            description: metaDescription,
+            url: canonicalUrl,
+            isPartOf: {
+                '@type': 'WebSite',
+                name: 'Standard Design System',
+                url: CONFIG.siteUrl
+            },
+            ...(relativePath === 'index.md' ? {
+                '@type': 'WebSite',
+                potentialAction: {
+                    '@type': 'SearchAction',
+                    target: { '@type': 'EntryPoint', urlTemplate: `${CONFIG.siteUrl}/?q={search_term_string}` },
+                    'query-input': 'required name=search_term_string'
+                }
+            } : {})
+        });
+
         const finalHtml = template
             .replace(/{{TITLE}}/g, title)
             .replace(/{{TITLE_DISPLAY}}/g, titleDisplay)
@@ -363,8 +540,12 @@ async function build() {
             .replace(/{{REL_ROOT}}/g, relRoot)
             .replace(/{{VERSION}}/g, CONFIG.version)
             .replace(/{{LAST_BUILT}}/g, new Date().toLocaleString())
+            .replace(/{{CRITICAL_CSS}}/g, () => criticalCssInline.replace(/\.\.\/assets\//g, relRoot + 'assets/').replace(/\.\.\/vendor\//g, relRoot + 'vendor/'))
             .replace(/{{CSS_FILE}}/g, assetMap['docs.css'] || 'docs.css')
-            .replace(/{{JS_FILE}}/g, assetMap['docs.js'] || 'docs.js');
+            .replace(/{{VENDOR_JS_FILE}}/g, assetMap['vendor.js'] || 'vendor.js')
+            .replace(/{{JS_FILE}}/g, assetMap['docs.js'] || 'docs.js')
+            .replace(/{{JSON_LD}}/g, () => jsonLd)
+            .replace(/{{ACTIVE_SECTION}}/g, activeSection);
 
         await fs.ensureDir(path.dirname(targetPath));
         await fs.writeFile(targetPath, finalHtml);
@@ -501,6 +682,9 @@ ${sitemapEntries.map(e => `  <url>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#7B2FBE" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1E1E1E" media="(prefers-color-scheme: dark)">
     <title>404 — Page Not Found | Standard</title>
     <meta name="description" content="The page you're looking for doesn't exist. Search the Standard Design System or navigate to a section.">
     <link rel="canonical" href="${CONFIG.siteUrl}/404">
@@ -514,16 +698,10 @@ ${sitemapEntries.map(e => `  <url>
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
     <link rel="manifest" href="./manifest.webmanifest">
-    <link rel="preload" href="./assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="./assets/fonts/instrument-serif-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="./assets/fonts/instrument-serif-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="./vendor/normalize.css">
-    <link rel="stylesheet" href="./vendor/phosphor/regular/style.css">
-    <link rel="stylesheet" href="./vendor/phosphor/bold/style.css">
-    <link rel="stylesheet" href="./vendor/phosphor/fill/style.css">
-    <link rel="stylesheet" href="./vendor/phosphor/duotone/style.css">
-    <link rel="stylesheet" href="./styles/${assetMap['docs.css'] || 'docs.css'}">
-    <link rel="stylesheet" href="./styles/${assetMap['404.css'] || '404.css'}">
+    <link rel="preload" href="./assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
+    <style>${criticalCssInline.replace(/\.\.\/assets\//g, './assets/').replace(/\.\.\/vendor\//g, './vendor/')}</style>
+    <link rel="preload" href="./styles/${assetMap['docs.css'] || 'docs.css'}" as="style">
+    <link rel="preload" href="./styles/${assetMap['404.css'] || '404.css'}" as="style">
 </head>
 <body>
     <div class="app">
@@ -574,7 +752,9 @@ ${sitemapEntries.map(e => `  <url>
         </div>
     </div>
 
-    <script src="./scripts/${assetMap['404.js'] || '404.js'}"></script>
+    <link rel="stylesheet" href="./styles/${assetMap['docs.css'] || 'docs.css'}">
+    <link rel="stylesheet" href="./styles/${assetMap['404.css'] || '404.css'}">
+    <script src="./scripts/${assetMap['404.js'] || '404.js'}" defer></script>
 </body>
 </html>`;
 
