@@ -110,7 +110,8 @@
 
 /* ── Reset ── */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-behavior: smooth; }
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-behavior: smooth; scroll-padding-top: var(--space-4); }
+@media (min-width: 768px) { html { scroll-padding-top: calc(var(--nav-h) + var(--space-8) + var(--space-4)); } }
 body {
   font-family: var(--ff-b); background: var(--bg); color: var(--fg);
   line-height: 1.6; min-height: 100vh; min-height: 100dvh; overflow-x: hidden;

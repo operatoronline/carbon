@@ -708,6 +708,14 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+  /* Offset native anchor scrolling (hash links, find-on-page) below the fixed top-bar on desktop */
+  scroll-padding-top: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  html {
+    scroll-padding-top: calc(var(--nav-h) + var(--space-8) + var(--space-4));
+  }
 }
 
 body {
@@ -1610,6 +1618,22 @@ html:not([data-theme="light"]) {
   font-size: var(--fs-xl);
   line-height: 1.7;
   color: var(--fg-2);
+}
+
+/* scroll-margin-top clears the fixed top-bar + fnav on desktop (52px bar + 24px gap + 16px breathing room = 92px) */
+/* On mobile, fnav is at bottom so less clearance needed (16px breathing room) */
+.prose h2,
+.prose h3,
+.prose h4 {
+  scroll-margin-top: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .prose h2,
+  .prose h3,
+  .prose h4 {
+    scroll-margin-top: calc(var(--nav-h) + var(--space-8) + var(--space-4));
+  }
 }
 
 .prose h2 {
@@ -5103,6 +5127,11 @@ details[open] .Accordion-icon {
 
 /* --- Reduced Motion --- */
 @media (prefers-reduced-motion: reduce) {
+  /* Instant scroll for users who prefer reduced motion */
+  html {
+    scroll-behavior: auto !important;
+  }
+
   /* Kill all animations globally */
   *,
   *::before,

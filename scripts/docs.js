@@ -657,22 +657,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // ═══════════════════════════════════════
     // SMOOTH SCROLL FOR ANCHOR LINKS
     // ═══════════════════════════════════════
+    // ═══════════════════════════════════════
+    // PAGE TRANSITIONS + SCROLL BEHAVIOR
+    // ═══════════════════════════════════════
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Smooth-scroll anchor links (respects reduced motion)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href').slice(1);
             const targetEl = document.getElementById(targetId);
             if (targetEl) {
                 e.preventDefault();
-                targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                targetEl.scrollIntoView({ behavior: prefersReducedMotion ? 'instant' : 'smooth', block: 'start' });
                 history.pushState(null, null, `#${targetId}`);
             }
         });
     });
-
-    // ═══════════════════════════════════════
-    // PAGE TRANSITIONS
-    // ═══════════════════════════════════════
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const hasViewTransitions = 'startViewTransition' in document;
 
     // For browsers WITHOUT View Transitions API: intercept internal links
@@ -818,19 +819,34 @@ document.addEventListener('DOMContentLoaded', () => {
             // Initial highlight
             updateActiveToc();
 
-            // Smooth scroll for TOC clicks
+            // Smooth scroll for TOC clicks (respects reduced motion preference)
+            const tocScrollBehavior = prefersReducedMotion ? 'instant' : 'smooth';
             tocLinks.forEach(link => {
                 link.addEventListener('click', (e) => {
                     const id = link.getAttribute('href')?.replace('#', '');
                     const target = id && document.getElementById(id);
                     if (target) {
                         e.preventDefault();
-                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        target.scrollIntoView({ behavior: tocScrollBehavior, block: 'start' });
                         // Update URL hash without jump
                         history.pushState(null, '', `#${id}`);
+                        // Move focus to heading for keyboard users
+                        target.setAttribute('tabindex', '-1');
+                        target.focus({ preventScroll: true });
                     }
                 });
             });
+
+            // Handle initial page load with hash — ensure heading is visible below fixed nav
+            if (window.location.hash) {
+                const hashTarget = document.getElementById(window.location.hash.slice(1));
+                if (hashTarget) {
+                    // Slight delay to let the browser finish layout
+                    requestAnimationFrame(() => {
+                        hashTarget.scrollIntoView({ behavior: 'instant', block: 'start' });
+                    });
+                }
+            }
         }
     }
 
