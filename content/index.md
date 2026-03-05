@@ -2,6 +2,8 @@
 
 A framework-agnostic design system built on OKLCH colors, a 4px spacing scale, and zero dependencies. Static HTML — host anywhere.
 
+**New here?** Start with the [Getting Started](./getting-started.html) guide — you'll be building in two minutes.
+
 ---
 
 ## Tokens

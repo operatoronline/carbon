@@ -397,6 +397,7 @@ Disallow: /search-index.json
     // Define priority and changefreq by section
     const getSitemapMeta = (url) => {
         if (url === 'index.html') return { priority: '1.0', changefreq: 'weekly' };
+        if (url === 'getting-started.html') return { priority: '0.9', changefreq: 'monthly' };
         if (url.startsWith('tokens/')) return { priority: '0.8', changefreq: 'monthly' };
         if (url.startsWith('components/')) return { priority: '0.9', changefreq: 'monthly' };
         if (url.startsWith('patterns/')) return { priority: '0.7', changefreq: 'monthly' };
