@@ -1307,7 +1307,7 @@ Override card styles using CSS custom properties:
 <!-- Meaningful image -->
 <div class="Card">
     <img class="Card-image" src="product.jpg" 
-         alt="Blue wireless headphones with cushioned ear cups">
+         alt="Blue wireless headphones with cushioned ear cups" loading="lazy" decoding="async">
     <div class="Card-body">
         <h3 class="Card-title">Wireless Headphones</h3>
     </div>

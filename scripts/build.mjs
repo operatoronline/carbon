@@ -11,6 +11,20 @@ const md = new MarkdownIt({
     typographer: true
 });
 
+// Add loading="lazy" and decoding="async" to <img> tags that don't have them
+// Skips data: URIs (inline), meta og:image tags, and images that already have the attributes
+function addLazyLoading(html) {
+    return html.replace(/<img\b([^>]*?)(\s*\/?>)/g, (match, attrs, closing) => {
+        // Skip if already has loading attribute
+        if (/loading=/.test(attrs)) return match;
+        // Skip data: URIs (inline, no network request to defer)
+        if (/src="data:/.test(attrs)) return match;
+        // Skip meta tags / OG image (not real <img> elements, but just in case)
+        if (/property=/.test(attrs)) return match;
+        return `<img${attrs} loading="lazy" decoding="async"${closing}`;
+    });
+}
+
 // Escape HTML for display in code blocks
 function escapeHtml(str) {
     return str
@@ -550,8 +564,11 @@ async function build() {
             .replace(/{{CONTAINER_CLASS}}/g, hasToc ? 'has-toc' : '')
             .replace(/{{TOC_SIDEBAR}}/g, () => tocSidebarHtml);
 
+        // Post-process: add lazy loading to any <img> tags missing it
+        const processedHtml = addLazyLoading(finalHtml);
+
         await fs.ensureDir(path.dirname(targetPath));
-        await fs.writeFile(targetPath, finalHtml);
+        await fs.writeFile(targetPath, processedHtml);
         console.log(`  ✓ Written ${targetPath}`);
     }
 

@@ -285,7 +285,7 @@ Display user or entity information with avatars.
     <ul class="List" style="max-width: 400px;">
         <li class="List-item">
             <div class="Avatar Avatar--md">
-                <img src="https://i.pravatar.cc/150?img=1" alt="Sarah Chen">
+                <img src="https://i.pravatar.cc/150?img=1" alt="Sarah Chen" loading="lazy" decoding="async">
             </div>
             <div class="List-item-content">
                 <span class="List-item-text">Sarah Chen</span>
@@ -297,7 +297,7 @@ Display user or entity information with avatars.
         </li>
         <li class="List-item">
             <div class="Avatar Avatar--md">
-                <img src="https://i.pravatar.cc/150?img=3" alt="Alex Rivera">
+                <img src="https://i.pravatar.cc/150?img=3" alt="Alex Rivera" loading="lazy" decoding="async">
             </div>
             <div class="List-item-content">
                 <span class="List-item-text">Alex Rivera</span>
@@ -324,7 +324,7 @@ Display user or entity information with avatars.
 <ul class="List">
     <li class="List-item">
         <div class="Avatar Avatar--md">
-            <img src="..." alt="Sarah Chen">
+            <img src="..." alt="Sarah Chen" loading="lazy" decoding="async">
         </div>
         <div class="List-item-content">
             <span class="List-item-text">Sarah Chen</span>

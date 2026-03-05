@@ -53,7 +53,7 @@ Replace the icon with a custom illustration for more personality.
 ```html
 <div class="EmptyState">
     <div class="EmptyState-illustration">
-        <img src="empty-inbox.svg" alt="">
+        <img src="empty-inbox.svg" alt="" loading="lazy" decoding="async">
     </div>
     <h3 class="EmptyState-title">Your inbox is empty</h3>
     <p class="EmptyState-description">When you receive messages, they'll appear here.</p>

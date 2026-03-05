@@ -453,7 +453,7 @@ Show a preview thumbnail alongside the upload button.
     <label class="FormField-label">Profile Photo</label>
     <div class="FileInput FileInput--with-preview">
         <div class="FileInput-preview">
-            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=upload" alt="Preview" class="FileInput-image">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=upload" alt="Preview" class="FileInput-image" loading="lazy" decoding="async">
         </div>
         <div class="FileInput-content">
             <input type="file" class="FileInput-input" id="file-preview-demo" accept="image/*">

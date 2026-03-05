@@ -224,7 +224,7 @@ Chips with leading avatar for people or entities.
             </button>
         </span>
         <span class="Chip Chip--avatar">
-            <img class="Chip-avatar" src="https://i.pravatar.cc/24?img=3" alt="">
+            <img class="Chip-avatar" src="https://i.pravatar.cc/24?img=3" alt="" loading="lazy" decoding="async">
             Carol
         </span>
     </div>
@@ -237,7 +237,7 @@ Chips with leading avatar for people or entities.
 </span>
 
 <span class="Chip Chip--avatar">
-    <img class="Chip-avatar" src="avatar.jpg" alt="">
+    <img class="Chip-avatar" src="avatar.jpg" alt="" loading="lazy" decoding="async">
     Carol
 </span>
 ```

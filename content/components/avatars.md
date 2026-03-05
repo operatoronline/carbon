@@ -9,11 +9,11 @@ Avatars are visual representations of users, entities, or brands. They provide i
 A simple image avatar.
 
 <Preview title="Basic Avatar">
-    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=basic" class="Avatar" alt="User Avatar">
+    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=basic" class="Avatar" alt="User Avatar" loading="lazy" decoding="async">
 </Preview>
 
 ```html
-<img src="..." class="Avatar" alt="User Avatar">
+<img src="..." class="Avatar" alt="User Avatar" loading="lazy" decoding="async">
 ```
 
 ---
@@ -23,19 +23,19 @@ A simple image avatar.
 Avatars come in five sizes: xs, small, medium (default), large, and xl.
 
 <Preview title="Avatar Sizes">
-    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=size1" class="Avatar Avatar--xs" alt="User">
-    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=size2" class="Avatar Avatar--small" alt="User">
-    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=size3" class="Avatar" alt="User">
-    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=size4" class="Avatar Avatar--large" alt="User">
-    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=size5" class="Avatar Avatar--xl" alt="User">
+    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=size1" class="Avatar Avatar--xs" alt="User" loading="lazy" decoding="async">
+    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=size2" class="Avatar Avatar--small" alt="User" loading="lazy" decoding="async">
+    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=size3" class="Avatar" alt="User" loading="lazy" decoding="async">
+    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=size4" class="Avatar Avatar--large" alt="User" loading="lazy" decoding="async">
+    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=size5" class="Avatar Avatar--xl" alt="User" loading="lazy" decoding="async">
 </Preview>
 
 ```html
-<img src="..." class="Avatar Avatar--xs" alt="User">
-<img src="..." class="Avatar Avatar--small" alt="User">
-<img src="..." class="Avatar" alt="User">
-<img src="..." class="Avatar Avatar--large" alt="User">
-<img src="..." class="Avatar Avatar--xl" alt="User">
+<img src="..." class="Avatar Avatar--xs" alt="User" loading="lazy" decoding="async">
+<img src="..." class="Avatar Avatar--small" alt="User" loading="lazy" decoding="async">
+<img src="..." class="Avatar" alt="User" loading="lazy" decoding="async">
+<img src="..." class="Avatar Avatar--large" alt="User" loading="lazy" decoding="async">
+<img src="..." class="Avatar Avatar--xl" alt="User" loading="lazy" decoding="async">
 ```
 
 ---
@@ -100,15 +100,15 @@ Use an icon when no image or initials are available.
 Avatars can be circular (default) or rounded square.
 
 <Preview title="Avatar Shapes">
-    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=shape1" class="Avatar" alt="User">
-    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=shape2" class="Avatar Avatar--rounded" alt="User">
+    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=shape1" class="Avatar" alt="User" loading="lazy" decoding="async">
+    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=shape2" class="Avatar Avatar--rounded" alt="User" loading="lazy" decoding="async">
     <span class="Avatar Avatar--initials">JD</span>
     <span class="Avatar Avatar--initials Avatar--rounded">SC</span>
 </Preview>
 
 ```html
-<img src="..." class="Avatar" alt="User">
-<img src="..." class="Avatar Avatar--rounded" alt="User">
+<img src="..." class="Avatar" alt="User" loading="lazy" decoding="async">
+<img src="..." class="Avatar Avatar--rounded" alt="User" loading="lazy" decoding="async">
 ```
 
 ---
@@ -119,41 +119,41 @@ Show online, away, busy, or offline status with an indicator.
 
 <Preview title="Status Indicators">
     <div style="position: relative; display: inline-block;">
-        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=status1" class="Avatar" alt="User">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=status1" class="Avatar" alt="User" loading="lazy" decoding="async">
         <span class="Avatar-status Avatar-status--online"></span>
     </div>
     <div style="position: relative; display: inline-block;">
-        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=status2" class="Avatar" alt="User">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=status2" class="Avatar" alt="User" loading="lazy" decoding="async">
         <span class="Avatar-status Avatar-status--away"></span>
     </div>
     <div style="position: relative; display: inline-block;">
-        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=status3" class="Avatar" alt="User">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=status3" class="Avatar" alt="User" loading="lazy" decoding="async">
         <span class="Avatar-status Avatar-status--busy"></span>
     </div>
     <div style="position: relative; display: inline-block;">
-        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=status4" class="Avatar" alt="User">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=status4" class="Avatar" alt="User" loading="lazy" decoding="async">
         <span class="Avatar-status Avatar-status--offline"></span>
     </div>
 </Preview>
 
 ```html
 <div style="position: relative; display: inline-block;">
-    <img src="..." class="Avatar" alt="User">
+    <img src="..." class="Avatar" alt="User" loading="lazy" decoding="async">
     <span class="Avatar-status Avatar-status--online"></span>
 </div>
 ```
 
 <Preview title="Status on Different Sizes">
     <div style="position: relative; display: inline-block;">
-        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=sizes1" class="Avatar Avatar--small" alt="User">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=sizes1" class="Avatar Avatar--small" alt="User" loading="lazy" decoding="async">
         <span class="Avatar-status Avatar-status--online Avatar-status--small"></span>
     </div>
     <div style="position: relative; display: inline-block;">
-        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=sizes2" class="Avatar" alt="User">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=sizes2" class="Avatar" alt="User" loading="lazy" decoding="async">
         <span class="Avatar-status Avatar-status--online"></span>
     </div>
     <div style="position: relative; display: inline-block;">
-        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=sizes3" class="Avatar Avatar--large" alt="User">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=sizes3" class="Avatar Avatar--large" alt="User" loading="lazy" decoding="async">
         <span class="Avatar-status Avatar-status--online Avatar-status--large"></span>
     </div>
 </Preview>
@@ -166,18 +166,18 @@ Display a notification badge on an avatar.
 
 <Preview title="Avatar with Badge">
     <div style="position: relative; display: inline-block;">
-        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=badged1" class="Avatar" alt="User">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=badged1" class="Avatar" alt="User" loading="lazy" decoding="async">
         <span class="Badge Badge--count Badge--error Badge--avatar">3</span>
     </div>
     <div style="position: relative; display: inline-block;">
-        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=badged2" class="Avatar Avatar--large" alt="User">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=badged2" class="Avatar Avatar--large" alt="User" loading="lazy" decoding="async">
         <span class="Badge Badge--count Badge--primary Badge--avatar">12</span>
     </div>
 </Preview>
 
 ```html
 <div style="position: relative; display: inline-block;">
-    <img src="..." class="Avatar" alt="User">
+    <img src="..." class="Avatar" alt="User" loading="lazy" decoding="async">
     <span class="Badge Badge--count Badge--error Badge--avatar">3</span>
 </div>
 ```
@@ -190,36 +190,36 @@ Stack multiple avatars to represent a group.
 
 <Preview title="Avatar Group">
     <div class="AvatarGroup">
-        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=group1" class="Avatar" alt="User 1">
-        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=group2" class="Avatar" alt="User 2">
-        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=group3" class="Avatar" alt="User 3">
-        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=group4" class="Avatar" alt="User 4">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=group1" class="Avatar" alt="User 1" loading="lazy" decoding="async">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=group2" class="Avatar" alt="User 2" loading="lazy" decoding="async">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=group3" class="Avatar" alt="User 3" loading="lazy" decoding="async">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=group4" class="Avatar" alt="User 4" loading="lazy" decoding="async">
     </div>
 </Preview>
 
 ```html
 <div class="AvatarGroup">
-    <img src="..." class="Avatar" alt="User 1">
-    <img src="..." class="Avatar" alt="User 2">
-    <img src="..." class="Avatar" alt="User 3">
-    <img src="..." class="Avatar" alt="User 4">
+    <img src="..." class="Avatar" alt="User 1" loading="lazy" decoding="async">
+    <img src="..." class="Avatar" alt="User 2" loading="lazy" decoding="async">
+    <img src="..." class="Avatar" alt="User 3" loading="lazy" decoding="async">
+    <img src="..." class="Avatar" alt="User 4" loading="lazy" decoding="async">
 </div>
 ```
 
 <Preview title="Avatar Group with Overflow">
     <div class="AvatarGroup">
-        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=over1" class="Avatar" alt="User 1">
-        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=over2" class="Avatar" alt="User 2">
-        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=over3" class="Avatar" alt="User 3">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=over1" class="Avatar" alt="User 1" loading="lazy" decoding="async">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=over2" class="Avatar" alt="User 2" loading="lazy" decoding="async">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=over3" class="Avatar" alt="User 3" loading="lazy" decoding="async">
         <span class="Avatar Avatar--initials AvatarGroup-overflow">+5</span>
     </div>
 </Preview>
 
 ```html
 <div class="AvatarGroup">
-    <img src="..." class="Avatar" alt="User 1">
-    <img src="..." class="Avatar" alt="User 2">
-    <img src="..." class="Avatar" alt="User 3">
+    <img src="..." class="Avatar" alt="User 1" loading="lazy" decoding="async">
+    <img src="..." class="Avatar" alt="User 2" loading="lazy" decoding="async">
+    <img src="..." class="Avatar" alt="User 3" loading="lazy" decoding="async">
     <span class="Avatar Avatar--initials AvatarGroup-overflow">+5</span>
 </div>
 ```
@@ -227,19 +227,19 @@ Stack multiple avatars to represent a group.
 <Preview title="Avatar Group Sizes">
     <div style="display: flex; flex-direction: column; gap: var(--space-4);">
         <div class="AvatarGroup AvatarGroup--small">
-            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=sm1" class="Avatar Avatar--small" alt="User">
-            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=sm2" class="Avatar Avatar--small" alt="User">
-            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=sm3" class="Avatar Avatar--small" alt="User">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=sm1" class="Avatar Avatar--small" alt="User" loading="lazy" decoding="async">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=sm2" class="Avatar Avatar--small" alt="User" loading="lazy" decoding="async">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=sm3" class="Avatar Avatar--small" alt="User" loading="lazy" decoding="async">
         </div>
         <div class="AvatarGroup">
-            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=md1" class="Avatar" alt="User">
-            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=md2" class="Avatar" alt="User">
-            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=md3" class="Avatar" alt="User">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=md1" class="Avatar" alt="User" loading="lazy" decoding="async">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=md2" class="Avatar" alt="User" loading="lazy" decoding="async">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=md3" class="Avatar" alt="User" loading="lazy" decoding="async">
         </div>
         <div class="AvatarGroup AvatarGroup--large">
-            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=lg1" class="Avatar Avatar--large" alt="User">
-            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=lg2" class="Avatar Avatar--large" alt="User">
-            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=lg3" class="Avatar Avatar--large" alt="User">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=lg1" class="Avatar Avatar--large" alt="User" loading="lazy" decoding="async">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=lg2" class="Avatar Avatar--large" alt="User" loading="lazy" decoding="async">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=lg3" class="Avatar Avatar--large" alt="User" loading="lazy" decoding="async">
         </div>
     </div>
 </Preview>
@@ -253,15 +253,15 @@ Stack avatars vertically for lists.
 <Preview title="Vertical Avatar Stack">
     <div class="AvatarStack">
         <div class="AvatarStack-item">
-            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=stack1" class="Avatar Avatar--small" alt="User">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=stack1" class="Avatar Avatar--small" alt="User" loading="lazy" decoding="async">
             <span class="AvatarStack-name">Sarah Chen</span>
         </div>
         <div class="AvatarStack-item">
-            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=stack2" class="Avatar Avatar--small" alt="User">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=stack2" class="Avatar Avatar--small" alt="User" loading="lazy" decoding="async">
             <span class="AvatarStack-name">John Smith</span>
         </div>
         <div class="AvatarStack-item">
-            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=stack3" class="Avatar Avatar--small" alt="User">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=stack3" class="Avatar Avatar--small" alt="User" loading="lazy" decoding="async">
             <span class="AvatarStack-name">Mike Johnson</span>
         </div>
     </div>
@@ -270,7 +270,7 @@ Stack avatars vertically for lists.
 ```html
 <div class="AvatarStack">
     <div class="AvatarStack-item">
-        <img src="..." class="Avatar Avatar--small" alt="User">
+        <img src="..." class="Avatar Avatar--small" alt="User" loading="lazy" decoding="async">
         <span class="AvatarStack-name">Sarah Chen</span>
     </div>
     ...
@@ -285,22 +285,22 @@ Avatars that respond to user interaction.
 
 <Preview title="Clickable Avatar">
     <button class="Avatar-button" aria-label="View profile">
-        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=click1" class="Avatar" alt="User">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=click1" class="Avatar" alt="User" loading="lazy" decoding="async">
     </button>
     <button class="Avatar-button" aria-label="View profile">
-        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=click2" class="Avatar Avatar--large" alt="User">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=click2" class="Avatar Avatar--large" alt="User" loading="lazy" decoding="async">
     </button>
 </Preview>
 
 ```html
 <button class="Avatar-button" aria-label="View profile">
-    <img src="..." class="Avatar" alt="User">
+    <img src="..." class="Avatar" alt="User" loading="lazy" decoding="async">
 </button>
 ```
 
 <Preview title="Avatar with Edit Overlay">
     <div class="Avatar-editable Avatar-editable--large">
-        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=edit1" class="Avatar Avatar--large" alt="User">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=edit1" class="Avatar Avatar--large" alt="User" loading="lazy" decoding="async">
         <button class="Avatar-edit" aria-label="Change photo">
             <i class="ph ph-camera"></i>
         </button>
@@ -309,7 +309,7 @@ Avatars that respond to user interaction.
 
 ```html
 <div class="Avatar-editable Avatar-editable--large">
-    <img src="..." class="Avatar Avatar--large" alt="User">
+    <img src="..." class="Avatar Avatar--large" alt="User" loading="lazy" decoding="async">
     <button class="Avatar-edit" aria-label="Change photo">
         <i class="ph ph-camera"></i>
     </button>
@@ -324,7 +324,7 @@ Avatars that respond to user interaction.
 
 <Preview title="Comment Author">
     <div style="display: flex; align-items: center; gap: var(--space-3); max-width: 400px;">
-        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=comment" class="Avatar" alt="Sarah Chen">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=comment" class="Avatar" alt="Sarah Chen" loading="lazy" decoding="async">
         <div style="flex: 1;">
             <div style="font-weight: 500;">Sarah Chen</div>
             <div style="font-size: 0.8rem; color: var(--fg-3);">2 hours ago</div>
@@ -347,7 +347,7 @@ Avatars that respond to user interaction.
             <div style="display: flex; flex-direction: column; gap: var(--space-3);">
                 <div style="display: flex; align-items: center; gap: var(--space-3);">
                     <div style="position: relative;">
-                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=team1" class="Avatar Avatar--small" alt="User">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=team1" class="Avatar Avatar--small" alt="User" loading="lazy" decoding="async">
                         <span class="Avatar-status Avatar-status--online Avatar-status--small"></span>
                     </div>
                     <div style="flex: 1;">
@@ -357,7 +357,7 @@ Avatars that respond to user interaction.
                 </div>
                 <div style="display: flex; align-items: center; gap: var(--space-3);">
                     <div style="position: relative;">
-                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=team2" class="Avatar Avatar--small" alt="User">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=team2" class="Avatar Avatar--small" alt="User" loading="lazy" decoding="async">
                         <span class="Avatar-status Avatar-status--online Avatar-status--small"></span>
                     </div>
                     <div style="flex: 1;">
@@ -367,7 +367,7 @@ Avatars that respond to user interaction.
                 </div>
                 <div style="display: flex; align-items: center; gap: var(--space-3);">
                     <div style="position: relative;">
-                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=team3" class="Avatar Avatar--small" alt="User">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=team3" class="Avatar Avatar--small" alt="User" loading="lazy" decoding="async">
                         <span class="Avatar-status Avatar-status--away Avatar-status--small"></span>
                     </div>
                     <div style="flex: 1;">
@@ -392,8 +392,8 @@ Avatars that respond to user interaction.
     <div style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3); background: var(--bg-s); border-radius: var(--r-m); max-width: 360px;">
         <span style="font-size: 0.875rem; color: var(--fg-3);">Assignees:</span>
         <div class="AvatarGroup">
-            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=assign1" class="Avatar Avatar--small" alt="User 1">
-            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=assign2" class="Avatar Avatar--small" alt="User 2">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=assign1" class="Avatar Avatar--small" alt="User 1" loading="lazy" decoding="async">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=assign2" class="Avatar Avatar--small" alt="User 2" loading="lazy" decoding="async">
             <span class="Avatar Avatar--small Avatar--initials AvatarGroup-overflow">+3</span>
         </div>
         <button class="Button Button--icon Button--ghost Button--small" aria-label="Add assignee" style="margin-left: auto;">
@@ -407,7 +407,7 @@ Avatars that respond to user interaction.
 <Preview title="Profile Header">
     <div style="text-align: center; padding: var(--space-6); max-width: 320px; margin: 0 auto;">
         <div class="Avatar-editable" style="margin: 0 auto var(--space-4);">
-            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=profile" class="Avatar Avatar--xl" alt="Sarah Chen">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=profile" class="Avatar Avatar--xl" alt="Sarah Chen" loading="lazy" decoding="async">
             <button class="Avatar-edit" aria-label="Change photo">
                 <i class="ph ph-camera"></i>
             </button>
@@ -807,17 +807,17 @@ Avatars require attention to ensure they're accessible:
 ### Alt Text
 ```html
 <!-- Always provide meaningful alt text -->
-<img src="..." class="Avatar" alt="Sarah Chen's profile photo">
+<img src="..." class="Avatar" alt="Sarah Chen's profile photo" loading="lazy" decoding="async">
 
 <!-- For decorative avatars in context -->
-<img src="..." class="Avatar" alt="" role="presentation">
+<img src="..." class="Avatar" alt="" role="presentation" loading="lazy" decoding="async">
 ```
 
 ### Interactive Avatars
 ```html
 <!-- Clickable avatar needs accessible label -->
 <button class="Avatar-button" aria-label="View Sarah Chen's profile">
-    <img src="..." class="Avatar" alt="">
+    <img src="..." class="Avatar" alt="" loading="lazy" decoding="async">
 </button>
 
 <!-- Edit avatar with clear action -->
@@ -830,20 +830,20 @@ Avatars require attention to ensure they're accessible:
 ```html
 <!-- Status should be announced -->
 <div style="position: relative;">
-    <img src="..." class="Avatar" alt="Sarah Chen">
+    <img src="..." class="Avatar" alt="Sarah Chen" loading="lazy" decoding="async">
     <span class="Avatar-status Avatar-status--online" aria-label="Online"></span>
 </div>
 
 <!-- Or include in alt text -->
-<img src="..." class="Avatar" alt="Sarah Chen (online)">
+<img src="..." class="Avatar" alt="Sarah Chen (online)" loading="lazy" decoding="async">
 ```
 
 ### Avatar Groups
 ```html
 <!-- Provide group context -->
 <div class="AvatarGroup" role="group" aria-label="5 team members">
-    <img src="..." class="Avatar" alt="Sarah Chen">
-    <img src="..." class="Avatar" alt="John Smith">
+    <img src="..." class="Avatar" alt="Sarah Chen" loading="lazy" decoding="async">
+    <img src="..." class="Avatar" alt="John Smith" loading="lazy" decoding="async">
     <span class="Avatar Avatar--initials" aria-label="3 more members">+3</span>
 </div>
 ```

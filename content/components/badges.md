@@ -229,15 +229,15 @@ Common patterns for positioning badges relative to other elements.
 <Preview title="Badge on Avatar">
     <div style="display: flex; gap: var(--space-6);">
         <div style="position: relative; display: inline-block;">
-            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=badge1" class="Avatar" alt="User">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=badge1" class="Avatar" alt="User" loading="lazy" decoding="async">
             <span class="Badge Badge--dot Badge--success Badge--avatar"></span>
         </div>
         <div style="position: relative; display: inline-block;">
-            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=badge2" class="Avatar" alt="User">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=badge2" class="Avatar" alt="User" loading="lazy" decoding="async">
             <span class="Badge Badge--dot Badge--warning Badge--avatar"></span>
         </div>
         <div style="position: relative; display: inline-block;">
-            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=badge3" class="Avatar" alt="User">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=badge3" class="Avatar" alt="User" loading="lazy" decoding="async">
             <span class="Badge Badge--count Badge--error Badge--avatar" style="font-size: 0.65rem;">5</span>
         </div>
     </div>
@@ -245,7 +245,7 @@ Common patterns for positioning badges relative to other elements.
 
 ```html
 <div style="position: relative; display: inline-block;">
-    <img src="..." class="Avatar" alt="User">
+    <img src="..." class="Avatar" alt="User" loading="lazy" decoding="async">
     <span class="Badge Badge--dot Badge--success Badge--avatar"></span>
 </div>
 ```
@@ -319,7 +319,7 @@ Badges that can be clicked or dismissed.
     <div style="display: flex; flex-direction: column; gap: var(--space-3); max-width: 320px;">
         <div style="display: flex; align-items: center; gap: var(--space-3);">
             <div style="position: relative;">
-                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=user1" class="Avatar Avatar--small" alt="Sarah">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=user1" class="Avatar Avatar--small" alt="Sarah" loading="lazy" decoding="async">
                 <span class="Badge Badge--dot Badge--success Badge--avatar"></span>
             </div>
             <div style="flex: 1;">
@@ -330,7 +330,7 @@ Badges that can be clicked or dismissed.
         </div>
         <div style="display: flex; align-items: center; gap: var(--space-3);">
             <div style="position: relative;">
-                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=user2" class="Avatar Avatar--small" alt="John">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=user2" class="Avatar Avatar--small" alt="John" loading="lazy" decoding="async">
                 <span class="Badge Badge--dot Badge--warning Badge--avatar"></span>
             </div>
             <div style="flex: 1;">
@@ -341,7 +341,7 @@ Badges that can be clicked or dismissed.
         </div>
         <div style="display: flex; align-items: center; gap: var(--space-3);">
             <div style="position: relative;">
-                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=user3" class="Avatar Avatar--small" alt="Mike">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=user3" class="Avatar Avatar--small" alt="Mike" loading="lazy" decoding="async">
                 <span class="Badge Badge--dot Badge--avatar" style="background-color: var(--fg-3);"></span>
             </div>
             <div style="flex: 1;">

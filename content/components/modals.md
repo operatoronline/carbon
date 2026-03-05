@@ -247,7 +247,7 @@ Display images in a focused, centered view with minimal chrome.
   <button class="Button Button--icon Button--ghost" style="position: absolute; top: var(--space-3); right: var(--space-3); color: white;" aria-label="Close">
     <i class="ph ph-x"></i>
   </button>
-  <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=200&fit=crop" alt="Mountain landscape" style="max-width: 100%; max-height: 220px; border-radius: var(--r-m); object-fit: cover;">
+  <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=200&fit=crop" alt="Mountain landscape" style="max-width: 100%; max-height: 220px; border-radius: var(--r-m); object-fit: cover;" loading="lazy" decoding="async">
   <button class="Button Button--icon Button--ghost" style="position: absolute; left: var(--space-3); color: white;" aria-label="Previous">
     <i class="ph ph-caret-left"></i>
   </button>
