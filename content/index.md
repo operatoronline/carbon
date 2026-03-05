@@ -80,4 +80,5 @@ Composable layout primitives and common UI patterns.
 ## Resources
 
 - [Getting Started](./getting-started.html) — Installation, quick start, and first components
+- [Contributing](./contributing.html) — Development workflow, CSS conventions, and how to add components
 - [Changelog](./changelog.html) — Release history and what's new in v1.0
