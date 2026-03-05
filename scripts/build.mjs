@@ -439,6 +439,27 @@ ${sitemapEntries.map(e => `  <url>
     await fs.writeFile(path.join(CONFIG.distDir, 'sitemap.xml'), sitemapXml);
     console.log(`  ✓ Generated sitemap.xml (${sitemapEntries.length} URLs)`);
 
+    // 5b. Generate web manifest
+    const manifest = {
+        name: 'Standard Design System',
+        short_name: 'Standard',
+        description: 'Framework-agnostic design system built on OKLCH colors, 4px grid, and zero dependencies.',
+        start_url: '/',
+        display: 'standalone',
+        background_color: '#FBFBFE',
+        theme_color: '#7B2FBE',
+        icons: [
+            { src: '/assets/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
+            { src: '/assets/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
+            { src: '/assets/android-chrome-512x512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' }
+        ]
+    };
+    await fs.writeFile(
+        path.join(CONFIG.distDir, 'manifest.webmanifest'),
+        JSON.stringify(manifest, null, 2)
+    );
+    console.log('  ✓ Generated manifest.webmanifest');
+
     // 6. Generate 404 page
     const notFoundHtml = `<!DOCTYPE html>
 <html lang="en" data-theme="light">
@@ -454,6 +475,10 @@ ${sitemapEntries.map(e => `  <url>
     <meta property="og:image" content="${CONFIG.siteUrl}/assets/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="robots" content="noindex">
+    <link rel="icon" href="./assets/favicon.ico" sizes="32x32">
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+    <link rel="manifest" href="./manifest.webmanifest">
     <link rel="preload" href="./assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./assets/fonts/instrument-serif-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./assets/fonts/instrument-serif-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
