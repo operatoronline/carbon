@@ -1584,3 +1584,114 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 })();
+
+/* ═══════════════════════════════════════
+   SPECULATIVE LINK PREFETCHING
+   Near-instant page navigation via:
+   1. Speculation Rules API (Chrome 109+) — prerender on hover
+   2. Fallback: <link rel="prefetch"> on hover for other browsers
+   ═══════════════════════════════════════ */
+(function() {
+    // Skip on slow connections or data-saver mode
+    const conn = navigator.connection;
+    if (conn && (conn.saveData || conn.effectiveType === '2g' || conn.effectiveType === 'slow-2g')) return;
+
+    const origin = location.origin;
+    const prefetched = new Set();
+    const prerendered = new Set();
+
+    // Check if Speculation Rules API is supported (Chrome 109+)
+    const supportsSpecRules = HTMLScriptElement.supports && HTMLScriptElement.supports('speculationrules');
+
+    // --- Strategy 1: Speculation Rules API (prerender on hover) ---
+    if (supportsSpecRules) {
+        // Insert a moderate speculation rules block for visible prev/next and TOC links
+        // These are very likely to be clicked, so prerender them eagerly
+        const moderateRules = {
+            prerender: [{
+                where: {
+                    and: [
+                        { href_matches: '/*' },
+                        { not: { href_matches: '/assets/*' } },
+                        { not: { href_matches: '/vendor/*' } },
+                        { not: { href_matches: '/scripts/*' } },
+                        { not: { href_matches: '/styles/*' } },
+                        { not: { selector_matches: '[rel="nofollow"]' } }
+                    ]
+                },
+                eagerness: 'moderate'
+            }],
+            prefetch: [{
+                where: {
+                    and: [
+                        { href_matches: '/*' },
+                        { not: { href_matches: '/assets/*' } },
+                        { not: { href_matches: '/vendor/*' } },
+                        { not: { href_matches: '/scripts/*' } },
+                        { not: { href_matches: '/styles/*' } }
+                    ]
+                },
+                eagerness: 'conservative'
+            }]
+        };
+
+        const specScript = document.createElement('script');
+        specScript.type = 'speculationrules';
+        specScript.textContent = JSON.stringify(moderateRules);
+        document.head.appendChild(specScript);
+        return; // Speculation Rules handles everything — no manual prefetch needed
+    }
+
+    // --- Strategy 2: Fallback — manual <link rel="prefetch"> on hover ---
+    // Triggers prefetch when the user hovers over an internal link for 100ms+
+    let hoverTimer = null;
+
+    function prefetchUrl(url) {
+        if (prefetched.has(url)) return;
+        prefetched.add(url);
+
+        const link = document.createElement('link');
+        link.rel = 'prefetch';
+        link.href = url;
+        link.as = 'document';
+        document.head.appendChild(link);
+    }
+
+    function isInternalLink(a) {
+        if (!a.href) return false;
+        if (a.origin !== origin) return false;
+        if (a.pathname === location.pathname) return false;
+        if (a.hash && a.pathname === location.pathname) return false;
+        if (a.hasAttribute('download')) return false;
+        if (a.target === '_blank') return false;
+        const href = a.getAttribute('href');
+        if (href && (href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('javascript:'))) return false;
+        return true;
+    }
+
+    document.addEventListener('pointerenter', function(e) {
+        const a = e.target.closest('a');
+        if (!a || !isInternalLink(a)) return;
+
+        hoverTimer = setTimeout(function() {
+            prefetchUrl(a.href);
+        }, 100);
+    }, { capture: true, passive: true });
+
+    document.addEventListener('pointerleave', function(e) {
+        if (e.target.closest('a') && hoverTimer) {
+            clearTimeout(hoverTimer);
+            hoverTimer = null;
+        }
+    }, { capture: true, passive: true });
+
+    // Also prefetch prev/next links immediately — they're the most likely navigation targets
+    document.querySelectorAll('.page-nav-link').forEach(function(a) {
+        if (a.href && a.origin === origin) {
+            // Use requestIdleCallback to avoid blocking page load
+            (window.requestIdleCallback || setTimeout)(function() {
+                prefetchUrl(a.href);
+            });
+        }
+    });
+})();
