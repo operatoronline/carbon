@@ -714,7 +714,7 @@ Override list styles using CSS custom properties:
 
 /* Item Icon */
 .List-item-icon {
-  font-size: 1.25rem;
+  font-size: var(--fs-3xl);
   color: var(--fg-3);
   flex-shrink: 0;
 }
@@ -722,7 +722,7 @@ Override list styles using CSS custom properties:
 /* Item Text */
 .List-item-text {
   flex: 1;
-  font-size: 0.9rem;
+  font-size: var(--fs-lg);
   font-weight: 500;
 }
 
@@ -741,7 +741,7 @@ Override list styles using CSS custom properties:
 
 /* Description */
 .List-item-description {
-  font-size: 0.8rem;
+  font-size: var(--fs-md);
   color: var(--fg-3);
 }
 
@@ -754,7 +754,7 @@ Override list styles using CSS custom properties:
 }
 
 .List-item-meta {
-  font-size: 0.8rem;
+  font-size: var(--fs-md);
   color: var(--fg-3);
   display: flex;
   align-items: center;
@@ -787,7 +787,7 @@ Override list styles using CSS custom properties:
 /* Section Header */
 .List-header {
   padding: var(--space-2) var(--space-3);
-  font-size: 0.75rem;
+  font-size: var(--fs-sm);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;

@@ -498,7 +498,7 @@ Override slider styling with CSS custom properties:
 .Slider-labels {
   display: flex;
   justify-content: space-between;
-  font-size: 0.8rem;
+  font-size: var(--fs-md);
   color: var(--fg-3);
   margin-bottom: var(--space-1);
 }
@@ -506,7 +506,7 @@ Override slider styling with CSS custom properties:
 .Slider-ticks {
   display: flex;
   justify-content: space-between;
-  font-size: 0.75rem;
+  font-size: var(--fs-sm);
   color: var(--fg-3);
   margin-top: var(--space-1);
 }

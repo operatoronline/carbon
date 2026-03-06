@@ -426,7 +426,7 @@ Override divider styles using CSS custom properties:
 }
 
 .Divider--label span {
-  font-size: 0.85rem;
+  font-size: var(--fs-base);
   color: var(--fg-3);
   white-space: nowrap;
 }

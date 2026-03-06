@@ -610,7 +610,7 @@ Override modal styles using CSS custom properties:
 }
 
 .Modal-title {
-  font-size: 1.1rem;
+  font-size: var(--fs-2xl);
   font-weight: 600;
   margin: 0;
 }

@@ -608,11 +608,11 @@ Override link styles using CSS custom properties:
 
 /* Sizes */
 .Link--small {
-  font-size: 0.875rem;
+  font-size: var(--fs-base);
 }
 
 .Link--large {
-  font-size: 1.125rem;
+  font-size: var(--fs-2xl);
 }
 
 /* Disabled */

@@ -508,7 +508,7 @@ Override badge styles using CSS custom properties:
   padding: var(--space-1) var(--space-2);
   border-radius: var(--r-s);
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: var(--fs-sm);
   font-weight: 500;
   line-height: 1.2;
   white-space: nowrap;
@@ -552,12 +552,12 @@ Override badge styles using CSS custom properties:
 /* Sizes */
 .Badge--small {
   padding: 0 var(--space-1);
-  font-size: 0.65rem;
+  font-size: var(--fs-2xs);
 }
 
 .Badge--large {
   padding: var(--space-2) var(--space-3);
-  font-size: 0.875rem;
+  font-size: var(--fs-base);
 }
 
 /* Pill */
@@ -632,7 +632,7 @@ Override badge styles using CSS custom properties:
   right: -4px;
   min-width: 18px;
   height: 18px;
-  font-size: 0.65rem;
+  font-size: var(--fs-2xs);
 }
 
 .Badge--avatar {

@@ -353,7 +353,7 @@ Override alert styles using CSS custom properties:
   border-left: 4px solid var(--bd);
   background-color: var(--bg-s);
   color: var(--fg);
-  font-size: 0.875rem;
+  font-size: var(--fs-base);
   line-height: 1.5;
 }
 
@@ -380,7 +380,7 @@ Override alert styles using CSS custom properties:
 
 /* Icon */
 .Alert-icon {
-  font-size: 1.25rem;
+  font-size: var(--fs-3xl);
   flex-shrink: 0;
   margin-top: 1px;
 }
@@ -435,7 +435,7 @@ Override alert styles using CSS custom properties:
   padding: var(--space-3) var(--space-4);
   border: 1px solid var(--bd);
   border-radius: var(--r-m);
-  font-size: 0.875rem;
+  font-size: var(--fs-base);
   line-height: 1.5;
 }
 
@@ -450,7 +450,7 @@ Override alert styles using CSS custom properties:
 }
 
 .Callout-icon {
-  font-size: 1.25rem;
+  font-size: var(--fs-3xl);
   flex-shrink: 0;
 }
 

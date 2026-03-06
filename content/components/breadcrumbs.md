@@ -384,7 +384,7 @@ Override breadcrumb styles using CSS custom properties:
 ```css
 /* Base Breadcrumb */
 .Breadcrumb {
-  font-size: 0.875rem;
+  font-size: var(--fs-base);
   color: var(--fg-3);
 }
 
@@ -443,11 +443,11 @@ Override breadcrumb styles using CSS custom properties:
 
 /* Sizes */
 .Breadcrumb--small {
-  font-size: 0.75rem;
+  font-size: var(--fs-sm);
 }
 
 .Breadcrumb--large {
-  font-size: 1rem;
+  font-size: var(--fs-xl);
 }
 
 /* Ellipsis */

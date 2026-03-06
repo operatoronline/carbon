@@ -509,7 +509,7 @@ Active state when files are dragged over the drop zone.
 
 /* Text */
 .FileUpload-text {
-  font-size: 0.9rem;
+  font-size: var(--fs-lg);
   color: var(--fg-2);
   margin: 0;
 }
@@ -521,7 +521,7 @@ Active state when files are dragged over the drop zone.
 }
 
 .FileUpload-hint {
-  font-size: 0.8rem;
+  font-size: var(--fs-md);
   color: var(--fg-3);
   margin: 0;
 }
@@ -570,7 +570,7 @@ Active state when files are dragged over the drop zone.
 
 .FileUpload-itemName {
   display: block;
-  font-size: 0.9rem;
+  font-size: var(--fs-lg);
   font-weight: 500;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -579,7 +579,7 @@ Active state when files are dragged over the drop zone.
 
 .FileUpload-itemSize {
   display: block;
-  font-size: 0.8rem;
+  font-size: var(--fs-md);
   color: var(--fg-3);
 }
 

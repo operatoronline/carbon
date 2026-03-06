@@ -1212,7 +1212,7 @@ Override table styles using CSS custom properties:
 }
 
 .Table-sortIcon {
-  font-size: 0.875rem;
+  font-size: var(--fs-base);
   opacity: 0.5;
 }
 

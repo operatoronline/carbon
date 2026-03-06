@@ -476,7 +476,7 @@ Override button styles using CSS custom properties:
   border: 1px solid transparent;
   border-radius: var(--r-s);
   font-family: var(--font-sans);
-  font-size: 0.875rem;
+  font-size: var(--fs-base);
   font-weight: 500;
   line-height: 1.2;
   cursor: pointer;
@@ -557,13 +557,13 @@ Override button styles using CSS custom properties:
 /* Sizes */
 .Button--small {
   padding: var(--space-1) var(--space-3);
-  font-size: 0.75rem;
+  font-size: var(--fs-sm);
   height: 28px;
 }
 
 .Button--large {
   padding: var(--space-3) var(--space-6);
-  font-size: 1rem;
+  font-size: var(--fs-xl);
   height: 44px;
 }
 

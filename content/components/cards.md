@@ -1006,31 +1006,31 @@ Override card styles using CSS custom properties:
 /* Typography */
 .Card-title {
   font-weight: 600;
-  font-size: 1rem;
+  font-size: var(--fs-xl);
   color: var(--fg);
   margin-bottom: var(--space-1);
 }
 
 .Card-subtitle {
-  font-size: 0.85rem;
+  font-size: var(--fs-base);
   color: var(--fg-3);
 }
 
 .Card-text {
-  font-size: 0.9rem;
+  font-size: var(--fs-lg);
   color: var(--fg-2);
   line-height: 1.5;
 }
 
 .Card-meta {
-  font-size: 0.8rem;
+  font-size: var(--fs-md);
   color: var(--fg-3);
 }
 
 .Card-tag {
   display: inline-block;
   padding: 2px var(--space-2);
-  font-size: 0.75rem;
+  font-size: var(--fs-sm);
   font-weight: 600;
   border-radius: var(--r-s);
   background: var(--accent);
@@ -1108,21 +1108,21 @@ Override card styles using CSS custom properties:
 /* Stats */
 .Card-stat {
   display: block;
-  font-size: 1.75rem;
+  font-size: var(--fs-5xl);
   font-weight: 700;
   color: var(--fg);
 }
 
 .Card-stat-label {
   display: block;
-  font-size: 0.8rem;
+  font-size: var(--fs-md);
   color: var(--fg-3);
   margin-top: var(--space-1);
 }
 
 .Card-stat-change {
   display: block;
-  font-size: 0.8rem;
+  font-size: var(--fs-md);
   font-weight: 600;
   margin-top: var(--space-1);
 }
@@ -1132,12 +1132,12 @@ Override card styles using CSS custom properties:
 
 /* Pricing */
 .Card-price-amount {
-  font-size: 2rem;
+  font-size: var(--fs-6xl);
   font-weight: 700;
 }
 
 .Card-price-period {
-  font-size: 0.85rem;
+  font-size: var(--fs-base);
   color: var(--fg-3);
 }
 
@@ -1185,20 +1185,20 @@ Override card styles using CSS custom properties:
 }
 
 .Card-rating-count {
-  font-size: 0.8rem;
+  font-size: var(--fs-md);
   color: var(--fg-3);
   margin-left: var(--space-1);
 }
 
 .Card-price-current {
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: var(--fs-2xl);
 }
 
 .Card-price-original {
   text-decoration: line-through;
   color: var(--fg-3);
-  font-size: 0.9rem;
+  font-size: var(--fs-lg);
   margin-left: var(--space-2);
 }
 
@@ -1240,12 +1240,12 @@ Override card styles using CSS custom properties:
 .Card-list-title {
   display: block;
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: var(--fs-lg);
 }
 
 .Card-list-meta {
   display: block;
-  font-size: 0.8rem;
+  font-size: var(--fs-md);
   color: var(--fg-3);
 }
 

@@ -1238,7 +1238,7 @@ Override form styles using CSS custom properties:
 }
 
 .FormField-label {
-  font-size: 0.875rem;
+  font-size: var(--fs-base);
   font-weight: 500;
   color: var(--fg);
 }
@@ -1249,7 +1249,7 @@ Override form styles using CSS custom properties:
 }
 
 .FormField-helper {
-  font-size: 0.8rem;
+  font-size: var(--fs-md);
   color: var(--fg-3);
 }
 
@@ -1257,7 +1257,7 @@ Override form styles using CSS custom properties:
   display: flex;
   align-items: center;
   gap: var(--space-1);
-  font-size: 0.8rem;
+  font-size: var(--fs-md);
 }
 
 .FormField-message--error {
@@ -1275,7 +1275,7 @@ Override form styles using CSS custom properties:
 }
 
 .FormField-count {
-  font-size: 0.8rem;
+  font-size: var(--fs-md);
   color: var(--fg-3);
 }
 
@@ -1283,7 +1283,7 @@ Override form styles using CSS custom properties:
 .Input {
   width: 100%;
   padding: var(--space-2) var(--space-3);
-  font-size: 0.9rem;
+  font-size: var(--fs-lg);
   border: 1px solid var(--bd-s);
   border-radius: var(--r-s);
   background: var(--bg);
@@ -1310,12 +1310,12 @@ Override form styles using CSS custom properties:
 /* Input Sizes */
 .Input--small {
   padding: var(--space-1) var(--space-2);
-  font-size: 0.8rem;
+  font-size: var(--fs-md);
 }
 
 .Input--large {
   padding: var(--space-3) var(--space-4);
-  font-size: 1rem;
+  font-size: var(--fs-xl);
 }
 
 /* Input States */
@@ -1392,7 +1392,7 @@ Override form styles using CSS custom properties:
 .Textarea {
   width: 100%;
   padding: var(--space-2) var(--space-3);
-  font-size: 0.9rem;
+  font-size: var(--fs-lg);
   border: 1px solid var(--bd-s);
   border-radius: var(--r-s);
   background: var(--bg);
@@ -1413,7 +1413,7 @@ Override form styles using CSS custom properties:
 .Select {
   width: 100%;
   padding: var(--space-2) var(--space-3);
-  font-size: 0.9rem;
+  font-size: var(--fs-lg);
   border: 1px solid var(--bd-s);
   border-radius: var(--r-s);
   background: var(--bg);
@@ -1468,7 +1468,7 @@ Override form styles using CSS custom properties:
 }
 
 .Checkbox-label {
-  font-size: 0.9rem;
+  font-size: var(--fs-lg);
 }
 
 /* Radio */
@@ -1598,7 +1598,7 @@ Override form styles using CSS custom properties:
 }
 
 .Switch-content { display: flex; flex-direction: column; gap: var(--space-1); }
-.Switch-description { font-size: 0.8rem; color: var(--fg-3); }
+.Switch-description { font-size: var(--fs-md); color: var(--fg-3); }
 
 /* File Input */
 .FileInput {
@@ -1630,9 +1630,9 @@ Override form styles using CSS custom properties:
   background: oklch(60% 0.15 250 / 0.05);
 }
 
-.FileInput-icon { font-size: 1.5rem; color: var(--fg-3); }
+.FileInput-icon { font-size: var(--fs-4xl); color: var(--fg-3); }
 .FileInput-text { font-weight: 500; }
-.FileInput-hint { font-size: 0.8rem; color: var(--fg-3); }
+.FileInput-hint { font-size: var(--fs-md); color: var(--fg-3); }
 
 .FileInput-list { display: flex; flex-direction: column; gap: var(--space-2); }
 .FileInput-item {

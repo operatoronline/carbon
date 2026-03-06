@@ -750,15 +750,15 @@ Override icon styles using CSS custom properties:
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.25rem;
+  font-size: var(--fs-3xl);
   line-height: 1;
 }
 
 /* Sizes */
-.Icon--xs { font-size: 0.75rem; }
-.Icon--small { font-size: 1rem; }
-.Icon--large { font-size: 1.5rem; }
-.Icon--xl { font-size: 2rem; }
+.Icon--xs { font-size: var(--fs-sm); }
+.Icon--small { font-size: var(--fs-xl); }
+.Icon--large { font-size: var(--fs-4xl); }
+.Icon--xl { font-size: var(--fs-6xl); }
 
 /* Colors */
 .Icon--success { color: oklch(55% 0.15 150); }
@@ -800,13 +800,13 @@ Override icon styles using CSS custom properties:
 .IconBg--small {
   width: 28px;
   height: 28px;
-  font-size: 0.875rem;
+  font-size: var(--fs-base);
 }
 
 .IconBg--large {
   width: 56px;
   height: 56px;
-  font-size: 1.5rem;
+  font-size: var(--fs-4xl);
 }
 
 .IconBg--primary {

@@ -503,14 +503,14 @@ Override chip styles using CSS custom properties:
   border: 1px solid var(--bd);
   border-radius: var(--space-4);
   font-family: var(--font-sans);
-  font-size: 0.85rem;
+  font-size: var(--fs-base);
   font-weight: 500;
   color: var(--fg);
   white-space: nowrap;
 }
 
 .Chip i {
-  font-size: 1rem;
+  font-size: var(--fs-xl);
   color: var(--fg-3);
 }
 
@@ -588,12 +588,12 @@ Override chip styles using CSS custom properties:
 /* Sizes */
 .Chip--small {
   padding: 2px var(--space-2);
-  font-size: 0.75rem;
+  font-size: var(--fs-sm);
 }
 
 .Chip--large {
   padding: var(--space-2) var(--space-3);
-  font-size: 0.9rem;
+  font-size: var(--fs-lg);
 }
 
 /* Avatar variant */
@@ -608,7 +608,7 @@ Override chip styles using CSS custom properties:
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   font-weight: 600;
   color: white;
   object-fit: cover;

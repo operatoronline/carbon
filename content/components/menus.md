@@ -661,7 +661,7 @@ Override menu styles using CSS custom properties:
   border: none;
   background: none;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: var(--fs-lg);
   color: var(--fg);
   border-radius: var(--r-s);
   width: 100%;
@@ -700,7 +700,7 @@ Override menu styles using CSS custom properties:
 
 /* Item Icon */
 .Menu-item-icon {
-  font-size: 1.1rem;
+  font-size: var(--fs-2xl);
   flex-shrink: 0;
   color: var(--fg-3);
 }
@@ -715,14 +715,14 @@ Override menu styles using CSS custom properties:
 }
 
 .Menu-item-shortcut {
-  font-size: 0.75rem;
+  font-size: var(--fs-sm);
   color: var(--fg-3);
   margin-left: auto;
 }
 
 /* Submenu */
 .Menu-item-chevron {
-  font-size: 0.8rem;
+  font-size: var(--fs-md);
   color: var(--fg-3);
   margin-left: auto;
 }
@@ -744,7 +744,7 @@ Override menu styles using CSS custom properties:
 }
 
 .Menu-item-description {
-  font-size: 0.8rem;
+  font-size: var(--fs-md);
   color: var(--fg-3);
 }
 
@@ -764,7 +764,7 @@ Override menu styles using CSS custom properties:
 /* Header */
 .Menu-header {
   padding: var(--space-2) var(--space-3);
-  font-size: 0.75rem;
+  font-size: var(--fs-sm);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -774,7 +774,7 @@ Override menu styles using CSS custom properties:
 /* Compact Variant */
 .Menu--compact .Menu-item {
   padding: var(--space-1) var(--space-2);
-  font-size: 0.85rem;
+  font-size: var(--fs-base);
 }
 
 /* Context Menu */

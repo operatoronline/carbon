@@ -564,7 +564,7 @@ details[open] .Accordion-icon {
   border: none;
   cursor: pointer;
   font-weight: 500;
-  font-size: 0.9375rem;
+  font-size: var(--fs-lg);
   color: var(--fg);
   list-style: none;
   transition: background-color 0.15s;
@@ -591,13 +591,13 @@ details[open] .Accordion-icon {
 .Accordion-content {
   padding: 0 var(--space-4) var(--space-4);
   color: var(--fg-3);
-  font-size: 0.875rem;
+  font-size: var(--fs-base);
   line-height: 1.6;
 }
 
 /* Icon rotation */
 .Accordion-icon {
-  font-size: 1rem;
+  font-size: var(--fs-xl);
   color: var(--fg-3);
   transition: transform 0.2s ease;
   flex-shrink: 0;

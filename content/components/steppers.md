@@ -650,7 +650,7 @@ Override stepper styling with CSS custom properties:
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.85rem;
+  font-size: var(--fs-base);
   font-weight: 600;
   background: var(--bg-s);
   color: var(--fg-3);
@@ -698,12 +698,12 @@ Override stepper styling with CSS custom properties:
 }
 
 .Stepper-title {
-  font-size: 0.9rem;
+  font-size: var(--fs-lg);
   font-weight: 500;
 }
 
 .Stepper-description {
-  font-size: 0.8rem;
+  font-size: var(--fs-md);
   color: var(--fg-3);
 }
 
@@ -733,7 +733,7 @@ Override stepper styling with CSS custom properties:
 .Stepper--compact .Stepper-indicator {
   width: 24px;
   height: 24px;
-  font-size: 0.75rem;
+  font-size: var(--fs-sm);
 }
 
 /* Clickable */

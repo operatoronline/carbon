@@ -477,7 +477,7 @@ Override dropdown styles using CSS custom properties:
   padding: var(--space-2) var(--space-3);
   color: var(--fg);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: var(--fs-lg);
   cursor: pointer;
   transition: background 0.1s;
 }
@@ -518,7 +518,7 @@ Override dropdown styles using CSS custom properties:
 }
 
 .Dropdown-item-description {
-  font-size: 0.8rem;
+  font-size: var(--fs-md);
   color: var(--fg-3);
 }
 
@@ -532,7 +532,7 @@ Override dropdown styles using CSS custom properties:
 /* Header */
 .Dropdown-header {
   padding: var(--space-2) var(--space-3);
-  font-size: 0.75rem;
+  font-size: var(--fs-sm);
   font-weight: 600;
   color: var(--fg-3);
   text-transform: uppercase;
@@ -542,14 +542,14 @@ Override dropdown styles using CSS custom properties:
 /* Keyboard shortcut */
 .Dropdown-shortcut {
   margin-left: auto;
-  font-size: 0.75rem;
+  font-size: var(--fs-sm);
   color: var(--fg-3);
   font-family: var(--font-sans);
 }
 
 /* Trigger caret */
 .Dropdown-trigger i.ph-caret-down {
-  font-size: 0.8rem;
+  font-size: var(--fs-md);
   transition: transform 0.15s;
 }
 

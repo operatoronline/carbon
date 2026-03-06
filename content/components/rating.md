@@ -617,7 +617,7 @@ Override rating styling with CSS custom properties:
 /* Star element */
 .Rating-star {
   color: var(--bd-s);
-  font-size: 1.25rem;
+  font-size: var(--fs-3xl);
   transition: color 0.15s, transform 0.15s;
 }
 
@@ -627,8 +627,8 @@ Override rating styling with CSS custom properties:
 }
 
 /* Sizes */
-.Rating--sm .Rating-star { font-size: 1rem; }
-.Rating--lg .Rating-star { font-size: 1.75rem; }
+.Rating--sm .Rating-star { font-size: var(--fs-xl); }
+.Rating--lg .Rating-star { font-size: var(--fs-5xl); }
 
 /* Interactive */
 .Rating--interactive .Rating-star {
@@ -692,7 +692,7 @@ Override rating styling with CSS custom properties:
   gap: var(--space-2);
 }
 .Rating-emoji {
-  font-size: 1.5rem;
+  font-size: var(--fs-4xl);
   background: none;
   border: none;
   cursor: pointer;

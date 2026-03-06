@@ -344,7 +344,7 @@ Override toast styles using CSS custom properties:
 /* Icon */
 .Toast-icon {
   flex-shrink: 0;
-  font-size: 1.25rem;
+  font-size: var(--fs-3xl);
 }
 
 /* Message */

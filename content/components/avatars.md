@@ -565,7 +565,7 @@ Override avatar styles using CSS custom properties:
   background-color: var(--bg-s);
   color: var(--fg);
   font-weight: 600;
-  font-size: 0.875rem;
+  font-size: var(--fs-base);
   flex-shrink: 0;
 }
 
@@ -573,25 +573,25 @@ Override avatar styles using CSS custom properties:
 .Avatar--xs {
   width: 24px;
   height: 24px;
-  font-size: 0.65rem;
+  font-size: var(--fs-2xs);
 }
 
 .Avatar--small {
   width: 32px;
   height: 32px;
-  font-size: 0.75rem;
+  font-size: var(--fs-sm);
 }
 
 .Avatar--large {
   width: 56px;
   height: 56px;
-  font-size: 1.125rem;
+  font-size: var(--fs-2xl);
 }
 
 .Avatar--xl {
   width: 80px;
   height: 80px;
-  font-size: 1.5rem;
+  font-size: var(--fs-4xl);
 }
 
 /* Shapes */
@@ -710,7 +710,7 @@ Override avatar styles using CSS custom properties:
 .AvatarGroup-overflow {
   background-color: var(--bg-s);
   border-color: var(--bd);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
 }
 
 /* Avatar Stack (Vertical) */
@@ -727,7 +727,7 @@ Override avatar styles using CSS custom properties:
 }
 
 .AvatarStack-name {
-  font-size: 0.9rem;
+  font-size: var(--fs-lg);
   font-weight: 500;
 }
 

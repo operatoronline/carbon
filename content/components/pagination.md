@@ -332,7 +332,7 @@ Override pagination styling with CSS custom properties:
   min-width: 36px;
   height: 36px;
   padding: 0 var(--space-2);
-  font-size: 0.9rem;
+  font-size: var(--fs-lg);
   font-weight: 500;
   color: var(--fg);
   background: transparent;
@@ -363,7 +363,7 @@ Override pagination styling with CSS custom properties:
 /* Prev/Next buttons */
 .Pagination-item--prev,
 .Pagination-item--next {
-  font-size: 1rem;
+  font-size: var(--fs-xl);
 }
 
 /* Ellipsis */
@@ -374,7 +374,7 @@ Override pagination styling with CSS custom properties:
   min-width: 36px;
   height: 36px;
   color: var(--fg-3);
-  font-size: 0.9rem;
+  font-size: var(--fs-lg);
   user-select: none;
 }
 
@@ -384,7 +384,7 @@ Override pagination styling with CSS custom properties:
 }
 
 .Pagination-info {
-  font-size: 0.9rem;
+  font-size: var(--fs-lg);
   color: var(--fg-3);
   white-space: nowrap;
 }

@@ -704,7 +704,7 @@ Override timeline styles using CSS custom properties:
   justify-content: center;
   background: var(--bg-s);
   border: 2px solid var(--bd);
-  font-size: 14px;
+  font-size: var(--fs-base);
   color: var(--fg-3);
 }
 
