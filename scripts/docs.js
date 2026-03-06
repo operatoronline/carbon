@@ -151,7 +151,8 @@ document.addEventListener('DOMContentLoaded', () => {
             
             fuse = new Fuse(searchIndex, {
                 keys: [
-                    { name: 'title', weight: 2 },
+                    { name: 'title', weight: 3 },
+                    { name: 'page', weight: 1.5 },
                     { name: 'content', weight: 1 }
                 ],
                 threshold: 0.3,
@@ -231,11 +232,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const item = result.item;
         const snippet = getSearchSnippet(result, query);
         const iconClass = sectionIcons[item.section] || 'ph ph-file-text';
+        const isHeading = item.type === 'heading';
+        const titleHtml = isHeading && item.page
+            ? `<span class="search-result-page">${item.page}</span><span class="search-result-sep" aria-hidden="true">›</span><span class="search-result-heading">${item.title}</span>`
+            : `<span class="search-result-heading">${item.title}</span>`;
         return `
-            <a href="${item.url}" class="search-result-item" role="option" id="${idPrefix}-${i}">
-                <div class="search-result-icon"><i class="${iconClass}" aria-hidden="true"></i></div>
+            <a href="${item.url}" class="search-result-item${isHeading ? ' search-result-item--heading' : ''}" role="option" id="${idPrefix}-${i}">
+                <div class="search-result-icon"><i class="${isHeading ? 'ph ph-hash' : iconClass}" aria-hidden="true"></i></div>
                 <div class="search-result-body">
-                    <span class="search-result-title">${item.title}</span>
+                    <span class="search-result-title">${titleHtml}</span>
                     ${snippet ? `<span class="search-result-snippet">${snippet}</span>` : ''}
                 </div>
                 <span class="search-result-section">${item.section}</span>
@@ -314,7 +319,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        const results = fuse.search(query).slice(0, 8);
+        const results = fuse.search(query).slice(0, 10);
 
         if (results.length === 0) {
             mobileSearchResults.innerHTML = '<div class="search-no-results">No results found</div>';
@@ -377,7 +382,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            const results = fuse.search(query).slice(0, 8);
+            const results = fuse.search(query).slice(0, 10);
             
             if (results.length === 0) {
                 searchResults.innerHTML = '<div class="search-no-results">No results found</div>';

@@ -1102,7 +1102,7 @@ async function build() {
         console.log(`  ✓ Written ${targetPath}`);
     }
 
-    // 3. Generate search index
+    // 3. Generate search index (page-level + heading-level entries)
     const searchIndex = [];
     for (const file of files) {
         const rawContent = await fs.readFile(file, 'utf-8');
@@ -1111,33 +1111,95 @@ async function build() {
         const title = path.basename(file, '.md').replace(/-/g, ' ');
         const capitalizedTitle = title.charAt(0).toUpperCase() + title.slice(1);
         
-        const plainText = rawContent
+        // Clean content for plain text extraction
+        const cleanedContent = rawContent
+            .replace(/<Hero>[\s\S]*?<\/Hero>/g, '')
             .replace(/<Preview[^>]*>[\s\S]*?<\/Preview>/g, '')
             .replace(/<[^>]+>/g, '')
             .replace(/```[\s\S]*?```/g, '')
-            .replace(/#+\s/g, '')
             .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
-            .replace(/\n+/g, ' ')
-            .trim()
-            .slice(0, 500);
-        
+            .replace(/^\s*[-*]\s/gm, '')
+            .replace(/\|[^\n]+\|/g, '')
+            .replace(/\n{3,}/g, '\n\n');
+
         const section = relativePath.includes(path.sep) 
             ? relativePath.split(path.sep)[0] 
             : 'home';
+        const sectionLabel = section.charAt(0).toUpperCase() + section.slice(1);
+
+        // Page-level entry (with more content — 800 chars)
+        const pageText = cleanedContent
+            .replace(/#+\s/g, '')
+            .replace(/\n+/g, ' ')
+            .trim()
+            .slice(0, 800);
 
         searchIndex.push({
             title: capitalizedTitle,
             url,
-            section: section.charAt(0).toUpperCase() + section.slice(1),
-            content: plainText
+            section: sectionLabel,
+            content: pageText,
+            type: 'page'
         });
+
+        // Heading-level entries — split by h2/h3 headings
+        const headingRegex = /^(#{2,3})\s+(.+)$/gm;
+        const headings = [];
+        let match;
+        while ((match = headingRegex.exec(cleanedContent)) !== null) {
+            headings.push({
+                level: match[1].length,
+                text: match[2].trim(),
+                index: match.index + match[0].length
+            });
+        }
+
+        for (let i = 0; i < headings.length; i++) {
+            const heading = headings[i];
+            const headingText = heading.text;
+            // Generate slug matching the build pipeline's id generation
+            const slug = headingText
+                .toLowerCase()
+                .replace(/[^\w\s-]/g, '')
+                .replace(/\s+/g, '-')
+                .replace(/-+/g, '-')
+                .trim();
+            
+            if (!slug) continue;
+
+            // Extract content between this heading and the next
+            const nextIndex = i + 1 < headings.length 
+                ? cleanedContent.lastIndexOf('\n' + '#'.repeat(headings[i+1].level) + ' ' + headings[i+1].text)
+                : cleanedContent.length;
+            
+            let sectionContent = cleanedContent
+                .slice(heading.index, nextIndex)
+                .replace(/#+\s[^\n]+/g, '') // remove sub-headings
+                .replace(/\n+/g, ' ')
+                .trim()
+                .slice(0, 200);
+
+            // Skip entries with very little content
+            if (sectionContent.length < 20) continue;
+
+            searchIndex.push({
+                title: headingText,
+                url: `${url}#${slug}`,
+                section: sectionLabel,
+                content: sectionContent,
+                type: 'heading',
+                page: capitalizedTitle
+            });
+        }
     }
     
     await fs.writeFile(
         path.join(CONFIG.distDir, 'search-index.json'),
         JSON.stringify(searchIndex)
     );
-    console.log(`  ✓ Generated search-index.json (${searchIndex.length} pages)`);
+    const pageCount = searchIndex.filter(e => e.type === 'page').length;
+    const headingCount = searchIndex.filter(e => e.type === 'heading').length;
+    console.log(`  ✓ Generated search-index.json (${pageCount} pages + ${headingCount} headings = ${searchIndex.length} entries)`);
 
     // 4. Generate robots.txt
     const robotsTxt = `# Standard Design System
