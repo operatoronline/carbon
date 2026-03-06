@@ -6,10 +6,10 @@ Dropdowns display a list of actions or options when triggered. They help declutt
 
 ## Installation
 
-Copy the dropdown CSS from `styles/docs.css` or include the Standard stylesheet:
+Dropdowns use Standard's base styles. Include the stylesheet:
 
 ```html
-<link rel="stylesheet" href="standard.min.css">
+<link rel="stylesheet" href="https://standard.operator.onl/styles/standard-core.css">
 ```
 
 Then use dropdown classes in your HTML:

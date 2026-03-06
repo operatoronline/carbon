@@ -6,10 +6,10 @@ Accordions expand and collapse content sections, helping users focus on relevant
 
 ## Installation
 
-Copy the accordion CSS from `styles/docs.css` or include the Standard stylesheet:
+Accordions use Standard's base styles. Include the stylesheet:
 
 ```html
-<link rel="stylesheet" href="standard.min.css">
+<link rel="stylesheet" href="https://standard.operator.onl/styles/standard-core.css">
 ```
 
 Then use accordion classes in your HTML:

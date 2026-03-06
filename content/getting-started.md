@@ -318,7 +318,7 @@ standard/
 │   ├── components/     # 32 component pages
 │   └── patterns/       # Layout patterns
 ├── styles/
-│   └── docs.css        # The entire design system (single file)
+│   └── docs.css        # Full design system + docs chrome
 ├── scripts/
 │   ├── build.mjs       # Static site generator
 │   └── docs.js         # Interactive docs (search, theme, previews)

@@ -22,10 +22,10 @@ Modals are overlay dialogs that require user interaction before returning to the
 
 ## Installation
 
-Copy the modal CSS from `styles/docs.css` or include the Standard stylesheet:
+Modals use Standard's base styles. Include the stylesheet:
 
 ```html
-<link rel="stylesheet" href="standard.min.css">
+<link rel="stylesheet" href="https://standard.operator.onl/styles/standard-core.css">
 ```
 
 Basic modal structure:

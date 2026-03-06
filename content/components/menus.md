@@ -6,10 +6,10 @@ Menus display a list of choices on temporary surfaces, typically triggered by bu
 
 ## Installation
 
-Copy the menu CSS from `styles/docs.css` or include the Standard stylesheet:
+Menus use Standard's base styles. Include the stylesheet:
 
 ```html
-<link rel="stylesheet" href="standard.min.css">
+<link rel="stylesheet" href="https://standard.operator.onl/styles/standard-core.css">
 ```
 
 Then use menu classes in your HTML:

@@ -20,10 +20,10 @@ Forms allow users to enter data and interact with the system. Standard provides 
 
 ## Installation
 
-Copy the form CSS from `styles/docs.css` or include the Standard stylesheet:
+Forms use Standard's base styles. Include the stylesheet:
 
 ```html
-<link rel="stylesheet" href="standard.min.css">
+<link rel="stylesheet" href="https://standard.operator.onl/styles/standard-core.css">
 ```
 
 Then use form classes in your HTML:

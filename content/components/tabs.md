@@ -6,10 +6,10 @@ Tabs organize content into separate views, allowing users to switch between rela
 
 ## Installation
 
-Copy the tabs CSS from `styles/docs.css` or include the Standard stylesheet:
+Tabs use Standard's base styles. Include the stylesheet:
 
 ```html
-<link rel="stylesheet" href="standard.min.css">
+<link rel="stylesheet" href="https://standard.operator.onl/styles/standard-core.css">
 ```
 
 Then use tabs classes in your HTML:

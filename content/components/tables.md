@@ -6,10 +6,10 @@ Tables display structured data in rows and columns, making it easy to scan, comp
 
 ## Installation
 
-Copy the table CSS from `styles/docs.css` or include the Standard stylesheet:
+Tables use Standard's base styles. Include the stylesheet:
 
 ```html
-<link rel="stylesheet" href="standard.min.css">
+<link rel="stylesheet" href="https://standard.operator.onl/styles/standard-core.css">
 ```
 
 Then use table classes in your HTML:

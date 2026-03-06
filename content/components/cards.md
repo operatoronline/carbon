@@ -22,10 +22,10 @@ Cards are flexible containers that group related content and actions. They provi
 
 ## Installation
 
-Copy the card CSS from `styles/docs.css` or include the Standard stylesheet:
+Cards use Standard's base styles. Include the stylesheet:
 
 ```html
-<link rel="stylesheet" href="standard.min.css">
+<link rel="stylesheet" href="https://standard.operator.onl/styles/standard-core.css">
 ```
 
 Then use card classes in your HTML:

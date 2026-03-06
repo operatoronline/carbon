@@ -6,10 +6,10 @@ Breadcrumbs show the user's location within a site hierarchy and provide quick n
 
 ## Installation
 
-Copy the breadcrumb CSS from `styles/docs.css` or include the Standard stylesheet:
+Breadcrumbs use Standard's base styles. Include the stylesheet:
 
 ```html
-<link rel="stylesheet" href="standard.min.css">
+<link rel="stylesheet" href="https://standard.operator.onl/styles/standard-core.css">
 ```
 
 Then use breadcrumb classes in your HTML:
